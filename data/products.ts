@@ -53,7 +53,7 @@ export const products: Product[] = [
         name: 'بني - حشايش',
         nameEn: 'Buni',
         category: 'sea',
-        image: '/items/Buni.jpg',
+        image: '/items/buni.jpg',
         sizes: ['متوسط (300-500 جم)', 'كبير (500+ جم)'],
         sizesEn: ['Medium (300-500g)', 'Large (500g+)'],
         available: true,
