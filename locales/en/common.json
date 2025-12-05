@@ -1,0 +1,92 @@
+{
+    "nav": {
+        "home": "Home",
+        "products": "Products",
+        "certificates": "Certificates",
+        "markets": "Our Markets",
+        "media": "Media Center",
+        "about": "About Us",
+        "contact": "Contact Us"
+    },
+    "home": {
+        "hero": {
+            "title": "AZAFCO International",
+            "subtitle": "Premium Fresh Fish from Egypt to the World",
+            "description": "Leaders in packaging and exporting fresh fish to all countries since 2008",
+            "cta_whatsapp": "Contact via WhatsApp",
+            "cta_partnership": "Request Business Partnership"
+        },
+        "stats": {
+            "years": "Years Experience",
+            "countries": "Export Countries",
+            "tonnage": "Tons Monthly",
+            "certificates": "Quality Certificates"
+        },
+        "products": {
+            "title": "Our Featured Products",
+            "subtitle": "A wide selection of the finest fresh fish",
+            "view_all": "View All Products"
+        },
+        "why_us": {
+            "title": "Why AZAFCO?",
+            "quality": "Highest Quality Standards",
+            "fresh": "Fresh & Safe",
+            "experience": "Global Experience",
+            "global": "Worldwide Export"
+        },
+        "cta": {
+            "title": "Ready to Start Your Partnership?",
+            "description": "Contact us now to discuss your fresh fish requirements"
+        }
+    },
+    "products": {
+        "title": "Our Products",
+        "subtitle": "Complete range of premium fresh fish",
+        "filter": {
+            "all": "All Products",
+            "nile": "Nile Fish",
+            "sea": "Sea Fish"
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "subtitle": "An Egyptian Global Success Story",
+        "story": "AZAFCO International was established in 2008 in Kafr El Sheikh Governorate, embarking on a successful journey in packaging and exporting fresh fish.",
+        "vision": "To be the leading partner in exporting Egyptian fish worldwide",
+        "mission": "Delivering the finest fresh fish with the highest quality and safety standards"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "We're here to answer all your inquiries",
+        "form": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "company": "Company Name",
+            "country": "Country",
+            "message": "Your Message",
+            "submit": "Send Message",
+            "success": "Your message has been sent successfully!"
+        },
+        "info": {
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "whatsapp": "WhatsApp"
+        }
+    },
+    "footer": {
+        "description": "A leading Egyptian company specialized in packaging and exporting fresh fish",
+        "quick_links": "Quick Links",
+        "contact_us": "Contact Us",
+        "partnership": "Request Business Partnership",
+        "copyright": "All Rights Reserved"
+    },
+    "common": {
+        "learn_more": "Learn More",
+        "view_details": "View Details",
+        "back": "Back",
+        "loading": "Loading...",
+        "error": "An error occurred"
+    }
+}
