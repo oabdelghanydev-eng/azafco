@@ -12,6 +12,12 @@ export default function Document() {
             <body>
                 <Main />
                 <NextScript />
+                {/* Cloudflare Web Analytics */}
+                <script
+                    defer
+                    src="https://static.cloudflareinsights.com/beacon.min.js"
+                    data-cf-beacon='{"token": "8f71f218933a46aaae27dea11f31713a"}'
+                />
             </body>
         </Html>
     )
