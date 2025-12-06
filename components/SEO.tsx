@@ -379,12 +379,16 @@ const SEO: React.FC<SEOProps> = ({
             <meta name="geo.position" content="31.2653;30.9366" />
             <meta name="ICBM" content="31.2653, 30.9366" />
 
-            {/* Favicon */}
-            <link rel="icon" href="/icons/favicon.ico" sizes="any" />
-            <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+            {/* Favicon - Optimized for Google Search 2025 */}
+            {/* Google prefers 48x48+ PNG or ICO - SVG removed (was 304KB embedded PNG, too large) */}
+            <link rel="icon" type="image/png" sizes="96x96" href="/favicon-48x48.png" />
+            <link rel="icon" href="/favicon.ico" sizes="48x48" />
+            {/* Fallback sizes */}
             <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-            <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+            {/* Apple devices */}
+            <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+            {/* PWA Manifest */}
             <link rel="manifest" href="/manifest.json" />
 
             {/* Mobile & PWA */}

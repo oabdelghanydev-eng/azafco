@@ -29,6 +29,19 @@ export const newsItems: NewsItem[] = [
         category: 'company',
     },
     {
+        id: 9,
+        title: 'شركة إزافكو العالمية.. الأفضل في عالم تصدير الأسماك',
+        titleEn: 'AZAFCO International.. The Best in the World of Fish Export',
+        summary: 'الحاج محمد عبد الله الكويتيحي رئيس مجلس الإدارة: نصدر لجميع دول العالم.. وحصلنا على موافقة الاتحاد الأوروبي لاستيراد منتجاتنا.',
+        summaryEn: 'Haj Mohamed Abdullah Al-Kuwaitihi, Chairman: We export to all countries.. and obtained EU approval to import our products.',
+        content: 'شاب صاحب طموح كبير، ورث العمل بمجال الأسماك عن أبيه وجدوده، لكنه أبدع فيه وحقق طفرة كبيرة من خلال الانفتاح على الأسواق الخارجية ليجذب العملة الصعبة للدولة المصرية. الحاج محمد عبدالله الكويتيحي، رئيس مجلس إدارة شركة إزافكو العالمية، بدأ نشاط شركته في عام 2009، متجها مباشرة للتصدير لأغلب دول العالم، وذلك بفضل الحصول على موافقة الاتحاد الأوروبي. توفر الشركة عملة صعبة بنحو 50 مليون دولار سنويا، وتصدر للكويت والإمارات والبحرين والأردن ولبنان وأوروبا، وحصلت مؤخراً على موافقة التصدير لروسيا.',
+        contentEn: 'A young man with great ambition, Haj Mohamed Abdullah Al-Kuwaitihi, Chairman of AZAFCO International, inherited the fish business and achieved a boom by opening up to foreign markets. He started in 2009, exporting directly to most countries thanks to EU approval. The company provides about $50 million annually in hard currency, exporting to Kuwait, UAE, Bahrain, Jordan, Lebanon, and Europe, and recently obtained approval to export to Russia.',
+        date: '2020-11-18',
+        source: 'جريدة دار الشرق الاوسط',
+        sourceUrl: 'https://alshrqalawsat.com/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A5%D8%B2%D8%A7%D9%81%D9%83%D9%88-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%81%D8%B6%D9%84-%D9%81%D9%8A-%D8%B9%D8%A7%D9%84%D9%85-%D8%AA%D8%B5/',
+        category: 'company',
+    },
+    {
         id: 2,
         title: 'برنامج حلوة يا بلدي - حلقة خاصة عن شركة ازافكو العالمية للإستثمار والتنمية',
         titleEn: 'TV Program "Helwa Ya Baladi" - Special Episode About AZAFCO International',
@@ -79,7 +92,7 @@ export const newsItems: NewsItem[] = [
         contentEn: 'President Abdel Fattah El-Sisi inaugurated Ghalioun Fish Project on November 18, 2017. It is the largest fish farm in the Middle East and Africa, featuring 1,359 fish and shrimp ponds, processing and feed factories, and a research center. The project provides 5,000 direct and 10,000 indirect jobs.',
         date: '2017-11-18',
         source: 'رئاسة الجمهورية',
-        sourceUrl: 'https://www.presidency.eg/ar/%D9%86%D8%B4%D8%A7%D8%B7-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3/%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD%D8%A7%D8%AA/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3-%D9%8A%D9%81%D8%AA%D8%AA%D8%AD-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B2%D8%B1%D8%A7%D8%B9-%D8%A7%D9%84%D8%B3%D9%85%D9%83%D9%8A-%D8%A8%D9%83%D9%81%D8%B1-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE/',
+        sourceUrl: 'https://www.presidency.eg/ar/%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84%D9%82%D9%88%D9%85%D9%8A%D8%A9/%D8%A8%D8%B1%D9%83%D8%A9-%D8%BA%D9%84%D9%8A%D9%88%D9%86-%D8%A3%D9%83%D8%A8%D8%B1-%D9%85%D8%B2%D8%B1%D8%B9%D8%A9-%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%B2%D8%B1%D8%A7%D8%B9-%D8%A7%D9%84%D8%B3%D9%85%D9%83%D9%8A-%D8%A8%D8%A7%D9%84%D8%B4%D8%B1%D9%82-%D8%A7%D9%84%D8%A3%D9%88%D8%B3%D8%B7/',
         category: 'industry',
     },
 
