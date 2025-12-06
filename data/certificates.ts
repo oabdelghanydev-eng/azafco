@@ -7,9 +7,13 @@ export interface Certificate {
     validUntil: string
 }
 
-//Hidden temporarily - expired certificate
+// Hidden temporarily - expired certificates
+// When new valid certificates are obtained, add them to the array below
 
-// export const certificates: Certificate[] = [
+export const certificates: Certificate[] = []
+
+// Commented out expired certificates for reference:
+// export const expiredCertificates: Certificate[] = [
 
 //     {
 //         id: 1,
