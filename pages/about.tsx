@@ -13,15 +13,15 @@ const AboutPage = () => {
   const timeline = isAr ? [
     { year: '2008', event: 'تأسيس شركة ازافكو العالمية' },
     { year: '2008', event: 'بداية التصدير إلى دول الخليج' },
-    { year: '2012', event: 'افتتاح المصنع الجديد في مطوبس' },
-    { year: '2015', event: 'الحصول على شهادات الأيزو الدولية' },
+    { year: '2018', event: 'افتتاح المصنع الجديد في بلطيم' },
+    { year: '2018', event: 'الحصول على شهادات الأيزو الدولية' },
     { year: '2018', event: 'التوسع في الأسواق' },
     { year: '2025', event: 'تحديث خطوط الإنتاج بأحدث التقنيات' },
   ] : [
     { year: '2008', event: 'AZAFCO International founded' },
     { year: '2008', event: 'Started exporting to Gulf countries' },
-    { year: '2012', event: 'New factory opened in Motobas' },
-    { year: '2015', event: 'ISO international certifications obtained' },
+    { year: '2018', event: 'New factory opened in Motobas' },
+    { year: '2018', event: 'ISO international certifications obtained' },
     { year: '2018', event: 'Market expansion' },
     { year: '2025', event: 'Production lines upgraded with latest technology' },
   ]
