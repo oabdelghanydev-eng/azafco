@@ -61,12 +61,18 @@ const SEO: React.FC<SEOProps> = ({
     description,
     descriptionEn,
     keywords,
-    image = '/images/og-image.png',
+    image,
     url = 'https://azafco.com.eg',
     type = 'website',
     products
 }) => {
     const { locale } = useI18n()
+
+    // Dynamic OG image based on language
+    const defaultImage = locale === 'ar'
+        ? '/images/og-image-ar.jpg'
+        : '/images/og-image-en.jpg'
+    const ogImage = image || defaultImage
 
     // Dynamic title based on language
     const displayTitle = locale === 'ar' ? title : (titleEn || title)
@@ -80,7 +86,10 @@ const SEO: React.FC<SEOProps> = ({
     // Dynamic keywords based on language
     const displayKeywords = keywords || defaultKeywords[locale]
 
-    const fullImage = image.startsWith('http') ? image : `https://azafco.com.eg${image}`
+    const fullImage = ogImage.startsWith('http') ? ogImage : `https://azafco.com.eg${ogImage}`
+
+    // Full URL for Schema.org images
+    const schemaImage = `https://azafco.com.eg${defaultImage}`
 
     // Structured Data for Organization (Main Schema for B2B)
     const organizationSchema = {
@@ -96,7 +105,7 @@ const SEO: React.FC<SEOProps> = ({
             width: '300',
             height: '100'
         },
-        image: 'https://azafco.com.eg/images/og-image.png',
+        image: schemaImage,
         description: locale === 'ar'
             ? 'شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة لأكثر من 15 دولة منذ عام 2008.'
             : 'Leading Egyptian company specialized in fresh fish packaging and export to worldwide markets since 2008. Serving distributors, restaurants, and hotels with premium quality seafood.',
@@ -193,7 +202,7 @@ const SEO: React.FC<SEOProps> = ({
         '@id': 'https://azafco.com.eg/#localbusiness',
         name: locale === 'ar' ? 'مصنع ازافكو للأسماك' : 'AZAFCO Fish Processing Factory',
         alternateName: 'AZAFCO Fish Factory',
-        image: 'https://azafco.com.eg/images/og-image.png',
+        image: schemaImage,
         url: 'https://azafco.com.eg',
         telephone: '+201007514567',
         email: 'business@azafco.com.eg',
