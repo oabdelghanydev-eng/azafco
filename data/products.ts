@@ -9,6 +9,11 @@ export interface Product {
     available: boolean
     description: string
     descriptionEn: string
+    // B2B fields
+    storageTemp: string
+    storageTempEn: string
+    packaging: string
+    packagingEn: string
 }
 
 export const products: Product[] = [
@@ -23,6 +28,10 @@ export const products: Product[] = [
         available: true,
         description: 'بلطي طازج من أفضل المزارع المحلية',
         descriptionEn: 'Fresh tilapia from the best local farms',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 2,
@@ -35,6 +44,10 @@ export const products: Product[] = [
         available: true,
         description: 'قاروص بحري طازج، مثالي للشوي والقلي',
         descriptionEn: 'Fresh sea bass, perfect for grilling and frying',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 3,
@@ -47,6 +60,10 @@ export const products: Product[] = [
         available: true,
         description: 'بوري طازج، ممتاز للشوي والتدخين',
         descriptionEn: 'Fresh mullet, excellent for grilling and smoking',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 4,
@@ -59,6 +76,10 @@ export const products: Product[] = [
         available: true,
         description: 'بني بحري فاخر',
         descriptionEn: 'Premium sea buni',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 5,
@@ -71,6 +92,10 @@ export const products: Product[] = [
         available: true,
         description: 'مبروكة طازجة، مثالية للأطباق التقليدية',
         descriptionEn: 'Fresh mubarakah, ideal for traditional dishes',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 6,
@@ -83,6 +108,10 @@ export const products: Product[] = [
         available: true,
         description: 'قراميط طازج من المياه العذبة',
         descriptionEn: 'Fresh catfish from freshwater',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 7,
@@ -95,6 +124,10 @@ export const products: Product[] = [
         available: true,
         description: 'لوت بحري طازج',
         descriptionEn: 'Fresh sea lout',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
     {
         id: 8,
@@ -107,8 +140,13 @@ export const products: Product[] = [
         available: true,
         description: 'ثعابين طازجة من المياه العذبة',
         descriptionEn: 'Fresh eels from freshwater',
+        storageTemp: '0 إلى 4 درجة مئوية',
+        storageTempEn: '0 to 4°C',
+        packaging: 'صندوق فوم EPS',
+        packagingEn: 'EPS Box',
     },
 ]
 
 // Products for homepage preview (first 4)
 export const featuredProducts = products.slice(0, 4)
+

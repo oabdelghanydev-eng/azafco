@@ -110,7 +110,7 @@ const ProductsPage = () => {
       {/* Products Grid */}
       <section className="py-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {filteredProducts.map((product, index) => (
               <ProductCard
                 key={product.id}
@@ -161,12 +161,12 @@ const ProductsPage = () => {
       <section className="py-16 bg-primary-900 text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">
-            {locale === 'ar' ? 'لديك طلب خاص؟' : 'Have a Special Request?'}
+            {locale === 'ar' ? 'هل تبحث عن مورد موثوق؟' : 'Looking for a Reliable Supplier?'}
           </h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
             {locale === 'ar'
-              ? 'نحن هنا لتلبية جميع احتياجاتك من الأسماك الطازجة'
-              : 'We are here to meet all your fresh fish needs'}
+              ? 'نوفر أسماك طازجة بأعلى معايير الجودة للمطاعم والفنادق والموزعين'
+              : 'We provide fresh fish with the highest quality standards for restaurants, hotels, and distributors'}
           </p>
           <a
             href={companyInfo.contact.whatsapp.link}
@@ -174,9 +174,9 @@ const ProductsPage = () => {
             rel="noopener noreferrer"
             className="btn-secondary inline-block"
             id="products-cta-btn"
-            aria-label={locale === 'ar' ? 'تواصل معنا عبر واتساب لطلب خاص' : 'Contact us via WhatsApp'}
+            aria-label={locale === 'ar' ? 'طلب عرض أسعار عبر واتساب' : 'Request a quote via WhatsApp'}
           >
-            {locale === 'ar' ? 'تواصل معنا الآن' : 'Contact Us Now'}
+            {locale === 'ar' ? 'طلب عرض أسعار' : 'Request a Quote'}
           </a>
         </div>
       </section>
