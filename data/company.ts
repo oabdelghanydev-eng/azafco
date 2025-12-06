@@ -22,9 +22,9 @@ export const companyInfo = {
             link: 'https://wa.me/201007514567'
         },
         email: {
-            display: 'azafco.com.eg@gmail.com',
-            value: 'azafco.com.eg@gmail.com',
-            link: 'mailto:azafco.com.eg@gmail.com'
+            display: 'business@azafco.com.eg',
+            value: 'business@azafco.com.eg',
+            link: 'mailto:business@azafco.com.eg'
         },
         workingHours: 'السبت - الخميس: 8 ص - 5 م',
         workingHoursEn: 'Sat - Thu: 8 AM - 5 PM'

@@ -116,7 +116,7 @@ const SEO: React.FC<SEOProps> = ({
         image: 'https://azafco.com.eg/images/og-image.png',
         url: 'https://azafco.com.eg',
         telephone: '+201007514567',
-        email: 'info@azafco.com.eg',
+        email: 'business@azafco.com.eg',
         priceRange: '$$',
         currenciesAccepted: 'USD, EGP, AED, SAR',
         paymentAccepted: 'Wire Transfer, Letter of Credit',

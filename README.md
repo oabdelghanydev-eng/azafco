@@ -315,7 +315,7 @@ export const markets = [
 export const companyInfo = {
   contact: {
     phone: { display: '+20 100 751 4567', link: 'tel:+201007514567' },
-    email: { display: 'info@azafco.com.eg', link: 'mailto:info@azafco.com.eg' },
+    email: { display: 'business@azafco.com.eg', link: 'mailto:business@azafco.com.eg' },
     // ...
   }
 }
@@ -369,7 +369,7 @@ npm install @types/react@latest @types/node@latest
 | | القيمة |
 |---|--------|
 | **الموقع** | [azafco.com.eg](https://azafco.com.eg) |
-| **البريد** | info@azafco.com.eg |
+| **البريد** | business@azafco.com.eg |
 | **الهاتف** | +20 100 751 4567 |
 | **واتساب** | +20 100 751 4567 |
 | **فيسبوك** | [AZAFCO](https://www.facebook.com/profile.php?id=100063620366349) |
