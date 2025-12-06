@@ -50,7 +50,14 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
-          <img src="/images/bg-homepage.png" alt={locale === 'ar' ? 'خلفية' : 'Background'} className="w-full h-full object-cover scale-105 animate-slow-zoom" />
+          <Image
+            src="/images/bg-homepage.webp"
+            alt={locale === 'ar' ? 'خلفية المصنع' : 'Factory Background'}
+            fill
+            priority
+            quality={80}
+            className="object-cover scale-105 animate-slow-zoom"
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-secondary-900/85"></div>
           {/* Animated particles effect */}
           <div className="absolute inset-0 opacity-30">
