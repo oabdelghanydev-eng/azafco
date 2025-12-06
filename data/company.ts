@@ -47,10 +47,10 @@ export const companyInfo = {
     },
     stats: {
         experience: '+15',
-        clients: '500+',
+        clients: '+500',
         countries: '8',
         tonnage: '+2500',
-        certificates: '7+'
+        certificates: '+7'
     },
     social: {
         facebook: 'https://www.facebook.com/profile.php?id=100063620366349'
