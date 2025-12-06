@@ -243,3 +243,42 @@ select:focus-visible {
     transform: translateY(0);
   }
 }
+
+/* Mobile Animation Optimizations */
+@media (max-width: 768px) {
+
+  /* GPU acceleration for smoother animations */
+  [class*="motion"],
+  .animate-blob,
+  .animate-slow-zoom {
+    will-change: transform, opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Simpler blob animation on mobile */
+  .animate-blob {
+    animation-duration: 10s;
+  }
+
+  /* Disable heavy effects on mobile */
+  .animate-slow-zoom {
+    animation: none;
+    transform: scale(1.02);
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
