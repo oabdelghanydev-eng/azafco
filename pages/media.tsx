@@ -55,10 +55,10 @@ const MediaPage = () => {
     return (
         <Layout>
             <SEO
-                title={isAr ? 'المركز الإعلامي' : 'Media Center'}
-                description={isAr
-                    ? 'آخر أخبار شركة ازافكو وأخبار قطاع الأسماك في مصر'
-                    : 'Latest news from AZAFCO and the fish industry in Egypt'}
+                title="المركز الإعلامي"
+                titleEn="News & Media - AZAFCO Fish Export Updates"
+                description="آخر أخبار شركة ازافكو وأخبار قطاع الأسماك في مصر"
+                descriptionEn="Latest news and updates from AZAFCO International. Fish industry insights, company announcements, and export market trends."
                 url="https://azafco.com.eg/media"
             />
 

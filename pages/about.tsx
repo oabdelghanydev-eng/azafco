@@ -60,10 +60,10 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO
-        title={isAr ? 'من نحن' : 'About Us'}
-        description={isAr
-          ? 'تعرف على ازافكو العالمية - رحلة تميز في عالم تصدير الأسماك منذ 2008'
-          : 'Learn about AZAFCO International - A journey of excellence in fish export since 2008'}
+        title="من نحن"
+        titleEn="About AZAFCO - Egyptian Fish Export Company Since 2008"
+        description="تعرف على ازافكو العالمية - رحلة تميز في عالم تصدير الأسماك منذ 2008"
+        descriptionEn="Learn about AZAFCO International - Leading Egyptian fish exporter since 2008. ISO certified, HACCP compliant. Serving 15+ countries with premium fresh fish."
         url="https://azafco.com.eg/about"
       />
 

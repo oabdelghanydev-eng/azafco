@@ -40,10 +40,10 @@ const HomePage = () => {
   return (
     <Layout>
       <SEO
-        title={locale === 'ar' ? 'الرئيسية' : 'Home'}
-        description={locale === 'ar'
-          ? `${companyInfo.fullName} - ${companyInfo.description}`
-          : 'AZAFCO International - Leading Egyptian company specialized in fresh fish packaging and export'}
+        title="الرئيسية"
+        titleEn="Home - Premium Fresh Fish Exporter from Egypt"
+        description={`${companyInfo.fullName} - ${companyInfo.description}`}
+        descriptionEn="AZAFCO International - Leading Egyptian company specialized in fresh fish packaging and export to Gulf, Europe, and worldwide markets since 2008. Premium tilapia, sea bass, mullet supplier."
         url="https://azafco.com.eg"
       />
 

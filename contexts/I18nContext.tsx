@@ -12,6 +12,7 @@ interface I18nContextType {
     setLocale: (locale: Locale) => void
     t: (key: string) => string
     dir: 'rtl' | 'ltr'
+    isReady: boolean
 }
 
 const translations: Record<Locale, TranslationKeys> = {
@@ -22,26 +23,44 @@ const translations: Record<Locale, TranslationKeys> = {
 const I18nContext = createContext<I18nContextType | undefined>(undefined)
 
 export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+    // Start with null to prevent hydration mismatch, then set actual locale
     const [locale, setLocaleState] = useState<Locale>('ar')
+    const [isReady, setIsReady] = useState(false)
 
     useEffect(() => {
-        // Check localStorage for saved locale
-        const savedLocale = localStorage.getItem('locale') as Locale
-        if (savedLocale && (savedLocale === 'ar' || savedLocale === 'en')) {
-            setLocaleState(savedLocale)
-        }
-        // Check URL params
+        // This only runs on client side
+        let detectedLocale: Locale = 'en' // Default for international users
+
+        // Priority 1: Check URL params first
         const urlParams = new URLSearchParams(window.location.search)
-        const langParam = urlParams.get('lang') as Locale
-        if (langParam && (langParam === 'ar' || langParam === 'en')) {
-            setLocaleState(langParam)
+        const langParam = urlParams.get('lang')
+        if (langParam === 'ar' || langParam === 'en') {
+            detectedLocale = langParam
         }
+        // Priority 2: Check localStorage for saved preference
+        else {
+            const savedLocale = localStorage.getItem('locale')
+            if (savedLocale === 'ar' || savedLocale === 'en') {
+                detectedLocale = savedLocale
+            }
+            // Priority 3: Auto-detect browser language
+            else {
+                const browserLang = navigator.language || (navigator as { userLanguage?: string }).userLanguage || 'en'
+                detectedLocale = browserLang.startsWith('ar') ? 'ar' : 'en'
+            }
+        }
+
+        setLocaleState(detectedLocale)
+        localStorage.setItem('locale', detectedLocale)
+        setIsReady(true)
     }, [])
 
     useEffect(() => {
         // Update document direction and lang
-        document.documentElement.lang = locale
-        document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr'
+        if (typeof document !== 'undefined') {
+            document.documentElement.lang = locale
+            document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr'
+        }
     }, [locale])
 
     const setLocale = (newLocale: Locale) => {
@@ -71,7 +90,7 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const dir = locale === 'ar' ? 'rtl' : 'ltr'
 
     return (
-        <I18nContext.Provider value={{ locale, setLocale, t, dir }}>
+        <I18nContext.Provider value={{ locale, setLocale, t, dir, isReady }}>
             {children}
         </I18nContext.Provider>
     )

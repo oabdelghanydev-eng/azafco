@@ -47,14 +47,12 @@ const CertificatesPage = () => {
   return (
     <Layout>
       <SEO
-        title={isAr ? 'الشهادات والاعتمادات' : 'Certificates & Accreditations'}
-        description={isAr
-          ? 'شهادات الجودة والاعتمادات الدولية لشركة ازافكو - ISO 22000، HACCP، ISO 14001، ISO 9001، ISO 45001'
-          : 'Quality certificates and international accreditations for AZAFCO - ISO 22000, HACCP, ISO 14001, ISO 9001, ISO 45001'}
+        title="الشهادات والاعتمادات"
+        titleEn="Quality Certificates - ISO 22000, HACCP, ISO 9001 Certified"
+        description="شهادات الجودة والاعتمادات الدولية لشركة ازافكو - ISO 22000، HACCP، ISO 14001، ISO 9001، ISO 45001"
+        descriptionEn="AZAFCO International quality certifications: ISO 22000, HACCP, ISO 14001, ISO 9001, ISO 45001. Certified food safety standards for premium fish export."
         url="https://azafco.com.eg/certificates"
-        keywords={isAr
-          ? 'ISO 22000، HACCP، شهادات جودة، اعتمادات دولية، سلامة الأغذية، ازافكو'
-          : 'ISO 22000, HACCP, quality certificates, international accreditations, food safety, AZAFCO'}
+        keywords="ISO 22000, HACCP, ISO 9001, ISO 14001, ISO 45001, food safety certification, fish quality standards, AZAFCO certificates"
       />
 
       {/* Hero Section */}

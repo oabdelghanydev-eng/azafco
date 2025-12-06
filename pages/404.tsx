@@ -13,10 +13,10 @@ const NotFoundPage = () => {
     return (
         <Layout>
             <SEO
-                title={isAr ? 'الصفحة غير موجودة' : 'Page Not Found'}
-                description={isAr
-                    ? 'عذراً، الصفحة التي تبحث عنها غير موجودة. يرجى العودة للصفحة الرئيسية.'
-                    : 'Sorry, the page you are looking for does not exist. Please return to the homepage.'}
+                title="الصفحة غير موجودة"
+                titleEn="Page Not Found - AZAFCO International"
+                description="عذراً، الصفحة التي تبحث عنها غير موجودة. يرجى العودة للصفحة الرئيسية."
+                descriptionEn="Sorry, the page you are looking for does not exist. Please return to the homepage."
                 url="https://azafco.com.eg/404"
             />
 

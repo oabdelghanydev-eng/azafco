@@ -45,10 +45,10 @@ const MarketsPage = () => {
   return (
     <Layout>
       <SEO
-        title={isAr ? 'أسواقنا' : 'Our Markets'}
-        description={isAr
-          ? 'نصدر أجود الأسماك الطازجة إلى الإمارات، الكويت، قطر، البحرين، لبنان والعراق'
-          : 'We export the finest fresh fish to UAE, Kuwait, Qatar, Bahrain, Lebanon and Iraq'}
+        title="أسواقنا"
+        titleEn="Export Markets - Fish Import UAE, Saudi, Kuwait, Qatar"
+        description="نصدر أجود الأسماك الطازجة إلى الإمارات، الكويت، قطر، البحرين، لبنان والعراق"
+        descriptionEn="AZAFCO exports premium fresh fish to UAE, Saudi Arabia, Kuwait, Qatar, Bahrain, Iraq, Lebanon, Russia, Spain. Your trusted Egyptian fish supplier."
         url="https://azafco.com.eg/markets"
       />
 

@@ -52,14 +52,12 @@ const ProductsPage = () => {
   return (
     <Layout>
       <SEO
-        title={locale === 'ar' ? 'المنتجات' : 'Products'}
-        description={locale === 'ar'
-          ? 'تصفح مجموعتنا الواسعة من الأسماك الطازجة - بلطي، بوري، قاروص، مبروكة وغيرها.'
-          : 'Browse our wide range of fresh fish - Tilapia, Mullet, Sea Bass, and more.'}
+        title="المنتجات"
+        titleEn="Fresh Fish Products - Tilapia, Sea Bass, Mullet Supplier"
+        description="تصفح مجموعتنا الواسعة من الأسماك الطازجة - بلطي، بوري، قاروص، مبروكة وغيرها."
+        descriptionEn="Premium fresh fish products from Egypt: Tilapia, Sea Bass, Mullet, Catfish. Wholesale supplier for restaurants, hotels, and distributors. B2B fish export."
         url="https://azafco.com.eg/products"
-        keywords={locale === 'ar'
-          ? 'أسماك طازجة، بلطي، بوري، قاروص، مبروكة، أسماك مصرية، تصدير أسماك'
-          : 'fresh fish, tilapia, mullet, sea bass, Egyptian fish, fish export'}
+        keywords="fresh fish Egypt, tilapia supplier, sea bass wholesale, mullet export, Egyptian fish, B2B seafood, fish distributor Gulf, بلطي, قاروص, بوري"
         products={products.map(p => ({
           name: p.name,
           nameEn: p.nameEn,

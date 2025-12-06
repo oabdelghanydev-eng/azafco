@@ -95,10 +95,10 @@ const ContactPage = () => {
     return (
         <Layout>
             <SEO
-                title={isAr ? 'اتصل بنا' : 'Contact Us'}
-                description={isAr
-                    ? `تواصل مع ${companyInfo.fullName}. نحن هنا للإجابة على استفساراتك`
-                    : 'Contact AZAFCO International. We are here to answer your inquiries'}
+                title="اتصل بنا"
+                titleEn="Contact AZAFCO - Get Quote for Fresh Fish Export"
+                description={`تواصل مع ${companyInfo.fullName}. نحن هنا للإجابة على استفساراتك`}
+                descriptionEn="Contact AZAFCO International for bulk fish orders, partnership inquiries, and export quotes. WhatsApp, Email, Phone available. Fast response guaranteed."
                 url="https://azafco.com.eg/contact"
             />
 
