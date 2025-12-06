@@ -4,10 +4,6 @@ export default function Document() {
     return (
         <Html lang="ar" dir="rtl">
             <Head>
-                {/* Preconnect to Google Fonts for faster font loading */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
                 <meta charSet="utf-8" />
                 <meta name="theme-color" content="#0073e6" />
                 <link rel="icon" href="/favicon.ico" />

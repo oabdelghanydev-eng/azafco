@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className={`flex items-center ${locale === 'ar' ? 'space-x-3 space-x-reverse' : 'space-x-3'}`}>
-              <img src="/images/logo.svg" alt={locale === 'ar' ? 'ازافكو' : 'AZAFCO'} width={64} height={64} className="h-16 w-auto" />
+              <img src="/images/logo.svg" alt={locale === 'ar' ? 'ازافكو' : 'AZAFCO'} className="h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -128,7 +128,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <img src="/images/logo.svg" alt={locale === 'ar' ? 'ازافكو' : 'AZAFCO'} width={96} height={96} className="h-24 mb-4" />
+              <img src="/images/logo.svg" alt={locale === 'ar' ? 'ازافكو' : 'AZAFCO'} className="h-24 mb-4" />
               <p className="text-gray-400 text-sm">
                 {t('footer.description')}
               </p>
