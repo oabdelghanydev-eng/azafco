@@ -8,7 +8,7 @@ Sitemap: https://azafco.com.eg/sitemap.xml
 # Disallow admin and API pages
 Disallow: /api/
 
-# Allow all major crawlers
+# Allow all major search crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -20,3 +20,29 @@ Allow: /
 
 User-agent: Baiduspider
 Allow: /
+
+# AI Crawlers (2025) - For ChatGPT, Claude, Perplexity visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+

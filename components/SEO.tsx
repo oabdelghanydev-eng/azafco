@@ -365,6 +365,51 @@ const SEO: React.FC<SEOProps> = ({
         ]
     }
 
+    // SpeakableSpecification Schema (for voice search and AI assistants)
+    const speakableSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': url,
+        name: fullTitle,
+        speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2', '.section-title', '.company-description']
+        }
+    }
+
+    // ProductGroup Schema (for B2B product visibility)
+    const productGroupSchema = products ? {
+        '@context': 'https://schema.org',
+        '@type': 'ProductGroup',
+        '@id': 'https://azafco.com.eg/products#productgroup',
+        name: locale === 'ar' ? 'أسماك ازافكو الطازجة' : 'AZAFCO Fresh Fish Products',
+        description: locale === 'ar'
+            ? 'منتجات الأسماك الطازجة من ازافكو للتصدير - بلطي، قاروص، بوري'
+            : 'Premium fresh fish products from AZAFCO for export - Tilapia, Sea Bass, Mullet',
+        brand: {
+            '@type': 'Brand',
+            name: 'AZAFCO',
+            logo: 'https://azafco.com.eg/images/logo.svg'
+        },
+        manufacturer: {
+            '@id': 'https://azafco.com.eg/#organization'
+        },
+        productGroupID: 'fresh-fish',
+        hasVariant: products.map(product => ({
+            '@type': 'Product',
+            name: locale === 'ar' ? product.name : product.nameEn,
+            description: locale === 'ar' ? product.description : product.descriptionEn,
+            image: `https://azafco.com.eg${product.image}`,
+            category: product.category === 'river'
+                ? (locale === 'ar' ? 'أسماك مياه عذبة' : 'Freshwater Fish')
+                : (locale === 'ar' ? 'أسماك بحرية' : 'Saltwater Fish'),
+            brand: {
+                '@type': 'Brand',
+                name: 'AZAFCO'
+            }
+        }))
+    } : null
+
     return (
         <Head>
             <title>{fullTitle}</title>
@@ -466,6 +511,20 @@ const SEO: React.FC<SEOProps> = ({
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
+
+            {/* Structured Data - Speakable (for voice search) */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+            />
+
+            {/* Structured Data - ProductGroup (for B2B AI visibility) */}
+            {productGroupSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(productGroupSchema) }}
+                />
+            )}
         </Head>
     )
 }
