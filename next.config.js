@@ -1,6 +1,15 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
+  // Fix for next-intl trailing slash warning
+  env: {
+    _next_intl_trailing_slash: '',
+  },
 
   // Image optimization
   images: {
@@ -56,12 +65,7 @@ const nextConfig = {
     ]
   },
 
-  // Internationalization
-  i18n: {
-    locales: ['ar', 'en'],
-    defaultLocale: 'ar',
-    localeDetection: false,
-  },
+  // Note: i18n config is removed - middleware handles routing now
 }
 
-module.exports = nextConfig
+module.exports = withNextIntl(nextConfig)

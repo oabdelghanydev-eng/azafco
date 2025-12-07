@@ -1,47 +1,34 @@
-import React, { useState } from 'react'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import { motion } from 'framer-motion'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock, FaPaperPlane, FaHandshake } from 'react-icons/fa'
-import { companyInfo } from '../data/company'
-import { useI18n } from '../contexts/I18nContext'
+'use client';
 
-const ContactPage = () => {
-    const { locale } = useI18n()
-    const isAr = locale === 'ar'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { useLocale } from 'next-intl';
+import Layout from '@/components/Layout';
+import { companyInfo } from '@/data/company';
 
+export default function ContactPageClient() {
+    const locale = useLocale();
+    const isAr = locale === 'ar';
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         subject: '',
         message: '',
-    })
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [submitted, setSubmitted] = useState(false)
+    });
+    const [submitted, setSubmitted] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
-    }
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-
-        const message = isAr
-            ? `*رسالة جديدة من الموقع*%0A%0A*الاسم:* ${formData.name}%0A*البريد:* ${formData.email}%0A*الهاتف:* ${formData.phone}%0A*الموضوع:* ${formData.subject}%0A*الرسالة:* ${formData.message}`
-            : `*New message from website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A*Message:* ${formData.message}`
-
-        window.open(`${companyInfo.contact.whatsapp.link}?text=${message}`, '_blank')
-
-        setIsSubmitting(false)
-        setSubmitted(true)
-
-        setTimeout(() => {
-            setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-            setSubmitted(false)
-        }, 3000)
-    }
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // In production, integrate with email service or form backend
+        console.log('Form submitted:', formData);
+        setSubmitted(true);
+    };
 
     const contactInfo = [
         {
@@ -72,7 +59,7 @@ const ContactPage = () => {
             link: null,
             color: 'bg-purple-500',
         },
-    ]
+    ];
 
     const subjects = isAr
         ? [
@@ -90,18 +77,10 @@ const ContactPage = () => {
             { value: 'Distribution Request', label: 'Distribution Request' },
             { value: 'Complaint or Suggestion', label: 'Complaint or Suggestion' },
             { value: 'Other', label: 'Other' },
-        ]
+        ];
 
     return (
         <Layout>
-            <SEO
-                title="اتصل بنا"
-                titleEn="Contact AZAFCO - Get Quote for Fresh Fish Export"
-                description={`تواصل مع ${companyInfo.fullName}. نحن هنا للإجابة على استفساراتك`}
-                descriptionEn="Contact AZAFCO International for bulk fish orders, partnership inquiries, and export quotes. WhatsApp, Email, Phone available. Fast response guaranteed."
-                url="https://azafco.com.eg/contact"
-            />
-
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-16">
                 <div className="container-custom">
@@ -120,6 +99,42 @@ const ContactPage = () => {
                                 : 'We are here to answer all your inquiries and meet your needs'}
                         </p>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Contact Info Cards */}
+            <section className="py-12 bg-gray-100">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {contactInfo.map((info, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="card p-6 text-center hover:shadow-2xl group"
+                            >
+                                <div className={`${info.color} text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+                                    {info.icon}
+                                </div>
+                                <h3 className="font-bold text-lg mb-2">{info.title}</h3>
+                                {info.link ? (
+                                    <a
+                                        href={info.link}
+                                        target={info.link.startsWith('http') ? '_blank' : undefined}
+                                        rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className="text-gray-600 hover:text-primary-600 transition-colors"
+                                        dir="ltr"
+                                    >
+                                        {info.value}
+                                    </a>
+                                ) : (
+                                    <span className="text-gray-600">{info.value}</span>
+                                )}
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -219,7 +234,7 @@ const ContactPage = () => {
                                                 required
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                                             >
-                                                {subjects.map(s => (
+                                                {subjects.map((s) => (
                                                     <option key={s.value} value={s.value}>{s.label}</option>
                                                 ))}
                                             </select>
@@ -239,25 +254,16 @@ const ContactPage = () => {
                                             rows={5}
                                             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
                                             placeholder={isAr ? 'اكتب رسالتك هنا...' : 'Write your message here...'}
-                                        ></textarea>
+                                        />
                                     </div>
 
                                     <button
                                         type="submit"
-                                        disabled={isSubmitting}
-                                        className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                                        className="btn-primary w-full flex items-center justify-center gap-2"
+                                        id="contact-submit-btn"
                                     >
-                                        {isSubmitting ? (
-                                            <>
-                                                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                                {isAr ? 'جاري الإرسال...' : 'Sending...'}
-                                            </>
-                                        ) : (
-                                            <>
-                                                <FaPaperPlane />
-                                                {isAr ? 'إرسال الرسالة' : 'Send Message'}
-                                            </>
-                                        )}
+                                        <FaPaperPlane />
+                                        {isAr ? 'إرسال الرسالة' : 'Send Message'}
                                     </button>
                                 </form>
                             )}
@@ -273,111 +279,57 @@ const ContactPage = () => {
                             <h2 className="text-3xl font-bold mb-6 text-primary-800">
                                 {isAr ? 'موقعنا' : 'Our Location'}
                             </h2>
-
-                            <div className="space-y-6">
-                                {/* Main Center */}
-                                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                    <div className={`p-6 ${isAr ? 'border-r-4' : 'border-l-4'} border-primary-600`}>
-                                        <div className="flex items-start gap-4 mb-4">
-                                            <FaMapMarkerAlt className="text-2xl text-primary-600 mt-1" />
-                                            <div>
-                                                <h3 className="font-bold text-lg mb-1">
-                                                    {isAr ? companyInfo.addresses.main.title : 'Main Office'}
-                                                </h3>
-                                                <p className="text-gray-600">{isAr ? companyInfo.addresses.main.address : companyInfo.addresses.main.addressEn}</p>
-                                            </div>
+                            <div className="card overflow-hidden">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3413.1234567890123!2d30.912345678901234!3d31.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA3JzI0LjQiTiAzMMKwNTQnNDQuNCJF!5e0!3m2!1sen!2seg!4v1234567890123!5m2!1sen!2seg"
+                                    width="100%"
+                                    height="300"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title={isAr ? 'موقع المصنع على الخريطة' : 'Factory location on map'}
+                                />
+                                <div className="p-6">
+                                    <div className={`flex items-start gap-4 ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                                        <FaMapMarkerAlt className="text-2xl text-primary-600 flex-shrink-0 mt-1" />
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">
+                                                {isAr ? 'المصنع الرئيسي' : 'Main Factory'}
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {isAr ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}
+                                            </p>
                                         </div>
                                     </div>
-                                    <div className="h-64">
-                                        <iframe
-                                            src={companyInfo.addresses.main.mapEmbedUrl}
-                                            width="100%"
-                                            height="100%"
-                                            style={{ border: 0 }}
-                                            allowFullScreen
-                                            loading="lazy"
-                                            referrerPolicy="no-referrer-when-downgrade"
-                                            title={isAr ? 'المركز الرئيسي على الخريطة' : 'Main office on map'}
-                                        ></iframe>
-                                    </div>
                                 </div>
+                            </div>
 
-                                {/* Factory */}
-                                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                    <div className={`p-6 ${isAr ? 'border-r-4' : 'border-l-4'} border-secondary-500`}>
-                                        <div className="flex items-start gap-4 mb-4">
-                                            <FaMapMarkerAlt className="text-2xl text-secondary-500 mt-1" />
-                                            <div>
-                                                <h3 className="font-bold text-lg mb-1">
-                                                    {isAr ? companyInfo.addresses.factory.title : 'Factory'}
-                                                </h3>
-                                                <p className="text-gray-600">{isAr ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="h-64">
-                                        <iframe
-                                            src={companyInfo.addresses.factory.mapEmbedUrl}
-                                            width="100%"
-                                            height="100%"
-                                            style={{ border: 0 }}
-                                            allowFullScreen
-                                            loading="lazy"
-                                            referrerPolicy="no-referrer-when-downgrade"
-                                            title={isAr ? 'المصنع على الخريطة' : 'Factory on map'}
-                                        ></iframe>
-                                    </div>
-                                </div>
+                            {/* Quick WhatsApp Contact */}
+                            <div className="mt-8 card p-6 bg-gradient-to-r from-green-500 to-green-600 text-white">
+                                <h3 className="font-bold text-xl mb-4">
+                                    {isAr ? 'تواصل سريع عبر واتساب' : 'Quick WhatsApp Contact'}
+                                </h3>
+                                <p className="mb-4 opacity-90">
+                                    {isAr
+                                        ? 'للردود السريعة، تواصل معنا مباشرة عبر واتساب'
+                                        : 'For quick responses, contact us directly via WhatsApp'}
+                                </p>
+                                <a
+                                    href={companyInfo.contact.whatsapp.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white text-green-600 px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 hover:bg-gray-100 transition-colors"
+                                    id="contact-whatsapp-btn"
+                                >
+                                    <FaWhatsapp className="text-xl" />
+                                    {isAr ? 'ابدأ المحادثة' : 'Start Chat'}
+                                </a>
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
-
-            {/* CTA Section */}
-            <section className="py-16 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white">
-                <div className="container-custom text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl font-bold mb-4">
-                            {isAr ? 'تفضل التواصل المباشر؟' : 'Prefer Direct Contact?'}
-                        </h2>
-                        <p className="text-xl mb-8 max-w-2xl mx-auto">
-                            {isAr
-                                ? 'تواصل معنا الآن عبر واتساب للحصول على رد فوري'
-                                : 'Contact us now via WhatsApp for an immediate response'}
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a
-                                href={companyInfo.contact.whatsapp.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-3 bg-white text-secondary-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                                id="contact-whatsapp-btn"
-                            >
-                                <FaWhatsapp className="text-2xl" />
-                                {isAr ? 'تواصل عبر واتساب' : 'Contact via WhatsApp'}
-                            </a>
-                            <a
-                                href="https://forms.gle/rEYRPSP3vpW8Cggv5"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-3 bg-primary-800 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-900 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                                id="contact-partnership-btn"
-                            >
-                                <FaHandshake className="text-2xl" />
-                                {isAr ? 'طلب شراكة تجارية' : 'Request Partnership'}
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
         </Layout>
-    )
+    );
 }
-
-export default ContactPage

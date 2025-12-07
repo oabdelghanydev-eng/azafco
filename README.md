@@ -44,58 +44,54 @@
 ## 📁 هيكل المشروع | Project Structure
 
 ```
-izafco website v2/
-├── 📂 components/          # مكونات React القابلة لإعادة الاستخدام
-│   ├── Layout.tsx          # الهيكل الرئيسي (Header + Footer)
-│   ├── SEO.tsx             # إعدادات SEO
-│   ├── ProductCard.tsx     # بطاقة المنتج
-│   ├── CertificateCard.tsx # بطاقة الشهادة
-│   ├── LanguageSwitcher.tsx# محول اللغة
-│   ├── BackToTop.tsx       # زر العودة للأعلى
-│   ├── ErrorBoundary.tsx   # معالجة الأخطاء
-│   └── GoogleAnalytics.tsx # تتبع Google
+azafco-website/
+├── 📂 app/                 # App Router (Next.js 14)
+│   ├── [locale]/           # Dynamic locale routing
+│   │   ├── layout.tsx      # Root layout with metadata
+│   │   ├── page.tsx        # Homepage (/ -> /ar or /en)
+│   │   ├── products/       # Products page
+│   │   ├── about/          # About page
+│   │   ├── contact/        # Contact page
+│   │   ├── markets/        # Markets page
+│   │   ├── media/          # Media page
+│   │   ├── certificates/   # Certificates page
+│   │   └── not-found.tsx   # 404 page
+│   ├── globals.css         # Global styles
+│   ├── sitemap.ts          # Dynamic sitemap
+│   └── robots.ts           # Robots.txt
 │
-├── 📂 contexts/            # React Context
-│   └── I18nContext.tsx     # سياق الترجمة
+├── 📂 components/          # React components
+│   ├── Layout.tsx          # Header + Footer
+│   ├── ProductCard.tsx     # Product card
+│   ├── LanguageSwitcher.tsx# Language toggle
+│   ├── BackToTop.tsx       # Back to top button
+│   ├── ErrorBoundary.tsx   # Error handling
+│   └── GoogleAnalytics.tsx # GA tracking
 │
-├── 📂 data/                # البيانات الثابتة
-│   ├── company.ts          # معلومات الشركة
-│   ├── products.ts         # قائمة المنتجات
-│   ├── markets.ts          # الأسواق والدول
-│   ├── certificates.ts     # الشهادات
-│   └── news.ts             # الأخبار
+├── 📂 data/                # Static data
+│   ├── company.ts          # Company info
+│   ├── products.ts         # Products list
+│   ├── markets.ts          # Markets/countries
+│   ├── certificates.ts     # Certificates
+│   └── news.ts             # News items
 │
-├── 📂 locales/             # ملفات الترجمة
-│   ├── ar/common.json      # الترجمة العربية
-│   └── en/common.json      # الترجمة الإنجليزية
+├── 📂 locales/             # Translation files
+│   ├── ar.json             # Arabic translations
+│   └── en.json             # English translations
 │
-├── 📂 pages/               # صفحات الموقع
-│   ├── _app.tsx            # تهيئة التطبيق
-│   ├── _document.tsx       # تخصيص HTML
-│   ├── index.tsx           # الصفحة الرئيسية
-│   ├── about.tsx           # من نحن
-│   ├── products.tsx        # المنتجات
-│   ├── certificates.tsx    # الشهادات
-│   ├── markets.tsx         # أسواقنا
-│   ├── media.tsx           # المركز الإعلامي
-│   ├── contact.tsx         # اتصل بنا
-│   ├── 404.tsx             # صفحة الخطأ
-│   └── sitemap.xml.tsx     # خريطة الموقع
+├── 📂 public/              # Static assets
+│   ├── 📂 images/          # Website images
+│   ├── 📂 items/           # Product images
+│   ├── 📂 flags/           # Country flags (SVG)
+│   └── 📂 certificates/    # Certificate images
 │
-├── 📂 public/              # الملفات العامة
-│   ├── 📂 images/          # صور الموقع
-│   ├── 📂 items/           # صور المنتجات
-│   ├── 📂 flags/           # أعلام الدول (SVG)
-│   └── 📂 certificates/    # صور الشهادات
-│
-├── 📂 styles/              # ملفات CSS
-│   └── globals.css         # الأنماط العامة
-│
-├── .env.local              # متغيرات البيئة
-├── next.config.js          # إعدادات Next.js
-├── tailwind.config.js      # إعدادات Tailwind
-├── tsconfig.json           # إعدادات TypeScript
-└── package.json            # التبعيات
+├── i18n.ts                 # next-intl configuration
+├── middleware.ts           # Locale routing middleware
+├── navigation.ts           # Type-safe navigation
+├── next.config.js          # Next.js config
+├── tailwind.config.js      # Tailwind config
+├── tsconfig.json           # TypeScript config
+└── package.json            # Dependencies
 ```
 
 ---
@@ -321,17 +317,37 @@ export const companyInfo = {
 }
 ```
 
-### إضافة ترجمة جديدة
+### إضافة ترجمة جديدة | Adding Translations
 ```json
-// locales/ar/common.json
+// locales/ar.json
 {
+  "nav": {
+    "home": "الرئيسية",
+    "products": "المنتجات"
+  },
   "new_key": "القيمة بالعربي"
 }
 
-// locales/en/common.json
+// locales/en.json
 {
+  "nav": {
+    "home": "Home",
+    "products": "Products"
+  },
   "new_key": "English value"
 }
+```
+
+### إضافة لغة جديدة | Adding New Language
+```typescript
+// 1. Add locale to i18n.ts
+export const locales = ['ar', 'en', 'fr'] as const;
+export const localeConfig = {
+  // ...existing locales...
+  fr: { name: 'French', dir: 'ltr', nativeName: 'Français' },
+};
+
+// 2. Create locales/fr.json with translations
 ```
 
 ---

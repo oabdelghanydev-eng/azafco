@@ -37,6 +37,18 @@
         "cta": {
             "title": "Ready to Start Your Partnership?",
             "description": "Contact us now to discuss your fresh fish requirements"
+        },
+        "features": {
+            "trusted_source": "Trusted Source",
+            "trusted_source_desc": "We ensure every fish comes from certified and monitored farms.",
+            "cold_chain": "Perfect Cold Chain",
+            "cold_chain_desc": "We maintain optimal temperature from catch to delivery.",
+            "professionals": "For Professionals",
+            "professionals_desc": "We understand the needs of restaurants and distributors."
+        },
+        "markets": {
+            "title": "Our Markets",
+            "subtitle": "We export our products to the best markets in the region"
         }
     },
     "products": {
@@ -80,13 +92,51 @@
         "quick_links": "Quick Links",
         "contact_us": "Contact Us",
         "partnership": "Request Business Partnership",
-        "copyright": "All Rights Reserved"
+        "copyright": "All Rights Reserved",
+        "quality_certificates": "Quality Certificates"
     },
     "common": {
         "learn_more": "Learn More",
         "view_details": "View Details",
         "back": "Back",
         "loading": "Loading...",
-        "error": "An error occurred"
+        "error": "An error occurred",
+        "satisfied_clients": "Satisfied Clients",
+        "browse_products": "Browse Products",
+        "contact_us": "Contact Us",
+        "skip_to_main": "Skip to main content",
+        "open_menu": "Open menu",
+        "close_menu": "Close menu",
+        "whatsapp_contact": "Contact us via WhatsApp"
+    },
+    "metadata": {
+        "home": {
+            "title": "Home - Premium Fresh Fish Exporter from Egypt",
+            "description": "AZAFCO International - Leading Egyptian company specialized in fresh fish packaging and export to Gulf, Europe, and worldwide markets since 2008. Premium tilapia, sea bass, mullet supplier."
+        },
+        "products": {
+            "title": "Products",
+            "description": "Complete range of premium fresh fish - Tilapia, Sea Bass, Mullet and other seafood products"
+        },
+        "about": {
+            "title": "About Us",
+            "description": "An Egyptian global success story - Learn about AZAFCO's expertise in fresh fish export"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "description": "Get in touch with AZAFCO for inquiries about our products and services"
+        },
+        "markets": {
+            "title": "Our Markets",
+            "description": "AZAFCO's global export markets - Gulf, Europe and other international markets"
+        },
+        "media": {
+            "title": "Media Center",
+            "description": "Latest news and events from AZAFCO"
+        },
+        "certificates": {
+            "title": "Certificates",
+            "description": "AZAFCO's quality certifications and international standards"
+        }
     }
 }

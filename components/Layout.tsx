@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { FaBars, FaTimes, FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import BackToTop from './BackToTop'
-import LanguageSwitcher from './LanguageSwitcher'
-import { companyInfo } from '../data/company'
-import { useI18n } from '../contexts/I18nContext'
+'use client';
+
+import React, { useState } from 'react';
+import { FaBars, FaTimes, FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
+import BackToTop from './BackToTop';
+import LanguageSwitcher from './LanguageSwitcher';
+import { companyInfo } from '@/data/company';
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { t, locale, dir } = useI18n()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const locale = useLocale();
+  const t = useTranslations();
+  const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   const navigation = [
     { name: t('nav.home'), href: '/' },
@@ -23,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: t('nav.media'), href: '/media' },
     { name: t('nav.about'), href: '/about' },
     { name: t('nav.contact'), href: '/contact' },
-  ]
+  ];
 
   return (
     <div className="min-h-screen flex flex-col" dir={dir}>
@@ -32,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
       >
-        {locale === 'ar' ? 'تخطي إلى المحتوى الرئيسي' : 'Skip to main content'}
+        {t('common.skip_to_main')}
       </a>
 
       {/* Header */}
@@ -70,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-700 text-2xl p-2"
-                aria-label={isMenuOpen ? (locale === 'ar' ? 'إغلاق القائمة' : 'Close menu') : (locale === 'ar' ? 'فتح القائمة' : 'Open menu')}
+                aria-label={isMenuOpen ? t('common.close_menu') : t('common.open_menu')}
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-menu"
               >
@@ -114,7 +118,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 z-40 hover:scale-110"
-        aria-label={locale === 'ar' ? 'تواصل معنا عبر واتساب' : 'Contact us via WhatsApp'}
+        aria-label={t('common.whatsapp_contact')}
       >
         <FaWhatsapp className="text-3xl" />
       </a>
@@ -191,7 +195,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* ISO Certifications */}
             <div>
-              <h4 className="text-white font-bold mb-4">{locale === 'ar' ? 'شهادات الجودة' : 'Quality Certificates'}</h4>
+              <h4 className="text-white font-bold mb-4">{t('footer.quality_certificates')}</h4>
               <div className="flex flex-wrap gap-2">
                 {['ISO 9001', 'ISO 14001', 'ISO 45001', 'HACCP', 'ISO 22000'].map((cert) => (
                   <span key={cert} className="bg-gray-700 text-xs px-2 py-1 rounded">
@@ -211,7 +215,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -1,31 +1,33 @@
-import React, { useState, useEffect } from 'react'
-import { FaArrowUp } from 'react-icons/fa'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useI18n } from '../contexts/I18nContext'
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useLocale } from 'next-intl';
 
 const BackToTop: React.FC = () => {
-    const [isVisible, setIsVisible] = useState(false)
-    const { locale } = useI18n()
+    const [isVisible, setIsVisible] = useState(false);
+    const locale = useLocale();
 
     useEffect(() => {
         const toggleVisibility = () => {
             if (window.pageYOffset > 300) {
-                setIsVisible(true)
+                setIsVisible(true);
             } else {
-                setIsVisible(false)
+                setIsVisible(false);
             }
-        }
+        };
 
-        window.addEventListener('scroll', toggleVisibility)
-        return () => window.removeEventListener('scroll', toggleVisibility)
-    }, [])
+        window.addEventListener('scroll', toggleVisibility);
+        return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
-        })
-    }
+        });
+    };
 
     return (
         <AnimatePresence>
@@ -42,7 +44,7 @@ const BackToTop: React.FC = () => {
                 </motion.button>
             )}
         </AnimatePresence>
-    )
-}
+    );
+};
 
-export default BackToTop
+export default BackToTop;
