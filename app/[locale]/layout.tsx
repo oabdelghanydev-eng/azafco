@@ -2,11 +2,17 @@ import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { Cairo } from 'next/font/google';
 import { locales, localeConfig, Locale } from '@/i18n';
 import '../globals.css';
 
-// Font family configured via CSS instead of next/font to avoid build-time network issues
-// The Cairo font is loaded via globals.css or as a system font fallback
+// Configure Cairo font with next/font for optimal loading (same as original)
+const cairo = Cairo({
+    subsets: ['arabic', 'latin'],
+    display: 'swap',
+    weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+    variable: '--font-cairo',
+});
 
 // Generate static params for all locales
 export function generateStaticParams() {
@@ -129,7 +135,7 @@ export default async function RootLayout({
                 <meta name="geo.position" content="31.2653;30.9366" />
                 <meta name="ICBM" content="31.2653, 30.9366" />
             </head>
-            <body className="font-cairo">
+            <body className={cairo.className}>
                 <NextIntlClientProvider messages={messages}>
                     {children}
                 </NextIntlClientProvider>
