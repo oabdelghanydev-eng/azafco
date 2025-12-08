@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaWhatsapp, FaWpforms, FaEnvelope, FaMapMarkerAlt, FaPhone, FaClock, FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
 import Layout from '@/components/Layout';
 import { companyInfo } from '@/data/company';
@@ -10,321 +10,281 @@ import { companyInfo } from '@/data/company';
 export default function ContactPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-    });
-    const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // In production, integrate with email service or form backend
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
-    };
-
-    const contactInfo = [
+    const contactChannels = [
         {
-            icon: <FaPhone className="text-2xl" />,
-            title: isAr ? 'الهاتف' : 'Phone',
-            value: companyInfo.contact.phone.display,
-            link: companyInfo.contact.phone.link,
-            color: 'bg-blue-500',
-        },
-        {
-            icon: <FaWhatsapp className="text-2xl" />,
-            title: isAr ? 'واتساب' : 'WhatsApp',
-            value: companyInfo.contact.whatsapp.display,
+            icon: <FaWhatsapp className="text-4xl" />,
+            title: isAr ? 'الاستعلامات عبر واتساب' : 'WhatsApp Inquiries',
+            subtitle: isAr ? 'للاستفسارات الفورية' : 'For Instant Inquiries',
+            description: isAr
+                ? 'يمكنك التواصل مع فريق الاستعلامات مباشرة عبر واتساب للإجابة على أي سؤال أو للحصول على معلومات سريعة حول منتجاتنا وخدماتنا.'
+                : 'Contact our inquiry team directly via WhatsApp to answer any question or get quick information about our products and services.',
+            note: isAr
+                ? 'موجّه للاستفسارات العامة فقط، مع توفير ردود سريعة لدعمك في اتخاذ قرارك.'
+                : 'Designed for general inquiries only, with fast responses to support your decision-making.',
+            buttonText: isAr ? 'ابدأ المحادثة الآن' : 'Start Chat Now',
             link: companyInfo.contact.whatsapp.link,
-            color: 'bg-green-500',
+            gradient: 'from-green-500 to-emerald-600',
+            iconBg: 'bg-green-500',
+            badge: isAr ? 'رد فوري' : 'Instant Response',
+            badgeColor: 'bg-green-100 text-green-700',
         },
         {
-            icon: <FaEnvelope className="text-2xl" />,
-            title: isAr ? 'البريد الإلكتروني' : 'Email',
-            value: companyInfo.contact.email.display,
+            icon: <FaWpforms className="text-4xl" />,
+            title: isAr ? 'نموذج التواصل للشركات' : 'B2B Application Form',
+            subtitle: isAr ? 'للطلبات التجارية وبناء الشراكات' : 'For Business Requests & Partnerships',
+            description: isAr
+                ? 'يرجى تعبئة نموذج التواصل المخصّص للشركات لتزويدنا ببيانات نشاطك التجاري، المنتجات المطلوبة، والكميات المتوقعة.'
+                : 'Please fill out our B2B contact form to provide us with your business details, required products, and expected quantities.',
+            note: isAr
+                ? 'يساعدنا النموذج على فهم احتياجاتك بدقة والتواصل معك بخطوات واضحة لتأسيس التعاون. تتم مراجعة جميع الطلبات خلال 24–48 ساعة.'
+                : 'The form helps us understand your needs precisely and contact you with clear steps to establish cooperation. All requests are reviewed within 24-48 hours.',
+            buttonText: isAr ? 'افتح النموذج' : 'Open Form',
+            link: 'https://forms.gle/rEYRPSP3vpW8Cggv5',
+            gradient: 'from-primary-600 to-primary-700',
+            iconBg: 'bg-primary-600',
+            badge: isAr ? '24-48 ساعة' : '24-48 Hours',
+            badgeColor: 'bg-primary-100 text-primary-700',
+        },
+        {
+            icon: <FaEnvelope className="text-4xl" />,
+            title: isAr ? 'البريد الإلكتروني' : 'Business Email',
+            subtitle: isAr ? 'للمراسلات الرسمية والملفات المرفقة' : 'For Official Correspondence & Attachments',
+            description: isAr
+                ? 'يمكنك إرسال استفساراتك أو طلبات عروض الأسعار عبر البريد الإلكتروني.'
+                : 'You can send your inquiries or quote requests via email.',
+            note: isAr
+                ? 'هذه القناة مناسبة للمراسلات التفصيلية، تبادل الملفات، والطلبات الرسمية التي تتطلب توثيقاً أو متابعة مكتوبة. سيقوم فريقنا بالرد خلال وقت قصير مع جميع التفاصيل المطلوبة.'
+                : 'This channel is suitable for detailed correspondence, file exchange, and official requests that require documentation or written follow-up. Our team will respond shortly with all required details.',
+            buttonText: isAr ? 'أرسل بريد إلكتروني' : 'Send Email',
             link: companyInfo.contact.email.link,
-            color: 'bg-red-500',
-        },
-        {
-            icon: <FaClock className="text-2xl" />,
-            title: isAr ? 'ساعات العمل' : 'Working Hours',
-            value: isAr ? companyInfo.contact.workingHours : 'Sat - Thu: 8 AM - 5 PM',
-            link: null,
-            color: 'bg-purple-500',
+            gradient: 'from-red-500 to-rose-600',
+            iconBg: 'bg-red-500',
+            badge: isAr ? 'رد سريع' : 'Quick Response',
+            badgeColor: 'bg-red-100 text-red-700',
         },
     ];
 
-    const subjects = isAr
-        ? [
-            { value: '', label: 'اختر الموضوع' },
-            { value: 'طلب أسعار', label: 'طلب أسعار' },
-            { value: 'استفسار عام', label: 'استفسار عام' },
-            { value: 'طلب توزيع', label: 'طلب توزيع' },
-            { value: 'شكوى أو اقتراح', label: 'شكوى أو اقتراح' },
-            { value: 'أخرى', label: 'أخرى' },
-        ]
-        : [
-            { value: '', label: 'Select Subject' },
-            { value: 'Price Request', label: 'Price Request' },
-            { value: 'General Inquiry', label: 'General Inquiry' },
-            { value: 'Distribution Request', label: 'Distribution Request' },
-            { value: 'Complaint or Suggestion', label: 'Complaint or Suggestion' },
-            { value: 'Other', label: 'Other' },
-        ];
+    const quickInfo = [
+        {
+            icon: <FaPhone className="text-lg" />,
+            label: isAr ? 'الهاتف' : 'Phone',
+            value: companyInfo.contact.phone.display,
+            link: companyInfo.contact.phone.link,
+        },
+        {
+            icon: <FaClock className="text-lg" />,
+            label: isAr ? 'ساعات العمل' : 'Working Hours',
+            value: isAr ? companyInfo.contact.workingHours : 'Sat - Thu: 8 AM - 5 PM',
+            link: null,
+        },
+    ];
 
     return (
         <Layout>
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-16">
-                <div className="container-custom">
+            <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-20 relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 left-10 w-96 h-96 bg-secondary-400 rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="container-custom relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center"
+                        className="text-center max-w-3xl mx-auto"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            {isAr ? 'اتصل بنا' : 'Contact Us'}
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                            {isAr ? 'تواصل معنا' : 'Get in Touch'}
                         </h1>
-                        <p className="text-xl max-w-3xl mx-auto">
+                        <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
                             {isAr
-                                ? 'نحن هنا للإجابة على جميع استفساراتك وتلبية احتياجاتك'
-                                : 'We are here to answer all your inquiries and meet your needs'}
+                                ? 'اختر الطريقة الأنسب لك للتواصل مع فريقنا المتخصص'
+                                : 'Choose the most suitable way to connect with our specialized team'}
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Contact Info Cards */}
-            <section className="py-12 bg-gray-100">
+            {/* Contact Channels Section */}
+            <section className="py-20 bg-gray-50">
                 <div className="container-custom">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {contactInfo.map((info, index) => (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            {isAr ? 'قنوات التواصل المتاحة' : 'Available Contact Channels'}
+                        </h2>
+                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                            {isAr
+                                ? 'كل قناة مصممة لتلبية احتياجات مختلفة - اختر ما يناسب طلبك'
+                                : 'Each channel is designed to meet different needs - choose what suits your request'}
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        {contactChannels.map((channel, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                transition={{ duration: 0.6, delay: index * 0.15 }}
                                 viewport={{ once: true }}
-                                className="card p-6 text-center hover:shadow-2xl group"
+                                className="group h-full"
                             >
-                                <div className={`${info.color} text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                                    {info.icon}
+                                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col border border-gray-100 relative">
+                                    {/* Top gradient bar */}
+                                    <div className={`h-1.5 bg-gradient-to-r ${channel.gradient}`}></div>
+
+                                    {/* Badge */}
+                                    <div className="absolute top-6 left-6">
+                                        <span className={`${channel.badgeColor} text-xs font-bold px-3 py-1 rounded-full`}>
+                                            {channel.badge}
+                                        </span>
+                                    </div>
+
+                                    <div className="p-8 flex-1 flex flex-col">
+                                        {/* Icon */}
+                                        <div className={`w-16 h-16 ${channel.iconBg} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                                            {channel.icon}
+                                        </div>
+
+                                        {/* Content */}
+                                        <h3 className="text-xl font-bold text-gray-800 mb-2">
+                                            {channel.title}
+                                        </h3>
+                                        <p className="text-sm font-semibold text-gray-500 mb-4">
+                                            {channel.subtitle}
+                                        </p>
+                                        <p className="text-gray-600 leading-relaxed mb-4 flex-1">
+                                            {channel.description}
+                                        </p>
+
+                                        {/* Note with checkmark */}
+                                        <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                                            <div className="flex gap-3">
+                                                <FaCheckCircle className="text-green-500 mt-1 flex-shrink-0" />
+                                                <p className="text-sm text-gray-600 leading-relaxed">
+                                                    {channel.note}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Button */}
+                                        <a
+                                            href={channel.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={`w-full text-center bg-gradient-to-r ${channel.gradient} text-white py-4 px-6 rounded-xl font-bold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl flex items-center justify-center gap-3`}
+                                        >
+                                            {channel.buttonText}
+                                            <FaArrowLeft className={`text-sm ${isAr ? '' : 'rotate-180'}`} />
+                                        </a>
+                                    </div>
                                 </div>
-                                <h3 className="font-bold text-lg mb-2">{info.title}</h3>
-                                {info.link ? (
-                                    <a
-                                        href={info.link}
-                                        target={info.link.startsWith('http') ? '_blank' : undefined}
-                                        rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                        className="text-gray-600 hover:text-primary-600 transition-colors"
-                                        dir="ltr"
-                                    >
-                                        {info.value}
-                                    </a>
-                                ) : (
-                                    <span className="text-gray-600">{info.value}</span>
-                                )}
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Contact Form & Map */}
+            {/* Locations Section */}
             <section className="py-20">
                 <div className="container-custom">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Contact Form */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            {isAr ? 'مواقعنا' : 'Our Locations'}
+                        </h2>
+                        <p className="text-gray-600 text-lg">
+                            {isAr ? 'زورونا في أي من مواقعنا' : 'Visit us at any of our locations'}
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Main Office */}
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
+                            className="bg-white rounded-2xl shadow-xl overflow-hidden group"
                         >
-                            <h2 className="text-3xl font-bold mb-6 text-primary-800">
-                                {isAr ? 'أرسل لنا رسالة' : 'Send Us a Message'}
-                            </h2>
-                            <p className="text-gray-600 mb-8">
-                                {isAr
-                                    ? 'املأ النموذج التالي وسنقوم بالرد عليك في أقرب وقت ممكن'
-                                    : 'Fill out the form below and we will get back to you as soon as possible'}
-                            </p>
-
-                            {submitted ? (
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    className="bg-green-100 border border-green-400 text-green-700 px-6 py-8 rounded-xl text-center"
-                                >
-                                    <FaPaperPlane className="text-4xl mx-auto mb-4" />
-                                    <h3 className="text-xl font-bold mb-2">
-                                        {isAr ? 'تم إرسال رسالتك بنجاح!' : 'Message sent successfully!'}
-                                    </h3>
-                                    <p>{isAr ? 'سنقوم بالرد عليك في أقرب وقت' : 'We will respond to you shortly'}</p>
-                                </motion.div>
-                            ) : (
-                                <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                                                {isAr ? 'الاسم الكامل *' : 'Full Name *'}
-                                            </label>
-                                            <input
-                                                type="text"
-                                                id="name"
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                                                placeholder={isAr ? 'أدخل اسمك' : 'Enter your name'}
-                                            />
-                                        </div>
-                                        <div>
-                                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                                                {isAr ? 'البريد الإلكتروني *' : 'Email *'}
-                                            </label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                                                placeholder="example@email.com"
-                                                dir="ltr"
-                                            />
-                                        </div>
+                            <div className="p-6 bg-gradient-to-r from-primary-50 to-white border-b border-primary-100">
+                                <div className="flex items-start gap-4">
+                                    <div className="bg-primary-600 text-white p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+                                        <FaMapMarkerAlt className="text-xl" />
                                     </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                                                {isAr ? 'رقم الهاتف' : 'Phone Number'}
-                                            </label>
-                                            <input
-                                                type="tel"
-                                                id="phone"
-                                                name="phone"
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                                                placeholder="+20 xxx xxx xxxx"
-                                                dir="ltr"
-                                            />
-                                        </div>
-                                        <div>
-                                            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                                                {isAr ? 'الموضوع *' : 'Subject *'}
-                                            </label>
-                                            <select
-                                                id="subject"
-                                                name="subject"
-                                                value={formData.subject}
-                                                onChange={handleChange}
-                                                required
-                                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                                            >
-                                                {subjects.map((s) => (
-                                                    <option key={s.value} value={s.value}>{s.label}</option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                    </div>
-
                                     <div>
-                                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                                            {isAr ? 'الرسالة *' : 'Message *'}
-                                        </label>
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            required
-                                            rows={5}
-                                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
-                                            placeholder={isAr ? 'اكتب رسالتك هنا...' : 'Write your message here...'}
-                                        />
+                                        <h3 className="font-bold text-xl mb-1 text-primary-800">
+                                            {isAr ? companyInfo.addresses.main.title : 'Main Office'}
+                                        </h3>
+                                        <p className="text-gray-600">
+                                            {isAr ? companyInfo.addresses.main.address : companyInfo.addresses.main.addressEn}
+                                        </p>
                                     </div>
-
-                                    <button
-                                        type="submit"
-                                        className="btn-primary w-full flex items-center justify-center gap-2"
-                                        id="contact-submit-btn"
-                                    >
-                                        <FaPaperPlane />
-                                        {isAr ? 'إرسال الرسالة' : 'Send Message'}
-                                    </button>
-                                </form>
-                            )}
-                        </motion.div>
-
-                        {/* Map & Address */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: true }}
-                        >
-                            <h2 className="text-3xl font-bold mb-6 text-primary-800">
-                                {isAr ? 'موقعنا' : 'Our Location'}
-                            </h2>
-                            <div className="card overflow-hidden">
+                                </div>
+                            </div>
+                            <div className="h-64">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3413.1234567890123!2d30.912345678901234!3d31.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA3JzI0LjQiTiAzMMKwNTQnNDQuNCJF!5e0!3m2!1sen!2seg!4v1234567890123!5m2!1sen!2seg"
+                                    src={companyInfo.addresses.main.mapEmbedUrl}
                                     width="100%"
-                                    height="300"
+                                    height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title={isAr ? 'موقع المصنع على الخريطة' : 'Factory location on map'}
-                                />
-                                <div className="p-6">
-                                    <div className={`flex items-start gap-4 ${isAr ? 'flex-row-reverse text-right' : ''}`}>
-                                        <FaMapMarkerAlt className="text-2xl text-primary-600 flex-shrink-0 mt-1" />
-                                        <div>
-                                            <h3 className="font-bold text-lg mb-2">
-                                                {isAr ? 'المصنع الرئيسي' : 'Main Factory'}
-                                            </h3>
-                                            <p className="text-gray-600">
-                                                {isAr ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}
-                                            </p>
-                                        </div>
+                                    title={isAr ? 'المركز الرئيسي على الخريطة' : 'Main office on map'}
+                                ></iframe>
+                            </div>
+                        </motion.div>
+
+                        {/* Factory */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="bg-white rounded-2xl shadow-xl overflow-hidden group"
+                        >
+                            <div className="p-6 bg-gradient-to-r from-secondary-50 to-white border-b border-secondary-100">
+                                <div className="flex items-start gap-4">
+                                    <div className="bg-secondary-500 text-white p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+                                        <FaMapMarkerAlt className="text-xl" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-xl mb-1 text-secondary-700">
+                                            {isAr ? companyInfo.addresses.factory.title : 'Factory'}
+                                        </h3>
+                                        <p className="text-gray-600">
+                                            {isAr ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Quick WhatsApp Contact */}
-                            <div className="mt-8 card p-6 bg-gradient-to-r from-green-500 to-green-600 text-white">
-                                <h3 className="font-bold text-xl mb-4">
-                                    {isAr ? 'تواصل سريع عبر واتساب' : 'Quick WhatsApp Contact'}
-                                </h3>
-                                <p className="mb-4 opacity-90">
-                                    {isAr
-                                        ? 'للردود السريعة، تواصل معنا مباشرة عبر واتساب'
-                                        : 'For quick responses, contact us directly via WhatsApp'}
-                                </p>
-                                <a
-                                    href={companyInfo.contact.whatsapp.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-white text-green-600 px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 hover:bg-gray-100 transition-colors"
-                                    id="contact-whatsapp-btn"
-                                >
-                                    <FaWhatsapp className="text-xl" />
-                                    {isAr ? 'ابدأ المحادثة' : 'Start Chat'}
-                                </a>
+                            <div className="h-64">
+                                <iframe
+                                    src={companyInfo.addresses.factory.mapEmbedUrl}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title={isAr ? 'المصنع على الخريطة' : 'Factory on map'}
+                                ></iframe>
                             </div>
                         </motion.div>
                     </div>

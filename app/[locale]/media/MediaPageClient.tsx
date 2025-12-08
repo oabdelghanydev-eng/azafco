@@ -1,30 +1,56 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaNewspaper, FaIndustry, FaAward, FaCalendarAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaNewspaper, FaIndustry, FaTrophy, FaExternalLinkAlt, FaCalendarAlt, FaImages, FaHandshake } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
 import Layout from '@/components/Layout';
-import { newsItems } from '@/data/news';
+import { newsItems, companyNews, industryNews, achievementNews, NewsItem } from '@/data/news';
+import { products } from '@/data/products';
+import { certificates } from '@/data/certificates';
+import { companyInfo } from '@/data/company';
 
 export default function MediaPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const categories = [
-        { id: 'all', name: isAr ? 'الكل' : 'All', icon: <FaNewspaper /> },
+        { id: 'all', name: isAr ? 'جميع الأخبار' : 'All News', icon: <FaNewspaper /> },
         { id: 'company', name: isAr ? 'أخبار الشركة' : 'Company News', icon: <FaIndustry /> },
-        { id: 'industry', name: isAr ? 'أخبار القطاع' : 'Industry News', icon: <FaAward /> },
+        { id: 'industry', name: isAr ? 'أخبار القطاع' : 'Industry News', icon: <FaNewspaper /> },
+        { id: 'achievement', name: isAr ? 'إنجازاتنا' : 'Achievements', icon: <FaTrophy /> },
     ];
 
-    const filteredNews = selectedCategory === 'all'
-        ? newsItems
-        : newsItems.filter(n => n.category === selectedCategory);
+    const getFilteredNews = (): NewsItem[] => {
+        switch (selectedCategory) {
+            case 'company':
+                return companyNews;
+            case 'industry':
+                return industryNews;
+            case 'achievement':
+                return achievementNews;
+            default:
+                return newsItems;
+        }
+    };
+
+    const filteredNews = getFilteredNews();
+
+    const galleryImages = [
+        ...products.map(p => ({ src: p.image, title: isAr ? p.name : p.nameEn, type: 'product' })),
+        ...certificates.map(c => ({ src: c.image, title: c.name, type: 'certificate' })),
+    ];
 
     const getCategoryLabel = (category: string) => {
-        const cat = categories.find(c => c.id === category);
-        return cat ? cat.name : category;
+        if (isAr) {
+            return category === 'company' ? 'أخبار الشركة' :
+                category === 'industry' ? 'أخبار القطاع' : 'إنجازات';
+        }
+        return category === 'company' ? 'Company News' :
+            category === 'industry' ? 'Industry News' : 'Achievements';
     };
 
     return (
@@ -166,14 +192,125 @@ export default function MediaPageClient() {
                             </motion.article>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    {filteredNews.length === 0 && (
-                        <div className="text-center py-12">
-                            <p className="text-gray-500 text-lg">
-                                {isAr ? 'لا توجد أخبار في هذا القسم حالياً' : 'No news in this category currently'}
-                            </p>
+            {/* Image Gallery Section */}
+            <section className="py-20 bg-gray-100">
+                <div className="container-custom">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="section-title flex items-center justify-center gap-3">
+                            <FaImages className="text-primary-600" />
+                            {isAr ? 'معرض الصور' : 'Photo Gallery'}
+                        </h2>
+                        <p className="section-subtitle">
+                            {isAr ? 'منتجاتنا وشهاداتنا' : 'Our products and certificates'}
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        {galleryImages.map((img, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                viewport={{ once: true }}
+                                className="relative aspect-square bg-white rounded-lg overflow-hidden shadow-md cursor-pointer group"
+                                onClick={() => setSelectedImage(img.src)}
+                            >
+                                <Image
+                                    src={img.src}
+                                    alt={img.title}
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span className="text-white text-sm font-semibold text-center px-2">
+                                        {img.title}
+                                    </span>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Image Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+                    onClick={() => setSelectedImage(null)}
+                    role="dialog"
+                    aria-modal="true"
+                >
+                    <div className="relative max-w-4xl max-h-[90vh]">
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute -top-12 left-0 text-white text-3xl hover:text-gray-300 transition-colors"
+                            aria-label={isAr ? 'إغلاق' : 'Close'}
+                        >
+                            ✕
+                        </button>
+                        <Image
+                            src={selectedImage}
+                            alt={isAr ? 'صورة مكبرة' : 'Enlarged image'}
+                            width={1000}
+                            height={800}
+                            className="w-full h-full object-contain"
+                        />
+                    </div>
+                </div>
+            )}
+
+            {/* Social Media Section */}
+            <section className="py-16 bg-primary-900 text-white">
+                <div className="container-custom text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl font-bold mb-4">
+                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                        </h2>
+                        <p className="text-xl mb-8 max-w-2xl mx-auto">
+                            {isAr
+                                ? 'تابعنا للحصول على آخر الأخبار والعروض'
+                                : 'Follow us for the latest news and offers'}
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-4">
+                            <a
+                                href={companyInfo.contact.whatsapp.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            >
+                                {isAr ? 'واتساب' : 'WhatsApp'}
+                            </a>
+                            <a
+                                href={companyInfo.contact.email.link}
+                                className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            >
+                                {isAr ? 'البريد الإلكتروني' : 'Email'}
+                            </a>
+                            <a
+                                href="https://forms.gle/rEYRPSP3vpW8Cggv5"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-primary-800 hover:bg-primary-900 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
+                            >
+                                <FaHandshake className="text-xl" />
+                                {isAr ? 'طلب شراكة تجارية' : 'Request Partnership'}
+                            </a>
                         </div>
-                    )}
+                    </motion.div>
                 </div>
             </section>
         </Layout>

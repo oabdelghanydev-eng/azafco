@@ -104,6 +104,11 @@ export default function AboutPageClient() {
                                     ? 'على مدار أكثر من 15 عاماً، نجحنا في بناء سمعة متميزة في الأسواق العربية من خلال التزامنا بالجودة والمصداقية وتقديم خدمات متميزة تلبي احتياجات عملائنا من الموزعين والمطاعم والفنادق.'
                                     : 'Over more than 15 years, we have built an excellent reputation in Arab markets through our commitment to quality and credibility, providing outstanding services to distributors, restaurants, and hotels.'}
                             </p>
+                            <p className="text-gray-600 leading-relaxed">
+                                {isAr
+                                    ? 'نمتلك مصنعاً حديثاً مجهزاً بأحدث التقنيات في المنطقة الصناعية بمطوبس، كفر الشيخ، ونطبق أعلى معايير الجودة والسلامة الغذائية المعتمدة دولياً.'
+                                    : 'We own a modern factory equipped with the latest technologies in the industrial zone of Motobas, Kafr El Sheikh, applying the highest internationally certified quality and food safety standards.'}
+                            </p>
                         </motion.div>
 
                         <motion.div
@@ -258,6 +263,85 @@ export default function AboutPageClient() {
                                 <div className="w-5/12"></div>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Company Details Section */}
+            <section className="py-20 bg-gray-100">
+                <div className="container-custom">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="section-title">{isAr ? 'معلومات الشركة' : 'Company Information'}</h2>
+                        <p className="section-subtitle">
+                            {isAr ? 'بيانات رسمية ومعلومات التواصل' : 'Official data and contact information'}
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="card p-8"
+                        >
+                            <h3 className="text-xl font-bold mb-6 text-primary-800">
+                                {isAr ? 'البيانات الرسمية' : 'Official Data'}
+                            </h3>
+                            <div className="space-y-4">
+                                <div>
+                                    <p className="text-sm text-gray-500">{isAr ? 'الاسم التجاري' : 'Trade Name'}</p>
+                                    <p className="font-semibold">
+                                        {isAr ? 'ازافكو العالمية للاستثمار والتنمية ش.م.م' : 'AZAFCO International Investment & Development LLC'}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500">{isAr ? 'السجل التجاري' : 'Commercial Register'}</p>
+                                    <p className="font-semibold">100776</p>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500">{isAr ? 'البطاقة الضريبية' : 'Tax Card'}</p>
+                                    <p className="font-semibold">537-340-483</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="card p-8"
+                        >
+                            <h3 className="text-xl font-bold mb-6 text-primary-800">
+                                {isAr ? 'معلومات التواصل' : 'Contact Information'}
+                            </h3>
+                            <div className="space-y-4">
+                                <div>
+                                    <p className="text-sm text-gray-500">{isAr ? 'البريد الإلكتروني' : 'Email'}</p>
+                                    <a href={companyInfo.contact.email.link} className="font-semibold hover:text-primary-600 transition-colors">
+                                        {companyInfo.contact.email.display}
+                                    </a>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500">{isAr ? 'الهاتف' : 'Phone'}</p>
+                                    <a href={companyInfo.contact.phone.link} className="font-semibold hover:text-primary-600 transition-colors" dir="ltr">
+                                        {companyInfo.contact.phone.display}
+                                    </a>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500">{isAr ? 'واتساب' : 'WhatsApp'}</p>
+                                    <a href={companyInfo.contact.whatsapp.link} target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary-600 transition-colors" dir="ltr">
+                                        {companyInfo.contact.whatsapp.display}
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

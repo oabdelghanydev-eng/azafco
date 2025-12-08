@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGlobe, FaShip, FaHandshake, FaMapMarkedAlt, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
+import { FaGlobe, FaMapMarkedAlt, FaShip, FaHandshake, FaChartLine, FaUsers, FaCheckCircle } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
 import Layout from '@/components/Layout';
-import { marketCountries } from '@/data/markets';
+import { markets, Market } from '@/data/markets';
 import { companyInfo } from '@/data/company';
 
 export default function MarketsPageClient() {
@@ -13,19 +13,19 @@ export default function MarketsPageClient() {
     const isAr = locale === 'ar';
 
     const stats = [
-        { icon: <FaGlobe />, number: '8+', label: isAr ? 'دولة' : 'Countries' },
-        { icon: <FaShip />, number: '5000+', label: isAr ? 'طن سنوياً' : 'Tons Yearly' },
-        { icon: <FaHandshake />, number: '500+', label: isAr ? 'عميل' : 'Clients' },
-        { icon: <FaMapMarkedAlt />, number: '15+', label: isAr ? 'سنة خبرة' : 'Years Experience' },
+        { number: companyInfo.stats.clients, label: isAr ? 'عميل راضي' : 'Satisfied Clients', icon: <FaUsers /> },
+        { number: companyInfo.stats.tonnage, label: isAr ? 'طن شهرياً' : 'Tons Monthly', icon: <FaShip /> },
+        { number: companyInfo.stats.countries, label: isAr ? 'دول نصدر إليها' : 'Export Countries', icon: <FaGlobe /> },
+        { number: companyInfo.stats.experience, label: isAr ? 'سنة خبرة' : 'Years Experience', icon: <FaChartLine /> },
     ];
 
     const advantages = [
         {
             icon: <FaShip className="text-4xl text-primary-600" />,
-            title: isAr ? 'شحن موثوق' : 'Reliable Shipping',
+            title: isAr ? 'شحن دولي محترف' : 'Professional International Shipping',
             description: isAr
-                ? 'شبكة لوجستية قوية تضمن وصول منتجاتنا طازجة لجميع الأسواق'
-                : 'Strong logistics network ensuring fresh product delivery to all markets',
+                ? 'نتعامل مع أفضل شركات الشحن المبرد لضمان وصول المنتج طازجاً'
+                : 'We work with the best refrigerated shipping companies to ensure fresh delivery',
         },
         {
             icon: <FaHandshake className="text-4xl text-secondary-600" />,
@@ -106,14 +106,17 @@ export default function MarketsPageClient() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {marketCountries.map((market, index) => (
+                        {markets.map((market, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="card p-6 hover:shadow-2xl group transform hover:-translate-y-2 transition-all duration-300"
+                                className={`card p-6 hover:shadow-2xl group transform hover:-translate-y-2 transition-all duration-300 border-t-4 ${market.status === 'paused' ? 'border-yellow-500 opacity-80' :
+                                    market.status === 'coming-soon' ? 'border-blue-500' :
+                                        'border-transparent hover:border-primary-500'
+                                    }`}
                             >
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="w-16 h-12 rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
@@ -128,6 +131,16 @@ export default function MarketsPageClient() {
                                         <h3 className="text-xl font-bold text-primary-800 group-hover:text-primary-600 transition-colors">
                                             {isAr ? market.country : market.countryEn}
                                         </h3>
+                                        {market.status === 'paused' && (
+                                            <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">
+                                                {isAr ? 'متوقف حالياً' : 'Currently Paused'}
+                                            </span>
+                                        )}
+                                        {market.status === 'coming-soon' && (
+                                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
+                                                {isAr ? 'قريباً' : 'Coming Soon'}
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                                 <p className="text-gray-600 mb-4">
@@ -145,9 +158,10 @@ export default function MarketsPageClient() {
                                     <span className="text-sm text-gray-500">
                                         {isAr ? 'نخدم هذا السوق منذ' : 'Serving since'}
                                     </span>
-                                    <span className="text-lg font-bold px-3 py-1 rounded-full bg-primary-50 text-primary-600">
-                                        {isAr && market.sinceAr ? market.sinceAr : market.since}
-                                    </span>
+                                    <span className={`text-lg font-bold px-3 py-1 rounded-full ${market.status === 'coming-soon' ? 'bg-blue-50 text-blue-600' :
+                                        market.status === 'paused' ? 'bg-yellow-50 text-yellow-600' :
+                                            'bg-primary-50 text-primary-600'
+                                        }`}>{isAr && market.sinceAr ? market.sinceAr : market.since}</span>
                                 </div>
                             </motion.div>
                         ))}
@@ -156,7 +170,7 @@ export default function MarketsPageClient() {
             </section>
 
             {/* Advantages Section */}
-            <section className="py-20 bg-gray-100">
+            <section className="py-20">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -180,9 +194,9 @@ export default function MarketsPageClient() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="card p-8 text-center group hover:shadow-2xl"
+                                className="text-center"
                             >
-                                <div className="mb-4 transform group-hover:scale-110 transition-transform flex justify-center">
+                                <div className="bg-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-lg">
                                     {advantage.icon}
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">{advantage.title}</h3>
@@ -194,7 +208,7 @@ export default function MarketsPageClient() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white">
+            <section className="py-16 bg-primary-900 text-white">
                 <div className="container-custom text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -203,23 +217,31 @@ export default function MarketsPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-4">
-                            {isAr ? 'هل تريد أن تصبح موزعاً لدينا؟' : 'Want to Become Our Distributor?'}
+                            {isAr ? 'هل تريد أن تصبح شريكاً لنا؟' : 'Want to Become Our Partner?'}
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
                             {isAr
-                                ? 'نبحث دائماً عن شركاء جدد في الأسواق الإقليمية والدولية'
-                                : 'We are always looking for new partners in regional and international markets'}
+                                ? 'انضم إلى قائمة عملائنا المميزين واحصل على أفضل منتجات الأسماك الطازجة'
+                                : 'Join our distinguished clients list and get the best fresh fish products'}
                         </p>
-                        <a
-                            href={companyInfo.contact.whatsapp.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                            id="markets-cta-btn"
-                        >
-                            <FaWhatsapp className="text-xl" />
-                            {isAr ? 'تواصل معنا الآن' : 'Contact Us Now'}
-                        </a>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a
+                                href={companyInfo.contact.whatsapp.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-secondary inline-block"
+                                id="markets-whatsapp-btn"
+                            >
+                                {isAr ? 'ابدأ التعاون معنا' : 'Start Cooperation'}
+                            </a>
+                            <a
+                                href={companyInfo.contact.email.link}
+                                className="bg-white text-primary-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                                id="markets-email-btn"
+                            >
+                                {isAr ? 'راسلنا عبر البريد' : 'Email Us'}
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
             </section>
