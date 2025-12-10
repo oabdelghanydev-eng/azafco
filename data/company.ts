@@ -35,7 +35,7 @@ export const companyInfo = {
             titleEn: 'Main Office',
             address: 'مسطروه بجوار الجمعية الخيرية، مركز البرلس، كفر الشيخ، مصر',
             addressEn: 'Mastora, next to Charity Association, El-Borollos, Kafr El Sheikh, Egypt',
-            mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3415.0!2d30.475625!3d31.432992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDI1JzU3LjYiTiAzMMKwMjgnMzQuNSJF!5e1!3m2!1sar!2seg!4v1'
+            mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1081.8024861200884!2d30.70233540415435!3d31.475424268708064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f6ef000c544a3b%3A0x436225762d9fc08c!2z2YLYtdixINix2LbZiNin2YYg2KfZhNmD2YjYp9iq2YrYrdmK!5e1!3m2!1sen!2seg!4v1756516585687!5m2!1sen!2seg'
         },
         factory: {
             title: 'المصنع',
