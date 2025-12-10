@@ -143,17 +143,17 @@ export default function ContactPageClient() {
                                     {/* Top gradient bar */}
                                     <div className={`h-1.5 bg-gradient-to-r ${channel.gradient}`}></div>
 
-                                    {/* Badge */}
-                                    <div className="absolute top-6 left-6">
-                                        <span className={`${channel.badgeColor} text-xs font-bold px-3 py-1 rounded-full`}>
-                                            {channel.badge}
-                                        </span>
-                                    </div>
-
+                                    {/* Badge and Icon header - flex for proper RTL/LTR alignment */}
                                     <div className="p-8 flex-1 flex flex-col">
-                                        {/* Icon */}
-                                        <div className={`w-16 h-16 ${channel.iconBg} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                                            {channel.icon}
+                                        <div className="flex items-start justify-between mb-6">
+                                            {/* Icon */}
+                                            <div className={`w-16 h-16 ${channel.iconBg} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                                                {channel.icon}
+                                            </div>
+                                            {/* Badge */}
+                                            <span className={`${channel.badgeColor} text-xs font-bold px-3 py-1 rounded-full`}>
+                                                {channel.badge}
+                                            </span>
                                         </div>
 
                                         {/* Content */}
@@ -290,6 +290,6 @@ export default function ContactPageClient() {
                     </div>
                 </div>
             </section>
-        </Layout>
+        </Layout >
     );
 }

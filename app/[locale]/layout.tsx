@@ -124,7 +124,7 @@ export default async function RootLayout({
     const dir = localeConfig[locale as Locale]?.dir || 'ltr';
 
     return (
-        <html lang={locale} dir={dir} suppressHydrationWarning>
+        <html lang={locale} dir={dir} data-scroll-behavior="smooth" suppressHydrationWarning>
             <head>
                 {/* Performance: DNS Prefetch */}
                 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
