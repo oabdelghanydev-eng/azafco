@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaNewspaper, FaIndustry, FaTrophy, FaExternalLinkAlt, FaCalendarAlt, FaImages, FaHandshake } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
+import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { newsItems, companyNews, industryNews, achievementNews, NewsItem } from '@/data/news';
 import { products } from '@/data/products';
 import { certificates } from '@/data/certificates';
-import { companyInfo } from '@/data/company';
 
 export default function MediaPageClient() {
     const locale = useLocale();
@@ -228,6 +228,7 @@ export default function MediaPageClient() {
                                     src={img.src}
                                     alt={img.title}
                                     fill
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
                                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -268,7 +269,7 @@ export default function MediaPageClient() {
                 </div>
             )}
 
-            {/* Social Media Section */}
+            {/* CTA Section */}
             <section className="py-16 bg-primary-900 text-white">
                 <div className="container-custom text-center">
                     <motion.div
@@ -285,31 +286,14 @@ export default function MediaPageClient() {
                                 ? 'تابعنا للحصول على آخر الأخبار والعروض'
                                 : 'Follow us for the latest news and offers'}
                         </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <a
-                                href={companyInfo.contact.whatsapp.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
-                            >
-                                {isAr ? 'واتساب' : 'WhatsApp'}
-                            </a>
-                            <a
-                                href={companyInfo.contact.email.link}
-                                className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
-                            >
-                                {isAr ? 'البريد الإلكتروني' : 'Email'}
-                            </a>
-                            <a
-                                href="https://forms.gle/rEYRPSP3vpW8Cggv5"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-primary-800 hover:bg-primary-900 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                            >
-                                <FaHandshake className="text-xl" />
-                                {isAr ? 'طلب شراكة تجارية' : 'Request Partnership'}
-                            </a>
-                        </div>
+                        <Link
+                            href="/contact"
+                            className="bg-secondary-500 text-white px-10 py-4 rounded-full font-bold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-xl inline-flex items-center gap-3 text-lg"
+                            id="media-contact-btn"
+                        >
+                            <FaHandshake className="text-2xl" />
+                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                        </Link>
                     </motion.div>
                 </div>
             </section>

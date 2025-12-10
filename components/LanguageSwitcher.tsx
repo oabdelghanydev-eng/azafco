@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/navigation';
+
+const LOCALE_STORAGE_KEY = 'azafco-preferred-locale';
 
 const LanguageSwitcher: React.FC = () => {
     const locale = useLocale();
@@ -10,6 +12,10 @@ const LanguageSwitcher: React.FC = () => {
     const pathname = usePathname();
 
     const switchLocale = (newLocale: 'ar' | 'en') => {
+        // Save preference to localStorage
+        if (typeof window !== 'undefined') {
+            localStorage.setItem(LOCALE_STORAGE_KEY, newLocale);
+        }
         router.replace(pathname, { locale: newLocale });
     };
 
@@ -40,3 +46,4 @@ const LanguageSwitcher: React.FC = () => {
 };
 
 export default LanguageSwitcher;
+

@@ -23,14 +23,18 @@ export const localeConfig: Record<Locale, { name: string; dir: 'rtl' | 'ltr'; na
     // pt: { name: 'Portuguese', dir: 'ltr', nativeName: 'Português' },
 };
 
-// Request-scoped configuration for next-intl v3
-export default getRequestConfig(async ({ locale }) => {
+// Request-scoped configuration for next-intl v3.25+
+export default getRequestConfig(async ({ requestLocale }) => {
+    // Get the locale from the request (new API)
+    const locale = await requestLocale;
+
     // Validate that the incoming `locale` parameter is valid
-    if (!locales.includes(locale as Locale)) {
+    if (!locale || !locales.includes(locale as Locale)) {
         notFound();
     }
 
     return {
+        locale, // Must return locale in next-intl v3.25+
         messages: (await import(`./locales/${locale}.json`)).default,
         // Time zone for date formatting
         timeZone: 'Africa/Cairo',
@@ -38,3 +42,4 @@ export default getRequestConfig(async ({ locale }) => {
         now: new Date(),
     };
 });
+

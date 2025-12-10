@@ -283,3 +283,25 @@ select:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* Cross-browser animation performance - GPU acceleration */
+.animate-slow-zoom,
+.animate-blob,
+.card,
+.btn-primary,
+.btn-secondary,
+[class*="group-hover:scale"] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+/* Smoother transitions for all browsers including Firefox */
+.transition-all,
+.transition-transform {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+}

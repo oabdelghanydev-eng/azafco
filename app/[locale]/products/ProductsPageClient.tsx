@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaFish, FaWeight, FaThermometerHalf, FaTruck } from 'react-icons/fa';
+import { FaFish, FaWeight, FaThermometerHalf, FaTruck, FaHandshake } from 'react-icons/fa';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products';
-import { companyInfo } from '@/data/company';
 
 export default function ProductsPageClient() {
     const t = useTranslations();
@@ -153,16 +153,14 @@ export default function ProductsPageClient() {
                             ? 'نوفر أسماك طازجة بأعلى معايير الجودة للمطاعم والفنادق والموزعين'
                             : 'We provide fresh fish with the highest quality standards for restaurants, hotels, and distributors'}
                     </p>
-                    <a
-                        href={companyInfo.contact.whatsapp.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-secondary inline-block"
+                    <Link
+                        href="/contact"
+                        className="bg-secondary-500 text-white px-10 py-4 rounded-full font-bold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-xl inline-flex items-center gap-3 text-lg"
                         id="products-cta-btn"
-                        aria-label={locale === 'ar' ? 'طلب عرض أسعار عبر واتساب' : 'Request a quote via WhatsApp'}
                     >
+                        <FaHandshake className="text-2xl" />
                         {locale === 'ar' ? 'طلب عرض أسعار' : 'Request a Quote'}
-                    </a>
+                    </Link>
                 </div>
             </section>
         </Layout>

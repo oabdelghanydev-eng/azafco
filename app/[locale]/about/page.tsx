@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type Props = {
     params: { locale: string };
@@ -12,6 +12,9 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     return {
         title: t('title'),
         description: t('description'),
+        keywords: locale === 'ar'
+            ? 'عن ازافكو, شركة تصدير أسماك مصرية, تاريخ ازافكو, خبرة تصدير الأسماك, شركة أسماك كفر الشيخ'
+            : 'about AZAFCO, Egyptian fish export company, AZAFCO history, fish export experience, Kafr El Sheikh fish company',
         alternates: {
             canonical: `${baseUrl}/${locale}/about`,
             languages: {
@@ -19,6 +22,12 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
                 'en': `${baseUrl}/en/about`,
                 'x-default': `${baseUrl}/ar/about`,
             },
+        },
+        openGraph: {
+            title: t('title'),
+            description: t('description'),
+            url: `${baseUrl}/${locale}/about`,
+            type: 'website',
         },
     };
 }
@@ -30,6 +39,6 @@ import dynamic from 'next/dynamic';
 const AboutPageContent = dynamic(() => import('./AboutPageClient'), { ssr: false });
 
 export default function AboutPage({ params: { locale } }: Props) {
-    unstable_setRequestLocale(locale);
+    setRequestLocale(locale);
     return <AboutPageContent />;
 }

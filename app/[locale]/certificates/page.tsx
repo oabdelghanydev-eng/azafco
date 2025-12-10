@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 
 type Props = {
@@ -13,6 +13,9 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     return {
         title: t('title'),
         description: t('description'),
+        keywords: locale === 'ar'
+            ? 'شهادات ازافكو, ISO 22000, HACCP, ISO 9001, شهادات جودة أسماك, معايير سلامة الغذاء'
+            : 'AZAFCO certificates, ISO 22000, HACCP, ISO 9001, fish quality certificates, food safety standards',
         alternates: {
             canonical: `${baseUrl}/${locale}/certificates`,
             languages: {
@@ -21,12 +24,18 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
                 'x-default': `${baseUrl}/ar/certificates`,
             },
         },
+        openGraph: {
+            title: t('title'),
+            description: t('description'),
+            url: `${baseUrl}/${locale}/certificates`,
+            type: 'website',
+        },
     };
 }
 
 const CertificatesPageClient = dynamic(() => import('./CertificatesPageClient'), { ssr: false });
 
 export default function CertificatesPage({ params: { locale } }: Props) {
-    unstable_setRequestLocale(locale);
+    setRequestLocale(locale);
     return <CertificatesPageClient />;
 }

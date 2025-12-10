@@ -42,6 +42,7 @@ export default function HomePage() {
                         src="/images/bg-homepage.webp"
                         alt={locale === 'ar' ? 'خلفية المصنع' : 'Factory Background'}
                         fill
+                        sizes="100vw"
                         priority
                         quality={80}
                         className="object-cover scale-105 animate-slow-zoom"
@@ -312,30 +313,14 @@ export default function HomePage() {
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
                             {t('home.cta.description')}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a
-                                href={companyInfo.contact.whatsapp.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                                id="cta-whatsapp-btn"
-                                aria-label={t('home.hero.cta_whatsapp')}
-                            >
-                                <FaWhatsapp className="text-xl" />
-                                {t('home.hero.cta_whatsapp')}
-                            </a>
-                            <a
-                                href="https://forms.gle/rEYRPSP3vpW8Cggv5"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-primary-800 text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                                id="cta-partnership-btn"
-                                aria-label={t('home.hero.cta_partnership')}
-                            >
-                                <FaHandshake className="text-xl" />
-                                {t('home.hero.cta_partnership')}
-                            </a>
-                        </div>
+                        <Link
+                            href="/contact"
+                            className="bg-white text-secondary-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl inline-flex items-center gap-3 text-lg"
+                            id="cta-contact-btn"
+                        >
+                            <FaHandshake className="text-2xl" />
+                            {locale === 'ar' ? 'ابدأ التعاون معنا' : 'Start Partnership'}
+                        </Link>
                     </motion.div>
                 </div>
             </section>

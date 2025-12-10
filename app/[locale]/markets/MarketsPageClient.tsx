@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGlobe, FaMapMarkedAlt, FaShip, FaHandshake, FaChartLine, FaUsers, FaCheckCircle } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
+import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { markets, Market } from '@/data/markets';
 import { companyInfo } from '@/data/company';
@@ -224,24 +225,14 @@ export default function MarketsPageClient() {
                                 ? 'انضم إلى قائمة عملائنا المميزين واحصل على أفضل منتجات الأسماك الطازجة'
                                 : 'Join our distinguished clients list and get the best fresh fish products'}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a
-                                href={companyInfo.contact.whatsapp.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn-secondary inline-block"
-                                id="markets-whatsapp-btn"
-                            >
-                                {isAr ? 'ابدأ التعاون معنا' : 'Start Cooperation'}
-                            </a>
-                            <a
-                                href={companyInfo.contact.email.link}
-                                className="bg-white text-primary-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
-                                id="markets-email-btn"
-                            >
-                                {isAr ? 'راسلنا عبر البريد' : 'Email Us'}
-                            </a>
-                        </div>
+                        <Link
+                            href="/contact"
+                            className="bg-secondary-500 text-white px-10 py-4 rounded-full font-bold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-xl inline-flex items-center gap-3 text-lg"
+                            id="markets-contact-btn"
+                        >
+                            <FaHandshake className="text-2xl" />
+                            {isAr ? 'ابدأ التعاون معنا' : 'Start Partnership'}
+                        </Link>
                     </motion.div>
                 </div>
             </section>

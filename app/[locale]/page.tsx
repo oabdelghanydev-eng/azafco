@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HomePageClient from './HomePageClient';
 
 type Props = {
@@ -31,7 +31,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 
 export default function HomePage({ params: { locale } }: Props) {
     // Enable static rendering
-    unstable_setRequestLocale(locale);
+    setRequestLocale(locale);
 
     return <HomePageClient />;
 }

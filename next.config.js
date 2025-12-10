@@ -5,11 +5,7 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  // Fix for next-intl trailing slash warning
-  env: {
-    _next_intl_trailing_slash: '',
-  },
+  trailingSlash: false,
 
   // Image optimization
   images: {

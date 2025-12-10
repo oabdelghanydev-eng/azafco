@@ -29,7 +29,7 @@ export const newsItems: NewsItem[] = [
         category: 'company',
     },
     {
-        id: 9,
+        id: 10,
         title: 'شركة إزافكو العالمية.. الأفضل في عالم تصدير الأسماك',
         titleEn: 'AZAFCO International.. The Best in the World of Fish Export',
         summary: 'الحاج محمد عبد الله الكويتيحي رئيس مجلس الإدارة: نصدر لجميع دول العالم.. وحصلنا على موافقة الاتحاد الأوروبي لاستيراد منتجاتنا.',

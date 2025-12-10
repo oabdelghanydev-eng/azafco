@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaCertificate, FaCheckCircle, FaAward, FaTimes, FaWhatsapp } from 'react-icons/fa';
+import { FaShieldAlt, FaCertificate, FaCheckCircle, FaAward, FaTimes, FaHandshake } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
+import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { certificates } from '@/data/certificates';
-import { companyInfo } from '@/data/company';
 
 export default function CertificatesPageClient() {
     const locale = useLocale();
@@ -143,6 +143,7 @@ export default function CertificatesPageClient() {
                                         src={cert.image}
                                         alt={cert.name}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                                     />
                                 </div>
@@ -248,16 +249,14 @@ export default function CertificatesPageClient() {
                                 ? 'تواصل معنا للحصول على نسخ من شهاداتنا أو لمزيد من المعلومات'
                                 : 'Contact us to get copies of our certificates or for more information'}
                         </p>
-                        <a
-                            href={companyInfo.contact.whatsapp.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
+                        <Link
+                            href="/contact"
+                            className="bg-white text-secondary-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl inline-flex items-center gap-3 text-lg"
                             id="certificates-cta-btn"
                         >
-                            <FaWhatsapp className="text-xl" />
+                            <FaHandshake className="text-2xl" />
                             {isAr ? 'تواصل معنا' : 'Contact Us'}
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </section>

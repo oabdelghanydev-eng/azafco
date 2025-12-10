@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEye, FaBullseye, FaHandshake, FaAward, FaIndustry, FaUsers, FaGlobe, FaWhatsapp } from 'react-icons/fa';
+import { FaEye, FaBullseye, FaHandshake, FaAward, FaIndustry, FaUsers, FaGlobe } from 'react-icons/fa';
 import { useLocale } from 'next-intl';
+import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { companyInfo } from '@/data/company';
 
@@ -363,28 +364,14 @@ export default function AboutPageClient() {
                                 ? 'نحن هنا للإجابة على جميع استفساراتك وتلبية احتياجاتك من الأسماك الطازجة'
                                 : 'We are here to answer all your inquiries and meet your fresh fish needs'}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a
-                                href={companyInfo.contact.whatsapp.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-white text-secondary-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                                id="about-whatsapp-btn"
-                            >
-                                <FaWhatsapp className="text-xl" />
-                                {isAr ? 'تواصل عبر واتساب' : 'Contact via WhatsApp'}
-                            </a>
-                            <a
-                                href="https://forms.gle/rEYRPSP3vpW8Cggv5"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-primary-800 text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-900 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-2"
-                                id="about-partnership-btn"
-                            >
-                                <FaHandshake className="text-xl" />
-                                {isAr ? 'طلب شراكة تجارية' : 'Request Partnership'}
-                            </a>
-                        </div>
+                        <Link
+                            href="/contact"
+                            className="bg-white text-secondary-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl inline-flex items-center gap-3 text-lg"
+                            id="about-contact-btn"
+                        >
+                            <FaHandshake className="text-2xl" />
+                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                        </Link>
                     </motion.div>
                 </div>
             </section>

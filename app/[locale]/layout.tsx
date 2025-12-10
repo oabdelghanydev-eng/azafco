@@ -1,9 +1,11 @@
 import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
 import { locales, localeConfig, Locale } from '@/i18n';
+import StructuredData from '@/components/StructuredData';
+import LocaleInitializer from '@/components/LocaleInitializer';
 import '../globals.css';
 
 // Configure Cairo font with next/font for optimal loading (same as original)
@@ -110,7 +112,7 @@ export default async function RootLayout({
     }
 
     // Enable static rendering
-    unstable_setRequestLocale(locale);
+    setRequestLocale(locale);
 
     // Get messages for the current locale
     const messages = await getMessages();
@@ -121,6 +123,12 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} suppressHydrationWarning>
             <head>
+                {/* Performance: DNS Prefetch */}
+                <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+                <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
                 {/* Favicon - Optimized for Google Search 2024 */}
                 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-48x48.png" />
                 <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -129,14 +137,23 @@ export default async function RootLayout({
                 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
                 <link rel="manifest" href="/manifest.json" />
+
+                {/* Theme & Geo Tags */}
                 <meta name="theme-color" content="#1e3a5f" />
                 <meta name="geo.region" content="EG-KFS" />
                 <meta name="geo.placename" content="Kafr El Sheikh, Egypt" />
                 <meta name="geo.position" content="31.2653;30.9366" />
                 <meta name="ICBM" content="31.2653, 30.9366" />
+
+                {/* Mobile & PWA */}
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             </head>
             <body className={cairo.className}>
                 <NextIntlClientProvider messages={messages}>
+                    <LocaleInitializer />
+                    <StructuredData />
                     {children}
                 </NextIntlClientProvider>
             </body>

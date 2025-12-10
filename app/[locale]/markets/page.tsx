@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 
 type Props = {
@@ -13,6 +13,9 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     return {
         title: t('title'),
         description: t('description'),
+        keywords: locale === 'ar'
+            ? 'أسواق التصدير, تصدير أسماك الخليج, تصدير أسماك السعودية, تصدير أسماك الإمارات, أسواق ازافكو'
+            : 'export markets, Gulf fish export, Saudi Arabia fish, UAE fish export, AZAFCO markets, Qatar Kuwait Bahrain',
         alternates: {
             canonical: `${baseUrl}/${locale}/markets`,
             languages: {
@@ -21,12 +24,18 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
                 'x-default': `${baseUrl}/ar/markets`,
             },
         },
+        openGraph: {
+            title: t('title'),
+            description: t('description'),
+            url: `${baseUrl}/${locale}/markets`,
+            type: 'website',
+        },
     };
 }
 
 const MarketsPageClient = dynamic(() => import('./MarketsPageClient'), { ssr: false });
 
 export default function MarketsPage({ params: { locale } }: Props) {
-    unstable_setRequestLocale(locale);
+    setRequestLocale(locale);
     return <MarketsPageClient />;
 }
