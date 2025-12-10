@@ -290,7 +290,7 @@ export default function HomePage() {
                                 viewport={{ once: true }}
                                 className="bg-white border-2 border-primary-600 rounded-full px-6 py-3 text-lg font-semibold text-primary-800 hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg flex items-center gap-3"
                             >
-                                <img src={market.flag} alt={market.country} className="w-8 h-6 object-cover rounded" />
+                                <Image src={market.flag} alt={locale === 'ar' ? market.country : market.countryEn || market.country} width={32} height={24} className="w-8 h-6 object-cover rounded" />
                                 {locale === 'ar' ? market.country : market.countryEn || market.country}
                             </motion.div>
                         ))}
