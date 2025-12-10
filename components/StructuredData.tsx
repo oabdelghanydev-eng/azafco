@@ -63,6 +63,38 @@ export const defaultKeywords = {
         أسماك بحرية, قراميط, لوت بحري, ثعابين,
         مورد مطاعم أسماك, مورد فنادق أسماك, أسماك بالجملة,
         شهادة HACCP, شهادة ISO, أسماك معتمدة
+    `.replace(/\s+/g, ' ').trim(),
+    es: `
+        AZAFCO, AZAFCO Internacional, exportador de pescado egipcio, proveedor de pescado fresco Egipto,
+        proveedor de tilapia, exportación de tilapia Egipto, tilapia del Nilo al por mayor,
+        proveedor de lubina, lubina egipcia, exportación de lubina fresca,
+        proveedor de salmonete, salmonete fresco Egipto, exportación de pescado bouri,
+        proveedor de mariscos B2B, pescado al por mayor Egipto, pedido de pescado a granel,
+        importación de pescado del Golfo, proveedor de pescado Medio Oriente, exportación de pescado EAU, exportación de pescado Arabia Saudita,
+        exportación de pescado Qatar, exportación de pescado Kuwait, exportación de pescado Bahréin, exportación de pescado Jordania,
+        empaque de pescado fresco, pescado congelado Egipto, distribuidor de mariscos Egipto,
+        empresa de mariscos egipcia, pescado Kafr El Sheikh, exportación de pescado del Nilo,
+        proveedor de bagre Egipto, exportación de pescado de agua dulce, pescado de agua salada Egipto,
+        procesamiento de pescado Egipto, pescado certificado HACCP, mariscos certificados ISO,
+        proveedor comercial de pescado, proveedor de pescado para restaurantes, proveedor de pescado para hoteles,
+        precio de pescado al por mayor, tilapia a granel, lubina a granel, salmonete a granel,
+        tilapia africana, lubina mediterránea, pescado del Mar Rojo
+    `.replace(/\s+/g, ' ').trim(),
+    ru: `
+        AZAFCO, AZAFCO International, египетский экспортёр рыбы, поставщик свежей рыбы Египет,
+        поставщик тилапии, экспорт тилапии Египет, нильская тилапия оптом,
+        поставщик морского окуня, египетский морской окунь, экспорт свежего морского окуня,
+        поставщик кефали, свежая кефаль Египет, экспорт рыбы бури,
+        B2B поставщик морепродуктов, оптовая продажа рыбы Египет, оптовый заказ рыбы,
+        импорт рыбы Персидского залива, поставщик рыбы Ближний Восток, экспорт рыбы ОАЭ, экспорт рыбы Саудовская Аравия,
+        экспорт рыбы Катар, экспорт рыбы Кувейт, экспорт рыбы Бахрейн, экспорт рыбы Иордания,
+        упаковка свежей рыбы, замороженная рыба Египет, дистрибьютор морепродуктов Египет,
+        египетская компания морепродуктов, рыба Кафр-эш-Шейх, экспорт нильской рыбы,
+        поставщик сома Египет, экспорт пресноводной рыбы, морская рыба Египет,
+        переработка рыбы Египет, рыба сертифицированная HACCP, морепродукты сертифицированные ISO,
+        коммерческий поставщик рыбы, поставщик рыбы для ресторанов, поставщик рыбы для отелей,
+        оптовая цена на рыбу, тилапия оптом, морской окунь оптом, кефаль оптом,
+        африканская тилапия, средиземноморский морской окунь, рыба Красного моря
     `.replace(/\s+/g, ' ').trim()
 };
 
@@ -257,7 +289,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         description: locale === 'ar'
             ? 'الموقع الرسمي لشركة ازافكو العالمية - تصدير الأسماك الطازجة من مصر'
             : 'Official website of AZAFCO International - Premium fresh fish exporter from Egypt to worldwide markets',
-        inLanguage: ['ar', 'en'],
+        inLanguage: ['ar', 'en', 'es', 'ru'],
         publisher: {
             '@id': `${baseUrl}/#organization`
         }

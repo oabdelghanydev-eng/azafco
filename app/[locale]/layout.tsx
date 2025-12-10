@@ -53,24 +53,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
         openGraph: {
             type: 'website',
-            locale: isArabic ? 'ar_EG' : 'en_US',
-            alternateLocale: isArabic ? 'en_US' : 'ar_EG',
+            locale: locale === 'ar' ? 'ar_EG' : locale === 'es' ? 'es_ES' : locale === 'ru' ? 'ru_RU' : 'en_US',
+            alternateLocale: ['ar_EG', 'en_US', 'es_ES', 'ru_RU'].filter(l => !l.startsWith(locale)),
             url: baseUrl,
             siteName: 'AZAFCO - ازافكو العالمية',
             images: [
                 {
-                    url: isArabic ? '/images/og-image-ar.jpg' : '/images/og-image-en.jpg',
+                    url: `/images/og-image-${locale === 'ar' || locale === 'en' ? locale : 'en'}.jpg`,
                     width: 1200,
                     height: 630,
-                    alt: isArabic
-                        ? 'ازافكو العالمية - تصدير الأسماك الطازجة'
-                        : 'AZAFCO International - Fresh Fish Export from Egypt',
+                    alt: locale === 'ar' ? 'ازافكو العالمية - تصدير الأسماك الطازجة'
+                        : locale === 'es' ? 'AZAFCO Internacional - Exportación de Pescado Fresco de Egipto'
+                            : locale === 'ru' ? 'AZAFCO International - Экспорт свежей рыбы из Египта'
+                                : 'AZAFCO International - Fresh Fish Export from Egypt',
                 },
             ],
         },
         twitter: {
             card: 'summary_large_image',
-            images: [isArabic ? '/images/og-image-ar.jpg' : '/images/og-image-en.jpg'],
+            images: [`/images/og-image-${locale === 'ar' || locale === 'en' ? locale : 'en'}.jpg`],
         },
         robots: {
             index: true,
@@ -92,6 +93,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             languages: {
                 'ar': `${baseUrl}/ar`,
                 'en': `${baseUrl}/en`,
+                'es': `${baseUrl}/es`,
+                'ru': `${baseUrl}/ru`,
                 'x-default': `${baseUrl}/ar`,
             },
         },
