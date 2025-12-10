@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
@@ -165,6 +166,9 @@ export default async function RootLayout({
                     <StructuredData />
                     {children}
                 </NextIntlClientProvider>
+
+                {/* Vercel Analytics */}
+                <Analytics />
 
                 {/* Google Analytics 4 - Best Practice: afterInteractive */}
                 <Script
