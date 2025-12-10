@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
@@ -164,6 +165,40 @@ export default async function RootLayout({
                     <StructuredData />
                     {children}
                 </NextIntlClientProvider>
+
+                {/* Google Analytics 4 - Best Practice: afterInteractive */}
+                <Script
+                    id="ga4-gtag"
+                    strategy="afterInteractive"
+                    src="https://www.googletagmanager.com/gtag/js?id=G-KKH7RD7SRV"
+                />
+                <Script
+                    id="ga4-config"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-KKH7RD7SRV');
+                        `,
+                    }}
+                />
+
+                {/* Microsoft Clarity - Best Practice: lazyOnload for non-critical analytics */}
+                <Script
+                    id="clarity-script"
+                    strategy="lazyOnload"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function(c,l,a,r,i,t,y){
+                                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+                                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                            })(window, document, "clarity", "script", "ujhz7pyrbs");
+                        `,
+                    }}
+                />
             </body>
         </html>
     );
