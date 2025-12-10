@@ -3,44 +3,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGlobe, FaMapMarkedAlt, FaShip, FaHandshake, FaChartLine, FaUsers, FaCheckCircle } from 'react-icons/fa';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { markets, Market } from '@/data/markets';
 import { companyInfo } from '@/data/company';
+import { getLocalizedField, getLocalizedArrayField } from '@/utils/localization';
 
 export default function MarketsPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
+    const t = useTranslations();
 
     const stats = [
-        { number: companyInfo.stats.clients, label: isAr ? 'عميل راضي' : 'Satisfied Clients', icon: <FaUsers /> },
-        { number: companyInfo.stats.tonnage, label: isAr ? 'طن شهرياً' : 'Tons Monthly', icon: <FaShip /> },
-        { number: companyInfo.stats.countries, label: isAr ? 'دول نصدر إليها' : 'Export Countries', icon: <FaGlobe /> },
-        { number: companyInfo.stats.experience, label: isAr ? 'سنة خبرة' : 'Years Experience', icon: <FaChartLine /> },
+        { number: companyInfo.stats.clients, label: t('common.satisfied_clients'), icon: <FaUsers /> },
+        { number: companyInfo.stats.tonnage, label: t('common.tons_monthly'), icon: <FaShip /> },
+        { number: companyInfo.stats.countries, label: t('common.export_countries'), icon: <FaGlobe /> },
+        { number: companyInfo.stats.experience, label: t('common.years_experience'), icon: <FaChartLine /> },
     ];
 
     const advantages = [
         {
             icon: <FaShip className="text-4xl text-primary-600" />,
-            title: isAr ? 'شحن دولي محترف' : 'Professional International Shipping',
-            description: isAr
-                ? 'نتعامل مع أفضل شركات الشحن المبرد لضمان وصول المنتج طازجاً'
-                : 'We work with the best refrigerated shipping companies to ensure fresh delivery',
+            title: t('markets_page.shipping_title'),
+            description: t('markets_page.shipping_desc'),
         },
         {
             icon: <FaHandshake className="text-4xl text-secondary-600" />,
-            title: isAr ? 'شراكات استراتيجية' : 'Strategic Partnerships',
-            description: isAr
-                ? 'نبني علاقات طويلة الأمد مع عملائنا ونعتبرهم شركاء نجاح'
-                : 'We build long-term relationships with our customers as success partners',
+            title: t('markets_page.partnerships_title'),
+            description: t('markets_page.partnerships_desc'),
         },
         {
             icon: <FaMapMarkedAlt className="text-4xl text-green-600" />,
-            title: isAr ? 'تغطية واسعة' : 'Wide Coverage',
-            description: isAr
-                ? 'شبكة توزيع قوية تغطي أهم الأسواق في منطقة الخليج والشرق الأوسط'
-                : 'Strong distribution network covering key markets in the Gulf and Middle East',
+            title: t('markets_page.coverage_title'),
+            description: t('markets_page.coverage_desc'),
         },
     ];
 
@@ -56,12 +52,10 @@ export default function MarketsPageClient() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            {isAr ? 'أسواقنا' : 'Our Markets'}
+                            {t('markets_page.title')}
                         </h1>
                         <p className="text-xl max-w-3xl mx-auto">
-                            {isAr
-                                ? 'نفخر بخدمة عملائنا في أهم الأسواق الإقليمية بمنتجات عالية الجودة'
-                                : 'We proudly serve our clients in the most important regional markets with high-quality products'}
+                            {t('markets_page.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -99,10 +93,10 @@ export default function MarketsPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="section-title">
-                            {isAr ? 'الدول التي نصدر إليها' : 'Countries We Export To'}
+                            {t('markets_page.countries_title')}
                         </h2>
                         <p className="section-subtitle">
-                            {isAr ? 'خبرة طويلة في خدمة أسواق المنطقة' : 'Long experience serving regional markets'}
+                            {t('markets_page.countries_subtitle')}
                         </p>
                     </motion.div>
 
@@ -123,32 +117,32 @@ export default function MarketsPageClient() {
                                     <div className="w-16 h-12 rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
                                         <img
                                             src={market.flag}
-                                            alt={`${isAr ? 'علم' : 'Flag of'} ${isAr ? market.country : market.countryEn}`}
+                                            alt={`${t('common.flag_of')} ${getLocalizedField(market, 'country', locale)}`}
                                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                                             loading="lazy"
                                         />
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-xl font-bold text-primary-800 group-hover:text-primary-600 transition-colors">
-                                            {isAr ? market.country : market.countryEn}
+                                            {getLocalizedField(market, 'country', locale)}
                                         </h3>
                                         {market.status === 'paused' && (
                                             <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">
-                                                {isAr ? 'متوقف حالياً' : 'Currently Paused'}
+                                                {t('common.currently_paused')}
                                             </span>
                                         )}
                                         {market.status === 'coming-soon' && (
                                             <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
-                                                {isAr ? 'قريباً' : 'Coming Soon'}
+                                                {t('common.coming_soon')}
                                             </span>
                                         )}
                                     </div>
                                 </div>
                                 <p className="text-gray-600 mb-4">
-                                    {isAr ? market.description : market.descriptionEn}
+                                    {getLocalizedField(market, 'description', locale)}
                                 </p>
                                 <div className="space-y-2 mb-4">
-                                    {(isAr ? market.features : market.featuresEn).map((feature, idx) => (
+                                    {getLocalizedArrayField(market, 'features', locale).map((feature, idx) => (
                                         <div key={idx} className={`flex items-center ${isAr ? 'space-x-2 space-x-reverse' : 'space-x-2'}`}>
                                             <FaCheckCircle className="text-green-500 flex-shrink-0" />
                                             <span className="text-sm text-gray-700">{feature}</span>
@@ -157,7 +151,7 @@ export default function MarketsPageClient() {
                                 </div>
                                 <div className="pt-4 border-t border-gray-200 flex justify-between items-center">
                                     <span className="text-sm text-gray-500">
-                                        {isAr ? 'نخدم هذا السوق منذ' : 'Serving since'}
+                                        {t('common.serving_since')}
                                     </span>
                                     <span className={`text-lg font-bold px-3 py-1 rounded-full ${market.status === 'coming-soon' ? 'bg-blue-50 text-blue-600' :
                                         market.status === 'paused' ? 'bg-yellow-50 text-yellow-600' :
@@ -180,10 +174,10 @@ export default function MarketsPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="section-title">
-                            {isAr ? 'مميزات التعامل معنا' : 'Why Work With Us'}
+                            {t('markets_page.advantages_title')}
                         </h2>
                         <p className="section-subtitle">
-                            {isAr ? 'نقدم أكثر من مجرد منتجات' : 'We offer more than just products'}
+                            {t('markets_page.advantages_subtitle')}
                         </p>
                     </motion.div>
 
@@ -218,12 +212,10 @@ export default function MarketsPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-4">
-                            {isAr ? 'هل تريد أن تصبح شريكاً لنا؟' : 'Want to Become Our Partner?'}
+                            {t('markets_page.cta_title')}
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
-                            {isAr
-                                ? 'انضم إلى قائمة عملائنا المميزين واحصل على أفضل منتجات الأسماك الطازجة'
-                                : 'Join our distinguished clients list and get the best fresh fish products'}
+                            {t('markets_page.cta_subtitle')}
                         </p>
                         <Link
                             href="/contact"
@@ -231,7 +223,7 @@ export default function MarketsPageClient() {
                             id="markets-contact-btn"
                         >
                             <FaHandshake className="text-2xl" />
-                            {isAr ? 'ابدأ التعاون معنا' : 'Start Partnership'}
+                            {t('common.start_partnership')}
                         </Link>
                     </motion.div>
                 </div>

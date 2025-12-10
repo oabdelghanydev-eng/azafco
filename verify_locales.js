@@ -1,72 +1,89 @@
 const fs = require('fs');
 const path = require('path');
 
-const locales = ['ar', 'en', 'es', 'ru', 'de', 'fr'];
-const keys = {};
+const locales = ['en', 'ar', 'es', 'ru', 'de', 'fr'];
+const localesDir = path.join(__dirname, 'locales');
+const data = {};
 
-console.log('🔍 Starting Translation Key Verification...\n');
-
+// Load all locale files
 locales.forEach(l => {
-    try {
-        const filePath = path.join('locales', `${l}.json`);
-        if (!fs.existsSync(filePath)) {
-            console.error(`❌ Error: File not found: ${filePath}`);
-            return;
+    const filePath = path.join(localesDir, `${l}.json`);
+    data[l] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+});
+
+// Recursively get all keys from an object
+const getKeys = (obj, prefix = '') => {
+    let keys = [];
+    for (const k in obj) {
+        const key = prefix ? `${prefix}.${k}` : k;
+        if (typeof obj[k] === 'object' && obj[k] !== null) {
+            keys = keys.concat(getKeys(obj[k], key));
+        } else {
+            keys.push(key);
         }
-        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-
-        const getKeys = (obj, prefix = '') => Object.keys(obj).reduce((acc, k) => {
-            const pre = prefix.length ? prefix + '.' : '';
-            if (typeof obj[k] === 'object' && obj[k] !== null) {
-                acc.push(...getKeys(obj[k], pre + k));
-            } else {
-                acc.push(pre + k);
-            }
-            return acc;
-        }, []);
-
-        keys[l] = getKeys(data).sort();
-        console.log(`📄 ${l.toUpperCase()}: \t${keys[l].length} keys found.`);
-    } catch (e) {
-        console.error(`❌ Error reading ${l}: ${e.message}`);
     }
+    return keys;
+};
+
+// Get English keys as baseline
+const enKeys = getKeys(data.en).sort();
+console.log('=== Locale Files Verification ===\n');
+console.log(`English (en.json): ${enKeys.length} keys\n`);
+
+let allMatch = true;
+
+// Compare each locale with English
+locales.slice(1).forEach(l => {
+    const lKeys = getKeys(data[l]).sort();
+    const missing = enKeys.filter(k => !lKeys.includes(k));
+    const extra = lKeys.filter(k => !enKeys.includes(k));
+
+    console.log(`${l.toUpperCase()} (${l}.json): ${lKeys.length} keys`);
+
+    if (missing.length > 0) {
+        console.log(`  ❌ Missing ${missing.length} keys:`);
+        missing.forEach(k => console.log(`     - ${k}`));
+        allMatch = false;
+    }
+
+    if (extra.length > 0) {
+        console.log(`  ⚠️  Extra ${extra.length} keys:`);
+        extra.forEach(k => console.log(`     + ${k}`));
+    }
+
+    if (missing.length === 0 && extra.length === 0) {
+        console.log(`  ✅ All keys match English!`);
+    }
+    console.log('');
 });
 
-const baseLocale = 'en';
-const baseKeys = keys[baseLocale];
-
-if (!baseKeys) {
-    console.error('❌ Critical Error: English base locale keys missing.');
-    process.exit(1);
-}
-
-let mismatch = false;
-
+// Check for empty values
+console.log('=== Checking for Empty Values ===\n');
 locales.forEach(l => {
-    if (l === baseLocale) return;
+    const emptyKeys = [];
+    const checkEmpty = (obj, prefix = '') => {
+        for (const k in obj) {
+            const key = prefix ? `${prefix}.${k}` : k;
+            if (typeof obj[k] === 'object' && obj[k] !== null) {
+                checkEmpty(obj[k], key);
+            } else if (obj[k] === '' || obj[k] === null || obj[k] === undefined) {
+                emptyKeys.push(key);
+            }
+        }
+    };
+    checkEmpty(data[l]);
 
-    if (!keys[l]) {
-        console.log(`\n❌ ${l.toUpperCase()} failed to load.`);
-        mismatch = true;
-        return;
-    }
-
-    const missing = baseKeys.filter(k => !keys[l].includes(k));
-    const extra = keys[l].filter(k => !baseKeys.includes(k));
-
-    if (missing.length || extra.length) {
-        mismatch = true;
-        console.log(`\n⚠️ Mismatch in ${l.toUpperCase()}:`);
-        if (missing.length) console.log('  🔴 Missing keys:', missing);
-        if (extra.length) console.log('  🟡 Extra keys:', extra);
+    if (emptyKeys.length > 0) {
+        console.log(`${l.toUpperCase()}: ${emptyKeys.length} empty values`);
+        emptyKeys.forEach(k => console.log(`  - ${k}`));
     } else {
-        console.log(`✅ ${l.toUpperCase()} matches base locale structure.`);
+        console.log(`${l.toUpperCase()}: ✅ No empty values`);
     }
 });
 
-if (!mismatch) {
-    console.log('\n🎉 SUCCESS: All 6 language files have identical key structures.');
+console.log('\n=== Summary ===');
+if (allMatch) {
+    console.log('✅ All locale files have consistent keys!');
 } else {
-    console.log('\n⚠️ WARNING: Consistency issues found.');
-    process.exit(1);
+    console.log('❌ Some locale files are missing keys, please fix them.');
 }

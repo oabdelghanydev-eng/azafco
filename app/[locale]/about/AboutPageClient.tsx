@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEye, FaBullseye, FaHandshake, FaAward, FaIndustry, FaUsers, FaGlobe } from 'react-icons/fa';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { companyInfo } from '@/data/company';
@@ -11,51 +11,37 @@ import { companyInfo } from '@/data/company';
 export default function AboutPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
+    const t = useTranslations();
 
-    const timeline = isAr ? [
-        { year: '2008', event: 'تأسيس شركة ازافكو العالمية' },
-        { year: '2008', event: 'بداية التصدير إلى دول الخليج' },
-        { year: '2018', event: 'افتتاح المصنع الجديد في بلطيم' },
-        { year: '2018', event: 'الحصول على شهادات الأيزو الدولية' },
-        { year: '2018', event: 'التوسع في الأسواق' },
-        { year: '2025', event: 'تحديث خطوط الإنتاج بأحدث التقنيات' },
-    ] : [
-        { year: '2008', event: 'AZAFCO International founded' },
-        { year: '2008', event: 'Started exporting to Gulf countries' },
-        { year: '2018', event: 'New factory opened in Motobas' },
-        { year: '2018', event: 'ISO international certifications obtained' },
-        { year: '2018', event: 'Market expansion' },
-        { year: '2025', event: 'Production lines upgraded with latest technology' },
+    const timeline = [
+        { year: '2008', event: t('about_page.timeline_2008_founding') },
+        { year: '2008', event: t('about_page.timeline_2008_export') },
+        { year: '2018', event: t('about_page.timeline_2018_factory') },
+        { year: '2018', event: t('about_page.timeline_2018_iso') },
+        { year: '2018', event: t('about_page.timeline_2018_expansion') },
+        { year: '2025', event: t('about_page.timeline_2025_upgrade') },
     ];
 
     const values = [
         {
             icon: <FaHandshake className="text-4xl text-primary-600" />,
-            title: isAr ? 'الثقة والمصداقية' : 'Trust & Credibility',
-            description: isAr
-                ? 'نبني علاقات طويلة الأمد مع عملائنا على أساس الثقة المتبادلة'
-                : 'Building long-term relationships with clients based on mutual trust',
+            title: t('about_page.value_trust'),
+            description: t('about_page.value_trust_desc'),
         },
         {
             icon: <FaAward className="text-4xl text-secondary-600" />,
-            title: isAr ? 'الجودة والتميز' : 'Quality & Excellence',
-            description: isAr
-                ? 'نلتزم بأعلى معايير الجودة في جميع منتجاتنا وخدماتنا'
-                : 'Committed to highest quality standards in all products and services',
+            title: t('about_page.value_quality'),
+            description: t('about_page.value_quality_desc'),
         },
         {
             icon: <FaUsers className="text-4xl text-green-600" />,
-            title: isAr ? 'فريق محترف' : 'Professional Team',
-            description: isAr
-                ? 'فريق عمل متخصص وذو خبرة طويلة في مجال تصدير الأسماك'
-                : 'Specialized team with extensive experience in fish export',
+            title: t('about_page.value_team'),
+            description: t('about_page.value_team_desc'),
         },
         {
             icon: <FaGlobe className="text-4xl text-blue-600" />,
-            title: isAr ? 'الريادة الإقليمية' : 'Regional Leadership',
-            description: isAr
-                ? 'نسعى لنكون الخيار الأول في منطقة الشرق الأوسط'
-                : 'Striving to be the first choice in the Middle East region',
+            title: t('about_page.value_leadership'),
+            description: t('about_page.value_leadership_desc'),
         },
     ];
 
@@ -71,12 +57,10 @@ export default function AboutPageClient() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            {isAr ? 'من نحن' : 'About Us'}
+                            {t('about.title')}
                         </h1>
                         <p className="text-xl max-w-3xl mx-auto">
-                            {isAr
-                                ? 'رحلة تميز وإنجاز في عالم تصدير الأسماك الطازجة منذ عام 2008'
-                                : 'A journey of excellence in fresh fish export since 2008'}
+                            {t('about.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -93,22 +77,16 @@ export default function AboutPageClient() {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-3xl font-bold mb-6 text-primary-800">
-                                {isAr ? 'قصة نجاحنا' : 'Our Success Story'}
+                                {t('about_page.success_story')}
                             </h2>
                             <p className="text-gray-600 mb-4 leading-relaxed">
-                                {isAr
-                                    ? 'شركة ازافكو العالمية للاستثمار والتنمية هي واحدة من الشركات الرائدة في مجال تعبئة وتصدير الأسماك الطازجة في مصر. تأسست الشركة عام 2008 برؤية واضحة لتقديم أفضل منتجات الأسماك الطازجة للأسواق الإقليمية والدولية.'
-                                    : 'AZAFCO International Investment & Development is one of the leading companies in fresh fish packaging and export in Egypt. Founded in 2008 with a clear vision to provide the best fresh fish products to regional and international markets.'}
+                                {t('about_page.company_description')}
                             </p>
                             <p className="text-gray-600 mb-4 leading-relaxed">
-                                {isAr
-                                    ? 'على مدار أكثر من 15 عاماً، نجحنا في بناء سمعة متميزة في الأسواق العربية من خلال التزامنا بالجودة والمصداقية وتقديم خدمات متميزة تلبي احتياجات عملائنا من الموزعين والمطاعم والفنادق.'
-                                    : 'Over more than 15 years, we have built an excellent reputation in Arab markets through our commitment to quality and credibility, providing outstanding services to distributors, restaurants, and hotels.'}
+                                {t('about_page.success_story_p2')}
                             </p>
                             <p className="text-gray-600 leading-relaxed">
-                                {isAr
-                                    ? 'نمتلك مصنعاً حديثاً مجهزاً بأحدث التقنيات في المنطقة الصناعية بمطوبس، كفر الشيخ، ونطبق أعلى معايير الجودة والسلامة الغذائية المعتمدة دولياً.'
-                                    : 'We own a modern factory equipped with the latest technologies in the industrial zone of Motobas, Kafr El Sheikh, applying the highest internationally certified quality and food safety standards.'}
+                                {t('about_page.success_story_p3')}
                             </p>
                         </motion.div>
 
@@ -123,23 +101,23 @@ export default function AboutPageClient() {
                                 <div className="grid grid-cols-2 gap-6">
                                     <div className="text-center">
                                         <FaIndustry className="text-5xl text-primary-600 mx-auto mb-3" />
-                                        <h4 className="font-bold text-lg">{isAr ? 'مصنع حديث' : 'Modern Factory'}</h4>
-                                        <p className="text-sm text-gray-600">{isAr ? 'مجهز بأحدث التقنيات' : 'Latest technology equipped'}</p>
+                                        <h4 className="font-bold text-lg">{t('about_page.modern_factory')}</h4>
+                                        <p className="text-sm text-gray-600">{t('about_page.factory_desc')}</p>
                                     </div>
                                     <div className="text-center">
                                         <FaAward className="text-5xl text-secondary-600 mx-auto mb-3" />
-                                        <h4 className="font-bold text-lg">{isAr ? 'شهادات دولية' : 'International Certs'}</h4>
-                                        <p className="text-sm text-gray-600">{isAr ? 'معتمدون من أهم الجهات' : 'Certified by top authorities'}</p>
+                                        <h4 className="font-bold text-lg">{t('about_page.international_certs')}</h4>
+                                        <p className="text-sm text-gray-600">{t('about_page.certs_desc')}</p>
                                     </div>
                                     <div className="text-center">
                                         <FaUsers className="text-5xl text-green-600 mx-auto mb-3" />
-                                        <h4 className="font-bold text-lg">{isAr ? 'فريق محترف' : 'Professional Team'}</h4>
-                                        <p className="text-sm text-gray-600">{isAr ? 'خبراء في التصدير' : 'Export experts'}</p>
+                                        <h4 className="font-bold text-lg">{t('about_page.professional_team')}</h4>
+                                        <p className="text-sm text-gray-600">{t('about_page.export_experts')}</p>
                                     </div>
                                     <div className="text-center">
                                         <FaGlobe className="text-5xl text-blue-600 mx-auto mb-3" />
-                                        <h4 className="font-bold text-lg">{isAr ? 'تواجد إقليمي' : 'Regional Presence'}</h4>
-                                        <p className="text-sm text-gray-600">{isAr ? 'في 8 دول' : 'In 8 countries'}</p>
+                                        <h4 className="font-bold text-lg">{t('about_page.regional_presence')}</h4>
+                                        <p className="text-sm text-gray-600">{t('about_page.in_countries')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,12 +139,10 @@ export default function AboutPageClient() {
                         >
                             <div className={`flex items-center mb-4 ${isAr ? '' : 'flex-row-reverse justify-end'}`}>
                                 <FaEye className={`text-4xl text-primary-600 ${isAr ? 'ml-4' : 'mr-4'}`} />
-                                <h3 className="text-2xl font-bold text-primary-800">{isAr ? 'رؤيتنا' : 'Our Vision'}</h3>
+                                <h3 className="text-2xl font-bold text-primary-800">{t('about_page.our_vision')}</h3>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                {isAr
-                                    ? 'أن نكون الشركة الرائدة في تصدير الأسماك الطازجة في منطقة الشرق الأوسط وشمال أفريقيا، مع المحافظة على أعلى معايير الجودة والاستدامة البيئية.'
-                                    : 'To be the leading company in fresh fish export in the Middle East and North Africa region, while maintaining the highest standards of quality and environmental sustainability.'}
+                                {t('about_page.vision_text')}
                             </p>
                         </motion.div>
 
@@ -179,12 +155,10 @@ export default function AboutPageClient() {
                         >
                             <div className={`flex items-center mb-4 ${isAr ? '' : 'flex-row-reverse justify-end'}`}>
                                 <FaBullseye className={`text-4xl text-secondary-600 ${isAr ? 'ml-4' : 'mr-4'}`} />
-                                <h3 className="text-2xl font-bold text-primary-800">{isAr ? 'رسالتنا' : 'Our Mission'}</h3>
+                                <h3 className="text-2xl font-bold text-primary-800">{t('about_page.our_mission')}</h3>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                {isAr
-                                    ? 'توفير أجود أنواع الأسماك الطازجة لعملائنا في الأسواق الإقليمية والدولية، مع الالتزام بأعلى معايير الجودة والسلامة الغذائية وتقديم خدمة عملاء متميزة.'
-                                    : 'Providing the finest fresh fish to our customers in regional and international markets, with commitment to the highest quality and food safety standards and excellent customer service.'}
+                                {t('about_page.mission_text')}
                             </p>
                         </motion.div>
                     </div>
@@ -200,9 +174,9 @@ export default function AboutPageClient() {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="section-title">{isAr ? 'قيمنا' : 'Our Values'}</h2>
+                        <h2 className="section-title">{t('about_page.our_values')}</h2>
                         <p className="section-subtitle">
-                            {isAr ? 'المبادئ التي نؤمن بها وتوجه عملنا' : 'The principles we believe in and guide our work'}
+                            {t('about_page.values_subtitle')}
                         </p>
                     </motion.div>
 
@@ -237,7 +211,7 @@ export default function AboutPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold text-center mb-12">
-                            {isAr ? 'رحلتنا عبر السنين' : 'Our Journey Through the Years'}
+                            {t('about_page.journey_title')}
                         </h2>
                     </motion.div>
 
@@ -277,9 +251,9 @@ export default function AboutPageClient() {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="section-title">{isAr ? 'معلومات الشركة' : 'Company Information'}</h2>
+                        <h2 className="section-title">{t('about_page.company_info')}</h2>
                         <p className="section-subtitle">
-                            {isAr ? 'بيانات رسمية ومعلومات التواصل' : 'Official data and contact information'}
+                            {t('about_page.company_info_subtitle')}
                         </p>
                     </motion.div>
 
@@ -292,21 +266,21 @@ export default function AboutPageClient() {
                             className="card p-8"
                         >
                             <h3 className="text-xl font-bold mb-6 text-primary-800">
-                                {isAr ? 'البيانات الرسمية' : 'Official Data'}
+                                {t('about_page.official_data')}
                             </h3>
                             <div className="space-y-4">
                                 <div>
-                                    <p className="text-sm text-gray-500">{isAr ? 'الاسم التجاري' : 'Trade Name'}</p>
+                                    <p className="text-sm text-gray-500">{t('about_page.trade_name')}</p>
                                     <p className="font-semibold">
-                                        {isAr ? 'ازافكو العالمية للاستثمار والتنمية ش.م.م' : 'AZAFCO International Investment & Development LLC'}
+                                        {t('about_page.company_name')}
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-500">{isAr ? 'السجل التجاري' : 'Commercial Register'}</p>
+                                    <p className="text-sm text-gray-500">{t('about_page.commercial_register')}</p>
                                     <p className="font-semibold">100776</p>
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-500">{isAr ? 'البطاقة الضريبية' : 'Tax Card'}</p>
+                                    <p className="text-sm text-gray-500">{t('about_page.tax_card')}</p>
                                     <p className="font-semibold">537-340-483</p>
                                 </div>
                             </div>
@@ -320,23 +294,23 @@ export default function AboutPageClient() {
                             className="card p-8"
                         >
                             <h3 className="text-xl font-bold mb-6 text-primary-800">
-                                {isAr ? 'معلومات التواصل' : 'Contact Information'}
+                                {t('about_page.contact_info')}
                             </h3>
                             <div className="space-y-4">
                                 <div>
-                                    <p className="text-sm text-gray-500">{isAr ? 'البريد الإلكتروني' : 'Email'}</p>
+                                    <p className="text-sm text-gray-500">{t('contact.info.email')}</p>
                                     <a href={companyInfo.contact.email.link} className="font-semibold hover:text-primary-600 transition-colors">
                                         {companyInfo.contact.email.display}
                                     </a>
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-500">{isAr ? 'الهاتف' : 'Phone'}</p>
+                                    <p className="text-sm text-gray-500">{t('contact.info.phone')}</p>
                                     <a href={companyInfo.contact.phone.link} className="font-semibold hover:text-primary-600 transition-colors" dir="ltr">
                                         {companyInfo.contact.phone.display}
                                     </a>
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-500">{isAr ? 'واتساب' : 'WhatsApp'}</p>
+                                    <p className="text-sm text-gray-500">{t('contact.info.whatsapp')}</p>
                                     <a href={companyInfo.contact.whatsapp.link} target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary-600 transition-colors" dir="ltr">
                                         {companyInfo.contact.whatsapp.display}
                                     </a>
@@ -357,12 +331,10 @@ export default function AboutPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-4">
-                            {isAr ? 'تواصل معنا اليوم' : 'Contact Us Today'}
+                            {t('common.contact_us_today')}
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
-                            {isAr
-                                ? 'نحن هنا للإجابة على جميع استفساراتك وتلبية احتياجاتك من الأسماك الطازجة'
-                                : 'We are here to answer all your inquiries and meet your fresh fish needs'}
+                            {t('about_page.cta_subtitle')}
                         </p>
                         <Link
                             href="/contact"
@@ -370,7 +342,7 @@ export default function AboutPageClient() {
                             id="about-contact-btn"
                         >
                             <FaHandshake className="text-2xl" />
-                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                            {t('common.contact_us')}
                         </Link>
                     </motion.div>
                 </div>

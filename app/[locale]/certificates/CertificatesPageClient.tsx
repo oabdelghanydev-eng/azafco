@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaShieldAlt, FaCertificate, FaCheckCircle, FaAward, FaTimes, FaHandshake } from 'react-icons/fa';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { certificates } from '@/data/certificates';
@@ -12,36 +12,29 @@ import { certificates } from '@/data/certificates';
 export default function CertificatesPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
+    const t = useTranslations();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const benefits = [
         {
             icon: <FaShieldAlt className="text-4xl text-primary-600" />,
-            title: isAr ? 'ضمان الجودة' : 'Quality Assurance',
-            description: isAr
-                ? 'نضمن لعملائنا أعلى معايير الجودة المعتمدة دولياً'
-                : 'We guarantee our customers the highest internationally certified quality standards',
+            title: t('certificates_page.quality_assurance'),
+            description: t('certificates_page.qa_desc'),
         },
         {
             icon: <FaCertificate className="text-4xl text-green-600" />,
-            title: isAr ? 'معايير عالمية' : 'Global Standards',
-            description: isAr
-                ? 'نلتزم بتطبيق أحدث المعايير العالمية في صناعة الأغذية'
-                : 'We are committed to applying the latest global standards in the food industry',
+            title: t('certificates_page.global_standards'),
+            description: t('certificates_page.gs_desc'),
         },
         {
             icon: <FaCheckCircle className="text-4xl text-blue-600" />,
-            title: isAr ? 'رقابة مستمرة' : 'Continuous Monitoring',
-            description: isAr
-                ? 'خضوع دائم للتفتيش والمراجعة من الجهات المعتمدة'
-                : 'Constant inspection and review by certified authorities',
+            title: t('certificates_page.monitoring'),
+            description: t('certificates_page.monitoring_desc'),
         },
         {
             icon: <FaAward className="text-4xl text-secondary-600" />,
-            title: isAr ? 'التميز المستمر' : 'Continuous Excellence',
-            description: isAr
-                ? 'نسعى دائماً للحصول على أحدث الشهادات والاعتمادات'
-                : 'We always strive to obtain the latest certifications and accreditations',
+            title: t('certificates_page.continuous_excellence'),
+            description: t('certificates_page.ce_desc'),
         },
     ];
 
@@ -57,12 +50,10 @@ export default function CertificatesPageClient() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            {isAr ? 'شهاداتنا واعتماداتنا' : 'Our Certificates & Accreditations'}
+                            {t('certificates_page.title')}
                         </h1>
                         <p className="text-xl max-w-3xl mx-auto">
-                            {isAr
-                                ? 'نفخر بحصولنا على أهم الشهادات الدولية التي تؤكد التزامنا بأعلى معايير الجودة والسلامة'
-                                : 'We are proud to have obtained the most important international certificates that confirm our commitment to the highest quality and safety standards'}
+                            {t('certificates_page.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -78,12 +69,10 @@ export default function CertificatesPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="section-title">
-                            {isAr ? 'لماذا الشهادات مهمة؟' : 'Why Are Certificates Important?'}
+                            {t('certificates_page.why_important')}
                         </h2>
                         <p className="section-subtitle">
-                            {isAr
-                                ? 'التزامنا بالمعايير الدولية يضمن لكم الأفضل دائماً'
-                                : 'Our commitment to international standards ensures you always get the best'}
+                            {t('certificates_page.why_subtitle')}
                         </p>
                     </motion.div>
 
@@ -118,12 +107,10 @@ export default function CertificatesPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="section-title">
-                            {isAr ? 'شهاداتنا المعتمدة' : 'Our Certified Certificates'}
+                            {t('certificates_page.certified_certs')}
                         </h2>
                         <p className="section-subtitle">
-                            {isAr
-                                ? 'اضغط على أي شهادة لعرضها بحجم أكبر'
-                                : 'Click on any certificate to view it in larger size'}
+                            {t('certificates_page.click_to_view')}
                         </p>
                     </motion.div>
 
@@ -156,7 +143,7 @@ export default function CertificatesPageClient() {
                                     </p>
                                     <div className="flex items-center justify-between text-sm">
                                         <span className="text-gray-500">
-                                            {isAr ? 'جهة الإصدار:' : 'Issuer:'}
+                                            {t('certificates_page.issuer')}
                                         </span>
                                         <span className="text-primary-600 font-medium">{cert.issuer}</span>
                                     </div>
@@ -174,14 +161,14 @@ export default function CertificatesPageClient() {
                     onClick={() => setSelectedImage(null)}
                     role="dialog"
                     aria-modal="true"
-                    aria-label={isAr ? 'عرض الشهادة بحجم كامل' : 'View certificate in full size'}
+                    aria-label={t('certificates_page.click_to_view')}
                 >
                     <div className="relative max-w-4xl max-h-[90vh]">
                         <button
                             onClick={() => setSelectedImage(null)}
                             className="absolute -top-12 left-0 text-white text-3xl hover:text-gray-300 transition-colors"
-                            title={isAr ? 'إغلاق' : 'Close'}
-                            aria-label={isAr ? 'إغلاق عرض الشهادة' : 'Close certificate view'}
+                            title={t('common.close')}
+                            aria-label={t('common.close')}
                         >
                             <FaTimes />
                         </button>
@@ -207,25 +194,23 @@ export default function CertificatesPageClient() {
                         className="text-center"
                     >
                         <h2 className="text-3xl font-bold mb-6">
-                            {isAr ? 'معايير الجودة والسلامة' : 'Quality & Safety Standards'}
+                            {t('certificates_page.quality_standards')}
                         </h2>
                         <p className="text-xl mb-8 max-w-3xl mx-auto">
-                            {isAr
-                                ? 'نطبق أعلى معايير الجودة والسلامة في جميع مراحل الإنتاج والتصدير'
-                                : 'We apply the highest quality and safety standards in all stages of production and export'}
+                            {t('certificates_page.standards_subtitle')}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                             <div className="text-center">
                                 <div className="text-5xl font-bold text-secondary-400 mb-2">100%</div>
-                                <div>{isAr ? 'التزام بالمعايير الدولية' : 'Compliance with international standards'}</div>
+                                <div>{t('certificates_page.compliance')}</div>
                             </div>
                             <div className="text-center">
                                 <div className="text-5xl font-bold text-secondary-400 mb-2">5+</div>
-                                <div>{isAr ? 'شهادات دولية معتمدة' : 'International certified certificates'}</div>
+                                <div>{t('certificates_page.certified_intl')}</div>
                             </div>
                             <div className="text-center">
                                 <div className="text-5xl font-bold text-secondary-400 mb-2">24/7</div>
-                                <div>{isAr ? 'مراقبة جودة مستمرة' : 'Continuous quality monitoring'}</div>
+                                <div>{t('certificates_page.continuous_monitoring')}</div>
                             </div>
                         </div>
                     </motion.div>
@@ -242,12 +227,10 @@ export default function CertificatesPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-4">
-                            {isAr ? 'هل تريد معرفة المزيد عن معايير الجودة لدينا؟' : 'Want to Learn More About Our Quality Standards?'}
+                            {t('certificates_page.cta_title')}
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
-                            {isAr
-                                ? 'تواصل معنا للحصول على نسخ من شهاداتنا أو لمزيد من المعلومات'
-                                : 'Contact us to get copies of our certificates or for more information'}
+                            {t('certificates_page.cta_subtitle')}
                         </p>
                         <Link
                             href="/contact"
@@ -255,7 +238,7 @@ export default function CertificatesPageClient() {
                             id="certificates-cta-btn"
                         >
                             <FaHandshake className="text-2xl" />
-                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                            {t('common.contact_us')}
                         </Link>
                     </motion.div>
                 </div>

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaNewspaper, FaIndustry, FaTrophy, FaExternalLinkAlt, FaCalendarAlt, FaImages, FaHandshake } from 'react-icons/fa';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { newsItems, companyNews, industryNews, achievementNews, NewsItem } from '@/data/news';
@@ -14,14 +14,15 @@ import { certificates } from '@/data/certificates';
 export default function MediaPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
+    const t = useTranslations();
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const categories = [
-        { id: 'all', name: isAr ? 'جميع الأخبار' : 'All News', icon: <FaNewspaper /> },
-        { id: 'company', name: isAr ? 'أخبار الشركة' : 'Company News', icon: <FaIndustry /> },
-        { id: 'industry', name: isAr ? 'أخبار القطاع' : 'Industry News', icon: <FaNewspaper /> },
-        { id: 'achievement', name: isAr ? 'إنجازاتنا' : 'Achievements', icon: <FaTrophy /> },
+        { id: 'all', name: t('media_page.news_all'), icon: <FaNewspaper /> },
+        { id: 'company', name: t('media_page.news_company'), icon: <FaIndustry /> },
+        { id: 'industry', name: t('media_page.news_industry'), icon: <FaNewspaper /> },
+        { id: 'achievement', name: t('media_page.news_achievement'), icon: <FaTrophy /> },
     ];
 
     const getFilteredNews = (): NewsItem[] => {
@@ -45,12 +46,9 @@ export default function MediaPageClient() {
     ];
 
     const getCategoryLabel = (category: string) => {
-        if (isAr) {
-            return category === 'company' ? 'أخبار الشركة' :
-                category === 'industry' ? 'أخبار القطاع' : 'إنجازات';
-        }
-        return category === 'company' ? 'Company News' :
-            category === 'industry' ? 'Industry News' : 'Achievements';
+        if (category === 'company') return t('media_page.news_company');
+        if (category === 'industry') return t('media_page.news_industry');
+        return t('media_page.news_achievement');
     };
 
     return (
@@ -65,7 +63,7 @@ export default function MediaPageClient() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            {isAr ? 'المركز الإعلامي' : 'Media Center'}
+                            {t('media_page.title')}
                         </h1>
                         <p className="text-xl max-w-3xl mx-auto">
                             {isAr
@@ -83,25 +81,25 @@ export default function MediaPageClient() {
                         <div>
                             <div className="text-3xl font-bold">50%</div>
                             <div className="text-sm">
-                                {isAr ? 'من إنتاج مصر السمكي من كفر الشيخ' : "of Egypt's fish from Kafr El Sheikh"}
+                                {t('media_page.stat_production')}
                             </div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold">750,000</div>
                             <div className="text-sm">
-                                {isAr ? 'طن صادرات سنوية من كفر الشيخ' : 'tons annual exports'}
+                                {t('media_page.stat_exports')}
                             </div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold">#1</div>
                             <div className="text-sm">
-                                {isAr ? 'مصر الأولى أفريقياً في الاستزراع' : 'Egypt #1 in Africa aquaculture'}
+                                {t('media_page.stat_africa')}
                             </div>
                         </div>
                         <div>
                             <div className="text-3xl font-bold">#6</div>
                             <div className="text-sm">
-                                {isAr ? 'مصر السادسة عالمياً' : 'Egypt 6th globally'}
+                                {t('media_page.stat_global')}
                             </div>
                         </div>
                     </div>
@@ -171,7 +169,7 @@ export default function MediaPageClient() {
 
                                         {news.source && (
                                             <div className={`flex items-center gap-2 pt-3 border-t border-gray-100 ${isAr ? '' : 'flex-row-reverse justify-end'}`}>
-                                                <span>{isAr ? 'المصدر:' : 'Source:'}</span>
+                                                <span>{t('common.source')}:</span>
                                                 {news.sourceUrl ? (
                                                     <a
                                                         href={news.sourceUrl}
@@ -206,10 +204,10 @@ export default function MediaPageClient() {
                     >
                         <h2 className="section-title flex items-center justify-center gap-3">
                             <FaImages className="text-primary-600" />
-                            {isAr ? 'معرض الصور' : 'Photo Gallery'}
+                            {t('media_page.gallery_title')}
                         </h2>
                         <p className="section-subtitle">
-                            {isAr ? 'منتجاتنا وشهاداتنا' : 'Our products and certificates'}
+                            {t('media_page.gallery_subtitle')}
                         </p>
                     </motion.div>
 
@@ -254,13 +252,13 @@ export default function MediaPageClient() {
                         <button
                             onClick={() => setSelectedImage(null)}
                             className="absolute -top-12 left-0 text-white text-3xl hover:text-gray-300 transition-colors"
-                            aria-label={isAr ? 'إغلاق' : 'Close'}
+                            aria-label={t('common.close')}
                         >
                             ✕
                         </button>
                         <Image
                             src={selectedImage}
-                            alt={isAr ? 'صورة مكبرة' : 'Enlarged image'}
+                            alt={t('media_page.enlarged_image')}
                             width={1000}
                             height={800}
                             className="w-full h-full object-contain"
@@ -279,7 +277,7 @@ export default function MediaPageClient() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-4">
-                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                            {t('common.contact_us')}
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
                             {isAr
@@ -292,7 +290,7 @@ export default function MediaPageClient() {
                             id="media-contact-btn"
                         >
                             <FaHandshake className="text-2xl" />
-                            {isAr ? 'تواصل معنا' : 'Contact Us'}
+                            {t('common.contact_us')}
                         </Link>
                     </motion.div>
                 </div>

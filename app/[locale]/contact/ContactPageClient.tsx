@@ -3,64 +3,53 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaWpforms, FaEnvelope, FaMapMarkerAlt, FaPhone, FaClock, FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
 import { companyInfo } from '@/data/company';
 
 export default function ContactPageClient() {
     const locale = useLocale();
     const isAr = locale === 'ar';
+    const t = useTranslations();
 
     const contactChannels = [
         {
             icon: <FaWhatsapp className="text-4xl" />,
-            title: isAr ? 'الاستعلامات عبر واتساب' : 'WhatsApp Inquiries',
-            subtitle: isAr ? 'للاستفسارات الفورية' : 'For Instant Inquiries',
-            description: isAr
-                ? 'يمكنك التواصل مع فريق الاستعلامات مباشرة عبر واتساب للإجابة على أي سؤال أو للحصول على معلومات سريعة حول منتجاتنا وخدماتنا.'
-                : 'Contact our inquiry team directly via WhatsApp to answer any question or get quick information about our products and services.',
-            note: isAr
-                ? 'موجّه للاستفسارات العامة فقط، مع توفير ردود سريعة لدعمك في اتخاذ قرارك.'
-                : 'Designed for general inquiries only, with fast responses to support your decision-making.',
-            buttonText: isAr ? 'ابدأ المحادثة الآن' : 'Start Chat Now',
+            title: t('contact_page.whatsapp_title'),
+            subtitle: t('contact_page.whatsapp_subtitle'),
+            description: t('contact_page.whatsapp_desc'),
+            note: t('contact_page.whatsapp_note'),
+            buttonText: t('common.start_chat_now'),
             link: companyInfo.contact.whatsapp.link,
             gradient: 'from-green-500 to-emerald-600',
             iconBg: 'bg-green-500',
-            badge: isAr ? 'رد فوري' : 'Instant Response',
+            badge: t('common.instant_response'),
             badgeColor: 'bg-green-100 text-green-700',
         },
         {
             icon: <FaWpforms className="text-4xl" />,
-            title: isAr ? 'نموذج التواصل للشركات' : 'B2B Application Form',
-            subtitle: isAr ? 'للطلبات التجارية وبناء الشراكات' : 'For Business Requests & Partnerships',
-            description: isAr
-                ? 'يرجى تعبئة نموذج التواصل المخصّص للشركات لتزويدنا ببيانات نشاطك التجاري، المنتجات المطلوبة، والكميات المتوقعة.'
-                : 'Please fill out our B2B contact form to provide us with your business details, required products, and expected quantities.',
-            note: isAr
-                ? 'يساعدنا النموذج على فهم احتياجاتك بدقة والتواصل معك بخطوات واضحة لتأسيس التعاون. تتم مراجعة جميع الطلبات خلال 24–48 ساعة.'
-                : 'The form helps us understand your needs precisely and contact you with clear steps to establish cooperation. All requests are reviewed within 24-48 hours.',
-            buttonText: isAr ? 'افتح النموذج' : 'Open Form',
+            title: t('contact_page.b2b_title'),
+            subtitle: t('contact_page.b2b_subtitle'),
+            description: t('contact_page.b2b_desc'),
+            note: t('contact_page.b2b_note'),
+            buttonText: t('contact_page.open_form'),
             link: 'https://forms.gle/rEYRPSP3vpW8Cggv5',
             gradient: 'from-primary-600 to-primary-700',
             iconBg: 'bg-primary-600',
-            badge: isAr ? '24-48 ساعة' : '24-48 Hours',
+            badge: '24-48h',
             badgeColor: 'bg-primary-100 text-primary-700',
         },
         {
             icon: <FaEnvelope className="text-4xl" />,
-            title: isAr ? 'البريد الإلكتروني' : 'Business Email',
-            subtitle: isAr ? 'للمراسلات الرسمية والملفات المرفقة' : 'For Official Correspondence & Attachments',
-            description: isAr
-                ? 'يمكنك إرسال استفساراتك أو طلبات عروض الأسعار عبر البريد الإلكتروني.'
-                : 'You can send your inquiries or quote requests via email.',
-            note: isAr
-                ? 'هذه القناة مناسبة للمراسلات التفصيلية، تبادل الملفات، والطلبات الرسمية التي تتطلب توثيقاً أو متابعة مكتوبة. سيقوم فريقنا بالرد خلال وقت قصير مع جميع التفاصيل المطلوبة.'
-                : 'This channel is suitable for detailed correspondence, file exchange, and official requests that require documentation or written follow-up. Our team will respond shortly with all required details.',
-            buttonText: isAr ? 'أرسل بريد إلكتروني' : 'Send Email',
+            title: t('contact_page.email_title'),
+            subtitle: t('contact_page.email_subtitle'),
+            description: t('contact_page.email_desc'),
+            note: t('contact_page.email_note'),
+            buttonText: t('contact_page.send_email'),
             link: companyInfo.contact.email.link,
             gradient: 'from-red-500 to-rose-600',
             iconBg: 'bg-red-500',
-            badge: isAr ? 'رد سريع' : 'Quick Response',
+            badge: t('contact_page.quick_response'),
             badgeColor: 'bg-red-100 text-red-700',
         },
     ];
@@ -68,14 +57,14 @@ export default function ContactPageClient() {
     const quickInfo = [
         {
             icon: <FaPhone className="text-lg" />,
-            label: isAr ? 'الهاتف' : 'Phone',
+            label: t('contact.info.phone'),
             value: companyInfo.contact.phone.display,
             link: companyInfo.contact.phone.link,
         },
         {
             icon: <FaClock className="text-lg" />,
-            label: isAr ? 'ساعات العمل' : 'Working Hours',
-            value: isAr ? companyInfo.contact.workingHours : 'Sat - Thu: 8 AM - 5 PM',
+            label: t('contact_page.office_hours'),
+            value: t('contact_page.office_hours_value'),
             link: null,
         },
     ];
@@ -98,12 +87,10 @@ export default function ContactPageClient() {
                         className="text-center max-w-3xl mx-auto"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                            {isAr ? 'تواصل معنا' : 'Get in Touch'}
+                            {t('contact.title')}
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-                            {isAr
-                                ? 'اختر الطريقة الأنسب لك للتواصل مع فريقنا المتخصص'
-                                : 'Choose the most suitable way to connect with our specialized team'}
+                            {t('contact.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -120,12 +107,10 @@ export default function ContactPageClient() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                            {isAr ? 'قنوات التواصل المتاحة' : 'Available Contact Channels'}
+                            {t('contact_page.channels_title')}
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            {isAr
-                                ? 'كل قناة مصممة لتلبية احتياجات مختلفة - اختر ما يناسب طلبك'
-                                : 'Each channel is designed to meet different needs - choose what suits your request'}
+                            {t('contact_page.channels_subtitle')}
                         </p>
                     </motion.div>
 
@@ -206,10 +191,10 @@ export default function ContactPageClient() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                            {isAr ? 'مواقعنا' : 'Our Locations'}
+                            {t('contact_page.locations_title')}
                         </h2>
                         <p className="text-gray-600 text-lg">
-                            {isAr ? 'زورونا في أي من مواقعنا' : 'Visit us at any of our locations'}
+                            {t('contact_page.locations_subtitle')}
                         </p>
                     </motion.div>
 
@@ -229,7 +214,7 @@ export default function ContactPageClient() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-xl mb-1 text-primary-800">
-                                            {isAr ? companyInfo.addresses.main.title : 'Main Office'}
+                                            {t('contact_page.main_office')}
                                         </h3>
                                         <p className="text-gray-600">
                                             {isAr ? companyInfo.addresses.main.address : companyInfo.addresses.main.addressEn}
@@ -246,7 +231,7 @@ export default function ContactPageClient() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title={isAr ? 'المركز الرئيسي على الخريطة' : 'Main office on map'}
+                                    title={t('contact_page.main_on_map')}
                                 ></iframe>
                             </div>
                         </motion.div>
@@ -266,7 +251,7 @@ export default function ContactPageClient() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-xl mb-1 text-secondary-700">
-                                            {isAr ? companyInfo.addresses.factory.title : 'Factory'}
+                                            {t('contact_page.factory')}
                                         </h3>
                                         <p className="text-gray-600">
                                             {isAr ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}
@@ -283,7 +268,7 @@ export default function ContactPageClient() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title={isAr ? 'المصنع على الخريطة' : 'Factory on map'}
+                                    title={t('contact_page.factory_on_map')}
                                 ></iframe>
                             </div>
                         </motion.div>

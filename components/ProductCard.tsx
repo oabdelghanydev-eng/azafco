@@ -4,18 +4,31 @@ import { motion } from 'framer-motion'
 import { Product } from '../data/products'
 import { FaThermometerHalf, FaBox, FaSearchPlus } from 'react-icons/fa'
 import ImageModal from './ImageModal'
+import { getLocalizedField, getLocalizedArrayField, SupportedLocale } from '../utils/localization'
+import { useTranslations } from 'next-intl'
 
 interface ProductCardProps {
     product: Product
     index?: number
     showDetails?: boolean
-    locale?: 'ar' | 'en'
+    locale?: string
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true, locale = 'ar' }) => {
-    const isAr = locale === 'ar'
-    const productName = isAr ? product.name : product.nameEn
+    const t = useTranslations()
+    const productName = getLocalizedField(product, 'name', locale)
+    const productSizes = getLocalizedArrayField(product, 'sizes', locale)
+    const productDescription = getLocalizedField(product, 'description', locale)
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const isAr = locale === 'ar'
+
+    // Get category label based on locale
+    const getCategoryLabel = () => {
+        if (product.category === 'river') {
+            return t('products_page.freshwater')
+        }
+        return t('products_page.saltwater')
+    }
 
     return (
         <>
@@ -31,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                     onClick={() => setIsModalOpen(true)}
                     role="button"
                     tabIndex={0}
-                    aria-label={isAr ? `عرض صورة ${productName}` : `View ${productName} image`}
+                    aria-label={`${t('products_page.view_image')} ${productName}`}
                     onKeyDown={(e) => e.key === 'Enter' && setIsModalOpen(true)}
                 >
                     <Image
@@ -50,9 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                         ? 'bg-blue-500 text-white'
                         : 'bg-cyan-500 text-white'
                         }`}>
-                        {product.category === 'river'
-                            ? (isAr ? 'مياه عذبة' : 'Freshwater')
-                            : (isAr ? 'بحري' : 'Saltwater')}
+                        {getCategoryLabel()}
                     </span>
                     {/* Zoom hint */}
                     <div className="absolute bottom-2 right-2 bg-black/50 text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 md:opacity-100 transition-opacity">
@@ -71,10 +82,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                             {/* Sizes */}
                             <div className="mb-3">
                                 <span className="text-xs font-medium text-gray-500 block mb-1">
-                                    {isAr ? 'الأحجام:' : 'Sizes:'}
+                                    {t('products_page.sizes_label')}
                                 </span>
                                 <div className="flex flex-wrap gap-1">
-                                    {(isAr ? product.sizes : product.sizesEn).map((size, i) => (
+                                    {productSizes.map((size, i) => (
                                         <span key={i} className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded">
                                             {size}
                                         </span>
