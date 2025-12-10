@@ -34,6 +34,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: t('description'),
             url: `${baseUrl}/${locale}/media`,
             type: 'website',
+            siteName: 'AZAFCO - ازافكو العالمية',
+            locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+            images: [{
+                url: `/images/og-image-${locale === 'ar' ? 'ar' : 'en'}.jpg`,
+                width: 1200,
+                height: 630,
+                alt: t('title'),
+            }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: t('title'),
+            description: t('description'),
+            images: [`/images/og-image-${locale === 'ar' ? 'ar' : 'en'}.jpg`],
         },
     };
 }
