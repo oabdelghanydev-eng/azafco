@@ -477,6 +477,19 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             brand: {
                 '@type': 'Brand',
                 name: 'AZAFCO'
+            },
+            offers: {
+                '@type': 'Offer',
+                availability: 'https://schema.org/InStock',
+                priceCurrency: 'USD',
+                price: '0',
+                priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+                seller: {
+                    '@type': 'Organization',
+                    name: 'AZAFCO International'
+                },
+                url: `${baseUrl}/${locale}/contact`,
+                description: locale === 'ar' ? 'اتصل بنا للحصول على عرض سعر' : 'Contact us for B2B pricing'
             }
         }))
     } : null;
@@ -502,7 +515,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         }))
     } : null;
 
-    // Build schemas array
+    // Build schemas array (ProductGroup removed - not suitable for B2B without fixed prices)
     const schemas = [
         organizationSchema,
         localBusinessSchema,
@@ -510,7 +523,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         faqSchema,
         breadcrumbSchema,
         speakableSchema,
-        ...(productGroupSchema ? [productGroupSchema] : []),
         ...(productCatalogSchema ? [productCatalogSchema] : [])
     ];
 
