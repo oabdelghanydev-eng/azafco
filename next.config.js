@@ -60,8 +60,8 @@ const nextConfig = {
       },
     ]
   },
-
-  // Note: i18n config is removed - middleware handles routing now
 }
 
 module.exports = withNextIntl(nextConfig)
+
+

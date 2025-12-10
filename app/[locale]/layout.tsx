@@ -22,7 +22,8 @@ export function generateStaticParams() {
 }
 
 // Generate metadata for the root layout
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     const baseUrl = 'https://azafco.com.eg';
     const isArabic = locale === 'ar';
 
@@ -99,13 +100,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 interface RootLayoutProps {
     children: ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }
 
 export default async function RootLayout({
     children,
-    params: { locale },
+    params,
 }: RootLayoutProps) {
+    const { locale } = await params;
+
     // Validate locale
     if (!locales.includes(locale as Locale)) {
         notFound();

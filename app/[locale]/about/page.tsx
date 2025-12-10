@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import AboutPageClient from './AboutPageClient';
 
 type Props = {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'metadata.about' });
     const baseUrl = 'https://azafco.com.eg';
 
@@ -32,13 +34,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     };
 }
 
-// Dynamic import for the client page from the existing pages folder
-// This is a simplified approach - the full migration would move all content here
-import dynamic from 'next/dynamic';
-
-const AboutPageContent = dynamic(() => import('./AboutPageClient'), { ssr: false });
-
-export default function AboutPage({ params: { locale } }: Props) {
+export default async function AboutPage({ params }: Props) {
+    const { locale } = await params;
     setRequestLocale(locale);
-    return <AboutPageContent />;
+    return <AboutPageClient />;
 }

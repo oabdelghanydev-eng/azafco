@@ -3,10 +3,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HomePageClient from './HomePageClient';
 
 type Props = {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'metadata.home' });
     const baseUrl = 'https://azafco.com.eg';
 
@@ -29,9 +30,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     };
 }
 
-export default function HomePage({ params: { locale } }: Props) {
-    // Enable static rendering
+export default async function HomePage({ params }: Props) {
+    const { locale } = await params;
     setRequestLocale(locale);
-
     return <HomePageClient />;
 }

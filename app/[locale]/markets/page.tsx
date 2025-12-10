@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import dynamic from 'next/dynamic';
+import MarketsPageClient from './MarketsPageClient';
 
 type Props = {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'metadata.markets' });
     const baseUrl = 'https://azafco.com.eg';
 
@@ -33,9 +34,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     };
 }
 
-const MarketsPageClient = dynamic(() => import('./MarketsPageClient'), { ssr: false });
-
-export default function MarketsPage({ params: { locale } }: Props) {
+export default async function MarketsPage({ params }: Props) {
+    const { locale } = await params;
     setRequestLocale(locale);
     return <MarketsPageClient />;
 }
