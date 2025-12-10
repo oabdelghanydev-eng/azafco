@@ -95,6 +95,38 @@ export const defaultKeywords = {
         коммерческий поставщик рыбы, поставщик рыбы для ресторанов, поставщик рыбы для отелей,
         оптовая цена на рыбу, тилапия оптом, морской окунь оптом, кефаль оптом,
         африканская тилапия, средиземноморский морской окунь, рыба Красного моря
+    `.replace(/\s+/g, ' ').trim(),
+    de: `
+        AZAFCO, AZAFCO International, ägyptischer Fischexporteur, Frischfischlieferant Ägypten,
+        Tilapia-Lieferant, Tilapia-Export Ägypten, Nil-Tilapia Großhandel,
+        Wolfsbarsch-Lieferant, ägyptischer Wolfsbarsch, Frischfisch-Export Wolfsbarsch,
+        Meeräsche-Lieferant, frische Meeräsche Ägypten, Bouri-Fisch-Export,
+        B2B Meeresfrüchte-Lieferant, Fisch Großhandel Ägypten, Fischbestellung in großen Mengen,
+        Golf-Fischimport, Nahost-Fischlieferant, Fischexport VAE, Fischexport Saudi-Arabien,
+        Fischexport Katar, Fischexport Kuwait, Fischexport Bahrain, Fischexport Jordanien,
+        Frischfischverpackung, Tiefkühlfisch Ägypten, Meeresfrüchte-Distributor Ägypten,
+        ägyptisches Meeresfrüchte-Unternehmen, Kafr El Sheikh Fisch, Nil-Fisch-Export,
+        Wels-Lieferant Ägypten, Süßwasserfisch-Export, Salzwasserfisch Ägypten,
+        Fischverarbeitung Ägypten, HACCP-zertifizierter Fisch, ISO-zertifizierte Meeresfrüchte,
+        kommerzieller Fischlieferant, Restaurant-Fischlieferant, Hotel-Fischlieferant,
+        Fisch-Großhandelspreis, Tilapia in großen Mengen, Wolfsbarsch in großen Mengen, Meeräsche in großen Mengen,
+        afrikanische Tilapia, mediterraner Wolfsbarsch, Rotmeerfisch
+    `.replace(/\s+/g, ' ').trim(),
+    fr: `
+        AZAFCO, AZAFCO International, exportateur de poisson égyptien, fournisseur de poisson frais Égypte,
+        fournisseur de tilapia, exportation de tilapia Égypte, tilapia du Nil en gros,
+        fournisseur de bar, bar égyptien, exportation de bar frais,
+        fournisseur de mulet, mulet frais Égypte, exportation de poisson bouri,
+        fournisseur de fruits de mer B2B, poisson en gros Égypte, commande de poisson en vrac,
+        importation de poisson du Golfe, fournisseur de poisson Moyen-Orient, exportation de poisson EAU, exportation de poisson Arabie Saoudite,
+        exportation de poisson Qatar, exportation de poisson Koweït, exportation de poisson Bahreïn, exportation de poisson Jordanie,
+        emballage de poisson frais, poisson congelé Égypte, distributeur de fruits de mer Égypte,
+        entreprise de fruits de mer égyptienne, poisson Kafr El Sheikh, exportation de poisson du Nil,
+        fournisseur de poisson-chat Égypte, exportation de poisson d'eau douce, poisson d'eau salée Égypte,
+        transformation de poisson Égypte, poisson certifié HACCP, fruits de mer certifiés ISO,
+        fournisseur de poisson commercial, fournisseur de poisson pour restaurants, fournisseur de poisson pour hôtels,
+        prix de poisson en gros, tilapia en vrac, bar en vrac, mulet en vrac,
+        tilapia africain, bar méditerranéen, poisson de la mer Rouge
     `.replace(/\s+/g, ' ').trim()
 };
 
@@ -289,7 +321,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         description: locale === 'ar'
             ? 'الموقع الرسمي لشركة ازافكو العالمية - تصدير الأسماك الطازجة من مصر'
             : 'Official website of AZAFCO International - Premium fresh fish exporter from Egypt to worldwide markets',
-        inLanguage: ['ar', 'en', 'es', 'ru'],
+        inLanguage: ['ar', 'en', 'es', 'ru', 'de', 'fr'],
         publisher: {
             '@id': `${baseUrl}/#organization`
         }

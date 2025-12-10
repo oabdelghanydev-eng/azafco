@@ -53,8 +53,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
         openGraph: {
             type: 'website',
-            locale: locale === 'ar' ? 'ar_EG' : locale === 'es' ? 'es_ES' : locale === 'ru' ? 'ru_RU' : 'en_US',
-            alternateLocale: ['ar_EG', 'en_US', 'es_ES', 'ru_RU'].filter(l => !l.startsWith(locale)),
+            locale: locale === 'ar' ? 'ar_EG' : locale === 'es' ? 'es_ES' : locale === 'ru' ? 'ru_RU' : locale === 'de' ? 'de_DE' : locale === 'fr' ? 'fr_FR' : 'en_US',
+            alternateLocale: ['ar_EG', 'en_US', 'es_ES', 'ru_RU', 'de_DE', 'fr_FR'].filter(l => !l.startsWith(locale)),
             url: baseUrl,
             siteName: 'AZAFCO - ازافكو العالمية',
             images: [
@@ -65,7 +65,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                     alt: locale === 'ar' ? 'ازافكو العالمية - تصدير الأسماك الطازجة'
                         : locale === 'es' ? 'AZAFCO Internacional - Exportación de Pescado Fresco de Egipto'
                             : locale === 'ru' ? 'AZAFCO International - Экспорт свежей рыбы из Египта'
-                                : 'AZAFCO International - Fresh Fish Export from Egypt',
+                                : locale === 'de' ? 'AZAFCO International - Export von Frischfisch aus Ägypten'
+                                    : locale === 'fr' ? 'AZAFCO International - Exportation de Poisson Frais d\'Egypte'
+                                        : 'AZAFCO International - Fresh Fish Export from Egypt',
                 },
             ],
         },
@@ -95,6 +97,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 'en': `${baseUrl}/en`,
                 'es': `${baseUrl}/es`,
                 'ru': `${baseUrl}/ru`,
+                'de': `${baseUrl}/de`,
+                'fr': `${baseUrl}/fr`,
                 'x-default': `${baseUrl}/ar`,
             },
         },

@@ -1,0 +1,142 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "products": "Produkte",
+        "certificates": "Zertifikate",
+        "markets": "Märkte",
+        "media": "Medienzentrum",
+        "about": "Über uns",
+        "contact": "Kontakt"
+    },
+    "home": {
+        "hero": {
+            "title": "AZAFCO International",
+            "subtitle": "Premium-Frischfisch aus Ägypten in die Welt",
+            "description": "Ein Unternehmen, das sich auf Verpackung und Export von Frischfisch in alle Länder spezialisiert hat. Wir beliefern Händler und Restaurants mit höchsten Qualitäts- und Frischestandards.",
+            "cta_whatsapp": "Kontakt via WhatsApp",
+            "cta_partnership": "Geschäftspartnerschaft anfragen"
+        },
+        "stats": {
+            "years": "Jahre Erfahrung",
+            "countries": "Exportländer",
+            "tonnage": "Tonnen monatlich",
+            "certificates": "Qualitätszertifikate"
+        },
+        "products": {
+            "title": "Unsere Top-Produkte",
+            "subtitle": "Eine große Auswahl an bestem Frischfisch",
+            "view_all": "Alle Produkte ansehen"
+        },
+        "why_us": {
+            "title": "Warum AZAFCO?",
+            "quality": "Höchste Qualitätsstandards",
+            "fresh": "Frisch und sicher",
+            "experience": "Globale Erfahrung",
+            "global": "Weltweiter Export"
+        },
+        "cta": {
+            "title": "Bereit für eine Partnerschaft?",
+            "description": "Kontaktieren Sie uns jetzt, um Ihren Frischfischbedarf zu besprechen"
+        },
+        "features": {
+            "trusted_source": "Vertrauenswürdige Quelle",
+            "trusted_source_desc": "Wir garantieren, dass jeder Fisch aus zertifizierten und überwachten Farmen stammt.",
+            "cold_chain": "Perfekte Kühlkette",
+            "cold_chain_desc": "Wir halten die optimale Temperatur vom Fang bis zur Lieferung.",
+            "professionals": "Für Profis",
+            "professionals_desc": "Wir verstehen die Bedürfnisse von Restaurants und Händlern."
+        },
+        "markets": {
+            "title": "Unsere Märkte",
+            "subtitle": "Wir exportieren unsere Produkte in die besten Märkte der Region"
+        }
+    },
+    "products": {
+        "title": "Unsere Produkte",
+        "subtitle": "Komplettes Sortiment an Premium-Frischfisch",
+        "filter": {
+            "all": "Alle Produkte",
+            "nile": "Nilfisch",
+            "sea": "Meeresfisch"
+        }
+    },
+    "about": {
+        "title": "Über uns",
+        "subtitle": "Eine ägyptische globale Erfolgsgeschichte",
+        "story": "AZAFCO International wurde 2008 im Gouvernement Kafr El Sheikh gegründet und begann eine erfolgreiche Reise in der Verpackung und dem Export von Frischfisch.",
+        "vision": "Der führende Partner für den Export ägyptischer Fische weltweit zu sein",
+        "mission": "Den besten Frischfisch mit höchsten Qualitäts- und Sicherheitsstandards zu liefern"
+    },
+    "contact": {
+        "title": "Kontakt",
+        "subtitle": "Wir sind hier, um alle Ihre Anfragen zu beantworten",
+        "form": {
+            "name": "Vollständiger Name",
+            "email": "E-Mail-Adresse",
+            "phone": "Telefonnummer",
+            "company": "Firmenname",
+            "country": "Land",
+            "message": "Ihre Nachricht",
+            "submit": "Nachricht senden",
+            "success": "Ihre Nachricht wurde erfolgreich gesendet!"
+        },
+        "info": {
+            "address": "Adresse",
+            "phone": "Telefon",
+            "email": "E-Mail",
+            "whatsapp": "WhatsApp"
+        }
+    },
+    "footer": {
+        "description": "Führendes ägyptisches Unternehmen, spezialisiert auf Verpackung und Export von Frischfisch",
+        "quick_links": "Schnelllinks",
+        "contact_us": "Kontaktieren Sie uns",
+        "partnership": "Geschäftspartnerschaft anfragen",
+        "copyright": "Alle Rechte vorbehalten",
+        "quality_certificates": "Qualitätszertifikate"
+    },
+    "common": {
+        "learn_more": "Mehr erfahren",
+        "view_details": "Details ansehen",
+        "back": "Zurück",
+        "loading": "Wird geladen...",
+        "error": "Ein Fehler ist aufgetreten",
+        "satisfied_clients": "Zufriedene Kunden",
+        "browse_products": "Produkte durchsuchen",
+        "contact_us": "Kontaktieren Sie uns",
+        "skip_to_main": "Zum Hauptinhalt springen",
+        "open_menu": "Menü öffnen",
+        "close_menu": "Menü schließen",
+        "whatsapp_contact": "Kontakt via WhatsApp"
+    },
+    "metadata": {
+        "home": {
+            "title": "Startseite - Premium-Frischfisch-Exporteur aus Ägypten",
+            "description": "AZAFCO International - Führendes ägyptisches Unternehmen, spezialisiert auf Verpackung und Export von Frischfisch in die Märkte des Golfs, Europas und weltweit seit 2008. Premium-Lieferant von Tilapia, Wolfsbarsch und Meeräsche."
+        },
+        "products": {
+            "title": "Produkte",
+            "description": "Komplettes Sortiment an Premium-Frischfisch - Tilapia, Wolfsbarsch, Meeräsche und andere Meeresfrüchte"
+        },
+        "about": {
+            "title": "Über uns",
+            "description": "Eine ägyptische globale Erfolgsgeschichte - Erfahren Sie mehr über AZAFCOs Expertise im Frischfisch-Export"
+        },
+        "contact": {
+            "title": "Kontakt",
+            "description": "Kontaktieren Sie AZAFCO für Anfragen zu unseren Produkten und Dienstleistungen"
+        },
+        "markets": {
+            "title": "Unsere Märkte",
+            "description": "AZAFCOs globale Exportmärkte - Golf, Europa und andere internationale Märkte"
+        },
+        "media": {
+            "title": "Medienzentrum",
+            "description": "Aktuelle Nachrichten und Veranstaltungen von AZAFCO"
+        },
+        "certificates": {
+            "title": "Zertifikate",
+            "description": "AZAFCOs Qualitätszertifizierungen und internationale Standards"
+        }
+    }
+}

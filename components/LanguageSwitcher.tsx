@@ -13,6 +13,8 @@ const localeFlags: Record<Locale, string> = {
     en: '🇬🇧',
     es: '🇪🇸',
     ru: '🇷🇺',
+    de: '🇩🇪',
+    fr: '🇫🇷',
 };
 
 const LanguageSwitcher: React.FC = () => {
@@ -73,8 +75,8 @@ const LanguageSwitcher: React.FC = () => {
                             key={loc}
                             onClick={() => switchLocale(loc)}
                             className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors duration-200 ${locale === loc
-                                    ? 'bg-primary-50 text-primary-700'
-                                    : 'text-gray-700 hover:bg-gray-50'
+                                ? 'bg-primary-50 text-primary-700'
+                                : 'text-gray-700 hover:bg-gray-50'
                                 }`}
                         >
                             <span className="text-lg">{localeFlags[loc]}</span>

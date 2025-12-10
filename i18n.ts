@@ -2,7 +2,7 @@ import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 // Supported locales - easily scalable to 10+ languages
-export const locales = ['ar', 'en', 'es', 'ru'] as const;
+export const locales = ['ar', 'en', 'es', 'ru', 'de', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 
 // Default locale (Arabic for this Egyptian company)
@@ -14,6 +14,8 @@ export const localeConfig: Record<Locale, { name: string; dir: 'rtl' | 'ltr'; na
     en: { name: 'English', dir: 'ltr', nativeName: 'English' },
     es: { name: 'Spanish', dir: 'ltr', nativeName: 'Español' },
     ru: { name: 'Russian', dir: 'ltr', nativeName: 'Русский' },
+    de: { name: 'German', dir: 'ltr', nativeName: 'Deutsch' },
+    fr: { name: 'French', dir: 'ltr', nativeName: 'Français' },
 };
 
 // Request-scoped configuration for next-intl v3.25+

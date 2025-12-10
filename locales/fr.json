@@ -1,0 +1,142 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "products": "Produits",
+        "certificates": "Certificats",
+        "markets": "Marchés",
+        "media": "Centre Médias",
+        "about": "À propos",
+        "contact": "Contact"
+    },
+    "home": {
+        "hero": {
+            "title": "AZAFCO International",
+            "subtitle": "Poisson frais premium d'Égypte vers le monde",
+            "description": "Une entreprise spécialisée dans l'emballage et l'exportation de poisson frais vers tous les pays. Nous servons les distributeurs et restaurants avec les plus hauts standards de qualité et de fraîcheur.",
+            "cta_whatsapp": "Contact via WhatsApp",
+            "cta_partnership": "Demander un partenariat commercial"
+        },
+        "stats": {
+            "years": "Années d'expérience",
+            "countries": "Pays d'exportation",
+            "tonnage": "Tonnes mensuelles",
+            "certificates": "Certificats de qualité"
+        },
+        "products": {
+            "title": "Nos produits vedettes",
+            "subtitle": "Une large sélection des meilleurs poissons frais",
+            "view_all": "Voir tous les produits"
+        },
+        "why_us": {
+            "title": "Pourquoi AZAFCO ?",
+            "quality": "Les plus hauts standards de qualité",
+            "fresh": "Frais et sûr",
+            "experience": "Expérience mondiale",
+            "global": "Exportation mondiale"
+        },
+        "cta": {
+            "title": "Prêt à démarrer votre partenariat ?",
+            "description": "Contactez-nous maintenant pour discuter de vos besoins en poisson frais"
+        },
+        "features": {
+            "trusted_source": "Source fiable",
+            "trusted_source_desc": "Nous garantissons que chaque poisson provient de fermes certifiées et contrôlées.",
+            "cold_chain": "Chaîne du froid parfaite",
+            "cold_chain_desc": "Nous maintenons la température optimale de la capture à la livraison.",
+            "professionals": "Pour les professionnels",
+            "professionals_desc": "Nous comprenons les besoins des restaurants et distributeurs."
+        },
+        "markets": {
+            "title": "Nos marchés",
+            "subtitle": "Nous exportons nos produits vers les meilleurs marchés de la région"
+        }
+    },
+    "products": {
+        "title": "Nos produits",
+        "subtitle": "Gamme complète de poisson frais premium",
+        "filter": {
+            "all": "Tous les produits",
+            "nile": "Poisson du Nil",
+            "sea": "Poisson de mer"
+        }
+    },
+    "about": {
+        "title": "À propos de nous",
+        "subtitle": "Une histoire de succès égyptienne mondiale",
+        "story": "AZAFCO International a été fondée en 2008 dans le gouvernorat de Kafr El Sheikh, entamant un parcours réussi dans l'emballage et l'exportation de poisson frais.",
+        "vision": "Être le partenaire leader dans l'exportation de poisson égyptien dans le monde entier",
+        "mission": "Livrer le meilleur poisson frais avec les plus hauts standards de qualité et de sécurité"
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Nous sommes là pour répondre à toutes vos questions",
+        "form": {
+            "name": "Nom complet",
+            "email": "Adresse e-mail",
+            "phone": "Numéro de téléphone",
+            "company": "Nom de l'entreprise",
+            "country": "Pays",
+            "message": "Votre message",
+            "submit": "Envoyer le message",
+            "success": "Votre message a été envoyé avec succès !"
+        },
+        "info": {
+            "address": "Adresse",
+            "phone": "Téléphone",
+            "email": "E-mail",
+            "whatsapp": "WhatsApp"
+        }
+    },
+    "footer": {
+        "description": "Entreprise égyptienne leader spécialisée dans l'emballage et l'exportation de poisson frais",
+        "quick_links": "Liens rapides",
+        "contact_us": "Nous contacter",
+        "partnership": "Demander un partenariat commercial",
+        "copyright": "Tous droits réservés",
+        "quality_certificates": "Certificats de qualité"
+    },
+    "common": {
+        "learn_more": "En savoir plus",
+        "view_details": "Voir les détails",
+        "back": "Retour",
+        "loading": "Chargement...",
+        "error": "Une erreur s'est produite",
+        "satisfied_clients": "Clients satisfaits",
+        "browse_products": "Parcourir les produits",
+        "contact_us": "Nous contacter",
+        "skip_to_main": "Aller au contenu principal",
+        "open_menu": "Ouvrir le menu",
+        "close_menu": "Fermer le menu",
+        "whatsapp_contact": "Nous contacter via WhatsApp"
+    },
+    "metadata": {
+        "home": {
+            "title": "Accueil - Exportateur de poisson frais premium d'Égypte",
+            "description": "AZAFCO International - Entreprise égyptienne leader spécialisée dans l'emballage et l'exportation de poisson frais vers les marchés du Golfe, d'Europe et du monde entier depuis 2008. Fournisseur premium de tilapia, bar et mulet."
+        },
+        "products": {
+            "title": "Produits",
+            "description": "Gamme complète de poisson frais premium - Tilapia, Bar, Mulet et autres fruits de mer"
+        },
+        "about": {
+            "title": "À propos",
+            "description": "Une histoire de succès mondiale égyptienne - Découvrez l'expertise d'AZAFCO dans l'exportation de poisson frais"
+        },
+        "contact": {
+            "title": "Contact",
+            "description": "Contactez AZAFCO pour des renseignements sur nos produits et services"
+        },
+        "markets": {
+            "title": "Nos marchés",
+            "description": "Les marchés d'exportation mondiaux d'AZAFCO - Golfe, Europe et autres marchés internationaux"
+        },
+        "media": {
+            "title": "Centre Médias",
+            "description": "Dernières nouvelles et événements d'AZAFCO"
+        },
+        "certificates": {
+            "title": "Certificats",
+            "description": "Certifications de qualité et normes internationales d'AZAFCO"
+        }
+    }
+}
