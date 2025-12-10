@@ -139,14 +139,12 @@ export default async function RootLayout({
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-                {/* Favicon - Optimized for Google Search 2024 */}
-                <link rel="icon" type="image/png" sizes="96x96" href="/favicon-48x48.png" />
-                <link rel="icon" href="/favicon.ico" sizes="48x48" />
-                <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-                <link rel="manifest" href="/manifest.json" />
+                {/* Favicon - 2025 Best Practices: SVG first (scalable), PNG/ICO fallback for legacy + Google */}
+                <link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" />
+                <link rel="icon" href="/favicons/favicon.ico" sizes="48x48" />
+                <link rel="icon" type="image/png" sizes="192x192" href="/favicons/icons-192.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+                <link rel="manifest" href="/favicons/manifest.webmanifest" />
 
                 {/* Theme & Geo Tags */}
                 <meta name="theme-color" content="#1e3a5f" />
