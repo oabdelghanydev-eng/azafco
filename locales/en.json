@@ -300,6 +300,51 @@
         "certificates": {
             "title": "Certificates",
             "description": "AZAFCO's quality certifications and international standards"
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "description": "AZAFCO International Privacy Policy"
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "last_updated": "Last Updated",
+        "intro": {
+            "title": "Introduction",
+            "content": "At AZAFCO International, we respect your privacy and are committed to protecting your personal data. This policy explains how we collect and use information when you visit our website."
+        },
+        "data_collection": {
+            "title": "Data We Collect",
+            "content": "We automatically collect some information when you visit our website:",
+            "item1": "Device and browser information",
+            "item2": "IP address (anonymized)",
+            "item3": "Pages you visit and how you interact with them"
+        },
+        "analytics": {
+            "title": "Analytics Tools",
+            "content": "We use trusted analytics tools to understand how visitors use our site and improve their experience:",
+            "ga4": "For traffic analysis and understanding visitor behavior",
+            "clarity": "For recording user interactions and improving site interface"
+        },
+        "cookies": {
+            "title": "Cookies",
+            "content": "Our website uses cookies to improve your browsing experience. You can disable cookies in your browser settings, but this may affect some site functionality."
+        },
+        "sharing": {
+            "title": "Data Sharing",
+            "content": "We do not sell or share your personal data with third parties for marketing purposes. We may share anonymized data with analytics service providers to improve our services."
+        },
+        "rights": {
+            "title": "Your Rights",
+            "content": "You have the right to:",
+            "item1": "Request to know what data we hold about you",
+            "item2": "Request deletion of your data",
+            "item3": "Opt out of any marketing communications"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "content": "If you have any questions about this Privacy Policy, you can contact us:",
+            "email_label": "Email"
         }
     }
 }

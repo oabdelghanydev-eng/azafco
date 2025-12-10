@@ -300,6 +300,51 @@
         "certificates": {
             "title": "Certificats",
             "description": "Certifications de qualité et normes internationales d'AZAFCO"
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "description": "AZAFCO International Privacy Policy"
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "last_updated": "Last Updated",
+        "intro": {
+            "title": "Introduction",
+            "content": "At AZAFCO International, we respect your privacy and are committed to protecting your personal data."
+        },
+        "data_collection": {
+            "title": "Data We Collect",
+            "content": "We automatically collect some information when you visit our website:",
+            "item1": "Device and browser information",
+            "item2": "IP address (anonymized)",
+            "item3": "Pages you visit and how you interact with them"
+        },
+        "analytics": {
+            "title": "Analytics Tools",
+            "content": "We use trusted analytics tools to understand how visitors use our site:",
+            "ga4": "For traffic analysis and understanding visitor behavior",
+            "clarity": "For recording user interactions and improving site interface"
+        },
+        "cookies": {
+            "title": "Cookies",
+            "content": "Our website uses cookies to improve your browsing experience."
+        },
+        "sharing": {
+            "title": "Data Sharing",
+            "content": "We do not sell or share your personal data with third parties for marketing purposes."
+        },
+        "rights": {
+            "title": "Your Rights",
+            "content": "You have the right to:",
+            "item1": "Request to know what data we hold about you",
+            "item2": "Request deletion of your data",
+            "item3": "Opt out of any marketing communications"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "content": "If you have any questions about this Privacy Policy, you can contact us:",
+            "email_label": "Email"
         }
     }
 }

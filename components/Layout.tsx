@@ -210,6 +210,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
             <p>
               © {new Date().getFullYear()} {locale === 'ar' ? 'ازافكو العالمية للإستثمار والتنمية' : 'AZAFCO International'}. {t('footer.copyright')}.
+              {' · '}
+              <Link
+                href="/privacy-policy"
+                className="text-gray-500 hover:text-gray-400 transition-colors"
+              >
+                {locale === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy'}
+              </Link>
             </p>
           </div>
         </div>
