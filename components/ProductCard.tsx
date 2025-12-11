@@ -22,6 +22,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
     const [isModalOpen, setIsModalOpen] = useState(false)
     const isAr = locale === 'ar'
 
+    // B2B Optimized Alt Text for SEO (2025 Best Practice) - All 6 Languages
+    const b2bAltTexts: Record<string, string> = {
+        ar: `${productName} طازج للتصدير بالجملة - ازافكو مصر`,
+        en: `Fresh ${productName} for wholesale export - AZAFCO Egypt`,
+        es: `${productName} fresco para exportación al por mayor - AZAFCO Egipto`,
+        ru: `Свежий ${productName} для оптового экспорта - AZAFCO Египет`,
+        de: `Frischer ${productName} für Großhandelsexport - AZAFCO Ägypten`,
+        fr: `${productName} frais pour exportation en gros - AZAFCO Égypte`
+    }
+    const b2bAltText = b2bAltTexts[locale] || b2bAltTexts.en
+
+
     // Get category label based on locale
     const getCategoryLabel = () => {
         if (product.category === 'river') {
@@ -49,7 +61,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                 >
                     <Image
                         src={product.image}
-                        alt={productName}
+                        alt={b2bAltText}
                         width={400}
                         height={300}
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
@@ -114,7 +126,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 imageSrc={product.image}
-                imageAlt={productName}
+                imageAlt={b2bAltText}
             />
         </>
     )

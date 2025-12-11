@@ -141,13 +141,133 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         : `${baseUrl}/images/og-image-en.jpg`;
 
     // ═══════════════════════════════════════════════════════════════
+    // Multilingual Translations for Schema.org (All 6 Languages)
+    // ═══════════════════════════════════════════════════════════════
+    const i18n: Record<string, Record<string, string>> = {
+        companyName: {
+            ar: 'ازافكو العالمية للإستثمار والتنمية',
+            en: 'AZAFCO International Investment & Development',
+            es: 'AZAFCO International Inversión y Desarrollo',
+            ru: 'AZAFCO International Инвестиции и Развитие',
+            de: 'AZAFCO International Investition & Entwicklung',
+            fr: 'AZAFCO International Investissement & Développement'
+        },
+        description: {
+            ar: 'شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة لأكثر من 15 دولة منذ عام 2008.',
+            en: 'Leading Egyptian company specialized in fresh fish packaging and export to worldwide markets since 2008. Serving distributors, restaurants, and hotels with premium quality seafood.',
+            es: 'Empresa egipcia líder especializada en empaque y exportación de pescado fresco a mercados mundiales desde 2008.',
+            ru: 'Ведущая египетская компания, специализирующаяся на упаковке и экспорте свежей рыбы на мировые рынки с 2008 года.',
+            de: 'Führendes ägyptisches Unternehmen spezialisiert auf Verpackung und Export von Frischfisch seit 2008.',
+            fr: 'Entreprise égyptienne leader spécialisée dans l\'emballage et l\'exportation de poisson frais vers les marchés mondiaux depuis 2008.'
+        },
+        slogan: {
+            ar: 'أسماك طازجة فاخرة من مصر إلى العالم',
+            en: 'Premium Fresh Fish from Egypt to the World',
+            es: 'Pescado Fresco Premium de Egipto al Mundo',
+            ru: 'Премиальная свежая рыба из Египта во весь мир',
+            de: 'Premium Frischfisch aus Ägypten in die Welt',
+            fr: 'Poisson Frais Premium d\'Égypte vers le Monde'
+        },
+        factoryName: {
+            ar: 'مصنع ازافكو للأسماك',
+            en: 'AZAFCO Fish Processing Factory',
+            es: 'Fábrica de Procesamiento de Pescado AZAFCO',
+            ru: 'Рыбоперерабатывающий завод AZAFCO',
+            de: 'AZAFCO Fischverarbeitungsfabrik',
+            fr: 'Usine de Traitement de Poisson AZAFCO'
+        },
+        websiteName: {
+            ar: 'ازافكو العالمية - AZAFCO International',
+            en: 'AZAFCO International - Egyptian Fish Exporter',
+            es: 'AZAFCO International - Exportador de Pescado Egipcio',
+            ru: 'AZAFCO International - Египетский экспортёр рыбы',
+            de: 'AZAFCO International - Ägyptischer Fischexporteur',
+            fr: 'AZAFCO International - Exportateur de Poisson Égyptien'
+        },
+        websiteDescription: {
+            ar: 'الموقع الرسمي لشركة ازافكو العالمية - تصدير الأسماك الطازجة من مصر',
+            en: 'Official website of AZAFCO International - Premium fresh fish exporter from Egypt to worldwide markets',
+            es: 'Sitio web oficial de AZAFCO International - Exportador premium de pescado fresco de Egipto',
+            ru: 'Официальный сайт AZAFCO International - Премиум экспортёр свежей рыбы из Египта',
+            de: 'Offizielle Website von AZAFCO International - Premium Frischfischexporteur aus Ägypten',
+            fr: 'Site officiel d\'AZAFCO International - Exportateur premium de poisson frais d\'Égypte'
+        },
+        productGroupName: {
+            ar: 'أسماك ازافكو الطازجة',
+            en: 'AZAFCO Fresh Fish Products',
+            es: 'Productos de Pescado Fresco AZAFCO',
+            ru: 'Свежая рыба AZAFCO',
+            de: 'AZAFCO Frischfischprodukte',
+            fr: 'Produits de Poisson Frais AZAFCO'
+        },
+        productGroupDesc: {
+            ar: 'منتجات الأسماك الطازجة من ازافكو للتصدير - بلطي، قاروص، بوري',
+            en: 'Premium fresh fish products from AZAFCO for export - Tilapia, Sea Bass, Mullet',
+            es: 'Productos de pescado fresco premium de AZAFCO para exportación - Tilapia, Lubina, Mújol',
+            ru: 'Премиальные продукты свежей рыбы от AZAFCO на экспорт - Тилапия, Морской окунь, Кефаль',
+            de: 'Premium Frischfischprodukte von AZAFCO für Export - Tilapia, Wolfsbarsch, Meeräsche',
+            fr: 'Produits de poisson frais premium d\'AZAFCO pour l\'exportation - Tilapia, Bar, Mulet'
+        },
+        catalogName: {
+            ar: 'كتالوج منتجات ازافكو',
+            en: 'AZAFCO Fresh Fish Products Catalog',
+            es: 'Catálogo de Productos de Pescado Fresco AZAFCO',
+            ru: 'Каталог продукции свежей рыбы AZAFCO',
+            de: 'AZAFCO Frischfischprodukte Katalog',
+            fr: 'Catalogue des Produits de Poisson Frais AZAFCO'
+        },
+        catalogDesc: {
+            ar: 'تشكيلة متكاملة من الأسماك الطازجة للتصدير',
+            en: 'Complete range of premium fresh fish for export from Egypt',
+            es: 'Gama completa de pescado fresco premium para exportación desde Egipto',
+            ru: 'Полный ассортимент премиальной свежей рыбы на экспорт из Египта',
+            de: 'Komplettes Sortiment an Premium-Frischfisch für den Export aus Ägypten',
+            fr: 'Gamme complète de poisson frais premium pour l\'exportation d\'Égypte'
+        },
+        offerDesc: {
+            ar: 'اتصل بنا للحصول على عرض سعر بالجملة',
+            en: 'Contact us for wholesale B2B pricing',
+            es: 'Contáctenos para precios mayoristas B2B',
+            ru: 'Свяжитесь с нами для оптовых B2B цен',
+            de: 'Kontaktieren Sie uns für Großhandels-B2B-Preise',
+            fr: 'Contactez-nous pour les prix de gros B2B'
+        },
+        freshwater: {
+            ar: 'أسماك مياه عذبة',
+            en: 'Freshwater Fish',
+            es: 'Pescado de Agua Dulce',
+            ru: 'Пресноводная рыба',
+            de: 'Süßwasserfisch',
+            fr: 'Poisson d\'Eau Douce'
+        },
+        saltwater: {
+            ar: 'أسماك بحرية',
+            en: 'Saltwater Fish',
+            es: 'Pescado de Agua Salada',
+            ru: 'Морская рыба',
+            de: 'Salzwasserfisch',
+            fr: 'Poisson d\'Eau Salée'
+        },
+        home: { ar: 'الرئيسية', en: 'Home', es: 'Inicio', ru: 'Главная', de: 'Startseite', fr: 'Accueil' },
+        products: { ar: 'المنتجات', en: 'Products', es: 'Productos', ru: 'Продукты', de: 'Produkte', fr: 'Produits' },
+        about: { ar: 'من نحن', en: 'About Us', es: 'Sobre Nosotros', ru: 'О нас', de: 'Über uns', fr: 'À propos' },
+        contact: { ar: 'اتصل بنا', en: 'Contact', es: 'Contacto', ru: 'Контакты', de: 'Kontakt', fr: 'Contact' },
+        markets: { ar: 'الأسواق', en: 'Markets', es: 'Mercados', ru: 'Рынки', de: 'Märkte', fr: 'Marchés' },
+        media: { ar: 'الوسائط', en: 'Media', es: 'Medios', ru: 'Медиа', de: 'Medien', fr: 'Médias' },
+        certificates: { ar: 'الشهادات', en: 'Certificates', es: 'Certificados', ru: 'Сертификаты', de: 'Zertifikate', fr: 'Certificats' }
+    };
+
+    // Helper function to get translation
+    const t = (key: string): string => i18n[key]?.[locale] || i18n[key]?.en || '';
+
+    // ═══════════════════════════════════════════════════════════════
     // SCHEMA 1: Organization (Main Schema for B2B)
     // ═══════════════════════════════════════════════════════════════
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': `${baseUrl}/#organization`,
-        name: locale === 'ar' ? 'ازافكو العالمية للإستثمار والتنمية' : 'AZAFCO International Investment & Development',
+        name: t('companyName'),
         alternateName: ['AZAFCO International', 'AZAFCO', 'ازافكو', 'Azafco Egypt'],
         url: baseUrl,
         logo: {
@@ -157,14 +277,49 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             height: '100'
         },
         image: schemaImage,
-        description: locale === 'ar'
-            ? 'شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة لأكثر من 15 دولة منذ عام 2008.'
-            : 'Leading Egyptian company specialized in fresh fish packaging and export to worldwide markets since 2008. Serving distributors, restaurants, and hotels with premium quality seafood.',
+        description: t('description'),
         foundingDate: '2008',
         founder: {
             '@type': 'Person',
             name: 'AZAFCO Founder'
         },
+        // 2025 B2B Properties
+        legalName: 'AZAFCO International Investment & Development',
+        taxID: '537-340-483',
+        vatID: '537-340-483',
+        email: 'business@azafco.com.eg',
+        hasCredential: [
+            {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'certification',
+                name: 'ISO 22000:2018',
+                description: 'Food Safety Management System'
+            },
+            {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'certification',
+                name: 'HACCP',
+                description: 'Hazard Analysis Critical Control Points'
+            },
+            {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'certification',
+                name: 'ISO 9001:2015',
+                description: 'Quality Management System'
+            },
+            {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'certification',
+                name: 'ISO 14001:2015',
+                description: 'Environmental Management System'
+            },
+            {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'certification',
+                name: 'ISO 45001:2018',
+                description: 'Occupational Health and Safety'
+            }
+        ],
         numberOfEmployees: {
             '@type': 'QuantitativeValue',
             minValue: 50,
@@ -215,9 +370,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             'Nile Fish',
             'Mediterranean Fish'
         ],
-        slogan: locale === 'ar'
-            ? 'أسماك طازجة فاخرة من مصر إلى العالم'
-            : 'Premium Fresh Fish from Egypt to the World',
+        slogan: t('slogan'),
         makesOffer: [
             {
                 '@type': 'Offer',
@@ -253,7 +406,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         '@context': 'https://schema.org',
         '@type': 'FoodEstablishment',
         '@id': `${baseUrl}/#localbusiness`,
-        name: locale === 'ar' ? 'مصنع ازافكو للأسماك' : 'AZAFCO Fish Processing Factory',
+        name: t('factoryName'),
         alternateName: 'AZAFCO Fish Factory',
         image: schemaImage,
         url: baseUrl,
@@ -315,12 +468,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         '@id': `${baseUrl}/#website`,
-        name: locale === 'ar' ? 'ازافكو العالمية - AZAFCO International' : 'AZAFCO International - Egyptian Fish Exporter',
+        name: t('websiteName'),
         alternateName: ['ازافكو', 'AZAFCO', 'Azafco Egypt', 'AZAFCO Fish'],
         url: baseUrl,
-        description: locale === 'ar'
-            ? 'الموقع الرسمي لشركة ازافكو العالمية - تصدير الأسماك الطازجة من مصر'
-            : 'Official website of AZAFCO International - Premium fresh fish exporter from Egypt to worldwide markets',
+        description: t('websiteDescription'),
         inLanguage: ['ar', 'en', 'es', 'ru', 'de', 'fr'],
         publisher: {
             '@id': `${baseUrl}/#organization`
@@ -395,25 +546,16 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             {
                 '@type': 'ListItem',
                 position: 1,
-                name: locale === 'ar' ? 'الرئيسية' : 'Home',
+                name: t('home'),
                 item: baseUrl
             }
         ];
 
-        const pageNames: Record<string, { ar: string; en: string }> = {
-            products: { ar: 'المنتجات', en: 'Products' },
-            about: { ar: 'من نحن', en: 'About Us' },
-            contact: { ar: 'اتصل بنا', en: 'Contact' },
-            markets: { ar: 'الأسواق', en: 'Markets' },
-            media: { ar: 'الوسائط', en: 'Media' },
-            certificates: { ar: 'الشهادات', en: 'Certificates' }
-        };
-
-        if (pageType !== 'home' && pageNames[pageType]) {
+        if (pageType !== 'home') {
             items.push({
                 '@type': 'ListItem',
                 position: 2,
-                name: locale === 'ar' ? pageNames[pageType].ar : pageNames[pageType].en,
+                name: t(pageType),
                 item: currentUrl
             });
         }
@@ -453,10 +595,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         '@context': 'https://schema.org',
         '@type': 'ProductGroup',
         '@id': `${baseUrl}/products#productgroup`,
-        name: locale === 'ar' ? 'أسماك ازافكو الطازجة' : 'AZAFCO Fresh Fish Products',
-        description: locale === 'ar'
-            ? 'منتجات الأسماك الطازجة من ازافكو للتصدير - بلطي، قاروص، بوري'
-            : 'Premium fresh fish products from AZAFCO for export - Tilapia, Sea Bass, Mullet',
+        name: t('productGroupName'),
+        description: t('productGroupDesc'),
         brand: {
             '@type': 'Brand',
             name: 'AZAFCO',
@@ -471,9 +611,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             name: locale === 'ar' ? product.name : product.nameEn,
             description: locale === 'ar' ? product.description : product.descriptionEn,
             image: `${baseUrl}${product.image}`,
-            category: product.category === 'river'
-                ? (locale === 'ar' ? 'أسماك مياه عذبة' : 'Freshwater Fish')
-                : (locale === 'ar' ? 'أسماك بحرية' : 'Saltwater Fish'),
+            category: product.category === 'river' ? t('freshwater') : t('saltwater'),
             brand: {
                 '@type': 'Brand',
                 name: 'AZAFCO'
@@ -481,6 +619,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
+                // B2B Indicators (2025 Best Practice)
+                businessFunction: 'http://purl.org/goodrelations/v1#Sell',
+                eligibleCustomerType: 'http://purl.org/goodrelations/v1#Business',
                 priceCurrency: 'USD',
                 price: '0',
                 priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
@@ -489,7 +630,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
                     name: 'AZAFCO International'
                 },
                 url: `${baseUrl}/${locale}/contact`,
-                description: locale === 'ar' ? 'اتصل بنا للحصول على عرض سعر' : 'Contact us for B2B pricing'
+                description: t('offerDesc')
             }
         }))
     } : null;

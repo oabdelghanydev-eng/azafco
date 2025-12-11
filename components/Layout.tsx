@@ -19,6 +19,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const t = useTranslations();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
+  // B2B Optimized Logo Alt Text - All 6 Languages
+  const logoAlt: Record<string, string> = {
+    ar: 'ازافكو - مورد أسماك مصري للتصدير بالجملة',
+    en: 'AZAFCO - Egyptian Wholesale Fish Supplier for Export',
+    es: 'AZAFCO - Proveedor Egipcio de Pescado al por Mayor para Exportación',
+    ru: 'AZAFCO - Египетский оптовый поставщик рыбы на экспорт',
+    de: 'AZAFCO - Ägyptischer Großhandels-Fischlieferant für Export',
+    fr: 'AZAFCO - Fournisseur Égyptien de Poisson en Gros pour Exportation'
+  };
+
   const navigation = [
     { name: t('nav.home'), href: '/' },
     { name: t('nav.products'), href: '/products' },
@@ -45,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className={`flex items-center ${locale === 'ar' ? 'space-x-3 space-x-reverse' : 'space-x-3'}`}>
-              <img src="/images/logo.svg" alt={locale === 'ar' ? 'ازافكو' : 'AZAFCO'} className="h-16 w-auto" />
+              <img src="/images/logo.svg" alt={logoAlt[locale] || logoAlt.en} className="h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -132,7 +142,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <img src="/images/logo.svg" alt={locale === 'ar' ? 'ازافكو' : 'AZAFCO'} className="h-24 mb-4" />
+              <img src="/images/logo.svg" alt={logoAlt[locale] || logoAlt.en} className="h-24 mb-4" />
               <p className="text-gray-400 text-sm">
                 {t('footer.description')}
               </p>
