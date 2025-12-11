@@ -7,6 +7,9 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
 
+  // Fix for duplicate lockfile warning
+  outputFileTracingRoot: __dirname,
+
   // Image optimization
   images: {
     remotePatterns: [
