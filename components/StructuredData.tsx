@@ -341,7 +341,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         contactPoint: [
             {
                 '@type': 'ContactPoint',
-                telephone: '+201007514567',
+                telephone: '+201007736419',
                 contactType: 'sales',
                 contactOption: 'TollFree',
                 availableLanguage: ['Arabic', 'English'],
@@ -349,14 +349,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
             },
             {
                 '@type': 'ContactPoint',
-                telephone: '+201007514567',
+                telephone: '+201007736419',
                 contactType: 'customer service',
                 availableLanguage: ['Arabic', 'English']
             }
         ],
         sameAs: [
             'https://www.facebook.com/profile.php?id=100063620366349',
-            'https://wa.me/201007514567'
+            'https://wa.me/201007736419'
         ],
         knowsAbout: [
             'Fresh Fish Export',
@@ -410,7 +410,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ products, pageType = 'h
         alternateName: 'AZAFCO Fish Factory',
         image: schemaImage,
         url: baseUrl,
-        telephone: '+201007514567',
+        telephone: '+201007736419',
         email: 'business@azafco.com.eg',
         priceRange: '$$',
         currenciesAccepted: 'USD, EGP, AED, SAR, EUR',

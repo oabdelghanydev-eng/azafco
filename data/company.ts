@@ -12,14 +12,14 @@ export const companyInfo = {
     taxNumber: '537-340-483',
     contact: {
         phone: {
-            display: '+20-100-7514567',
-            value: '+201007514567',
-            link: 'tel:+201007514567'
+            display: '+20-100-7736419',
+            value: '+201007736419',
+            link: 'tel:+201007736419'
         },
         whatsapp: {
-            display: '+20-100-7514567',
-            value: '+201007514567',
-            link: 'https://wa.me/201007514567'
+            display: '+20-100-7736419',
+            value: '+201007736419',
+            link: 'https://wa.me/201007736419'
         },
         email: {
             display: 'business@azafco.com.eg',
