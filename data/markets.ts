@@ -30,7 +30,7 @@ function mapStatus(status: MarketStatus): 'paused' | 'coming-soon' | undefined {
 // Derive markets from config - ORDER IS FROM CONFIG (Kuwait #1)
 export const markets: Market[] = companyConfig.markets.map(m => ({
     translationKey: m.key,
-    flag: `/flags/${m.countryCode}.svg`,
+    flag: `/flags/${m.countryCode.toLowerCase()}.svg`,
     since: m.since ? String(m.since) : 'coming_soon',
     status: mapStatus(m.status),
 }));
