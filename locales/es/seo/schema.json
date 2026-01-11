@@ -1,0 +1,118 @@
+{
+    "companyName": "AZAFCO International Investment & Development",
+    "alternateName": "AZAFCO International",
+    "alternateNames": [
+        "AZAFCO International",
+        "AZAFCO",
+        "ازافكو",
+        "Azafco Egipto",
+        "AZAFCO Fish"
+    ],
+    "description": "Exportador B2B líder de pescado fresco de Egipto desde 2008. Suministro de más de 2.500 toneladas mensuales a más de 7 países a nivel mundial con más de 300 empleados, más de 500 clientes y disponibilidad 24/7. Certificado ISO y HACCP, aprobación de exportación UE.",
+    "slogan": "Pescado fresco premium de Egipto al mundo",
+    "foundingDate": "2008",
+    "numberOfEmployees": "más de 300",
+    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
+    "factoryName": "Planta de procesamiento de pescado AZAFCO",
+    "factoryAlternateName": "Planta de pescado AZAFCO",
+    "websiteName": "AZAFCO International – Exportador B2B de pescado #1 de Egipto",
+    "websiteDescription": "Sitio web oficial de AZAFCO International – Exportador de pescado fresco premium de Egipto a más de 7 países a nivel mundial. Suministro mayorista 24/7.",
+    "productGroupName": "Productos de pescado fresco AZAFCO",
+    "productGroupDesc": "Productos de pescado fresco premium del principal exportador de Egipto – Tilapia, lubina, lisa, bagre y más. Tamaños personalizados disponibles.",
+    "catalogName": "Catálogo de productos de pescado fresco AZAFCO",
+    "catalogDesc": "Gama completa de pescado fresco premium para exportación mayorista desde Egipto. Más de 8 variedades, tamaños personalizados, pedidos flexibles.",
+    "offerDesc": "Contáctenos para precios mayoristas B2B competitivos. Disponibilidad 24/7.",
+    "priceRange": "Precios mayoristas competitivos",
+    "freshFishCategory": "Pescado fresco",
+    "freshwater": "Pescado de agua dulce",
+    "freshwaterDesc": "Tilapia, bagre, lisa, Mubarakah",
+    "saltwater": "Pescado de agua salada",
+    "saltwaterDesc": "Lubina, Buni, Lout, anguilas",
+    "restaurantHotelSupply": "Suministro para restaurantes y hoteles",
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "markets": "Mercados",
+    "media": "Medios",
+    "certificates": "Certificados",
+    "openingHours": "24/7",
+    "paymentAccepted": "Transferencia bancaria, carta de crédito (L/C), SWIFT",
+    "currenciesAccepted": "USD, EUR, EGP, AED, SAR",
+    "knowsAbout": [
+        "Exportación de pescado fresco",
+        "Envasado de pescado",
+        "Tilapia al por mayor",
+        "Exportación de lubina",
+        "Lisa fresca",
+        "Procesamiento de pescado",
+        "Suministro B2B de pescado",
+        "Pescado egipcio",
+        "Pescado del Nilo",
+        "Pescado mediterráneo"
+    ],
+    "speakableName": "AZAFCO International – Exportación de pescado fresco",
+    "certifications": {
+        "iso22000": {
+            "name": "ISO 22000:2018",
+            "description": "Sistema de gestión de seguridad alimentaria"
+        },
+        "haccp": {
+            "name": "HACCP",
+            "description": "Análisis de peligros y puntos críticos de control"
+        },
+        "iso9001": {
+            "name": "ISO 9001:2015",
+            "description": "Sistema de gestión de calidad"
+        },
+        "iso14001": {
+            "name": "ISO 14001:2015",
+            "description": "Sistema de gestión ambiental"
+        },
+        "iso45001": {
+            "name": "ISO 45001:2018",
+            "description": "Sistema de gestión de seguridad y salud en el trabajo"
+        }
+    },
+    "services": {
+        "tilapia": {
+            "name": "Exportación de tilapia fresca",
+            "description": "Tilapia del Nilo premium para mayoreo y exportación"
+        },
+        "seaBass": {
+            "name": "Suministro de lubina",
+            "description": "Lubina mediterránea fresca para mercados internacionales"
+        },
+        "mullet": {
+            "name": "Exportación de lisa",
+            "description": "Lisa fresca (Bouri) para mercados internacionales"
+        }
+    },
+    "howTo": {
+        "title": "Cómo pedir pescado mayorista de AZAFCO",
+        "description": "Pasos simples para pedir pescado fresco mayorista de AZAFCO International",
+        "supplies": {
+            "businessDetails": "Datos de su empresa",
+            "quantities": "Cantidades requeridas"
+        },
+        "steps": {
+            "step1": {
+                "name": "Contáctenos",
+                "text": "Contáctenos vía WhatsApp o correo business@azafco.com.eg"
+            },
+            "step2": {
+                "name": "Especifique sus productos",
+                "text": "Elija tipo de pescado, tamaños (personalización disponible) y cantidades"
+            },
+            "step3": {
+                "name": "Reciba cotización",
+                "text": "Le enviamos una cotización competitiva en 24 horas"
+            },
+            "step4": {
+                "name": "Confirmar y enviar",
+                "text": "Confirme su pedido y enviamos con cadena de frío completa 0–4°C – por aire o tierra a nivel mundial"
+            }
+        },
+        "estimatedCost": "Contáctenos para cotización"
+    }
+}

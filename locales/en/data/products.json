@@ -1,0 +1,144 @@
+{
+    "tilapia": {
+        "name": "Tilapia",
+        "alt_names": [
+            "Nile Tilapia",
+            "Nile Perch"
+        ],
+        "description": "Premium Nile Tilapia from certified Egyptian farms. Our #1 export product. HACCP certified with complete cold chain.",
+        "sizes": [
+            "Small (200-300g)",
+            "Medium (300-500g)",
+            "Large (500g+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "freshwater",
+        "availability": "Year-round supply"
+    },
+    "sea_bass": {
+        "name": "Sea Bass",
+        "alt_names": [
+            "Mediterranean Sea Bass",
+            "European Bass"
+        ],
+        "description": "Premium Sea Bass, perfect for grilling, frying, and fine dining. Restaurant favorite across Gulf region.",
+        "sizes": [
+            "Medium (400-600g)",
+            "Large (600g+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "saltwater",
+        "availability": "Year-round supply"
+    },
+    "mullet": {
+        "name": "Bouri - Biya - Mullet",
+        "alt_names": [
+            "Grey Mullet",
+            "Striped Mullet",
+            "Bouri Fish"
+        ],
+        "description": "Fresh Egyptian Mullet, excellent for grilling and smoking. Traditional favorite in Gulf cuisine.",
+        "sizes": [
+            "Small (150-250g)",
+            "Medium (250-400g)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "freshwater",
+        "availability": "Year-round supply"
+    },
+    "buni": {
+        "name": "Buni",
+        "alt_names": [
+            "Sea Bream"
+        ],
+        "description": "Premium sea buni for discerning customers. Excellent texture and flavor profile.",
+        "sizes": [
+            "Medium (300-500g)",
+            "Large (500g+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "saltwater",
+        "availability": "Year-round supply"
+    },
+    "mubarakah": {
+        "name": "Mubarakah",
+        "alt_names": [
+            "African Catfish",
+            "Clarias"
+        ],
+        "description": "Fresh Mubarakah, ideal for traditional dishes. Large sizes available for wholesale.",
+        "sizes": [
+            "Large (1-2kg)",
+            "Jumbo (2kg+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "freshwater",
+        "availability": "Year-round supply"
+    },
+    "catfish": {
+        "name": "Catfish",
+        "alt_names": [
+            "Channel Catfish",
+            "Egyptian Catfish"
+        ],
+        "description": "Fresh catfish from Egyptian freshwater farms. Popular choice for restaurants and distributors.",
+        "sizes": [
+            "Medium (500-800g)",
+            "Large (800g+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "freshwater",
+        "availability": "Year-round supply"
+    },
+    "lout": {
+        "name": "Lout",
+        "alt_names": [
+            "Grouper",
+            "Sea Lout"
+        ],
+        "description": "Fresh sea lout with firm texture. Premium quality for upscale restaurants and hotels.",
+        "sizes": [
+            "Medium (400-600g)",
+            "Large (600g+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "saltwater",
+        "availability": "Year-round supply"
+    },
+    "eels": {
+        "name": "Eels Fish",
+        "alt_names": [
+            "Freshwater Eel",
+            "Egyptian Eel"
+        ],
+        "description": "Fresh eels from Egyptian freshwater sources. Specialty product for select markets.",
+        "sizes": [
+            "Medium (300-500g)",
+            "Large (500g+)",
+            "Custom sizes available"
+        ],
+        "storage_temp": "0 to 4°C",
+        "packaging": "EPS Box",
+        "category": "freshwater",
+        "availability": "Year-round supply"
+    },
+    "_note": {
+        "custom_sizes": "We offer great flexibility in sizes - all products can be customized to order",
+        "more_products": "Additional products available upon request. Contact us for specific requirements.",
+        "min_order": "Minimum order: 1 carton"
+    }
+}

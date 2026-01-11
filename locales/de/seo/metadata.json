@@ -1,0 +1,50 @@
+{
+    "site": {
+        "name": "AZAFCO - ازافكو العالمية",
+        "title_default": "AZAFCO International – Fischexporteur aus Ägypten",
+        "title_template": "%s | AZAFCO International",
+        "author": "AZAFCO International",
+        "creator": "AZAFCO International",
+        "publisher": "AZAFCO International",
+        "og_alt": "AZAFCO International – Frischfisch-Export aus Ägypten – Lieferung nach Deutschland, Österreich, Schweiz & weltweit"
+    },
+    "home": {
+        "title": "Fischgroßhändler für Gastronomie & Großhandel | AZAFCO Ägypten",
+        "description": "AZAFCO International – Ägyptens führender B2B-Fischexporteur seit 2008. Über 2.500 Tonnen monatlich. ISO- & HACCP-zertifiziert. Lieferung nach Deutschland, Österreich, Schweiz & weltweit per Luft & Land.",
+        "keywords": "Fischgroßhändler Ägypten, B2B-Fischexporteur, Fischimport Deutschland, Tilapia-Lieferant DACH, Wolfsbarsch Großhandel, AZAFCO International, Fischlieferant Gastronomie"
+    },
+    "products": {
+        "title": "Frischfisch für Export: Tilapia, Wolfsbarsch, Meeräsche kaufen | AZAFCO",
+        "description": "Premium-Frischfisch von Ägyptens führendem Exporteur. Tilapia, Wolfsbarsch, Meeräsche & 8+ Sorten. Individuelle Größen, ab 1 Karton. ISO-zertifiziert. Weltweiter Versand – auch nach Deutschland.",
+        "keywords": "Frischfisch kaufen, Tilapia Großhandel Deutschland, Wolfsbarsch bestellen, Meeräsche Lieferant, B2B-Fischhandel, Fisch-Großhandel Ägypten"
+    },
+    "about": {
+        "title": "Fischexportunternehmen mit 300+ Mitarbeitern seit 2008 | AZAFCO",
+        "description": "AZAFCO International: Ägyptens B2B-Fischexporteur mit über 300 Mitarbeitern, über 500 Kunden in über 7 Ländern. EU-zugelassene Fabrik. ISO 22000 & HACCP zertifiziert. Export nach Europa & weltweit.",
+        "keywords": "über AZAFCO, ägyptisches Fischexportunternehmen, EU-zugelassener Fischexporteur, Fischlieferant Europa, zuverlässiger Fischexporteur"
+    },
+    "contact": {
+        "title": "Fisch-Großhandel Angebot anfordern | Kontakt AZAFCO 24/7",
+        "description": "Angebot anfordern: Ägyptens führender Fischexporteur. Weltweiter Versand nach Deutschland, Österreich, Schweiz & mehr. WhatsApp: +20-100-7736419. Antwort innerhalb 24 Stunden.",
+        "keywords": "AZAFCO kontaktieren, Fischlieferant Angebot, Großhandelspreise Fisch, B2B-Fischpartnerschaft, Fischimport Anfrage"
+    },
+    "markets": {
+        "title": "Fischexport weltweit | 2.500+ Tonnen monatlich | AZAFCO",
+        "description": "AZAFCO exportiert über 2.500 Tonnen Frischfisch monatlich in über 7 Länder. Europa, Golfstaaten, weltweit per Luft & Land. Über 500 zufriedene Großhändler seit 2008.",
+        "keywords": "internationaler Fischexport, Fischimport Deutschland, Fischgroßhandel Österreich, Fischlieferant Schweiz, AZAFCO Exportmärkte"
+    },
+    "media": {
+        "title": "News & Updates zur ägyptischen Fischindustrie | AZAFCO Medienzentrum",
+        "description": "Aktuelle AZAFCO-Nachrichten, internationale Expansion, Unternehmensleistungen und Branchenmeilensteine. TV-Auftritte und staatliche Anerkennung seit 2008.",
+        "keywords": "AZAFCO News, ägyptische Fischindustrie, Fischexport-Updates, AZAFCO Erfolge"
+    },
+    "certificates": {
+        "title": "ISO 22000 & HACCP zertifizierter Fischexporteur | AZAFCO Qualität",
+        "description": "AZAFCO besitzt über 5 internationale Zertifizierungen: ISO 22000, HACCP, ISO 9001, ISO 14001, ISO 45001. Eine von nur 6 ägyptischen Fabriken mit EU-Exportzulassung. Rückverfolgbarkeit garantiert.",
+        "keywords": "AZAFCO Zertifikate, ISO 22000 Fisch, HACCP-zertifiziert, EU-zugelassen, rückverfolgbarer Fisch, zertifizierter Fischexporteur"
+    },
+    "privacy": {
+        "title": "Datenschutzerklärung | AZAFCO International",
+        "description": "Datenschutzerklärung von AZAFCO International – Wie wir Ihre Daten schützen und Anfragen vertraulich behandeln. DSGVO-konform."
+    }
+}

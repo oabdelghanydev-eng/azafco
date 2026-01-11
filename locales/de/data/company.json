@@ -1,0 +1,28 @@
+{
+    "name": "AZAFCO International",
+    "fullName": "AZAFCO International Investment & Development",
+    "description": "Ägyptens führender B2B-Fischexporteur für Großhändler, Restaurants und Hotels – Premium-Frischfisch seit 2008.",
+    "workingHours": "Rund um die Uhr erreichbar",
+    "workingHoursNote": "24/7 geöffnet – je nach Abteilung",
+    "addresses": {
+        "main": {
+            "title": "Hauptniederlassung",
+            "address": "Mastora, neben der Wohltätigkeitsorganisation, El-Borollos, Kafr El-Sheikh, Ägypten"
+        },
+        "factory": {
+            "title": "Produktionsstätte",
+            "address": "Nr. 120 – Futtersektor – Industriezone – Motobas – Kafr El-Sheikh, Ägypten"
+        }
+    },
+    "copyright": "AZAFCO International",
+    "privacyLink": "Datenschutzerklärung",
+    "leadersSince": "Führend im Frischfischexport seit",
+    "tagline": "Premium-Frischfisch aus Ägypten – weltweit",
+    "usps": {
+        "price": "Wettbewerbsfähige Großhandelspreise",
+        "quality": "ISO- & HACCP-zertifizierte Qualität",
+        "flexibility": "Individuelle Größen, flexible Bestellungen",
+        "availability": "24/7-Betrieb, kontinuierliche Lieferfähigkeit",
+        "service": "Zuverlässige Erfüllung Ihrer Marktanforderungen"
+    }
+}

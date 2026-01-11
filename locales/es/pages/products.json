@@ -1,0 +1,36 @@
+{
+    "title": "Pescado fresco para exportación",
+    "subtitle": "Pescado egipcio premium para mayoristas y restaurantes a nivel mundial",
+    "filter": {
+        "all": "Todos los productos",
+        "nile": "Peces del Nilo",
+        "sea": "Peces de mar",
+        "freshwater": "Agua dulce",
+        "saltwater": "Agua salada"
+    },
+    "category_fresh": "Pescado fresco",
+    "weight": "Peso",
+    "available_sizes": "Tamaños disponibles",
+    "freshwater": "Agua dulce",
+    "saltwater": "Agua salada",
+    "sizes_label": "Tamaños:",
+    "view_image": "Ver imagen",
+    "quality": {
+        "title": "Calidad certificada ISO y HACCP",
+        "subtitle": "Estándares de exportación para compradores B2B a nivel mundial",
+        "fresh_fish": "Fresco de origen",
+        "fresh_fish_desc": "Directo de granjas egipcias certificadas",
+        "perfect_cooling": "Cadena de frío 0–4°C",
+        "perfect_cooling_desc": "Temperatura controlada desde la captura hasta la entrega",
+        "fast_delivery": "Entrega mundial",
+        "fast_delivery_desc": "Envío rápido a cualquier destino por aire o tierra",
+        "accurate_weights": "Pesos precisos",
+        "accurate_weights_desc": "Precisión en pesos y tamaños personalizados"
+    },
+    "cta": {
+        "title": "¿Busca un proveedor de pescado confiable?",
+        "subtitle": "Proveemos pescado fresco a más de 500 mayoristas, restaurantes y hoteles a nivel mundial",
+        "button": "Solicitar cotización"
+    },
+    "alt_template": "{product} fresco para exportación mayorista desde Egipto – AZAFCO International"
+}

@@ -1,0 +1,48 @@
+{
+    "hero": {
+        "title": "AZAFCO International",
+        "title_subtitle": "Inversión y Desarrollo",
+        "leaders_since": "Líderes en exportación de pescado fresco desde",
+        "subtitle": "Exportación de pescado fresco premium de Egipto al mundo",
+        "description": "Exportador B2B líder de pescado de Egipto para mayoristas, restaurantes y hoteles a nivel mundial. Más de 2.500 toneladas mensuales con certificación ISO y HACCP. Transporte aéreo y terrestre a todo el mundo.",
+        "cta_whatsapp": "Contactar por WhatsApp",
+        "cta_partnership": "Solicitar colaboración comercial",
+        "background_alt": "Planta de procesamiento de pescado AZAFCO en Egipto"
+    },
+    "stats": {
+        "years": "Años de experiencia",
+        "countries": "Países de exportación",
+        "tonnage": "Toneladas mensuales",
+        "certificates": "Certificados de calidad"
+    },
+    "products": {
+        "title": "Pescado fresco para exportación",
+        "subtitle": "Tilapia, lubina, lisa premium y pescado egipcio para compradores B2B a nivel mundial",
+        "view_all": "Ver todos los productos"
+    },
+    "why_us": {
+        "title": "¿Por qué AZAFCO?",
+        "subtitle": "Exportador de pescado de confianza de Egipto desde 2008",
+        "quality": "Certificación ISO y HACCP",
+        "fresh": "Fresco de origen",
+        "experience": "Más de 17 años de experiencia",
+        "global": "Exportación mundial"
+    },
+    "cta": {
+        "title": "¿Listo para iniciar su colaboración?",
+        "description": "Únase a más de 500 mayoristas y restaurantes satisfechos en más de 7 países a nivel mundial",
+        "button": "Iniciar colaboración"
+    },
+    "features": {
+        "trusted_source": "Fuente egipcia confiable",
+        "trusted_source_desc": "Cada pescado proviene de granjas egipcias certificadas en Kafr El-Sheikh.",
+        "cold_chain": "Cadena de frío completa",
+        "cold_chain_desc": "0–4°C desde la captura hasta su destino en cualquier lugar del mundo.",
+        "professionals": "Especialistas B2B",
+        "professionals_desc": "Entendemos las necesidades de restaurantes, hoteles y mayoristas a nivel mundial."
+    },
+    "markets": {
+        "title": "Nuestros mercados de exportación",
+        "subtitle": "Sirviendo a mayoristas y restaurantes en todo el mundo – enviamos a cualquier destino"
+    }
+}

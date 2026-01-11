@@ -1,0 +1,19 @@
+{
+    "nav": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "certificates": "الشهادات",
+        "markets": "أسواقنا",
+        "media": "المركز الإعلامي",
+        "about": "من نحن",
+        "contact": "اتصل بنا"
+    },
+    "footer": {
+        "description": "شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة",
+        "quick_links": "روابط سريعة",
+        "contact_us": "تواصل معنا",
+        "partnership": "طلب شراكة تجارية",
+        "copyright": "جميع الحقوق محفوظة",
+        "quality_certificates": "شهادات الجودة"
+    }
+}

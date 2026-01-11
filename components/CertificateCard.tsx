@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { FaExpandAlt } from 'react-icons/fa'
 import { Certificate } from '../data/certificates'
+import { useTranslations } from 'next-intl'
 
 interface CertificateCardProps {
     certificate: Certificate
@@ -14,6 +15,8 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
     index = 0,
     onImageClick
 }) => {
+    const t = useTranslations()
+
     const handleClick = () => {
         if (onImageClick) {
             onImageClick(certificate.image)
@@ -41,16 +44,16 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
                     className="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-primary-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center"
                 >
                     <FaExpandAlt className="text-white text-4xl mb-2" />
-                    <span className="text-white font-semibold">اضغط للتكبير</span>
+                    <span className="text-white font-semibold">{t('common.click_to_zoom')}</span>
                 </div>
             </div>
             <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-primary-800 group-hover:text-primary-600 transition-colors">{certificate.name}</h3>
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">{certificate.description}</p>
                 <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-500">الجهة: {certificate.issuer}</span>
+                    <span className="text-gray-500">{t('common.issuer')}: {certificate.issuer}</span>
                     <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
-                        صالحة حتى {certificate.validUntil}
+                        {t('common.valid_until')} {certificate.validUntil}
                     </span>
                 </div>
             </div>
@@ -59,3 +62,4 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
 }
 
 export default CertificateCard
+

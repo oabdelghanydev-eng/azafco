@@ -1,0 +1,28 @@
+{
+    "name": "AZAFCO International",
+    "fullName": "AZAFCO International Investment & Development",
+    "description": "Premier exportateur B2B de poisson d'Égypte pour grossistes, restaurants et hôtels – poisson frais premium depuis 2008.",
+    "workingHours": "Disponible 24h/24",
+    "workingHoursNote": "Service continu – selon département",
+    "addresses": {
+        "main": {
+            "title": "Siège social",
+            "address": "Mastora, à côté de l'Association Caritative, El-Borollos, Kafr El-Sheikh, Égypte"
+        },
+        "factory": {
+            "title": "Site de production",
+            "address": "N° 120 – Secteur Alimentation – Zone Industrielle – Motobas – Kafr El-Sheikh, Égypte"
+        }
+    },
+    "copyright": "AZAFCO International",
+    "privacyLink": "Politique de confidentialité",
+    "leadersSince": "Leaders de l'export de poisson frais depuis",
+    "tagline": "Poisson frais premium d'Égypte vers le monde",
+    "usps": {
+        "price": "Prix de gros compétitifs",
+        "quality": "Qualité certifiée ISO et HACCP",
+        "flexibility": "Tailles personnalisées, commandes flexibles",
+        "availability": "Service 24h/24, approvisionnement continu",
+        "service": "Satisfaction de vos exigences marché"
+    }
+}

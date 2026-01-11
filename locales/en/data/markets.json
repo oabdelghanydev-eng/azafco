@@ -1,0 +1,76 @@
+{
+    "kuwait": {
+        "country": "Kuwait",
+        "description": "Our largest export market. Trusted partner to leading distributors, restaurants, and hotels across Kuwait.",
+        "features": [
+            "Largest Export Volume",
+            "Premium Distributors",
+            "Restaurant Chains",
+            "Hotels"
+        ]
+    },
+    "uae": {
+        "country": "United Arab Emirates",
+        "description": "Major Gulf market serving Dubai, Abu Dhabi, and Sharjah's finest distributors, restaurants, and supermarket chains.",
+        "features": [
+            "Certified Distributors",
+            "Luxury Restaurants",
+            "Supermarket Chains",
+            "Hotels"
+        ]
+    },
+    "qatar": {
+        "country": "Qatar",
+        "description": "Growing market with strong partnerships with Qatari distributors, hotels, and restaurant groups.",
+        "features": [
+            "Major Distributors",
+            "Hotel Chains",
+            "Restaurants",
+            "Catering Companies"
+        ]
+    },
+    "iraq": {
+        "country": "Iraq",
+        "description": "Expanding market with large and growing demand and promising opportunities.",
+        "features": [
+            "Local Distributors",
+            "Wholesale Markets",
+            "Restaurants"
+        ]
+    },
+    "bahrain": {
+        "country": "Bahrain",
+        "description": "Active market with strong presence across distributors, restaurants, and cooperative societies.",
+        "features": [
+            "Distributors",
+            "Restaurants",
+            "Cooperative Societies",
+            "Hotels"
+        ]
+    },
+    "lebanon": {
+        "country": "Lebanon",
+        "description": "Distinguished market known for appreciation of quality and freshness. Serving high-end establishments.",
+        "features": [
+            "High-end Restaurants",
+            "Premium Distributors",
+            "Hotels"
+        ]
+    },
+    "spain": {
+        "country": "Spain",
+        "description": "Our gateway to European markets - currently paused but planning re-entry. EU-approved operations ready.",
+        "features": [
+            "European Distributors",
+            "Fish Markets"
+        ]
+    },
+    "russia": {
+        "country": "Russia",
+        "description": "Promising large-scale market we are actively planning to enter with significant growth potential.",
+        "features": [
+            "International Distributors",
+            "Retail Chains"
+        ]
+    }
+}

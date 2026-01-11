@@ -1,0 +1,118 @@
+{
+    "companyName": "AZAFCO International Investment & Development",
+    "alternateName": "AZAFCO International",
+    "alternateNames": [
+        "AZAFCO International",
+        "AZAFCO",
+        "ازافكو",
+        "Azafco Ägypten",
+        "AZAFCO Fisch"
+    ],
+    "description": "Ägyptens führender B2B-Frischfischexporteur seit 2008. Lieferung von über 2.500 Tonnen monatlich in über 7 Länder weltweit mit über 300 Mitarbeitern, über 500 Kunden und Erreichbarkeit rund um die Uhr. ISO- & HACCP-zertifiziert, EU-Exportzulassung.",
+    "slogan": "Premium-Frischfisch aus Ägypten – weltweit",
+    "foundingDate": "2008",
+    "numberOfEmployees": "300+",
+    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
+    "factoryName": "AZAFCO Fischverarbeitungsanlage",
+    "factoryAlternateName": "AZAFCO Produktionsstätte",
+    "websiteName": "AZAFCO International – Ägyptens führender B2B-Fischexporteur",
+    "websiteDescription": "Offizielle Website von AZAFCO International – Premium-Frischfischexporteur aus Ägypten in über 7 Länder weltweit. 24/7-Großhandelslieferung.",
+    "productGroupName": "AZAFCO Frischfischprodukte",
+    "productGroupDesc": "Premium-Frischfischprodukte von Ägyptens führendem Exporteur – Tilapia, Wolfsbarsch, Meeräsche, Wels & mehr. Individuelle Größen verfügbar.",
+    "catalogName": "AZAFCO Frischfischprodukte-Katalog",
+    "catalogDesc": "Umfassendes Sortiment an Premium-Frischfisch für Großhandelsexport aus Ägypten. 8+ Sorten, individuelle Größen, flexible Bestellungen.",
+    "offerDesc": "Kontaktieren Sie uns für wettbewerbsfähige B2B-Großhandelspreise. Rund um die Uhr verfügbar.",
+    "priceRange": "Wettbewerbsfähige Großhandelspreise",
+    "freshFishCategory": "Frischfisch",
+    "freshwater": "Süßwasserfisch",
+    "freshwaterDesc": "Tilapia, Wels, Meeräsche, Mubarakah",
+    "saltwater": "Salzwasserfisch",
+    "saltwaterDesc": "Wolfsbarsch, Buni, Lout, Aal",
+    "restaurantHotelSupply": "Belieferung von Restaurants & Hotels",
+    "home": "Startseite",
+    "products": "Produkte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "markets": "Märkte",
+    "media": "Medien",
+    "certificates": "Zertifikate",
+    "openingHours": "24/7",
+    "paymentAccepted": "Banküberweisung, Akkreditiv, SWIFT-Überweisung",
+    "currenciesAccepted": "USD, EUR, EGP, AED, SAR",
+    "knowsAbout": [
+        "Frischfischexport",
+        "Fischverpackung",
+        "Tilapia-Großhandel",
+        "Wolfsbarsch-Export",
+        "Meeräsche",
+        "Fischverarbeitung",
+        "B2B-Fischversorgung",
+        "Ägyptischer Fisch",
+        "Nilfisch",
+        "Mittelmeerfisch"
+    ],
+    "speakableName": "AZAFCO International – Frischfischexport",
+    "certifications": {
+        "iso22000": {
+            "name": "ISO 22000:2018",
+            "description": "Managementsystem für Lebensmittelsicherheit"
+        },
+        "haccp": {
+            "name": "HACCP",
+            "description": "Gefahrenanalyse und kritische Kontrollpunkte"
+        },
+        "iso9001": {
+            "name": "ISO 9001:2015",
+            "description": "Qualitätsmanagementsystem"
+        },
+        "iso14001": {
+            "name": "ISO 14001:2015",
+            "description": "Umweltmanagementsystem"
+        },
+        "iso45001": {
+            "name": "ISO 45001:2018",
+            "description": "Managementsystem für Arbeitssicherheit und Gesundheitsschutz"
+        }
+    },
+    "services": {
+        "tilapia": {
+            "name": "Tilapia-Export",
+            "description": "Premium-Niltilapia für Großhandel und Export"
+        },
+        "seaBass": {
+            "name": "Wolfsbarsch-Lieferung",
+            "description": "Frischer Mittelmeer-Wolfsbarsch für internationale Märkte"
+        },
+        "mullet": {
+            "name": "Meeräsche-Export",
+            "description": "Frische Meeräsche (Bouri) für internationale Märkte"
+        }
+    },
+    "howTo": {
+        "title": "So bestellen Sie Großhandelsfisch bei AZAFCO",
+        "description": "Einfache Schritte zur Bestellung von frischem Großhandelsfisch bei AZAFCO International",
+        "supplies": {
+            "businessDetails": "Ihre Geschäftsdaten",
+            "quantities": "Benötigte Mengen"
+        },
+        "steps": {
+            "step1": {
+                "name": "Kontakt aufnehmen",
+                "text": "Kontaktieren Sie uns per WhatsApp oder E-Mail an business@azafco.com.eg"
+            },
+            "step2": {
+                "name": "Produkte angeben",
+                "text": "Wählen Sie Fischart, Größen (individuelle Anpassung möglich) und benötigte Mengen"
+            },
+            "step3": {
+                "name": "Angebot erhalten",
+                "text": "Wir senden Ihnen innerhalb von 24 Stunden ein wettbewerbsfähiges Angebot"
+            },
+            "step4": {
+                "name": "Bestätigen & Versand",
+                "text": "Bestätigen Sie Ihre Bestellung – wir versenden mit lückenloser 0–4°C Kühlkette per Luft oder Land weltweit"
+            }
+        },
+        "estimatedCost": "Auf Anfrage"
+    }
+}

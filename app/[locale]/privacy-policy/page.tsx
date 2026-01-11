@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { ogLocaleMap, ogImageMap, dateLocaleMap, Locale } from '@/i18n';
+import { companyConfig } from '@/config/company.config';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -8,7 +10,8 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'metadata.privacy' });
-    const baseUrl = 'https://azafco.com.eg';
+    const siteT = await getTranslations({ locale, namespace: 'metadata.site' });
+    const baseUrl = companyConfig.contact.baseUrl;
 
     return {
         title: t('title'),
@@ -30,10 +33,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: t('description'),
             url: `${baseUrl}/${locale}/privacy-policy`,
             type: 'website',
-            siteName: 'AZAFCO - ازافكو العالمية',
-            locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+            siteName: siteT('name'),
+            locale: ogLocaleMap[locale as Locale] || 'en_US',
             images: [{
-                url: `/images/og-image-${locale === 'ar' ? 'ar' : 'en'}.jpg`,
+                url: ogImageMap[locale as Locale],
                 width: 1200,
                 height: 630,
                 alt: t('title'),
@@ -43,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             card: 'summary_large_image',
             title: t('title'),
             description: t('description'),
-            images: [`/images/og-image-${locale === 'ar' ? 'ar' : 'en'}.jpg`],
+            images: [ogImageMap[locale as Locale]],
         },
         robots: {
             index: false,
@@ -74,7 +77,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                         {t('title')}
                     </h1>
                     <p className="text-center text-gray-300 mt-4">
-                        {t('last_updated')}: {new Date().toLocaleDateString(locale === 'ar' ? 'ar-EG' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                        {t('last_updated')}: {new Date().toLocaleDateString(dateLocaleMap[locale as Locale] || 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </p>
                 </div>
             </div>
@@ -140,8 +143,8 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                         <div className="bg-primary-50 rounded-lg p-4">
                             <p className="text-primary-800">
                                 <strong>{t('contact.email_label')}:</strong>{' '}
-                                <a href="mailto:info@azafco.com.eg" className="text-primary-600 hover:underline">
-                                    info@azafco.com.eg
+                                <a href={`mailto:${companyConfig.contact.email}`} className="text-primary-600 hover:underline">
+                                    {companyConfig.contact.email}
                                 </a>
                             </p>
                         </div>

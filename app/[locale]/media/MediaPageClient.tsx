@@ -40,9 +40,18 @@ export default function MediaPageClient() {
 
     const filteredNews = getFilteredNews();
 
+    // Build gallery images with translated titles
     const galleryImages = [
-        ...products.map(p => ({ src: p.image, title: isAr ? p.name : p.nameEn, type: 'product' })),
-        ...certificates.map(c => ({ src: c.image, title: c.name, type: 'certificate' })),
+        ...products.map(p => ({
+            src: p.image,
+            title: t(`data.products.${p.translationKey}.name`),
+            type: 'product' as const
+        })),
+        ...certificates.map(c => ({
+            src: c.image,
+            title: c.name,
+            type: 'certificate' as const
+        })),
     ];
 
     const getCategoryLabel = (category: string) => {
@@ -66,9 +75,7 @@ export default function MediaPageClient() {
                             {t('media_page.title')}
                         </h1>
                         <p className="text-xl max-w-3xl mx-auto">
-                            {isAr
-                                ? 'تابع آخر أخبارنا وإنجازاتنا ومستجدات قطاع الأسماك في مصر'
-                                : 'Follow our latest news, achievements, and fish industry updates in Egypt'}
+                            {t('media_page.subtitle')}
                         </p>
                     </motion.div>
                 </div>
@@ -157,17 +164,17 @@ export default function MediaPageClient() {
                                     </div>
 
                                     <h3 className="text-xl font-bold mb-3 text-primary-800 group-hover:text-primary-600 transition-colors">
-                                        {isAr ? news.title : news.titleEn}
+                                        {t(`data.news.${news.translationKey}.title`)}
                                     </h3>
 
                                     <p className="text-gray-600 mb-4 line-clamp-3">
-                                        {isAr ? news.summary : news.summaryEn}
+                                        {t(`data.news.${news.translationKey}.summary`)}
                                     </p>
 
                                     <div className="text-sm text-gray-500">
-                                        <p className="mb-3">{isAr ? news.content : news.contentEn}</p>
+                                        <p className="mb-3">{t(`data.news.${news.translationKey}.content`)}</p>
 
-                                        {news.source && (
+                                        {t.raw(`data.news.${news.translationKey}.source`) && (
                                             <div className={`flex items-center gap-2 pt-3 border-t border-gray-100 ${isAr ? '' : 'flex-row-reverse justify-end'}`}>
                                                 <span>{t('common.source')}:</span>
                                                 {news.sourceUrl ? (
@@ -177,11 +184,11 @@ export default function MediaPageClient() {
                                                         rel="noopener noreferrer"
                                                         className="text-primary-600 hover:underline flex items-center gap-1"
                                                     >
-                                                        {news.source}
+                                                        {t(`data.news.${news.translationKey}.source`)}
                                                         <FaExternalLinkAlt className="text-xs" />
                                                     </a>
                                                 ) : (
-                                                    <span>{news.source}</span>
+                                                    <span>{t(`data.news.${news.translationKey}.source`)}</span>
                                                 )}
                                             </div>
                                         )}
@@ -280,9 +287,7 @@ export default function MediaPageClient() {
                             {t('common.contact_us')}
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto">
-                            {isAr
-                                ? 'تابعنا للحصول على آخر الأخبار والعروض'
-                                : 'Follow us for the latest news and offers'}
+                            {t('media_page.cta_subtitle')}
                         </p>
                         <Link
                             href="/contact"

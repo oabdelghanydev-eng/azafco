@@ -1,0 +1,76 @@
+{
+    "kuwait": {
+        "country": "Kuwait",
+        "description": "Unser größter Exportmarkt. Vertrauenswürdiger Partner für führende Großhändler, Restaurants und Hotels in ganz Kuwait.",
+        "features": [
+            "Größtes Exportvolumen",
+            "Premium-Großhändler",
+            "Restaurantketten",
+            "Hotels"
+        ]
+    },
+    "uae": {
+        "country": "Vereinigte Arabische Emirate",
+        "description": "Wichtiger Golfmarkt. Belieferung führender Großhändler, Restaurants und Supermarktketten in Dubai, Abu Dhabi und Sharjah.",
+        "features": [
+            "Zertifizierte Großhändler",
+            "Luxusrestaurants",
+            "Supermarktketten",
+            "Hotels"
+        ]
+    },
+    "qatar": {
+        "country": "Katar",
+        "description": "Wachsender Markt mit starken Partnerschaften zu katarischen Großhändlern, Hotels und Restaurantgruppen.",
+        "features": [
+            "Führende Großhändler",
+            "Hotelketten",
+            "Restaurants",
+            "Catering-Unternehmen"
+        ]
+    },
+    "iraq": {
+        "country": "Irak",
+        "description": "Expandierender Markt mit großer und wachsender Nachfrage sowie vielversprechenden Geschäftsmöglichkeiten.",
+        "features": [
+            "Lokale Großhändler",
+            "Großmärkte",
+            "Restaurants"
+        ]
+    },
+    "bahrain": {
+        "country": "Bahrain",
+        "description": "Aktiver Markt mit starker Präsenz bei Großhändlern, Restaurants und Einzelhandelsgenossenschaften.",
+        "features": [
+            "Großhändler",
+            "Restaurants",
+            "Genossenschaften",
+            "Hotels"
+        ]
+    },
+    "lebanon": {
+        "country": "Libanon",
+        "description": "Anspruchsvoller Markt mit hoher Wertschätzung für Qualität und Frische. Belieferung gehobener Gastronomiebetriebe.",
+        "features": [
+            "Gehobene Gastronomie",
+            "Premium-Großhändler",
+            "Hotels"
+        ]
+    },
+    "spain": {
+        "country": "Spanien",
+        "description": "Unser Tor zu europäischen Märkten – derzeit pausiert, Wiedereintritt geplant. EU-Exportzulassung vorhanden.",
+        "features": [
+            "Europäische Großhändler",
+            "Fischmärkte"
+        ]
+    },
+    "russia": {
+        "country": "Russland",
+        "description": "Vielversprechender Großmarkt mit erheblichem Wachstumspotenzial – aktive Markteintrittsplanung.",
+        "features": [
+            "Internationale Großhändler",
+            "Einzelhandelsketten"
+        ]
+    }
+}

@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 const BackToTop: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const locale = useLocale();
+    const t = useTranslations();
 
     useEffect(() => {
         const toggleVisibility = () => {
@@ -38,7 +38,7 @@ const BackToTop: React.FC = () => {
                     exit={{ opacity: 0, scale: 0.5 }}
                     onClick={scrollToTop}
                     className="fixed bottom-40 left-10 z-50 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-colors duration-300"
-                    aria-label={locale === 'ar' ? 'العودة لأعلى الصفحة' : 'Back to top'}
+                    aria-label={t('common.back_to_top')}
                 >
                     <FaArrowUp className="text-xl" />
                 </motion.button>
@@ -48,3 +48,4 @@ const BackToTop: React.FC = () => {
 };
 
 export default BackToTop;
+

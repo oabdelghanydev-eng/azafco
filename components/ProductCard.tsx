@@ -4,34 +4,32 @@ import { motion } from 'framer-motion'
 import { Product } from '../data/products'
 import { FaThermometerHalf, FaBox, FaSearchPlus } from 'react-icons/fa'
 import ImageModal from './ImageModal'
-import { getLocalizedField, getLocalizedArrayField, SupportedLocale } from '../utils/localization'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 interface ProductCardProps {
     product: Product
     index?: number
     showDetails?: boolean
-    locale?: string
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true, locale = 'ar' }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true }) => {
     const t = useTranslations()
-    const productName = getLocalizedField(product, 'name', locale)
-    const productSizes = getLocalizedArrayField(product, 'sizes', locale)
-    const productDescription = getLocalizedField(product, 'description', locale)
+    const locale = useLocale()
     const [isModalOpen, setIsModalOpen] = useState(false)
     const isAr = locale === 'ar'
 
-    // B2B Optimized Alt Text for SEO (2025 Best Practice) - All 6 Languages
-    const b2bAltTexts: Record<string, string> = {
-        ar: `${productName} طازج للتصدير بالجملة - ازافكو مصر`,
-        en: `Fresh ${productName} for wholesale export - AZAFCO Egypt`,
-        es: `${productName} fresco para exportación al por mayor - AZAFCO Egipto`,
-        ru: `Свежий ${productName} для оптового экспорта - AZAFCO Египет`,
-        de: `Frischer ${productName} für Großhandelsexport - AZAFCO Ägypten`,
-        fr: `${productName} frais pour exportation en gros - AZAFCO Égypte`
-    }
-    const b2bAltText = b2bAltTexts[locale] || b2bAltTexts.en
+    // Get product data from translations using the translation key
+    const productName = t(`data.products.${product.translationKey}.name`)
+    const productDescription = t(`data.products.${product.translationKey}.description`)
+    const productSizes = (t.raw(`data.products.${product.translationKey}.sizes`) ?? []) as string[]
+    const productAltNames = (t.raw(`data.products.${product.translationKey}.alt_names`) ?? []) as string[]
+    const storageTemp = t(`data.products.${product.translationKey}.storage_temp`)
+    const packaging = t(`data.products.${product.translationKey}.packaging`)
+
+    // B2B Optimized Alt Text for SEO - uses translation template
+    // Use t.raw() to get raw string, then manually replace {product}
+    const altTemplate = (t.raw('products_page.alt_template') ?? 'Fresh {product} - AZAFCO') as string
+    const b2bAltText = altTemplate.replace('{product}', productName)
 
 
     // Get category label based on locale
@@ -85,9 +83,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
 
                 {/* Product Info */}
                 <div className="p-3 md:p-5">
-                    <h3 className="text-base md:text-xl font-bold text-primary-800 mb-2">
+                    <h3 className="text-base md:text-xl font-bold text-primary-800 mb-1">
                         {productName}
                     </h3>
+
+                    {/* Alt Names for SEO - long-tail keywords */}
+                    {productAltNames.length > 0 && (
+                        <p className="text-xs text-gray-500 mb-2 italic">
+                            {productAltNames.join(' • ')}
+                        </p>
+                    )}
 
                     {showDetails && (
                         <>
@@ -109,11 +114,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                             <div className="flex flex-col gap-1 text-xs text-gray-600">
                                 <div className="flex items-center gap-1">
                                     <FaThermometerHalf className="text-blue-500 flex-shrink-0" />
-                                    <span>{isAr ? product.storageTemp : product.storageTempEn}</span>
+                                    <span>{storageTemp}</span>
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <FaBox className="text-primary-500 flex-shrink-0" />
-                                    <span>{isAr ? product.packaging : product.packagingEn}</span>
+                                    <span>{packaging}</span>
                                 </div>
                             </div>
                         </>
@@ -133,4 +138,3 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
 }
 
 export default ProductCard
-

@@ -1,0 +1,144 @@
+{
+    "tilapia": {
+        "name": "Tilapia",
+        "alt_names": [
+            "Niltilapia",
+            "Nil-Barsch"
+        ],
+        "description": "Premium Niltilapia aus zertifizierten ägyptischen Farmen. Unser #1 Exportprodukt. HACCP-zertifiziert mit vollständiger Kühlkette.",
+        "sizes": [
+            "Klein (200-300g)",
+            "Mittel (300-500g)",
+            "Groß (500g+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "sea_bass": {
+        "name": "Wolfsbarsch",
+        "alt_names": [
+            "Mittelmeer-Wolfsbarsch",
+            "Europäischer Wolfsbarsch"
+        ],
+        "description": "Premium Wolfsbarsch, perfekt zum Grillen, Braten und für gehobene Küche. Restaurantfavorit in der Golfregion.",
+        "sizes": [
+            "Mittel (400-600g)",
+            "Groß (600g+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Salzwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "mullet": {
+        "name": "Meeräsche",
+        "alt_names": [
+            "Graue Meeräsche",
+            "Gestreifte Meeräsche",
+            "Bouri-Fisch"
+        ],
+        "description": "Frische ägyptische Meeräsche, ausgezeichnet zum Grillen und Räuchern. Traditioneller Favorit in der Golfküche.",
+        "sizes": [
+            "Klein (150-250g)",
+            "Mittel (250-400g)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "buni": {
+        "name": "Buni",
+        "alt_names": [
+            "Dorade"
+        ],
+        "description": "Premium Seebuni für anspruchsvolle Kunden. Ausgezeichnete Textur und Geschmacksprofil.",
+        "sizes": [
+            "Mittel (300-500g)",
+            "Groß (500g+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Salzwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "mubarakah": {
+        "name": "Mubarakah",
+        "alt_names": [
+            "Afrikanischer Wels",
+            "Clarias"
+        ],
+        "description": "Frische Mubarakah, ideal für traditionelle Gerichte. Große Größen für Großhandel verfügbar.",
+        "sizes": [
+            "Groß (1-2kg)",
+            "Jumbo (2kg+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "catfish": {
+        "name": "Wels",
+        "alt_names": [
+            "Kanalwels",
+            "Ägyptischer Wels"
+        ],
+        "description": "Frischer Wels aus ägyptischen Süßwasserfarmen. Beliebte Wahl für Restaurants und Distributoren.",
+        "sizes": [
+            "Mittel (500-800g)",
+            "Groß (800g+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "lout": {
+        "name": "Lout",
+        "alt_names": [
+            "Zackenbarsch",
+            "See-Lout"
+        ],
+        "description": "Frischer Seelout mit fester Textur. Premium-Qualität für gehobene Restaurants und Hotels.",
+        "sizes": [
+            "Mittel (400-600g)",
+            "Groß (600g+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Salzwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "eels": {
+        "name": "Aal",
+        "alt_names": [
+            "Süßwasseraal",
+            "Ägyptischer Aal"
+        ],
+        "description": "Frischer Aal aus ägyptischen Süßwasserquellen. Spezialprodukt für ausgewählte Märkte.",
+        "sizes": [
+            "Mittel (300-500g)",
+            "Groß (500g+)",
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Ganzjährig verfügbar"
+    },
+    "_note": {
+        "custom_sizes": "Wir bieten große Flexibilität bei den Größen - alle Produkte können nach Bestellung angepasst werden",
+        "more_products": "Zusätzliche Produkte auf Anfrage erhältlich. Kontaktieren Sie uns für spezifische Anforderungen.",
+        "min_order": "Mindestbestellung: 1 Karton"
+    }
+}

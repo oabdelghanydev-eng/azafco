@@ -1,0 +1,19 @@
+{
+    "nav": {
+        "home": "Home",
+        "products": "Products",
+        "certificates": "Certificates",
+        "markets": "Our Markets",
+        "media": "Media Center",
+        "about": "About Us",
+        "contact": "Contact Us"
+    },
+    "footer": {
+        "description": "A leading Egyptian company specialized in packaging and exporting fresh fish",
+        "quick_links": "Quick Links",
+        "contact_us": "Contact Us",
+        "partnership": "Request Business Partnership",
+        "copyright": "All Rights Reserved",
+        "quality_certificates": "Quality Certificates"
+    }
+}

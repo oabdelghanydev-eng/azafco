@@ -1,7 +1,10 @@
+'use client';
+
 import { useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes } from 'react-icons/fa'
+import { useTranslations } from 'next-intl'
 
 interface ImageModalProps {
     isOpen: boolean
@@ -11,6 +14,8 @@ interface ImageModalProps {
 }
 
 const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, imageSrc, imageAlt }) => {
+    const t = useTranslations('common')
+
     // Close on Escape key
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
@@ -41,7 +46,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, imageSrc, imag
                     <button
                         onClick={onClose}
                         className="absolute top-4 right-4 z-50 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors"
-                        aria-label="إغلاق"
+                        aria-label={t('close')}
                     >
                         <FaTimes className="text-xl" />
                     </button>
@@ -67,7 +72,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, imageSrc, imag
 
                     {/* Swipe hint for mobile */}
                     <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm md:hidden">
-                        اضغط في أي مكان للإغلاق
+                        {t('tap_anywhere_to_close')}
                     </p>
                 </motion.div>
             )}
@@ -76,3 +81,4 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, imageSrc, imag
 }
 
 export default ImageModal
+

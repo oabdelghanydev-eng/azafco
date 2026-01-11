@@ -40,7 +40,7 @@ export default function HomePage() {
                 <div className="absolute inset-0">
                     <Image
                         src="/images/bg-homepage.webp"
-                        alt={locale === 'ar' ? 'خلفية المصنع' : 'Factory Background'}
+                        alt={t('home.hero.background_alt', { fallback: 'Factory Background' })}
                         fill
                         sizes="100vw"
                         priority
@@ -69,16 +69,14 @@ export default function HomePage() {
                             className="mb-8"
                         >
                             <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30">
-                                🐟 {locale === 'ar'
-                                    ? `رواد تصدير الأسماك الطازجة منذ ${companyInfo.established}`
-                                    : `Leaders in fresh fish export since ${companyInfo.established}`}
+                                🐟 {t('home.hero.leaders_since')} {companyInfo.established}
                             </span>
                         </motion.div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                             {t('home.hero.title')}
                             <br />
                             <span className="text-secondary-400">
-                                {locale === 'ar' ? 'للإستثمار والتنمية' : 'Investment & Development'}
+                                {t('home.hero.title_subtitle')}
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200 leading-relaxed">
@@ -147,9 +145,7 @@ export default function HomePage() {
                     >
                         <h2 className="section-title">{t('home.why_us.title')}</h2>
                         <p className="section-subtitle">
-                            {locale === 'ar'
-                                ? 'نقدم لكم أفضل خدمات تصدير الأسماك الطازجة'
-                                : 'We provide the best fresh fish export services'}
+                            {t('home.why_us.subtitle')}
                         </p>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -198,7 +194,7 @@ export default function HomePage() {
                                 <div className="h-48 overflow-hidden bg-gray-200">
                                     <Image
                                         src={product.image}
-                                        alt={locale === 'ar' ? product.name : product.nameEn || product.name}
+                                        alt={t(`data.products.${product.translationKey}.name`)}
                                         width={300}
                                         height={200}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -206,7 +202,7 @@ export default function HomePage() {
                                 </div>
                                 <div className="p-4">
                                     <h3 className="text-lg font-bold text-center">
-                                        {locale === 'ar' ? product.name : product.nameEn || product.name}
+                                        {t(`data.products.${product.translationKey}.name`)}
                                     </h3>
                                 </div>
                             </motion.div>
@@ -290,8 +286,8 @@ export default function HomePage() {
                                 viewport={{ once: true }}
                                 className="bg-white border-2 border-primary-600 rounded-full px-6 py-3 text-lg font-semibold text-primary-800 hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg flex items-center gap-3"
                             >
-                                <Image src={market.flag} alt={locale === 'ar' ? market.country : market.countryEn || market.country} width={32} height={24} className="w-8 h-6 object-cover rounded" />
-                                {locale === 'ar' ? market.country : market.countryEn || market.country}
+                                <Image src={market.flag} alt={t(`data.markets.${market.translationKey}.country`)} width={32} height={24} className="w-8 h-6 object-cover rounded" />
+                                {t(`data.markets.${market.translationKey}.country`)}
                             </motion.div>
                         ))}
                     </div>
@@ -319,7 +315,7 @@ export default function HomePage() {
                             id="cta-contact-btn"
                         >
                             <FaHandshake className="text-2xl" />
-                            {locale === 'ar' ? 'ابدأ التعاون معنا' : 'Start Partnership'}
+                            {t('home.cta.button')}
                         </Link>
                     </motion.div>
                 </div>

@@ -1,0 +1,144 @@
+{
+    "tilapia": {
+        "name": "Tilapia",
+        "alt_names": [
+            "Tilapia del Nilo",
+            "Perca del Nilo"
+        ],
+        "description": "Tilapia del Nilo premium de granjas egipcias certificadas. Nuestro producto de exportación #1. Certificado HACCP con cadena de frío completa.",
+        "sizes": [
+            "Pequeño (200-300g)",
+            "Mediano (300-500g)",
+            "Grande (500g+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Disponible todo el año"
+    },
+    "sea_bass": {
+        "name": "Lubina",
+        "alt_names": [
+            "Lubina Mediterránea",
+            "Lubina Europea"
+        ],
+        "description": "Lubina premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
+        "sizes": [
+            "Mediano (400-600g)",
+            "Grande (600g+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua salada",
+        "availability": "Disponible todo el año"
+    },
+    "mullet": {
+        "name": "Lisa",
+        "alt_names": [
+            "Lisa Gris",
+            "Lisa Rayada",
+            "Pescado Bouri"
+        ],
+        "description": "Lisa egipcia fresca, excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
+        "sizes": [
+            "Pequeño (150-250g)",
+            "Mediano (250-400g)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Disponible todo el año"
+    },
+    "buni": {
+        "name": "Buni",
+        "alt_names": [
+            "Dorada"
+        ],
+        "description": "Buni de mar premium para clientes exigentes. Excelente textura y perfil de sabor.",
+        "sizes": [
+            "Mediano (300-500g)",
+            "Grande (500g+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua salada",
+        "availability": "Disponible todo el año"
+    },
+    "mubarakah": {
+        "name": "Mubarakah",
+        "alt_names": [
+            "Bagre Africano",
+            "Clarias"
+        ],
+        "description": "Mubarakah fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
+        "sizes": [
+            "Grande (1-2kg)",
+            "Jumbo (2kg+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Disponible todo el año"
+    },
+    "catfish": {
+        "name": "Bagre",
+        "alt_names": [
+            "Bagre de Canal",
+            "Bagre Egipcio"
+        ],
+        "description": "Bagre fresco de granjas de agua dulce egipcias. Opción popular para restaurantes y distribuidores.",
+        "sizes": [
+            "Mediano (500-800g)",
+            "Grande (800g+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Disponible todo el año"
+    },
+    "lout": {
+        "name": "Lout",
+        "alt_names": [
+            "Mero",
+            "Lout de Mar"
+        ],
+        "description": "Lout de mar fresco con textura firme. Calidad premium para restaurantes y hoteles de alta gama.",
+        "sizes": [
+            "Mediano (400-600g)",
+            "Grande (600g+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua salada",
+        "availability": "Disponible todo el año"
+    },
+    "eels": {
+        "name": "Anguila",
+        "alt_names": [
+            "Anguila de Agua Dulce",
+            "Anguila Egipcia"
+        ],
+        "description": "Anguilas frescas de fuentes de agua dulce egipcias. Producto especializado para mercados selectos.",
+        "sizes": [
+            "Mediano (300-500g)",
+            "Grande (500g+)",
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Disponible todo el año"
+    },
+    "_note": {
+        "custom_sizes": "Ofrecemos gran flexibilidad en tamaños - todos los productos pueden personalizarse según pedido",
+        "more_products": "Productos adicionales disponibles bajo pedido. Contáctenos para requisitos específicos.",
+        "min_order": "Pedido mínimo: 1 cartón"
+    }
+}

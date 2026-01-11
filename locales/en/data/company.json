@@ -1,0 +1,28 @@
+{
+    "name": "AZAFCO International",
+    "fullName": "AZAFCO International Investment & Development",
+    "description": "Egypt's leading B2B fish exporter serving distributors, restaurants, and hotels with premium fresh fish since 2008.",
+    "workingHours": "24/7 Availability",
+    "workingHoursNote": "Open around the clock - department dependent",
+    "addresses": {
+        "main": {
+            "title": "Main Office",
+            "address": "Mastora, next to Charity Association, El-Borollos, Kafr El Sheikh, Egypt"
+        },
+        "factory": {
+            "title": "Factory",
+            "address": "No. 120 - Feed Sector - Industrial Zone - Motobas - Kafr El Sheikh, Egypt"
+        }
+    },
+    "copyright": "AZAFCO International",
+    "privacyLink": "Privacy Policy",
+    "leadersSince": "Leaders in fresh fish export since",
+    "tagline": "Premium Fresh Fish from Egypt to the World",
+    "usps": {
+        "price": "Best competitive wholesale pricing",
+        "quality": "ISO & HACCP certified quality",
+        "flexibility": "Custom sizes, flexible orders",
+        "availability": "24/7 operations, constant supply",
+        "service": "Meeting market needs with care"
+    }
+}

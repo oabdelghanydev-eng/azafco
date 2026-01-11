@@ -1,0 +1,19 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "products": "Produits",
+        "certificates": "Certificats",
+        "markets": "Nos marchés",
+        "media": "Espace médias",
+        "about": "À propos",
+        "contact": "Contact"
+    },
+    "footer": {
+        "description": "Entreprise égyptienne leader dans le conditionnement et l'exportation de poisson frais dans le monde entier",
+        "quick_links": "Accès rapide",
+        "contact_us": "Nous contacter",
+        "partnership": "Demander un partenariat commercial",
+        "copyright": "Tous droits réservés",
+        "quality_certificates": "Certificats de qualité"
+    }
+}

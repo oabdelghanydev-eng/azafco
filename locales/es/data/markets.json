@@ -1,0 +1,76 @@
+{
+    "kuwait": {
+        "country": "Kuwait",
+        "description": "Nuestro mayor mercado de exportación. Socio de confianza para mayoristas, restaurantes y hoteles líderes en todo Kuwait.",
+        "features": [
+            "Mayor volumen de exportación",
+            "Mayoristas premium",
+            "Cadenas de restaurantes",
+            "Hoteles"
+        ]
+    },
+    "uae": {
+        "country": "Emiratos Árabes Unidos",
+        "description": "Mercado clave del Golfo. Servicio a los principales mayoristas, restaurantes y supermercados en Dubái, Abu Dabi y Sharjah.",
+        "features": [
+            "Mayoristas certificados",
+            "Restaurantes de lujo",
+            "Cadenas de supermercados",
+            "Hoteles"
+        ]
+    },
+    "qatar": {
+        "country": "Catar",
+        "description": "Mercado en crecimiento con sólidas alianzas con mayoristas, hoteles y grupos gastronómicos cataríes.",
+        "features": [
+            "Mayoristas líderes",
+            "Cadenas hoteleras",
+            "Restaurantes",
+            "Empresas de catering"
+        ]
+    },
+    "iraq": {
+        "country": "Irak",
+        "description": "Mercado en expansión con alta demanda y oportunidades comerciales prometedoras.",
+        "features": [
+            "Mayoristas locales",
+            "Mercados mayoristas",
+            "Restaurantes"
+        ]
+    },
+    "bahrain": {
+        "country": "Bahréin",
+        "description": "Mercado activo con fuerte presencia entre mayoristas, restaurantes y cooperativas de consumo.",
+        "features": [
+            "Mayoristas",
+            "Restaurantes",
+            "Cooperativas",
+            "Hoteles"
+        ]
+    },
+    "lebanon": {
+        "country": "Líbano",
+        "description": "Mercado exigente conocido por su aprecio a la calidad y frescura. Servicio a establecimientos gastronómicos de alto nivel.",
+        "features": [
+            "Gastronomía de alta gama",
+            "Mayoristas premium",
+            "Hoteles"
+        ]
+    },
+    "spain": {
+        "country": "España",
+        "description": "Nuestra puerta de entrada a Europa – actualmente en pausa, con planes de reingreso. Aprobación UE vigente.",
+        "features": [
+            "Mayoristas europeos",
+            "Mercados de pescado"
+        ]
+    },
+    "russia": {
+        "country": "Rusia",
+        "description": "Mercado prometedor de gran escala con significativo potencial de crecimiento – planificación activa de entrada.",
+        "features": [
+            "Mayoristas internacionales",
+            "Cadenas minoristas"
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "hero": {
+        "title": "AZAFCO International",
+        "title_subtitle": "Investissement et Développement",
+        "leaders_since": "Leaders de l'exportation de poisson frais depuis",
+        "subtitle": "Exportation de poisson frais premium d'Égypte dans le monde entier",
+        "description": "Exportateur B2B leader de poisson d'Égypte pour grossistes, restaurants et hôtels dans le monde entier. Plus de 2 500 tonnes par mois avec certification ISO et HACCP. Transport aérien et terrestre mondial.",
+        "cta_whatsapp": "Contact via WhatsApp",
+        "cta_partnership": "Demander une collaboration commerciale",
+        "background_alt": "Site de production de poisson AZAFCO en Égypte"
+    },
+    "stats": {
+        "years": "Années d'expérience",
+        "countries": "Pays d'exportation",
+        "tonnage": "Tonnes par mois",
+        "certificates": "Certificats de qualité"
+    },
+    "products": {
+        "title": "Poisson frais pour l'exportation",
+        "subtitle": "Tilapia, bar, mulet premium et poisson égyptien pour acheteurs B2B dans le monde entier",
+        "view_all": "Voir tous les produits"
+    },
+    "why_us": {
+        "title": "Pourquoi AZAFCO ?",
+        "subtitle": "Exportateur de poisson de confiance d'Égypte depuis 2008",
+        "quality": "Certifié ISO et HACCP",
+        "fresh": "Fraîcheur garantie",
+        "experience": "Plus de 17 ans d'expérience",
+        "global": "Exportation mondiale"
+    },
+    "cta": {
+        "title": "Prêt à démarrer votre collaboration ?",
+        "description": "Rejoignez plus de 500 grossistes et restaurants satisfaits dans plus de 7 pays à travers le monde",
+        "button": "Démarrer la collaboration"
+    },
+    "features": {
+        "trusted_source": "Source égyptienne fiable",
+        "trusted_source_desc": "Chaque poisson provient de fermes égyptiennes certifiées à Kafr El-Sheikh.",
+        "cold_chain": "Chaîne du froid complète",
+        "cold_chain_desc": "0–4°C de la capture à votre destination partout dans le monde.",
+        "professionals": "Spécialistes B2B",
+        "professionals_desc": "Nous comprenons les besoins des restaurants, hôtels et grossistes au niveau mondial."
+    },
+    "markets": {
+        "title": "Nos marchés d'exportation",
+        "subtitle": "Au service des grossistes et restaurants dans le monde entier – nous expédions vers toute destination"
+    }
+}

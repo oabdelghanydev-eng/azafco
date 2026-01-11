@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
+import { companyConfig } from '@/config/company.config';
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = 'https://azafco.com.eg';
+    const baseUrl = companyConfig.contact.baseUrl;
 
     return {
         rules: {
@@ -10,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
             disallow: ['/api/', '/admin/'],
         },
         sitemap: `${baseUrl}/sitemap.xml`,
-        host: 'azafco.com.eg',
+        host: companyConfig.contact.website,
     };
 }

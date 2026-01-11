@@ -277,11 +277,11 @@ export default function AboutPageClient() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">{t('about_page.commercial_register')}</p>
-                                    <p className="font-semibold">100776</p>
+                                    <p className="font-semibold">{companyInfo.registrationNumber}</p>
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">{t('about_page.tax_card')}</p>
-                                    <p className="font-semibold">537-340-483</p>
+                                    <p className="font-semibold">{companyInfo.taxNumber}</p>
                                 </div>
                             </div>
                         </motion.div>

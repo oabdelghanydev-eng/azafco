@@ -1,0 +1,118 @@
+{
+    "companyName": "AZAFCO International Investment & Development",
+    "alternateName": "AZAFCO International",
+    "alternateNames": [
+        "AZAFCO International",
+        "AZAFCO",
+        "ازافكو",
+        "Azafco Egypt",
+        "AZAFCO Fish"
+    ],
+    "description": "Egypt's leading B2B fresh fish exporter since 2008. Supplying +2,500 tons monthly to +7 countries worldwide with +300 employees, +500 clients, and 24/7 availability. ISO & HACCP certified, EU export approved.",
+    "slogan": "Premium Fresh Fish from Egypt to the World",
+    "foundingDate": "2008",
+    "numberOfEmployees": "300+",
+    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
+    "factoryName": "AZAFCO Fish Processing Factory",
+    "factoryAlternateName": "AZAFCO Fish Factory",
+    "websiteName": "AZAFCO International - Egypt's #1 B2B Fish Exporter",
+    "websiteDescription": "Official website of AZAFCO International - Premium fresh fish exporter from Egypt to +7 countries worldwide. 24/7 wholesale supply.",
+    "productGroupName": "AZAFCO Fresh Fish Products",
+    "productGroupDesc": "Premium fresh fish products from Egypt's top exporter - Tilapia, Sea Bass, Mullet, Catfish & more. Custom sizes available.",
+    "catalogName": "AZAFCO Fresh Fish Products Catalog",
+    "catalogDesc": "Complete range of premium fresh fish for wholesale export from Egypt. 8+ varieties, custom sizing, flexible orders.",
+    "offerDesc": "Contact us for competitive wholesale B2B pricing. 24/7 availability.",
+    "priceRange": "Competitive Wholesale Pricing",
+    "freshFishCategory": "Fresh Fish",
+    "freshwater": "Freshwater Fish",
+    "freshwaterDesc": "Tilapia, Catfish, Mullet, Mubarakah",
+    "saltwater": "Saltwater Fish",
+    "saltwaterDesc": "Sea Bass, Buni, Lout, Eels",
+    "restaurantHotelSupply": "Restaurant & Hotel Supply",
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "contact": "Contact",
+    "markets": "Markets",
+    "media": "Media",
+    "certificates": "Certificates",
+    "openingHours": "24/7",
+    "paymentAccepted": "Wire Transfer, Letter of Credit, Bank Transfer",
+    "currenciesAccepted": "USD, EGP, AED, SAR, EUR",
+    "knowsAbout": [
+        "Fresh Fish Export",
+        "Seafood Packaging",
+        "Tilapia Wholesale",
+        "Sea Bass Export",
+        "Mullet Fish",
+        "Fish Processing",
+        "B2B Seafood Supply",
+        "Egyptian Seafood",
+        "Nile Fish",
+        "Mediterranean Fish"
+    ],
+    "speakableName": "AZAFCO International - Fresh Fish Export",
+    "certifications": {
+        "iso22000": {
+            "name": "ISO 22000:2018",
+            "description": "Food Safety Management System"
+        },
+        "haccp": {
+            "name": "HACCP",
+            "description": "Hazard Analysis Critical Control Points"
+        },
+        "iso9001": {
+            "name": "ISO 9001:2015",
+            "description": "Quality Management System"
+        },
+        "iso14001": {
+            "name": "ISO 14001:2015",
+            "description": "Environmental Management System"
+        },
+        "iso45001": {
+            "name": "ISO 45001:2018",
+            "description": "Occupational Health and Safety"
+        }
+    },
+    "services": {
+        "tilapia": {
+            "name": "Fresh Tilapia Export",
+            "description": "Premium Nile Tilapia for wholesale and export"
+        },
+        "seaBass": {
+            "name": "Sea Bass Supply",
+            "description": "Fresh Mediterranean Sea Bass for international markets"
+        },
+        "mullet": {
+            "name": "Mullet Fish Export",
+            "description": "Fresh Mullet (Bouri) for international markets"
+        }
+    },
+    "howTo": {
+        "title": "How to Order Wholesale Fish from AZAFCO",
+        "description": "Simple steps to order fresh wholesale fish from AZAFCO International",
+        "supplies": {
+            "businessDetails": "Your business details",
+            "quantities": "Required quantities"
+        },
+        "steps": {
+            "step1": {
+                "name": "Contact Us",
+                "text": "Contact us via WhatsApp or email business@azafco.com.eg"
+            },
+            "step2": {
+                "name": "Specify Your Products",
+                "text": "Choose fish type, sizes (custom available), and quantities needed"
+            },
+            "step3": {
+                "name": "Receive Quote",
+                "text": "We send you a competitive quote within 24 hours"
+            },
+            "step4": {
+                "name": "Confirm & Ship",
+                "text": "Confirm your order and we ship with complete 0-4°C cold chain - air or land worldwide"
+            }
+        },
+        "estimatedCost": "Contact for quote"
+    }
+}

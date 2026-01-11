@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { ogLocaleMap, ogImageMap, Locale } from '@/i18n';
+import { companyConfig } from '@/config/company.config';
 import ProductsPageClient from './ProductsPageClient';
 
 type Props = {
@@ -9,14 +11,13 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'metadata.products' });
-    const baseUrl = 'https://azafco.com.eg';
+    const baseUrl = companyConfig.contact.baseUrl;
+    const siteT = await getTranslations({ locale, namespace: 'metadata.site' });
 
     return {
         title: t('title'),
         description: t('description'),
-        keywords: locale === 'ar'
-            ? 'أسماك طازجة, بلطي, قاروص, بوري, أسماك مصرية, تصدير أسماك'
-            : 'fresh fish Egypt, tilapia supplier, sea bass wholesale, mullet export, Egyptian fish, B2B seafood',
+        keywords: t('keywords'),
         alternates: {
             canonical: `${baseUrl}/${locale}/products`,
             languages: {
@@ -34,10 +35,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: t('description'),
             url: `${baseUrl}/${locale}/products`,
             type: 'website',
-            siteName: 'AZAFCO - ازافكو العالمية',
-            locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+            siteName: siteT('name'),
+            locale: ogLocaleMap[locale as Locale] || 'en_US',
             images: [{
-                url: `/images/og-image-${locale === 'ar' ? 'ar' : 'en'}.jpg`,
+                url: ogImageMap[locale as Locale],
                 width: 1200,
                 height: 630,
                 alt: t('title'),
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             card: 'summary_large_image',
             title: t('title'),
             description: t('description'),
-            images: [`/images/og-image-${locale === 'ar' ? 'ar' : 'en'}.jpg`],
+            images: [ogImageMap[locale as Locale]],
         },
     };
 }

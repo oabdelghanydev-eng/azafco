@@ -1,0 +1,41 @@
+{
+    "title": "Datenschutzerklärung",
+    "last_updated": "Letzte Aktualisierung",
+    "intro": {
+        "title": "Einleitung",
+        "content": "Bei AZAFCO International respektieren wir Ihre Privatsphäre und sind dem Schutz Ihrer personenbezogenen Daten verpflichtet. Diese Richtlinie erklärt, wie wir Informationen erfassen und verwenden, wenn Sie unsere Website besuchen."
+    },
+    "data_collection": {
+        "title": "Welche Daten wir erfassen",
+        "content": "Wir erfassen automatisch bestimmte Informationen, wenn Sie unsere Website besuchen:",
+        "item1": "Geräte- und Browserinformationen",
+        "item2": "IP-Adresse (anonymisiert)",
+        "item3": "Besuchte Seiten und Ihre Interaktion mit diesen"
+    },
+    "analytics": {
+        "title": "Analysetools",
+        "content": "Wir verwenden vertrauenswürdige Analysetools, um zu verstehen, wie Besucher unsere Website nutzen und um deren Erfahrung zu verbessern:",
+        "ga4": "Zur Traffic-Analyse und zum Verständnis des Besucherverhaltens",
+        "clarity": "Zur Aufzeichnung von Benutzerinteraktionen und Verbesserung der Benutzeroberfläche"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "content": "Unsere Website verwendet Cookies, um Ihr Browsing-Erlebnis zu verbessern. Sie können Cookies in Ihren Browsereinstellungen deaktivieren, dies kann jedoch einige Funktionen der Website beeinträchtigen."
+    },
+    "sharing": {
+        "title": "Datenweitergabe",
+        "content": "Wir verkaufen oder teilen Ihre personenbezogenen Daten nicht mit Dritten zu Marketingzwecken. Wir können anonymisierte Daten mit Analyseanbietern teilen, um unsere Dienste zu verbessern."
+    },
+    "rights": {
+        "title": "Ihre Rechte",
+        "content": "Sie haben das Recht:",
+        "item1": "Auskunft über die von uns gespeicherten Daten zu verlangen",
+        "item2": "Die Löschung Ihrer Daten zu beantragen",
+        "item3": "Marketing-Kommunikation abzulehnen"
+    },
+    "contact": {
+        "title": "Kontakt",
+        "content": "Bei Fragen zu dieser Datenschutzerklärung können Sie uns kontaktieren:",
+        "email_label": "E-Mail"
+    }
+}

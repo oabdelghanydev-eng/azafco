@@ -1,0 +1,36 @@
+{
+    "title": "Frischfisch für den Export",
+    "subtitle": "Premium ägyptischer Fisch für B2B-Käufer weltweit",
+    "filter": {
+        "all": "Alle Produkte",
+        "nile": "Nilfische",
+        "sea": "Seefische",
+        "freshwater": "Süßwasserfische",
+        "saltwater": "Salzwasserfische"
+    },
+    "category_fresh": "Frischfisch",
+    "weight": "Gewicht",
+    "available_sizes": "Verfügbare Größen",
+    "freshwater": "Süßwasser",
+    "saltwater": "Salzwasser",
+    "sizes_label": "Größen:",
+    "view_image": "Bild ansehen",
+    "quality": {
+        "title": "ISO- & HACCP-zertifizierte Qualität",
+        "subtitle": "Exportstandards für Großhändler, Restaurants & Hotels weltweit",
+        "fresh_fish": "Fangfrisch",
+        "fresh_fish_desc": "Direkt von zertifizierten ägyptischen Aquakulturen",
+        "perfect_cooling": "0–4°C Kühlkette",
+        "perfect_cooling_desc": "Temperaturkontrolle vom Fang bis zur Lieferung",
+        "fast_delivery": "Weltweiter Versand",
+        "fast_delivery_desc": "Luftfracht & Landtransport an jedes Ziel",
+        "accurate_weights": "Präzise Gewichte",
+        "accurate_weights_desc": "Höchste Genauigkeit bei Gewichten und Sondergrößen"
+    },
+    "cta": {
+        "title": "Auf der Suche nach einem zuverlässigen Fischlieferanten?",
+        "subtitle": "Wir beliefern über 500 Großhändler, Restaurants und Hotels in mehr als 7 Ländern",
+        "button": "Angebot anfordern"
+    },
+    "alt_template": "Frischer {product} für Großhandelsexport aus Ägypten – AZAFCO International"
+}

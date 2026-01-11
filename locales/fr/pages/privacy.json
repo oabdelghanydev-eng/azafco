@@ -1,0 +1,41 @@
+{
+    "title": "Politique de confidentialité",
+    "last_updated": "Dernière mise à jour",
+    "intro": {
+        "title": "Introduction",
+        "content": "Chez AZAFCO International, nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles."
+    },
+    "data_collection": {
+        "title": "Données que nous collectons",
+        "content": "Nous collectons automatiquement certaines informations lorsque vous visitez notre site web :",
+        "item1": "Informations sur l'appareil et le navigateur",
+        "item2": "Adresse IP (anonymisée)",
+        "item3": "Pages que vous visitez et comment vous interagissez avec elles"
+    },
+    "analytics": {
+        "title": "Outils d'analyse",
+        "content": "Nous utilisons des outils d'analyse de confiance pour comprendre comment les visiteurs utilisent notre site :",
+        "ga4": "Pour l'analyse du trafic et la compréhension du comportement des visiteurs",
+        "clarity": "Pour l'enregistrement des interactions utilisateur et l'amélioration de l'interface du site"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "content": "Notre site web utilise des cookies pour améliorer votre expérience de navigation."
+    },
+    "sharing": {
+        "title": "Partage des données",
+        "content": "Nous ne vendons ni ne partageons vos données personnelles avec des tiers à des fins de marketing."
+    },
+    "rights": {
+        "title": "Vos droits",
+        "content": "Vous avez le droit de :",
+        "item1": "Demander à connaître les données que nous détenons sur vous",
+        "item2": "Demander la suppression de vos données",
+        "item3": "Vous désabonner de toute communication marketing"
+    },
+    "contact": {
+        "title": "Nous contacter",
+        "content": "Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter :",
+        "email_label": "E-mail"
+    }
+}

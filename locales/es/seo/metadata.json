@@ -1,0 +1,50 @@
+{
+    "site": {
+        "name": "AZAFCO - ازافكو العالمية",
+        "title_default": "AZAFCO International – Exportador de pescado egipcio",
+        "title_template": "%s | AZAFCO International",
+        "author": "AZAFCO International",
+        "creator": "AZAFCO International",
+        "publisher": "AZAFCO International",
+        "og_alt": "AZAFCO International – Exportación de pescado fresco de Egipto – Envío a España, México, América Latina y el mundo"
+    },
+    "home": {
+        "title": "Proveedor mayorista de pescado para gastronomía y mayoristas | AZAFCO Egipto",
+        "description": "AZAFCO International – Líder egipcio en exportación B2B de pescado desde 2008. Más de 2.500 toneladas mensuales. Certificación ISO y HACCP. Envío a España, México, América Latina y todo el mundo.",
+        "keywords": "exportador pescado Egipto, importar pescado fresco, proveedor tilapia mundial, mayorista pescado España, importador pescado México, AZAFCO International"
+    },
+    "products": {
+        "title": "Pescado fresco para exportación: tilapia, lubina, lisa | AZAFCO",
+        "description": "Pescado fresco premium del principal exportador de Egipto. Tilapia, lubina, lisa y más de 8 variedades. Tamaños personalizados, desde 1 caja. ISO certificado. Envío mundial – incluyendo España y LATAM.",
+        "keywords": "pescado fresco comprar, tilapia al por mayor, lubina para restaurantes, lisa fresca mayorista, exportador pescado B2B"
+    },
+    "about": {
+        "title": "Empresa exportadora de pescado con más de 300 empleados desde 2008 | AZAFCO",
+        "description": "AZAFCO International: Exportador B2B de pescado egipcio con más de 300 empleados, más de 500 clientes en más de 7 países. Planta aprobada UE. Certificación ISO 22000 y HACCP. Exportación a Europa y América.",
+        "keywords": "sobre AZAFCO, empresa exportadora pescado, exportador pescado aprobado UE, proveedor pescado confiable"
+    },
+    "contact": {
+        "title": "Solicitar cotización pescado al por mayor | Contactar AZAFCO 24/7",
+        "description": "Solicite cotización: Principal exportador de pescado de Egipto. Envío mundial a España, México, Chile y más. WhatsApp: +20-100-7736419. Respuesta en 24 horas.",
+        "keywords": "contactar AZAFCO, cotización pescado mayorista, proveedor pescado B2B, importar pescado de Egipto"
+    },
+    "markets": {
+        "title": "Exportación de pescado a más de 7 países | 2.500+ toneladas mensuales | AZAFCO",
+        "description": "AZAFCO exporta más de 2.500 toneladas de pescado fresco mensualmente. Europa, Golfo, América Latina – envío mundial por aire y tierra. Más de 500 mayoristas satisfechos desde 2008.",
+        "keywords": "exportación pescado internacional, importar pescado España, mayorista pescado México, proveedor pescado Chile, mercados AZAFCO"
+    },
+    "media": {
+        "title": "Noticias de la industria pesquera egipcia | Centro de medios AZAFCO",
+        "description": "Últimas noticias de AZAFCO, expansión internacional, logros de la empresa e hitos de la industria. Apariciones en TV y reconocimiento gubernamental desde 2008.",
+        "keywords": "noticias AZAFCO, industria pesquera egipcia, actualizaciones exportación pescado"
+    },
+    "certificates": {
+        "title": "Exportador de pescado certificado ISO 22000 y HACCP | Calidad AZAFCO",
+        "description": "AZAFCO posee más de 5 certificaciones internacionales: ISO 22000, HACCP, ISO 9001, ISO 14001, ISO 45001. Una de 6 plantas en Egipto autorizadas para exportación UE. Trazabilidad garantizada.",
+        "keywords": "certificados AZAFCO, ISO 22000 pescado, HACCP certificado, aprobado UE, pescado trazable, exportador certificado"
+    },
+    "privacy": {
+        "title": "Política de privacidad | AZAFCO International",
+        "description": "Política de privacidad de AZAFCO International – Cómo protegemos sus datos y manejamos consultas confidencialmente."
+    }
+}

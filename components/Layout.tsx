@@ -8,6 +8,7 @@ import { Link } from '@/navigation';
 import BackToTop from './BackToTop';
 import LanguageSwitcher from './LanguageSwitcher';
 import { companyInfo } from '@/data/company';
+import { companyConfig } from '@/config/company.config';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,15 +20,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const t = useTranslations();
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
-  // B2B Optimized Logo Alt Text - All 6 Languages
-  const logoAlt: Record<string, string> = {
-    ar: 'ازافكو - مورد أسماك مصري للتصدير بالجملة',
-    en: 'AZAFCO - Egyptian Wholesale Fish Supplier for Export',
-    es: 'AZAFCO - Proveedor Egipcio de Pescado al por Mayor para Exportación',
-    ru: 'AZAFCO - Египетский оптовый поставщик рыбы на экспорт',
-    de: 'AZAFCO - Ägyptischer Großhandels-Fischlieferant für Export',
-    fr: 'AZAFCO - Fournisseur Égyptien de Poisson en Gros pour Exportation'
-  };
+  // Logo alt text from translations
+  const logoAlt = t('common.logo_alt');
 
   const navigation = [
     { name: t('nav.home'), href: '/' },
@@ -55,11 +49,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className={`flex items-center ${locale === 'ar' ? 'space-x-3 space-x-reverse' : 'space-x-3'}`}>
-              <img src="/images/logo.svg" alt={logoAlt[locale] || logoAlt.en} className="h-16 w-auto" />
+              <img src="/images/logo.svg" alt={logoAlt} className="h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className={`hidden md:flex items-center gap-6 ${locale === 'ar' ? 'space-x-8 space-x-reverse' : ''}`} aria-label={locale === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
+            <nav className={`hidden md:flex items-center gap-6 ${locale === 'ar' ? 'space-x-8 space-x-reverse' : ''}`} aria-label={t('common.main_navigation')}>
               {navigation.map((item) => (
                 <Link
                   key={item.href}
@@ -99,7 +93,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             initial={{ height: 0 }}
             animate={{ height: isMenuOpen ? 'auto' : 0 }}
             className="md:hidden overflow-hidden"
-            aria-label={locale === 'ar' ? 'القائمة المتنقلة' : 'Mobile menu'}
+            aria-label={t('common.mobile_menu')}
           >
             <div className="py-4 space-y-3">
               {navigation.map((item) => (
@@ -142,7 +136,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <img src="/images/logo.svg" alt={logoAlt[locale] || logoAlt.en} className="h-24 mb-4" />
+              <img src="/images/logo.svg" alt={logoAlt} className="h-24 mb-4" />
               <p className="text-gray-400 text-sm">
                 {t('footer.description')}
               </p>
@@ -151,7 +145,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Quick Links */}
             <div>
               <h4 className="text-white font-bold mb-4">{t('footer.quick_links')}</h4>
-              <nav aria-label={locale === 'ar' ? 'روابط التذييل' : 'Footer links'}>
+              <nav aria-label={t('common.footer_links')}>
                 <ul className="space-y-2">
                   {navigation.slice(0, 4).map((item) => (
                     <li key={item.href}>
@@ -162,7 +156,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   ))}
                   <li>
                     <a
-                      href="https://forms.gle/rEYRPSP3vpW8Cggv5"
+                      href={companyConfig.contact.partnershipForm}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-primary-400 transition-colors"
@@ -180,7 +174,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ul className="space-y-3 text-sm">
                 <li className={`flex items-start ${locale === 'ar' ? 'space-x-3 space-x-reverse' : 'space-x-3'}`}>
                   <FaMapMarkerAlt className="text-primary-400 mt-1 flex-shrink-0" />
-                  <span>{locale === 'ar' ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}</span>
+                  <span>{t('data.company.addresses.factory.address')}</span>
                 </li>
                 <li className={`flex items-center ${locale === 'ar' ? 'space-x-3 space-x-reverse' : 'space-x-3'}`}>
                   <FaPhone className="text-primary-400 flex-shrink-0" />
@@ -207,9 +201,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h4 className="text-white font-bold mb-4">{t('footer.quality_certificates')}</h4>
               <div className="flex flex-wrap gap-2">
-                {['ISO 9001', 'ISO 14001', 'ISO 45001', 'HACCP', 'ISO 22000'].map((cert) => (
-                  <span key={cert} className="bg-gray-700 text-xs px-2 py-1 rounded">
-                    {cert}
+                {companyConfig.certifications.map((cert) => (
+                  <span key={cert.code} className="bg-gray-700 text-xs px-2 py-1 rounded">
+                    {cert.name}
                   </span>
                 ))}
               </div>
@@ -219,13 +213,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {/* Copyright */}
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
             <p>
-              © {new Date().getFullYear()} {locale === 'ar' ? 'ازافكو العالمية للإستثمار والتنمية' : 'AZAFCO International'}. {t('footer.copyright')}.
+              © {new Date().getFullYear()} {t('data.company.copyright')}. {t('footer.copyright')}.
               {' · '}
               <Link
                 href="/privacy-policy"
                 className="text-gray-500 hover:text-gray-400 transition-colors"
               >
-                {locale === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy'}
+                {t('data.company.privacyLink')}
               </Link>
             </p>
           </div>

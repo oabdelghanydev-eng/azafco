@@ -3,9 +3,10 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
-import { locales, localeConfig, Locale } from '@/i18n';
+import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
+import { companyConfig } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
 import LocaleInitializer from '@/components/LocaleInitializer';
 import '../globals.css';
@@ -26,28 +27,20 @@ export function generateStaticParams() {
 // Generate metadata for the root layout
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const baseUrl = 'https://azafco.com.eg';
-    const isArabic = locale === 'ar';
+    const baseUrl = companyConfig.contact.baseUrl;
+    const t = await getTranslations({ locale, namespace: 'metadata' });
 
     return {
         metadataBase: new URL(baseUrl),
         title: {
-            default: isArabic
-                ? 'ازافكو العالمية - AZAFCO International'
-                : 'AZAFCO International - Egyptian Fish Exporter',
-            template: isArabic
-                ? '%s | ازافكو العالمية'
-                : '%s | AZAFCO International',
+            default: t('site.title_default'),
+            template: t('site.title_template'),
         },
-        description: isArabic
-            ? 'شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة لأكثر من 15 دولة منذ عام 2008'
-            : 'Leading Egyptian company specialized in fresh fish packaging and export to worldwide markets since 2008',
-        keywords: isArabic
-            ? 'ازافكو, تصدير أسماك, أسماك طازجة, بلطي, قاروص, بوري, مصر'
-            : 'AZAFCO, fish export, fresh fish, tilapia, sea bass, mullet, Egypt',
-        authors: [{ name: 'AZAFCO International' }],
-        creator: 'AZAFCO International',
-        publisher: 'AZAFCO International',
+        description: t('home.description'),
+        keywords: t('home.keywords'),
+        authors: [{ name: t('site.author') }],
+        creator: t('site.creator'),
+        publisher: t('site.publisher'),
         formatDetection: {
             email: false,
             address: false,
@@ -55,21 +48,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
         openGraph: {
             type: 'website',
-            locale: locale === 'ar' ? 'ar_EG' : locale === 'es' ? 'es_ES' : locale === 'ru' ? 'ru_RU' : locale === 'de' ? 'de_DE' : locale === 'fr' ? 'fr_FR' : 'en_US',
+            locale: ogLocaleMap[locale as Locale] || 'en_US',
             alternateLocale: ['ar_EG', 'en_US', 'es_ES', 'ru_RU', 'de_DE', 'fr_FR'].filter(l => !l.startsWith(locale)),
             url: baseUrl,
-            siteName: 'AZAFCO - ازافكو العالمية',
+            siteName: t('site.name'),
             images: [
                 {
                     url: `/images/og-image-${locale === 'ar' || locale === 'en' ? locale : 'en'}.jpg`,
                     width: 1200,
                     height: 630,
-                    alt: locale === 'ar' ? 'ازافكو العالمية - تصدير الأسماك الطازجة'
-                        : locale === 'es' ? 'AZAFCO Internacional - Exportación de Pescado Fresco de Egipto'
-                            : locale === 'ru' ? 'AZAFCO International - Экспорт свежей рыбы из Египта'
-                                : locale === 'de' ? 'AZAFCO International - Export von Frischfisch aus Ägypten'
-                                    : locale === 'fr' ? 'AZAFCO International - Exportation de Poisson Frais d\'Egypte'
-                                        : 'AZAFCO International - Fresh Fish Export from Egypt',
+                    alt: t('site.og_alt'),
                 },
             ],
         },
@@ -89,8 +77,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             },
         },
         verification: {
-            // Add your verification codes here
-            // google: 'your-google-verification-code',
+            // Property verified via Google Analytics integration
+            // No HTML meta tag needed
         },
         alternates: {
             canonical: baseUrl,
@@ -149,11 +137,11 @@ export default async function RootLayout({
                 <link rel="manifest" href="/favicons/manifest.webmanifest" />
 
                 {/* Theme & Geo Tags */}
-                <meta name="theme-color" content="#1e3a5f" />
-                <meta name="geo.region" content="EG-KFS" />
-                <meta name="geo.placename" content="Kafr El Sheikh, Egypt" />
-                <meta name="geo.position" content="31.2653;30.9366" />
-                <meta name="ICBM" content="31.2653, 30.9366" />
+                <meta name="theme-color" content={companyConfig.branding.themeColor} />
+                <meta name="geo.region" content={companyConfig.geo.region} />
+                <meta name="geo.placename" content={companyConfig.geo.placename} />
+                <meta name="geo.position" content={`${companyConfig.geo.latitude};${companyConfig.geo.longitude}`} />
+                <meta name="ICBM" content={`${companyConfig.geo.latitude}, ${companyConfig.geo.longitude}`} />
 
                 {/* Mobile & PWA */}
                 <meta name="mobile-web-app-capable" content="yes" />
@@ -167,14 +155,14 @@ export default async function RootLayout({
                     {children}
                 </NextIntlClientProvider>
 
-                {/* Vercel Analytics */}
-                <Analytics />
+                {/* Vercel Analytics - only in production to avoid dev mode issues */}
+                {process.env.NODE_ENV === 'production' && <Analytics />}
 
                 {/* Google Analytics 4 - Best Practice: afterInteractive */}
                 <Script
                     id="ga4-gtag"
                     strategy="afterInteractive"
-                    src="https://www.googletagmanager.com/gtag/js?id=G-KKH7RD7SRV"
+                    src={`https://www.googletagmanager.com/gtag/js?id=${companyConfig.analytics.googleAnalyticsId}`}
                 />
                 <Script
                     id="ga4-config"
@@ -184,7 +172,7 @@ export default async function RootLayout({
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
-                            gtag('config', 'G-KKH7RD7SRV');
+                            gtag('config', '${companyConfig.analytics.googleAnalyticsId}');
                         `,
                     }}
                 />
@@ -199,7 +187,7 @@ export default async function RootLayout({
                                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
                                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                            })(window, document, "clarity", "script", "ujhz7pyrbs");
+                            })(window, document, "clarity", "script", "${companyConfig.analytics.clarityId}");
                         `,
                     }}
                 />

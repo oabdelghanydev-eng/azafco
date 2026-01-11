@@ -1,0 +1,36 @@
+{
+    "title": "Poisson frais pour l'exportation",
+    "subtitle": "Poisson égyptien premium pour grossistes et restaurants dans le monde entier",
+    "filter": {
+        "all": "Tous les produits",
+        "nile": "Poissons du Nil",
+        "sea": "Poissons de mer",
+        "freshwater": "Eau douce",
+        "saltwater": "Eau salée"
+    },
+    "category_fresh": "Poisson frais",
+    "weight": "Poids",
+    "available_sizes": "Tailles disponibles",
+    "freshwater": "Eau douce",
+    "saltwater": "Eau salée",
+    "sizes_label": "Tailles :",
+    "view_image": "Voir l'image",
+    "quality": {
+        "title": "Qualité certifiée ISO et HACCP",
+        "subtitle": "Standards d'exportation pour acheteurs B2B au niveau mondial",
+        "fresh_fish": "Fraîcheur garantie",
+        "fresh_fish_desc": "Direct des fermes égyptiennes certifiées",
+        "perfect_cooling": "Chaîne du froid 0–4°C",
+        "perfect_cooling_desc": "Température contrôlée de la capture à la livraison",
+        "fast_delivery": "Livraison mondiale",
+        "fast_delivery_desc": "Expédition rapide vers toute destination par air ou terre",
+        "accurate_weights": "Poids précis",
+        "accurate_weights_desc": "Précision des poids et tailles personnalisées"
+    },
+    "cta": {
+        "title": "Vous cherchez un fournisseur de poisson fiable ?",
+        "subtitle": "Nous fournissons du poisson frais à plus de 500 grossistes, restaurants et hôtels dans le monde entier",
+        "button": "Demander un devis"
+    },
+    "alt_template": "{product} frais pour exportation en gros depuis l'Égypte – AZAFCO International"
+}

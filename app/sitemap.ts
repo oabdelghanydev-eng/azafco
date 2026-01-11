@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
+import { companyConfig } from '@/config/company.config';
 
-const baseUrl = 'https://azafco.com.eg';
+const baseUrl = companyConfig.contact.baseUrl;
 
 // Define all static pages with their priorities and change frequencies
 const pages = [

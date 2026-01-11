@@ -1,0 +1,48 @@
+{
+    "hero": {
+        "title": "AZAFCO International",
+        "title_subtitle": "Investment & Development",
+        "leaders_since": "Leaders in fresh fish export since",
+        "subtitle": "Premium Fresh Fish Export from Egypt Worldwide",
+        "description": "Egypt's leading B2B fish exporter serving distributors, restaurants, and hotels globally. +2,500 tons monthly with ISO & HACCP certification. Air & land shipping to any destination.",
+        "cta_whatsapp": "Contact via WhatsApp",
+        "cta_partnership": "Request Business Partnership",
+        "background_alt": "AZAFCO Fish Processing Factory in Egypt"
+    },
+    "stats": {
+        "years": "Years Experience",
+        "countries": "Export Countries",
+        "tonnage": "Tons Monthly",
+        "certificates": "Quality Certificates"
+    },
+    "products": {
+        "title": "Fresh Fish for Export",
+        "subtitle": "Premium Tilapia, Sea Bass, Mullet & Egyptian Fish for B2B Buyers Worldwide",
+        "view_all": "View All Products"
+    },
+    "why_us": {
+        "title": "Why AZAFCO?",
+        "subtitle": "Egypt's Trusted Fish Exporter Since 2008",
+        "quality": "ISO & HACCP Certified",
+        "fresh": "Fresh & Safe",
+        "experience": "17+ Years Experience",
+        "global": "Worldwide Export"
+    },
+    "cta": {
+        "title": "Ready to Start Your Partnership?",
+        "description": "Join 500+ satisfied distributors and restaurants across +7 countries worldwide",
+        "button": "Start Partnership"
+    },
+    "features": {
+        "trusted_source": "Trusted Egyptian Source",
+        "trusted_source_desc": "Every fish comes from certified Egyptian farms in Kafr El Sheikh.",
+        "cold_chain": "Complete Cold Chain",
+        "cold_chain_desc": "0°C to 4°C maintained from catch to your destination worldwide.",
+        "professionals": "B2B Specialists",
+        "professionals_desc": "We understand the needs of restaurants, hotels, and distributors globally."
+    },
+    "markets": {
+        "title": "Our Export Markets",
+        "subtitle": "Serving distributors and restaurants worldwide - we can ship anywhere"
+    }
+}

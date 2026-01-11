@@ -1,0 +1,48 @@
+{
+    "hero": {
+        "title": "AZAFCO International",
+        "title_subtitle": "Investment & Entwicklung",
+        "leaders_since": "Führend im Frischfischexport seit",
+        "subtitle": "Premium-Frischfischexport aus Ägypten – weltweit",
+        "description": "Ägyptens führender B2B-Fischexporteur für Großhändler, Restaurants und Hotels weltweit. Über 2.500 Tonnen monatlich mit ISO- und HACCP-Zertifizierung. Versand per Luft und Land an jedes Ziel.",
+        "cta_whatsapp": "Über WhatsApp kontaktieren",
+        "cta_partnership": "Partnerschaft anfragen",
+        "background_alt": "AZAFCO Fischverarbeitungsfabrik in Ägypten"
+    },
+    "stats": {
+        "years": "Jahre Erfahrung",
+        "countries": "Exportländer",
+        "tonnage": "Tonnen pro Monat",
+        "certificates": "Qualitätszertifikate"
+    },
+    "products": {
+        "title": "Frischfisch für den Export",
+        "subtitle": "Premium Tilapia, Wolfsbarsch, Meeräsche & ägyptischer Fisch für internationale B2B-Käufer",
+        "view_all": "Alle Produkte ansehen"
+    },
+    "why_us": {
+        "title": "Warum AZAFCO?",
+        "subtitle": "Ägyptens renommierter Fischexporteur seit 2008",
+        "quality": "ISO & HACCP zertifiziert",
+        "fresh": "Frisch & sicher",
+        "experience": "Über 17 Jahre Erfahrung",
+        "global": "Weltweiter Export"
+    },
+    "cta": {
+        "title": "Bereit für eine Partnerschaft?",
+        "description": "Werden Sie Teil von über 500 zufriedenen Großhändlern und Restaurants in mehr als 7 Ländern weltweit",
+        "button": "Partnerschaft starten"
+    },
+    "features": {
+        "trusted_source": "Zuverlässige ägyptische Herkunft",
+        "trusted_source_desc": "Jeder Fisch stammt von zertifizierten ägyptischen Aquakulturen in Kafr El-Sheikh.",
+        "cold_chain": "Lückenlose Kühlkette",
+        "cold_chain_desc": "Konstant 0–4°C vom Fang bis zur Lieferung an Ihren Standort weltweit.",
+        "professionals": "B2B-Spezialisten",
+        "professionals_desc": "Wir kennen die Anforderungen von Restaurants, Hotels und Großhändlern international."
+    },
+    "markets": {
+        "title": "Unsere Exportmärkte",
+        "subtitle": "Belieferung von Großhändlern und Gastronomiebetrieben weltweit – Versand an jeden Standort"
+    }
+}

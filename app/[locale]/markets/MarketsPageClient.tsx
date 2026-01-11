@@ -6,9 +6,8 @@ import { FaGlobe, FaMapMarkedAlt, FaShip, FaHandshake, FaChartLine, FaUsers, FaC
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
-import { markets, Market } from '@/data/markets';
+import { markets } from '@/data/markets';
 import { companyInfo } from '@/data/company';
-import { getLocalizedField, getLocalizedArrayField } from '@/utils/localization';
 
 export default function MarketsPageClient() {
     const locale = useLocale();
@@ -117,14 +116,14 @@ export default function MarketsPageClient() {
                                     <div className="w-16 h-12 rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
                                         <img
                                             src={market.flag}
-                                            alt={`${t('common.flag_of')} ${getLocalizedField(market, 'country', locale)}`}
+                                            alt={`${t('common.flag_of')} ${t(`data.markets.${market.translationKey}.country`)}`}
                                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                                             loading="lazy"
                                         />
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-xl font-bold text-primary-800 group-hover:text-primary-600 transition-colors">
-                                            {getLocalizedField(market, 'country', locale)}
+                                            {t(`data.markets.${market.translationKey}.country`)}
                                         </h3>
                                         {market.status === 'paused' && (
                                             <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">
@@ -139,10 +138,10 @@ export default function MarketsPageClient() {
                                     </div>
                                 </div>
                                 <p className="text-gray-600 mb-4">
-                                    {getLocalizedField(market, 'description', locale)}
+                                    {t(`data.markets.${market.translationKey}.description`)}
                                 </p>
                                 <div className="space-y-2 mb-4">
-                                    {getLocalizedArrayField(market, 'features', locale).map((feature, idx) => (
+                                    {((t.raw(`data.markets.${market.translationKey}.features`) ?? []) as string[]).map((feature, idx) => (
                                         <div key={idx} className={`flex items-center ${isAr ? 'space-x-2 space-x-reverse' : 'space-x-2'}`}>
                                             <FaCheckCircle className="text-green-500 flex-shrink-0" />
                                             <span className="text-sm text-gray-700">{feature}</span>
@@ -156,7 +155,7 @@ export default function MarketsPageClient() {
                                     <span className={`text-lg font-bold px-3 py-1 rounded-full ${market.status === 'coming-soon' ? 'bg-blue-50 text-blue-600' :
                                         market.status === 'paused' ? 'bg-yellow-50 text-yellow-600' :
                                             'bg-primary-50 text-primary-600'
-                                        }`}>{isAr && market.sinceAr ? market.sinceAr : market.since}</span>
+                                        }`}>{market.since === 'coming_soon' ? t('common.coming_soon') : market.since}</span>
                                 </div>
                             </motion.div>
                         ))}

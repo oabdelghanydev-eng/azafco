@@ -1,0 +1,19 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "products": "Productos",
+        "certificates": "Certificados",
+        "markets": "Nuestros mercados",
+        "media": "Centro de medios",
+        "about": "Nosotros",
+        "contact": "Contacto"
+    },
+    "footer": {
+        "description": "Empresa egipcia líder en envasado y exportación de pescado fresco a nivel mundial",
+        "quick_links": "Acceso rápido",
+        "contact_us": "Contáctenos",
+        "partnership": "Solicitar colaboración comercial",
+        "copyright": "Todos los derechos reservados",
+        "quality_certificates": "Certificados de calidad"
+    }
+}

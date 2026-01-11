@@ -1,0 +1,144 @@
+{
+    "tilapia": {
+        "name": "Tilapia",
+        "alt_names": [
+            "Tilapia du Nil",
+            "Perche du Nil"
+        ],
+        "description": "Tilapia du Nil premium provenant de fermes égyptiennes certifiées. Notre produit d'exportation #1. Certifié HACCP avec chaîne du froid complète.",
+        "sizes": [
+            "Petit (200-300g)",
+            "Moyen (300-500g)",
+            "Grand (500g+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Disponible toute l'année"
+    },
+    "sea_bass": {
+        "name": "Bar",
+        "alt_names": [
+            "Bar Méditerranéen",
+            "Bar Européen"
+        ],
+        "description": "Bar premium, parfait pour griller, frire et la haute cuisine. Favori des restaurants dans la région du Golfe.",
+        "sizes": [
+            "Moyen (400-600g)",
+            "Grand (600g+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau salée",
+        "availability": "Disponible toute l'année"
+    },
+    "mullet": {
+        "name": "Mulet",
+        "alt_names": [
+            "Mulet Gris",
+            "Mulet Rayé",
+            "Poisson Bouri"
+        ],
+        "description": "Mulet égyptien frais, excellent pour griller et fumer. Favori traditionnel dans la cuisine du Golfe.",
+        "sizes": [
+            "Petit (150-250g)",
+            "Moyen (250-400g)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Disponible toute l'année"
+    },
+    "buni": {
+        "name": "Buni",
+        "alt_names": [
+            "Dorade"
+        ],
+        "description": "Buni de mer premium pour clients exigeants. Excellente texture et profil gustatif.",
+        "sizes": [
+            "Moyen (300-500g)",
+            "Grand (500g+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau salée",
+        "availability": "Disponible toute l'année"
+    },
+    "mubarakah": {
+        "name": "Mubarakah",
+        "alt_names": [
+            "Silure Africain",
+            "Clarias"
+        ],
+        "description": "Mubarakah fraîche, idéale pour les plats traditionnels. Grandes tailles disponibles pour le commerce de gros.",
+        "sizes": [
+            "Grand (1-2kg)",
+            "Jumbo (2kg+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Disponible toute l'année"
+    },
+    "catfish": {
+        "name": "Silure",
+        "alt_names": [
+            "Poisson-chat",
+            "Silure Égyptien"
+        ],
+        "description": "Silure frais des fermes d'eau douce égyptiennes. Choix populaire pour restaurants et distributeurs.",
+        "sizes": [
+            "Moyen (500-800g)",
+            "Grand (800g+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Disponible toute l'année"
+    },
+    "lout": {
+        "name": "Lout",
+        "alt_names": [
+            "Mérou",
+            "Lout de Mer"
+        ],
+        "description": "Lout de mer frais à texture ferme. Qualité premium pour restaurants et hôtels haut de gamme.",
+        "sizes": [
+            "Moyen (400-600g)",
+            "Grand (600g+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau salée",
+        "availability": "Disponible toute l'année"
+    },
+    "eels": {
+        "name": "Anguille",
+        "alt_names": [
+            "Anguille d'Eau Douce",
+            "Anguille Égyptienne"
+        ],
+        "description": "Anguilles fraîches des sources d'eau douce égyptiennes. Produit spécialisé pour marchés sélectionnés.",
+        "sizes": [
+            "Moyen (300-500g)",
+            "Grand (500g+)",
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Disponible toute l'année"
+    },
+    "_note": {
+        "custom_sizes": "Nous offrons une grande flexibilité sur les tailles - tous les produits peuvent être personnalisés sur commande",
+        "more_products": "Produits supplémentaires disponibles sur demande. Contactez-nous pour vos exigences spécifiques.",
+        "min_order": "Commande minimum: 1 carton"
+    }
+}

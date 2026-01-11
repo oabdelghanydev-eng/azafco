@@ -33,7 +33,7 @@ export default function ContactPageClient() {
             description: t('contact_page.b2b_desc'),
             note: t('contact_page.b2b_note'),
             buttonText: t('contact_page.open_form'),
-            link: 'https://forms.gle/rEYRPSP3vpW8Cggv5',
+            link: companyInfo.contact.partnershipForm,
             gradient: 'from-primary-600 to-primary-700',
             iconBg: 'bg-primary-600',
             badge: '24-48h',
@@ -217,7 +217,7 @@ export default function ContactPageClient() {
                                             {t('contact_page.main_office')}
                                         </h3>
                                         <p className="text-gray-600">
-                                            {isAr ? companyInfo.addresses.main.address : companyInfo.addresses.main.addressEn}
+                                            {t('data.company.addresses.main.address')}
                                         </p>
                                     </div>
                                 </div>
@@ -254,7 +254,7 @@ export default function ContactPageClient() {
                                             {t('contact_page.factory')}
                                         </h3>
                                         <p className="text-gray-600">
-                                            {isAr ? companyInfo.addresses.factory.address : companyInfo.addresses.factory.addressEn}
+                                            {t('data.company.addresses.factory.address')}
                                         </p>
                                     </div>
                                 </div>

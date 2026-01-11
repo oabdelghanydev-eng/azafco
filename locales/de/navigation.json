@@ -1,0 +1,19 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "products": "Produkte",
+        "certificates": "Zertifikate",
+        "markets": "Unsere Märkte",
+        "media": "Medienzentrum",
+        "about": "Über uns",
+        "contact": "Kontakt"
+    },
+    "footer": {
+        "description": "Führendes ägyptisches Unternehmen für Verpackung und Export von frischem Fisch",
+        "quick_links": "Schnellzugriff",
+        "contact_us": "Kontakt aufnehmen",
+        "partnership": "Geschäftspartnerschaft anfragen",
+        "copyright": "Alle Rechte vorbehalten",
+        "quality_certificates": "Qualitätszertifikate"
+    }
+}

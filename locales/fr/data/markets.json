@@ -1,0 +1,76 @@
+{
+    "kuwait": {
+        "country": "Koweït",
+        "description": "Notre plus grand marché d'exportation. Partenaire de confiance pour les grossistes, restaurants et hôtels de premier plan au Koweït.",
+        "features": [
+            "Plus grand volume d'export",
+            "Grossistes premium",
+            "Chaînes de restaurants",
+            "Hôtels"
+        ]
+    },
+    "uae": {
+        "country": "Émirats Arabes Unis",
+        "description": "Marché clé du Golfe. Service aux principaux grossistes, restaurants et supermarchés à Dubaï, Abu Dhabi et Sharjah.",
+        "features": [
+            "Grossistes certifiés",
+            "Restaurants de luxe",
+            "Chaînes de supermarchés",
+            "Hôtels"
+        ]
+    },
+    "qatar": {
+        "country": "Qatar",
+        "description": "Marché en croissance avec de solides partenariats avec les grossistes, hôtels et groupes de restauration qataris.",
+        "features": [
+            "Grossistes majeurs",
+            "Chaînes hôtelières",
+            "Restaurants",
+            "Sociétés de traiteur"
+        ]
+    },
+    "iraq": {
+        "country": "Irak",
+        "description": "Marché en expansion avec une forte demande et des opportunités commerciales prometteuses.",
+        "features": [
+            "Grossistes locaux",
+            "Marchés de gros",
+            "Restaurants"
+        ]
+    },
+    "bahrain": {
+        "country": "Bahreïn",
+        "description": "Marché actif avec une forte présence auprès des grossistes, restaurants et coopératives.",
+        "features": [
+            "Grossistes",
+            "Restaurants",
+            "Coopératives",
+            "Hôtels"
+        ]
+    },
+    "lebanon": {
+        "country": "Liban",
+        "description": "Marché exigeant réputé pour son appréciation de la qualité et de la fraîcheur. Service aux établissements gastronomiques haut de gamme.",
+        "features": [
+            "Gastronomie haut de gamme",
+            "Grossistes premium",
+            "Hôtels"
+        ]
+    },
+    "spain": {
+        "country": "Espagne",
+        "description": "Notre porte d'entrée vers l'Europe – actuellement en pause, avec projets de retour. Agrément UE en vigueur.",
+        "features": [
+            "Grossistes européens",
+            "Marchés aux poissons"
+        ]
+    },
+    "russia": {
+        "country": "Russie",
+        "description": "Marché prometteur à grande échelle avec un potentiel de croissance significatif – planification active d'entrée.",
+        "features": [
+            "Grossistes internationaux",
+            "Chaînes de distribution"
+        ]
+    }
+}

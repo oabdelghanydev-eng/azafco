@@ -1,0 +1,36 @@
+{
+    "title": "Fresh Fish for Export",
+    "subtitle": "Premium Egyptian Fish for B2B Buyers Worldwide",
+    "filter": {
+        "all": "All Products",
+        "nile": "Nile Fish",
+        "sea": "Sea Fish",
+        "freshwater": "Freshwater Fish",
+        "saltwater": "Saltwater Fish"
+    },
+    "category_fresh": "Fresh Fish",
+    "weight": "Weight",
+    "available_sizes": "Available Sizes",
+    "freshwater": "Freshwater",
+    "saltwater": "Saltwater",
+    "sizes_label": "Sizes:",
+    "view_image": "View image",
+    "quality": {
+        "title": "ISO & HACCP Certified Quality",
+        "subtitle": "Export-grade standards for distributors, restaurants & hotels worldwide",
+        "fresh_fish": "Farm Fresh",
+        "fresh_fish_desc": "Direct from certified Egyptian farms",
+        "perfect_cooling": "0-4°C Cold Chain",
+        "perfect_cooling_desc": "Temperature controlled from catch to delivery",
+        "fast_delivery": "Worldwide Shipping",
+        "fast_delivery_desc": "Air freight & land transport to any destination",
+        "accurate_weights": "Accurate Weights",
+        "accurate_weights_desc": "Precision on weights and custom sizing"
+    },
+    "cta": {
+        "title": "Looking for a Reliable Fish Supplier?",
+        "subtitle": "We supply fresh fish to 500+ distributors, restaurants, and hotels across +7 countries",
+        "button": "Request Quote"
+    },
+    "alt_template": "Fresh {product} for wholesale export from Egypt - AZAFCO International"
+}
