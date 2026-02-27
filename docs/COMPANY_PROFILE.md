@@ -114,7 +114,7 @@
 
 ### Total Monthly Export
 - **Estimated:** +2,500 tons/month
-- **Countries Served:** +7
+- **Countries Served:** +9
 
 ### Shipping Capabilities
 - **Air Freight:** Available worldwide
@@ -178,7 +178,7 @@
 | Metric | Value |
 |--------|-------|
 | **Years in Business** | +17 years (since 2008) |
-| **Export Countries** | +7 |
+| **Export Countries** | +9 |
 | **Monthly Tonnage** | +2,500 tons |
 | **Number of Certificates** | +7 |
 | **Clients/Partners** | +500 |

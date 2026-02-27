@@ -65,12 +65,31 @@
             "Fish Markets"
         ]
     },
+    "syria": {
+        "country": "Syria",
+        "description": "One of our newest and strongest markets. AZAFCO has launched operations in Syria with a powerful presence, serving distributors and restaurants across the country.",
+        "features": [
+            "Strong Market Presence",
+            "Local Distributors",
+            "Restaurants",
+            "Wholesale Markets"
+        ]
+    },
     "russia": {
         "country": "Russia",
         "description": "Promising large-scale market we are actively planning to enter with significant growth potential.",
         "features": [
             "International Distributors",
             "Retail Chains"
+        ]
+    },
+    "usa": {
+        "country": "United States of America",
+        "description": "Our upcoming gateway to the North American market. Expansion plans are underway to serve the US market in the near future.",
+        "features": [
+            "International Distributors",
+            "Retail Chains",
+            "Restaurant Chains"
         ]
     }
 }

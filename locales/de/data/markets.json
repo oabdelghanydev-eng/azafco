@@ -65,12 +65,31 @@
             "Fischmärkte"
         ]
     },
+    "syria": {
+        "country": "Syrien",
+        "description": "Einer unserer neuesten und stärksten Märkte. AZAFCO hat den Betrieb in Syrien mit einer starken Präsenz aufgenommen und beliefert Großhändler und Restaurants im ganzen Land.",
+        "features": [
+            "Starke Marktpräsenz",
+            "Lokale Großhändler",
+            "Restaurants",
+            "Großmärkte"
+        ]
+    },
     "russia": {
         "country": "Russland",
         "description": "Vielversprechender Großmarkt mit erheblichem Wachstumspotenzial – aktive Markteintrittsplanung.",
         "features": [
             "Internationale Großhändler",
             "Einzelhandelsketten"
+        ]
+    },
+    "usa": {
+        "country": "Vereinigte Staaten von Amerika",
+        "description": "Unser kommendes Tor zum nordamerikanischen Markt. Expansionspläne sind im Gange, um den US-Markt in naher Zukunft zu bedienen.",
+        "features": [
+            "Internationale Großhändler",
+            "Einzelhandelsketten",
+            "Restaurantketten"
         ]
     }
 }

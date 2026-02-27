@@ -65,12 +65,31 @@
             "Marchés aux poissons"
         ]
     },
+    "syria": {
+        "country": "Syrie",
+        "description": "L'un de nos marchés les plus récents et les plus dynamiques. AZAFCO a lancé ses opérations en Syrie avec une présence forte, au service des distributeurs et restaurants à travers le pays.",
+        "features": [
+            "Présence forte sur le marché",
+            "Grossistes locaux",
+            "Restaurants",
+            "Marchés de gros"
+        ]
+    },
     "russia": {
         "country": "Russie",
         "description": "Marché prometteur à grande échelle avec un potentiel de croissance significatif – planification active d'entrée.",
         "features": [
             "Grossistes internationaux",
             "Chaînes de distribution"
+        ]
+    },
+    "usa": {
+        "country": "États-Unis d'Amérique",
+        "description": "Notre prochaine porte d'entrée vers le marché nord-américain. Des plans d'expansion sont en cours pour servir le marché américain dans un avenir proche.",
+        "features": [
+            "Grossistes internationaux",
+            "Chaînes de distribution",
+            "Chaînes de restaurants"
         ]
     }
 }

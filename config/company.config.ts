@@ -132,10 +132,12 @@ export const companyConfig = {
         { key: 'uae', name: 'United Arab Emirates', rank: 2, volumeTons: 400, since: 2008, status: 'active', countryCode: 'AE' },
         { key: 'qatar', name: 'Qatar', rank: 3, volumeTons: 350, since: 2024, status: 'active', countryCode: 'QA' },
         { key: 'iraq', name: 'Iraq', rank: 4, volumeTons: 175, since: 2025, status: 'active', countryCode: 'IQ' },
-        { key: 'bahrain', name: 'Bahrain', rank: 5, volumeTons: 100, since: 2012, status: 'active', countryCode: 'BH' },
-        { key: 'lebanon', name: 'Lebanon', rank: 6, volumeTons: null, since: 2015, status: 'active', countryCode: 'LB' },
-        { key: 'spain', name: 'Spain', rank: 7, volumeTons: null, since: 2018, status: 'paused', countryCode: 'ES' },
-        { key: 'russia', name: 'Russia', rank: 8, volumeTons: null, since: null, status: 'planned', countryCode: 'RU' },
+        { key: 'syria', name: 'Syria', rank: 5, volumeTons: null, since: 2026, status: 'active', countryCode: 'SY' },
+        { key: 'bahrain', name: 'Bahrain', rank: 6, volumeTons: 100, since: 2012, status: 'active', countryCode: 'BH' },
+        { key: 'lebanon', name: 'Lebanon', rank: 7, volumeTons: null, since: 2015, status: 'active', countryCode: 'LB' },
+        { key: 'spain', name: 'Spain', rank: 8, volumeTons: null, since: 2018, status: 'paused', countryCode: 'ES' },
+        { key: 'russia', name: 'Russia', rank: 9, volumeTons: null, since: null, status: 'planned', countryCode: 'RU' },
+        { key: 'usa', name: 'United States of America', rank: 10, volumeTons: null, since: null, status: 'planned', countryCode: 'US' },
     ] as MarketConfig[],
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -211,7 +213,7 @@ export function getFormattedStats() {
     return {
         experience: `+${getYearsInBusiness()}`,
         employees: `+${companyConfig.identity.employees}`,
-        countries: '+7', // Static display value (includes paused/planned markets)
+        countries: '+9', // Static display value (includes paused/planned markets)
         tonnage: `+${companyConfig.staticStats.totalVolumeEstimate}`,
         certificates: `+${getCertificateCount()}`,
         clients: `+${companyConfig.staticStats.clients}`,
