@@ -127,8 +127,8 @@ export default async function CertificateVerificationPage(
                 <span className="font-semibold text-slate-700">{cert.startDate} – {cert.endDate}</span>
               </div>
               <div className="pb-3 border-b border-slate-100">
-                <span className="text-xs text-slate-400 font-medium block">Verification Authority</span>
-                <span className="font-semibold text-slate-700">AZAFCO HR / Training Division</span>
+                <span className="text-xs text-slate-400 font-medium block">Issued By</span>
+                <span className="font-semibold text-slate-700">AZAFCO — Training & Development Division</span>
               </div>
               <div className="sm:col-span-2 pb-3 border-b border-slate-100">
                 <span className="text-xs text-slate-400 font-medium block">Secure Hash ID</span>
@@ -162,7 +162,8 @@ export default async function CertificateVerificationPage(
         {/* Footer disclaimer */}
         <div className="mt-8 text-center">
           <p className="text-xs text-slate-400 leading-relaxed max-w-md mx-auto">
-            This verification registry is cryptographically secured. To verify another credential, scan the official QR code printed on the physical certificate.
+            This page is the official digital record for the credential above.
+            Issued and maintained by AZAFCO International Investment &amp; Development.
           </p>
         </div>
 
