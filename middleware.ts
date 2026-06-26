@@ -20,8 +20,9 @@ export const config = {
     // - API routes
     // - Static files (images, fonts, etc.)
     // - Next.js internals (_next)
+    // - Certificate verification pages (/v/)
     matcher: [
-        '/((?!api|_next|_vercel|.*\\..*).*)',
+        '/((?!api|v|_next|_vercel|.*\\..*).*)',
         // Also match root
         '/'
     ]

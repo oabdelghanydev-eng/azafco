@@ -35,6 +35,24 @@ const nextConfig = {
   // Caching headers for static assets
   async headers() {
     return [
+      // Security headers for certificate verification pages
+      {
+        source: '/v/:token*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, nosnippet',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'no-referrer',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+        ],
+      },
       {
         source: '/:all*(svg|jpg|jpeg|png|webp|avif|ico)',
         headers: [
