@@ -124,21 +124,7 @@ export default async function CertificateVerificationPage(
               </p>
             </div>
 
-            {/* Footer / Signatures */}
-            <footer className="mt-auto grid grid-cols-2 gap-8 items-end px-4 sm:px-8">
-              <div className="text-center">
-                <div className="h-[1px] bg-slate-800 w-full mb-3"></div>
-                <p className="text-[9px] sm:text-[10px] text-slate-900 uppercase tracking-widest font-semibold">
-                  Training & Development
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="h-[1px] bg-slate-800 w-full mb-3"></div>
-                <p className="text-[9px] sm:text-[10px] text-slate-900 uppercase tracking-widest font-semibold">
-                  Managing Director
-                </p>
-              </div>
-            </footer>
+            {/* (Signatures removed as per request) */}
 
           </div>
         </div>
