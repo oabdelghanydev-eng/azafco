@@ -14,8 +14,8 @@ export async function generateMetadata(
   }
 
   return {
-    title: `Certificate Verification — ${cert.holder}`,
-    description: `Verified training certificate for ${cert.program}`,
+    title: `Certificate Verification | ${cert.holder}`,
+    description: `Verified training credential for ${cert.program}`,
     robots: {
       index: false,
       follow: false,
@@ -35,117 +35,134 @@ export default async function CertificateVerificationPage(
   }
 
   return (
-    <main className="min-h-screen bg-[#f4f6f8] py-12 px-4 sm:px-6 lg:px-8 font-sans text-gray-900" dir="ltr">
-      <div className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-[#eceef1] py-10 px-4 sm:px-8 lg:px-16 font-sans text-slate-900 selection:bg-slate-900 selection:text-white" dir="ltr">
+      <div className="max-w-[1000px] mx-auto">
         
-        {/* Minimal top bar for verification status */}
-        <div className="mb-6 flex items-center justify-between text-sm text-gray-500 bg-white px-4 py-3 rounded-lg border border-gray-200 shadow-sm">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="font-semibold text-green-700 uppercase tracking-wider text-xs">Official Digital Verification</span>
+        {/* Verification Status Header */}
+        <div className="mb-8 flex items-center justify-between text-sm max-w-[800px] mx-auto px-2">
+          <div className="flex items-center gap-2.5">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="font-semibold text-slate-600 tracking-widest text-xs uppercase">
+              Secure Digital Record
+            </span>
           </div>
-          <div className="text-xs uppercase tracking-wider font-mono text-gray-400">
-            ID: {token.slice(0, 12)}
+          <div className="text-xs tracking-widest font-mono text-slate-500">
+            ID: {token.substring(0, 16)}
           </div>
         </div>
 
-        {/* Certificate Document Card */}
-        <div className="bg-white border border-gray-300 shadow-xl p-8 sm:p-16 relative">
+        {/* The Certificate Canvas */}
+        <div className="relative bg-white shadow-2xl mx-auto max-w-[800px] aspect-[1/1.414] sm:aspect-[1.414/1] flex flex-col justify-between overflow-hidden">
           
-          {/* Subtle inner borders for traditional certificate look */}
-          <div className="absolute inset-2 border-2 border-gray-100 pointer-events-none"></div>
-          <div className="absolute inset-3 border border-gray-100 pointer-events-none"></div>
+          {/* Subtle Background Pattern / Watermark */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
+          
+          {/* Intricate Border System */}
+          <div className="absolute inset-4 sm:inset-6 border-[1px] border-slate-200 pointer-events-none"></div>
+          <div className="absolute inset-5 sm:inset-[28px] border-[3px] border-slate-800 pointer-events-none"></div>
+          <div className="absolute inset-6 sm:inset-[33px] border-[1px] border-slate-200 pointer-events-none"></div>
 
-          <div className="relative z-10">
-            {/* Header / Branding */}
-            <div className="text-center mb-10">
+          {/* Corner Ornaments */}
+          <div className="absolute top-5 left-5 sm:top-[28px] sm:left-[28px] w-4 h-4 border-t-[3px] border-l-[3px] border-slate-800 pointer-events-none"></div>
+          <div className="absolute top-5 right-5 sm:top-[28px] sm:right-[28px] w-4 h-4 border-t-[3px] border-r-[3px] border-slate-800 pointer-events-none"></div>
+          <div className="absolute bottom-5 left-5 sm:bottom-[28px] sm:left-[28px] w-4 h-4 border-b-[3px] border-l-[3px] border-slate-800 pointer-events-none"></div>
+          <div className="absolute bottom-5 right-5 sm:bottom-[28px] sm:right-[28px] w-4 h-4 border-b-[3px] border-r-[3px] border-slate-800 pointer-events-none"></div>
+
+          {/* Content Wrapper */}
+          <div className="relative z-10 flex-1 flex flex-col py-12 px-10 sm:py-16 sm:px-20 text-center h-full">
+            
+            {/* Header Section */}
+            <header className="mb-10 sm:mb-12">
               <div className="flex justify-center mb-6">
                 <Image
                   src="/images/logo.svg"
                   alt="AZAFCO Logo"
-                  width={80}
-                  height={80}
+                  width={64}
+                  height={64}
                   className="object-contain"
                 />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-widest text-gray-900 uppercase">AZAFCO</h2>
-              <h3 className="text-sm sm:text-base tracking-widest text-gray-700 uppercase mt-2">International Investment & Development</h3>
-              <p className="text-xs text-gray-500 mt-2 max-w-lg mx-auto uppercase tracking-wider">
-                No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El-Sheikh, Egypt | ISO & HACCP Certified
-              </p>
-            </div>
-
-            {/* Title */}
-            <div className="text-center mb-12">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-6">
-                Certificate of Training Completion
+              <h1 className="text-xl sm:text-2xl font-bold tracking-[0.3em] text-slate-900 uppercase">
+                AZAFCO
               </h1>
-              <p className="text-base sm:text-lg text-gray-600 font-serif italic">
-                This is to certify that
-              </p>
-            </div>
-
-            {/* Holder Name */}
-            <div className="text-center mb-12">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-2">
-                {cert.holder}
-              </div>
-            </div>
-
-            {/* Program Details */}
-            <div className="text-center mb-14 max-w-2xl mx-auto">
-              <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
-                has successfully completed a one-month intensive practical training program in
-              </p>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 uppercase tracking-widest mb-4">
-                {cert.program}
+              <h2 className="text-[10px] sm:text-xs tracking-[0.2em] text-slate-600 uppercase mt-2">
+                International Investment & Development
               </h2>
-              <p className="text-base sm:text-lg text-gray-700">
-                held from {cert.startDate} to {cert.endDate}.
+              <p className="text-[8px] sm:text-[9px] text-slate-400 mt-2 tracking-widest uppercase">
+                ISO & HACCP Certified • No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El-Sheikh, Egypt
+              </p>
+            </header>
+
+            {/* Certificate Title */}
+            <div className="mb-10 sm:mb-12">
+              <h3 className="text-3xl sm:text-5xl font-serif text-slate-900 leading-none">
+                Certificate of Training
+              </h3>
+              <p className="text-sm sm:text-base text-slate-500 font-serif italic mt-6">
+                This document certifies that
               </p>
             </div>
 
-            {/* Modules */}
-            <div className="mb-16 max-w-3xl mx-auto">
-              <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
-                Training Curriculum & Covered Modules:
-              </h3>
-              <ul className="space-y-4 text-sm text-gray-800 leading-relaxed">
-                {cert.modules.map((mod, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="mr-3 text-gray-400 font-serif text-lg leading-none">•</span>
-                    <div>
-                      <span className="font-bold">{mod.title}: </span>
-                      {mod.description}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+            {/* Recipient */}
+            <div className="mb-10 sm:mb-12">
+              <h4 className="text-3xl sm:text-4xl font-serif font-semibold text-slate-900">
+                {cert.holder}
+              </h4>
+              <div className="w-16 h-[1px] bg-slate-300 mx-auto mt-6"></div>
             </div>
 
-            {/* Signatures */}
-            <div className="flex justify-between items-end pt-12 px-2 sm:px-8 mt-12">
-              <div className="text-center w-48">
-                <div className="h-px bg-gray-400 w-full mb-3"></div>
-                <p className="text-xs text-gray-600 uppercase tracking-wider font-semibold">Training & Development Manager</p>
-              </div>
-              
-              <div className="hidden sm:flex flex-col items-center justify-center opacity-80">
-                <div className="w-24 h-24 rounded-full border-4 border-double border-gray-300 flex items-center justify-center transform -rotate-12">
-                  <span className="text-[9px] text-gray-400 uppercase font-bold tracking-widest text-center">Official<br/>Verification</span>
-                </div>
-              </div>
-
-              <div className="text-center w-48">
-                <div className="h-px bg-gray-400 w-full mb-3"></div>
-                <p className="text-xs text-gray-600 uppercase tracking-wider font-semibold">Managing Director</p>
-              </div>
+            {/* Program Description */}
+            <div className="mb-12 sm:mb-14 px-4 sm:px-12 flex-1 flex flex-col justify-center">
+              <p className="text-xs sm:text-sm text-slate-600 uppercase tracking-widest leading-loose mb-3">
+                has successfully completed the intensive practical training program in
+              </p>
+              <p className="text-lg sm:text-xl font-bold text-slate-900 tracking-[0.15em] uppercase mb-3">
+                {cert.program}
+              </p>
+              <p className="text-xs sm:text-sm text-slate-500 italic font-serif">
+                concluded on {cert.endDate}
+              </p>
             </div>
+
+            {/* Footer / Signatures */}
+            <footer className="mt-auto grid grid-cols-2 gap-8 items-end px-4 sm:px-8">
+              <div className="text-center">
+                <div className="h-[1px] bg-slate-800 w-full mb-3"></div>
+                <p className="text-[9px] sm:text-[10px] text-slate-900 uppercase tracking-widest font-semibold">
+                  Training & Development
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="h-[1px] bg-slate-800 w-full mb-3"></div>
+                <p className="text-[9px] sm:text-[10px] text-slate-900 uppercase tracking-widest font-semibold">
+                  Managing Director
+                </p>
+              </div>
+            </footer>
 
           </div>
         </div>
+
+        {/* Modules Section (Moved Outside the Certificate Canvas for cleaner UI) */}
+        <div className="mt-12 bg-white p-8 sm:p-12 shadow-sm border border-slate-200 max-w-[800px] mx-auto">
+          <h5 className="text-sm font-semibold text-slate-900 uppercase tracking-widest mb-8 pb-4 border-b border-slate-100">
+            Training Curriculum & Covered Modules
+          </h5>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {cert.modules.map((mod, idx) => (
+              <div key={idx} className="group">
+                <div className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2 flex items-center">
+                  <span className="w-4 h-[1px] bg-slate-900 mr-3 opacity-20"></span>
+                  {mod.title}
+                </div>
+                <p className="text-sm text-slate-600 leading-relaxed pl-7">
+                  {mod.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </main>
   );
