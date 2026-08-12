@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
@@ -157,6 +158,9 @@ export default async function RootLayout({
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}
                 {process.env.NODE_ENV === 'production' && <Analytics />}
+                
+                {/* Vercel Speed Insights - only in production to avoid dev mode issues */}
+                {process.env.NODE_ENV === 'production' && <SpeedInsights />}
 
                 {/* Google Analytics 4 - Best Practice: afterInteractive */}
                 <Script
