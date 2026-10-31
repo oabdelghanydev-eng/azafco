@@ -192,7 +192,9 @@ export default function EUBuyersPageClient() {
                                         </span>
                                     </div>
                                     <div className="p-5">
-                                        <h3 className="text-lg font-bold text-primary-800 mb-2">{name}</h3>
+                                        <h3 className="text-lg font-bold text-primary-800 mb-2">
+                                            <Link href={`/products/${product.slug}`} className="hover:text-primary-600 hover:underline underline-offset-2">{name}</Link>
+                                        </h3>
                                         {sizes.length > 0 && (
                                             <>
                                                 <p className="text-sm font-semibold text-gray-700 mb-1">{t('eu_buyers_page.species.sizes_label')}</p>

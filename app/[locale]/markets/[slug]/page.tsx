@@ -7,6 +7,7 @@ import { companyConfig } from '@/config/company.config';
 import { activeMarkets, activeMarketSlugs, getActiveMarketBySlug } from '@/data/markets';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
+import { products as speciesList } from '@/data/products';
 
 type Props = {
     params: Promise<{ locale: string; slug: string }>;
@@ -19,6 +20,11 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
     return activeMarketSlugs.map((slug) => ({ slug }));
+}
+
+// companyConfig.products keys match data/products translationKey; map to the species page slug
+function speciesSlug(key: string) {
+    return speciesList.find((p) => p.translationKey === key)?.slug ?? '';
 }
 
 function getMarketConfig(key: string) {
@@ -111,7 +117,7 @@ export default async function MarketDetailPage({ params }: Props) {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }}
             />
             <Layout>
                 {/* Hero */}
@@ -207,15 +213,17 @@ export default async function MarketDetailPage({ params }: Props) {
                         <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {products.map((product) => (
                                 <li key={product.key} className="bg-white rounded-xl shadow-sm overflow-hidden">
-                                    <img
-                                        src={product.image}
-                                        alt={t(`data.products.${product.key}.name`)}
-                                        className="w-full h-32 object-cover"
-                                        loading="lazy"
-                                    />
-                                    <p className="p-3 font-semibold text-gray-800 text-center">
-                                        {t(`data.products.${product.key}.name`)}
-                                    </p>
+                                    <Link href={`/products/${speciesSlug(product.key)}`} className="block group">
+                                        <img
+                                            src={product.image}
+                                            alt={t(`data.products.${product.key}.name`)}
+                                            className="w-full h-32 object-cover"
+                                            loading="lazy"
+                                        />
+                                        <p className="p-3 font-semibold text-gray-800 text-center group-hover:text-primary-700 group-hover:underline underline-offset-2">
+                                            {t(`data.products.${product.key}.name`)}
+                                        </p>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
