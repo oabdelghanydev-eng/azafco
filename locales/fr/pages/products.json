@@ -6,7 +6,9 @@
         "nile": "Poissons du Nil",
         "sea": "Poissons de mer",
         "freshwater": "Eau douce",
-        "saltwater": "Eau salée"
+        "saltwater": "Eau salée",
+        "marine": "Poissons de mer",
+        "brackish": "Poissons d'eau saumâtre"
     },
     "category_fresh": "Poisson frais",
     "weight": "Poids",
@@ -32,5 +34,7 @@
         "subtitle": "Nous fournissons du poisson frais à plus de 500 grossistes, restaurants et hôtels dans le monde entier",
         "button": "Demander un devis"
     },
-    "alt_template": "{product} frais pour exportation en gros depuis l'Égypte – AZAFCO International"
+    "alt_template": "{product} frais pour exportation en gros depuis l'Égypte – AZAFCO International",
+    "marine": "Mer",
+    "brackish": "Eau saumâtre"
 }

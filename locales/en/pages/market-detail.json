@@ -1,0 +1,22 @@
+{
+    "meta_title": "Fresh Fish Exports to {country}",
+    "meta_description": "Egyptian exporter of fresh tilapia, sea bass and mullet, serving {country} since {since}. Air and land shipping with a 0–4°C cold chain.",
+    "h1": "Fresh Fish Exports to {country}",
+    "breadcrumb_label": "Breadcrumb",
+    "since_label": "Serving since",
+    "volume_label": "Monthly volume",
+    "volume_value": "+{tons} tons",
+    "shipping_label": "Shipping",
+    "shipping_value": "Air & land · 0–4°C cold chain",
+    "buyers_title": "Who we supply in {country}",
+    "products_title": "Fish we export",
+    "products_subtitle": "{count} species from Egypt, packed in EPS boxes. Sizes can be tailored to your order.",
+    "view_products": "View all products",
+    "logistics_title": "Transit times and export documents",
+    "logistics_text": "Contact our export team for current shipping schedules, transit times and the documents required to import into {country}.",
+    "contact_team": "Contact the export team",
+    "other_markets_title": "Other markets we serve",
+    "cta_title": "Importing fresh fish into {country}?",
+    "cta_text": "Tell us the species, sizes and quantities you need, and our team will prepare an offer for you.",
+    "cta_button": "Request a quote"
+}

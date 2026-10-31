@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ogLocaleMap, ogImageMap, Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import HomePageClient from './HomePageClient';
+import { PageStructuredData } from '@/components/StructuredData';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -15,7 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const siteT = await getTranslations({ locale, namespace: 'metadata.site' });
 
     return {
-        title: t('title'),
+        // Same segment as the layout, so the title template doesn't apply here
+        title: { absolute: siteT('title_default') },
         description: t('description'),
         alternates: {
             canonical: `${baseUrl}/${locale}`,
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 'ru': `${baseUrl}/ru`,
                 'de': `${baseUrl}/de`,
                 'fr': `${baseUrl}/fr`,
-                'x-default': `${baseUrl}/ar`,
+                'x-default': `${baseUrl}`,
             },
         },
         openGraph: {
@@ -55,5 +57,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    return <HomePageClient />;
+    return (
+        <>
+            <PageStructuredData locale={locale} pageType="home" />
+            <HomePageClient />
+        </>
+    );
 }

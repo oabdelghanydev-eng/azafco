@@ -1,6 +1,6 @@
 {
     "title": "Kontakt zu AZAFCO International",
-    "subtitle": "Ägyptens führender Fischexporteur – weltweiter Versand per Luft & Land",
+    "subtitle": "Frischfisch-Exporteur aus Ägypten – weltweiter Versand per Luft & Land",
     "form": {
         "name": "Vollständiger Name",
         "email": "E-Mail-Adresse",
@@ -20,11 +20,11 @@
     "whatsapp_title": "WhatsApp-Anfragen",
     "whatsapp_subtitle": "Für schnelle B2B-Anfragen",
     "whatsapp_desc": "Kontaktieren Sie unser Exportteam direkt über WhatsApp für schnelle Antworten zu Produkten, Preisen und Versand in Ihr Land.",
-    "whatsapp_note": "Rund um die Uhr erreichbar für Großhändler, Restaurants und Hotels weltweit.",
+    "whatsapp_note": "Für Großhändler, Restaurants und Hotels weltweit – der schnellste Weg bei dringenden Sendungen.",
     "b2b_title": "B2B-Partnerschaftsformular",
     "b2b_subtitle": "Großhändler, Restaurants & Hotels",
     "b2b_desc": "Füllen Sie unser B2B-Formular mit Ihren Geschäftsdaten, gewünschten Produkten, erwarteten Mengen und Zielland aus.",
-    "b2b_note": "Wir prüfen alle Partnerschaftsanfragen innerhalb von 24–48 Stunden. Aktuell exportieren wir in über 9 Länder und können weltweit liefern.",
+    "b2b_note": "Wir prüfen alle Partnerschaftsanfragen innerhalb von 24–48 Stunden. Aktuell exportieren wir in über {countries} Länder und können weltweit liefern.",
     "email_title": "Geschäftliche E-Mail",
     "email_subtitle": "Formelle B2B-Korrespondenz",
     "email_desc": "Senden Sie Anfragen, Angebotsanforderungen oder Partnerschaftsangebote per E-Mail.",
@@ -39,7 +39,7 @@
     "form_complaint": "Reklamation",
     "form_location": "Fabrikstandort – Kafr El-Sheikh, Ägypten",
     "office_hours": "Erreichbarkeit",
-    "office_hours_value": "24/7 Betrieb • Exportteam: Sa–Do 8–17 Uhr",
+    "office_hours_value": "Sa–Do 8:00–17:00 Uhr (Kairoer Zeit) • WhatsApp für dringende Sendungen",
     "locations_title": "Unsere Standorte in Ägypten",
     "locations_subtitle": "Besuchen Sie unsere EU-zugelassene Anlage in Kafr El-Sheikh",
     "channels_title": "Kontaktkanäle für B2B-Partner",
@@ -50,5 +50,50 @@
     "main_office": "Hauptniederlassung",
     "factory": "Produktionsstätte",
     "main_on_map": "Hauptniederlassung auf der Karte",
-    "factory_on_map": "Produktionsstätte auf der Karte"
+    "factory_on_map": "Produktionsstätte auf der Karte",
+    "partnership_form": {
+        "title": "Partnerschaft oder Angebot anfragen",
+        "subtitle": "Sagen Sie uns, was Sie benötigen. Unser Exportteam antwortet innerhalb von 24–48 Stunden mit Verfügbarkeit, Größen und einem Angebot.",
+        "required_hint": "Mit * gekennzeichnete Felder sind Pflichtfelder.",
+        "labels": {
+            "company": "Firmenname",
+            "name": "Ihr Name",
+            "email": "Geschäftliche E-Mail",
+            "phone": "Telefon / WhatsApp",
+            "country": "Land",
+            "species": "Gewünschte Fischarten",
+            "volume": "Erwartete Monatsmenge",
+            "message": "Nachricht"
+        },
+        "phone_hint": "Bitte mit Ländervorwahl, z. B. +49…",
+        "species_hint": "Mehrfachauswahl möglich.",
+        "volume_placeholder": "Bereich auswählen",
+        "volume_options": {
+            "under_5": "Unter 5 Tonnen/Monat",
+            "5_20": "5–20 Tonnen/Monat",
+            "20_50": "20–50 Tonnen/Monat",
+            "50_100": "50–100 Tonnen/Monat",
+            "over_100": "Über 100 Tonnen/Monat",
+            "not_sure": "Noch unklar"
+        },
+        "message_placeholder": "Größen, Verpackung, Zielhafen oder -flughafen, Lieferplan …",
+        "submit": "Anfrage senden",
+        "submitting": "Wird gesendet …",
+        "success_title": "Vielen Dank, Ihre Anfrage wurde gesendet",
+        "success_body": "Unser Exportteam meldet sich innerhalb von 24–48 Stunden per E-Mail oder WhatsApp bei Ihnen.",
+        "send_another": "Weitere Anfrage senden",
+        "error_title": "Ihre Anfrage konnte nicht gesendet werden",
+        "error_body": "Leider ist bei uns ein Fehler aufgetreten. Ihre Angaben sind noch im Formular: Versuchen Sie es später erneut oder kontaktieren Sie unser Exportteam direkt:",
+        "error_rate_limited": "Von dieser Verbindung wurden zu viele Anfragen gesendet. Bitte versuchen Sie es in einigen Minuten erneut oder kontaktieren Sie uns direkt:",
+        "fallback_whatsapp": "Per WhatsApp schreiben",
+        "privacy_note": "Wir verwenden diese Angaben ausschließlich zur Beantwortung Ihrer Anfrage.",
+        "honeypot_label": "Dieses Feld leer lassen",
+        "errors": {
+            "required": "Dieses Feld ist erforderlich.",
+            "too_long": "Maximal {max} Zeichen.",
+            "invalid_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+            "invalid_phone": "Bitte geben Sie eine gültige Telefonnummer mit Ländervorwahl ein.",
+            "invalid_option": "Bitte wählen Sie eine Option aus der Liste."
+        }
+    }
 }

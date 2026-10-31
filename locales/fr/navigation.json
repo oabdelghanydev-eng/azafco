@@ -6,10 +6,12 @@
         "markets": "Nos marchés",
         "media": "Espace médias",
         "about": "À propos",
-        "contact": "Contact"
+        "contact": "Contact",
+        "eu_buyers": "Acheteurs de l’UE",
+        "faq": "FAQ"
     },
     "footer": {
-        "description": "Entreprise égyptienne leader dans le conditionnement et l'exportation de poisson frais dans le monde entier",
+        "description": "Exportateur égyptien de poisson frais depuis 2008, avec une capacité de conditionnement allant jusqu'à 2 500 tonnes par mois",
         "quick_links": "Accès rapide",
         "contact_us": "Nous contacter",
         "partnership": "Demander un partenariat commercial",

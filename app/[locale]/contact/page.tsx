@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ogLocaleMap, ogImageMap, Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import ContactPageClient from './ContactPageClient';
+import { PageStructuredData } from '@/components/StructuredData';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -17,7 +18,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: t('title'),
         description: t('description'),
-        keywords: t('keywords'),
         alternates: {
             canonical: `${baseUrl}/${locale}/contact`,
             languages: {
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 'ru': `${baseUrl}/ru/contact`,
                 'de': `${baseUrl}/de/contact`,
                 'fr': `${baseUrl}/fr/contact`,
-                'x-default': `${baseUrl}/ar/contact`,
+                'x-default': `${baseUrl}/contact`,
             },
         },
         openGraph: {
@@ -56,5 +56,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    return <ContactPageClient />;
+    return (
+        <>
+            <PageStructuredData locale={locale} pageType="contact" />
+            <ContactPageClient />
+        </>
+    );
 }

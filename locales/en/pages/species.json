@@ -1,0 +1,23 @@
+{
+    "breadcrumb_label": "Breadcrumb",
+    "back_to_products": "Back to all products",
+    "also_known_as": "Also known as",
+    "specs_title": "Specifications",
+    "category": "Category",
+    "available_sizes": "Available sizes",
+    "storage_temp": "Storage temperature",
+    "packaging": "Packaging",
+    "availability": "Availability",
+    "ordering_title": "Ordering",
+    "cta_title": "Interested in this species?",
+    "cta_text": "Tell us the size, quantity and destination, and our export team will send you a quote.",
+    "cta_button": "Request a quote",
+    "related_title": "Other species we export",
+    "view_details": "View details",
+    "meta_title": "Fresh {name} from Egypt: Wholesale Export",
+    "meta_title_short": "Fresh {name} from Egypt",
+    "meta_description_suffix": "Sizes: {sizes}. Packed in {packaging}, {temp}.",
+    "meta_description_suffix_short": "Packed in {packaging}, {temp}. {availability}.",
+    "list_separator": ", ",
+    "scientific_name": "Scientific name"
+}

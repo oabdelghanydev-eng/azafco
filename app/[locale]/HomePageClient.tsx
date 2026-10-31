@@ -56,22 +56,13 @@ export default function HomePage() {
                     </div>
                 </div>
                 <div className="container-custom relative z-10 py-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
-                        className="text-center"
-                    >
-                        <motion.div
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ delay: 0.2, duration: 0.8 }}
-                            className="mb-8"
-                        >
+                    {/* Above the fold: CSS-only, transform-only entrance so the H1 is visible in the SSR HTML (LCP). */}
+                    <div className="text-center hero-rise">
+                        <div className="mb-8">
                             <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30">
                                 🐟 {t('home.hero.leaders_since')} {companyInfo.established}
                             </span>
-                        </motion.div>
+                        </div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                             {t('home.hero.title')}
                             <br />
@@ -102,12 +93,7 @@ export default function HomePage() {
                         </div>
 
                         {/* Stats */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.8, duration: 0.8 }}
-                            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-                        >
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                                 <div className="text-3xl md:text-4xl font-bold text-secondary-400">{companyInfo.stats.experience}</div>
                                 <div className="text-sm text-gray-300">{t('home.stats.years')}</div>
@@ -124,8 +110,8 @@ export default function HomePage() {
                                 <div className="text-3xl md:text-4xl font-bold text-secondary-400">{companyInfo.stats.certificates}</div>
                                 <div className="text-sm text-gray-300">{t('home.stats.certificates')}</div>
                             </div>
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0">
                     <svg className="w-full h-24 text-gray-50" viewBox="0 0 1440 100" fill="currentColor" preserveAspectRatio="none">

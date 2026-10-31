@@ -6,10 +6,12 @@
         "markets": "Unsere Märkte",
         "media": "Medienzentrum",
         "about": "Über uns",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "eu_buyers": "Für EU-Einkäufer",
+        "faq": "Häufige Fragen"
     },
     "footer": {
-        "description": "Führendes ägyptisches Unternehmen für Verpackung und Export von frischem Fisch",
+        "description": "Ägyptischer Exporteur von Frischfisch seit 2008, mit einer Verpackungskapazität von bis zu 2.500 Tonnen pro Monat",
         "quick_links": "Schnellzugriff",
         "contact_us": "Kontakt aufnehmen",
         "partnership": "Geschäftspartnerschaft anfragen",

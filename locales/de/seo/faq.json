@@ -2,7 +2,7 @@
     "questions": [
         {
             "question": "Welche Fischarten exportiert AZAFCO?",
-            "answer": "Wir exportieren Nil-Tilapia, Wolfsbarsch, Meeräsche (Bouri), Mubarakah, Wels, Buni, Lout und Aale. Weitere Produkte auf Anfrage erhältlich. Alle Produkte sind ISO- und HACCP-zertifiziert."
+            "answer": "Wir exportieren Nil-Tilapia, Wolfsbarsch, Meeräsche (Bouri), Karpfen, Afrikanischen Wels, Bunni, Adlerfisch (Lout) und Europäischen Aal. Weitere Produkte auf Anfrage erhältlich. Alle Produkte sind ISO- und HACCP-zertifiziert."
         },
         {
             "question": "In welche Länder exportieren Sie?",
@@ -30,11 +30,11 @@
         },
         {
             "question": "Wie viel Fisch exportieren Sie monatlich?",
-            "answer": "Wir exportieren über 2.500 Tonnen frischen Fisch monatlich in 8 Länder. Kuwait erhält über 650 Tonnen, VAE über 400 Tonnen, Katar über 350 Tonnen, Irak über 175 Tonnen und Bahrain über 100 Tonnen."
+            "answer": "Wir exportieren über 2.500 Tonnen frischen Fisch monatlich in über {countries} Länder. Kuwait erhält über 650 Tonnen, VAE über 400 Tonnen, Katar über 350 Tonnen, Irak über 175 Tonnen und Bahrain über 100 Tonnen."
         },
         {
             "question": "Wie lange ist AZAFCO schon im Geschäft?",
-            "answer": "AZAFCO International wurde 2008 in Kafr El-Sheikh, Ägypten gegründet. Wir haben über 17 Jahre Erfahrung und bedienen über 500 Kunden mit über 300 Mitarbeitern."
+            "answer": "AZAFCO International wurde 2008 in Kafr El-Sheikh, Ägypten gegründet. Wir haben über {years} Jahre Erfahrung und bedienen über 500 Kunden mit über 300 Mitarbeitern."
         },
         {
             "question": "Welche Zahlungsbedingungen bieten Sie an?",

@@ -1,8 +1,8 @@
 {
     "title": "Mercados de exportación",
-    "subtitle": "Sirviendo a mayoristas, restaurantes y hoteles en más de 9 países – exportamos a todo el mundo",
+    "subtitle": "Sirviendo a mayoristas, restaurantes y hoteles en más de {countries} países – exportamos a todo el mundo",
     "countries_title": "Destinos de exportación actuales",
-    "countries_subtitle": "Más de 17 años de experiencia • Enviamos a cualquier país por aire o tierra",
+    "countries_subtitle": "Más de {years} años de experiencia • Enviamos a cualquier país por aire o tierra",
     "advantages_title": "¿Por qué asociarse con AZAFCO?",
     "advantages_subtitle": "Proveedor de pescado de confianza de Egipto – listos para nuevos mercados a nivel mundial",
     "cta_title": "¿Listo para convertirse en nuestro socio?",

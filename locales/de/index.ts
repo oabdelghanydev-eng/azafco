@@ -10,6 +10,11 @@ import contact from './pages/contact.json';
 import certificates from './pages/certificates.json';
 import privacy from './pages/privacy.json';
 import notFound from './pages/not-found.json';
+import euBuyers from './pages/eu-buyers.json';
+import species from './pages/species.json';
+import marketDetail from './pages/market-detail.json';
+import faqPage from './pages/faq.json';
+import guides from './pages/guides.json';
 import productData from './data/products.json';
 import marketData from './data/markets.json';
 import newsData from './data/news.json';
@@ -37,6 +42,11 @@ const messages = {
     certificates_page: certificates,
     privacy,
     not_found: notFound,
+    eu_buyers_page: euBuyers,
+    species_page: species,
+    market_detail_page: marketDetail,
+    faq_page: faqPage,
+    guides_page: guides,
     data: {
         products: productData,
         markets: marketData,

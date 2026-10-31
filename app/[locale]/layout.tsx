@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
 import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
-import { companyConfig } from '@/config/company.config';
+import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
 import LocaleInitializer from '@/components/LocaleInitializer';
 import '../globals.css';
@@ -37,7 +37,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             template: t('site.title_template'),
         },
         description: t('home.description'),
-        keywords: t('home.keywords'),
         authors: [{ name: t('site.author') }],
         creator: t('site.creator'),
         publisher: t('site.publisher'),
@@ -89,7 +88,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 'ru': `${baseUrl}/ru`,
                 'de': `${baseUrl}/de`,
                 'fr': `${baseUrl}/fr`,
-                'x-default': `${baseUrl}/ar`,
+                'x-default': `${baseUrl}`,
             },
         },
     };
@@ -149,9 +148,9 @@ export default async function RootLayout({
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             </head>
             <body className={cairo.className}>
-                <NextIntlClientProvider messages={messages}>
+                <NextIntlClientProvider messages={messages} defaultTranslationValues={getFigureValues()}>
                     <LocaleInitializer />
-                    <StructuredData />
+                    <StructuredData locale={locale} />
                     {children}
                 </NextIntlClientProvider>
 

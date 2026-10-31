@@ -6,7 +6,9 @@
         "nile": "Peces del Nilo",
         "sea": "Peces de mar",
         "freshwater": "Agua dulce",
-        "saltwater": "Agua salada"
+        "saltwater": "Agua salada",
+        "marine": "Pescado de mar",
+        "brackish": "Agua salobre"
     },
     "category_fresh": "Pescado fresco",
     "weight": "Peso",
@@ -32,5 +34,7 @@
         "subtitle": "Proveemos pescado fresco a más de 500 mayoristas, restaurantes y hoteles a nivel mundial",
         "button": "Solicitar cotización"
     },
-    "alt_template": "{product} fresco para exportación mayorista desde Egipto – AZAFCO International"
+    "alt_template": "{product} fresco para exportación mayorista desde Egipto – AZAFCO International",
+    "marine": "Marino",
+    "brackish": "Agua salobre"
 }

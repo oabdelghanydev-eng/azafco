@@ -69,7 +69,9 @@ export const companyConfig = {
         whatsappNumber: '201007736419',
         website: 'azafco.com.eg',
         baseUrl: 'https://azafco.com.eg',
-        partnershipForm: 'https://forms.gle/rEYRPSP3vpW8Cggv5',
+        // On-site partnership/quote form (app/[locale]/contact, POSTs to /api/contact).
+        // Locale-less path: use with the next-intl <Link> from '@/navigation'.
+        partnershipForm: '/contact#partnership',
         social: {
             facebook: 'https://www.facebook.com/profile.php?id=100063620366349',
             whatsapp: 'https://wa.me/201007736419',
@@ -145,13 +147,13 @@ export const companyConfig = {
     // ─────────────────────────────────────────────────────────────────────────
     products: [
         { key: 'tilapia', category: 'freshwater', isMain: true, image: '/items/tilapia.jpg' },
-        { key: 'sea_bass', category: 'saltwater', isMain: true, image: '/items/sea_bass.jpg' },
-        { key: 'mullet', category: 'freshwater', isMain: true, image: '/items/bouri.jpg' },
-        { key: 'buni', category: 'saltwater', isMain: false, image: '/items/buni.jpg' },
+        { key: 'sea_bass', category: 'marine', isMain: true, image: '/items/sea_bass.jpg' },
+        { key: 'mullet', category: 'brackish', isMain: true, image: '/items/bouri.jpg' },
+        { key: 'buni', category: 'freshwater', isMain: false, image: '/items/buni.jpg' },
         { key: 'mubarakah', category: 'freshwater', isMain: false, image: '/items/mubarakah.jpg' },
         { key: 'catfish', category: 'freshwater', isMain: false, image: '/items/catfish.jpg' },
-        { key: 'lout', category: 'saltwater', isMain: false, image: '/items/lout.jpg' },
-        { key: 'eels', category: 'freshwater', isMain: false, image: '/items/eels.jpg' },
+        { key: 'lout', category: 'marine', isMain: false, image: '/items/lout.jpg' },
+        { key: 'eels', category: 'brackish', isMain: false, image: '/items/eels.jpg' },
     ],
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -182,6 +184,9 @@ export const companyConfig = {
     staticStats: {
         clients: 500,
         totalVolumeEstimate: 2500,  // Use this for display (rounded estimate)
+        // Export countries shown site-wide as "+N" (TODO: confirm with management;
+        // markets above list 7 active, 1 paused, 2 planned)
+        exportCountries: 9,
     },
 } as const;
 
@@ -213,9 +218,21 @@ export function getFormattedStats() {
     return {
         experience: `+${getYearsInBusiness()}`,
         employees: `+${companyConfig.identity.employees}`,
-        countries: '+9', // Static display value (includes paused/planned markets)
+        countries: `+${companyConfig.staticStats.exportCountries}`,
         tonnage: `+${companyConfig.staticStats.totalVolumeEstimate}`,
         certificates: `+${getCertificateCount()}`,
         clients: `+${companyConfig.staticStats.clients}`,
+    };
+}
+
+/**
+ * Figures interpolated into translations as {years}, {countries}, {isoCount}.
+ * Passed to next-intl as defaultTranslationValues so every locale stays in sync.
+ */
+export function getFigureValues() {
+    return {
+        years: getYearsInBusiness(),
+        countries: companyConfig.staticStats.exportCountries,
+        isoCount: companyConfig.certifications.filter(c => c.code.startsWith('ISO')).length,
     };
 }
