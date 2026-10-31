@@ -3,13 +3,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaNewspaper, FaIndustry, FaTrophy, FaExternalLinkAlt, FaCalendarAlt, FaImages, FaHandshake } from 'react-icons/fa';
+import { FaNewspaper, FaIndustry, FaTrophy, FaExternalLinkAlt, FaCalendarAlt, FaImages, FaHandshake, FaBookOpen } from 'react-icons/fa';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { newsItems, companyNews, industryNews, achievementNews, NewsItem } from '@/data/news';
 import { products } from '@/data/products';
 import { certificates } from '@/data/certificates';
+import { guides } from '@/data/guides';
 
 export default function MediaPageClient() {
     const locale = useLocale();
@@ -205,6 +206,34 @@ export default function MediaPageClient() {
                                 </div>
                             </motion.article>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Guides for importers */}
+            <section className="py-16 bg-white border-t border-gray-100" aria-labelledby="media-guides-title">
+                <div className="container-custom max-w-4xl text-center">
+                    <h2 id="media-guides-title" className="section-title flex items-center justify-center gap-3">
+                        <FaBookOpen className="text-primary-600" aria-hidden="true" />
+                        {t('media_page.guides_title')}
+                    </h2>
+                    <p className="section-subtitle">{t('media_page.guides_text')}</p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        {guides.map((guide) => (
+                            <Link
+                                key={guide.slug}
+                                href={`/guides/${guide.slug}`}
+                                className="btn-secondary inline-flex items-center justify-center gap-2"
+                            >
+                                {t(`guides_page.${guide.translationKey}.breadcrumb`)}
+                            </Link>
+                        ))}
+                        <Link
+                            href="/guides"
+                            className="inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-700 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-colors"
+                        >
+                            {t('media_page.guides_link')}
+                        </Link>
                     </div>
                 </div>
             </section>

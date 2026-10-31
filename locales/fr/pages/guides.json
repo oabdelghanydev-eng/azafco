@@ -1,0 +1,135 @@
+{
+    "index": {
+        "meta_title": "Guides pour importateurs de poisson",
+        "meta_description": "Guides pratiques pour les importateurs de poisson frais d'Égypte : codes SH, documents d'exportation et d'importation dans l'UE, chaîne du froid.",
+        "h1": "Guides pour importateurs de poisson",
+        "subtitle": "Des guides pratiques et sourcés pour les acheteurs qui importent du poisson frais d'Égypte.",
+        "breadcrumb": "Guides",
+        "read_guide": "Lire le guide",
+        "last_reviewed": "Dernière révision : {date}"
+    },
+    "importing": {
+        "meta_title": "Importer du poisson frais d'Égypte : codes SH",
+        "meta_description": "Codes SH de 8 espèces égyptiennes, documents d'export de poisson frais et d'import dans l'UE (certificat sanitaire, TRACES, origine), chaîne du froid.",
+        "breadcrumb": "Importer du poisson frais d'Égypte",
+        "card_summary": "Codes SH de huit espèces, documents d'un envoi de poisson frais, étapes d'importation dans l'UE et bases de la chaîne du froid.",
+        "h1": "Importer du poisson frais d'Égypte : codes SH, documents et chaîne du froid",
+        "intro": "Ce guide s'adresse aux importateurs, grossistes et distributeurs qui prévoient d'acheter du poisson entier frais ou réfrigéré en Égypte. Il présente les codes tarifaires des espèces que nous fournissons, les documents habituellement nécessaires pour un envoi, les étapes supplémentaires pour l'Union européenne et les bases pour garder le poisson au froid pendant le transport.",
+        "last_reviewed": "Dernière révision : {date}",
+        "disclaimer": "Ce guide donne des informations générales. Il ne constitue pas un conseil juridique ou douanier. Les règles évoluent : vérifiez les exigences en vigueur auprès de votre commissionnaire en douane et des autorités du pays d'importation avant d'expédier.",
+        "toc_title": "Dans ce guide",
+        "source_label": "Sources",
+        "hs": {
+            "title": "Codes SH du poisson entier frais",
+            "intro_1": "Le poisson entier frais ou réfrigéré relève de la position 0302 du Système harmonisé (SH), la nomenclature de l'Organisation mondiale des douanes. Les six premiers chiffres sont identiques dans tous les pays. Les filets (position 0304) et le poisson congelé (position 0303) ont d'autres codes.",
+            "intro_2": "L'Union européenne ajoute deux chiffres pour obtenir le code à huit chiffres de la Nomenclature combinée (NC), et la base TARIC en ajoute deux autres pour les mesures de l'UE. Les autres pays ajoutent leurs propres chiffres nationaux après les six premiers.",
+            "table_caption": "Poisson entier frais ou réfrigéré, position 0302",
+            "col_species": "Espèce",
+            "col_scientific": "Nom scientifique",
+            "col_hs": "Code SH (6 chiffres)",
+            "col_cn": "Code NC de l'UE (8 chiffres)",
+            "col_notes": "Remarques",
+            "species": {
+                "tilapia": "Tilapia du Nil",
+                "sea_bass": "Bar européen",
+                "mullet": "Mulet cabot",
+                "buni": "Bunni (barbeau du Nil)",
+                "mubarakah": "Carpe commune",
+                "catfish": "Poisson-chat africain",
+                "lout": "Maigre",
+                "eels": "Anguille européenne"
+            },
+            "notes": {
+                "other_fish": "Non désigné dans une sous-position spécifique, il relève donc de 0302.89 « autres ».",
+                "buni": "Labeobarbus ne fait pas partie des genres de carpes cités en 0302.73 : le bunni relève donc de 0302.89 ; dans l'UE, c'est un poisson d'eau douce (0302 89 10). La carpe herbivore (Ctenopharyngodon idellus) relèverait de 0302.73.",
+                "eel": "Inscrite à l'Annexe II de la CITES. Le commerce de l'anguille européenne avec les pays tiers est interdit depuis 2010 : elle ne peut pas être importée dans l'UE."
+            },
+            "after": "Codes vérifiés dans la nomenclature SH 2022 de l'OMD et dans TARIC le {date}. Le classement final relève du déclarant en douane de l'importateur. Les droits et préférences évoluent : consultez le tarif du pays d'importation (pour l'UE, TARIC ou Access2Markets) avant de calculer un prix rendu."
+        },
+        "docs": {
+            "title": "Documents d'un envoi de poisson frais",
+            "intro": "La liste exacte dépend de la destination. Voici les documents habituels d'un envoi de poisson frais depuis l'Égypte, avec les règles de l'UE comme exemple principal.",
+            "items": {
+                "invoice": {
+                    "title": "Facture commerciale",
+                    "text": "Émise par l'exportateur. Elle indique le vendeur et l'acheteur, l'espèce, le code SH, la quantité, le poids net, la valeur, la devise et l'Incoterm. La douane du pays de destination s'en sert pour calculer les droits."
+                },
+                "packing_list": {
+                    "title": "Liste de colisage",
+                    "text": "Le détail carton par carton : nombre de cartons, poids net et brut, espèce et calibre, marques. Elle permet à la compagnie aérienne, au poste frontalier et à l'acheteur de contrôler le lot."
+                },
+                "health_certificate": {
+                    "title": "Certificat sanitaire officiel",
+                    "text": "Signé par l'autorité compétente du pays exportateur. Pour l'UE, le poisson frais destiné à la consommation humaine voyage avec le modèle de certificat FISH-CRUST-HC, délivré via TRACES. L'UE ne l'accepte que si le pays est inscrit sur la liste pour ce produit. En octobre 2026, l'UE a inscrit l'Égypte pour les poissons et crustacés d'aquaculture (règlement d'exécution (UE) 2026/2228), et l'établissement qui prépare le poisson doit aussi figurer sur la liste des établissements agréés de l'UE. Les autres marchés ont leurs propres modèles."
+                },
+                "origin": {
+                    "title": "Certificat d'origine",
+                    "text": "La plupart des acheteurs et des douanes demandent une preuve de l'origine égyptienne. Dans l'UE, les marchandises égyptiennes peuvent bénéficier d'un traitement tarifaire préférentiel au titre de l'accord d'association UE-Égypte, avec un certificat de circulation EUR.1 ou EUR-MED ou une déclaration d'origine. Consultez les règles applicables à votre produit dans Access2Markets."
+                },
+                "catch": {
+                    "title": "Certificat de capture ou données d'aquaculture",
+                    "text": "L'UE exige un certificat de capture validé pour le poisson de mer sauvage, en vertu de son règlement INN. Sont exclus les produits de l'aquaculture issus d'alevins ou de larves, ainsi que le tilapia, le poisson-chat et la carpe frais (0302 71 à 0302 73) et les autres poissons d'eau douce (0302 89 10). Depuis le 10 janvier 2026, les importateurs de l'UE soumettent les certificats de capture via le système CATCH IT. Pour le poisson d'élevage, demandez à votre fournisseur les données de ferme et de lot qui relient chaque carton à son origine."
+                },
+                "ched": {
+                    "title": "Notification préalable DSCE-P (CHED-P) dans TRACES",
+                    "text": "Avant l'arrivée du poisson, l'importateur de l'UE ou son mandataire notifie le lot au poste de contrôle frontalier choisi au moyen d'un document sanitaire commun d'entrée pour les produits (DSCE-P / CHED-P) dans TRACES. Le poste de contrôle frontalier effectue des contrôles documentaires, d'identité et physiques avant la mise en libre pratique."
+                },
+                "labelling": {
+                    "title": "Étiquetage pour les acheteurs de l'UE",
+                    "text": "Le poisson proposé au consommateur final ou aux collectivités dans l'UE doit indiquer la dénomination commerciale et le nom scientifique, la méthode de production (pêché ou élevé), la zone de capture ou de production et les autres mentions de l'article 35 du règlement (UE) n° 1379/2013. Convenez des étiquettes des cartons avec votre fournisseur avant le premier envoi."
+                },
+                "cites": {
+                    "title": "Permis CITES (anguille européenne uniquement)",
+                    "text": "L'anguille européenne est inscrite à l'Annexe II de la CITES : son exportation exige un permis d'exportation CITES du pays exportateur. Depuis 2010, l'UE interdit le commerce de l'anguille européenne avec les pays tiers : elle ne peut donc pas être importée dans l'UE."
+                }
+            }
+        },
+        "cold": {
+            "title": "Les bases de la chaîne du froid",
+            "intro": "Le poisson frais est périssable : la température compte à chaque étape, de la ferme à l'entrepôt de l'acheteur. Les règles d'hygiène de l'UE imposent de maintenir les produits de la pêche frais à une température proche de celle de la glace fondante pendant le stockage et le transport.",
+            "items": {
+                "temperature": {
+                    "title": "Près de 0 °C",
+                    "text": "En pratique, les exportateurs travaillent dans une plage de 0 à 4 °C. Le poisson doit être refroidi le plus tôt possible après la récolte et rester au froid pendant le tri, l'emballage, le passage à l'aéroport et le dernier kilomètre."
+                },
+                "ice": {
+                    "title": "Glace",
+                    "text": "Le poisson entier est emballé avec de la glace pour rester à la température de la glace fondante. Renouvelez la glace aussi souvent que nécessaire pendant le stockage."
+                },
+                "boxes": {
+                    "title": "Caisses isothermes en PSE",
+                    "text": "Les caisses en polystyrène expansé (PSE / EPS) isolent le poisson et sont très utilisées en fret aérien. Fermez et étiquetez chaque caisse, et vérifiez les règles de votre compagnie aérienne pour les denrées périssables."
+                },
+                "handovers": {
+                    "title": "Transferts",
+                    "text": "Les ruptures de la chaîne du froid se produisent surtout lors des transferts : camions, terminaux de fret aérien et poste de contrôle frontalier. Organisez les réservations pour que le poisson reste le moins longtemps possible hors du froid, et conservez les relevés de température."
+                },
+                "arrival": {
+                    "title": "À l'arrivée",
+                    "text": "Contrôlez la température du poisson, la glace et l'état des caisses, et photographiez tout problème avant de signer la réception."
+                }
+            },
+            "azafco": "Comment AZAFCO expédie : notre poisson est emballé en caisses PSE (EPS), maintenu entre 0 et 4 °C et expédié réfrigéré par avion."
+        },
+        "enquiry": {
+            "title": "Comment lancer une demande",
+            "intro": "Envoyez-nous les informations ci-dessous : notre équipe export vous répondra avec les disponibilités, une offre et les documents nécessaires à votre envoi.",
+            "checklist": [
+                "Espèces et calibres",
+                "Volume approximatif et fréquence de commande",
+                "Pays et aéroport de destination",
+                "Incoterm souhaité",
+                "Documents ou certifications exigés par votre marché",
+                "Exigences d'étiquetage si vous vendez au détail dans l'UE"
+            ],
+            "cta_contact": "Envoyer une demande",
+            "cta_eu": "Informations pour les acheteurs de l'UE",
+            "species_title": "Pages espèces",
+            "species_text": "Calibres, emballage et disponibilité de chaque espèce que nous fournissons."
+        },
+        "sources": {
+            "title": "Sources",
+            "intro": "Sources officielles utilisées pour ce guide, consultées le {date}."
+        }
+    }
+}
