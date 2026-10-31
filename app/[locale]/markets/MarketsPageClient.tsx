@@ -44,19 +44,14 @@ export default function MarketsPageClient() {
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-16">
                 <div className="container-custom">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center"
-                    >
+                    <div className="text-center hero-rise">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
                             {t('markets_page.title')}
                         </h1>
                         <p className="text-xl max-w-3xl mx-auto">
                             {t('markets_page.subtitle')}
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
