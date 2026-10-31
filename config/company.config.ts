@@ -69,7 +69,9 @@ export const companyConfig = {
         whatsappNumber: '201007736419',
         website: 'azafco.com.eg',
         baseUrl: 'https://azafco.com.eg',
-        partnershipForm: 'https://forms.gle/rEYRPSP3vpW8Cggv5',
+        // On-site partnership/quote form (app/[locale]/contact, POSTs to /api/contact).
+        // Locale-less path: use with the next-intl <Link> from '@/navigation'.
+        partnershipForm: '/contact#partnership',
         social: {
             facebook: 'https://www.facebook.com/profile.php?id=100063620366349',
             whatsapp: 'https://wa.me/201007736419',
