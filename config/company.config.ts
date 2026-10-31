@@ -145,13 +145,13 @@ export const companyConfig = {
     // ─────────────────────────────────────────────────────────────────────────
     products: [
         { key: 'tilapia', category: 'freshwater', isMain: true, image: '/items/tilapia.jpg' },
-        { key: 'sea_bass', category: 'saltwater', isMain: true, image: '/items/sea_bass.jpg' },
-        { key: 'mullet', category: 'freshwater', isMain: true, image: '/items/bouri.jpg' },
-        { key: 'buni', category: 'saltwater', isMain: false, image: '/items/buni.jpg' },
+        { key: 'sea_bass', category: 'marine', isMain: true, image: '/items/sea_bass.jpg' },
+        { key: 'mullet', category: 'brackish', isMain: true, image: '/items/bouri.jpg' },
+        { key: 'buni', category: 'freshwater', isMain: false, image: '/items/buni.jpg' },
         { key: 'mubarakah', category: 'freshwater', isMain: false, image: '/items/mubarakah.jpg' },
         { key: 'catfish', category: 'freshwater', isMain: false, image: '/items/catfish.jpg' },
-        { key: 'lout', category: 'saltwater', isMain: false, image: '/items/lout.jpg' },
-        { key: 'eels', category: 'freshwater', isMain: false, image: '/items/eels.jpg' },
+        { key: 'lout', category: 'marine', isMain: false, image: '/items/lout.jpg' },
+        { key: 'eels', category: 'brackish', isMain: false, image: '/items/eels.jpg' },
     ],
 
     // ─────────────────────────────────────────────────────────────────────────

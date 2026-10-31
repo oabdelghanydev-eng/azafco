@@ -11,11 +11,13 @@ import {
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
-import { products } from '@/data/products';
+import { products, categoryLabelKey, categoryBadgeClass } from '@/data/products';
 import { companyInfo } from '@/data/company';
 
-// Eels are left out of the EU page until their EU eligibility is confirmed
-const EXCLUDED_FOR_EU = ['eels'];
+// Left out of the EU page (see docs/reports/species-identification.md):
+// - eels: European eel (Anguilla anguilla); EU import/export suspended since 2010 (CITES App. II)
+// - buni: wild-caught Nile barb, while the EU opening covers Egyptian *farmed* fish (owner to confirm species)
+const EXCLUDED_FOR_EU = ['eels', 'buni'];
 const euProducts = products.filter(p => p.available && !EXCLUDED_FOR_EU.includes(p.translationKey));
 
 type Step = { title: string; desc: string };
@@ -182,8 +184,8 @@ export default function EUBuyersPageClient() {
                                             quality={75}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
-                                        <span className={`absolute top-2 start-2 px-2 py-1 rounded text-xs font-semibold text-white ${product.category === 'river' ? 'bg-blue-500' : 'bg-cyan-500'}`}>
-                                            {product.category === 'river' ? t('products_page.freshwater') : t('products_page.saltwater')}
+                                        <span className={`absolute top-2 start-2 px-2 py-1 rounded text-xs font-semibold text-white ${categoryBadgeClass[product.category]}`}>
+                                            {t(categoryLabelKey(product.category))}
                                         </span>
                                     </div>
                                     <div className="p-5">

@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import ProductCard from '@/components/ProductCard';
-import { products } from '@/data/products';
+import { products, productCategories } from '@/data/products';
 
 export default function ProductsPageClient() {
     const t = useTranslations();
@@ -15,8 +15,10 @@ export default function ProductsPageClient() {
 
     const categories = [
         { id: 'all', name: t('products_page.filter.all') },
-        { id: 'river', name: t('products_page.filter.freshwater') },
-        { id: 'sea', name: t('products_page.filter.saltwater') },
+        // Only show filters that match at least one product
+        ...productCategories
+            .filter((category) => products.some((p) => p.category === category))
+            .map((category) => ({ id: category, name: t(`products_page.filter.${category}`) })),
     ];
 
     const filteredProducts = selectedCategory === 'all'

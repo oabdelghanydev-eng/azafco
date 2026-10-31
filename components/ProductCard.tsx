@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Product } from '../data/products'
+import { Product, categoryLabelKey, categoryBadgeClass } from '../data/products'
 import { FaThermometerHalf, FaBox, FaSearchPlus, FaArrowRight } from 'react-icons/fa'
 import ImageModal from './ImageModal'
 import { useTranslations, useLocale } from 'next-intl'
@@ -37,12 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
 
 
     // Get category label based on locale
-    const getCategoryLabel = () => {
-        if (product.category === 'river') {
-            return t('products_page.freshwater')
-        }
-        return t('products_page.saltwater')
-    }
+    const getCategoryLabel = () => t(categoryLabelKey(product.category))
 
     return (
         <>
@@ -74,10 +69,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {/* Category Badge */}
-                    <span className={`absolute top-2 ${isAr ? 'right-2' : 'left-2'} px-2 py-1 rounded text-xs font-semibold ${product.category === 'river'
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-cyan-500 text-white'
-                        }`}>
+                    <span className={`absolute top-2 ${isAr ? 'right-2' : 'left-2'} px-2 py-1 rounded text-xs font-semibold text-white ${categoryBadgeClass[product.category]}`}>
                         {getCategoryLabel()}
                     </span>
                     {/* Zoom hint */}
