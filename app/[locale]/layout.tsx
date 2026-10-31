@@ -9,6 +9,7 @@ import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
 import LocaleInitializer from '@/components/LocaleInitializer';
+import LeadTracking from '@/components/LeadTracking';
 import '../globals.css';
 
 // Configure Cairo font with next/font for optimal loading (same as original)
@@ -150,6 +151,7 @@ export default async function RootLayout({
             <body className={cairo.className}>
                 <NextIntlClientProvider messages={messages} defaultTranslationValues={getFigureValues()}>
                     <LocaleInitializer />
+                    <LeadTracking />
                     <StructuredData locale={locale} />
                     {children}
                 </NextIntlClientProvider>
