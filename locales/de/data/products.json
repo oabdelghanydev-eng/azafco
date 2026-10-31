@@ -2,6 +2,7 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
+            "Buntbarsch",
             "Niltilapia"
         ],
         "description": "Premium Niltilapia aus zertifizierten ägyptischen Farmen. Unser #1 Exportprodukt. HACCP-zertifiziert mit vollständiger Kühlkette.",
@@ -19,8 +20,9 @@
     "sea_bass": {
         "name": "Wolfsbarsch",
         "alt_names": [
-            "Europäischer Wolfsbarsch",
-            "Loup de Mer"
+            "Seebarsch",
+            "Loup de Mer",
+            "Europäischer Wolfsbarsch"
         ],
         "description": "Premium Europäischer Wolfsbarsch, perfekt zum Grillen, Braten und für gehobene Küche. Restaurantfavorit in der Golfregion.",
         "sizes": [
@@ -85,9 +87,9 @@
         "availability": "Ganzjährig verfügbar"
     },
     "catfish": {
-        "name": "Afrikanischer Raubwels",
+        "name": "Afrikanischer Wels",
         "alt_names": [
-            "Afrikanischer Wels",
+            "Afrikanischer Raubwels",
             "Clarias-Wels"
         ],
         "description": "Frischer Afrikanischer Raubwels aus ägyptischen Süßwasserfarmen. Beliebte Wahl für Restaurants und Distributoren.",
@@ -104,6 +106,7 @@
     "lout": {
         "name": "Adlerfisch",
         "alt_names": [
+            "Maigre",
             "Umberfisch",
             "Lout"
         ],

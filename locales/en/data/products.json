@@ -20,7 +20,9 @@
         "name": "Sea Bass",
         "alt_names": [
             "European Seabass",
-            "Mediterranean Sea Bass"
+            "European Bass",
+            "Mediterranean Sea Bass",
+            "Branzino"
         ],
         "description": "Premium European sea bass, perfect for grilling, frying, and fine dining. Restaurant favorite across Gulf region.",
         "sizes": [
@@ -55,6 +57,7 @@
         "name": "Bunni",
         "alt_names": [
             "Nile Barb",
+            "Niger Barb",
             "Binny"
         ],
         "description": "Fresh bunni, a freshwater barb native to the Nile. Excellent texture and flavor profile.",
@@ -107,7 +110,8 @@
         "name": "Meagre",
         "alt_names": [
             "Lout",
-            "Croaker"
+            "Croaker",
+            "Corvina"
         ],
         "description": "Fresh meagre (lout) with firm white flesh. Premium quality for upscale restaurants and hotels.",
         "sizes": [

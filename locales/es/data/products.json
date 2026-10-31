@@ -19,8 +19,9 @@
     "sea_bass": {
         "name": "Lubina",
         "alt_names": [
+            "Róbalo",
             "Lubina europea",
-            "Róbalo"
+            "Llobarro"
         ],
         "description": "Lubina europea premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
         "sizes": [
@@ -36,8 +37,9 @@
     "mullet": {
         "name": "Mújol (Bouri)",
         "alt_names": [
-            "Pardete",
+            "Mugil",
             "Lisa",
+            "Pardete",
             "Bouri"
         ],
         "description": "Mújol egipcio fresco, criado en aguas salobres. Excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
@@ -87,8 +89,9 @@
     "catfish": {
         "name": "Pez gato africano",
         "alt_names": [
-            "Siluro africano",
-            "Clarias"
+            "Clarias",
+            "Tinto",
+            "Siluro africano"
         ],
         "description": "Pez gato africano fresco de granjas egipcias de agua dulce. Opción popular para restaurantes y distribuidores.",
         "sizes": [
@@ -104,8 +107,8 @@
     "lout": {
         "name": "Corvina",
         "alt_names": [
-            "Lout",
-            "Corvina común"
+            "Corvina real",
+            "Lout"
         ],
         "description": "Corvina fresca de carne blanca y firme. Calidad premium para restaurantes y hoteles de alta gama.",
         "sizes": [

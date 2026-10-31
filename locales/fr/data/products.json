@@ -20,6 +20,8 @@
         "name": "Bar",
         "alt_names": [
             "Loup de mer",
+            "Loup",
+            "Bar commun",
             "Bar européen"
         ],
         "description": "Bar européen premium, parfait pour griller, frire et la haute cuisine. Favori des restaurants dans la région du Golfe.",
@@ -37,6 +39,7 @@
         "name": "Mulet (Bouri)",
         "alt_names": [
             "Mulet cabot",
+            "Mulet à grosse tête",
             "Mulet gris",
             "Bouri"
         ],
@@ -104,6 +107,7 @@
     "lout": {
         "name": "Maigre",
         "alt_names": [
+            "Maigre commun",
             "Courbine",
             "Lout"
         ],
