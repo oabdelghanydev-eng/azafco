@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "title": "Poisson frais d'Égypte pour importateurs de l'UE",
+        "description": "Dès le 4 nov. 2026, le poisson d'élevage égyptien peut entrer dans les 27 pays de l'UE. AZAFCO : tilapia, bar et mulet frais à 0–4 °C. Demandez un devis."
+    },
+    "breadcrumb": "Acheteurs UE",
+    "hero": {
+        "badge": "Le marché de l'UE ouvre le 4 novembre 2026",
+        "title": "Poisson frais d'Égypte pour les importateurs et grossistes de l'UE",
+        "subtitle": "AZAFCO exporte du poisson frais de Kafr El-Sheikh depuis 2008. Alors que l'Union européenne s'ouvre au poisson d'élevage égyptien, nous recevons les demandes des importateurs, grossistes et distributeurs de toute l'Europe.",
+        "cta_contact": "Demander un devis",
+        "cta_species": "Voir nos espèces"
+    },
+    "opening": {
+        "title": "Ce qui change le 4 novembre 2026",
+        "p1": "À partir du 4 novembre 2026, le poisson d'élevage égyptien peut être exporté vers les 27 États membres de l'Union européenne. Pour les acheteurs européens, c'est une nouvelle source de poisson frais : l'Égypte est le premier pays aquacole d'Afrique et le sixième au monde.",
+        "p2": "Notre usine se trouve à Kafr El-Sheikh, le gouvernorat qui produit près de la moitié du poisson égyptien. Nous travaillons avec cette production chaque jour et sommes prêts à discuter espèces, calibres et volumes avec les acheteurs de l'UE."
+    },
+    "about": {
+        "title": "Qui sommes-nous",
+        "p1": "AZAFCO International Investment & Development est un exportateur égyptien de poisson frais pour les professionnels (B2B), fondé en 2008 à Kafr El-Sheikh. Nous approvisionnons distributeurs, grossistes, restaurants et hôtels, avec une capacité de plus de 2 500 tonnes par mois et plus de 500 clients.",
+        "p2": "L'Europe n'est pas nouvelle pour nous : notre première expédition vers l'Espagne date de 2018. Aujourd'hui, notre poisson part vers des acheteurs du Golfe et du Moyen-Orient, et notre équipe export est joignable 24 h/24.",
+        "link": "En savoir plus sur AZAFCO"
+    },
+    "stats": {
+        "years": "Années d'export",
+        "tonnage": "Tonnes par mois",
+        "clients": "Clients",
+        "employees": "Employés"
+    },
+    "species": {
+        "title": "Les espèces que nous fournissons",
+        "subtitle": "Du poisson frais calibré selon les besoins de votre marché. Des calibres sur mesure sont possibles pour toutes les espèces.",
+        "sizes_label": "Calibres",
+        "note": "Indiquez-nous les espèces et calibres souhaités, et nous vous confirmerons ce que nous pouvons livrer vers votre destination dans l'UE.",
+        "view_all": "Voir tous les produits"
+    },
+    "process": {
+        "title": "Comment commander",
+        "subtitle": "Quatre étapes de votre première demande à la livraison",
+        "steps": [
+            {
+                "title": "Envoyez votre demande",
+                "desc": "Indiquez-nous les espèces, calibres, volumes et la destination souhaités, via notre page contact, WhatsApp ou e-mail."
+            },
+            {
+                "title": "Validation des détails",
+                "desc": "Nous confirmons la disponibilité, les calibres, l'emballage et les documents d'exportation nécessaires à votre envoi, puis nous vous adressons un devis."
+            },
+            {
+                "title": "Calibrage et emballage",
+                "desc": "Votre poisson est calibré selon vos tailles et emballé en caisses EPS, maintenu entre 0 et 4 °C en permanence."
+            },
+            {
+                "title": "Expédition",
+                "desc": "Votre commande voyage réfrigérée par fret aérien, et notre équipe reste en contact avec vous jusqu'à son arrivée."
+            }
+        ]
+    },
+    "shipping": {
+        "title": "Chaîne du froid et emballage",
+        "subtitle": "Le poisson frais demande du soin à chaque étape, de notre usine à votre entrepôt",
+        "items": [
+            {
+                "title": "Chaîne du froid 0–4 °C",
+                "desc": "Température contrôlée de la pêche à la livraison."
+            },
+            {
+                "title": "Caisses EPS",
+                "desc": "Le poisson est emballé dans des caisses isothermes en EPS pour l'export."
+            },
+            {
+                "title": "Fret aérien",
+                "desc": "Nous expédions le poisson réfrigéré par avion vers des destinations du monde entier."
+            },
+            {
+                "title": "Approvisionnement toute l'année",
+                "desc": "Nos espèces sont disponibles toute l'année, avec des calibres et des volumes adaptés à vos besoins."
+            }
+        ]
+    },
+    "quality": {
+        "title": "Qualité et certifications",
+        "text": "La sécurité alimentaire et le management de la qualité sont au cœur de notre activité, avec des systèmes ISO et HACCP. Vous trouverez les détails sur notre page certificats, et pouvez nous demander des copies à jour avec votre demande.",
+        "link": "Voir nos certificats"
+    },
+    "cta": {
+        "title": "Vous achetez du poisson frais pour le marché de l'UE ?",
+        "subtitle": "Dites-nous ce dont vous avez besoin. Notre équipe export vous répondra avec les disponibilités et un devis.",
+        "button": "Contacter notre équipe export"
+    }
+}

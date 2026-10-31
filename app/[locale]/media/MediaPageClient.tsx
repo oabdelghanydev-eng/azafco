@@ -192,6 +192,15 @@ export default function MediaPageClient() {
                                                 )}
                                             </div>
                                         )}
+
+                                        {news.internalLink && (
+                                            <Link
+                                                href={news.internalLink}
+                                                className="inline-block mt-3 text-primary-600 font-semibold hover:underline"
+                                            >
+                                                {t('common.learn_more')}
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             </motion.article>

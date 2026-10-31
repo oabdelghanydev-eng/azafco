@@ -123,7 +123,13 @@ export default function MarketsPageClient() {
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-xl font-bold text-primary-800 group-hover:text-primary-600 transition-colors">
-                                            {t(`data.markets.${market.translationKey}.country`)}
+                                            {market.active ? (
+                                                <Link href={`/markets/${market.slug}`} className="hover:underline underline-offset-4">
+                                                    {t(`data.markets.${market.translationKey}.country`)}
+                                                </Link>
+                                            ) : (
+                                                t(`data.markets.${market.translationKey}.country`)
+                                            )}
                                         </h3>
                                         {market.status === 'paused' && (
                                             <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">

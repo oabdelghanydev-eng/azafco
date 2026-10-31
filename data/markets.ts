@@ -14,6 +14,10 @@ export interface Market {
     // Translation key for market data (e.g., 'uae', 'kuwait')
     // Used to lookup translations at data.markets.[key]
     translationKey: string;
+    // URL slug for the market detail page (/[locale]/markets/[slug])
+    slug: string;
+    // True only for markets with status 'active' in config (these get a detail page)
+    active: boolean;
     flag: string;
     // For coming-soon status, use translationKey 'coming_soon' to lookup t('common.coming_soon')
     since: string;
@@ -30,9 +34,21 @@ function mapStatus(status: MarketStatus): 'paused' | 'coming-soon' | undefined {
 // Derive markets from config - ORDER IS FROM CONFIG (Kuwait #1)
 export const markets: Market[] = companyConfig.markets.map(m => ({
     translationKey: m.key,
+    slug: m.key,
+    active: m.status === 'active',
     flag: `/flags/${m.countryCode.toLowerCase()}.svg`,
     since: m.since ? String(m.since) : 'coming_soon',
     status: mapStatus(m.status),
 }));
 
 export const marketCountries = markets.filter(m => m.status !== 'coming-soon');
+
+// Active markets only - each has a detail page at /[locale]/markets/[slug]
+export const activeMarkets = markets.filter(m => m.active);
+
+// Slugs of active markets (used by generateStaticParams and the sitemap)
+export const activeMarketSlugs: string[] = activeMarkets.map(m => m.slug);
+
+export function getActiveMarketBySlug(slug: string): Market | undefined {
+    return activeMarkets.find(m => m.slug === slug);
+}
