@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
+import { productSlugs } from '@/data/products';
+import { activeMarketSlugs } from '@/data/markets';
 
 const baseUrl = companyConfig.contact.baseUrl;
 
@@ -13,6 +15,10 @@ const pages = [
     { path: 'markets', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'media', priority: 0.7, changeFrequency: 'weekly' as const },
     { path: 'certificates', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: 'eu-buyers', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: 'faq', priority: 0.6, changeFrequency: 'monthly' as const },
+    ...productSlugs.map((slug) => ({ path: `products/${slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
+    ...activeMarketSlugs.map((slug) => ({ path: `markets/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
 ];
 
 const pageUrl = (locale: string, path: string) =>

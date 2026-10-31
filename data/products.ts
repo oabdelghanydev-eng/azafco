@@ -3,6 +3,8 @@ export type ProductCategory = 'river' | 'sea'
 
 export interface Product {
     id: number
+    // English, URL-safe slug for the species page: /[locale]/products/[slug]
+    slug: string
     // Translation key for product data (e.g., 'tilapia', 'sea_bass')
     // Used to lookup translations at data.products.[key]
     translationKey: string
@@ -15,6 +17,7 @@ export interface Product {
 export const products: Product[] = [
     {
         id: 1,
+        slug: 'tilapia',
         translationKey: 'tilapia',
         category: 'river',
         image: '/items/tilapia.jpg',
@@ -22,6 +25,7 @@ export const products: Product[] = [
     },
     {
         id: 2,
+        slug: 'sea-bass',
         translationKey: 'sea_bass',
         category: 'sea',
         image: '/items/sea_bass.jpg',
@@ -29,6 +33,7 @@ export const products: Product[] = [
     },
     {
         id: 3,
+        slug: 'mullet',
         translationKey: 'mullet',
         category: 'river',
         image: '/items/bouri.jpg',
@@ -36,6 +41,7 @@ export const products: Product[] = [
     },
     {
         id: 4,
+        slug: 'buni',
         translationKey: 'buni',
         category: 'sea',
         image: '/items/buni.jpg',
@@ -43,6 +49,7 @@ export const products: Product[] = [
     },
     {
         id: 5,
+        slug: 'mubarakah',
         translationKey: 'mubarakah',
         category: 'river',
         image: '/items/mubarakah.jpg',
@@ -50,6 +57,7 @@ export const products: Product[] = [
     },
     {
         id: 6,
+        slug: 'catfish',
         translationKey: 'catfish',
         category: 'river',
         image: '/items/catfish.jpg',
@@ -57,6 +65,7 @@ export const products: Product[] = [
     },
     {
         id: 7,
+        slug: 'lout',
         translationKey: 'lout',
         category: 'sea',
         image: '/items/lout.jpg',
@@ -64,12 +73,20 @@ export const products: Product[] = [
     },
     {
         id: 8,
+        slug: 'eel',
         translationKey: 'eels',
         category: 'river',
         image: '/items/eels.jpg',
         available: true,
     },
 ]
+
+// All species-page slugs (used by generateStaticParams and the sitemap)
+export const productSlugs: string[] = products.map((p) => p.slug)
+
+export function getProductBySlug(slug: string): Product | undefined {
+    return products.find((p) => p.slug === slug)
+}
 
 // Products for homepage preview (first 4)
 export const featuredProducts = products.slice(0, 4)

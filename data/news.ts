@@ -8,6 +8,9 @@ export interface NewsItem {
     translationKey: string
     date: string
     sourceUrl?: string
+    // Optional internal page this post points to (locale-agnostic path, e.g. '/eu-buyers').
+    // Render with the locale-aware Link from '@/navigation'.
+    internalLink?: string
     image?: string
     category: NewsCategory
 }
@@ -16,6 +19,13 @@ export interface NewsItem {
 // Source names are now in translations at data.news.[translationKey].source
 export const newsItems: NewsItem[] = [
     // === Company News ===
+    {
+        id: 11,
+        translationKey: 'eu_market_opening',
+        date: '2026-10-31',
+        internalLink: '/eu-buyers',
+        category: 'company',
+    },
     {
         id: 1,
         translationKey: 'governor_visit',

@@ -1,0 +1,22 @@
+{
+    "breadcrumb_label": "مسار التنقل",
+    "back_to_products": "العودة إلى جميع المنتجات",
+    "also_known_as": "يُعرف أيضًا باسم",
+    "specs_title": "المواصفات",
+    "category": "الفئة",
+    "available_sizes": "الأحجام المتوفرة",
+    "storage_temp": "درجة حرارة الحفظ",
+    "packaging": "التعبئة",
+    "availability": "التوفر",
+    "ordering_title": "معلومات الطلب",
+    "cta_title": "مهتم بهذا الصنف؟",
+    "cta_text": "أخبرنا بالحجم والكمية ووجهة الشحن، وسيرسل لك فريق التصدير عرض سعر.",
+    "cta_button": "اطلب عرض سعر",
+    "related_title": "أصناف أخرى نصدّرها",
+    "view_details": "عرض التفاصيل",
+    "meta_title": "مورّد {name} بالجملة من مصر",
+    "meta_title_short": "{name} من مصر",
+    "meta_description_suffix": "الأحجام: {sizes}. التعبئة: {packaging}، {temp}.",
+    "meta_description_suffix_short": "التعبئة: {packaging}، {temp}. {availability}.",
+    "list_separator": "، "
+}

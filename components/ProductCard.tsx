@@ -2,9 +2,10 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Product } from '../data/products'
-import { FaThermometerHalf, FaBox, FaSearchPlus } from 'react-icons/fa'
+import { FaThermometerHalf, FaBox, FaSearchPlus, FaArrowRight } from 'react-icons/fa'
 import ImageModal from './ImageModal'
 import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/navigation'
 
 interface ProductCardProps {
     product: Product
@@ -17,6 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
     const locale = useLocale()
     const [isModalOpen, setIsModalOpen] = useState(false)
     const isAr = locale === 'ar'
+    const speciesHref = `/products/${product.slug}`
 
     // Get product data from translations using the translation key
     const productName = t(`data.products.${product.translationKey}.name`)
@@ -84,7 +86,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                 {/* Product Info */}
                 <div className="p-3 md:p-5">
                     <h3 className="text-base md:text-xl font-bold text-primary-800 mb-1">
-                        {productName}
+                        <Link href={speciesHref} className="hover:text-primary-600 hover:underline underline-offset-2">
+                            {productName}
+                        </Link>
                     </h3>
 
                     {/* Alt Names for SEO - long-tail keywords */}
@@ -123,6 +127,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                             </div>
                         </>
                     )}
+
+                    {/* Link to the species page */}
+                    <Link
+                        href={speciesHref}
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:text-primary-800 hover:underline underline-offset-2"
+                    >
+                        {t('species_page.view_details')}
+                        <span className="sr-only"> {productName}</span>
+                        <FaArrowRight className="text-xs rtl:rotate-180" aria-hidden="true" />
+                    </Link>
                 </div>
             </motion.article>
 

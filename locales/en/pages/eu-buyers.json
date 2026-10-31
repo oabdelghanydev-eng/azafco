@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "title": "Fresh Egyptian Fish for EU Importers & Wholesalers",
+        "description": "From 4 Nov 2026, Egyptian farmed fish can be sold in all 27 EU countries. AZAFCO supplies fresh tilapia, sea bass and mullet at 0–4°C. Request a quote."
+    },
+    "breadcrumb": "EU Buyers",
+    "hero": {
+        "badge": "The EU market opens on 4 November 2026",
+        "title": "Fresh Fish from Egypt for EU Importers and Wholesalers",
+        "subtitle": "AZAFCO has exported fresh fish from Kafr El Sheikh since 2008. As the European Union opens to Egyptian farmed fish, we are taking enquiries from importers, wholesalers and distributors across Europe.",
+        "cta_contact": "Request a Quote",
+        "cta_species": "See Our Species"
+    },
+    "opening": {
+        "title": "What changes on 4 November 2026",
+        "p1": "From 4 November 2026, Egyptian farmed fish can be exported to all 27 member states of the European Union. For EU buyers, that opens a new source of fresh fish: Egypt ranks first in Africa and sixth in the world in aquaculture.",
+        "p2": "Our factory is in Kafr El Sheikh, the governorate that produces nearly half of Egypt's fish. We work with this supply every day, and we are ready to talk to EU buyers about species, sizes and volumes."
+    },
+    "about": {
+        "title": "Who we are",
+        "p1": "AZAFCO International Investment & Development is an Egyptian B2B fresh fish exporter, founded in 2008 in Kafr El Sheikh. We supply distributors, wholesalers, restaurants and hotels, with a capacity of more than 2,500 tonnes a month and more than 500 clients.",
+        "p2": "Europe is not new to us: we first shipped to Spain in 2018. Today our fish goes to buyers across the Gulf and the Middle East, and our export team is available around the clock.",
+        "link": "More about AZAFCO"
+    },
+    "stats": {
+        "years": "Years exporting",
+        "tonnage": "Tonnes a month",
+        "clients": "Clients",
+        "employees": "Employees"
+    },
+    "species": {
+        "title": "Species we supply",
+        "subtitle": "Fresh fish graded to the sizes your market needs. Custom sizes are available for every species.",
+        "sizes_label": "Sizes",
+        "note": "Tell us which species and sizes you need, and we will confirm what we can supply to your EU destination.",
+        "view_all": "View all products"
+    },
+    "process": {
+        "title": "How ordering works",
+        "subtitle": "Four steps from your first enquiry to delivery",
+        "steps": [
+            {
+                "title": "Send your enquiry",
+                "desc": "Tell us the species, sizes, volumes and destination you need, through our contact page, WhatsApp or email."
+            },
+            {
+                "title": "Agree the details",
+                "desc": "We confirm availability, sizing, packing and the export documents your shipment needs, then send you a quote."
+            },
+            {
+                "title": "Grading and packing",
+                "desc": "Your fish is graded to your sizes and packed in EPS boxes, kept at 0–4°C throughout."
+            },
+            {
+                "title": "Shipping",
+                "desc": "Your order travels chilled by air freight, and our team stays in touch with you until it arrives."
+            }
+        ]
+    },
+    "shipping": {
+        "title": "Cold chain and packing",
+        "subtitle": "Fresh fish needs care at every stage, from our factory to your warehouse",
+        "items": [
+            {
+                "title": "0–4°C cold chain",
+                "desc": "Temperature controlled from catch to delivery."
+            },
+            {
+                "title": "EPS boxes",
+                "desc": "Fish is packed in insulated EPS boxes for export."
+            },
+            {
+                "title": "Air freight",
+                "desc": "We ship chilled fish by air to destinations worldwide."
+            },
+            {
+                "title": "Year-round supply",
+                "desc": "Our species are available all year, with sizes and order volumes tailored to you."
+            }
+        ]
+    },
+    "quality": {
+        "title": "Quality and certifications",
+        "text": "Food safety and quality management are central to how we work, built on ISO and HACCP systems. Our certificates page has the details, and you can ask us for current copies when you enquire.",
+        "link": "View our certificates"
+    },
+    "cta": {
+        "title": "Buying fresh fish for the EU market?",
+        "subtitle": "Tell us what you need. Our export team will reply with availability and a quote.",
+        "button": "Contact Our Export Team"
+    }
+}
