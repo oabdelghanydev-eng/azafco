@@ -2,11 +2,11 @@
     "questions": [
         {
             "question": "What types of fish does AZAFCO export?",
-            "answer": "We export Nile Tilapia, Sea Bass, Mullet (Bouri), Mubarakah, Catfish, Buni, Lout, and Eels. Additional products are available upon request. All products are ISO and HACCP certified."
+            "answer": "We export Nile tilapia, European seabass, grey mullet (bouri), common carp (mubarakah), African catfish, bunni, meagre (lout), and European eel. Additional products are available upon request. All products are ISO and HACCP certified."
         },
         {
             "question": "Which countries do you export to?",
-            "answer": "We currently export to Kuwait (our largest market), UAE, Qatar, Iraq, Bahrain, and Lebanon. We have EU export approval and can ship worldwide via air and land. Contact us to discuss exporting to your country."
+            "answer": "We currently export to Kuwait (our largest market), UAE, Qatar, Iraq, Syria, Bahrain, and Lebanon. We have EU export approval and can ship worldwide via air and land. Contact us to discuss exporting to your country."
         },
         {
             "question": "What quality certifications do you have?",
@@ -26,7 +26,7 @@
         },
         {
             "question": "What are your working hours?",
-            "answer": "We operate 24/7 to serve our international clients across different time zones. You can reach us anytime via WhatsApp at +20-100-7736419."
+            "answer": "Our office hours are Saturday to Thursday, 8:00–17:00 (Cairo time). For urgent shipments, message us on WhatsApp at +20-100-7736419."
         },
         {
             "question": "How much fish do you export monthly?",
@@ -47,6 +47,22 @@
         {
             "question": "Do you supply restaurants and hotels?",
             "answer": "Yes! We serve distributors, restaurants of all sizes, hotels, catering companies, and supermarket chains across the Gulf region and internationally."
+        },
+        {
+            "question": "Can you export to countries outside your current markets?",
+            "answer": "Our current active markets are Kuwait, UAE, Qatar, Iraq, Syria, Bahrain, and Lebanon. For other countries, contact us so we can check feasibility and calculate shipping costs to your country. We ship by air and land with a 0-4°C cold chain."
+        },
+        {
+            "question": "What are your wholesale prices for tilapia and sea bass?",
+            "answer": "Our wholesale prices are competitive and depend on quantity, fish type, and delivery destination. For a detailed quote, contact us at business@azafco.com.eg or via WhatsApp. We reply within 24 hours."
+        },
+        {
+            "question": "Why import fish from Egypt?",
+            "answer": "Egypt is Africa's largest fish producer and ranks 6th in the world in aquaculture. Kafr El Sheikh, where we are based, produces 50% of Egypt's fish. Our tilapia comes from the Nile Delta, whose climate is ideal for it, giving consistent quality at competitive prices."
+        },
+        {
+            "question": "Is AZAFCO fish traceable?",
+            "answer": "Yes, all our products are fully traceable from source (farm or catch) to delivery. Our ISO 22000 and HACCP certifications ensure complete documentation and transparency for all our B2B clients."
         }
     ]
 }
