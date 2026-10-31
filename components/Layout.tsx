@@ -165,14 +165,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href={companyConfig.contact.partnershipForm}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary-400 transition-colors"
-                    >
+                    <Link href={companyConfig.contact.partnershipForm} className="hover:text-primary-400 transition-colors">
                       {t('footer.partnership')}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
