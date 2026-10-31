@@ -267,7 +267,7 @@ export default async function MarketDetailPage({ params }: Props) {
                                             href={`/markets/${m.slug}`}
                                             className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 hover:border-primary-500 hover:text-primary-700 transition-colors"
                                         >
-                                            <img src={m.flag} alt="" className="w-6 h-4 object-cover rounded-sm" width={24} height={16} loading="lazy" />
+                                            <img src={m.flag} alt="" aria-hidden="true" className="w-6 h-4 object-cover rounded-sm" width={24} height={16} loading="lazy" />
                                             {t(`data.markets.${m.translationKey}.country`)}
                                         </Link>
                                     </li>
