@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ogLocaleMap, ogImageMap, Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import AboutPageClient from './AboutPageClient';
+import { PageStructuredData } from '@/components/StructuredData';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -17,7 +18,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: t('title'),
         description: t('description'),
-        keywords: t('keywords'),
         alternates: {
             canonical: `${baseUrl}/${locale}/about`,
             languages: {
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 'ru': `${baseUrl}/ru/about`,
                 'de': `${baseUrl}/de/about`,
                 'fr': `${baseUrl}/fr/about`,
-                'x-default': `${baseUrl}/ar/about`,
+                'x-default': `${baseUrl}/about`,
             },
         },
         openGraph: {
@@ -56,5 +56,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    return <AboutPageClient />;
+    return (
+        <>
+            <PageStructuredData locale={locale} pageType="about" />
+            <AboutPageClient />
+        </>
+    );
 }

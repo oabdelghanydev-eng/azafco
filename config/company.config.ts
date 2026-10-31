@@ -182,6 +182,9 @@ export const companyConfig = {
     staticStats: {
         clients: 500,
         totalVolumeEstimate: 2500,  // Use this for display (rounded estimate)
+        // Export countries shown site-wide as "+N" (TODO: confirm with management;
+        // markets above list 7 active, 1 paused, 2 planned)
+        exportCountries: 9,
     },
 } as const;
 
@@ -213,9 +216,21 @@ export function getFormattedStats() {
     return {
         experience: `+${getYearsInBusiness()}`,
         employees: `+${companyConfig.identity.employees}`,
-        countries: '+9', // Static display value (includes paused/planned markets)
+        countries: `+${companyConfig.staticStats.exportCountries}`,
         tonnage: `+${companyConfig.staticStats.totalVolumeEstimate}`,
         certificates: `+${getCertificateCount()}`,
         clients: `+${companyConfig.staticStats.clients}`,
+    };
+}
+
+/**
+ * Figures interpolated into translations as {years}, {countries}, {isoCount}.
+ * Passed to next-intl as defaultTranslationValues so every locale stays in sync.
+ */
+export function getFigureValues() {
+    return {
+        years: getYearsInBusiness(),
+        countries: companyConfig.staticStats.exportCountries,
+        isoCount: companyConfig.certifications.filter(c => c.code.startsWith('ISO')).length,
     };
 }

@@ -1,10 +1,10 @@
 {
     "hero": {
-        "title": "AZAFCO International",
-        "title_subtitle": "Investment & Entwicklung",
+        "title": "Frischfisch-Exporteur aus Ägypten",
+        "title_subtitle": "Tilapia, Meeräsche & Wolfsbarsch",
         "leaders_since": "Führend im Frischfischexport seit",
         "subtitle": "Premium-Frischfischexport aus Ägypten – weltweit",
-        "description": "Ägyptens führender B2B-Fischexporteur für Großhändler, Restaurants und Hotels weltweit. Über 2.500 Tonnen monatlich mit ISO- und HACCP-Zertifizierung. Versand per Luft und Land an jedes Ziel.",
+        "description": "B2B-Fischexporteur aus Ägypten für Großhändler, Restaurants und Hotels weltweit. Über 2.500 Tonnen monatlich mit ISO- und HACCP-Zertifizierung. Versand per Luft und Land an jedes Ziel.",
         "cta_whatsapp": "Über WhatsApp kontaktieren",
         "cta_partnership": "Partnerschaft anfragen",
         "background_alt": "AZAFCO Fischverarbeitungsfabrik in Ägypten"
@@ -25,12 +25,12 @@
         "subtitle": "Ägyptens renommierter Fischexporteur seit 2008",
         "quality": "ISO & HACCP zertifiziert",
         "fresh": "Frisch & sicher",
-        "experience": "Über 17 Jahre Erfahrung",
+        "experience": "Über {years} Jahre Erfahrung",
         "global": "Weltweiter Export"
     },
     "cta": {
         "title": "Bereit für eine Partnerschaft?",
-        "description": "Werden Sie Teil von über 500 zufriedenen Großhändlern und Restaurants in mehr als 9 Ländern weltweit",
+        "description": "Werden Sie Teil von über 500 zufriedenen Großhändlern und Restaurants in mehr als {countries} Ländern weltweit",
         "button": "Partnerschaft starten"
     },
     "features": {

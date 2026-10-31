@@ -1,10 +1,10 @@
 {
     "hero": {
-        "title": "AZAFCO International",
-        "title_subtitle": "Investissement et Développement",
+        "title": "Exportateur de poisson frais d'Égypte",
+        "title_subtitle": "Tilapia, mulet et bar",
         "leaders_since": "Leaders de l'exportation de poisson frais depuis",
         "subtitle": "Exportation de poisson frais premium d'Égypte dans le monde entier",
-        "description": "Exportateur B2B leader de poisson d'Égypte pour grossistes, restaurants et hôtels dans le monde entier. Plus de 2 500 tonnes par mois avec certification ISO et HACCP. Transport aérien et terrestre mondial.",
+        "description": "Exportateur B2B de poisson d'Égypte pour grossistes, restaurants et hôtels dans le monde entier. Plus de 2 500 tonnes par mois avec certification ISO et HACCP. Transport aérien et terrestre mondial.",
         "cta_whatsapp": "Contact via WhatsApp",
         "cta_partnership": "Demander une collaboration commerciale",
         "background_alt": "Site de production de poisson AZAFCO en Égypte"
@@ -25,12 +25,12 @@
         "subtitle": "Exportateur de poisson de confiance d'Égypte depuis 2008",
         "quality": "Certifié ISO et HACCP",
         "fresh": "Fraîcheur garantie",
-        "experience": "Plus de 17 ans d'expérience",
+        "experience": "Plus de {years} ans d'expérience",
         "global": "Exportation mondiale"
     },
     "cta": {
         "title": "Prêt à démarrer votre collaboration ?",
-        "description": "Rejoignez plus de 500 grossistes et restaurants satisfaits dans plus de 9 pays à travers le monde",
+        "description": "Rejoignez plus de 500 grossistes et restaurants satisfaits dans plus de {countries} pays à travers le monde",
         "button": "Démarrer la collaboration"
     },
     "features": {
