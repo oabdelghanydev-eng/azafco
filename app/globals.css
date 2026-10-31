@@ -271,6 +271,28 @@ select:focus-visible {
   }
 }
 
+/* Above-the-fold hero entrance: transform only, never opacity, so the H1/LCP
+   is painted from the server HTML without waiting for JS hydration. */
+@keyframes hero-rise {
+  from {
+    transform: translateY(16px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: hero-rise 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    animation: none;
+  }
+}
+
 /* Respect user preference for reduced motion */
 @media (prefers-reduced-motion: reduce) {
 

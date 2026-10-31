@@ -43,12 +43,7 @@ export default function EUBuyersPageClient() {
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-16">
                 <div className="container-custom">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center"
-                    >
+                    <div className="text-center hero-rise">
                         <span className="inline-block bg-white/15 border border-white/30 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
                             {t('eu_buyers_page.hero.badge')}
                         </span>
@@ -75,7 +70,7 @@ export default function EUBuyersPageClient() {
                                 {t('eu_buyers_page.hero.cta_species')}
                             </a>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 

@@ -11,9 +11,11 @@ interface ProductCardProps {
     product: Product
     index?: number
     showDetails?: boolean
+    /** First cards of a listing that are visible on load: render without the opacity entrance and preload the image (LCP). */
+    aboveFold?: boolean
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true, aboveFold = false }) => {
     const t = useTranslations()
     const locale = useLocale()
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -45,7 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
     return (
         <>
             <motion.article
-                initial={{ opacity: 0, y: 20 }}
+                initial={aboveFold ? false : { opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="card group hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
@@ -66,6 +68,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                         height={300}
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 300px"
                         quality={75}
+                        priority={aboveFold}
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIRAAAgEEAQUBAAAAAAAAAAAAAQIDAAQFESESBhMxQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AyDHY+5vZ44oIJJZJGCoiLskn8Arfs/TWRxkc8cV5cRRySAB0SQKzD8IqUDQAA2P/2Q=="
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
