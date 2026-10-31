@@ -38,5 +38,14 @@
     "error_description": "We apologize for this inconvenience. Please refresh the page or go back to the homepage.",
     "refresh_page": "Refresh Page",
     "go_home": "Go to Homepage",
-    "tap_anywhere_to_close": "Tap anywhere to close"
+    "tap_anywhere_to_close": "Tap anywhere to close",
+    "cookie_consent": {
+        "label": "Cookie consent",
+        "title": "Cookies",
+        "text": "We use analytics cookies (Google Analytics, Microsoft Clarity) to see how the site is used, only if you accept. No advertising cookies.",
+        "accept": "Accept",
+        "reject": "Reject",
+        "privacy": "Privacy policy",
+        "settings": "Cookie settings"
+    }
 }

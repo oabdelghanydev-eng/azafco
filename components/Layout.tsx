@@ -9,6 +9,7 @@ import BackToTop from './BackToTop';
 import LanguageSwitcher from './LanguageSwitcher';
 import { companyInfo } from '@/data/company';
 import { companyConfig } from '@/config/company.config';
+import { openConsentSettings } from '@/lib/consent';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -231,6 +232,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               >
                 {t('data.company.privacyLink')}
               </Link>
+              {' · '}
+              <button
+                type="button"
+                onClick={openConsentSettings}
+                className="text-gray-500 hover:text-gray-400 transition-colors underline-offset-2 hover:underline"
+              >
+                {t('common.cookie_consent.settings')}
+              </button>
             </p>
           </div>
         </div>

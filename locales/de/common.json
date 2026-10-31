@@ -38,5 +38,14 @@
     "error_description": "Wir entschuldigen uns für die Unannehmlichkeiten. Bitte laden Sie die Seite neu oder kehren Sie zur Startseite zurück.",
     "refresh_page": "Seite neu laden",
     "go_home": "Zur Startseite",
-    "tap_anywhere_to_close": "Zum Schließen irgendwo tippen"
+    "tap_anywhere_to_close": "Zum Schließen irgendwo tippen",
+    "cookie_consent": {
+        "label": "Cookie-Einwilligung",
+        "title": "Cookies",
+        "text": "Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen – nur mit Ihrer Zustimmung. Keine Werbe-Cookies.",
+        "accept": "Akzeptieren",
+        "reject": "Ablehnen",
+        "privacy": "Datenschutzerklärung",
+        "settings": "Cookie-Einstellungen"
+    }
 }

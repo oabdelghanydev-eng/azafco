@@ -9,6 +9,9 @@ import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
 import LocaleInitializer from '@/components/LocaleInitializer';
+import LeadTracking from '@/components/LeadTracking';
+import CookieConsent from '@/components/CookieConsent';
+import { CONSENT_DEFAULT_SCRIPT } from '@/lib/consent';
 import '../globals.css';
 
 // Configure Cairo font with next/font for optimal loading (same as original)
@@ -122,6 +125,9 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} data-scroll-behavior="smooth" suppressHydrationWarning>
             <head>
+                {/* Google Consent Mode v2: default = denied, must run before gtag('config') */}
+                <script id="consent-default" dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
+
                 {/* Performance: DNS Prefetch */}
                 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
                 <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
@@ -150,8 +156,10 @@ export default async function RootLayout({
             <body className={cairo.className}>
                 <NextIntlClientProvider messages={messages} defaultTranslationValues={getFigureValues()}>
                     <LocaleInitializer />
+                    <LeadTracking />
                     <StructuredData locale={locale} />
                     {children}
+                    <CookieConsent />
                 </NextIntlClientProvider>
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}
@@ -169,27 +177,14 @@ export default async function RootLayout({
                     dangerouslySetInnerHTML={{
                         __html: `
                             window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
+                            window.gtag = window.gtag || function(){dataLayer.push(arguments);};
                             gtag('js', new Date());
                             gtag('config', '${companyConfig.analytics.googleAnalyticsId}');
                         `,
                     }}
                 />
 
-                {/* Microsoft Clarity - Best Practice: lazyOnload for non-critical analytics */}
-                <Script
-                    id="clarity-script"
-                    strategy="lazyOnload"
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            (function(c,l,a,r,i,t,y){
-                                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-                                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                            })(window, document, "clarity", "script", "${companyConfig.analytics.clarityId}");
-                        `,
-                    }}
-                />
+                {/* Microsoft Clarity is loaded by <CookieConsent /> only after the visitor accepts */}
             </body>
         </html>
     );

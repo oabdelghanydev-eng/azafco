@@ -38,5 +38,14 @@
     "error_description": "Disculpe las molestias. Por favor, actualice la página o vuelva a la página de inicio.",
     "refresh_page": "Actualizar página",
     "go_home": "Ir al inicio",
-    "tap_anywhere_to_close": "Toque en cualquier lugar para cerrar"
+    "tap_anywhere_to_close": "Toque en cualquier lugar para cerrar",
+    "cookie_consent": {
+        "label": "Consentimiento de cookies",
+        "title": "Cookies",
+        "text": "Usamos cookies analíticas (Google Analytics, Microsoft Clarity) para saber cómo se usa el sitio, solo si usted acepta. No usamos cookies publicitarias.",
+        "accept": "Aceptar",
+        "reject": "Rechazar",
+        "privacy": "Política de privacidad",
+        "settings": "Configuración de cookies"
+    }
 }
