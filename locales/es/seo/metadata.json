@@ -10,15 +10,15 @@
     },
     "home": {
         "title": "Exportador de pescado fresco de Egipto",
-        "description": "AZAFCO International – Exportador egipcio de pescado B2B desde 2008. Más de 2.500 toneladas mensuales. Certificación ISO y HACCP. Envío a España, México, América Latina y todo el mundo."
+        "description": "AZAFCO International, exportador egipcio de pescado B2B desde 2008. Más de 2.500 toneladas al mes, ISO y HACCP. Envío a España, México, LATAM y el mundo."
     },
     "products": {
         "title": "Tilapia, lubina y lisa frescas de Egipto",
-        "description": "Pescado fresco premium de Egipto. Tilapia, lubina, lisa y más de 8 variedades. Tamaños personalizados, desde 1 caja. ISO certificado. Envío mundial – incluyendo España y LATAM."
+        "description": "Pescado fresco de Egipto: tilapia, lubina, lisa y más de 8 variedades. Tamaños a medida, desde 1 caja, certificación ISO. Envío a España, LATAM y el mundo."
     },
     "about": {
         "title": "Sobre nosotros: exportador de pescado desde 2008",
-        "description": "AZAFCO International: Exportador B2B de pescado egipcio con más de 300 empleados, más de 500 clientes en más de {countries} países. Planta aprobada UE. Certificación ISO 22000 y HACCP. Exportación a Europa y América."
+        "description": "AZAFCO International: exportador B2B egipcio de pescado: 300+ empleados, 500+ clientes en más de {countries} países. Planta aprobada UE, ISO 22000 y HACCP."
     },
     "contact": {
         "title": "Contacto: pedidos de pescado fresco al por mayor",
@@ -26,7 +26,7 @@
     },
     "markets": {
         "title": "Mercados de exportación: envío aéreo y terrestre",
-        "description": "AZAFCO exporta más de 2.500 toneladas de pescado fresco mensualmente. Europa, Golfo, América Latina – envío mundial por aire y tierra. Más de 500 mayoristas satisfechos desde 2008."
+        "description": "AZAFCO exporta más de 2.500 toneladas de pescado fresco al mes a Europa, el Golfo y América Latina, por aire y tierra. 500+ mayoristas desde 2008."
     },
     "media": {
         "title": "Noticias de exportación de pescado egipcio",
@@ -34,7 +34,7 @@
     },
     "certificates": {
         "title": "Exportador de pescado con ISO 22000 y HACCP",
-        "description": "AZAFCO posee {isoCount} certificaciones ISO más HACCP: ISO 22000, HACCP, ISO 9001, ISO 14001, ISO 45001. Una de 6 plantas en Egipto autorizadas para exportación UE. Trazabilidad garantizada."
+        "description": "AZAFCO posee {isoCount} certificaciones ISO más HACCP: ISO 22000, 9001, 14001 y 45001. Una de 6 plantas en Egipto autorizadas para exportar a la UE."
     },
     "privacy": {
         "title": "Política de privacidad",
