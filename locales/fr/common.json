@@ -38,5 +38,14 @@
     "error_description": "Veuillez nous excuser pour ce désagrément. Actualisez la page ou retournez à l'accueil.",
     "refresh_page": "Actualiser la page",
     "go_home": "Retour à l'accueil",
-    "tap_anywhere_to_close": "Appuyez n'importe où pour fermer"
+    "tap_anywhere_to_close": "Appuyez n'importe où pour fermer",
+    "cookie_consent": {
+        "label": "Consentement aux cookies",
+        "title": "Cookies",
+        "text": "Nous utilisons des cookies de mesure d'audience (Google Analytics, Microsoft Clarity) pour comprendre l'utilisation du site, uniquement si vous acceptez. Aucun cookie publicitaire.",
+        "accept": "Accepter",
+        "reject": "Refuser",
+        "privacy": "Politique de confidentialité",
+        "settings": "Paramètres des cookies"
+    }
 }

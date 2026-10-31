@@ -3,14 +3,17 @@
  *
  * One function, `trackEvent`, sends the same event to:
  *   - Google Analytics 4 (via `window.gtag`, only if the GA4 script has loaded
- *     and has not been disabled / denied by consent), and
- *   - Vercel Web Analytics custom events (`track` from `@vercel/analytics`).
+ *     AND the visitor accepted analytics cookies in the consent banner,
+ *     see lib/consent.ts), and
+ *   - Vercel Web Analytics custom events (`track` from `@vercel/analytics`;
+ *     cookieless, no personal data, so it does not need the banner).
  *
  * Privacy: params must never contain personal data. Values that look like an
  * email address or a phone number are dropped before sending, and only flat
  * string / number / boolean values are forwarded.
  */
 import { track } from '@vercel/analytics';
+import { hasAnalyticsConsent } from '@/lib/consent';
 
 export type LeadEventName =
     | 'whatsapp_click'
@@ -22,7 +25,7 @@ export type LeadEventName =
 
 export type TrackParams = Record<string, string | number | boolean | null | undefined>;
 
-type Gtag = (command: 'event', name: string, params?: Record<string, unknown>) => void;
+type Gtag = (...args: unknown[]) => void;
 
 declare global {
     interface Window {
@@ -49,11 +52,14 @@ export function sanitizeParams(params: TrackParams = {}): Record<string, string 
     return out;
 }
 
-/** GA4 is usable only when gtag is defined and the property is not opted out. */
+/**
+ * GA4 is usable only when gtag is defined, the visitor granted analytics
+ * consent, and the property is not opted out.
+ */
 function gaAvailable(): boolean {
     if (typeof window === 'undefined' || typeof window.gtag !== 'function') return false;
-    // Respect GA's standard opt-out flag (`window['ga-disable-G-XXXX'] = true`)
-    // in case a consent banner sets it later.
+    if (!hasAnalyticsConsent()) return false;
+    // Also respect GA's standard opt-out flag (`window['ga-disable-G-XXXX'] = true`).
     const w = window as unknown as Record<string, unknown>;
     return !Object.keys(w).some((k) => k.startsWith('ga-disable-') && w[k] === true);
 }

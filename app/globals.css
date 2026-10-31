@@ -305,3 +305,8 @@ select:focus-visible {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
 }
+
+/* Cookie consent: hide the SSR banner when a choice is already stored (set by the head script) */
+html[data-consent] .cookie-banner-auto {
+  display: none;
+}
