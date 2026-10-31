@@ -50,5 +50,50 @@
     "main_office": "Siège social",
     "factory": "Site de production",
     "main_on_map": "Siège social sur la carte",
-    "factory_on_map": "Site de production sur la carte"
+    "factory_on_map": "Site de production sur la carte",
+    "partnership_form": {
+        "title": "Demander un partenariat ou un devis",
+        "subtitle": "Dites-nous ce dont vous avez besoin. Notre équipe export répond sous 24 à 48 heures avec les disponibilités, les calibres et un devis.",
+        "required_hint": "Les champs marqués d’un * sont obligatoires.",
+        "labels": {
+            "company": "Nom de l’entreprise",
+            "name": "Votre nom",
+            "email": "E-mail professionnel",
+            "phone": "Téléphone / WhatsApp",
+            "country": "Pays",
+            "species": "Espèces recherchées",
+            "volume": "Volume mensuel prévu",
+            "message": "Message"
+        },
+        "phone_hint": "Indiquez l’indicatif du pays, ex. +33…",
+        "species_hint": "Plusieurs choix possibles.",
+        "volume_placeholder": "Choisissez une fourchette",
+        "volume_options": {
+            "under_5": "Moins de 5 tonnes/mois",
+            "5_20": "5 à 20 tonnes/mois",
+            "20_50": "20 à 50 tonnes/mois",
+            "50_100": "50 à 100 tonnes/mois",
+            "over_100": "Plus de 100 tonnes/mois",
+            "not_sure": "Je ne sais pas encore"
+        },
+        "message_placeholder": "Calibres, conditionnement, port ou aéroport de destination, calendrier de livraison…",
+        "submit": "Envoyer la demande",
+        "submitting": "Envoi en cours…",
+        "success_title": "Merci, votre demande a bien été envoyée",
+        "success_body": "Notre équipe export vous répondra par e-mail ou WhatsApp sous 24 à 48 heures.",
+        "send_another": "Envoyer une autre demande",
+        "error_title": "Votre demande n’a pas pu être envoyée",
+        "error_body": "Désolés, une erreur s’est produite de notre côté. Vos informations sont toujours dans le formulaire : réessayez plus tard ou contactez directement notre équipe export :",
+        "error_rate_limited": "Trop de demandes ont été envoyées depuis cette connexion. Réessayez dans quelques minutes ou contactez-nous directement :",
+        "fallback_whatsapp": "Écrire sur WhatsApp",
+        "privacy_note": "Nous utilisons ces informations uniquement pour répondre à votre demande.",
+        "honeypot_label": "Laissez ce champ vide",
+        "errors": {
+            "required": "Ce champ est obligatoire.",
+            "too_long": "{max} caractères maximum.",
+            "invalid_email": "Veuillez saisir une adresse e-mail valide.",
+            "invalid_phone": "Veuillez saisir un numéro de téléphone valide avec l’indicatif du pays.",
+            "invalid_option": "Veuillez choisir une option dans la liste."
+        }
+    }
 }

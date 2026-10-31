@@ -6,6 +6,7 @@ import { FaWhatsapp, FaWpforms, FaEnvelope, FaMapMarkerAlt, FaPhone, FaClock, Fa
 import { useLocale, useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
 import { companyInfo } from '@/data/company';
+import PartnershipForm from '@/components/PartnershipForm';
 
 export default function ContactPageClient() {
     const locale = useLocale();
@@ -21,6 +22,7 @@ export default function ContactPageClient() {
             note: t('contact_page.whatsapp_note'),
             buttonText: t('common.start_chat_now'),
             link: companyInfo.contact.whatsapp.link,
+            external: true,
             gradient: 'from-green-500 to-emerald-600',
             iconBg: 'bg-green-500',
             badge: t('common.instant_response'),
@@ -33,7 +35,9 @@ export default function ContactPageClient() {
             description: t('contact_page.b2b_desc'),
             note: t('contact_page.b2b_note'),
             buttonText: t('contact_page.open_form'),
-            link: companyInfo.contact.partnershipForm,
+            // On-page form below (#partnership)
+            link: '#partnership',
+            external: false,
             gradient: 'from-primary-600 to-primary-700',
             iconBg: 'bg-primary-600',
             badge: '24-48h',
@@ -47,6 +51,7 @@ export default function ContactPageClient() {
             note: t('contact_page.email_note'),
             buttonText: t('contact_page.send_email'),
             link: companyInfo.contact.email.link,
+            external: true,
             gradient: 'from-red-500 to-rose-600',
             iconBg: 'bg-red-500',
             badge: t('contact_page.quick_response'),
@@ -165,8 +170,7 @@ export default function ContactPageClient() {
                                         {/* Button */}
                                         <a
                                             href={channel.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            {...(channel.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                                             className={`w-full text-center bg-gradient-to-r ${channel.gradient} text-white py-4 px-6 rounded-xl font-bold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl flex items-center justify-center gap-3`}
                                         >
                                             {channel.buttonText}
@@ -180,8 +184,23 @@ export default function ContactPageClient() {
                 </div>
             </section>
 
+            {/* Partnership / quote form (footer "Request Business Partnership" links here) */}
+            <section id="partnership" className="py-20 scroll-mt-24">
+                <div className="container-custom max-w-4xl">
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                            {t('contact_page.partnership_form.title')}
+                        </h2>
+                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                            {t('contact_page.partnership_form.subtitle')}
+                        </p>
+                    </div>
+                    <PartnershipForm />
+                </div>
+            </section>
+
             {/* Locations Section */}
-            <section className="py-20">
+            <section className="py-20 bg-gray-50">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0 }}

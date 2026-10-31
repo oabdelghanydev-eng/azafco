@@ -50,5 +50,50 @@
     "main_office": "Hauptniederlassung",
     "factory": "Produktionsstätte",
     "main_on_map": "Hauptniederlassung auf der Karte",
-    "factory_on_map": "Produktionsstätte auf der Karte"
+    "factory_on_map": "Produktionsstätte auf der Karte",
+    "partnership_form": {
+        "title": "Partnerschaft oder Angebot anfragen",
+        "subtitle": "Sagen Sie uns, was Sie benötigen. Unser Exportteam antwortet innerhalb von 24–48 Stunden mit Verfügbarkeit, Größen und einem Angebot.",
+        "required_hint": "Mit * gekennzeichnete Felder sind Pflichtfelder.",
+        "labels": {
+            "company": "Firmenname",
+            "name": "Ihr Name",
+            "email": "Geschäftliche E-Mail",
+            "phone": "Telefon / WhatsApp",
+            "country": "Land",
+            "species": "Gewünschte Fischarten",
+            "volume": "Erwartete Monatsmenge",
+            "message": "Nachricht"
+        },
+        "phone_hint": "Bitte mit Ländervorwahl, z. B. +49…",
+        "species_hint": "Mehrfachauswahl möglich.",
+        "volume_placeholder": "Bereich auswählen",
+        "volume_options": {
+            "under_5": "Unter 5 Tonnen/Monat",
+            "5_20": "5–20 Tonnen/Monat",
+            "20_50": "20–50 Tonnen/Monat",
+            "50_100": "50–100 Tonnen/Monat",
+            "over_100": "Über 100 Tonnen/Monat",
+            "not_sure": "Noch unklar"
+        },
+        "message_placeholder": "Größen, Verpackung, Zielhafen oder -flughafen, Lieferplan …",
+        "submit": "Anfrage senden",
+        "submitting": "Wird gesendet …",
+        "success_title": "Vielen Dank, Ihre Anfrage wurde gesendet",
+        "success_body": "Unser Exportteam meldet sich innerhalb von 24–48 Stunden per E-Mail oder WhatsApp bei Ihnen.",
+        "send_another": "Weitere Anfrage senden",
+        "error_title": "Ihre Anfrage konnte nicht gesendet werden",
+        "error_body": "Leider ist bei uns ein Fehler aufgetreten. Ihre Angaben sind noch im Formular: Versuchen Sie es später erneut oder kontaktieren Sie unser Exportteam direkt:",
+        "error_rate_limited": "Von dieser Verbindung wurden zu viele Anfragen gesendet. Bitte versuchen Sie es in einigen Minuten erneut oder kontaktieren Sie uns direkt:",
+        "fallback_whatsapp": "Per WhatsApp schreiben",
+        "privacy_note": "Wir verwenden diese Angaben ausschließlich zur Beantwortung Ihrer Anfrage.",
+        "honeypot_label": "Dieses Feld leer lassen",
+        "errors": {
+            "required": "Dieses Feld ist erforderlich.",
+            "too_long": "Maximal {max} Zeichen.",
+            "invalid_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+            "invalid_phone": "Bitte geben Sie eine gültige Telefonnummer mit Ländervorwahl ein.",
+            "invalid_option": "Bitte wählen Sie eine Option aus der Liste."
+        }
+    }
 }
