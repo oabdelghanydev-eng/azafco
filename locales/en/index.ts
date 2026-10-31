@@ -17,6 +17,7 @@ import euBuyers from './pages/eu-buyers.json';
 import species from './pages/species.json';
 import marketDetail from './pages/market-detail.json';
 import faqPage from './pages/faq.json';
+import guides from './pages/guides.json';
 
 import productData from './data/products.json';
 import marketData from './data/markets.json';
@@ -55,6 +56,7 @@ const messages = {
     species_page: species,
     market_detail_page: marketDetail,
     faq_page: faqPage,
+    guides_page: guides,
 
     // Content data (products, markets, news, company)
     data: {

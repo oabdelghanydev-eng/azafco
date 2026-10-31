@@ -3,6 +3,7 @@ import { locales } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import { productSlugs } from '@/data/products';
 import { activeMarketSlugs } from '@/data/markets';
+import { guideSlugs } from '@/data/guides';
 
 const baseUrl = companyConfig.contact.baseUrl;
 
@@ -17,8 +18,10 @@ const pages = [
     { path: 'certificates', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: 'eu-buyers', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: 'faq', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: 'guides', priority: 0.6, changeFrequency: 'monthly' as const },
     ...productSlugs.map((slug) => ({ path: `products/${slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
     ...activeMarketSlugs.map((slug) => ({ path: `markets/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
+    ...guideSlugs.map((slug) => ({ path: `guides/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
 ];
 
 const pageUrl = (locale: string, path: string) =>
