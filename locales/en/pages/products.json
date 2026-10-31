@@ -6,7 +6,9 @@
         "nile": "Nile Fish",
         "sea": "Sea Fish",
         "freshwater": "Freshwater Fish",
-        "saltwater": "Saltwater Fish"
+        "saltwater": "Saltwater Fish",
+        "marine": "Marine Fish",
+        "brackish": "Brackish-water Fish"
     },
     "category_fresh": "Fresh Fish",
     "weight": "Weight",
@@ -32,5 +34,7 @@
         "subtitle": "We supply fresh fish to 500+ distributors, restaurants, and hotels across +{countries} countries",
         "button": "Request Quote"
     },
-    "alt_template": "Fresh {product} for wholesale export from Egypt - AZAFCO International"
+    "alt_template": "Fresh {product} for wholesale export from Egypt - AZAFCO International",
+    "marine": "Marine",
+    "brackish": "Brackish water"
 }

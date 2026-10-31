@@ -2,8 +2,7 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Niltilapia",
-            "Nil-Barsch"
+            "Niltilapia"
         ],
         "description": "Premium Niltilapia aus zertifizierten ägyptischen Farmen. Unser #1 Exportprodukt. HACCP-zertifiziert mit vollständiger Kühlkette.",
         "sizes": [
@@ -20,10 +19,10 @@
     "sea_bass": {
         "name": "Wolfsbarsch",
         "alt_names": [
-            "Mittelmeer-Wolfsbarsch",
-            "Europäischer Wolfsbarsch"
+            "Europäischer Wolfsbarsch",
+            "Loup de Mer"
         ],
-        "description": "Premium Wolfsbarsch, perfekt zum Grillen, Braten und für gehobene Küche. Restaurantfavorit in der Golfregion.",
+        "description": "Premium Europäischer Wolfsbarsch, perfekt zum Grillen, Braten und für gehobene Küche. Restaurantfavorit in der Golfregion.",
         "sizes": [
             "Mittel (400-600g)",
             "Groß (600g+)",
@@ -31,17 +30,17 @@
         ],
         "storage_temp": "0 bis 4°C",
         "packaging": "EPS-Box",
-        "category": "Salzwasser",
+        "category": "Meer",
         "availability": "Ganzjährig verfügbar"
     },
     "mullet": {
-        "name": "Meeräsche",
+        "name": "Meeräsche (Bouri)",
         "alt_names": [
+            "Großkopfmeeräsche",
             "Graue Meeräsche",
-            "Gestreifte Meeräsche",
-            "Bouri-Fisch"
+            "Bouri"
         ],
-        "description": "Frische ägyptische Meeräsche, ausgezeichnet zum Grillen und Räuchern. Traditioneller Favorit in der Golfküche.",
+        "description": "Frische ägyptische Meeräsche, im Brackwasser aufgezogen. Ausgezeichnet zum Grillen und Räuchern. Traditioneller Favorit in der Golfküche.",
         "sizes": [
             "Klein (150-250g)",
             "Mittel (250-400g)",
@@ -49,15 +48,15 @@
         ],
         "storage_temp": "0 bis 4°C",
         "packaging": "EPS-Box",
-        "category": "Süßwasser",
+        "category": "Brackwasser",
         "availability": "Ganzjährig verfügbar"
     },
     "buni": {
-        "name": "Buni",
+        "name": "Bunni",
         "alt_names": [
-            "Dorade"
+            "Nil-Barbe"
         ],
-        "description": "Premium Seebuni für anspruchsvolle Kunden. Ausgezeichnete Textur und Geschmacksprofil.",
+        "description": "Frischer Bunni, eine im Nil heimische Süßwasserbarbe. Ausgezeichnete Textur und Geschmack.",
         "sizes": [
             "Mittel (300-500g)",
             "Groß (500g+)",
@@ -65,16 +64,16 @@
         ],
         "storage_temp": "0 bis 4°C",
         "packaging": "EPS-Box",
-        "category": "Salzwasser",
+        "category": "Süßwasser",
         "availability": "Ganzjährig verfügbar"
     },
     "mubarakah": {
-        "name": "Mubarakah",
+        "name": "Karpfen",
         "alt_names": [
-            "Afrikanischer Wels",
-            "Clarias"
+            "Gemeiner Karpfen",
+            "Mabrouk"
         ],
-        "description": "Frische Mubarakah, ideal für traditionelle Gerichte. Große Größen für Großhandel verfügbar.",
+        "description": "Frischer Karpfen, ideal für traditionelle Gerichte. Große Größen für den Großhandel verfügbar.",
         "sizes": [
             "Groß (1-2kg)",
             "Jumbo (2kg+)",
@@ -86,12 +85,12 @@
         "availability": "Ganzjährig verfügbar"
     },
     "catfish": {
-        "name": "Wels",
+        "name": "Afrikanischer Raubwels",
         "alt_names": [
-            "Kanalwels",
-            "Ägyptischer Wels"
+            "Afrikanischer Wels",
+            "Clarias-Wels"
         ],
-        "description": "Frischer Wels aus ägyptischen Süßwasserfarmen. Beliebte Wahl für Restaurants und Distributoren.",
+        "description": "Frischer Afrikanischer Raubwels aus ägyptischen Süßwasserfarmen. Beliebte Wahl für Restaurants und Distributoren.",
         "sizes": [
             "Mittel (500-800g)",
             "Groß (800g+)",
@@ -103,12 +102,12 @@
         "availability": "Ganzjährig verfügbar"
     },
     "lout": {
-        "name": "Lout",
+        "name": "Adlerfisch",
         "alt_names": [
-            "Zackenbarsch",
-            "See-Lout"
+            "Umberfisch",
+            "Lout"
         ],
-        "description": "Frischer Seelout mit fester Textur. Premium-Qualität für gehobene Restaurants und Hotels.",
+        "description": "Frischer Adlerfisch mit festem, weißem Fleisch. Premium-Qualität für gehobene Restaurants und Hotels.",
         "sizes": [
             "Mittel (400-600g)",
             "Groß (600g+)",
@@ -116,16 +115,16 @@
         ],
         "storage_temp": "0 bis 4°C",
         "packaging": "EPS-Box",
-        "category": "Salzwasser",
+        "category": "Meer",
         "availability": "Ganzjährig verfügbar"
     },
     "eels": {
-        "name": "Aal",
+        "name": "Europäischer Aal",
         "alt_names": [
-            "Süßwasseraal",
-            "Ägyptischer Aal"
+            "Flussaal",
+            "Aal"
         ],
-        "description": "Frischer Aal aus ägyptischen Süßwasserquellen. Spezialprodukt für ausgewählte Märkte.",
+        "description": "Frischer Europäischer Aal aus den Seen des Nildeltas. Spezialprodukt für ausgewählte Märkte außerhalb der EU.",
         "sizes": [
             "Mittel (300-500g)",
             "Groß (500g+)",
@@ -133,7 +132,7 @@
         ],
         "storage_temp": "0 bis 4°C",
         "packaging": "EPS-Box",
-        "category": "Süßwasser",
+        "category": "Brackwasser",
         "availability": "Ganzjährig verfügbar"
     },
     "_note": {

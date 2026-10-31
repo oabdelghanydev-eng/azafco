@@ -1,5 +1,18 @@
 // Product types - locale-agnostic, translations come from next-intl
-export type ProductCategory = 'river' | 'sea'
+// Water type the species lives / is farmed in (see docs/reports/species-identification.md)
+export type ProductCategory = 'freshwater' | 'marine' | 'brackish'
+
+export const productCategories: ProductCategory[] = ['freshwater', 'marine', 'brackish']
+
+// Translation key for each category label (products_page.<category>)
+export const categoryLabelKey = (category: ProductCategory) => `products_page.${category}`
+
+// Badge colour per category
+export const categoryBadgeClass: Record<ProductCategory, string> = {
+    freshwater: 'bg-blue-500',
+    marine: 'bg-cyan-600',
+    brackish: 'bg-teal-600',
+}
 
 export interface Product {
     id: number
@@ -9,6 +22,8 @@ export interface Product {
     // Used to lookup translations at data.products.[key]
     translationKey: string
     category: ProductCategory
+    // Latin binomial, shown on species pages and in Product JSON-LD
+    scientificName: string
     image: string
     available: boolean
 }
@@ -19,7 +34,8 @@ export const products: Product[] = [
         id: 1,
         slug: 'tilapia',
         translationKey: 'tilapia',
-        category: 'river',
+        category: 'freshwater',
+        scientificName: 'Oreochromis niloticus',
         image: '/items/tilapia.jpg',
         available: true,
     },
@@ -27,7 +43,8 @@ export const products: Product[] = [
         id: 2,
         slug: 'sea-bass',
         translationKey: 'sea_bass',
-        category: 'sea',
+        category: 'marine',
+        scientificName: 'Dicentrarchus labrax',
         image: '/items/sea_bass.jpg',
         available: true,
     },
@@ -35,7 +52,8 @@ export const products: Product[] = [
         id: 3,
         slug: 'mullet',
         translationKey: 'mullet',
-        category: 'river',
+        category: 'brackish',
+        scientificName: 'Mugil cephalus',
         image: '/items/bouri.jpg',
         available: true,
     },
@@ -43,15 +61,17 @@ export const products: Product[] = [
         id: 4,
         slug: 'buni',
         translationKey: 'buni',
-        category: 'sea',
+        category: 'freshwater',
+        scientificName: 'Labeobarbus bynni',
         image: '/items/buni.jpg',
         available: true,
     },
     {
         id: 5,
-        slug: 'mubarakah',
+        slug: 'common-carp',
         translationKey: 'mubarakah',
-        category: 'river',
+        category: 'freshwater',
+        scientificName: 'Cyprinus carpio',
         image: '/items/mubarakah.jpg',
         available: true,
     },
@@ -59,15 +79,17 @@ export const products: Product[] = [
         id: 6,
         slug: 'catfish',
         translationKey: 'catfish',
-        category: 'river',
+        category: 'freshwater',
+        scientificName: 'Clarias gariepinus',
         image: '/items/catfish.jpg',
         available: true,
     },
     {
         id: 7,
-        slug: 'lout',
+        slug: 'meagre',
         translationKey: 'lout',
-        category: 'sea',
+        category: 'marine',
+        scientificName: 'Argyrosomus regius',
         image: '/items/lout.jpg',
         available: true,
     },
@@ -75,7 +97,8 @@ export const products: Product[] = [
         id: 8,
         slug: 'eel',
         translationKey: 'eels',
-        category: 'river',
+        category: 'brackish',
+        scientificName: 'Anguilla anguilla',
         image: '/items/eels.jpg',
         available: true,
     },

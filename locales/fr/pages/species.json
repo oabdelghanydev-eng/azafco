@@ -18,5 +18,6 @@
     "meta_title_short": "{name} d'Égypte",
     "meta_description_suffix": "Tailles : {sizes}. Emballage : {packaging}, {temp}.",
     "meta_description_suffix_short": "Emballage : {packaging}, {temp}. {availability}.",
-    "list_separator": ", "
+    "list_separator": ", ",
+    "scientific_name": "Nom scientifique"
 }

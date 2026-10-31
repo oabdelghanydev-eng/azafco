@@ -2,8 +2,7 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Tilapia del Nilo",
-            "Perca del Nilo"
+            "Tilapia del Nilo"
         ],
         "description": "Tilapia del Nilo premium de granjas egipcias certificadas. Nuestro producto de exportación #1. Certificado HACCP con cadena de frío completa.",
         "sizes": [
@@ -20,10 +19,10 @@
     "sea_bass": {
         "name": "Lubina",
         "alt_names": [
-            "Lubina Mediterránea",
-            "Lubina Europea"
+            "Lubina europea",
+            "Róbalo"
         ],
-        "description": "Lubina premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
+        "description": "Lubina europea premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
         "sizes": [
             "Mediano (400-600g)",
             "Grande (600g+)",
@@ -31,17 +30,17 @@
         ],
         "storage_temp": "0 a 4°C",
         "packaging": "Caja EPS",
-        "category": "Agua salada",
+        "category": "Marino",
         "availability": "Disponible todo el año"
     },
     "mullet": {
-        "name": "Lisa",
+        "name": "Mújol (Bouri)",
         "alt_names": [
-            "Lisa Gris",
-            "Lisa Rayada",
-            "Pescado Bouri"
+            "Pardete",
+            "Lisa",
+            "Bouri"
         ],
-        "description": "Lisa egipcia fresca, excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
+        "description": "Mújol egipcio fresco, criado en aguas salobres. Excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
         "sizes": [
             "Pequeño (150-250g)",
             "Mediano (250-400g)",
@@ -49,15 +48,15 @@
         ],
         "storage_temp": "0 a 4°C",
         "packaging": "Caja EPS",
-        "category": "Agua dulce",
+        "category": "Agua salobre",
         "availability": "Disponible todo el año"
     },
     "buni": {
-        "name": "Buni",
+        "name": "Bunni",
         "alt_names": [
-            "Dorada"
+            "Barbo del Nilo"
         ],
-        "description": "Buni de mar premium para clientes exigentes. Excelente textura y perfil de sabor.",
+        "description": "Bunni fresco, un barbo de agua dulce originario del Nilo. Excelente textura y sabor.",
         "sizes": [
             "Mediano (300-500g)",
             "Grande (500g+)",
@@ -65,16 +64,16 @@
         ],
         "storage_temp": "0 a 4°C",
         "packaging": "Caja EPS",
-        "category": "Agua salada",
+        "category": "Agua dulce",
         "availability": "Disponible todo el año"
     },
     "mubarakah": {
-        "name": "Mubarakah",
+        "name": "Carpa común",
         "alt_names": [
-            "Bagre Africano",
-            "Clarias"
+            "Carpa",
+            "Mabrouk"
         ],
-        "description": "Mubarakah fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
+        "description": "Carpa común fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
         "sizes": [
             "Grande (1-2kg)",
             "Jumbo (2kg+)",
@@ -86,12 +85,12 @@
         "availability": "Disponible todo el año"
     },
     "catfish": {
-        "name": "Bagre",
+        "name": "Pez gato africano",
         "alt_names": [
-            "Bagre de Canal",
-            "Bagre Egipcio"
+            "Siluro africano",
+            "Clarias"
         ],
-        "description": "Bagre fresco de granjas de agua dulce egipcias. Opción popular para restaurantes y distribuidores.",
+        "description": "Pez gato africano fresco de granjas egipcias de agua dulce. Opción popular para restaurantes y distribuidores.",
         "sizes": [
             "Mediano (500-800g)",
             "Grande (800g+)",
@@ -103,12 +102,12 @@
         "availability": "Disponible todo el año"
     },
     "lout": {
-        "name": "Lout",
+        "name": "Corvina",
         "alt_names": [
-            "Mero",
-            "Lout de Mar"
+            "Lout",
+            "Corvina común"
         ],
-        "description": "Lout de mar fresco con textura firme. Calidad premium para restaurantes y hoteles de alta gama.",
+        "description": "Corvina fresca de carne blanca y firme. Calidad premium para restaurantes y hoteles de alta gama.",
         "sizes": [
             "Mediano (400-600g)",
             "Grande (600g+)",
@@ -116,16 +115,15 @@
         ],
         "storage_temp": "0 a 4°C",
         "packaging": "Caja EPS",
-        "category": "Agua salada",
+        "category": "Marino",
         "availability": "Disponible todo el año"
     },
     "eels": {
-        "name": "Anguila",
+        "name": "Anguila europea",
         "alt_names": [
-            "Anguila de Agua Dulce",
-            "Anguila Egipcia"
+            "Anguila"
         ],
-        "description": "Anguilas frescas de fuentes de agua dulce egipcias. Producto especializado para mercados selectos.",
+        "description": "Anguila europea fresca de los lagos del delta del Nilo. Producto especializado para mercados seleccionados fuera de la UE.",
         "sizes": [
             "Mediano (300-500g)",
             "Grande (500g+)",
@@ -133,7 +131,7 @@
         ],
         "storage_temp": "0 a 4°C",
         "packaging": "Caja EPS",
-        "category": "Agua dulce",
+        "category": "Agua salobre",
         "availability": "Disponible todo el año"
     },
     "_note": {

@@ -18,5 +18,6 @@
     "meta_title_short": "{name} من مصر",
     "meta_description_suffix": "الأحجام: {sizes}. التعبئة: {packaging}، {temp}.",
     "meta_description_suffix_short": "التعبئة: {packaging}، {temp}. {availability}.",
-    "list_separator": "، "
+    "list_separator": "، ",
+    "scientific_name": "الاسم العلمي"
 }

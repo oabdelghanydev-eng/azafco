@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { FaArrowLeft, FaBox, FaCalendarCheck, FaHandshake, FaRulerHorizontal, FaThermometerHalf, FaWater } from 'react-icons/fa';
+import { FaArrowLeft, FaBox, FaDna, FaCalendarCheck, FaHandshake, FaRulerHorizontal, FaThermometerHalf, FaWater } from 'react-icons/fa';
 import { locales, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
-import { products, getProductBySlug, Product } from '@/data/products';
+import { products, getProductBySlug, categoryLabelKey, Product } from '@/data/products';
 
 type Props = {
     params: Promise<{ locale: string; slug: string }>;
@@ -41,7 +41,7 @@ function getSpeciesData(t: Translator, product: Product) {
         storageTemp: t(`${key}.storage_temp`),
         packaging: t(`${key}.packaging`),
         availability: t(`${key}.availability`),
-        categoryLabel: t(product.category === 'river' ? 'products_page.freshwater' : 'products_page.saltwater'),
+        categoryLabel: t(categoryLabelKey(product.category)),
         imageAlt: ((t.raw('products_page.alt_template') ?? '{product}') as string).replace('{product}', t(`${key}.name`)),
     };
 }
@@ -165,6 +165,12 @@ export default async function SpeciesPage({ params }: Props) {
         image: imageUrl,
         url: pageUrl,
         category: t('schema.freshFishCategory'),
+        ...(species.altNames.length > 0 && { alternateName: species.altNames }),
+        // schema.org Product has no scientific-name property; PropertyValue is the standard extension point
+        additionalProperty: [
+            { '@type': 'PropertyValue', name: t('species_page.scientific_name'), value: product.scientificName },
+            { '@type': 'PropertyValue', name: t('species_page.category'), value: species.categoryLabel },
+        ],
         brand: { '@type': 'Brand', name: t('schema.alternateName') },
         manufacturer: { '@id': `${baseUrl}/#organization` },
     };
@@ -179,6 +185,7 @@ export default async function SpeciesPage({ params }: Props) {
     };
 
     const specs = [
+        { icon: <FaDna />, label: t('species_page.scientific_name'), value: <i lang="la">{product.scientificName}</i> },
         { icon: <FaWater />, label: t('species_page.category'), value: species.categoryLabel },
         { icon: <FaThermometerHalf />, label: t('species_page.storage_temp'), value: species.storageTemp },
         { icon: <FaBox />, label: t('species_page.packaging'), value: species.packaging },
@@ -203,6 +210,7 @@ export default async function SpeciesPage({ params }: Props) {
                             </ol>
                         </nav>
                         <h1 className="text-3xl md:text-5xl font-bold mb-3">{species.name}</h1>
+                        <p className="text-white/90 text-lg mb-2"><i lang="la">{product.scientificName}</i></p>
                         {species.altNames.length > 0 && (
                             <p className="text-white/80">
                                 <span className="font-semibold">{t('species_page.also_known_as')}:</span>{' '}

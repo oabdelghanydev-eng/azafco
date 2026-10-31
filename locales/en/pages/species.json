@@ -18,5 +18,6 @@
     "meta_title_short": "Fresh {name} from Egypt",
     "meta_description_suffix": "Sizes: {sizes}. Packed in {packaging}, {temp}.",
     "meta_description_suffix_short": "Packed in {packaging}, {temp}. {availability}.",
-    "list_separator": ", "
+    "list_separator": ", ",
+    "scientific_name": "Scientific name"
 }
