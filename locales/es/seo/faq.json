@@ -30,11 +30,11 @@
         },
         {
             "question": "¿Cuánto pescado exportan mensualmente?",
-            "answer": "Exportamos más de 2.500 toneladas de pescado fresco mensualmente a 8 países. Kuwait recibe más de 650 toneladas, EAU más de 400 toneladas, Catar más de 350 toneladas, Irak más de 175 toneladas y Bahréin más de 100 toneladas."
+            "answer": "Exportamos más de 2.500 toneladas de pescado fresco mensualmente a más de {countries} países. Kuwait recibe más de 650 toneladas, EAU más de 400 toneladas, Catar más de 350 toneladas, Irak más de 175 toneladas y Bahréin más de 100 toneladas."
         },
         {
             "question": "¿Cuánto tiempo lleva AZAFCO en el negocio?",
-            "answer": "AZAFCO International fue fundada en 2008 en Kafr El-Sheikh, Egipto. Tenemos más de 17 años de experiencia y atendemos a más de 500 clientes con más de 300 empleados."
+            "answer": "AZAFCO International fue fundada en 2008 en Kafr El-Sheikh, Egipto. Tenemos más de {years} años de experiencia y atendemos a más de 500 clientes con más de 300 empleados."
         },
         {
             "question": "¿Qué términos de pago ofrecen?",

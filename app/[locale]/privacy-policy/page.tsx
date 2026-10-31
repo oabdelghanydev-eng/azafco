@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 'ru': `${baseUrl}/ru/privacy-policy`,
                 'de': `${baseUrl}/de/privacy-policy`,
                 'fr': `${baseUrl}/fr/privacy-policy`,
-                'x-default': `${baseUrl}/ar/privacy-policy`,
+                'x-default': `${baseUrl}/privacy-policy`,
             },
         },
         openGraph: {

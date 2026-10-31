@@ -1,8 +1,8 @@
 {
     "title": "Exportmärkte",
-    "subtitle": "Belieferung von Großhändlern, Restaurants und Hotels in über 9 Ländern – weltweiter Export",
+    "subtitle": "Belieferung von Großhändlern, Restaurants und Hotels in über {countries} Ländern – weltweiter Export",
     "countries_title": "Aktuelle Exportziele",
-    "countries_subtitle": "Über 17 Jahre Erfahrung • Versand per Luft oder Land in jedes Land",
+    "countries_subtitle": "Über {years} Jahre Erfahrung • Versand per Luft oder Land in jedes Land",
     "advantages_title": "Warum AZAFCO als Partner wählen?",
     "advantages_subtitle": "Ägyptens zuverlässiger Fischlieferant – bereit für neue Märkte weltweit",
     "cta_title": "Bereit für eine Partnerschaft?",

@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import { certificates } from '@/data/certificates';
+import { companyConfig } from '@/config/company.config';
 
 export default function CertificatesPageClient() {
     const locale = useLocale();
@@ -205,7 +206,7 @@ export default function CertificatesPageClient() {
                                 <div>{t('certificates_page.compliance')}</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-5xl font-bold text-secondary-400 mb-2">5+</div>
+                                <div className="text-5xl font-bold text-secondary-400 mb-2">{companyConfig.certifications.length}</div>
                                 <div>{t('certificates_page.certified_intl')}</div>
                             </div>
                             <div className="text-center">

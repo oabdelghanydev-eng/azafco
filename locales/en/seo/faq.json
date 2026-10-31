@@ -30,11 +30,11 @@
         },
         {
             "question": "How much fish do you export monthly?",
-            "answer": "We export over 2,500 tons of fresh fish monthly to 8 countries. Kuwait receives +650 tons, UAE +400 tons, Qatar +350 tons, Iraq +175 tons, and Bahrain +100 tons."
+            "answer": "We export over 2,500 tons of fresh fish monthly to +{countries} countries. Kuwait receives +650 tons, UAE +400 tons, Qatar +350 tons, Iraq +175 tons, and Bahrain +100 tons."
         },
         {
             "question": "How long has AZAFCO been in business?",
-            "answer": "AZAFCO International was founded in 2008 in Kafr El Sheikh, Egypt. We have over 17 years of experience and serve +500 clients with +300 employees."
+            "answer": "AZAFCO International was founded in 2008 in Kafr El Sheikh, Egypt. We have over {years} years of experience and serve +500 clients with +300 employees."
         },
         {
             "question": "What payment terms do you offer?",

@@ -1,5 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { getFigureValues } from './config/company.config';
 
 // Supported locales - easily scalable to 10+ languages
 export const locales = ['ar', 'en', 'es', 'ru', 'de', 'fr'] as const;
@@ -80,5 +81,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
         timeZone: 'Africa/Cairo',
         // Configure date/time formatting
         now: new Date(),
+        // Company figures available to every message as {years}, {countries}, {isoCount}
+        defaultTranslationValues: getFigureValues(),
     };
 });
