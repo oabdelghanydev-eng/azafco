@@ -2,8 +2,8 @@
     "name": "AZAFCO International",
     "fullName": "AZAFCO International Investment & Development",
     "description": "Египетский B2B экспортёр рыбы для оптовиков, ресторанов и отелей – премиальная свежая рыба с 2008 года.",
-    "workingHours": "Работаем круглосуточно",
-    "workingHoursNote": "Круглосуточно – в зависимости от отдела",
+    "workingHours": "Сб–Чт 8:00–17:00 (по Каиру)",
+    "workingHoursNote": "WhatsApp для срочных отгрузок",
     "addresses": {
         "main": {
             "title": "Головной офис",
@@ -22,7 +22,7 @@
         "price": "Конкурентные оптовые цены",
         "quality": "Сертификация ISO и HACCP",
         "flexibility": "Индивидуальные размеры, гибкие заказы",
-        "availability": "Работа 24/7, стабильные поставки",
+        "availability": "Надёжная работа, стабильные поставки",
         "service": "Соответствие вашим требованиям"
     }
 }
