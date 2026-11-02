@@ -1,6 +1,6 @@
 # AZAFCO International - Company Profile
 
-> **Last Updated:** 2026-01-09  
+> **Last Updated:** 2026-11-02  
 > **Purpose:** Single source of truth for SEO, marketing, and development decisions
 
 ---
@@ -9,7 +9,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Full Legal Name** | AZAFCO International Investment & Development LLC |
+| **Full Legal Name** | AZAFCO International for Investment and Development S.A.E. |
+| **Arabic Legal Name** | ازافكو العالمية للاستثمار والتنمية (ش.م.م) |
+| **Legal Form** | S.A.E. (شركة مساهمة مصرية), Law 159/1981 |
 | **Trade Name** | AZAFCO International |
 | **Founded** | 2008 |
 | **Founder/Chairman** | Haj Mohamed Abdullah Al-Kuwaitihi |
@@ -228,7 +230,8 @@
 ```json
 {
   "@type": "Organization",
-  "name": "AZAFCO International Investment & Development",
+  "name": "AZAFCO International for Investment and Development",
+  "legalName": "AZAFCO International for Investment and Development S.A.E.",
   "alternateName": "AZAFCO International",
   "foundingDate": "2008",
   "numberOfEmployees": "300+",
