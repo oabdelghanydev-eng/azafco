@@ -47,7 +47,8 @@ export const companyConfig = {
     // IDENTITY
     // ─────────────────────────────────────────────────────────────────────────
     identity: {
-        legalName: 'AZAFCO International Investment & Development LLC',
+        // Bank account title + S.A.E. (Egyptian joint-stock company). Arabic legal name: ازافكو العالمية للاستثمار والتنمية (ش.م.م)
+        legalName: 'AZAFCO International for Investment and Development S.A.E.',
         tradeName: 'AZAFCO International',
         foundingYear: 2008,
         founder: 'Haj Mohamed Abdullah Al-Kuwaitihi',
