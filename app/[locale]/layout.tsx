@@ -8,7 +8,6 @@ import { Inter, IBM_Plex_Sans_Arabic } from 'next/font/google';
 import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
-import LocaleInitializer from '@/components/LocaleInitializer';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
@@ -165,7 +164,6 @@ export default async function RootLayout({
             </head>
             <body className="v2-scope font-body">
                 <NextIntlClientProvider messages={messages} defaultTranslationValues={getFigureValues()}>
-                    <LocaleInitializer />
                     <StructuredData locale={locale} />
                     {/* Site v2 shell: skip link, header, main, footer, mobile RFQ bar */}
                     <a

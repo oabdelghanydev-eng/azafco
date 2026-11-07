@@ -5,8 +5,7 @@ import { Link, usePathname } from '@/navigation';
 import { type Locale } from '@/i18n';
 import { cn } from '@/lib/v2/cn';
 
-// Same keys as components/LanguageSwitcher.tsx + LocaleInitializer.tsx: an explicit
-// choice must be remembered, or LocaleInitializer redirects back to the browser language.
+// Remembers the explicit choice (same keys as components/LanguageSwitcher.tsx).
 const LOCALE_STORAGE_KEY = 'azafco-preferred-locale';
 const SESSION_CHOICE_KEY = 'azafco-locale-choice-made';
 
