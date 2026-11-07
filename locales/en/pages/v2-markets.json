@@ -34,9 +34,9 @@
         "eyebrow": "Current markets",
         "title": "Where we supply today",
         "intro": "Countries listed here are markets with current export activity. Select a country to start an enquiry with the destination already filled in.",
-        "gulf_focus": "We welcome enquiries from importers and distributors in Kuwait, the UAE, Bahrain and Qatar, subject to supply availability and destination regulations.",
+        "gulf_focus": "We welcome enquiries from importers and distributors in each of these markets, subject to supply availability and destination regulations.",
         "card_cta": "Start an enquiry for {country}",
-        "details_label": "Market notes:"
+        "details_label": "Market notes by country"
     },
     "other": {
         "eyebrow": "Status",

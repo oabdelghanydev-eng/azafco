@@ -78,5 +78,10 @@
         "title": "Need the compliance file?",
         "intro": "Your procurement or quality team can send the list of documents it needs. The AZAFCO team will confirm what can be provided and its scope.",
         "label": "Request Compliance Documents"
+    },
+    "pending": {
+        "traceability": "Lot/batch data that can actually be supplied per shipment",
+        "market_approvals": "Market approvals (e.g. EU listing) with numbers, dates and scope",
+        "qc_photos": "Approved QC / laboratory / inspection photos or checklists"
     }
 }

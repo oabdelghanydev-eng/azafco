@@ -16,7 +16,7 @@
 import { useEffect, useState } from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/navigation';
-import { locales, defaultLocale, Locale } from '@/i18n';
+import { publishedLocales as locales, defaultLocale, Locale } from '@/i18n';
 
 const LOCALE_STORAGE_KEY = 'azafco-preferred-locale';
 const SESSION_CHOICE_KEY = 'azafco-locale-choice-made';
@@ -38,7 +38,7 @@ function detectBrowserLocale(): Locale | null {
         const primaryLang = browserLang.split('-')[0].toLowerCase();
 
         // Check if it's a supported locale
-        if (locales.includes(primaryLang as Locale)) {
+        if ((locales as readonly string[]).includes(primaryLang)) {
             return primaryLang as Locale;
         }
     }
@@ -58,7 +58,7 @@ function getSavedLocale(): Locale | null {
     const savedLocale = localStorage.getItem(LOCALE_STORAGE_KEY);
 
     // Validate that saved locale is still in supported locales list
-    if (savedLocale && locales.includes(savedLocale as Locale)) {
+    if (savedLocale && (locales as readonly string[]).includes(savedLocale)) {
         return savedLocale as Locale;
     }
 

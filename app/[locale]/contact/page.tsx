@@ -56,7 +56,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
                     {/* id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working */}
                     <div id="partnership" className="col-span-4 scroll-mt-28 sm:col-span-8 lg:col-span-8">
                         <ContactRouter
-                            initialRoute={topic === 'corporate' ? 'corporate' : 'seafood'}
+                            initialRoute={topic === 'corporate' || topic === 'documents' ? topic : 'seafood'}
                             speciesOptions={speciesOptions}
                             countries={countries}
                             prefillSpecies={product}

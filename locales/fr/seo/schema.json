@@ -9,15 +9,14 @@
         "Azafco Égypte",
         "AZAFCO Fish"
     ],
-    "description": "Exportateur B2B de poisson frais d'Égypte depuis 2008. Livraison de plus de 2 500 tonnes par mois vers plus de {countries} pays dans le monde avec plus de 300 employés et plus de 500 clients. Certifié ISO et HACCP, agréé UE.",
+    "description": "AZAFCO International for Investment and Development S.A.E. est une société égyptienne qui transforme, conditionne et exporte du poisson frais pour des acheteurs B2B (importateurs, grossistes et distributeurs). Site de transformation à Motobas, Kafr El Sheikh, Égypte.",
     "slogan": "Poisson frais premium d'Égypte vers le monde",
     "foundingDate": "2008",
-    "numberOfEmployees": "plus de 300",
     "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
     "factoryName": "Site de production de poisson AZAFCO",
     "factoryAlternateName": "Site de production AZAFCO",
     "websiteName": "AZAFCO International – Exportateur de poisson frais d'Égypte",
-    "websiteDescription": "Site officiel d'AZAFCO International – Exportateur de poisson frais premium d'Égypte vers plus de {countries} pays. Fournisseur en gros.",
+    "websiteDescription": "Site officiel d'AZAFCO International, transformateur et exportateur égyptien de poisson frais basé à Kafr El Sheikh. Spécifications produits et demandes de devis B2B.",
     "productGroupName": "Produits de poisson frais AZAFCO",
     "productGroupDesc": "Produits de poisson frais premium d'Égypte – tilapia, bar, mulet, silure et plus. Tailles personnalisées disponibles.",
     "catalogName": "Catalogue de poisson frais AZAFCO",
@@ -53,28 +52,6 @@
         "Poisson méditerranéen"
     ],
     "speakableName": "AZAFCO International – Exportation de poisson frais",
-    "certifications": {
-        "iso22000": {
-            "name": "ISO 22000:2018",
-            "description": "Système de management de la sécurité alimentaire"
-        },
-        "haccp": {
-            "name": "HACCP",
-            "description": "Analyse des dangers et points critiques pour leur maîtrise"
-        },
-        "iso9001": {
-            "name": "ISO 9001:2015",
-            "description": "Système de management de la qualité"
-        },
-        "iso14001": {
-            "name": "ISO 14001:2015",
-            "description": "Système de management environnemental"
-        },
-        "iso45001": {
-            "name": "ISO 45001:2018",
-            "description": "Santé et sécurité au travail"
-        }
-    },
     "services": {
         "tilapia": {
             "name": "Exportation de tilapia frais",
@@ -88,32 +65,5 @@
             "name": "Exportation de mulet",
             "description": "Mulet frais pour grossistes et restaurants"
         }
-    },
-    "howTo": {
-        "title": "Comment commander du poisson en gros chez AZAFCO",
-        "description": "Étapes simples pour commander du poisson frais en gros chez AZAFCO International",
-        "supplies": {
-            "businessDetails": "Vos coordonnées professionnelles",
-            "quantities": "Quantités requises"
-        },
-        "steps": {
-            "step1": {
-                "name": "Contactez-nous",
-                "text": "Contactez-nous via WhatsApp ou à business@azafco.com.eg"
-            },
-            "step2": {
-                "name": "Spécifiez vos produits",
-                "text": "Choisissez type de poisson, tailles (personnalisation disponible) et quantités"
-            },
-            "step3": {
-                "name": "Recevez un devis",
-                "text": "Nous vous envoyons un devis compétitif sous 24 heures"
-            },
-            "step4": {
-                "name": "Confirmez et expédiez",
-                "text": "Confirmez votre commande – nous expédions avec chaîne du froid 0–4°C vers toute destination mondiale"
-            }
-        },
-        "estimatedCost": "Contactez-nous pour un devis"
     }
 }

@@ -1,12 +1,13 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale } from './i18n';
+import { publishedLocales, defaultLocale, type PublishedLocale } from './i18n';
 
 export default createMiddleware({
-    // A list of all locales that are supported
-    locales,
+    // Published locales only (ar/en): Accept-Language / cookie detection must never
+    // pick es/ru/de/fr, which next.config.js redirects to English until translated.
+    locales: publishedLocales,
 
     // Used when no locale matches
-    defaultLocale,
+    defaultLocale: defaultLocale as PublishedLocale,
 
     // Always use locale prefix in URL for SEO (e.g., /ar/products, /en/products)
     localePrefix: 'always',

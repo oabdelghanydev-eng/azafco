@@ -56,7 +56,6 @@ export default async function StructuredData({ locale }: { locale: string }) {
 
     const alternateNames = (t.raw('schema.alternateNames') ?? ['AZAFCO International', 'AZAFCO']) as string[];
     const knowsAboutList = (t.raw('schema.knowsAbout') ?? []) as string[];
-    const certifications = t.raw('schema.certifications') as Record<string, { name: string; description: string }> | undefined;
     const services = t.raw('schema.services') as Record<string, { name: string; description: string }> | undefined;
 
     const organizationSchema = {
@@ -83,16 +82,8 @@ export default async function StructuredData({ locale }: { locale: string }) {
         taxID: companyConfig.registration.taxCard,
         vatID: companyConfig.registration.taxCard,
         email: companyConfig.contact.email,
-        hasCredential: Object.values(certifications ?? {}).map(cert => ({
-            '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'certification',
-            name: cert.name,
-            description: cert.description
-        })),
-        numberOfEmployees: {
-            '@type': 'QuantitativeValue',
-            value: companyConfig.identity.employees
-        },
+        // No hasCredential / numberOfEmployees: certificates and headcount are not
+        // verified yet (site v2 review). Re-add only from verified data.
         address: factoryAddress,
         contactPoint: [
             {

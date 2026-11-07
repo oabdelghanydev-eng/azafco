@@ -140,5 +140,11 @@
     "schema": {
         "list_name": "AZAFCO seafood catalogue",
         "category": "Fresh fish"
+    },
+    "pending": {
+        "species_id": "{name}: species identification (scientific name)",
+        "product_forms": "{name}: approved product forms, official size-grade table, storage/transport temperature",
+        "spec_sheet": "{name}: spec sheet PDF (download)",
+        "packing_photos": "Photos of actual boxes, labels and palletisation for this product"
     }
 }

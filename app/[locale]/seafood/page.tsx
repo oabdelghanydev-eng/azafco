@@ -114,7 +114,7 @@ export default async function SeafoodPage({ params }: Props) {
                     </div>
                     <div className="space-y-5 text-body-lg text-fg-muted lg:col-span-6 lg:col-start-7">
                         <p>{t('farm.text_1')}</p>
-                        <Pending block label="Fish farm photos + verified farm areas, species and production figures" />
+                        <Pending block label={t('pending.farm')} />
                     </div>
                 </div>
             </Section>
@@ -175,7 +175,7 @@ export default async function SeafoodPage({ params }: Props) {
                             <Button href={routes.quality} variant="secondary" arrow>
                                 {t('quality.link')}
                             </Button>
-                            <Button href={rfqHref({ type: 'specifications' })} variant="text">
+                            <Button href={rfqHref({ type: 'documents' })} variant="text">
                                 {t('quality.docs')}
                             </Button>
                         </div>

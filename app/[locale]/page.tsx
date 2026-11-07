@@ -23,6 +23,8 @@ import {
 } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
+import { activeMarketConfigs } from '@/components/v2/markets/marketData';
+import { Link } from '@/navigation';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -43,7 +45,13 @@ export default async function HomePage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'home_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const td = await getTranslations({ locale, namespace: 'data.products' });
+    const tm = await getTranslations({ locale, namespace: 'data.markets' });
     const img = (id: string) => mediaImage(id, locale);
+    // Active markets from config/company.config.ts (same source as /markets)
+    const activeMarkets = activeMarketConfigs.map((m) => ({ key: m.key, name: tm(`${m.key}.country`) }));
+    const activeMarketList = new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }).format(
+        activeMarkets.map((m) => m.name),
+    );
 
     const featured = FEATURED.map((slug) => products.find((p) => p.slug === slug)).filter(
         (p): p is (typeof products)[number] => Boolean(p),
@@ -76,8 +84,8 @@ export default async function HomePage({ params }: Props) {
                         { title: t('trust.register_title'), detail: t('trust.register_detail'), icon: <DocumentIcon /> },
                         { title: t('trust.spec_title'), detail: t('trust.spec_detail'), icon: <CheckIcon /> },
                         { title: t('trust.direct_title'), detail: t('trust.direct_detail'), icon: <MailIcon /> },
+                        { title: t('trust.markets_title'), detail: activeMarketList, icon: <GlobeIcon /> },
                         { title: '', pending: t('pending.certificates') },
-                        { title: '', pending: t('pending.markets') },
                     ]}
                 />
             </Section>
@@ -183,7 +191,7 @@ export default async function HomePage({ params }: Props) {
                 >
                     <Pending block label={t('pending.certificate_cards')} className="mb-6" />
                     <div className="flex flex-wrap gap-3">
-                        <Button href={rfqHref({ type: 'specifications' })} variant="secondary" icon={<DocumentIcon />}>
+                        <Button href={rfqHref({ type: 'documents' })} variant="secondary" icon={<DocumentIcon />}>
                             {t('quality.cta_docs')}
                         </Button>
                         <Button href={routes.quality} variant="text" arrow>
@@ -193,7 +201,7 @@ export default async function HomePage({ params }: Props) {
                 </EditorialMedia>
             </Section>
 
-            {/* 08 · Markets / export approach (no destination list until approved) */}
+            {/* 08 · Markets / export approach (active list from config, same as /markets) */}
             <Section variant="offwhite" labelledBy="home-markets">
                 <SectionHeader id="home-markets" eyebrow={t('markets.eyebrow')} title={t('markets.title')} intro={t('markets.intro')} />
                 <FeatureGrid
@@ -212,7 +220,17 @@ export default async function HomePage({ params }: Props) {
                         {t('markets.link_importers')}
                     </Button>
                 </div>
-                <Pending label={t('pending.markets')} className="mt-6" />
+                <p className="mt-8 text-body-sm text-fg-muted">
+                    <span className="font-semibold text-fg">{t('markets.active_label')}</span>{' '}
+                    {activeMarkets.map((m, i) => (
+                        <span key={m.key}>
+                            {i > 0 ? (locale === 'ar' ? '، ' : ', ') : null}
+                            <Link href={`${routes.markets}/${m.key}`} className="font-medium text-navy underline-offset-4 hover:underline">
+                                {m.name}
+                            </Link>
+                        </span>
+                    ))}
+                </p>
             </Section>
 
             {/* 09 · Corporate group teaser (deliberately small) */}

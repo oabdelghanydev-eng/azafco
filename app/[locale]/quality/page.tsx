@@ -161,7 +161,7 @@ export default async function QualityPage({ params }: Props) {
                             <p>{t('trace.text_2')}</p>
                         </div>
                         <div className="mt-6">
-                            <Pending label="Lot/batch data that can actually be supplied per shipment" />
+                            <Pending label={t('pending.traceability')} />
                         </div>
                     </div>
                     <div className="lg:col-span-5 lg:col-start-8">
@@ -169,7 +169,7 @@ export default async function QualityPage({ params }: Props) {
                             <h3 className="text-heading-md text-fg">{t('trace.markets_title')}</h3>
                             <p className="mt-3 text-body text-fg-muted">{t('trace.markets_text')}</p>
                             <div className="mt-4">
-                                <Pending label="Market approvals (e.g. EU listing) with numbers, dates and scope" />
+                                <Pending label={t('pending.market_approvals')} />
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ export default async function QualityPage({ params }: Props) {
                     className="lg:max-w-4xl"
                 />
                 <div className="mt-6">
-                    <Pending block label="Approved QC / laboratory / inspection photos or checklists" />
+                    <Pending block label={t('pending.qc_photos')} />
                 </div>
             </Section>
 

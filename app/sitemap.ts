@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { locales } from '@/i18n';
+import { publishedLocales as locales } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import { productSlugs } from '@/data/products';
 import { activeMarketSlugs } from '@/data/markets';
@@ -14,10 +14,6 @@ const pages = [
     { path: 'about', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: 'contact', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'markets', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: 'media', priority: 0.7, changeFrequency: 'weekly' as const },
-    { path: 'certificates', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: 'eu-buyers', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: 'faq', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: 'seafood', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: 'processing', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'quality', priority: 0.8, changeFrequency: 'monthly' as const },
@@ -40,9 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // language alternates (hreflang). lastModified is omitted: a build-time
     // date on every URL tells search engines nothing changed meaningfully.
     for (const page of pages) {
-        const languages = Object.fromEntries(
+        // ar/en only: es/ru/de/fr redirect to English until translated
+        const languages: Record<string, string> = Object.fromEntries(
             locales.map((locale) => [locale, pageUrl(locale, page.path)])
         );
+        languages['x-default'] = page.path ? `${baseUrl}/${page.path}` : baseUrl;
 
         for (const locale of locales) {
             sitemapEntries.push({

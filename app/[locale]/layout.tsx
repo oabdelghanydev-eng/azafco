@@ -40,6 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const baseUrl = companyConfig.contact.baseUrl;
     const t = await getTranslations({ locale, namespace: 'metadata' });
+    // Default description from the v2 home copy (the legacy metadata.home.description
+    // carries unapproved figures)
+    const tHome = await getTranslations({ locale, namespace: 'home_v2.meta' });
 
     return {
         metadataBase: new URL(baseUrl),
@@ -47,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             default: t('site.title_default'),
             template: t('site.title_template'),
         },
-        description: t('home.description'),
+        description: tHome('description'),
         authors: [{ name: t('site.author') }],
         creator: t('site.creator'),
         publisher: t('site.publisher'),
@@ -59,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         openGraph: {
             type: 'website',
             locale: ogLocaleMap[locale as Locale] || 'en_US',
-            alternateLocale: ['ar_EG', 'en_US', 'es_ES', 'ru_RU', 'de_DE', 'fr_FR'].filter(l => !l.startsWith(locale)),
+            alternateLocale: ['ar_EG', 'en_US'].filter(l => !l.startsWith(locale)),
             url: baseUrl,
             siteName: t('site.name'),
             images: [
@@ -95,10 +98,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             languages: {
                 'ar': `${baseUrl}/ar`,
                 'en': `${baseUrl}/en`,
-                'es': `${baseUrl}/es`,
-                'ru': `${baseUrl}/ru`,
-                'de': `${baseUrl}/de`,
-                'fr': `${baseUrl}/fr`,
                 'x-default': `${baseUrl}`,
             },
         },
@@ -125,7 +124,12 @@ export default async function RootLayout({
     setRequestLocale(locale);
 
     // Get messages for the current locale
-    const messages = await getMessages();
+    // Only the v2 namespaces (+ common) go to the browser: old namespaces still hold
+    // unapproved claims and must not ship in the page payload.
+    const allMessages = await getMessages();
+    const messages = Object.fromEntries(
+        Object.entries(allMessages).filter(([key]) => key === 'common' || key === 'v2' || key.endsWith('_v2'))
+    );
 
     // Get direction for the locale
     const dir = localeConfig[locale as Locale]?.dir || 'ltr';

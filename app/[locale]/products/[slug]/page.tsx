@@ -198,12 +198,12 @@ export default async function ProductDetailPage({ params }: Props) {
                         <p className="mt-4 max-w-prose-v2 text-body-sm text-ink-muted">{t('detail.spec_note')}</p>
                         {!p.scientificName ? (
                             <div className="mt-4">
-                                <Pending label={`${slug}: species identification (scientific name)`} />
+                                <Pending label={t('pending.species_id', { name })} />
                             </div>
                         ) : null}
                         <div className="mt-4 flex flex-wrap gap-2">
-                            <Pending label={`${name}: approved product forms, official size-grade table, storage/transport temperature`} />
-                            <Pending label={`${name}: spec sheet PDF (download)`} />
+                            <Pending label={t('pending.product_forms', { name })} />
+                            <Pending label={t('pending.spec_sheet', { name })} />
                         </div>
                         {note ? (
                             <p role="note" className="mt-6 rounded-card border-s-4 border-gold bg-white p-5 text-body-sm text-ink">
@@ -244,7 +244,7 @@ export default async function ProductDetailPage({ params }: Props) {
                         <h3 className="v2-heading font-display text-heading-xl">{t('detail.packing_title')}</h3>
                         <p className="mt-4 text-body text-fg-muted">{t('detail.packing_text')}</p>
                         <div className="mt-4">
-                            <Pending block label="Photos of actual boxes, labels and palletisation for this product" />
+                            <Pending block label={t('pending.packing_photos')} />
                         </div>
                         <div className="mt-auto pt-6">
                             <Button href={routes.processing} variant="text">
@@ -259,7 +259,7 @@ export default async function ProductDetailPage({ params }: Props) {
                         <h3 className="v2-heading font-display text-heading-xl">{t('detail.docs_title')}</h3>
                         <p className="mt-4 text-body text-fg-muted">{t('detail.docs_text')}</p>
                         <div className="mt-auto flex flex-wrap items-center gap-4 pt-6">
-                            <Button href={rfqHref({ product: slug, type: 'specifications' })} variant="secondary">
+                            <Button href={rfqHref({ type: 'documents' })} variant="secondary">
                                 {t('detail.docs_cta')}
                             </Button>
                             <Button href={routes.quality} variant="text">

@@ -2,7 +2,8 @@
 
 /**
  * Contact page route selector (brief §19.02–03): "Seafood supply quote" vs
- * "Corporate partnership / other". One RfqForm instance; switching route keeps
+ * "Corporate partnership / other", plus a short "Request documents" route
+ * (no species or volume). One RfqForm instance; switching route keeps
  * whatever the visitor already typed in the shared fields.
  */
 import { useState } from 'react';
@@ -12,7 +13,7 @@ import RfqForm from '@/components/v2/rfq/RfqForm';
 import type { CountryOption } from '@/components/v2/rfq/countries';
 import type { Option } from '@/components/v2/rfq/fields';
 
-export type ContactRoute = 'seafood' | 'corporate';
+export type ContactRoute = 'seafood' | 'documents' | 'corporate';
 
 interface Props {
     initialRoute: ContactRoute;
@@ -25,13 +26,13 @@ interface Props {
 export default function ContactRouter({ initialRoute, speciesOptions, countries, prefillSpecies, prefillCountry }: Props) {
     const t = useTranslations('contact_v2.routes');
     const [route, setRoute] = useState<ContactRoute>(initialRoute);
-    const routesList: ContactRoute[] = ['seafood', 'corporate'];
+    const routesList: ContactRoute[] = ['seafood', 'documents', 'corporate'];
 
     return (
         <div className="flex flex-col gap-8">
             <fieldset>
                 <legend className="mb-4 font-display text-heading-md text-navy">{t('legend')}</legend>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                     {routesList.map((r) => {
                         const checked = route === r;
                         return (
@@ -67,7 +68,7 @@ export default function ContactRouter({ initialRoute, speciesOptions, countries,
             </fieldset>
 
             <RfqForm
-                topic={route === 'corporate' ? 'corporate' : 'general'}
+                topic={route === 'seafood' ? 'general' : route}
                 prefillSpecies={prefillSpecies}
                 prefillCountry={prefillCountry}
                 speciesOptions={speciesOptions}

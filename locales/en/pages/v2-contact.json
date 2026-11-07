@@ -13,6 +13,8 @@
         "legend": "What is your enquiry about?",
         "seafood_title": "Seafood supply quote",
         "seafood_text": "For importers and procurement teams: product, size, packing, quantity, destination and timing.",
+        "documents_title": "Request documents",
+        "documents_text": "Specifications, certificates or the company profile. A short request: no species or volume needed.",
         "corporate_title": "Corporate partnership or other",
         "corporate_text": "Partnerships, investment or other topics: a short introduction to your company and the proposed cooperation."
     },

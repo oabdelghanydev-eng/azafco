@@ -9,15 +9,14 @@
         "Azafco Egipto",
         "AZAFCO Fish"
     ],
-    "description": "Exportador B2B de pescado fresco de Egipto desde 2008. Suministro de más de 2.500 toneladas mensuales a más de {countries} países a nivel mundial con más de 300 empleados y más de 500 clientes. Certificado ISO y HACCP, aprobación de exportación UE.",
+    "description": "AZAFCO International for Investment and Development S.A.E. es una empresa egipcia que procesa, envasa y exporta pescado fresco para compradores B2B (importadores, mayoristas y distribuidores). Planta de procesamiento en Motobas, Kafr El Sheikh, Egipto.",
     "slogan": "Pescado fresco premium de Egipto al mundo",
     "foundingDate": "2008",
-    "numberOfEmployees": "más de 300",
     "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
     "factoryName": "Planta de procesamiento de pescado AZAFCO",
     "factoryAlternateName": "Planta de pescado AZAFCO",
     "websiteName": "AZAFCO International – Exportador de pescado fresco de Egipto",
-    "websiteDescription": "Sitio web oficial de AZAFCO International – Exportador de pescado fresco premium de Egipto a más de {countries} países a nivel mundial. Suministro mayorista.",
+    "websiteDescription": "Sitio web oficial de AZAFCO International, procesador y exportador egipcio de pescado fresco con sede en Kafr El Sheikh. Especificaciones de producto y solicitudes de cotización B2B.",
     "productGroupName": "Productos de pescado fresco AZAFCO",
     "productGroupDesc": "Productos de pescado fresco premium de Egipto – Tilapia, lubina, lisa, bagre y más. Tamaños personalizados disponibles.",
     "catalogName": "Catálogo de productos de pescado fresco AZAFCO",
@@ -53,28 +52,6 @@
         "Pescado mediterráneo"
     ],
     "speakableName": "AZAFCO International – Exportación de pescado fresco",
-    "certifications": {
-        "iso22000": {
-            "name": "ISO 22000:2018",
-            "description": "Sistema de gestión de seguridad alimentaria"
-        },
-        "haccp": {
-            "name": "HACCP",
-            "description": "Análisis de peligros y puntos críticos de control"
-        },
-        "iso9001": {
-            "name": "ISO 9001:2015",
-            "description": "Sistema de gestión de calidad"
-        },
-        "iso14001": {
-            "name": "ISO 14001:2015",
-            "description": "Sistema de gestión ambiental"
-        },
-        "iso45001": {
-            "name": "ISO 45001:2018",
-            "description": "Sistema de gestión de seguridad y salud en el trabajo"
-        }
-    },
     "services": {
         "tilapia": {
             "name": "Exportación de tilapia fresca",
@@ -88,32 +65,5 @@
             "name": "Exportación de lisa",
             "description": "Mújol fresco para mercados internacionales"
         }
-    },
-    "howTo": {
-        "title": "Cómo pedir pescado mayorista de AZAFCO",
-        "description": "Pasos simples para pedir pescado fresco mayorista de AZAFCO International",
-        "supplies": {
-            "businessDetails": "Datos de su empresa",
-            "quantities": "Cantidades requeridas"
-        },
-        "steps": {
-            "step1": {
-                "name": "Contáctenos",
-                "text": "Contáctenos vía WhatsApp o correo business@azafco.com.eg"
-            },
-            "step2": {
-                "name": "Especifique sus productos",
-                "text": "Elija tipo de pescado, tamaños (personalización disponible) y cantidades"
-            },
-            "step3": {
-                "name": "Reciba cotización",
-                "text": "Le enviamos una cotización competitiva en 24 horas"
-            },
-            "step4": {
-                "name": "Confirmar y enviar",
-                "text": "Confirme su pedido y enviamos con cadena de frío completa 0–4°C – por aire o tierra a nivel mundial"
-            }
-        },
-        "estimatedCost": "Contáctenos para cotización"
     }
 }

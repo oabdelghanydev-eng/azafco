@@ -1,21 +1,21 @@
 {
     "meta": {
         "title": "Seafood & Aquaculture: Fish Supply from Egypt",
-        "description": "AZAFCO's core business: fish farming, processing, packing and export coordination for importers, distributors, foodservice and hotel buyers."
+        "description": "AZAFCO's core business: farmed fish sourcing, processing, packing and export coordination for importers, distributors, foodservice and hotel buyers."
     },
     "hero": {
         "eyebrow": "Seafood & Aquaculture",
         "title": "Seafood is the core of AZAFCO",
-        "intro": "We connect fish farming and sourcing with processing, packing and export coordination, so commercial buyers get the information they need to plan purchasing and supply.",
+        "intro": "We connect aquaculture production and sourcing with processing, packing and export coordination, so commercial buyers get the information they need to plan purchasing and supply.",
         "primary": "View Seafood Catalogue",
         "secondary": "See Processing & Packing"
     },
     "chain": {
         "eyebrow": "How supply works",
-        "title": "From the farm to your destination",
+        "title": "From origin to your destination",
         "intro": "Each order follows the same path. The specification agreed with you guides every step.",
         "farm_title": "Farming and sourcing",
-        "farm_text": "Fish farming is a core part of AZAFCO's operations, matched to the species, quantities and timing buyers need.",
+        "farm_text": "Fish comes from aquaculture production linked to AZAFCO's core business, matched to the species, quantities and timing buyers need.",
         "select_title": "Selection",
         "select_text": "Product is selected and graded against the size and quality agreed for the order.",
         "process_title": "Processing",
@@ -32,9 +32,9 @@
         "view_all": "View Seafood Catalogue"
     },
     "farm": {
-        "eyebrow": "Farming and supply",
-        "title": "Supply that starts at the farm",
-        "text_1": "Fish farming is a core part of the AZAFCO system. Our team works to understand each buyer's commercial needs: which species, what quantities and when."
+        "eyebrow": "Sourcing and supply",
+        "title": "Supply that starts at the source",
+        "text_1": "Fish comes from aquaculture production linked to AZAFCO's core business. Our team works to understand each buyer's commercial needs: which species, what quantities and when."
     },
     "processing": {
         "eyebrow": "Processing precision",
@@ -81,5 +81,8 @@
         "title": "Discuss your seafood requirements",
         "intro": "Specify the species, weight, processing, packing, order volume and destination country. The export team will review whether it can be delivered and contact you.",
         "label": "Request a Quote"
+    },
+    "pending": {
+        "farm": "Fish farm photos + verified farm areas, species and production figures"
     }
 }

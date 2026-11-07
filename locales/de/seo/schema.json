@@ -9,15 +9,14 @@
         "Azafco Ägypten",
         "AZAFCO Fisch"
     ],
-    "description": "B2B-Frischfischexporteur aus Ägypten seit 2008. Lieferung von über 2.500 Tonnen monatlich in über {countries} Länder weltweit mit über 300 Mitarbeitern und über 500 Kunden. ISO- & HACCP-zertifiziert, EU-Exportzulassung.",
+    "description": "AZAFCO International for Investment and Development S.A.E. ist ein ägyptisches Unternehmen, das frischen Fisch für B2B-Käufer (Importeure, Großhändler und Distributoren) verarbeitet, verpackt und exportiert. Verarbeitungsbetrieb in Motobas, Kafr El Sheikh, Ägypten.",
     "slogan": "Premium-Frischfisch aus Ägypten – weltweit",
     "foundingDate": "2008",
-    "numberOfEmployees": "300+",
     "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
     "factoryName": "AZAFCO Fischverarbeitungsanlage",
     "factoryAlternateName": "AZAFCO Produktionsstätte",
     "websiteName": "AZAFCO International – B2B-Fischexporteur aus Ägypten",
-    "websiteDescription": "Offizielle Website von AZAFCO International – Premium-Frischfischexporteur aus Ägypten in über {countries} Länder weltweit. Großhandelslieferung.",
+    "websiteDescription": "Offizielle Website von AZAFCO International, einem ägyptischen Verarbeiter und Exporteur von Frischfisch mit Sitz in Kafr El Sheikh. Produktspezifikationen und B2B-Angebotsanfragen.",
     "productGroupName": "AZAFCO Frischfischprodukte",
     "productGroupDesc": "Premium-Frischfischprodukte aus Ägypten – Tilapia, Wolfsbarsch, Meeräsche, Wels & mehr. Individuelle Größen verfügbar.",
     "catalogName": "AZAFCO Frischfischprodukte-Katalog",
@@ -53,28 +52,6 @@
         "Mittelmeerfisch"
     ],
     "speakableName": "AZAFCO International – Frischfischexport",
-    "certifications": {
-        "iso22000": {
-            "name": "ISO 22000:2018",
-            "description": "Managementsystem für Lebensmittelsicherheit"
-        },
-        "haccp": {
-            "name": "HACCP",
-            "description": "Gefahrenanalyse und kritische Kontrollpunkte"
-        },
-        "iso9001": {
-            "name": "ISO 9001:2015",
-            "description": "Qualitätsmanagementsystem"
-        },
-        "iso14001": {
-            "name": "ISO 14001:2015",
-            "description": "Umweltmanagementsystem"
-        },
-        "iso45001": {
-            "name": "ISO 45001:2018",
-            "description": "Managementsystem für Arbeitssicherheit und Gesundheitsschutz"
-        }
-    },
     "services": {
         "tilapia": {
             "name": "Tilapia-Export",
@@ -88,32 +65,5 @@
             "name": "Meeräsche-Export",
             "description": "Frische Meeräsche für internationale Märkte"
         }
-    },
-    "howTo": {
-        "title": "So bestellen Sie Großhandelsfisch bei AZAFCO",
-        "description": "Einfache Schritte zur Bestellung von frischem Großhandelsfisch bei AZAFCO International",
-        "supplies": {
-            "businessDetails": "Ihre Geschäftsdaten",
-            "quantities": "Benötigte Mengen"
-        },
-        "steps": {
-            "step1": {
-                "name": "Kontakt aufnehmen",
-                "text": "Kontaktieren Sie uns per WhatsApp oder E-Mail an business@azafco.com.eg"
-            },
-            "step2": {
-                "name": "Produkte angeben",
-                "text": "Wählen Sie Fischart, Größen (individuelle Anpassung möglich) und benötigte Mengen"
-            },
-            "step3": {
-                "name": "Angebot erhalten",
-                "text": "Wir senden Ihnen innerhalb von 24 Stunden ein wettbewerbsfähiges Angebot"
-            },
-            "step4": {
-                "name": "Bestätigen & Versand",
-                "text": "Bestätigen Sie Ihre Bestellung – wir versenden mit lückenloser 0–4°C Kühlkette per Luft oder Land weltweit"
-            }
-        },
-        "estimatedCost": "Auf Anfrage"
     }
 }

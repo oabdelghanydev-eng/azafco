@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useTranslations } from 'next-intl';
 import { CertificateCard, Pending } from '@/components/v2';
 import { certificates } from '@/data/certificates';
 
@@ -34,6 +35,7 @@ export interface CertificateLibraryProps {
  * appear as <Pending> chips (preview only).
  */
 export default function CertificateLibrary({ locale, empty }: CertificateLibraryProps) {
+    const tp = useTranslations('v2.pending');
     const current = certificates.filter((c) => isCurrent(c.validUntil));
     const missing = STANDARDS.filter((s) => !current.some((c) => c.name.toUpperCase().startsWith(s.toUpperCase())));
 
@@ -61,7 +63,7 @@ export default function CertificateLibrary({ locale, empty }: CertificateLibrary
                     {missing.map((s) => (
                         <CertificateCard key={s} name={s} verified={false} />
                     ))}
-                    <Pending label="Certificate scope (sites/products covered) is not in data/certificates.ts" />
+                    <Pending label={tp('certificate_scope')} />
                 </div>
             ) : null}
         </div>

@@ -79,5 +79,12 @@
         "title": "Tell us how you need it packed",
         "intro": "Share the species, product form, pack type, net weight, labels and destination. The export team will review feasibility and come back to you.",
         "label": "Request Facility Information"
+    },
+    "pending": {
+        "facility": "Factory location(s), opening dates (Baltim 2018 / Motobas 2025 vs About page), approval/registration numbers, capacity definition",
+        "steps": "Step order and control points to be confirmed by the plant manager",
+        "pack_formats": "Validated pack formats (box/crate types, net weights), label options, operational constraints",
+        "packing_photos": "Packing line / boxed product photos",
+        "temperature": "Verified storage/transport temperature per product + control points and logs"
     }
 }

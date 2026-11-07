@@ -95,7 +95,7 @@ export default async function ProcessingPage({ params }: Props) {
                     </div>
                     <div className="space-y-4 lg:col-span-6 lg:col-start-7">
                         <p className="text-body-lg text-fg-muted">{t('intro.text')}</p>
-                        <Pending block label="Factory location(s), opening dates (Baltim 2018 / Motobas 2025 vs About page), approval/registration numbers, capacity definition" />
+                        <Pending block label={t('pending.facility')} />
                     </div>
                 </div>
             </Section>
@@ -114,7 +114,7 @@ export default async function ProcessingPage({ params }: Props) {
                         }))}
                     />
                     <div className="mt-6">
-                        <Pending label="Step order and control points to be confirmed by the plant manager" />
+                        <Pending label={t('pending.steps')} />
                     </div>
                 </div>
             </Section>
@@ -130,8 +130,8 @@ export default async function ProcessingPage({ params }: Props) {
                     {t('capabilities.constraints')}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                    <Pending label="Validated pack formats (box/crate types, net weights), label options, operational constraints" />
-                    <Pending label="Packing line / boxed product photos" />
+                    <Pending label={t('pending.pack_formats')} />
+                    <Pending label={t('pending.packing_photos')} />
                 </div>
             </Section>
 
@@ -164,7 +164,7 @@ export default async function ProcessingPage({ params }: Props) {
                             <h3 className="text-heading-md text-navy">{t('checkpoints.docs_title')}</h3>
                             <p className="mt-2 text-body-sm text-ink-muted">{t('checkpoints.docs_text')}</p>
                             <div className="mt-5">
-                                <Button href={rfqHref({ type: 'specifications' })} variant="secondary">
+                                <Button href={rfqHref({ type: 'documents' })} variant="secondary">
                                     {t('checkpoints.docs_cta')}
                                 </Button>
                             </div>
@@ -185,7 +185,7 @@ export default async function ProcessingPage({ params }: Props) {
                     <div className="space-y-4 text-body-lg text-fg-muted lg:col-span-6 lg:col-start-7">
                         <p>{t('coldchain.text_1')}</p>
                         <p>{t('coldchain.text_2')}</p>
-                        <Pending block label="Verified storage/transport temperature per product + control points and logs" />
+                        <Pending block label={t('pending.temperature')} />
                         <Button href={routes.quality} variant="text">
                             {t('coldchain.link')}
                         </Button>

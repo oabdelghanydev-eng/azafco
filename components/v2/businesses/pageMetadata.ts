@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { ogLocaleMap, ogImageMap, locales, type Locale } from '@/i18n';
+import { ogLocaleMap, ogImageMap, locales, type Locale, publishedLocales } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 
 /**
  * Shared metadata for the v2 corporate pages (home / about / businesses):
- * canonical, hreflang (all 6 locales + x-default), Open Graph and Twitter,
+ * canonical, hreflang (published locales ar/en + x-default), Open Graph and Twitter,
  * same shape as the pre-v2 pages.
  *
  * @param path locale-less path: '' for home, '/about', '/businesses'
@@ -25,7 +25,7 @@ export async function buildPageMetadata({
     const siteT = await getTranslations({ locale, namespace: 'metadata.site' });
     const url = `${baseUrl}/${locale}${path}`;
     const languages: Record<string, string> = {};
-    for (const l of locales) languages[l] = `${baseUrl}/${l}${path}`;
+    for (const l of publishedLocales) languages[l] = `${baseUrl}/${l}${path}`;
     languages['x-default'] = `${baseUrl}${path}`;
 
     return {

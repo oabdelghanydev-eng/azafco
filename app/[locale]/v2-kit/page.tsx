@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { products } from '@/data/products';
@@ -119,6 +120,8 @@ const copy = {
 };
 
 export default async function V2KitPage({ params }: Props) {
+    // Dev/preview only: hidden in production unless the Pending preview flag is on
+    if (process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_SHOW_PENDING !== '1') notFound();
     const { locale } = await params;
     setRequestLocale(locale);
     const c = locale === 'ar' ? copy.ar : copy.en;

@@ -18,7 +18,8 @@
         "spec_title": "Quotes built on your specification",
         "spec_detail": "Species, size, presentation, packing, volume and destination",
         "direct_title": "Direct line to the export team",
-        "direct_detail": "Phone, WhatsApp and email"
+        "direct_detail": "Phone, WhatsApp and email",
+        "markets_title": "Current export markets"
     },
     "seafood": {
         "eyebrow": "Our core business",
@@ -81,7 +82,8 @@
         "i3_title": "Transport and timing",
         "i3_text": "Transport mode and timing are agreed with you before the quote.",
         "link_markets": "Export markets",
-        "link_importers": "How buying from AZAFCO works"
+        "link_importers": "How buying from AZAFCO works",
+        "active_label": "Current export markets:"
     },
     "group": {
         "eyebrow": "AZAFCO International",

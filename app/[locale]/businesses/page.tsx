@@ -118,6 +118,8 @@ export default async function BusinessesPage({ params }: Props) {
                 <FeatureGrid
                     columns={3}
                     items={(['agri', 'livestock', 'invest'] as const).map((k) => ({
+                        // Anchors for /businesses#agriculture etc. (redirect targets in next.config.js)
+                        id: ({ agri: 'agriculture', livestock: 'livestock', invest: 'investments' } as const)[k],
                         title: t(`others.${k}_title`),
                         description: (
                             <>

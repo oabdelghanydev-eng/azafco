@@ -6,6 +6,16 @@ import { getFigureValues } from './config/company.config';
 export const locales = ['ar', 'en', 'es', 'ru', 'de', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 
+/**
+ * Locales with real (translated) site v2 copy. Only these appear in the language
+ * switcher, hreflang alternates and the sitemap. es/ru/de/fr still route, but
+ * next.config.js redirects them (307) to the English page until translated.
+ */
+export const publishedLocales = ['ar', 'en'] as const satisfies readonly Locale[];
+export type PublishedLocale = (typeof publishedLocales)[number];
+export const isPublishedLocale = (l: string): l is PublishedLocale =>
+    (publishedLocales as readonly string[]).includes(l);
+
 // Default locale (Arabic for this Egyptian company)
 export const defaultLocale: Locale = 'ar';
 

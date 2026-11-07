@@ -28,8 +28,9 @@ export interface CertificateCardProps {
 /** Proof card for a certificate / approval. Verified data only (brief: "badges verified only"). */
 export default function CertificateCard({ name, verified, issuer, scope, validUntil, href, image, className }: CertificateCardProps) {
     const t = useTranslations('v2.certificate');
+    const tp = useTranslations('v2.pending');
     const format = useFormatter();
-    if (!verified) return <Pending label={`${name}: certificate copy, issuer, scope, expiry, approval to publish`} />;
+    if (!verified) return <Pending label={tp('certificate_card', { name })} />;
 
     return (
         <article data-surface="light" className={cn('flex h-full flex-col rounded-card border border-line bg-white p-6 text-ink', className)}>

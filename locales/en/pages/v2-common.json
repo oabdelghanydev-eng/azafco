@@ -67,7 +67,9 @@
         "home": "Home"
     },
     "pending": {
-        "prefix": "Pending owner confirmation:"
+        "prefix": "Pending owner confirmation:",
+        "certificate_card": "{name}: certificate copy, issuer, scope, expiry, approval to publish",
+        "certificate_scope": "Certificate scope (sites/products covered)"
     },
     "spec": {
         "attribute": "Attribute",

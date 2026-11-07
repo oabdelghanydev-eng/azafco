@@ -26,10 +26,14 @@ export interface Product {
     scientificName: string
     image: string
     available: boolean
+    // true = kept in data but hidden everywhere on the site (catalogue, seafood
+    // index, related products, sitemap, RFQ species list; product page 404s)
+    // until the owner confirms the species is still sold.
+    pendingConfirmation?: boolean
 }
 
 // Locale-agnostic product data - all translatable strings are in locale JSON files
-export const products: Product[] = [
+export const allProducts: Product[] = [
     {
         id: 1,
         slug: 'tilapia',
@@ -151,12 +155,18 @@ export const products: Product[] = [
         scientificName: 'Anguilla anguilla',
         image: '/items/eels.jpg',
         available: true,
+        pendingConfirmation: true,
     },
 ]
 
-// All species-page slugs (used by generateStaticParams and the sitemap)
+// Published products: everything except species awaiting owner confirmation.
+// Use this list everywhere on the site; `allProducts` only for data maintenance.
+export const products: Product[] = allProducts.filter((p) => !p.pendingConfirmation)
+
+// Published species-page slugs (used by generateStaticParams and the sitemap)
 export const productSlugs: string[] = products.map((p) => p.slug)
 
+// Published products only: hidden species resolve to undefined (→ notFound)
 export function getProductBySlug(slug: string): Product | undefined {
     return products.find((p) => p.slug === slug)
 }

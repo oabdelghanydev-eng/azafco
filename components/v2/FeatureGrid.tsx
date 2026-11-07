@@ -11,6 +11,8 @@ export interface Feature {
     /** Makes the whole card a link (segment / capability cards) */
     href?: string;
     linkLabel?: string;
+    /** Anchor id on the item (deep links such as /businesses#agriculture) */
+    id?: string;
 }
 
 export interface FeatureGridProps {
@@ -48,7 +50,7 @@ export default function FeatureGrid({ items, columns = 3, style = 'plain', headi
                         : 'border-t border-rule pt-5',
                 );
                 return (
-                    <li key={i}>
+                    <li key={i} id={f.id} className={f.id ? 'scroll-mt-28' : undefined}>
                         {f.href ? (
                             <Link href={f.href} className={box}>
                                 {body}

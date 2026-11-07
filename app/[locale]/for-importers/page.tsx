@@ -118,7 +118,7 @@ export default async function ForImportersPage({ params }: Props) {
             </Section>
 
             {/* 07 Procurement FAQ */}
-            <Section variant="offwhite" labelledBy="fi-faq">
+            <Section variant="offwhite" labelledBy="fi-faq" id="faq" className="scroll-mt-24">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-4">
                         <SectionHeader id="fi-faq" size="md" eyebrow={t('faq.eyebrow')} title={t('faq.title')} />

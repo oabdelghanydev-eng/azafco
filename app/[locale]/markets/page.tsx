@@ -83,13 +83,22 @@ export default async function MarketsPage({ params }: Props) {
                     ))}
                 </ul>
                 <p className="mt-8 max-w-prose-v2 border-s-2 border-gold ps-4 text-body text-fg-muted">{t('active.gulf_focus')}</p>
-                <nav aria-label={t('active.details_label')} className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-body-sm">
-                    <span className="text-fg-muted">{t('active.details_label')}</span>
-                    {activeMarketConfigs.map((m) => (
-                        <Link key={m.key} href={`${routes.markets}/${m.key}`} className="inline-flex min-h-[44px] items-center font-medium text-navy underline-offset-4 hover:underline">
-                            {country(m.key)}
-                        </Link>
-                    ))}
+                <nav aria-labelledby="mk-notes" className="mt-8">
+                    <h3 id="mk-notes" className="text-overline uppercase text-eyebrow">
+                        {t('active.details_label')}
+                    </h3>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                        {activeMarketConfigs.map((m) => (
+                            <li key={m.key}>
+                                <Link
+                                    href={`${routes.markets}/${m.key}`}
+                                    className="inline-flex min-h-[44px] items-center rounded-control border border-rule bg-panel px-4 text-body-sm font-medium text-navy transition-colors duration-fast hover:bg-tint"
+                                >
+                                    {country(m.key)}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </nav>
             </Section>
 

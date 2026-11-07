@@ -36,6 +36,11 @@ const nextConfig = {
   // (owner species list, 7 Nov 2026); see docs/reports/species-identification.md
   async redirects() {
     return [
+      // Site v2: es/ru/de/fr have no translated v2 copy yet. Send them to the English
+      // page (temporary, 307) so 4 copies of the English site are never indexed.
+      // Remove once a locale is translated (and add it to publishedLocales in i18n.ts).
+      { source: '/:locale(es|ru|de|fr)', destination: '/en', permanent: false },
+      { source: '/:locale(es|ru|de|fr)/:path*', destination: '/en/:path*', permanent: false },
       {
         source: '/:locale(ar|en|es|ru|de|fr)/products/buni',
         destination: '/:locale/products/grass-carp',
@@ -44,6 +49,13 @@ const nextConfig = {
       // Site v2: guides moved into Insights
       { source: '/:locale(ar|en|es|ru|de|fr)/guides', destination: '/:locale/insights', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/guides/:slug', destination: '/:locale/insights/:slug', permanent: true },
+      // Site v2: legacy pages with unapproved claims retired (review 7 Nov 2026)
+      { source: '/:locale(ar|en)/faq', destination: '/:locale/for-importers#faq', permanent: true },
+      { source: '/:locale(ar|en)/certificates', destination: '/:locale/quality', permanent: true },
+      { source: '/:locale(ar|en)/eu-buyers', destination: '/:locale/markets', permanent: true },
+      { source: '/:locale(ar|en)/media', destination: '/:locale/insights', permanent: true },
+      // Site v2: corporate sectors live as sections of /businesses
+      { source: '/:locale(ar|en)/:sector(agriculture|livestock|investments)', destination: '/:locale/businesses#:sector', permanent: true },
     ]
   },
 

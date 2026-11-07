@@ -107,8 +107,7 @@ export default function SiteHeader() {
                 </nav>
 
                 <div className="ms-auto flex items-center gap-2 xl:ms-0">
-                    <LanguageSwitch className="hidden sm:flex" />
-                    <LanguageSwitch className="sm:hidden" compact />
+                    <LanguageSwitch />
                     <Button href={routes.contact} variant="outline" size="sm" className="hidden xl:inline-flex">
                         {t('nav.contact')}
                     </Button>
@@ -342,7 +341,7 @@ function MobileDrawer({ pathname, onClose }: { pathname: string; onClose: () => 
                     </ul>
                 </nav>
                 <div className="space-y-4 border-t border-line p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-                    <LanguageSwitch menuUp />
+                    <LanguageSwitch />
                     <Button href={routes.rfq} fullWidth size="lg" dataAttrs={{ 'data-cta': 'drawer_rfq' }}>
                         {t('cta.request_quote')}
                     </Button>

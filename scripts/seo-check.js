@@ -10,7 +10,7 @@
  *   - meta description present, 50-160 chars, unique within its locale
  *   - exactly one <h1>
  *   - <link rel="canonical"> equals the page's own (sitemap) URL
- *   - hreflang alternates for all locales + x-default; own-locale alternate = own URL
+ *   - hreflang alternates for the published locales (ar/en) + x-default, none for es/ru/de/fr; own-locale alternate = own URL
  *   - at least one JSON-LD block, and every JSON-LD block parses
  *   - every <img> has a non-empty alt (alt="" only with aria-hidden="true" or role="presentation"/"none")
  *
@@ -22,7 +22,10 @@ const { spawn } = require('child_process');
 const net = require('net');
 const path = require('path');
 
-const LOCALES = ['ar', 'en', 'es', 'ru', 'de', 'fr'];
+// Published locales (i18n.ts publishedLocales). es/ru/de/fr redirect to English
+// until translated and must NOT appear as hreflang alternates.
+const LOCALES = ['ar', 'en'];
+const UNPUBLISHED_LOCALES = ['es', 'ru', 'de', 'fr'];
 const TITLE_MAX = 65;
 const DESC_MIN = 50;
 const DESC_MAX = 160;
@@ -138,6 +141,8 @@ function checkPage(url, locale, html) {
     const langs = new Map(a.alternates.map((x) => [x.lang.toLowerCase(), x.href]));
     const missing = [...LOCALES, 'x-default'].filter((l) => !langs.has(l));
     if (missing.length) add('hreflang', `missing: ${missing.join(', ')}`);
+    const unexpected = UNPUBLISHED_LOCALES.filter((l) => langs.has(l));
+    if (unexpected.length) add('hreflang', `unpublished locale alternates: ${unexpected.join(', ')}`);
     if (langs.has(locale) && normUrl(langs.get(locale)) !== normUrl(url)) {
         add('hreflang', `${locale} alternate points to ${langs.get(locale)}`);
     }
