@@ -21,8 +21,9 @@ export const config = {
     // - Static files (images, fonts, etc.)
     // - Next.js internals (_next)
     // - Certificate verification pages (/v/)
+    // - QR contact card (/qr)
     matcher: [
-        '/((?!api|v|_next|_vercel|.*\\..*).*)',
+        '/((?!api|v|qr|_next|_vercel|.*\\..*).*)',
         // Also match root
         '/'
     ]
