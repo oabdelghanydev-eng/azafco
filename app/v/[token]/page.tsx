@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { certificateRegistry } from '@/config/certificates';
+import { companyConfig } from '@/config/company.config';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ token: string }> }
@@ -54,7 +55,7 @@ export default async function CertificateVerificationPage(
             AZAFCO
           </h1>
           <p className="text-xs text-slate-500 tracking-wider uppercase mt-1">
-            International Investment & Development
+            International for Investment and Development
           </p>
         </div>
 
@@ -163,7 +164,7 @@ export default async function CertificateVerificationPage(
         <div className="mt-8 text-center">
           <p className="text-xs text-slate-400 leading-relaxed max-w-md mx-auto">
             This page is the official digital record for the credential above.
-            Issued and maintained by AZAFCO International Investment &amp; Development.
+            Issued and maintained by {companyConfig.identity.legalName}
           </p>
         </div>
 
