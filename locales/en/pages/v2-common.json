@@ -85,7 +85,14 @@
         "issuer": "Issuer",
         "scope": "Scope",
         "valid_until": "Valid until",
-        "view": "View certificate"
+        "view": "View certificate",
+        "site": "Site covered",
+        "request_copy": "Request a copy",
+        "groups": {
+            "food_safety": "Food safety",
+            "export_approval": "Export approvals",
+            "management_system": "Management systems"
+        }
     },
     "insight": {
         "read_article": "Read article",

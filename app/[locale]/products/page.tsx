@@ -3,9 +3,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, CTABand, FeatureGrid, PageHero, Section, SpeciesRow, SectionHeader } from '@/components/v2';
 import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
+import RangeBand from '@/components/v2/products/RangeBand';
+import { specText, type SpecT } from '@/components/v2/products/SpecMatrix';
 import { baseUrl, getCatalogue, getSearchNames, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { productCategories } from '@/data/products';
 import { mediaImage } from '@/lib/v2/media';
+import { getSpeciesSpec, publishedFormKinds } from '@/lib/v2/specs';
 import { rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -23,14 +26,24 @@ export default async function CataloguePage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'catalogue_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const [catalogue, searchNames] = await Promise.all([getCatalogue(locale), getSearchNames()]);
+    const ts = specText((await getTranslations({ locale, namespace: 'catalogue_v2.specs' })) as unknown as SpecT, locale);
+
+    // Product-form filter: only offered when data/specs.ts has more than one form across the range
+    const formKinds = publishedFormKinds();
+    const forms = formKinds.length > 1 ? formKinds.map((k) => ({ value: k, label: ts.form(k) })) : [];
 
     const categories = productCategories
         .filter((c) => catalogue.some((p) => p.category === c))
         .map((c) => ({ value: c, label: t(`water.${c}`) }));
 
-    const items = catalogue.map((p, i) => ({
+    const items = catalogue.map((p, i) => {
+        // Grades come from data/specs.ts (same source as the product page)
+        const spec = getSpeciesSpec(p.slug);
+        const grades = Array.from(new Set(spec.forms.flatMap((f) => f.grades.map((g) => ts.gradeShort(g))).filter(Boolean)));
+        return {
         slug: p.slug,
         category: p.category,
+        forms: spec.forms.map((f) => f.kind),
         terms: [p.name, ...p.altNames, ...(searchNames[p.slug] ?? [])],
         card: (
             <SpeciesRow
@@ -44,11 +57,12 @@ export default async function CataloguePage({ params }: Props) {
                 facts={[
                     { label: t('card.origin'), value: t('card.origin_value') },
                     { label: t('card.water'), value: t(`water.${p.category}`) },
-                    ...(p.sizes.length ? [{ label: t('card.grades'), value: p.sizes.slice(0, 3) }] : []),
+                    ...(grades.length ? [{ label: t('card.grades'), value: grades.slice(0, 3) }] : []),
                 ]}
             />
         ),
-    }));
+        };
+    });
 
     const localeUrl = `${baseUrl}/${locale}`;
     const schemas = [
@@ -95,9 +109,19 @@ export default async function CataloguePage({ params }: Props) {
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
             />
 
+            {/* Range band: every species cut-out, same scale, linking to its page */}
+            <RangeBand
+                id="catalogue-range"
+                eyebrow={t('range.eyebrow')}
+                title={t('range.title')}
+                intro={t('range.intro_products')}
+                listLabel={t('range.list_label')}
+                items={catalogue.map((p) => ({ slug: p.slug, name: p.name, href: p.href, image: p.image }))}
+            />
+
             <Section variant="light" spacing="md" labelledBy="catalogue-species">
                 <SectionHeader id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} size="md" />
-                <CatalogueBrowser items={items} categories={categories} />
+                <CatalogueBrowser items={items} categories={categories} forms={forms} />
 
                 {/* Quality reassurance: specifications confirmed per order */}
                 <aside

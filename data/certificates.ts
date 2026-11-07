@@ -1,10 +1,24 @@
+/** Purpose group on /quality (site v2) */
+export type CertificateGroup = 'food_safety' | 'export_approval' | 'management_system'
+
 export interface Certificate {
     id: number
     name: string
     description: string
     image: string
     issuer: string
+    /** ISO date (YYYY-MM-DD) or a year */
     validUntil: string
+    /** Site v2 fields (owner sheet "Certificates"); optional so legacy pages keep compiling */
+    group?: CertificateGroup
+    /** Certificate / approval number, only if the owner allows publishing it */
+    number?: string
+    /** Products / activities covered */
+    scope?: string
+    /** Site covered (address) */
+    site?: string
+    /** Owner approved public display. false = never shown */
+    publishable?: boolean
 }
 
 // Hidden temporarily - expired certificates

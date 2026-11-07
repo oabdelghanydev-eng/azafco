@@ -33,10 +33,7 @@ export interface CatalogueProduct {
     /** Only set when the identification is verified */
     scientificName?: string;
     image: ImageProps;
-    /** Indicative size grades from the current product list (numeric entries only) */
-    sizes: string[];
-    /** Indicative pack type from the current product list */
-    packaging?: string;
+    // Size grades, forms and pack type live in data/specs.ts (lib/v2/specs.ts): one source for every page.
 }
 
 /** Untyped view of a root translator (message keys here are built at runtime). */
@@ -72,9 +69,6 @@ export function toCatalogueProduct(t: RootT, locale: string, p: Product): Catalo
         altNames: rawArray(t, `${key}.alt_names`),
         scientificName: UNVERIFIED_SCIENTIFIC.has(p.slug) ? undefined : p.scientificName,
         image,
-        // Drop "Custom sizes available"-style entries: keep only real ranges
-        sizes: rawArray(t, `${key}.sizes`).filter((s) => /\d/.test(s)),
-        packaging: t.has(`${key}.packaging`) ? t(`${key}.packaging`) : undefined,
     };
 }
 

@@ -45,22 +45,32 @@ export interface RfqPrefill {
     /** ISO 3166-1 alpha-2 country code, e.g. 'KW' */
     country?: string;
     type?: RfqType;
+    /** Product form code (lib/v2/specs FORM_KINDS), e.g. 'fresh_whole'. Applied only if the RFQ offers it. */
+    form?: string;
+    /** Free-text size grade, e.g. 'Medium (300–500 g)'. Goes into the grade field. */
+    grade?: string;
 }
 
 /** Query-param names the RFQ page reads. Keep in sync with the RFQ form. */
-export const rfqParams = { product: 'product', country: 'country', type: 'type' } as const;
+export const rfqParams = { product: 'product', country: 'country', type: 'type', form: 'form', grade: 'grade' } as const;
+
+/** Same limit as the RFQ grade field (components/v2/rfq/schema.ts LIMITS.grade). */
+const GRADE_MAX = 120;
 
 /**
  * Build an /rfq link with prefill params.
  *   rfqHref()                                  -> '/rfq'
  *   rfqHref({ product: 'sea-bass' })           -> '/rfq?product=sea-bass'
  *   rfqHref({ country: 'kw', type: 'market' }) -> '/rfq?country=KW&type=market'
+ *   rfqHref({ product: 'tilapia', type: 'product', form: 'fresh_whole', grade: 'Medium (300–500 g)' })
  */
 export function rfqHref(prefill: RfqPrefill = {}): string {
     const qs = new URLSearchParams();
     if (prefill.product) qs.set(rfqParams.product, prefill.product);
     if (prefill.country) qs.set(rfqParams.country, prefill.country.toUpperCase());
     if (prefill.type) qs.set(rfqParams.type, prefill.type);
+    if (prefill.form) qs.set(rfqParams.form, prefill.form);
+    if (prefill.grade) qs.set(rfqParams.grade, prefill.grade.slice(0, GRADE_MAX));
     const q = qs.toString();
     return q ? `${routes.rfq}?${q}` : routes.rfq;
 }
@@ -74,6 +84,8 @@ export function readRfqPrefill(params: Record<string, string | string[] | undefi
         product: one(params[rfqParams.product]),
         country: one(params[rfqParams.country])?.toUpperCase(),
         type: type && (allowed as string[]).includes(type) ? (type as RfqType) : undefined,
+        form: one(params[rfqParams.form])?.toLowerCase().replace(/[^a-z_]/g, '').slice(0, 40) || undefined,
+        grade: one(params[rfqParams.grade])?.trim().slice(0, GRADE_MAX) || undefined,
     };
 }
 

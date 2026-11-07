@@ -19,14 +19,31 @@ export interface CertificateCardProps {
     scope?: string;
     /** ISO date (YYYY-MM-DD) */
     validUntil?: string;
+    /** Site covered by the certificate */
+    site?: string;
     /** Link to a shareable copy or verification page */
     href?: string;
+    /** "Request a copy" link (documents RFQ) */
+    requestHref?: string;
+    headingAs?: 'h3' | 'h4';
     image?: ImageProps;
     className?: string;
 }
 
 /** Proof card for a certificate / approval. Verified data only (brief: "badges verified only"). */
-export default function CertificateCard({ name, verified, issuer, scope, validUntil, href, image, className }: CertificateCardProps) {
+export default function CertificateCard({
+    name,
+    verified,
+    issuer,
+    scope,
+    site,
+    validUntil,
+    href,
+    requestHref,
+    image,
+    headingAs: H = 'h3',
+    className,
+}: CertificateCardProps) {
     const t = useTranslations('v2.certificate');
     const tp = useTranslations('v2.pending');
     const format = useFormatter();
@@ -44,9 +61,9 @@ export default function CertificateCard({ name, verified, issuer, scope, validUn
                         <DocumentIcon size={24} />
                     </span>
                 )}
-                <h3 className="text-heading-md text-navy" dir="auto">
+                <H className="text-heading-md text-navy" dir="auto">
                     {name}
-                </h3>
+                </H>
             </div>
             <dl className="mt-5 space-y-2 text-body-sm">
                 {issuer ? (
@@ -61,6 +78,12 @@ export default function CertificateCard({ name, verified, issuer, scope, validUn
                         <dd className="font-medium">{scope}</dd>
                     </div>
                 ) : null}
+                {site ? (
+                    <div>
+                        <dt className="text-caption text-ink-subtle">{t('site')}</dt>
+                        <dd className="font-medium">{site}</dd>
+                    </div>
+                ) : null}
                 {validUntil ? (
                     <div>
                         <dt className="text-caption text-ink-subtle">{t('valid_until')}</dt>
@@ -70,11 +93,19 @@ export default function CertificateCard({ name, verified, issuer, scope, validUn
                     </div>
                 ) : null}
             </dl>
-            {href ? (
-                <div className="mt-auto pt-5">
-                    <Button href={href} variant="text">
-                        {t('view')}
-                    </Button>
+            {href || requestHref ? (
+                <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-5">
+                    {href ? (
+                        <Button href={href} variant="text">
+                            {t('view')}
+                        </Button>
+                    ) : null}
+                    {requestHref ? (
+                        <Button href={requestHref} variant="outline" icon={<DocumentIcon size={18} />}>
+                            {t('request_copy')}
+                            <span className="sr-only">: {name}</span>
+                        </Button>
+                    ) : null}
                 </div>
             ) : null}
         </article>

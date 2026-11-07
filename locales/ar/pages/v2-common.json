@@ -85,7 +85,14 @@
         "issuer": "جهة الإصدار",
         "scope": "النطاق",
         "valid_until": "سارية حتى",
-        "view": "عرض الشهادة"
+        "view": "عرض الشهادة",
+        "site": "الموقع المشمول",
+        "request_copy": "اطلب نسخة",
+        "groups": {
+            "food_safety": "سلامة الغذاء",
+            "export_approval": "اعتمادات التصدير",
+            "management_system": "أنظمة الإدارة"
+        }
     },
     "insight": {
         "read_article": "اقرأ المقال",

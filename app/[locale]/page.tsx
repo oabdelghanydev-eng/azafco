@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
-import { products } from '@/data/products';
-import { mediaImage, productMediaId } from '@/lib/v2/media';
-import { productHref, rfqHref, routes } from '@/lib/v2/routes';
+import { rfqHref, routes } from '@/lib/v2/routes';
 import {
     Button,
     CTABand,
@@ -16,12 +14,13 @@ import {
     PageHero,
     Pending,
     ProcessSteps,
-    SpeciesEntry,
     ProofStrip,
     Section,
     SectionHeader,
 } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
+import RangeBand from '@/components/v2/products/RangeBand';
+import { getCatalogue } from '@/components/v2/products/catalogue';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
 import { activeMarketConfigs } from '@/components/v2/markets/marketData';
 import { Link } from '@/navigation';
@@ -29,9 +28,6 @@ import { Link } from '@/navigation';
 type Props = {
     params: Promise<{ locale: string }>;
 };
-
-/** Species featured on the home page (brief §08 block 04: 3–4 real products). */
-const FEATURED = ['tilapia', 'sea-bass', 'mullet'] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -44,17 +40,13 @@ export default async function HomePage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'home_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
-    const td = await getTranslations({ locale, namespace: 'data.products' });
+    const tc = await getTranslations({ locale, namespace: 'catalogue_v2.range' });
+    const catalogue = await getCatalogue(locale);
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
-    const img = (id: string) => mediaImage(id, locale);
     // Active markets from config/company.config.ts (same source as /markets)
     const activeMarkets = activeMarketConfigs.map((m) => ({ key: m.key, name: tm(`${m.key}.country`) }));
     const activeMarketList = new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }).format(
         activeMarkets.map((m) => m.name),
-    );
-
-    const featured = FEATURED.map((slug) => products.find((p) => p.slug === slug)).filter(
-        (p): p is (typeof products)[number] => Boolean(p),
     );
 
     return (
@@ -104,35 +96,20 @@ export default async function HomePage({ params }: Props) {
                 />
             </Section>
 
-            {/* 04 · Core products */}
-            <Section variant="offwhite" labelledBy="home-products">
-                <SectionHeader
-                    id="home-products"
-                    eyebrow={t('products.eyebrow')}
-                    title={t('products.title')}
-                    intro={t('products.intro')}
-                    action={
-                        <Button href={routes.products} variant="outline" arrow>
-                            {t('products.view_all')}
-                        </Button>
-                    }
-                />
-                <ul className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-                    {featured.map((p) => {
-                        const mid = productMediaId(p.slug);
-                        return (
-                            <li key={p.slug}>
-                                <SpeciesEntry
-                                    name={td(`${p.translationKey}.name`)}
-                                    scientificName={p.scientificName}
-                                    href={productHref(p.slug)}
-                                    image={mid ? img(mid) : undefined}
-                                />
-                            </li>
-                        );
-                    })}
-                </ul>
-            </Section>
+            {/* 04 · Species range: every real cut-out, same scale, each linking to its page */}
+            <RangeBand
+                id="home-products"
+                eyebrow={tc('eyebrow')}
+                title={tc('title')}
+                intro={tc('intro_home')}
+                listLabel={tc('list_label')}
+                action={
+                    <Button href={routes.products} variant="outline" arrow>
+                        {t('products.view_all')}
+                    </Button>
+                }
+                items={catalogue.map((p) => ({ slug: p.slug, name: p.name, href: p.href, image: p.image }))}
+            />
 
             {/* 05 · From origin to shipment */}
             <Section variant="light" labelledBy="home-process">

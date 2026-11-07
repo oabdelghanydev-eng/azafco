@@ -34,6 +34,7 @@ import {
     EMPTY_RFQ,
     FREQUENCIES,
     INCOTERMS,
+    LIMITS,
     PACKAGING,
     PRODUCT_FORMS,
     RFQ_HONEYPOT,
@@ -61,6 +62,10 @@ export interface RfqFormProps {
     prefillSpecies?: string;
     /** ISO alpha-2 (from ?country=…), only applied if it is a known option */
     prefillCountry?: string;
+    /** Product form code (from ?form=…), only applied if it is an RFQ option (PRODUCT_FORMS) */
+    prefillForm?: string;
+    /** Size grade text (from ?grade=…), e.g. 'Medium (300–500 g)' */
+    prefillGrade?: string;
     speciesOptions: Option[];
     countries: CountryOption[];
     /** Unique per page if the form appears more than once */
@@ -79,6 +84,8 @@ export default function RfqForm({
     topic,
     prefillSpecies,
     prefillCountry,
+    prefillForm,
+    prefillGrade,
     speciesOptions,
     countries,
     idPrefix = 'rfq',
@@ -100,6 +107,8 @@ export default function RfqForm({
         variant,
         species: knownSpecies(prefillSpecies),
         destination: knownCountry(prefillCountry),
+        productForm: prefillForm && (PRODUCT_FORMS as readonly string[]).includes(prefillForm) ? prefillForm : '',
+        grade: (prefillGrade ?? '').slice(0, LIMITS.grade),
         documents: topic === 'specifications' ? ['specification_sheet'] : [],
     }));
     const [step, setStep] = useState<1 | 2>(isShort ? 2 : 1);

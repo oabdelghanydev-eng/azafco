@@ -37,7 +37,9 @@
         "reset": "Clear filters",
         "empty_title": "No species match your search",
         "empty_text": "We could not find \"{query}\" in the catalogue. Check the spelling, clear the filters, or send us the species and specification you need.",
-        "empty_cta": "Ask about another species"
+        "empty_cta": "Ask about another species",
+        "form_type": "Product form",
+        "all_forms": "All forms"
     },
     "note": {
         "title": "Specifications are confirmed per order",
@@ -148,5 +150,80 @@
         "product_forms": "{name}: approved product forms, official size-grade table, storage/transport temperature",
         "spec_sheet": "{name}: spec sheet PDF (download)",
         "packing_photos": "Photos of actual boxes, labels and palletisation for this product"
+    },
+    "specs": {
+        "matrix_title": "Product forms and grades",
+        "matrix_intro": "One row per product form. Pick a grade to open a quote request with the species, form and grade already filled in. Fields without an approved value are confirmed with the export team for each order.",
+        "matrix_caption": "{name}: product forms, size grades, shelf life, temperature and packing",
+        "col_form": "Product form",
+        "col_grades": "Size grades (weight per piece)",
+        "col_shelf_life": "Shelf life",
+        "col_temp": "Storage and transport temperature",
+        "col_pack": "Pack type",
+        "col_net_weight": "Net weight per box",
+        "col_species": "Species",
+        "indicative": "Indicative, from our current product list",
+        "indicative_note": "Indicative values come from our current product list. The grade, form, packing and temperature for your order are confirmed in writing in the quotation.",
+        "quote_grade": "Quote this grade",
+        "quote_form": "Quote this form",
+        "days": "{count, plural, =1 {1 day} other {# days}}",
+        "hours": "{count, plural, =1 {1 hour} other {# hours}} (typical)",
+        "temp_range": "{min} to {max} °C",
+        "kg": "{value} kg",
+        "moq_short": "min. {value} kg",
+        "units": {
+            "g": "g",
+            "kg": "kg"
+        },
+        "forms": {
+            "fresh_whole": "Whole, fresh chilled",
+            "fresh_gutted": "Gutted, fresh chilled",
+            "fresh_fillet": "Fillet, fresh chilled",
+            "frozen_whole": "Whole, frozen",
+            "frozen_gutted": "Gutted, frozen",
+            "frozen_fillet": "Fillet, frozen"
+        },
+        "grades": {
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large",
+            "extra_large": "Extra large",
+            "jumbo": "Jumbo"
+        },
+        "pack_types": {
+            "eps_box": "EPS box",
+            "carton": "Carton",
+            "plastic_crate": "Plastic crate",
+            "vacuum_pack": "Vacuum pack",
+            "other": "Other (see quotation)"
+        },
+        "modes": {
+            "air": "Air freight",
+            "reefer_truck": "Reefer truck",
+            "sea": "Sea freight"
+        },
+        "logistics_caption": "{name}: packing and logistics",
+        "box_type": "Box type",
+        "box_dims": "Box outer dimensions",
+        "box_dims_value": "{dims} cm",
+        "boxes_per_pallet": "Boxes per pallet",
+        "shipping_modes": "Shipping modes",
+        "moq_mode": "Minimum order, {mode}",
+        "moq": "Minimum order",
+        "farm_to_plant": "Farm to plant",
+        "plant_to_port": "Plant to airport, port or border",
+        "logistics_empty": "Box size, pallet configuration, shipping mode and minimum order are agreed for each shipment and set out in your quotation.",
+        "pending_logistics": "{name}: box outer dimensions, boxes per pallet, shipping modes, MOQ per mode, farm-to-plant and plant-to-port hours",
+        "summary_eyebrow": "Packing and logistics",
+        "summary_title": "Packing and logistics by species",
+        "summary_intro": "Box, pallet and shipping details per species. Anything not listed is confirmed in your quotation."
+    },
+    "range": {
+        "eyebrow": "Species",
+        "title": "Our species range",
+        "intro_home": "The species we supply from Egypt, side by side. Open a species for its forms, grades and packing.",
+        "intro_products": "Every species we supply, side by side. Select a fish to open its specification.",
+        "list_label": "Species range",
+        "view_all": "View all products"
     }
 }

@@ -24,10 +24,10 @@ type Params = Record<string, string | string[] | undefined>;
  * Resolve the enquiry topic + prefill from ?product, ?country, ?type.
  * `type=documents` is accepted here although lib/v2/routes RfqType doesn't list it yet.
  */
-export function resolveRfqParams(params: Params): { topic: RfqTopic; product?: string; country?: string } {
+export function resolveRfqParams(params: Params): { topic: RfqTopic; product?: string; country?: string; form?: string; grade?: string } {
     const prefill = readRfqPrefill(params);
     const rawType = Array.isArray(params.type) ? params.type[0] : params.type;
     const topic: RfqTopic =
         rawType === 'documents' ? 'documents' : prefill.type ?? (prefill.product ? 'product' : prefill.country ? 'market' : 'general');
-    return { topic, product: prefill.product, country: prefill.country };
+    return { topic, product: prefill.product, country: prefill.country, form: prefill.form, grade: prefill.grade };
 }

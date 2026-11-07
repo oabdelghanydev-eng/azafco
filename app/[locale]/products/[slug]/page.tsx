@@ -14,6 +14,7 @@ import {
     SpecTable,
 } from '@/components/v2';
 import { DocumentIcon } from '@/components/v2/icons';
+import { FormSpecMatrix, PackingLogisticsBlock } from '@/components/v2/products/SpecMatrix';
 import {
     baseUrl,
     getCatalogue,
@@ -114,16 +115,6 @@ export default async function ProductDetailPage({ params }: Props) {
         ],
     };
 
-    const sizes = p.sizes.length ? (
-        <ul className="flex flex-wrap gap-2">
-            {p.sizes.map((s) => (
-                <li key={s} className="rounded-control bg-surface-mist px-2.5 py-1 text-body-sm" dir="auto">
-                    {s}
-                </li>
-            ))}
-        </ul>
-    ) : null;
-
     const faq = [
         { id: 'sizes', question: t('detail.faq_sizes_q'), answer: t('detail.faq_sizes_a') },
         { id: 'packing', question: t('detail.faq_packing_q'), answer: t('detail.faq_packing_a') },
@@ -189,13 +180,8 @@ export default async function ProductDetailPage({ params }: Props) {
                                 },
                                 { label: t('detail.origin'), value: t('detail.origin_value') },
                                 { label: t('detail.water_type'), value: water },
-                                { label: t('detail.form'), value: null },
-                                { label: t('detail.sizes'), value: sizes },
-                                { label: t('detail.packaging'), value: p.packaging ?? null },
-                                { label: t('detail.handling'), value: null },
                             ]}
                         />
-                        <p className="mt-4 max-w-prose-v2 text-body-sm text-ink-muted">{t('detail.spec_note')}</p>
                         {!p.scientificName ? (
                             <div className="mt-4">
                                 <Pending label={t('pending.species_id', { name })} />
@@ -232,6 +218,11 @@ export default async function ProductDetailPage({ params }: Props) {
                         </div>
                     </div>
                 </div>
+
+                {/* Per-form spec matrix (data/specs.ts): one row per product form, "Quote this grade" per grade */}
+                <div className="mt-12 border-t border-line pt-10">
+                    <FormSpecMatrix slug={slug} name={name} headingId="product-forms" />
+                </div>
             </Section>
 
             {/* Packing & logistics + quality documents */}
@@ -242,7 +233,9 @@ export default async function ProductDetailPage({ params }: Props) {
                 <div className="grid gap-6 md:grid-cols-2">
                     <article className="flex flex-col rounded-card border border-line p-6 md:p-8">
                         <h3 className="v2-heading font-display text-heading-xl">{t('detail.packing_title')}</h3>
-                        <p className="mt-4 text-body text-fg-muted">{t('detail.packing_text')}</p>
+                        <div className="mt-4">
+                            <PackingLogisticsBlock slug={slug} name={name} />
+                        </div>
                         <div className="mt-4">
                             <Pending block label={t('pending.packing_photos')} />
                         </div>

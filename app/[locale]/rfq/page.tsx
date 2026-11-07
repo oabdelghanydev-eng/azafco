@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function RfqPage({ params, searchParams }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const { topic, product, country } = resolveRfqParams(await searchParams);
+    const { topic, product, country, form, grade } = resolveRfqParams(await searchParams);
     const short = variantForTopic(topic) === 'short';
 
     const t = await getTranslations({ locale, namespace: 'rfq_v2' });
@@ -66,7 +66,15 @@ export default async function RfqPage({ params, searchParams }: Props) {
             <section className="bg-white py-10 text-fg md:py-16" data-surface="light">
                 <Container grid className="gap-y-12">
                     <div className="col-span-4 sm:col-span-8 lg:order-2 lg:col-span-8">
-                        <RfqForm topic={topic} prefillSpecies={product} prefillCountry={country} speciesOptions={speciesOptions} countries={countries} />
+                        <RfqForm
+                            topic={topic}
+                            prefillSpecies={product}
+                            prefillCountry={country}
+                            prefillForm={form}
+                            prefillGrade={grade}
+                            speciesOptions={speciesOptions}
+                            countries={countries}
+                        />
                     </div>
                     <RfqAside short={short} className="col-span-4 sm:col-span-8 lg:order-1 lg:col-span-4" />
                 </Container>

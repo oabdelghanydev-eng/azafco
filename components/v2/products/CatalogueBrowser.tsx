@@ -10,6 +10,8 @@ import { rfqHref } from '@/lib/v2/routes';
 export interface BrowserItem {
     slug: string;
     category: string;
+    /** Product form codes offered for this species (data/specs.ts) */
+    forms?: string[];
     /** Names (AR + EN), alternate names, verified scientific name */
     terms: string[];
     /** Server-rendered <ProductCard> */
@@ -20,6 +22,8 @@ export interface CatalogueBrowserProps {
     items: BrowserItem[];
     /** Water-type filter options present in the data */
     categories: { value: string; label: string }[];
+    /** Product-form filter options; the filter only shows with more than one */
+    forms?: { value: string; label: string }[];
 }
 
 /** Case/diacritic-insensitive; folds Arabic letter variants (أ إ آ → ا, ة → ه, ى → ي). */
@@ -40,33 +44,41 @@ function normalise(s: string): string {
  * Species search + water-type filter for the catalogue. Filtering is client-side
  * (no reload); cards are rendered on the server and passed in.
  */
-export default function CatalogueBrowser({ items, categories }: CatalogueBrowserProps) {
+export default function CatalogueBrowser({ items, categories, forms = [] }: CatalogueBrowserProps) {
     const t = useTranslations('catalogue_v2.browser');
     const [query, setQuery] = useState('');
     const [category, setCategory] = useState<string | null>(null);
+    const [form, setForm] = useState<string | null>(null);
+    const showForms = forms.length > 1;
     const searchId = useId();
     const hintId = useId();
 
     const indexed = useMemo(() => items.map((it) => ({ ...it, haystack: normalise(it.terms.join(' ')) })), [items]);
     const q = normalise(query);
     const results = indexed.filter(
-        (it) => (!category || it.category === category) && (!q || q.split(' ').every((w) => it.haystack.includes(w))),
+        (it) =>
+            (!category || it.category === category) &&
+            (!form || (it.forms ?? []).includes(form)) &&
+            (!q || q.split(' ').every((w) => it.haystack.includes(w))),
     );
-    const active = q !== '' || category !== null;
+    const active = q !== '' || category !== null || form !== null;
     const reset = () => {
         setQuery('');
         setCategory(null);
+        setForm(null);
     };
-    const activeLabel = categories.find((c) => c.value === category)?.label;
+    const activeLabel = [categories.find((c) => c.value === category)?.label, forms.find((f) => f.value === form)?.label]
+        .filter(Boolean)
+        .join(', ');
 
-    const chip = (value: string | null, label: string) => {
-        const pressed = category === value;
+    const chip = (value: string | null, label: string, current: string | null = category, set: (v: string | null) => void = setCategory) => {
+        const pressed = current === value;
         return (
             <button
                 key={value ?? 'all'}
                 type="button"
                 aria-pressed={pressed}
-                onClick={() => setCategory(value)}
+                onClick={() => set(value)}
                 className={cn(
                     'inline-flex min-h-11 items-center rounded-full border px-4 text-body-sm font-medium transition-colors duration-fast',
                     pressed
@@ -121,6 +133,15 @@ export default function CatalogueBrowser({ items, categories }: CatalogueBrowser
                             {categories.map((c) => chip(c.value, c.label))}
                         </div>
                     </fieldset>
+                    {showForms ? (
+                        <fieldset className="lg:col-span-12">
+                            <legend className="mb-2 text-body-sm font-semibold text-ink">{t('form_type')}</legend>
+                            <div className="flex flex-wrap gap-2">
+                                {chip(null, t('all_forms'), form, setForm)}
+                                {forms.map((f) => chip(f.value, f.label, form, setForm))}
+                            </div>
+                        </fieldset>
+                    ) : null}
                 </div>
             </div>
 
