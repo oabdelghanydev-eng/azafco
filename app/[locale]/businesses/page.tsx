@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { mediaImage } from '@/lib/v2/media';
 import { rfqHref, routes } from '@/lib/v2/routes';
-import { Breadcrumbs, Button, FeatureGrid, MediaGallery, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
+import { Breadcrumbs, Button, FeatureGrid, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import BusinessArchitecture from '@/components/v2/businesses/BusinessArchitecture';
 import CorporateCta from '@/components/v2/businesses/CorporateCta';
@@ -46,7 +46,6 @@ export default async function BusinessesPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={img('meeting-room-visit')}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: routes.seafood }}
                 secondaryAction={{ label: t('hero.secondary'), href: rfqHref({ type: 'corporate' }) }}
@@ -74,15 +73,15 @@ export default async function BusinessesPage({ params }: Props) {
                 />
             </Section>
 
-            {/* 03 · Seafood deep link, proof-led imagery */}
+            {/* 03 · Seafood deep link (species cut-out until plant photography exists) */}
             <Section variant="light" spacing="lg" labelledBy="biz-seafood">
                 <EditorialMedia
                     id="biz-seafood"
                     eyebrow={t('seafood.eyebrow')}
                     title={t('seafood.title')}
                     body={[t('seafood.p1'), t('seafood.p2')]}
-                    image={img('processing-hall-team')}
-                    aspect="4/5"
+                    image={img('species-tilapia')}
+                    aspect="4/3"
                     links={[
                         { label: t('seafood.link_products'), href: routes.products },
                         { label: t('seafood.link_processing'), href: routes.processing },
@@ -99,11 +98,6 @@ export default async function BusinessesPage({ params }: Props) {
                         </Button>
                     </div>
                 </EditorialMedia>
-                <MediaGallery
-                    className="mt-12 md:mt-16"
-                    columns={3}
-                    items={[{ id: 'processing-crew-hygiene-gear' }, { id: 'dispatch-truck-loading-bays-group' }, { id: 'species-tilapia' }]}
-                />
             </Section>
 
             {/* 04–06 · Agriculture, Livestock, Investments: factual text only, no empty cards */}

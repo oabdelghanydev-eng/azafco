@@ -17,7 +17,8 @@ export interface EditorialMediaProps {
     eyebrow?: ReactNode;
     /** Paragraphs */
     body?: string[];
-    image: ImageProps;
+    /** Omit when no professional photo exists: text-only editorial layout */
+    image?: ImageProps;
     /** Which side the photo sits on (logical: flips in RTL) */
     imageSide?: 'start' | 'end';
     /** Photo crop on large screens */
@@ -53,6 +54,29 @@ export default function EditorialMedia({
     children,
     className,
 }: EditorialMediaProps) {
+    if (!image) {
+        // Text-only: heading block on the start side, copy + links on the end side.
+        return (
+            <div className={cn('grid grid-cols-4 gap-x-4 gap-y-8 sm:grid-cols-8 sm:gap-x-6 lg:grid-cols-12 lg:gap-x-8', className)}>
+                <div className="col-span-4 sm:col-span-8 lg:col-span-5">
+                    {eyebrow ? <Eyebrow className="mb-4">{eyebrow}</Eyebrow> : null}
+                    <h2 id={id} className="v2-heading font-display text-display-lg">
+                        {title}
+                    </h2>
+                    <span aria-hidden="true" className="mt-8 hidden h-1 w-16 rounded-full bg-gold lg:block" />
+                </div>
+                <div className="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7">
+                    {body?.map((p, i) => (
+                        <p key={i} className={cn('max-w-prose-v2 text-fg-muted', i === 0 ? 'text-body-lg' : 'mt-4 text-body')}>
+                            {p}
+                        </p>
+                    ))}
+                    {links?.length ? <EditorialLinks links={links} /> : null}
+                    {children ? <div className="mt-8">{children}</div> : null}
+                </div>
+            </div>
+        );
+    }
     return (
         <div className={cn('grid grid-cols-4 items-center gap-x-4 gap-y-10 sm:grid-cols-8 sm:gap-x-6 lg:grid-cols-12 lg:gap-x-8', className)}>
             <div
@@ -87,26 +111,30 @@ export default function EditorialMedia({
                         {p}
                     </p>
                 ))}
-                {links?.length ? (
-                    <ul className="mt-8 border-t border-rule">
-                        {links.map((l) => (
-                            <li key={l.href} className="border-b border-rule">
-                                <Link
-                                    href={l.href}
-                                    className="group flex min-h-[52px] items-center justify-between gap-4 py-3 font-semibold text-fg hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-[6px]"
-                                >
-                                    <span>{l.label}</span>
-                                    <ArrowIcon
-                                        size={18}
-                                        className="shrink-0 text-eyebrow transition-transform duration-base group-hover:translate-x-1 motion-reduce:transition-none rtl:group-hover:-translate-x-1"
-                                    />
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                ) : null}
+                {links?.length ? <EditorialLinks links={links} /> : null}
                 {children ? <div className="mt-8">{children}</div> : null}
             </div>
         </div>
+    );
+}
+
+function EditorialLinks({ links }: { links: EditorialLink[] }) {
+    return (
+        <ul className="mt-8 border-t border-rule">
+            {links.map((l) => (
+                <li key={l.href} className="border-b border-rule">
+                    <Link
+                        href={l.href}
+                        className="group flex min-h-[52px] items-center justify-between gap-4 py-3 font-semibold text-fg hover:underline hover:decoration-gold hover:decoration-2 hover:underline-offset-[6px]"
+                    >
+                        <span>{l.label}</span>
+                        <ArrowIcon
+                            size={18}
+                            className="shrink-0 text-eyebrow transition-transform duration-base group-hover:translate-x-1 motion-reduce:transition-none rtl:group-hover:-translate-x-1"
+                        />
+                    </Link>
+                </li>
+            ))}
+        </ul>
     );
 }

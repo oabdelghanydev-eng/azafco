@@ -137,8 +137,6 @@ export default async function V2KitPage({ params }: Props) {
                 eyebrow={c.eyebrow}
                 title={c.heroTitle}
                 intro={c.heroIntro}
-                image={img('dispatch-truck-loading-bays-wide')}
-                imagePosition="center 40%"
                 size="2xl"
                 headingId="kit-hero"
                 primaryAction={{ label: t('v2.cta.request_quote'), href: rfqHref() }}
@@ -151,7 +149,7 @@ export default async function V2KitPage({ params }: Props) {
                 eyebrow={t('v2.nav.processing')}
                 title={c.splitTitle}
                 intro={c.splitIntro}
-                image={img('processing-hall-team')}
+                image={img('species-sea-bass')}
                 priority={false}
                 primaryAction={{ label: t('v2.cta.request_quote'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('v2.cta.view_specifications'), href: routes.products }}
@@ -350,11 +348,10 @@ export default async function V2KitPage({ params }: Props) {
                             category={c.guides}
                             date="2026-10-31"
                             readingMinutes={8}
-                            image={img('dispatch-truck-loading-bays-group')}
                         />
                     </li>
                     <li>
-                        <InsightCard title={c.splitTitle} excerpt={c.stepText} href={routes.insights} category={c.guides} image={img('processing-hall-team-crates')} />
+                        <InsightCard title={c.splitTitle} excerpt={c.stepText} href={routes.insights} category={c.guides} />
                     </li>
                     <li>
                         <InsightCard title={c.heroTitle} excerpt={c.stepText} href={routes.insights} />
@@ -392,10 +389,7 @@ export default async function V2KitPage({ params }: Props) {
                 <SectionHeader id="kit-gallery" eyebrow="MediaGallery" title={c.gallery} size="md" />
                 <MediaGallery
                     items={[
-                        { id: 'facility-exterior-night' },
-                        { id: 'processing-hall-team' },
-                        { id: 'processing-area-visit-hygiene' },
-                        { id: 'meeting-room-visit' },
+                        { id: 'species-tilapia' },
                         { id: 'species-sea-bass' },
                         { id: 'species-mullet' },
                     ]}

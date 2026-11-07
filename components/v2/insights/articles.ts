@@ -16,13 +16,12 @@ export interface InsightEntry {
     translationKey: string;
     datePublished: string;
     lastReviewed: string;
-    /** lib/v2/media id for cards and article header */
-    imageId: string;
+    /** lib/v2/media id for cards and article header. Leave unset until a professional photo exists. */
+    imageId?: string;
 }
 
-const GUIDE_IMAGE: Record<string, string> = {
-    'importing-fresh-fish-from-egypt': 'dispatch-truck-loading-bays-wide',
-};
+/** Guide slug -> lib/v2/media id. Empty: no photo meets the bar yet (owner rule 7 Nov 2026). */
+const GUIDE_IMAGE: Record<string, string> = {};
 
 export const insights: InsightEntry[] = guides.map((g: Guide) => ({
     slug: g.slug,
@@ -30,7 +29,7 @@ export const insights: InsightEntry[] = guides.map((g: Guide) => ({
     translationKey: g.translationKey,
     datePublished: g.datePublished,
     lastReviewed: g.lastReviewed,
-    imageId: GUIDE_IMAGE[g.slug] ?? 'dispatch-truck-loading-bays-wide',
+    imageId: GUIDE_IMAGE[g.slug],
 }));
 
 export const insightSlugs = insights.map((i) => i.slug);

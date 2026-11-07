@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, CTABand, FeatureGrid, MarketCard, PageHero, Pending, ProcessSteps, Section, SectionHeader } from '@/components/v2';
-import { mediaImage } from '@/lib/v2/media';
 import { productHref, rfqHref, routes } from '@/lib/v2/routes';
 import { Link } from '@/navigation';
 import { products } from '@/data/products';
@@ -68,7 +67,6 @@ export default async function MarketDetailPage({ params }: Props) {
                 eyebrow={t('detail.eyebrow')}
                 title={t('detail.title', { country })}
                 intro={t('detail.intro', { country })}
-                image={mediaImage('dispatch-truck-loading-bays-wide', locale)}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.markets }, { label: country }]} />}
                 primaryAction={{ label: t('detail.primary', { country }), href: rfq }}
                 secondaryAction={{ label: t('detail.secondary'), href: routes.markets }}

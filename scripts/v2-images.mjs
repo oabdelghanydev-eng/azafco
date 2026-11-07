@@ -22,20 +22,9 @@ const PUB = path.join(root, 'public');
 
 /** id -> source. Keep ids descriptive; they are the public filenames. */
 const photos = [
-    // Facility / dispatch (exterior)
-    { id: 'facility-exterior-night', src: path.join(PUB, 'images/bg-homepage.webp') },
-    { id: 'dispatch-truck-loading-bays-group', src: path.join(RAW, 'IMG-20261029-WA0087.jpg') },
-    { id: 'dispatch-truck-loading-bays-wide', src: path.join(RAW, 'IMG-20261029-WA0077.jpg') },
-    // Processing hall / hygiene
-    { id: 'processing-hall-team', src: path.join(RAW, 'IMG-20261029-WA0070.jpg') },
-    { id: 'processing-hall-team-crates', src: path.join(RAW, 'IMG-20261029-WA0076.jpg') },
-    { id: 'processing-crew-hygiene-gear', src: path.join(RAW, 'IMG-20261029-WA0062.jpg') },
-    { id: 'processing-area-visit-hygiene', src: path.join(RAW, 'IMG-20261029-WA0033.jpg') },
-    { id: 'processing-area-entrance-visit', src: path.join(RAW, 'IMG-20261029-WA0051.jpg') },
-    // People / corporate
-    { id: 'meeting-room-visit', src: path.join(RAW, 'IMG-20261029-WA0067.jpg') },
-    { id: 'staff-recognition-group', src: path.join(RAW, 'IMG-20261029-WA0021.jpg') },
-    { id: 'staff-certificate-handover', src: path.join(RAW, 'IMG-20261029-WA0012.jpg') },
+    // None at the moment. The WhatsApp plant/visit photos were removed on 7 Nov 2026
+    // (owner rule: professional real photographs only). Add new shoots here, e.g.
+    // { id: 'processing-line-filleting', src: path.join(RAW, '<file>.jpg') },
     // Species photos: see scripts/species-images.py (owner cut-out set, 7 Nov 2026)
 ];
 

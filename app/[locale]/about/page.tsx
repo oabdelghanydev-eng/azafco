@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
-import { mediaImage } from '@/lib/v2/media';
 import { rfqHref, routes } from '@/lib/v2/routes';
 import { Breadcrumbs, FeatureGrid, MapPinIcon, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
@@ -24,7 +23,6 @@ export default async function AboutPage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'about_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
-    const img = (id: string) => mediaImage(id, locale);
 
     return (
         <>
@@ -36,8 +34,6 @@ export default async function AboutPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={img('facility-exterior-night')}
-                imagePosition="60% center"
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: routes.businesses }}
                 secondaryAction={{ label: t('hero.secondary'), href: rfqHref({ type: 'corporate' }) }}
@@ -94,8 +90,6 @@ export default async function AboutPage({ params }: Props) {
                     eyebrow={t('footprint.eyebrow')}
                     title={t('footprint.title')}
                     body={[t('footprint.p1'), t('footprint.p2')]}
-                    image={img('dispatch-truck-loading-bays-wide')}
-                    imageSide="start"
                 >
                     <h3 className="text-heading-sm text-fg">{t('footprint.addresses_title')}</h3>
                     <ul className="mt-4 space-y-4">
@@ -137,7 +131,6 @@ export default async function AboutPage({ params }: Props) {
                     eyebrow={t('people.eyebrow')}
                     title={t('people.title')}
                     body={[t('people.p1'), t('people.p2')]}
-                    image={img('staff-recognition-group')}
                 >
                     <Pending block label={t('pending.leadership')} />
                 </EditorialMedia>

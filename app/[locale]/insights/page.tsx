@@ -34,7 +34,7 @@ export default async function InsightsPage({ params }: Props) {
             title: tg(`${e.translationKey}.h1`),
             excerpt: tg(`${e.translationKey}.card_summary`),
             minutes: readingMinutes(tg.raw(e.translationKey)),
-            image: mediaImage(e.imageId, locale),
+            image: e.imageId ? mediaImage(e.imageId, locale) : undefined,
             href: insightHref(e.slug),
         }));
     const [featured, ...rest] = entries;
@@ -57,7 +57,6 @@ export default async function InsightsPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('facility-exterior-night', locale)}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 primaryAction={featured ? { label: t('hero.primary'), href: featured.href } : undefined}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.products }}
@@ -67,16 +66,20 @@ export default async function InsightsPage({ params }: Props) {
             {featured ? (
                 <Section variant="offwhite" labelledBy="in-featured">
                     <article className="relative grid grid-cols-1 overflow-hidden rounded-card border border-line bg-white shadow-card lg:grid-cols-12">
-                        <div className="relative aspect-[16/10] lg:col-span-7 lg:aspect-auto lg:min-h-[420px]">
-                            <Image
-                                src={featured.image.src}
-                                alt={featured.image.alt}
-                                fill
-                                sizes="(min-width: 1024px) 700px, 100vw"
-                                className="object-cover"
-                            />
-                        </div>
-                        <div className="flex flex-col justify-center p-6 sm:p-10 lg:col-span-5">
+                        {featured.image ? (
+                            <div className="relative aspect-[16/10] lg:col-span-7 lg:aspect-auto lg:min-h-[420px]">
+                                <Image
+                                    src={featured.image.src}
+                                    alt={featured.image.alt}
+                                    fill
+                                    sizes="(min-width: 1024px) 700px, 100vw"
+                                    className="object-cover"
+                                />
+                            </div>
+                        ) : (
+                            <span aria-hidden="true" className="absolute inset-y-0 start-0 w-1.5 bg-gold" />
+                        )}
+                        <div className={featured.image ? 'flex flex-col justify-center p-6 sm:p-10 lg:col-span-5' : 'flex flex-col justify-center p-6 sm:p-10 lg:col-span-9 lg:p-12'}>
                             <Eyebrow>{t('featured.eyebrow')}</Eyebrow>
                             <p className="mt-4 text-caption text-ink-muted">
                                 {t(`categories.${featured.category}`)} · <time dateTime={featured.lastReviewed}>{format.dateTime(new Date(featured.lastReviewed), { dateStyle: 'medium' })}</time> ·{' '}

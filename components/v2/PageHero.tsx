@@ -17,12 +17,14 @@ export interface PageHeroProps {
     /**
      * `fullbleed`: cinematic photo behind the text, navy scrim, white type.
      * `split`: editorial headline on the start side, real facility photo on the end side.
+     * Without `image` both variants render the typographic navy hero (GeoArcs, no photo).
      */
     variant?: 'fullbleed' | 'split';
     title: ReactNode;
     eyebrow?: ReactNode;
     intro?: ReactNode;
-    image: ImageProps;
+    /** Omit when no professional photo exists: renders a typographic navy hero instead */
+    image?: ImageProps;
     /** Primary (gold) action: usually rfqHref(...) */
     primaryAction?: HeroAction;
     secondaryAction?: HeroAction;
@@ -73,6 +75,35 @@ export default function PageHero({
                 ) : null}
             </div>
         ) : null;
+
+    if (!image) {
+        // Typographic hero: no photo, navy field, globe arcs as the only decoration.
+        return (
+            <section
+                data-surface="dark"
+                className={cn('relative isolate overflow-hidden bg-navy-950 text-fg', className)}
+                aria-labelledby={headingId}
+            >
+                <div aria-hidden="true" className="absolute inset-0 -z-20 bg-gradient-to-br from-navy-900 via-navy-950 to-navy-950 rtl:bg-gradient-to-bl" />
+                <GeoArcs
+                    tone="onDark"
+                    className="absolute -end-48 -top-24 -z-10 w-[440px] opacity-60 sm:-end-32 sm:w-[560px] lg:-end-20 lg:-top-32 lg:w-[720px] lg:opacity-90"
+                />
+                <Container className={cn('relative', size === '2xl' ? 'py-20 md:py-28 lg:py-36' : 'py-16 md:py-20 lg:py-28')}>
+                    <div className="max-w-3xl">
+                        {breadcrumbs ? <div className="mb-8">{breadcrumbs}</div> : null}
+                        {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
+                        <h1 id={headingId} className={h1}>
+                            {title}
+                        </h1>
+                        {intro ? <div className="mt-6 max-w-prose-v2 text-body-lg text-fg-muted">{intro}</div> : null}
+                        {actions}
+                        {proof ? <div className="mt-10">{proof}</div> : null}
+                    </div>
+                </Container>
+            </section>
+        );
+    }
 
     if (variant === 'split') {
         return (

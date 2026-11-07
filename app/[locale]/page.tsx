@@ -67,8 +67,6 @@ export default async function HomePage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={img('processing-hall-team')}
-                imagePosition="center 40%"
                 primaryAction={{ label: tv('cta.request_quote'), href: rfqHref() }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.products }}
             />
@@ -97,8 +95,6 @@ export default async function HomePage({ params }: Props) {
                     eyebrow={t('seafood.eyebrow')}
                     title={t('seafood.title')}
                     body={[t('seafood.p1'), t('seafood.p2')]}
-                    image={img('processing-hall-team-crates')}
-                    aspect="4/5"
                     links={[
                         { label: t('seafood.link_overview'), href: routes.seafood },
                         { label: t('seafood.link_products'), href: routes.products },
@@ -155,9 +151,6 @@ export default async function HomePage({ params }: Props) {
                     eyebrow={t('processing.eyebrow')}
                     title={t('processing.title')}
                     body={[t('processing.p1'), t('processing.p2')]}
-                    image={img('facility-exterior-night')}
-                    imageSide="start"
-                    aspect="16/9"
                 >
                     <h3 className="text-heading-sm text-fg">{t('processing.req_title')}</h3>
                     <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
@@ -184,9 +177,6 @@ export default async function HomePage({ params }: Props) {
                     eyebrow={t('quality.eyebrow')}
                     title={t('quality.title')}
                     body={[t('quality.p1'), t('quality.p2')]}
-                    image={img('processing-area-visit-hygiene')}
-                    aspect="4/5"
-                    imagePosition="center 30%"
                 >
                     <Pending block label={t('pending.certificate_cards')} className="mb-6" />
                     <div className="flex flex-wrap gap-3">

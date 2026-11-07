@@ -15,7 +15,6 @@ import {
     GlobeIcon,
     CheckIcon,
 } from '@/components/v2';
-import { mediaImage } from '@/lib/v2/media';
 import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
 import { Link } from '@/navigation';
 import { activeMarketConfigs, otherMarketConfigs, regionOf } from '@/components/v2/markets/marketData';
@@ -53,7 +52,6 @@ export default async function MarketsPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('dispatch-truck-loading-bays-group', locale)}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.export') }, { label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: rfqHref({ type: 'market' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.forImporters }}

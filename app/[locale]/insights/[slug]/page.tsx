@@ -51,7 +51,7 @@ export default async function InsightArticlePage({ params }: Props) {
     const title = tg('h1');
     const tgAll = await getTranslations({ locale, namespace: 'guides_page' });
     const minutes = readingMinutes(tgAll.raw(entry.translationKey));
-    const image = mediaImage(entry.imageId, locale);
+    const image = entry.imageId ? mediaImage(entry.imageId, locale) : undefined;
     const reviewed = fmt(entry.lastReviewed);
     const sectionTitles = await importingSectionTitles(locale);
 
@@ -72,7 +72,7 @@ export default async function InsightArticlePage({ params }: Props) {
         inLanguage: locale,
         url: pageUrl,
         mainEntityOfPage: pageUrl,
-        image: [`${baseUrl}${image.src}`, `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`],
+        image: [...(image ? [`${baseUrl}${image.src}`] : []), `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`],
         datePublished: entry.datePublished,
         dateModified: entry.lastReviewed,
         author: org,
@@ -145,13 +145,15 @@ export default async function InsightArticlePage({ params }: Props) {
                 </Container>
             </section>
 
-            <div className="bg-white">
-                <Container>
-                    <div className="relative -mt-2 aspect-[16/7] overflow-hidden rounded-card md:mt-0">
-                        <Image src={image.src} alt={image.alt} fill priority sizes="(min-width: 1280px) 1200px, 100vw" className="object-cover" />
-                    </div>
-                </Container>
-            </div>
+            {image ? (
+                <div className="bg-white">
+                    <Container>
+                        <div className="relative -mt-2 aspect-[16/7] overflow-hidden rounded-card md:mt-0">
+                            <Image src={image.src} alt={image.alt} fill priority sizes="(min-width: 1280px) 1200px, 100vw" className="object-cover" />
+                        </div>
+                    </Container>
+                </div>
+            ) : null}
 
             {/* Body + side rail */}
             <article aria-labelledby="article-title" className="bg-white py-12 text-ink md:py-16">

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
     Breadcrumbs,
@@ -8,7 +7,6 @@ import {
     Eyebrow,
     FeatureGrid,
     GeoArcs,
-    MediaGallery,
     PageHero,
     Pending,
     Section,
@@ -17,25 +15,20 @@ import {
 import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import Workflow from '@/components/v2/processing/Workflow';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { mediaImage } from '@/lib/v2/media';
 import { rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
-
-const HERO_ID = 'processing-crew-hygiene-gear';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'processing_v2.meta' });
     const site = await getTranslations({ locale, namespace: 'metadata.site' });
-    const og = mediaImage('processing-hall-team', locale);
     return pageMetadata({
         locale,
         path: routes.processing,
         title: t('title'),
         description: t('description'),
         siteName: site('name'),
-        image: { url: og.src, alt: og.alt, width: og.width, height: og.height },
     });
 }
 
@@ -44,7 +37,6 @@ export default async function ProcessingPage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'processing_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
-    const hall = mediaImage('processing-hall-team', locale);
 
     const steps = [
         { key: 'receiving', checkpoint: true },
@@ -77,8 +69,6 @@ export default async function ProcessingPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage(HERO_ID, locale)}
-                imagePosition="center 35%"
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.processing') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.quality }}
@@ -154,10 +144,7 @@ export default async function ProcessingPage({ params }: Props) {
                         </ul>
                     </div>
                     <div className="lg:col-span-5 lg:col-start-8">
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-card bg-surface-mist">
-                            <Image src={hall.src} alt={hall.alt} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
-                        </div>
-                        <div className="mt-6 rounded-card border border-line bg-white p-6">
+                        <div className="rounded-card border border-line bg-white p-6">
                             <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-control bg-navy-50 text-navy">
                                 <DocumentIcon size={22} />
                             </span>
@@ -193,17 +180,11 @@ export default async function ProcessingPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* Photography (no video: layout works without one) */}
-            <Section variant="offwhite" spacing="md" labelledBy="processing-gallery">
-                <SectionHeader id="processing-gallery" eyebrow={t('gallery.eyebrow')} title={t('gallery.title')} intro={t('gallery.intro')} />
-                <MediaGallery
-                    label={t('gallery.label')}
-                    columns={3}
-                    items={[{ id: 'processing-hall-team-crates' }, { id: 'facility-exterior-night' }, { id: 'dispatch-truck-loading-bays-wide' }]}
-                />
-                <div className="mt-10 flex flex-col gap-4 rounded-card border border-line bg-white p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+            {/* Site visit (photo gallery removed until professional plant photography exists) */}
+            <Section variant="offwhite" spacing="sm" labelledBy="processing-visit">
+                <div className="flex flex-col gap-4 rounded-card border border-line bg-white p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
                     <div>
-                        <h3 className="text-heading-md text-navy">{t('gallery.visit_title')}</h3>
+                        <h2 id="processing-visit" className="text-heading-md text-navy">{t('gallery.visit_title')}</h2>
                         <p className="mt-2 max-w-prose-v2 text-body-sm text-ink-muted">{t('gallery.visit_text')}</p>
                     </div>
                     <Button href={rfqHref({ type: 'general' })} variant="outline" className="shrink-0">

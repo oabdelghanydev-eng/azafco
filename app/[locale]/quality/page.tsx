@@ -7,7 +7,6 @@ import {
     Eyebrow,
     FAQAccordion,
     FeatureGrid,
-    MediaGallery,
     PageHero,
     Pending,
     ProcessSteps,
@@ -17,7 +16,6 @@ import {
 import { DocumentIcon } from '@/components/v2/icons';
 import CertificateLibrary from '@/components/v2/quality/CertificateLibrary';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { mediaImage } from '@/lib/v2/media';
 import { rfqHref, routes, type RfqPrefill } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -74,8 +72,6 @@ export default async function QualityPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('processing-area-visit-hygiene', locale)}
-                imagePosition="center 30%"
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.quality') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: rfqHref(DOCUMENTS_PREFILL) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
@@ -173,20 +169,6 @@ export default async function QualityPage({ params }: Props) {
                             </div>
                         </div>
                     </div>
-                </div>
-            </Section>
-
-            <Section variant="light" spacing="md" labelledBy="quality-visuals">
-                <SectionHeader id="quality-visuals" eyebrow={t('visuals.eyebrow')} title={t('visuals.title')} intro={t('visuals.intro')} />
-                <MediaGallery
-                    label={t('visuals.label')}
-                    columns={2}
-                    aspect="3/4"
-                    items={[{ id: 'processing-area-entrance-visit' }, { id: 'processing-crew-hygiene-gear' }]}
-                    className="lg:max-w-4xl"
-                />
-                <div className="mt-6">
-                    <Pending block label={t('pending.qc_photos')} />
                 </div>
             </Section>
 

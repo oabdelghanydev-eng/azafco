@@ -10,7 +10,6 @@ import {
     Section,
     SectionHeader,
 } from '@/components/v2';
-import { mediaImage } from '@/lib/v2/media';
 import { routes } from '@/lib/v2/routes';
 import RfqForm from '@/components/v2/rfq/RfqForm';
 import RfqAside from '@/components/v2/rfq/RfqAside';
@@ -61,7 +60,6 @@ export default async function ForImportersPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('processing-hall-team-crates', locale)}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.export') }, { label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: `${routes.forImporters}#${RFQ_ANCHOR}` }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.contact }}

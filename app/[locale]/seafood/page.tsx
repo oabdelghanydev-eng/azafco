@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
     Breadcrumbs,
@@ -17,7 +16,6 @@ import {
 import { CheckIcon } from '@/components/v2/icons';
 import SpeciesIndex from '@/components/v2/seafood/SpeciesIndex';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { mediaImage } from '@/lib/v2/media';
 import { rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -26,14 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'seafood_v2.meta' });
     const site = await getTranslations({ locale, namespace: 'metadata.site' });
-    const hero = mediaImage('processing-hall-team', locale);
     return pageMetadata({
         locale,
         path: routes.seafood,
         title: t('title'),
         description: t('description'),
         siteName: site('name'),
-        image: { url: hero.src, alt: hero.alt, width: hero.width, height: hero.height },
     });
 }
 
@@ -44,7 +40,6 @@ export default async function SeafoodPage({ params }: Props) {
     const tc = await getTranslations({ locale, namespace: 'catalogue_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const catalogue = await getCatalogue(locale);
-    const processingImage = mediaImage('processing-hall-team-crates', locale);
 
     const chain = ['farm', 'select', 'process', 'pack', 'export'] as const;
     const requirements = ['format', 'grade', 'weight', 'packing', 'destination'] as const;
@@ -69,8 +64,6 @@ export default async function SeafoodPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('processing-hall-team', locale)}
-                imagePosition="center 40%"
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: routes.products }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
@@ -121,22 +114,16 @@ export default async function SeafoodPage({ params }: Props) {
 
             {/* Processing precision */}
             <Section variant="light" spacing="lg" labelledBy="seafood-processing">
-                <div className="grid items-center gap-10 lg:grid-cols-12">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-card bg-surface-mist lg:col-span-6">
-                        <Image
-                            src={processingImage.src}
-                            alt={processingImage.alt}
-                            fill
-                            sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, 100vw"
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="lg:col-span-5 lg:col-start-8">
+                <div className="grid gap-10 lg:grid-cols-12">
+                    <div className="lg:col-span-5">
                         <Eyebrow className="mb-5">{t('processing.eyebrow')}</Eyebrow>
                         <h2 id="seafood-processing" className="v2-heading font-display text-display-lg">
                             {t('processing.title')}
                         </h2>
-                        <p className="mt-5 text-body-lg text-fg-muted">{t('processing.text')}</p>
+                        <span aria-hidden="true" className="mt-8 hidden h-1 w-16 rounded-full bg-gold lg:block" />
+                    </div>
+                    <div className="lg:col-span-6 lg:col-start-7">
+                        <p className="text-body-lg text-fg-muted">{t('processing.text')}</p>
                         <ul className="mt-6 space-y-3">
                             {(['point_1', 'point_2', 'point_3'] as const).map((k) => (
                                 <li key={k} className="flex gap-3 text-body text-fg">
