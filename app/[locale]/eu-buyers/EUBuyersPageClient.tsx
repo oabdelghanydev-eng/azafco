@@ -16,8 +16,9 @@ import { companyInfo } from '@/data/company';
 
 // Left out of the EU page (see docs/reports/species-identification.md):
 // - eels: European eel (Anguilla anguilla); EU import/export suspended since 2010 (CITES App. II)
-// - buni: wild-caught Nile barb, while the EU opening covers Egyptian *farmed* fish (owner to confirm species)
-const EXCLUDED_FOR_EU = ['eels', 'buni'];
+// - bayad_catfish: Bagrus bajad is mostly wild-caught from the Nile, while the EU opening covers Egyptian *farmed* fish
+// Grass carp (formerly listed as "buni") is farmed, so it is shown.
+const EXCLUDED_FOR_EU = ['eels', 'bayad_catfish'];
 const euProducts = products.filter(p => p.available && !EXCLUDED_FOR_EU.includes(p.translationKey));
 
 type Step = { title: string; desc: string };

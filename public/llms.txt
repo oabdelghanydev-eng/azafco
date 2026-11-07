@@ -14,14 +14,19 @@
 AZAFCO is a B2B fresh fish supplier and exporter from Egypt. We serve restaurants, hotels, distributors, and wholesale buyers in the Middle East, Gulf region, Europe, and worldwide.
 
 ## Products Available
-1. Tilapia (بلطي) - Freshwater - Sizes: 200-500g+
-2. Sea Bass (قاروص) - Saltwater - Sizes: 400-600g+
-3. Mullet/Bouri (بوري) - Freshwater - Sizes: 150-400g
-4. Mubarakah (مبروكة) - Freshwater - Sizes: 1-2kg+
-5. Catfish (قراميط) - Freshwater - Sizes: 500-800g+
-6. Buni (بني) - Saltwater - Sizes: 300-500g+
-7. Lout (لوت) - Saltwater - Sizes: 400-600g+
-8. Eels (ثعابين) - Freshwater - Sizes: 300-500g+
+1. Tilapia (بلطي) - Oreochromis niloticus - Freshwater, farmed - Sizes: 200-500g+
+2. Sea Bass (قاروص) - Dicentrarchus labrax - Marine, farmed - Sizes: 400-600g+
+3. Grey Mullet (بوري) - Mugil cephalus - Brackish water, farmed - Sizes: 150-400g
+4. Grass Carp (حشايش) - Ctenopharyngodon idella - Freshwater, farmed - Sizes: on request
+5. Common Carp (قشرة) - Cyprinus carpio - Freshwater, farmed - Sizes: 1-2kg+
+6. Catfish (قراميط) - Clarias gariepinus - Freshwater - Sizes: 500-800g+
+7. Meagre (لوت) - Argyrosomus regius - Marine, farmed - Sizes: 400-600g+
+8. Thinlip Mullet (طوبار) - Chelon ramada - Brackish water, farmed - Sizes and availability: on request
+9. Bayad Catfish (بياض) - Bagrus bajad - Freshwater, mostly wild-caught - Sizes and availability: on request
+10. Silver Carp (سلفر) - Hypophthalmichthys molitrix - Freshwater, farmed - Sizes and availability: on request
+11. Mirror Carp (مبروكة) - Cyprinus carpio (mirror variety) - Freshwater, farmed - Sizes and availability: on request
+12. Sea Bream (دنيس) - Sparus aurata - Marine, farmed - Sizes and availability: on request
+13. European Eel (ثعابين السمك) - Anguilla anguilla - Brackish water - Sizes: 300-500g+ (not offered to EU buyers)
 
 ## Export Markets
 UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan, Lebanon, Russia, Spain, United Kingdom, Germany, France, United States.

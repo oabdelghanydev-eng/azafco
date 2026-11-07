@@ -68,14 +68,19 @@
 
 | Product | Type | Available Sizes | Notes |
 |---------|------|-----------------|-------|
-| **Tilapia** | Freshwater | Flexible - customized to order | Main product |
-| **Sea Bass** | Saltwater | Flexible - customized to order | |
-| **Mullet (Bouri/Biya)** | Freshwater | Flexible - customized to order | |
-| **Buni** | Saltwater | Flexible - customized to order | |
-| **Mubarakah** | Freshwater | Flexible - customized to order | |
-| **Catfish** | Freshwater | Flexible - customized to order | |
-| **Lout** | Saltwater | Flexible - customized to order | |
-| **Eels** | Freshwater | Flexible - customized to order | |
+| **Tilapia (بلطي)** | Freshwater | Flexible - customized to order | Main product |
+| **Sea Bass (قاروص)** | Marine | Flexible - customized to order |  |
+| **Grey Mullet (بوري)** | Brackish | Flexible - customized to order |  |
+| **Grass Carp (حشايش)** | Freshwater | Flexible - customized to order | Listed as "Buni" until 7 Nov 2026; slug /products/buni redirects to /products/grass-carp |
+| **Common Carp (قشرة)** | Freshwater | Flexible - customized to order | Translation key `mubarakah` |
+| **Catfish (قراميط)** | Freshwater | Flexible - customized to order |  |
+| **Meagre (لوت)** | Marine | Flexible - customized to order |  |
+| **Thinlip Mullet (طوبار)** | Brackish | Flexible - customized to order | Added 7 Nov 2026 |
+| **Bayad Catfish (بياض)** | Freshwater | Flexible - customized to order | Added 7 Nov 2026; mostly wild-caught, not on EU page |
+| **Silver Carp (سلفر)** | Freshwater | Flexible - customized to order | Added 7 Nov 2026 |
+| **Mirror Carp (مبروكة)** | Freshwater | Flexible - customized to order | Added 7 Nov 2026 |
+| **Sea Bream (دنيس)** | Marine | Flexible - customized to order | Added 7 Nov 2026 |
+| **European Eel** | Brackish | Flexible - customized to order | Not on the owner list of 7 Nov 2026; still sold? (open question) |
 
 ### Size Flexibility
 - Sizes are **customized to order**

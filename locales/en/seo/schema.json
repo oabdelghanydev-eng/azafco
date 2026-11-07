@@ -25,9 +25,9 @@
     "priceRange": "Competitive Wholesale Pricing",
     "freshFishCategory": "Fresh Fish",
     "freshwater": "Freshwater Fish",
-    "freshwaterDesc": "Tilapia, African Catfish, Common Carp, Bunni",
+    "freshwaterDesc": "Tilapia, Catfish, Bayad Catfish, Common Carp, Mirror Carp, Grass Carp, Silver Carp",
     "saltwater": "Saltwater Fish",
-    "saltwaterDesc": "Sea Bass, Meagre, Grey Mullet, European Eel",
+    "saltwaterDesc": "Sea Bass, Sea Bream, Meagre, Grey Mullet, Thinlip Mullet, European Eel",
     "restaurantHotelSupply": "Restaurant & Hotel Supply",
     "home": "Home",
     "products": "Products",
@@ -85,7 +85,7 @@
         },
         "mullet": {
             "name": "Mullet Fish Export",
-            "description": "Fresh Mullet (Bouri) for international markets"
+            "description": "Fresh grey mullet for international markets"
         }
     },
     "howTo": {
