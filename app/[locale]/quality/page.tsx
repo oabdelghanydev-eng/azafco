@@ -26,7 +26,7 @@ type Props = { params: Promise<{ locale: string }> };
  * Document requests. The RFQ form has no 'documents' type yet (lib/v2/routes.ts
  * RfqType), so this uses 'specifications'; switch to { type: 'documents' } once added.
  */
-const DOCUMENTS_PREFILL: RfqPrefill = { type: 'specifications' };
+const DOCUMENTS_PREFILL: RfqPrefill = { type: 'documents' };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;

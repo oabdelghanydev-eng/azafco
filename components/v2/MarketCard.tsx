@@ -51,6 +51,7 @@ export default function MarketCard({ name, status, region, description, countryC
                         <img
                             src={`/flags/${countryCode.toLowerCase()}.svg`}
                             alt=""
+                            aria-hidden="true"
                             width={28}
                             height={20}
                             className="h-5 w-7 rounded-[2px] border border-line object-cover"

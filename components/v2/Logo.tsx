@@ -34,6 +34,6 @@ export default function Logo({ kind = 'primary', width = 132, alt = 'AZAFCO Inte
     return (
         // Plain <img>: SVGs need no optimisation and must not be re-encoded.
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={f.src} width={w} height={h} alt={alt} className={cn('block h-auto max-w-none', className)} style={{ width: w }} />
+        <img src={f.src} width={w} height={h} alt={alt} aria-hidden={alt === "" ? true : undefined} className={cn('block h-auto max-w-none', className)} style={{ width: w }} />
     );
 }

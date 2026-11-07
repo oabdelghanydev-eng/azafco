@@ -18,10 +18,16 @@ const pages = [
     { path: 'certificates', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: 'eu-buyers', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: 'faq', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: 'guides', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: 'seafood', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: 'processing', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: 'quality', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: 'for-importers', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: 'businesses', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: 'rfq', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: 'insights', priority: 0.6, changeFrequency: 'weekly' as const },
     ...productSlugs.map((slug) => ({ path: `products/${slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
     ...activeMarketSlugs.map((slug) => ({ path: `markets/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
-    ...guideSlugs.map((slug) => ({ path: `guides/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
+    ...guideSlugs.map((slug) => ({ path: `insights/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
 ];
 
 const pageUrl = (locale: string, path: string) =>

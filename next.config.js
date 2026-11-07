@@ -41,6 +41,9 @@ const nextConfig = {
         destination: '/:locale/products/grass-carp',
         permanent: true,
       },
+      // Site v2: guides moved into Insights
+      { source: '/:locale(ar|en|es|ru|de|fr)/guides', destination: '/:locale/insights', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/guides/:slug', destination: '/:locale/insights/:slug', permanent: true },
     ]
   },
 

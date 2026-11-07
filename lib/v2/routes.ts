@@ -37,7 +37,7 @@ export function insightHref(slug: string): string {
 }
 
 /** Enquiry type preselected on the RFQ form. `corporate` must not force a species. */
-export type RfqType = 'product' | 'market' | 'specifications' | 'corporate' | 'general';
+export type RfqType = 'product' | 'market' | 'specifications' | 'documents' | 'corporate' | 'general';
 
 export interface RfqPrefill {
     /** Product slug (as in data/products.ts), e.g. 'tilapia' */
@@ -69,7 +69,7 @@ export function rfqHref(prefill: RfqPrefill = {}): string {
 export function readRfqPrefill(params: Record<string, string | string[] | undefined>): RfqPrefill {
     const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) || undefined;
     const type = one(params[rfqParams.type]);
-    const allowed: RfqType[] = ['product', 'market', 'specifications', 'corporate', 'general'];
+    const allowed: RfqType[] = ['product', 'market', 'specifications', 'documents', 'corporate', 'general'];
     return {
         product: one(params[rfqParams.product]),
         country: one(params[rfqParams.country])?.toUpperCase(),

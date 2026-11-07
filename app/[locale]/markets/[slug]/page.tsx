@@ -122,7 +122,7 @@ export default async function MarketDetailPage({ params }: Props) {
                                     className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-line px-4 text-body-sm font-medium text-navy hover:border-navy"
                                 >
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src={`/flags/${m.countryCode.toLowerCase()}.svg`} alt="" width={24} height={16} className="h-4 w-6 rounded-[2px] border border-line object-cover" loading="lazy" />
+                                    <img src={`/flags/${m.countryCode.toLowerCase()}.svg`} alt="" aria-hidden="true" width={24} height={16} className="h-4 w-6 rounded-[2px] border border-line object-cover" loading="lazy" />
                                     {name(m.key)}
                                 </Link>
                             </li>
