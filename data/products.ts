@@ -59,11 +59,13 @@ export const products: Product[] = [
     },
     {
         id: 4,
-        slug: 'buni',
-        translationKey: 'buni',
+        // Was "buni" (Nile barb) until 7 Nov 2026; the owner's species list shows
+        // this product is grass carp (حشايش). /products/buni redirects here (next.config.js).
+        slug: 'grass-carp',
+        translationKey: 'grass_carp',
         category: 'freshwater',
-        scientificName: 'Labeobarbus bynni',
-        image: '/items/buni.jpg',
+        scientificName: 'Ctenopharyngodon idella',
+        image: '/items/grass_carp.jpg',
         available: true,
     },
     {
@@ -93,6 +95,54 @@ export const products: Product[] = [
         image: '/items/lout.jpg',
         available: true,
     },
+    // Added from the owner's species list (7 Nov 2026), see docs/reports/species-identification.md
+    {
+        id: 9,
+        slug: 'thinlip-mullet',
+        translationKey: 'thinlip_mullet',
+        category: 'brackish',
+        scientificName: 'Chelon ramada',
+        image: '/items/thinlip_mullet.jpg',
+        available: true,
+    },
+    {
+        id: 10,
+        slug: 'bayad-catfish',
+        translationKey: 'bayad_catfish',
+        category: 'freshwater',
+        scientificName: 'Bagrus bajad',
+        image: '/items/bayad_catfish.jpg',
+        available: true,
+    },
+    {
+        id: 11,
+        slug: 'silver-carp',
+        translationKey: 'silver_carp',
+        category: 'freshwater',
+        scientificName: 'Hypophthalmichthys molitrix',
+        image: '/items/silver_carp.jpg',
+        available: true,
+    },
+    {
+        id: 12,
+        slug: 'mirror-carp',
+        translationKey: 'mirror_carp',
+        category: 'freshwater',
+        // Mirror-scaled variety of common carp
+        scientificName: 'Cyprinus carpio',
+        image: '/items/mirror_carp.jpg',
+        available: true,
+    },
+    {
+        id: 13,
+        slug: 'sea-bream',
+        translationKey: 'sea_bream',
+        category: 'marine',
+        scientificName: 'Sparus aurata',
+        image: '/items/sea_bream.jpg',
+        available: true,
+    },
+    // Not on the owner's 7 Nov 2026 list; kept until the owner confirms whether eel is still sold
     {
         id: 8,
         slug: 'eel',

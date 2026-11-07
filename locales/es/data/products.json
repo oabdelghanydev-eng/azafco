@@ -35,11 +35,11 @@
         "availability": "Disponible todo el año"
     },
     "mullet": {
-        "name": "Mújol (Bouri)",
+        "name": "Mújol",
         "alt_names": [
+            "Pardete",
             "Mugil",
             "Lisa",
-            "Pardete",
             "Bouri"
         ],
         "description": "Mújol egipcio fresco, criado en aguas salobres. Excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
@@ -53,12 +53,13 @@
         "category": "Agua salobre",
         "availability": "Disponible todo el año"
     },
-    "buni": {
-        "name": "Bunni",
+    "grass_carp": {
+        "name": "Carpa herbívora",
         "alt_names": [
-            "Barbo del Nilo"
+            "Amur blanco",
+            "Carpa china"
         ],
-        "description": "Bunni fresco, un barbo de agua dulce originario del Nilo. Excelente textura y sabor.",
+        "description": "Carpa herbívora fresca (Ctenopharyngodon idella), una carpa de agua dulce criada en Egipto.",
         "sizes": [
             "Mediano (300-500g)",
             "Grande (500g+)",
@@ -120,6 +121,77 @@
         "packaging": "Caja EPS",
         "category": "Marino",
         "availability": "Disponible todo el año"
+    },
+    "thinlip_mullet": {
+        "name": "Morragute",
+        "alt_names": [
+            "Mújol de labio fino",
+            "Tobar"
+        ],
+        "description": "Morragute fresco (Chelon ramada), un mújol criado en aguas salobres en Egipto. Producto distinto de nuestro mújol (Mugil cephalus).",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua salobre",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "bayad_catfish": {
+        "name": "Bagre bayad",
+        "alt_names": [
+            "Bayad"
+        ],
+        "description": "Bagre bayad fresco (Bagrus bajad), un pez gato de agua dulce originario del Nilo. Procede sobre todo de captura salvaje en el Nilo.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "silver_carp": {
+        "name": "Carpa plateada",
+        "alt_names": [
+            "Carpa china plateada"
+        ],
+        "description": "Carpa plateada fresca (Hypophthalmichthys molitrix), una carpa de agua dulce criada en Egipto.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "mirror_carp": {
+        "name": "Carpa espejo",
+        "alt_names": [
+            "Carpa común (espejo)"
+        ],
+        "description": "Carpa espejo fresca, la forma de escamas espejo de la carpa común (Cyprinus carpio), criada en Egipto.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "sea_bream": {
+        "name": "Dorada",
+        "alt_names": [
+            "Dorada real"
+        ],
+        "description": "Dorada fresca (Sparus aurata), un pescado marino criado en Egipto.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Marino",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
     },
     "eels": {
         "name": "Anguila europea",

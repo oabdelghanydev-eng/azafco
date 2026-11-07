@@ -25,9 +25,9 @@
     "priceRange": "Precios mayoristas competitivos",
     "freshFishCategory": "Pescado fresco",
     "freshwater": "Pescado de agua dulce",
-    "freshwaterDesc": "Tilapia, pez gato africano, carpa común, bunni",
+    "freshwaterDesc": "Tilapia, pez gato africano, bagre bayad, carpa común, carpa espejo, carpa herbívora, carpa plateada",
     "saltwater": "Pescado de agua salada",
-    "saltwaterDesc": "Lubina, corvina, mújol, anguila europea",
+    "saltwaterDesc": "Lubina, dorada, corvina, mújol, morragute, anguila europea",
     "restaurantHotelSupply": "Suministro para restaurantes y hoteles",
     "home": "Inicio",
     "products": "Productos",
@@ -85,7 +85,7 @@
         },
         "mullet": {
             "name": "Exportación de lisa",
-            "description": "Lisa fresca (Bouri) para mercados internacionales"
+            "description": "Mújol fresco para mercados internacionales"
         }
     },
     "howTo": {

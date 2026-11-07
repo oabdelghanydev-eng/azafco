@@ -36,9 +36,8 @@
         "availability": "Disponible toute l'année"
     },
     "mullet": {
-        "name": "Mulet (Bouri)",
+        "name": "Mulet cabot",
         "alt_names": [
-            "Mulet cabot",
             "Mulet à grosse tête",
             "Mulet gris",
             "Bouri"
@@ -54,12 +53,13 @@
         "category": "Eau saumâtre",
         "availability": "Disponible toute l'année"
     },
-    "buni": {
-        "name": "Bunni",
+    "grass_carp": {
+        "name": "Amour blanc",
         "alt_names": [
-            "Barbeau du Nil"
+            "Carpe herbivore",
+            "Carpe amour"
         ],
-        "description": "Bunni frais, un barbeau d'eau douce originaire du Nil. Excellente texture et saveur.",
+        "description": "Amour blanc frais (Ctenopharyngodon idella), une carpe d'eau douce élevée en Égypte.",
         "sizes": [
             "Moyen (300-500g)",
             "Grand (500g+)",
@@ -121,6 +121,78 @@
         "packaging": "Boîte EPS",
         "category": "Mer",
         "availability": "Disponible toute l'année"
+    },
+    "thinlip_mullet": {
+        "name": "Mulet porc",
+        "alt_names": [
+            "Mulet à lèvres minces",
+            "Tobar"
+        ],
+        "description": "Mulet porc frais (Chelon ramada), élevé en eau saumâtre en Égypte. Un produit distinct de notre mulet cabot (Mugil cephalus).",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau saumâtre",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "bayad_catfish": {
+        "name": "Bayad",
+        "alt_names": [
+            "Silure bayad"
+        ],
+        "description": "Bayad frais (Bagrus bajad), un poisson-chat d'eau douce originaire du Nil. Principalement issu de la pêche dans le Nil.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "silver_carp": {
+        "name": "Carpe argentée",
+        "alt_names": [
+            "Amour argenté"
+        ],
+        "description": "Carpe argentée fraîche (Hypophthalmichthys molitrix), une carpe d'eau douce élevée en Égypte.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "mirror_carp": {
+        "name": "Carpe miroir",
+        "alt_names": [
+            "Carpe commune (miroir)"
+        ],
+        "description": "Carpe miroir fraîche, la forme miroir de la carpe commune (Cyprinus carpio), élevée en Égypte.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "sea_bream": {
+        "name": "Daurade royale",
+        "alt_names": [
+            "Dorade royale",
+            "Daurade"
+        ],
+        "description": "Daurade royale fraîche (Sparus aurata), un poisson marin élevé en Égypte.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Mer",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
     },
     "eels": {
         "name": "Anguille européenne",

@@ -36,7 +36,7 @@
         "availability": "Ganzjährig verfügbar"
     },
     "mullet": {
-        "name": "Meeräsche (Bouri)",
+        "name": "Meeräsche",
         "alt_names": [
             "Großkopfmeeräsche",
             "Graue Meeräsche",
@@ -53,12 +53,13 @@
         "category": "Brackwasser",
         "availability": "Ganzjährig verfügbar"
     },
-    "buni": {
-        "name": "Bunni",
+    "grass_carp": {
+        "name": "Graskarpfen",
         "alt_names": [
-            "Nil-Barbe"
+            "Amurkarpfen",
+            "Weißer Amur"
         ],
-        "description": "Frischer Bunni, eine im Nil heimische Süßwasserbarbe. Ausgezeichnete Textur und Geschmack.",
+        "description": "Frischer Graskarpfen (Ctenopharyngodon idella), ein in Ägypten gezüchteter Süßwasserkarpfen.",
         "sizes": [
             "Mittel (300-500g)",
             "Groß (500g+)",
@@ -120,6 +121,78 @@
         "packaging": "EPS-Box",
         "category": "Meer",
         "availability": "Ganzjährig verfügbar"
+    },
+    "thinlip_mullet": {
+        "name": "Dünnlippige Meeräsche",
+        "alt_names": [
+            "Meeräsche",
+            "Tobar"
+        ],
+        "description": "Frische Dünnlippige Meeräsche (Chelon ramada), in Ägypten im Brackwasser gezüchtet. Ein eigenes Produkt neben unserer Meeräsche (Mugil cephalus).",
+        "sizes": [
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Brackwasser",
+        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+    },
+    "bayad_catfish": {
+        "name": "Bayad-Wels",
+        "alt_names": [
+            "Bayad"
+        ],
+        "description": "Frischer Bayad-Wels (Bagrus bajad), ein im Nil heimischer Süßwasserwels. Überwiegend Wildfang aus dem Nil.",
+        "sizes": [
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+    },
+    "silver_carp": {
+        "name": "Silberkarpfen",
+        "alt_names": [
+            "Tolstolob"
+        ],
+        "description": "Frischer Silberkarpfen (Hypophthalmichthys molitrix), ein in Ägypten gezüchteter Süßwasserkarpfen.",
+        "sizes": [
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+    },
+    "mirror_carp": {
+        "name": "Spiegelkarpfen",
+        "alt_names": [
+            "Karpfen"
+        ],
+        "description": "Frischer Spiegelkarpfen, die Spiegelform des Karpfens (Cyprinus carpio), in Ägypten gezüchtet.",
+        "sizes": [
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Süßwasser",
+        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+    },
+    "sea_bream": {
+        "name": "Dorade",
+        "alt_names": [
+            "Goldbrasse",
+            "Dorade Royale"
+        ],
+        "description": "Frische Dorade (Sparus aurata), ein in Ägypten gezüchteter Meeresfisch.",
+        "sizes": [
+            "Sondergrößen verfügbar"
+        ],
+        "storage_temp": "0 bis 4°C",
+        "packaging": "EPS-Box",
+        "category": "Meer",
+        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
     },
     "eels": {
         "name": "Europäischer Aal",
