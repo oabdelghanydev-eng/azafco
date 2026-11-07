@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Breadcrumbs, CTABand, FeatureGrid, PageHero, ProductCard, Section, SectionHeader } from '@/components/v2';
+import { Breadcrumbs, CTABand, FeatureGrid, PageHero, Section, SpeciesRow, SectionHeader } from '@/components/v2';
 import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
 import { baseUrl, getCatalogue, getSearchNames, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
@@ -28,18 +28,24 @@ export default async function CataloguePage({ params }: Props) {
         .filter((c) => catalogue.some((p) => p.category === c))
         .map((c) => ({ value: c, label: t(`water.${c}`) }));
 
-    const items = catalogue.map((p) => ({
+    const items = catalogue.map((p, i) => ({
         slug: p.slug,
         category: p.category,
         terms: [p.name, ...p.altNames, ...(searchNames[p.slug] ?? [])],
         card: (
-            <ProductCard
+            <SpeciesRow
+                index={i + 1}
                 name={p.name}
                 scientificName={p.scientificName}
+                altNames={p.altNames}
                 href={p.href}
+                quoteHref={rfqHref({ product: p.slug })}
                 image={p.image}
-                tag={t(`water.${p.category}`)}
-                attributes={[{ label: t('card.origin'), value: t('card.origin_value') }]}
+                facts={[
+                    { label: t('card.origin'), value: t('card.origin_value') },
+                    { label: t('card.water'), value: t(`water.${p.category}`) },
+                    ...(p.sizes.length ? [{ label: t('card.grades'), value: p.sizes.slice(0, 3).join(' · ') }] : []),
+                ]}
             />
         ),
     }));

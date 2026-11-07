@@ -23,6 +23,8 @@ export { default as FeatureGrid } from './FeatureGrid';
 export type { FeatureGridProps, Feature } from './FeatureGrid';
 export { default as ProductCard } from './ProductCard';
 export type { ProductCardProps } from './ProductCard';
+export { SpeciesRow, SpeciesEntry } from './SpeciesRow';
+export type { SpeciesRowProps, SpeciesEntryProps } from './SpeciesRow';
 export { default as SpecTable } from './SpecTable';
 export type { SpecTableProps, SpecRow } from './SpecTable';
 export { default as CertificateCard } from './CertificateCard';

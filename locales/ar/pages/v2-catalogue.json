@@ -22,7 +22,9 @@
     "card": {
         "image_alt": "{name}، صورة المنتج",
         "origin": "المنشأ",
-        "origin_value": "مصر"
+        "origin_value": "مصر",
+        "water": "نوع المياه",
+        "grades": "أحجام استرشادية"
     },
     "browser": {
         "search_label": "ابحث عن صنف",

@@ -142,7 +142,7 @@ export default function CatalogueBrowser({ items, categories }: CatalogueBrowser
             </div>
 
             {results.length > 0 ? (
-                <ul className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <ul className="mt-4 divide-y divide-line border-y border-line">
                     {results.map((it) => (
                         <li key={it.slug}>{it.card}</li>
                     ))}

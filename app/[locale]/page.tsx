@@ -16,7 +16,7 @@ import {
     PageHero,
     Pending,
     ProcessSteps,
-    ProductCard,
+    SpeciesEntry,
     ProofStrip,
     Section,
     SectionHeader,
@@ -121,17 +121,16 @@ export default async function HomePage({ params }: Props) {
                         </Button>
                     }
                 />
-                <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+                <ul className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                     {featured.map((p) => {
                         const mid = productMediaId(p.slug);
                         return (
                             <li key={p.slug}>
-                                <ProductCard
+                                <SpeciesEntry
                                     name={td(`${p.translationKey}.name`)}
                                     scientificName={p.scientificName}
                                     href={productHref(p.slug)}
                                     image={mid ? img(mid) : undefined}
-                                    tag={td(`${p.translationKey}.category`)}
                                 />
                             </li>
                         );

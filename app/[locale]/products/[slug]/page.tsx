@@ -8,7 +8,7 @@ import {
     FAQAccordion,
     Pending,
     PageHero,
-    ProductCard,
+    SpeciesEntry,
     Section,
     SectionHeader,
     SpecTable,
@@ -284,16 +284,10 @@ export default async function ProductDetailPage({ params }: Props) {
                             </Button>
                         }
                     />
-                    <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <ul className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                         {related.map((r) => (
                             <li key={r.slug}>
-                                <ProductCard
-                                    name={r.name}
-                                    scientificName={r.scientificName}
-                                    href={r.href}
-                                    image={r.image}
-                                    tag={t(`water.${r.category}`)}
-                                />
+                                <SpeciesEntry name={r.name} scientificName={r.scientificName} href={r.href} image={r.image} />
                             </li>
                         ))}
                     </ul>

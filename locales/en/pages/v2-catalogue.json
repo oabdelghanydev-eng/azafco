@@ -22,7 +22,9 @@
     "card": {
         "image_alt": "{name}, product photo",
         "origin": "Origin",
-        "origin_value": "Egypt"
+        "origin_value": "Egypt",
+        "water": "Water",
+        "grades": "Indicative grades"
     },
     "browser": {
         "search_label": "Search species",
