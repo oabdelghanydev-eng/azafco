@@ -32,6 +32,18 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
+  // Permanent redirects for renamed species pages. "buni" was renamed to grass carp
+  // (owner species list, 7 Nov 2026); see docs/reports/species-identification.md
+  async redirects() {
+    return [
+      {
+        source: '/:locale(ar|en|es|ru|de|fr)/products/buni',
+        destination: '/:locale/products/grass-carp',
+        permanent: true,
+      },
+    ]
+  },
+
   // Caching headers for static assets
   async headers() {
     return [

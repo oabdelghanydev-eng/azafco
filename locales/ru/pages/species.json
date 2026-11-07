@@ -18,5 +18,6 @@
     "meta_title_short": "{name} из Египта",
     "meta_description_suffix": "Размеры: {sizes}. Упаковка: {packaging}, {temp}.",
     "meta_description_suffix_short": "Упаковка: {packaging}, {temp}. {availability}.",
-    "list_separator": ", "
+    "list_separator": ", ",
+    "scientific_name": "Научное название"
 }

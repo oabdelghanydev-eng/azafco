@@ -145,13 +145,18 @@ export const companyConfig = {
     // ─────────────────────────────────────────────────────────────────────────
     products: [
         { key: 'tilapia', category: 'freshwater', isMain: true, image: '/items/tilapia.jpg' },
-        { key: 'sea_bass', category: 'saltwater', isMain: true, image: '/items/sea_bass.jpg' },
-        { key: 'mullet', category: 'freshwater', isMain: true, image: '/items/bouri.jpg' },
-        { key: 'buni', category: 'saltwater', isMain: false, image: '/items/buni.jpg' },
+        { key: 'sea_bass', category: 'marine', isMain: true, image: '/items/sea_bass.jpg' },
+        { key: 'mullet', category: 'brackish', isMain: true, image: '/items/bouri.jpg' },
+        { key: 'grass_carp', category: 'freshwater', isMain: false, image: '/items/grass_carp.jpg' },
         { key: 'mubarakah', category: 'freshwater', isMain: false, image: '/items/mubarakah.jpg' },
         { key: 'catfish', category: 'freshwater', isMain: false, image: '/items/catfish.jpg' },
-        { key: 'lout', category: 'saltwater', isMain: false, image: '/items/lout.jpg' },
-        { key: 'eels', category: 'freshwater', isMain: false, image: '/items/eels.jpg' },
+        { key: 'lout', category: 'marine', isMain: false, image: '/items/lout.jpg' },
+        { key: 'thinlip_mullet', category: 'brackish', isMain: false, image: '/items/thinlip_mullet.jpg' },
+        { key: 'bayad_catfish', category: 'freshwater', isMain: false, image: '/items/bayad_catfish.jpg' },
+        { key: 'silver_carp', category: 'freshwater', isMain: false, image: '/items/silver_carp.jpg' },
+        { key: 'mirror_carp', category: 'freshwater', isMain: false, image: '/items/mirror_carp.jpg' },
+        { key: 'sea_bream', category: 'marine', isMain: false, image: '/items/sea_bream.jpg' },
+        { key: 'eels', category: 'brackish', isMain: false, image: '/items/eels.jpg' },
     ],
 
     // ─────────────────────────────────────────────────────────────────────────
