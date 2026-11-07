@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaEnvelope, FaGlobe, FaAddressCard, FaFish, FaCertificate, FaBuilding } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaGlobe, FaAddressCard } from 'react-icons/fa';
 
 const WHATSAPP = '201007736419';
 const PHONE_DISPLAY = '+20 100 773 6419';
@@ -9,12 +9,6 @@ const primary = [
   { href: `https://wa.me/${WHATSAPP}`, icon: FaWhatsapp, en: 'WhatsApp', ar: 'واتساب', sub: PHONE_DISPLAY, external: true },
   { href: `mailto:${EMAIL}`, icon: FaEnvelope, en: 'Email', ar: 'البريد', sub: EMAIL },
   { href: SITE, icon: FaGlobe, en: 'Website', ar: 'الموقع', sub: 'azafco.com.eg' },
-];
-
-const pages = [
-  { href: '/products', icon: FaFish, en: 'Products', ar: 'المنتجات' },
-  { href: '/certificates', icon: FaCertificate, en: 'Certificates', ar: 'الشهادات' },
-  { href: '/about', icon: FaBuilding, en: 'About us', ar: 'من نحن' },
 ];
 
 export default function QrPage() {
@@ -57,20 +51,6 @@ export default function QrPage() {
         <span>Save contact</span>
         <span dir="rtl">حفظ جهة الاتصال</span>
       </a>
-
-      <nav aria-label="Company pages" className="mt-8 grid grid-cols-3 gap-3">
-        {pages.map(({ href, icon: Icon, en, ar }) => (
-          <a
-            key={en}
-            href={href}
-            className="flex flex-col items-center gap-1 rounded-2xl border border-white/20 px-2 py-4 text-center transition active:scale-[0.98]"
-          >
-            <Icon className="h-6 w-6 text-[#F7B500]" aria-hidden />
-            <span className="text-sm font-semibold">{en}</span>
-            <span className="text-sm text-white/80" dir="rtl">{ar}</span>
-          </a>
-        ))}
-      </nav>
 
       <footer className="mt-auto pt-10 text-center text-xs text-white/60">© {new Date().getFullYear()} AZAFCO International</footer>
     </main>
