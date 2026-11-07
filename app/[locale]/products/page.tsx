@@ -7,7 +7,6 @@ import RangeBand from '@/components/v2/products/RangeBand';
 import { specText, type SpecT } from '@/components/v2/products/SpecMatrix';
 import { baseUrl, getCatalogue, getSearchNames, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { productCategories } from '@/data/products';
-import { mediaImage } from '@/lib/v2/media';
 import { getSpeciesSpec, publishedFormKinds } from '@/lib/v2/specs';
 import { rfqHref, routes } from '@/lib/v2/routes';
 
@@ -103,7 +102,6 @@ export default async function CataloguePage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('species-tilapia', locale)}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.products') }]} />}
                 primaryAction={{ label: tv('cta.request_specifications'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}

@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, Container, Eyebrow, GeoArcs } from '@/components/v2';
-import RfqForm from '@/components/v2/rfq/RfqForm';
+import RfqRequestPanel from '@/components/v2/rfq/RfqRequestPanel';
 import RfqAside from '@/components/v2/rfq/RfqAside';
-import { getRfqFormOptions, resolveRfqParams } from '@/components/v2/rfq/options';
-import { variantForTopic } from '@/components/v2/rfq/schema';
+import { isShortTopic, resolveRfqParams } from '@/components/v2/rfq/options';
 import { pageMetadata, breadcrumbJsonLd } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 import { Link } from '@/navigation';
@@ -22,15 +21,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({ locale, path: routes.rfq, title: t('title'), description: t('description') });
 }
 
+/**
+ * /rfq: "send your request" page. No web form (owner decision, 7 Nov 2026):
+ * the buyer sends the prepared message from their own company email or WhatsApp.
+ */
 export default async function RfqPage({ params, searchParams }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
     const { topic, product, country, form, grade } = resolveRfqParams(await searchParams);
-    const short = variantForTopic(topic) === 'short';
+    const short = isShortTopic(topic);
 
     const t = await getTranslations({ locale, namespace: 'rfq_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
-    const { speciesOptions, countries } = await getRfqFormOptions(locale);
 
     const title = short ? t(`short_hero.${topic}_title`) : t('hero.title');
     const intro = short ? t(`short_hero.${topic}_intro`) : t('hero.intro');
@@ -66,15 +68,7 @@ export default async function RfqPage({ params, searchParams }: Props) {
             <section className="bg-white py-10 text-fg md:py-16" data-surface="light">
                 <Container grid className="gap-y-12">
                     <div className="col-span-4 sm:col-span-8 lg:order-2 lg:col-span-8">
-                        <RfqForm
-                            topic={topic}
-                            prefillSpecies={product}
-                            prefillCountry={country}
-                            prefillForm={form}
-                            prefillGrade={grade}
-                            speciesOptions={speciesOptions}
-                            countries={countries}
-                        />
+                        <RfqRequestPanel topic={topic} product={product} country={country} form={form} grade={grade} />
                     </div>
                     <RfqAside short={short} className="col-span-4 sm:col-span-8 lg:order-1 lg:col-span-4" />
                 </Container>

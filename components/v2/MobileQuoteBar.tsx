@@ -9,14 +9,14 @@ import Button from './Button';
 import { WhatsAppIcon } from './icons';
 
 /** Routes where the fixed RFQ bar would be redundant */
-const HIDE_ON: string[] = [routes.rfq, routes.rfqThankYou];
+const HIDE_ON: string[] = [routes.rfq];
 
 /**
  * Quick actions (single fixed layer, no stacked bars):
  * - < md: bottom bar with "Request a Quote" (48px) + WhatsApp (48px square).
  * - md+: a single round WhatsApp button at the bottom end corner
  *   (the header already carries "Request a Quote").
- * Hidden on /rfq and /rfq/thank-you. The footer reserves space for the bar
+ * Hidden on /rfq. The footer reserves space for the bar
  * (see SiteFooter), so it never covers content at the end of the page.
  */
 export default function MobileQuoteBar() {

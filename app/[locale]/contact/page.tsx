@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, Container, Eyebrow, GeoArcs, MailIcon, MapPinIcon, Pending, PhoneIcon, WhatsAppIcon } from '@/components/v2';
-import ContactRouter from '@/components/v2/contact/ContactRouter';
-import { getRfqFormOptions, resolveRfqParams } from '@/components/v2/rfq/options';
+import ContactRoutes from '@/components/v2/contact/ContactRoutes';
+import { resolveRfqParams } from '@/components/v2/rfq/options';
 import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
@@ -23,12 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params, searchParams }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const { topic, product, country } = resolveRfqParams(await searchParams);
+    const { product, country } = resolveRfqParams(await searchParams);
 
     const t = await getTranslations({ locale, namespace: 'contact_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
-    const { speciesOptions, countries } = await getRfqFormOptions(locale);
     const c = companyConfig.contact;
     const steps = t.raw('next.steps') as string[];
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${companyConfig.geo.latitude},${companyConfig.geo.longitude}`;
@@ -52,16 +51,10 @@ export default async function ContactPage({ params, searchParams }: Props) {
 
             <section data-surface="light" className="bg-white py-10 text-ink md:py-16">
                 <Container grid className="gap-y-12">
-                    {/* 02–03 Route selector + form */}
+                    {/* 02–03 Enquiry routes (no form: each opens the matching /rfq email / WhatsApp page) */}
                     {/* id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working */}
                     <div id="partnership" className="col-span-4 scroll-mt-28 sm:col-span-8 lg:col-span-8">
-                        <ContactRouter
-                            initialRoute={topic === 'corporate' || topic === 'documents' ? topic : 'seafood'}
-                            speciesOptions={speciesOptions}
-                            countries={countries}
-                            prefillSpecies={product}
-                            prefillCountry={country}
-                        />
+                        <ContactRoutes prefillSpecies={product} prefillCountry={country} />
                     </div>
 
                     {/* 04–08 Direct channels, locations, next step, privacy, trust */}

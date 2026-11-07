@@ -132,7 +132,7 @@
         "faq_price_a": "No. Prices are issued in a commercial quotation with a stated validity, based on specification, volume, destination and trade terms.",
         "rfq_eyebrow": "Request a quote",
         "rfq_title": "Request a quote for {name}",
-        "rfq_intro": "The form opens with {name} already selected. Add your destination, target quantity, product form and timing.",
+        "rfq_intro": "The email opens with {name} already filled in. Add your destination, target quantity, product form and timing, and send it from your company address.",
         "rfq_cta": "Request a Quote for {name}",
         "rfq_after_1": "We review your specification and quantity",
         "rfq_after_2": "The export team contacts you to confirm the details",

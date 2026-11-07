@@ -19,7 +19,6 @@ export const routes = {
     insights: '/insights',
     contact: '/contact',
     rfq: '/rfq',
-    rfqThankYou: '/rfq/thank-you',
     privacy: '/privacy-policy',
 } as const;
 

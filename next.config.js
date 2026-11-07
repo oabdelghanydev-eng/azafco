@@ -54,6 +54,8 @@ const nextConfig = {
       { source: '/:locale(ar|en)/certificates', destination: '/:locale/quality', permanent: true },
       { source: '/:locale(ar|en)/eu-buyers', destination: '/:locale/markets', permanent: true },
       { source: '/:locale(ar|en)/media', destination: '/:locale/insights', permanent: true },
+      // Site v2: no web form (owner decision 7 Nov 2026); enquiries go by email/WhatsApp from /rfq
+      { source: '/:locale(ar|en)/rfq/thank-you', destination: '/:locale/rfq', permanent: true },
       // Site v2: corporate sectors live as sections of /businesses
       { source: '/:locale(ar|en)/:sector(agriculture|livestock|investments)', destination: '/:locale/businesses#:sector', permanent: true },
     ]

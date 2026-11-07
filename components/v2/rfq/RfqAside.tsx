@@ -1,19 +1,17 @@
 import { useTranslations } from 'next-intl';
-import { companyConfig } from '@/config/company.config';
-import { CheckIcon, MailIcon, PhoneIcon, WhatsAppIcon } from '@/components/v2/icons';
+import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import { cn } from '@/lib/v2/cn';
 
 /**
- * Buyer reassurance column next to the RFQ form (brief §21 "LEFT — buyer
- * reassurance"): what happens next (no response-time or price promise), what to
- * prepare, direct channels from config, privacy note.
+ * Buyer reassurance column next to the RFQ request panel: what happens after
+ * the buyer writes to us (no response-time or price promise), what to have
+ * ready, and a note to attach a specification. Direct channels live in
+ * RfqRequestPanel.
  */
 export default function RfqAside({ short = false, headingAs: H = 'h2', className }: { short?: boolean; headingAs?: 'h2' | 'h3'; className?: string }) {
     const t = useTranslations('rfq_v2.aside');
-    const tv = useTranslations('v2.cta');
     const steps = t.raw('steps') as string[];
     const prepare = t.raw('prepare') as string[];
-    const c = companyConfig.contact;
 
     return (
         <aside className={cn('flex flex-col gap-8 text-ink', className)} aria-label={t('title')}>
@@ -46,37 +44,12 @@ export default function RfqAside({ short = false, headingAs: H = 'h2', className
                 </section>
             ) : null}
 
-            <section className="rounded-card border border-line bg-surface-offwhite p-5">
-                <H className="font-display text-heading-sm text-navy">{t('direct_title')}</H>
-                <p className="mt-1 text-body-sm text-ink-muted">{t('direct_intro')}</p>
-                <ul className="mt-3">
-                    <li>
-                        <a href={`tel:${c.phone}`} className="flex min-h-[44px] items-center gap-3 font-medium text-navy hover:underline" data-cta="rfq_aside_phone">
-                            <PhoneIcon size={18} className="shrink-0" />
-                            <span className="sr-only">{tv('call')}: </span>
-                            <span dir="ltr">{c.phoneDisplay}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href={c.social.whatsapp} target="_blank" rel="noopener noreferrer" className="flex min-h-[44px] items-center gap-3 font-medium text-navy hover:underline" data-cta="rfq_aside_whatsapp">
-                            <WhatsAppIcon size={18} className="shrink-0" />
-                            <span>{tv('whatsapp')}</span>
-                            <span className="sr-only">{tv('opens_new_tab')}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href={`mailto:${c.email}`} className="flex min-h-[44px] items-center gap-3 font-medium text-navy hover:underline" data-cta="rfq_aside_email">
-                            <MailIcon size={18} className="shrink-0" />
-                            <span className="sr-only">{tv('email')}: </span>
-                            <span dir="ltr">{c.email}</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <H className="font-display text-heading-sm text-navy">{t('privacy_title')}</H>
-                <p className="mt-1 text-caption text-ink-muted">{t('privacy_text')}</p>
+            <section className="flex gap-3 rounded-card border border-line bg-surface-offwhite p-5">
+                <DocumentIcon size={20} className="mt-0.5 shrink-0 text-navy" />
+                <div>
+                    <H className="font-display text-heading-sm text-navy">{t('attach_title')}</H>
+                    <p className="mt-1 text-body-sm text-ink-muted">{t('attach_text')}</p>
+                </div>
             </section>
         </aside>
     );

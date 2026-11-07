@@ -11,9 +11,8 @@ import {
     SectionHeader,
 } from '@/components/v2';
 import { routes } from '@/lib/v2/routes';
-import RfqForm from '@/components/v2/rfq/RfqForm';
+import RfqRequestPanel from '@/components/v2/rfq/RfqRequestPanel';
 import RfqAside from '@/components/v2/rfq/RfqAside';
-import { getRfqFormOptions } from '@/components/v2/rfq/options';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 
@@ -33,7 +32,6 @@ export default async function ForImportersPage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'importers_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
-    const { speciesOptions, countries } = await getRfqFormOptions(locale);
 
     const serve = t.raw('serve.items') as Item[];
     const steps = t.raw('process.steps') as Item[];
@@ -132,7 +130,7 @@ export default async function ForImportersPage({ params }: Props) {
                 <SectionHeader id="fi-rfq" eyebrow={t('rfq.eyebrow')} title={t('rfq.title')} intro={t('rfq.intro')} />
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
                     <div className="lg:order-2 lg:col-span-8">
-                        <RfqForm topic="general" speciesOptions={speciesOptions} countries={countries} idPrefix="fi-rfq" headingAs="h3" />
+                        <RfqRequestPanel topic="general" idPrefix="fi-rfq" headingAs="h3" />
                     </div>
                     <RfqAside headingAs="h3" className="lg:order-1 lg:col-span-4" />
                 </div>
