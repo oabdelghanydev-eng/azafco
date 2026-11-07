@@ -44,7 +44,7 @@ export default async function CataloguePage({ params }: Props) {
                 facts={[
                     { label: t('card.origin'), value: t('card.origin_value') },
                     { label: t('card.water'), value: t(`water.${p.category}`) },
-                    ...(p.sizes.length ? [{ label: t('card.grades'), value: p.sizes.slice(0, 3).join(' · ') }] : []),
+                    ...(p.sizes.length ? [{ label: t('card.grades'), value: p.sizes.slice(0, 3) }] : []),
                 ]}
             />
         ),

@@ -22,7 +22,8 @@ export interface SpeciesRowProps {
     quoteHref: string;
     image?: ImageProps;
     /** Short published facts only (origin, water type, indicative grades). No prices. */
-    facts: { label: string; value: string }[];
+    /** A string[] value renders as separate no-wrap items (e.g. size grades) */
+    facts: { label: string; value: string | string[] }[];
     headingAs?: 'h2' | 'h3';
     className?: string;
 }
@@ -44,7 +45,7 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, quoteH
                         aria-hidden="true"
                         fill
                         sizes="(min-width: 1024px) 380px, (min-width: 640px) 36vw, 100vw"
-                        className={image.cutout ? 'object-contain drop-shadow-[0_12px_16px_rgba(0,45,114,0.12)]' : 'rounded-card object-cover'}
+                        className={image.cutout ? 'object-cover drop-shadow-[0_12px_16px_rgba(0,45,114,0.12)]' : 'rounded-card object-cover'}
                     />
                 ) : null}
             </Link>
@@ -69,11 +70,23 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, quoteH
             </div>
 
             <div className="col-span-4 sm:col-span-8 lg:col-span-4">
-                <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 border-s-2 border-gold ps-5 text-body-sm">
+                <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 gap-y-2 border-s-2 border-gold ps-5 text-body-sm">
                     {facts.map((f) => (
                         <div key={f.label} className="contents">
                             <dt className="text-fg-muted">{f.label}</dt>
-                            <dd className="font-medium text-fg">{f.value}</dd>
+                            <dd className="font-medium text-fg">
+                                {Array.isArray(f.value) ? (
+                                    <ul className="space-y-1">
+                                        {f.value.map((v) => (
+                                            <li key={v}>
+                                                <bdi>{v}</bdi>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    f.value
+                                )}
+                            </dd>
                         </div>
                     ))}
                 </dl>
@@ -124,7 +137,7 @@ export function SpeciesEntry({ name, scientificName, href, image, headingAs: H =
                         aria-hidden="true"
                         fill
                         sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw"
-                        className={image.cutout ? 'object-contain drop-shadow-[0_12px_16px_rgba(0,45,114,0.12)]' : 'rounded-card object-cover'}
+                        className={image.cutout ? 'object-cover drop-shadow-[0_12px_16px_rgba(0,45,114,0.12)]' : 'rounded-card object-cover'}
                     />
                 ) : null}
             </div>
