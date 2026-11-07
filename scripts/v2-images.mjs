@@ -36,15 +36,7 @@ const photos = [
     { id: 'meeting-room-visit', src: path.join(RAW, 'IMG-20261029-WA0067.jpg') },
     { id: 'staff-recognition-group', src: path.join(RAW, 'IMG-20261029-WA0021.jpg') },
     { id: 'staff-certificate-handover', src: path.join(RAW, 'IMG-20261029-WA0012.jpg') },
-    // Product close-ups (existing site photos)
-    { id: 'product-tilapia-whole', src: path.join(PUB, 'items/tilapia.jpg') },
-    { id: 'product-sea-bass-whole', src: path.join(PUB, 'items/sea_bass.jpg') },
-    { id: 'product-mullet-whole', src: path.join(PUB, 'items/bouri.jpg') },
-    { id: 'product-carp-whole', src: path.join(PUB, 'items/mubarakah.jpg') },
-    { id: 'product-catfish-whole', src: path.join(PUB, 'items/catfish.jpg') },
-    { id: 'product-meagre-whole', src: path.join(PUB, 'items/lout.jpg') },
-    { id: 'product-eel-whole', src: path.join(PUB, 'items/eels.jpg') },
-    { id: 'product-buni-crate', src: path.join(PUB, 'items/buni.jpg') },
+    // Species photos: see scripts/species-images.py (owner cut-out set, 7 Nov 2026)
 ];
 
 fs.mkdirSync(OUT, { recursive: true });

@@ -67,7 +67,7 @@ export default function EditorialMedia({
                         alt={image.alt}
                         fill
                         sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, 100vw"
-                        className="object-cover"
+                        className={image.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)]' : 'object-cover'}
                         style={{ objectPosition: imagePosition }}
                     />
                 </div>

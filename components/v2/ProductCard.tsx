@@ -55,7 +55,7 @@ export default function ProductCard({
                         alt={image.alt}
                         fill
                         sizes="(min-width: 1280px) 300px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition-transform duration-slow group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                        className={`${image.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)]' : 'object-cover'} transition-transform duration-slow group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100`}
                     />
                 ) : null}
                 {tag ? (

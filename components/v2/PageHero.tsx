@@ -90,14 +90,14 @@ export default function PageHero({
                         {proof ? <div className="mt-10">{proof}</div> : null}
                     </div>
                     <div className="col-span-4 sm:col-span-8 lg:col-span-6">
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-card bg-surface-mist lg:aspect-[4/5]">
+                        <div className={cn('relative aspect-[4/3] overflow-hidden rounded-card bg-surface-mist', image.cutout ? 'bg-gradient-to-b from-surface-mist to-white' : 'lg:aspect-[4/5]')}>
                             <Image
                                 src={image.src}
                                 alt={image.alt}
                                 fill
                                 priority={priority}
                                 sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, 100vw"
-                                className="object-cover"
+                                className={image.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)]' : 'object-cover'}
                                 style={{ objectPosition: imagePosition }}
                             />
                         </div>

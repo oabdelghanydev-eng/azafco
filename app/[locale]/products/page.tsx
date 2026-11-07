@@ -83,7 +83,7 @@ export default async function CataloguePage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                image={mediaImage('product-sea-bass-whole', locale)}
+                image={mediaImage('species-tilapia', locale)}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.products') }]} />}
                 primaryAction={{ label: tv('cta.request_specifications'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}

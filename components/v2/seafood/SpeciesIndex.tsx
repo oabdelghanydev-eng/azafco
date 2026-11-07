@@ -23,7 +23,7 @@ export default function SpeciesIndex({ items, meta }: SpeciesIndexProps) {
                         className="group flex min-h-16 items-center gap-4 rounded-card border border-rule bg-panel p-3 transition-colors duration-base hover:bg-tint motion-reduce:transition-none"
                     >
                         <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-control bg-surface-mist">
-                            <Image src={p.image.src} alt="" aria-hidden="true" fill sizes="56px" className="object-cover" />
+                            <Image src={p.image.src} alt="" aria-hidden="true" fill sizes="56px" className={p.image.cutout ? "object-contain p-0.5" : "object-cover"} />
                         </span>
                         <span className="min-w-0 flex-1">
                             <span className="block text-body font-semibold text-fg">{p.name}</span>

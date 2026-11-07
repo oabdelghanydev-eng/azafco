@@ -396,8 +396,8 @@ export default async function V2KitPage({ params }: Props) {
                         { id: 'processing-hall-team' },
                         { id: 'processing-area-visit-hygiene' },
                         { id: 'meeting-room-visit' },
-                        { id: 'product-sea-bass-whole' },
-                        { id: 'product-mullet-whole' },
+                        { id: 'species-sea-bass' },
+                        { id: 'species-mullet' },
                     ]}
                 />
             </Section>

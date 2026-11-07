@@ -27,6 +27,8 @@ export interface MediaItem {
     subject: MediaSubject;
     /** Extra tags for picking (visible content only) */
     tags?: string[];
+    /** Transparent cut-out: render with object-contain on a light panel, never cropped */
+    cutout?: boolean;
     /** Owner follow-up attached to this photo (consent, species, etc.) */
     note?: string;
 }
@@ -37,6 +39,8 @@ export interface ImageProps {
     alt: string;
     width: number;
     height: number;
+    /** Transparent cut-out (species photos): show whole, object-contain */
+    cutout?: boolean;
 }
 
 const v2 = (id: string) => `/images/v2/${id}.webp`;
@@ -201,88 +205,138 @@ export const media: MediaItem[] = [
         },
         note: PEOPLE_NOTE,
     },
-    // ── Product close-ups (tags = data/products.ts slugs) ──────────────────
+    // ── Species cut-outs (owner set, 7 Nov 2026; transparent, 4:3; tags = data/products.ts slugs) ──
     {
-        id: 'product-tilapia-whole',
-        src: v2('product-tilapia-whole'),
-        srcSmall: v2s('product-tilapia-whole'),
-        width: 960,
-        height: 720,
+        id: 'species-tilapia',
+        src: '/images/species/tilapia.webp',
+        srcSmall: '/images/species/tilapia-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
         tags: ['tilapia'],
-        alt: { en: 'Close-up of whole fresh tilapia', ar: 'لقطة قريبة لأسماك بلطي طازجة كاملة' },
+        cutout: true,
+        alt: { en: 'Whole tilapia, side view', ar: 'سمكة بلطي كاملة، منظر جانبي' },
     },
     {
-        id: 'product-sea-bass-whole',
-        src: v2('product-sea-bass-whole'),
-        srcSmall: v2s('product-sea-bass-whole'),
-        width: 960,
-        height: 720,
+        id: 'species-sea-bass',
+        src: '/images/species/sea-bass.webp',
+        srcSmall: '/images/species/sea-bass-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
         tags: ['sea-bass'],
-        alt: { en: 'Whole fresh sea bass laid together', ar: 'أسماك قاروص طازجة كاملة مرصوصة معًا' },
+        cutout: true,
+        alt: { en: 'Whole European sea bass, side view', ar: 'سمكة قاروص كاملة، منظر جانبي' },
     },
     {
-        id: 'product-mullet-whole',
-        src: v2('product-mullet-whole'),
-        srcSmall: v2s('product-mullet-whole'),
-        width: 960,
-        height: 720,
+        id: 'species-mullet',
+        src: '/images/species/mullet.webp',
+        srcSmall: '/images/species/mullet-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
         tags: ['mullet'],
-        alt: { en: 'Whole fresh mullet with silver scales', ar: 'أسماك بوري طازجة كاملة بقشور فضية' },
+        cutout: true,
+        alt: { en: 'Whole flathead grey mullet, side view', ar: 'سمكة بوري كاملة، منظر جانبي' },
     },
     {
-        id: 'product-carp-whole',
-        src: v2('product-carp-whole'),
-        srcSmall: v2s('product-carp-whole'),
-        width: 1024,
-        height: 768,
+        id: 'species-grass-carp',
+        src: '/images/species/grass-carp.webp',
+        srcSmall: '/images/species/grass-carp-800.webp',
+        width: 1600,
+        height: 1200,
+        subject: 'product',
+        tags: ['grass-carp'],
+        cutout: true,
+        alt: { en: 'Whole grass carp, side view', ar: 'سمكة حشايش كاملة، منظر جانبي' },
+    },
+    {
+        id: 'species-common-carp',
+        src: '/images/species/common-carp.webp',
+        srcSmall: '/images/species/common-carp-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
         tags: ['common-carp'],
-        alt: { en: 'Whole fresh carp in a lined box', ar: 'أسماك مبروك طازجة كاملة داخل صندوق مبطن' },
+        cutout: true,
+        alt: { en: 'Whole common carp, side view', ar: 'سمكة قشرة كاملة، منظر جانبي' },
     },
     {
-        id: 'product-catfish-whole',
-        src: v2('product-catfish-whole'),
-        srcSmall: v2s('product-catfish-whole'),
-        width: 960,
-        height: 720,
+        id: 'species-catfish',
+        src: '/images/species/catfish.webp',
+        srcSmall: '/images/species/catfish-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
         tags: ['catfish'],
-        alt: { en: 'Whole fresh catfish in a lined box', ar: 'أسماك قرموط طازجة كاملة داخل صندوق مبطن' },
+        cutout: true,
+        alt: { en: 'Whole African catfish, side view', ar: 'سمكة قراميط كاملة، منظر جانبي' },
     },
     {
-        id: 'product-meagre-whole',
-        src: v2('product-meagre-whole'),
-        srcSmall: v2s('product-meagre-whole'),
-        width: 960,
-        height: 720,
+        id: 'species-meagre',
+        src: '/images/species/meagre.webp',
+        srcSmall: '/images/species/meagre-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
         tags: ['meagre'],
-        alt: { en: 'Whole fresh meagre on a steel rack', ar: 'أسماك لوت طازجة كاملة على حامل معدني' },
+        cutout: true,
+        alt: { en: 'Whole meagre, side view', ar: 'سمكة لوت كاملة، منظر جانبي' },
     },
     {
-        id: 'product-eel-whole',
-        src: v2('product-eel-whole'),
-        srcSmall: v2s('product-eel-whole'),
-        width: 960,
-        height: 720,
+        id: 'species-thinlip-mullet',
+        src: '/images/species/thinlip-mullet.webp',
+        srcSmall: '/images/species/thinlip-mullet-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
-        tags: ['eel'],
-        alt: { en: 'Whole fresh eels in a lined box', ar: 'أسماك ثعابين طازجة كاملة داخل صندوق مبطن' },
-        note: 'Owner to confirm eel is still sold.',
+        tags: ['thinlip-mullet'],
+        cutout: true,
+        alt: { en: 'Whole thinlip mullet, side view', ar: 'سمكة طوبار كاملة، منظر جانبي' },
     },
     {
-        id: 'product-buni-crate',
-        src: v2('product-buni-crate'),
-        srcSmall: v2s('product-buni-crate'),
-        width: 960,
-        height: 720,
+        id: 'species-bayad-catfish',
+        src: '/images/species/bayad-catfish.webp',
+        srcSmall: '/images/species/bayad-catfish-800.webp',
+        width: 1600,
+        height: 1200,
         subject: 'product',
-        tags: ['buni'],
-        alt: { en: 'Whole fresh fish in a plastic crate', ar: 'أسماك طازجة كاملة داخل صندوق بلاستيكي' },
-        note: 'Species deliberately not named: looks like grass carp, owner to confirm (T-001).',
+        tags: ['bayad-catfish'],
+        cutout: true,
+        alt: { en: 'Whole bayad catfish, side view', ar: 'سمكة بياض كاملة، منظر جانبي' },
+    },
+    {
+        id: 'species-silver-carp',
+        src: '/images/species/silver-carp.webp',
+        srcSmall: '/images/species/silver-carp-800.webp',
+        width: 1600,
+        height: 1200,
+        subject: 'product',
+        tags: ['silver-carp'],
+        cutout: true,
+        alt: { en: 'Whole silver carp, side view', ar: 'سمكة سلفر كاملة، منظر جانبي' },
+    },
+    {
+        id: 'species-mirror-carp',
+        src: '/images/species/mirror-carp.webp',
+        srcSmall: '/images/species/mirror-carp-800.webp',
+        width: 1600,
+        height: 1200,
+        subject: 'product',
+        tags: ['mirror-carp'],
+        cutout: true,
+        alt: { en: 'Whole mirror carp, side view', ar: 'سمكة مبروكة كاملة، منظر جانبي' },
+    },
+    {
+        id: 'species-sea-bream',
+        src: '/images/species/sea-bream.webp',
+        srcSmall: '/images/species/sea-bream-800.webp',
+        width: 1600,
+        height: 1200,
+        subject: 'product',
+        tags: ['sea-bream'],
+        cutout: true,
+        alt: { en: 'Whole gilthead sea bream, side view', ar: 'سمكة دنيس كاملة، منظر جانبي' },
     },
 ];
 
@@ -298,7 +352,7 @@ export function getMedia(id: string): MediaItem {
 /** Component-ready image props with alt in the right language (ar → Arabic, others → English). */
 export function mediaImage(id: string, locale: string): ImageProps {
     const m = getMedia(id);
-    return { src: m.src, width: m.width, height: m.height, alt: locale === 'ar' ? m.alt.ar : m.alt.en };
+    return { src: m.src, width: m.width, height: m.height, alt: locale === 'ar' ? m.alt.ar : m.alt.en, cutout: m.cutout };
 }
 
 export function mediaBySubject(subject: MediaSubject): MediaItem[] {

@@ -102,7 +102,7 @@ export default async function BusinessesPage({ params }: Props) {
                 <MediaGallery
                     className="mt-12 md:mt-16"
                     columns={3}
-                    items={[{ id: 'processing-crew-hygiene-gear' }, { id: 'dispatch-truck-loading-bays-group' }, { id: 'product-sea-bass-whole' }]}
+                    items={[{ id: 'processing-crew-hygiene-gear' }, { id: 'dispatch-truck-loading-bays-group' }, { id: 'species-tilapia' }]}
                 />
             </Section>
 

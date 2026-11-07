@@ -44,7 +44,7 @@ export default function MediaGallery({ items, columns = 3, aspect = '4/3', label
                                 {aspect === 'natural' ? (
                                     <Image src={m.src} alt={alt} width={m.width} height={m.height} sizes={sizes} className="h-auto w-full" />
                                 ) : (
-                                    <Image src={m.src} alt={alt} fill sizes={sizes} className="object-cover" />
+                                    <Image src={m.src} alt={alt} fill sizes={sizes} className={m.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)] bg-surface-mist' : 'object-cover'} />
                                 )}
                             </div>
                             {caption ? <figcaption className="mt-2 text-caption text-fg-muted">{caption}</figcaption> : null}

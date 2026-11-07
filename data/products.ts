@@ -40,7 +40,7 @@ export const allProducts: Product[] = [
         translationKey: 'tilapia',
         category: 'freshwater',
         scientificName: 'Oreochromis niloticus',
-        image: '/items/tilapia.jpg',
+        image: '/images/species/tilapia.webp',
         available: true,
     },
     {
@@ -49,7 +49,7 @@ export const allProducts: Product[] = [
         translationKey: 'sea_bass',
         category: 'marine',
         scientificName: 'Dicentrarchus labrax',
-        image: '/items/sea_bass.jpg',
+        image: '/images/species/sea-bass.webp',
         available: true,
     },
     {
@@ -58,7 +58,7 @@ export const allProducts: Product[] = [
         translationKey: 'mullet',
         category: 'brackish',
         scientificName: 'Mugil cephalus',
-        image: '/items/bouri.jpg',
+        image: '/images/species/mullet.webp',
         available: true,
     },
     {
@@ -69,7 +69,7 @@ export const allProducts: Product[] = [
         translationKey: 'grass_carp',
         category: 'freshwater',
         scientificName: 'Ctenopharyngodon idella',
-        image: '/items/grass_carp.jpg',
+        image: '/images/species/grass-carp.webp',
         available: true,
     },
     {
@@ -78,7 +78,7 @@ export const allProducts: Product[] = [
         translationKey: 'mubarakah',
         category: 'freshwater',
         scientificName: 'Cyprinus carpio',
-        image: '/items/mubarakah.jpg',
+        image: '/images/species/common-carp.webp',
         available: true,
     },
     {
@@ -87,7 +87,7 @@ export const allProducts: Product[] = [
         translationKey: 'catfish',
         category: 'freshwater',
         scientificName: 'Clarias gariepinus',
-        image: '/items/catfish.jpg',
+        image: '/images/species/catfish.webp',
         available: true,
     },
     {
@@ -96,7 +96,7 @@ export const allProducts: Product[] = [
         translationKey: 'lout',
         category: 'marine',
         scientificName: 'Argyrosomus regius',
-        image: '/items/lout.jpg',
+        image: '/images/species/meagre.webp',
         available: true,
     },
     // Added from the owner's species list (7 Nov 2026), see docs/reports/species-identification.md
@@ -106,7 +106,7 @@ export const allProducts: Product[] = [
         translationKey: 'thinlip_mullet',
         category: 'brackish',
         scientificName: 'Chelon ramada',
-        image: '/items/thinlip_mullet.jpg',
+        image: '/images/species/thinlip-mullet.webp',
         available: true,
     },
     {
@@ -115,7 +115,7 @@ export const allProducts: Product[] = [
         translationKey: 'bayad_catfish',
         category: 'freshwater',
         scientificName: 'Bagrus bajad',
-        image: '/items/bayad_catfish.jpg',
+        image: '/images/species/bayad-catfish.webp',
         available: true,
     },
     {
@@ -124,7 +124,7 @@ export const allProducts: Product[] = [
         translationKey: 'silver_carp',
         category: 'freshwater',
         scientificName: 'Hypophthalmichthys molitrix',
-        image: '/items/silver_carp.jpg',
+        image: '/images/species/silver-carp.webp',
         available: true,
     },
     {
@@ -134,7 +134,7 @@ export const allProducts: Product[] = [
         category: 'freshwater',
         // Mirror-scaled variety of common carp
         scientificName: 'Cyprinus carpio',
-        image: '/items/mirror_carp.jpg',
+        image: '/images/species/mirror-carp.webp',
         available: true,
     },
     {
@@ -143,7 +143,7 @@ export const allProducts: Product[] = [
         translationKey: 'sea_bream',
         category: 'marine',
         scientificName: 'Sparus aurata',
-        image: '/items/sea_bream.jpg',
+        image: '/images/species/sea-bream.webp',
         available: true,
     },
     // Not on the owner's 7 Nov 2026 list; kept until the owner confirms whether eel is still sold
@@ -153,7 +153,7 @@ export const allProducts: Product[] = [
         translationKey: 'eels',
         category: 'brackish',
         scientificName: 'Anguilla anguilla',
-        image: '/items/eels.jpg',
+        image: '' /* no photo in the owner's set (7 Nov 2026) */,
         available: true,
         pendingConfirmation: true,
     },
