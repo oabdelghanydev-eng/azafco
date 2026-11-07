@@ -4,19 +4,30 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
-import { Cairo } from 'next/font/google';
+import { Inter, IBM_Plex_Sans_Arabic } from 'next/font/google';
 import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
 import LocaleInitializer from '@/components/LocaleInitializer';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
 import '../globals.css';
 
-// Configure Cairo font with next/font for optimal loading (same as original)
-const cairo = Cairo({
-    subsets: ['arabic', 'latin'],
+// Site v2 typography (brief §06): Inter for Latin display + body (variable font),
+// IBM Plex Sans Arabic for Arabic. Exposed as CSS variables; globals.css picks
+// the order per language (--v2-font-body / --v2-font-display).
+const inter = Inter({
+    subsets: ['latin', 'latin-ext', 'cyrillic'],
     display: 'swap',
-    weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-    variable: '--font-cairo',
+    variable: '--font-inter',
+});
+
+const plexArabic = IBM_Plex_Sans_Arabic({
+    subsets: ['arabic'],
+    weight: ['400', '500', '600', '700'],
+    display: 'swap',
+    variable: '--font-plex-arabic',
 });
 
 // Generate static params for all locales
@@ -118,9 +129,10 @@ export default async function RootLayout({
 
     // Get direction for the locale
     const dir = localeConfig[locale as Locale]?.dir || 'ltr';
+    const skipLabel = (await getTranslations({ locale, namespace: 'v2' }))('skip_to_main');
 
     return (
-        <html lang={locale} dir={dir} data-scroll-behavior="smooth" suppressHydrationWarning>
+        <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${inter.variable} ${plexArabic.variable}`} suppressHydrationWarning>
             <head>
                 {/* Performance: DNS Prefetch */}
                 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -128,11 +140,11 @@ export default async function RootLayout({
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-                {/* Favicon - 2025 Best Practices: SVG first (scalable), PNG/ICO fallback for legacy + Google */}
-                <link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" />
-                <link rel="icon" href="/favicons/favicon.ico" sizes="48x48" />
-                <link rel="icon" type="image/png" sizes="192x192" href="/favicons/icons-192.png" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+                {/* Favicon: new identity (public/brand, from branding/group-identity). SVG first, ICO/PNG fallbacks */}
+                <link rel="icon" href="/brand/favicon-32.svg" type="image/svg+xml" />
+                <link rel="icon" href="/brand/favicon.ico" sizes="16x16 32x32" />
+                <link rel="icon" type="image/png" sizes="512x512" href="/brand/app-icon-512.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/brand/app-icon-180.png" />
                 <link rel="manifest" href="/favicons/manifest.webmanifest" />
 
                 {/* Theme & Geo Tags */}
@@ -147,11 +159,25 @@ export default async function RootLayout({
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             </head>
-            <body className={cairo.className}>
+            <body className="v2-scope font-body">
                 <NextIntlClientProvider messages={messages} defaultTranslationValues={getFigureValues()}>
                     <LocaleInitializer />
                     <StructuredData locale={locale} />
-                    {children}
+                    {/* Site v2 shell: skip link, header, main, footer, mobile RFQ bar */}
+                    <a
+                        href="#main-content"
+                        className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-control focus:bg-navy focus:px-4 focus:py-3 focus:text-white"
+                    >
+                        {skipLabel}
+                    </a>
+                    <div className="flex min-h-screen flex-col">
+                        <SiteHeader />
+                        <main id="main-content" tabIndex={-1} className="flex-grow focus:outline-none">
+                            {children}
+                        </main>
+                        <SiteFooter />
+                    </div>
+                    <MobileQuoteBar />
                 </NextIntlClientProvider>
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}

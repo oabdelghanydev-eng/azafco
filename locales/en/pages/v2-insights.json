@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "title": "Insights for Seafood Procurement",
+        "description": "Practical guides for fish importers and distributors on specifications, packing, documents and export procurement, plus verified AZAFCO news."
+    },
+    "breadcrumb": "Insights",
+    "hero": {
+        "eyebrow": "Insights",
+        "title": "Knowledge for better buying decisions",
+        "intro": "Practical resources on product specifications, packing, quality documentation and export procurement, kept clearly separate from verified company news.",
+        "primary": "Read the buyer guide",
+        "secondary": "Explore products"
+    },
+    "featured": {
+        "eyebrow": "Featured guide",
+        "read": "Read the guide"
+    },
+    "categories": {
+        "eyebrow": "What we publish",
+        "title": "Three kinds of content, clearly labelled",
+        "importer_guide": "Importer guides",
+        "importer_guide_text": "How to write a precise RFQ, read specifications and compare supplier offers.",
+        "behind_operations": "Behind the operations",
+        "behind_operations_text": "Grading and packing, the quality and export teams, and footage from the plant, published after review.",
+        "company_news": "Company news",
+        "company_news_text": "Verified company developments, events and official visits, with dates and clear references."
+    },
+    "grid": {
+        "title": "All articles",
+        "count": "{count, plural, one {# article} other {# articles}}"
+    },
+    "standards": {
+        "title": "Editorial standards",
+        "text": "We state the date and source of every fact. Industry data is never presented as AZAFCO data, and we do not publish production figures or certificates without valid evidence."
+    },
+    "cta": {
+        "eyebrow": "Need actual supply?",
+        "title": "Turn the guide into a request",
+        "intro": "Send the species, specification, volume and destination. The export team reviews every request."
+    },
+    "article": {
+        "by": "Published by",
+        "author": "AZAFCO International",
+        "published": "Published",
+        "reviewed": "Last reviewed",
+        "toc": "In this article",
+        "sources_side": "Sources",
+        "sources_side_text": "{count} official sources, listed at the end and linked in the text.",
+        "back": "All insights",
+        "inline_cta_title": "Ready to source?",
+        "inline_cta_text": "Send your species, grade, volume and destination. The export team reviews your requirement and confirms the next steps.",
+        "inline_cta_button": "Request a Quote",
+        "inline_cta_secondary": "How procurement works",
+        "related_title": "Continue with",
+        "related": [
+            {
+                "title": "For importers",
+                "text": "The four-step procurement path and what to prepare."
+            },
+            {
+                "title": "Export markets",
+                "text": "Current markets and how each destination is handled."
+            },
+            {
+                "title": "Products",
+                "text": "Species pages with what can be confirmed per product."
+            }
+        ],
+        "table_mobile_note": "Codes per species"
+    }
+}

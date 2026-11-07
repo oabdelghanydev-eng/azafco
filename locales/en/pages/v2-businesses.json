@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "title": "Our Businesses | AZAFCO International",
+        "description": "AZAFCO International's business portfolio: seafood and aquaculture at the core, alongside agriculture, livestock and other investment activities."
+    },
+    "breadcrumb": "Our Businesses",
+    "hero": {
+        "eyebrow": "Our Businesses",
+        "title": "A diversified portfolio with a clear core",
+        "intro": "Our activities span seafood, agriculture, livestock and other investments. Seafood remains the primary focus of our business and of our export offer.",
+        "primary": "Explore Seafood Business",
+        "secondary": "Corporate partnership"
+    },
+    "allocation": {
+        "eyebrow": "Business allocation",
+        "title": "How our activities fit together",
+        "intro": "One corporate brand. Seafood leads; the other activities sit alongside it.",
+        "parent_role": "Parent company and corporate brand",
+        "core_tag": "Core business",
+        "core_name": "Seafood & Aquaculture",
+        "core_text": "Fish farming, processing, packing and export for commercial buyers.",
+        "core_link": "Explore the seafood business",
+        "others_label": "Other activities"
+    },
+    "seafood": {
+        "eyebrow": "Core business",
+        "title": "Seafood & Aquaculture",
+        "p1": "Our primary business, and the most visible part of our operations and trading relationships: fish farming activities, processing, packing and export to commercial buyers.",
+        "p2": "Importers, distributors and foodservice buyers can review species, processing and quality information, then send a specification-based request.",
+        "link_products": "Product catalogue",
+        "link_processing": "Processing & Packing",
+        "link_quality": "Quality & Traceability",
+        "link_importers": "For Importers",
+        "cta_primary": "Explore Seafood Business",
+        "cta_rfq": "Request a Quote"
+    },
+    "others": {
+        "eyebrow": "Alongside seafood",
+        "title": "Other activities in the portfolio",
+        "intro": "These activities are part of AZAFCO International. To keep this page factual, we publish operating details only once they have been approved.",
+        "agri_title": "Agriculture and crop production",
+        "agri_text": "The company's portfolio includes farmland and activities in fruit and vegetable production. Crop details and seasonal capacity are published once the data is approved.",
+        "livestock_title": "Livestock",
+        "livestock_text": "Our activities include livestock farming. Its operating scope, products and figures will be presented once its profile is ready.",
+        "invest_title": "Other investments",
+        "invest_text": "We believe in building productive, diversified businesses. Projects and investments are disclosed in line with our corporate communication policy."
+    },
+    "partner": {
+        "eyebrow": "Corporate partnerships",
+        "title": "New business partnerships",
+        "intro": "To discuss sector cooperation or investment, choose “Corporate partnership” as your enquiry type. Fish supply requests go through the quote form.",
+        "primary": "Contact Corporate Partnerships",
+        "secondary": "Contact page",
+        "email_label": "Email",
+        "supply_lead": "Buying fish?",
+        "supply_link": "Request a quote"
+    },
+    "pending": {
+        "agri": "Agriculture: crops, land location/area, approved photos",
+        "livestock": "Livestock: species, scale, products, approved photos",
+        "invest": "Investments: approved project list and description",
+        "profile": "Company profile (PDF) for download"
+    }
+}

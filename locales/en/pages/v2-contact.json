@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "title": "Contact AZAFCO International: Importer Enquiries",
+        "description": "Contact AZAFCO International about fish supply or corporate partnerships. Send your specification and destination to the right team."
+    },
+    "breadcrumb": "Contact",
+    "hero": {
+        "eyebrow": "Contact",
+        "title": "Let's start with a clear supply requirement",
+        "intro": "Whether you are an importer, distributor, procurement manager or looking for a business partnership, choose your enquiry type so we can direct it to the right team."
+    },
+    "routes": {
+        "legend": "What is your enquiry about?",
+        "seafood_title": "Seafood supply quote",
+        "seafood_text": "For importers and procurement teams: product, size, packing, quantity, destination and timing.",
+        "corporate_title": "Corporate partnership or other",
+        "corporate_text": "Partnerships, investment or other topics: a short introduction to your company and the proposed cooperation."
+    },
+    "channels": {
+        "title": "Direct channels",
+        "intro": "Prefer to talk? These are the export team's published contact details.",
+        "phone": "Phone",
+        "whatsapp": "WhatsApp",
+        "whatsapp_action": "Message the export team",
+        "email": "Business email",
+        "hours": "Office hours"
+    },
+    "locations": {
+        "title": "Locations",
+        "factory": "Factory",
+        "office": "Main office",
+        "map": "Open the factory location in Google Maps"
+    },
+    "next": {
+        "title": "After you send an enquiry",
+        "steps": [
+            "The right team reviews your enquiry.",
+            "We contact you to confirm the details.",
+            "For supply requests, a formal quotation follows if we can supply."
+        ]
+    },
+    "privacy": {
+        "title": "Why we ask for this information",
+        "text": "We use your contact details and requirement only to answer your enquiry and prepare a quotation, as described in our privacy policy.",
+        "link": "Read the privacy policy"
+    },
+    "trust": {
+        "title": "Registered company",
+        "legal_name": "Legal name",
+        "register": "Commercial register"
+    },
+    "pending": {
+        "contact_details": "Re-confirm published phone, email and addresses before launch",
+        "response_sla": "Internal follow-up time (only if operations approves an SLA)"
+    },
+    "not_found": {
+        "eyebrow": "Error 404",
+        "title": "This page could not be found",
+        "intro": "The link may be old or the page may have moved. These pages will get you back on track.",
+        "links": [
+            {
+                "title": "Seafood products",
+                "text": "Species pages and specifications."
+            },
+            {
+                "title": "Request a quote",
+                "text": "Send your requirement to the export team."
+            },
+            {
+                "title": "Export markets",
+                "text": "Where we supply and how each destination is handled."
+            },
+            {
+                "title": "Contact",
+                "text": "Phone, WhatsApp, email and enquiry form."
+            }
+        ],
+        "home": "Back to home"
+    }
+}

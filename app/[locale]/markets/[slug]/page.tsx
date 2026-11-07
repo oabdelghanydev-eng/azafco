@@ -1,309 +1,145 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { FaCalendarAlt, FaCheckCircle, FaHandshake, FaShip, FaTruck, FaFileAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { ogLocaleMap, ogImageMap, locales, Locale } from '@/i18n';
-import { companyConfig } from '@/config/company.config';
-import { activeMarkets, activeMarketSlugs, getActiveMarketBySlug } from '@/data/markets';
+import { Breadcrumbs, CTABand, FeatureGrid, MarketCard, PageHero, Pending, ProcessSteps, Section, SectionHeader } from '@/components/v2';
+import { mediaImage } from '@/lib/v2/media';
+import { productHref, rfqHref, routes } from '@/lib/v2/routes';
 import { Link } from '@/navigation';
-import Layout from '@/components/Layout';
-import { products as speciesList } from '@/data/products';
+import { products } from '@/data/products';
+import { activeMarketSlugs } from '@/data/markets';
+import { activeMarketConfigs, getActiveMarketConfig, regionOf } from '@/components/v2/markets/marketData';
+import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
+import JsonLd from '@/components/v2/rfq/JsonLd';
 
-type Props = {
-    params: Promise<{ locale: string; slug: string }>;
-};
+type Props = { params: Promise<{ locale: string; slug: string }> };
+type Item = { title: string; text: string };
 
-const baseUrl = companyConfig.contact.baseUrl;
-
-// Only active markets get a page; any other slug is a 404
+// Only active markets get a page; any other slug is a 404 (same rule as before v2)
 export const dynamicParams = false;
 
 export function generateStaticParams() {
     return activeMarketSlugs.map((slug) => ({ slug }));
 }
 
-// companyConfig.products keys match data/products translationKey; map to the species page slug
-function speciesSlug(key: string) {
-    return speciesList.find((p) => p.translationKey === key)?.slug ?? '';
-}
-
-function getMarketConfig(key: string) {
-    return companyConfig.markets.find((m) => m.key === key);
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale, slug } = await params;
-    const market = getActiveMarketBySlug(slug);
+    const market = getActiveMarketConfig(slug);
     if (!market) return {};
-
-    const t = await getTranslations({ locale });
-    const country = t(`data.markets.${market.translationKey}.country`);
-    const title = t('market_detail_page.meta_title', { country });
-    const description = t('market_detail_page.meta_description', { country, since: market.since });
-    const path = `/markets/${slug}`;
-
-    const languages: Record<string, string> = {};
-    for (const l of locales) languages[l] = `${baseUrl}/${l}${path}`;
-    languages['x-default'] = `${baseUrl}${path}`;
-
-    return {
-        title,
-        description,
-        alternates: {
-            canonical: `${baseUrl}/${locale}${path}`,
-            languages,
-        },
-        openGraph: {
-            title,
-            description,
-            url: `${baseUrl}/${locale}${path}`,
-            type: 'website',
-            siteName: t('metadata.site.name'),
-            locale: ogLocaleMap[locale as Locale] || 'en_US',
-            images: [{
-                url: ogImageMap[locale as Locale],
-                width: 1200,
-                height: 630,
-                alt: title,
-            }],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title,
-            description,
-            images: [ogImageMap[locale as Locale]],
-        },
-    };
+    const tAll = await getTranslations({ locale });
+    const country = tAll(`data.markets.${market.key}.country`);
+    return pageMetadata({
+        locale,
+        path: `${routes.markets}/${slug}`,
+        title: tAll('markets_v2.detail.meta_title', { country }),
+        description: tAll('markets_v2.detail.meta_description', { country }),
+    });
 }
 
 export default async function MarketDetailPage({ params }: Props) {
     const { locale, slug } = await params;
-    const market = getActiveMarketBySlug(slug);
+    const market = getActiveMarketConfig(slug);
     if (!market) notFound();
-
     setRequestLocale(locale);
-    const t = await getTranslations({ locale });
-    const isAr = locale === 'ar';
-    const Chevron = isAr ? FaChevronLeft : FaChevronRight;
 
-    const key = market.translationKey;
-    const country = t(`data.markets.${key}.country`);
-    const config = getMarketConfig(key);
-    const volumeTons = config?.volumeTons ?? null;
-    const buyers = (t.raw(`data.markets.${key}.features`) ?? []) as string[];
-    const otherMarkets = activeMarkets.filter((m) => m.slug !== slug);
-    const products = companyConfig.products;
-
-    const localeUrl = `${baseUrl}/${locale}`;
-    const breadcrumbSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-            { '@type': 'ListItem', position: 1, name: t('schema.home'), item: localeUrl },
-            { '@type': 'ListItem', position: 2, name: t('schema.markets'), item: `${localeUrl}/markets` },
-            { '@type': 'ListItem', position: 3, name: country, item: `${localeUrl}/markets/${slug}` },
-        ],
-    };
-
-    const facts = [
-        { icon: <FaCalendarAlt />, label: t('market_detail_page.since_label'), value: market.since },
-        ...(volumeTons !== null
-            ? [{ icon: <FaShip />, label: t('market_detail_page.volume_label'), value: t('market_detail_page.volume_value', { tons: volumeTons }) }]
-            : []),
-        { icon: <FaTruck />, label: t('market_detail_page.shipping_label'), value: t('market_detail_page.shipping_value') },
-    ];
+    const t = await getTranslations({ locale, namespace: 'markets_v2' });
+    const tv = await getTranslations({ locale, namespace: 'v2' });
+    const tAll = await getTranslations({ locale });
+    const name = (key: string) => tAll(`data.markets.${key}.country`);
+    const country = name(market.key);
+    const discuss = (t.raw('detail.discuss') as Item[]).map((d) => ({
+        title: d.title,
+        description: d.text.replace('{country}', country),
+    }));
+    const steps = t.raw('process.steps') as Item[];
+    const others = activeMarketConfigs.filter((m) => m.key !== market.key);
+    const rfq = rfqHref({ country: market.countryCode, type: 'market' });
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }}
+            <JsonLd
+                data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [
+                    { name: t('breadcrumb'), path: routes.markets },
+                    { name: country, path: `${routes.markets}/${slug}` },
+                ])}
             />
-            <Layout>
-                {/* Hero */}
-                <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-14">
-                    <div className="container-custom">
-                        <nav aria-label={t('market_detail_page.breadcrumb_label')} className="text-sm text-primary-100 mb-8">
-                            <ol className="flex flex-wrap items-center gap-2">
-                                <li><Link href="/" className="hover:text-white underline-offset-4 hover:underline">{t('schema.home')}</Link></li>
-                                <li aria-hidden="true"><Chevron className="text-xs" /></li>
-                                <li><Link href="/markets" className="hover:text-white underline-offset-4 hover:underline">{t('schema.markets')}</Link></li>
-                                <li aria-hidden="true"><Chevron className="text-xs" /></li>
-                                <li aria-current="page" className="text-white font-semibold">{country}</li>
-                            </ol>
-                        </nav>
-                        <div className="flex flex-col md:flex-row md:items-center gap-6">
-                            <div className="w-24 h-16 rounded-lg overflow-hidden shadow-lg flex-shrink-0 bg-white">
-                                <img
-                                    src={market.flag}
-                                    alt={`${t('common.flag_of')} ${country}`}
-                                    className="w-full h-full object-cover"
-                                    width={96}
-                                    height={64}
-                                />
-                            </div>
-                            <div>
-                                <h1 className="text-3xl md:text-5xl font-bold mb-3">
-                                    {t('market_detail_page.h1', { country })}
-                                </h1>
-                                <p className="text-lg md:text-xl max-w-3xl text-primary-50">
-                                    {t(`data.markets.${key}.description`)}
-                                </p>
-                            </div>
-                        </div>
+
+            <PageHero
+                variant="split"
+                eyebrow={t('detail.eyebrow')}
+                title={t('detail.title', { country })}
+                intro={t('detail.intro', { country })}
+                image={mediaImage('dispatch-truck-loading-bays-wide', locale)}
+                breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.markets }, { label: country }]} />}
+                primaryAction={{ label: t('detail.primary', { country }), href: rfq }}
+                secondaryAction={{ label: t('detail.secondary'), href: routes.markets }}
+            />
+
+            <Section variant="offwhite" labelledBy="md-discuss">
+                <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+                    <div className="lg:col-span-4">
+                        <h2 className="sr-only">{t('detail.status_title')}</h2>
+                        <MarketCard name={country} status={market.status} region={t(`regions.${regionOf(market)}`)} countryCode={market.countryCode} />
+                        <Pending block label={t('pending.since')} className="mt-4" />
                     </div>
-                </section>
-
-                {/* Key facts */}
-                <section className="bg-gray-100 py-10">
-                    <div className="container-custom">
-                        <dl className={`grid grid-cols-1 gap-6 ${facts.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
-                            {facts.map((fact, index) => (
-                                <div key={index} className="bg-white rounded-xl shadow-sm p-6 flex items-center gap-4">
-                                    <div className="text-primary-600 text-3xl flex-shrink-0">{fact.icon}</div>
-                                    <div>
-                                        <dt className="text-sm text-gray-500">{fact.label}</dt>
-                                        <dd className="text-xl font-bold text-primary-800">{fact.value}</dd>
-                                    </div>
-                                </div>
-                            ))}
-                        </dl>
+                    <div className="lg:col-span-8">
+                        <SectionHeader id="md-discuss" size="md" eyebrow={t('detail.discuss_eyebrow')} title={t('detail.discuss_title', { country })} />
+                        <FeatureGrid columns={2} style="card" items={discuss} />
                     </div>
-                </section>
+                </div>
+            </Section>
 
-                {/* Who we supply */}
-                {buyers.length > 0 && (
-                    <section className="py-16">
-                        <div className="container-custom">
-                            <h2 className="text-2xl md:text-3xl font-bold text-primary-800 mb-6">
-                                {t('market_detail_page.buyers_title', { country })}
-                            </h2>
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {buyers.map((buyer, index) => (
-                                    <li key={index} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4">
-                                        <FaCheckCircle className="text-green-500 flex-shrink-0" />
-                                        <span className="text-gray-700">{buyer}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </section>
-                )}
-
-                {/* Products */}
-                <section className="py-16 bg-gray-50">
-                    <div className="container-custom">
-                        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-                            <div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-primary-800 mb-2">
-                                    {t('market_detail_page.products_title')}
-                                </h2>
-                                <p className="text-gray-600 max-w-2xl">
-                                    {t('market_detail_page.products_subtitle', { count: products.length })}
-                                </p>
-                            </div>
+            <Section variant="light" labelledBy="md-products">
+                <SectionHeader id="md-products" size="md" eyebrow={t('detail.products_eyebrow')} title={t('detail.products_title')} intro={t('detail.products_intro')} />
+                <ul className="flex flex-wrap gap-3">
+                    {products.map((p) => (
+                        <li key={p.slug}>
                             <Link
-                                href="/products"
-                                className="inline-flex items-center gap-2 text-primary-700 font-semibold hover:text-primary-900"
+                                href={productHref(p.slug)}
+                                className="inline-flex min-h-[44px] items-center rounded-full border border-line-strong px-5 text-body-sm font-medium text-navy transition-colors duration-fast hover:border-navy hover:bg-surface-offwhite motion-reduce:transition-none"
                             >
-                                {t('market_detail_page.view_products')}
-                                <Chevron className="text-xs" />
+                                {tAll(`data.products.${p.translationKey}.name`)}
                             </Link>
-                        </div>
-                        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            {products.map((product) => (
-                                <li key={product.key} className="bg-white rounded-xl shadow-sm overflow-hidden">
-                                    <Link href={`/products/${speciesSlug(product.key)}`} className="block group">
-                                        <img
-                                            src={product.image}
-                                            alt={t(`data.products.${product.key}.name`)}
-                                            className="w-full h-32 object-cover"
-                                            loading="lazy"
-                                        />
-                                        <p className="p-3 font-semibold text-gray-800 text-center group-hover:text-primary-700 group-hover:underline underline-offset-2">
-                                            {t(`data.products.${product.key}.name`)}
-                                        </p>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
+                        </li>
+                    ))}
+                </ul>
+            </Section>
 
-                {/* Logistics & documents */}
-                <section className="py-16">
-                    <div className="container-custom">
-                        <div className="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col md:flex-row gap-6 md:items-center">
-                            <FaFileAlt className="text-4xl text-primary-600 flex-shrink-0" />
-                            <div className="flex-1">
-                                <h2 className="text-2xl font-bold text-primary-800 mb-2">
-                                    {t('market_detail_page.logistics_title')}
-                                </h2>
-                                <p className="text-gray-600">
-                                    {t('market_detail_page.logistics_text', { country })}
-                                </p>
-                            </div>
-                            <Link
-                                href="/contact"
-                                className="bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors text-center"
-                            >
-                                {t('market_detail_page.contact_team')}
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+            <Section variant="navy" labelledBy="md-process">
+                <SectionHeader id="md-process" size="md" eyebrow={t('process.eyebrow')} title={t('process.title')} />
+                <ProcessSteps steps={steps.map((s) => ({ title: s.title, description: s.text }))} />
+            </Section>
 
-                {/* Other markets */}
-                {otherMarkets.length > 0 && (
-                    <section className="pb-16">
-                        <div className="container-custom">
-                            <h2 className="text-2xl font-bold text-primary-800 mb-6">
-                                {t('market_detail_page.other_markets_title')}
-                            </h2>
-                            <ul className="flex flex-wrap gap-3">
-                                {otherMarkets.map((m) => (
-                                    <li key={m.slug}>
-                                        <Link
-                                            href={`/markets/${m.slug}`}
-                                            className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 hover:border-primary-500 hover:text-primary-700 transition-colors"
-                                        >
-                                            <img src={m.flag} alt="" aria-hidden="true" className="w-6 h-4 object-cover rounded-sm" width={24} height={16} loading="lazy" />
-                                            {t(`data.markets.${m.translationKey}.country`)}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </section>
-                )}
+            {others.length > 0 ? (
+                <Section variant="light" labelledBy="md-others" spacing="sm">
+                    <h2 id="md-others" className="v2-heading font-display text-heading-lg">
+                        {t('detail.other_title')}
+                    </h2>
+                    <ul className="mt-6 flex flex-wrap gap-3">
+                        {others.map((m) => (
+                            <li key={m.key}>
+                                <Link
+                                    href={`${routes.markets}/${m.key}`}
+                                    className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-line px-4 text-body-sm font-medium text-navy hover:border-navy"
+                                >
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src={`/flags/${m.countryCode.toLowerCase()}.svg`} alt="" width={24} height={16} className="h-4 w-6 rounded-[2px] border border-line object-cover" loading="lazy" />
+                                    {name(m.key)}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="mt-8 rounded-card bg-surface-mist p-5 text-body-sm text-ink-muted">{t('disclaimer')}</p>
+                </Section>
+            ) : null}
 
-                {/* CTA */}
-                <section className="py-16 bg-primary-900 text-white">
-                    <div className="container-custom text-center">
-                        <h2 className="text-3xl font-bold mb-4">
-                            {t('market_detail_page.cta_title', { country })}
-                        </h2>
-                        <p className="text-xl mb-8 max-w-2xl mx-auto">
-                            {t('market_detail_page.cta_text')}
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
-                                href="/contact"
-                                className="bg-secondary-500 text-white px-8 py-4 rounded-full font-bold hover:bg-secondary-600 transition-colors inline-flex items-center justify-center gap-3"
-                            >
-                                <FaHandshake className="text-xl" />
-                                {t('market_detail_page.cta_button')}
-                            </Link>
-                            <Link
-                                href="/products"
-                                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary-900 transition-colors inline-flex items-center justify-center"
-                            >
-                                {t('common.browse_products')}
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-            </Layout>
+            <CTABand
+                headingId="md-cta"
+                prefill={{ country: market.countryCode, type: 'market' }}
+                eyebrow={t('cta.eyebrow')}
+                title={t('detail.cta_title', { country })}
+                intro={t('detail.cta_intro')}
+                ctaLabel={t('detail.primary', { country })}
+            />
         </>
     );
 }

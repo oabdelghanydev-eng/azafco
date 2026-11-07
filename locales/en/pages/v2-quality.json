@@ -1,0 +1,82 @@
+{
+    "meta": {
+        "title": "Quality & Traceability: Documents You Can Verify",
+        "description": "How AZAFCO supports buyer due diligence: product specifications, shipment records, certificates with issuer, scope and validity, and document requests."
+    },
+    "hero": {
+        "eyebrow": "Quality & Traceability",
+        "title": "Quality you can verify",
+        "intro": "For an importer, \"high quality\" is not enough. What matters is a clear specification and the facility and shipment documents behind it, available for review.",
+        "primary": "Request Quality Documents",
+        "secondary": "See Processing"
+    },
+    "system": {
+        "eyebrow": "Quality system",
+        "title": "Specification, inspection, release",
+        "intro": "Quality starts with the specification and is shown through records. Each stage is linked to the one before it.",
+        "spec_title": "Agreed specification",
+        "spec_text": "Species, size grade, form, packing and documents are agreed in writing before production.",
+        "receiving_title": "Documented sourcing and receiving",
+        "receiving_text": "Product is received and inspected under the plant's procedures.",
+        "process_title": "Checks during processing and packing",
+        "process_text": "Size, weight and packing are matched to the order instructions.",
+        "release_title": "Review and release",
+        "release_text": "Results are reviewed before the shipment leaves, and shipment details are documented.",
+        "legend_procedure": "Internal procedure",
+        "legend_note": "These are AZAFCO's internal operating steps. They are not a certification. Certificates are listed separately below, with their issuer, scope and validity."
+    },
+    "share": {
+        "eyebrow": "What we share",
+        "title": "What buyers can review",
+        "spec_title": "Product specification",
+        "spec_text": "The approved specification card for the product in your order.",
+        "shipment_title": "Packing and shipment data",
+        "shipment_text": "Packing details and the shipment records for your order.",
+        "docs_title": "Certificates and documents",
+        "docs_text": "Relevant certificates and documents, when they are available, valid and applicable to the product and market."
+    },
+    "certs": {
+        "eyebrow": "Certifications",
+        "title": "Certificates library",
+        "intro": "We show a certificate here only with its issuer, scope and validity, once it has been verified internally. Procurement and quality teams can request the documents that apply to their order at any time.",
+        "standards_title": "How we name standards",
+        "standards_text": "ISO 22000 (food safety management), ISO 9001 (quality management), ISO 14001 (environmental management) and ISO 45001 (occupational health and safety) are four separate ISO standards. HACCP is a food-safety system based on hazard analysis and critical control points; it is not an ISO standard.",
+        "empty_title": "Certificate documents on request",
+        "empty_text": "Tell us which certificates your market or customer requires. We will confirm what can be provided, by whom it was issued and what it covers.",
+        "request": "Request certificate copies"
+    },
+    "trace": {
+        "eyebrow": "Traceability",
+        "title": "Traceability, described accurately",
+        "text_1": "We aim to document the key traceability points, from source and batch through processing and packing to shipment.",
+        "text_2": "We describe only the traceability that our records actually support for the product and batch. Ask us which lot and batch data can be supplied with your order.",
+        "markets_title": "Market requirements",
+        "markets_text": "Regulatory requirements differ from country to country, so the requirements and approvals that apply are reviewed for each product and market before any supply commitment."
+    },
+    "visuals": {
+        "eyebrow": "On site",
+        "title": "Hygiene in the processing area",
+        "intro": "Photographs from inside the plant. They show working practice, not certification.",
+        "label": "Processing-area hygiene photos"
+    },
+    "faq": {
+        "eyebrow": "Buyer compliance",
+        "title": "Questions from procurement and quality teams",
+        "q1": "Which documents can you supply with a shipment?",
+        "a1": "That depends on the product and the destination market. Send us the list your market or customer requires, and we will confirm what can be provided and its scope before you order.",
+        "q2": "Can we see certificate copies before ordering?",
+        "a2": "Yes, you can request them. We share copies that are current and applicable, with issuer, scope and validity. We do not publish certificates that are expired or still being verified.",
+        "q3": "Is HACCP one of your ISO certifications?",
+        "a3": "No. HACCP is a food-safety system based on hazard analysis and critical control points. ISO 22000, ISO 9001, ISO 14001 and ISO 45001 are separate ISO standards. We list each one on its own, with its own status.",
+        "q4": "Can you meet our market's labelling or import requirements?",
+        "a4": "Requirements differ by country. We review the applicable requirements and approvals for each product and market before confirming supply.",
+        "q5": "What traceability data comes with an order?",
+        "a5": "We only commit to the lot and batch information our records support for that product. Ask for it in your request and we will confirm what will be supplied."
+    },
+    "cta": {
+        "eyebrow": "Document request",
+        "title": "Need the compliance file?",
+        "intro": "Your procurement or quality team can send the list of documents it needs. The AZAFCO team will confirm what can be provided and its scope.",
+        "label": "Request Compliance Documents"
+    }
+}

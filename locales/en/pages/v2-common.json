@@ -1,0 +1,109 @@
+{
+    "skip_to_main": "Skip to main content",
+    "nav": {
+        "main_label": "Main navigation",
+        "footer_label": "Footer navigation",
+        "home": "Home",
+        "seafood": "Seafood & Aquaculture",
+        "seafood_overview": "Overview",
+        "products": "Products",
+        "processing": "Processing & Packing",
+        "quality": "Quality",
+        "export": "Export Solutions",
+        "markets": "Markets",
+        "for_importers": "For Importers",
+        "company": "Our Company",
+        "about": "About",
+        "businesses": "Our Businesses",
+        "insights": "Insights",
+        "contact": "Contact",
+        "menu": "Menu",
+        "open_menu": "Open menu",
+        "close_menu": "Close menu",
+        "home_link_label": "AZAFCO International, home"
+    },
+    "language": {
+        "label": "Language",
+        "switch_to_ar": "العربية",
+        "switch_to_en": "English",
+        "more": "More languages",
+        "current": "Current language"
+    },
+    "cta": {
+        "request_quote": "Request a Quote",
+        "view_specifications": "View Specifications",
+        "request_specifications": "Request Product Specifications",
+        "contact": "Contact",
+        "talk_to_export_team": "Talk to Export Team",
+        "learn_more": "Learn more",
+        "read_more": "Read more",
+        "view_all": "View all",
+        "whatsapp": "WhatsApp",
+        "call": "Call",
+        "email": "Email",
+        "loading": "Loading…",
+        "opens_new_tab": "(opens in a new tab)"
+    },
+    "mobile_bar": {
+        "label": "Quick actions",
+        "request_quote": "Request a Quote",
+        "whatsapp": "Message the export team on WhatsApp"
+    },
+    "footer": {
+        "tagline": "From Egyptian Production to Global Partnerships.",
+        "description": "An Egyptian partner in producing, processing, packing and exporting fish, under an international group with other productive activities.",
+        "contact_heading": "Export team",
+        "factory": "Factory",
+        "office": "Main office",
+        "hours": "Office hours",
+        "legal_heading": "Legal",
+        "privacy": "Privacy Policy",
+        "legal_name": "Legal name",
+        "commercial_register": "Commercial register",
+        "rights": "All rights reserved."
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home"
+    },
+    "pending": {
+        "prefix": "Pending owner confirmation:"
+    },
+    "spec": {
+        "attribute": "Attribute",
+        "value": "Value",
+        "confirmed_with_sales": "Confirmed with sales"
+    },
+    "market": {
+        "status_active": "Active market",
+        "status_planned": "Planned",
+        "status_paused": "Paused"
+    },
+    "certificate": {
+        "issuer": "Issuer",
+        "scope": "Scope",
+        "valid_until": "Valid until",
+        "view": "View certificate"
+    },
+    "insight": {
+        "read_article": "Read article",
+        "minutes": "{count} min read"
+    },
+    "cta_band": {
+        "eyebrow": "Start a commercial conversation",
+        "title": "Tell us what you need to source",
+        "intro": "Share the species, size, packing, volume and destination. Our export team reviews every request.",
+        "after_title": "What happens after you send a request",
+        "after_1": "Your requirements are reviewed by the export team",
+        "after_2": "We contact you to confirm the details",
+        "after_3": "Quotes are subject to confirmation of availability and specification",
+        "direct_title": "Prefer to talk directly?",
+        "direct_intro": "Reach the export team by phone, WhatsApp or email."
+    },
+    "faq": {
+        "toggle_hint": "Show answer"
+    },
+    "gallery": {
+        "label": "Photo gallery"
+    }
+}

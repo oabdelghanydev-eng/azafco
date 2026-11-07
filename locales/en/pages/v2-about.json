@@ -1,0 +1,90 @@
+{
+    "meta": {
+        "title": "About AZAFCO International | Egyptian Seafood-Led Group",
+        "description": "AZAFCO International is an Egyptian company led by fish farming, processing and export, with agriculture, livestock and investment activities."
+    },
+    "breadcrumb": "About",
+    "hero": {
+        "eyebrow": "About AZAFCO International",
+        "title": "One international brand. Several production activities. One clear commercial focus.",
+        "intro": "AZAFCO International brings together a portfolio of production and investment activities, led by its core business: fish farming, processing, packing and export.",
+        "primary": "Explore Our Businesses",
+        "secondary": "Corporate partnership"
+    },
+    "story": {
+        "eyebrow": "Our story",
+        "title": "Seafood first, by design",
+        "p1": "AZAFCO began in fish. Over successive stages of development and operation, its activities grew to serve buyers at home and abroad.",
+        "p2": "Under the AZAFCO International identity, we present the company as what it is: a multi-activity Egyptian business led by deep specialisation in seafood, organised to work with international partners and importers."
+    },
+    "architecture": {
+        "eyebrow": "Business architecture",
+        "title": "How the group fits together",
+        "intro": "One parent brand. Seafood at the core, with other productive activities alongside it.",
+        "parent_role": "Parent company and corporate brand",
+        "core_tag": "Core business",
+        "core_name": "Seafood & Aquaculture",
+        "core_text": "Fish farming, processing, packing and export for commercial buyers. The focus of our supply offer and of this website.",
+        "core_link": "Explore the seafood business",
+        "others_label": "Other activities",
+        "agri_title": "Agriculture",
+        "agri_text": "Farmland and fruit and vegetable production.",
+        "livestock_title": "Livestock",
+        "livestock_text": "Livestock farming activities.",
+        "invest_title": "Investments",
+        "invest_text": "Other investments, described once approved for publication."
+    },
+    "footprint": {
+        "eyebrow": "Operating footprint",
+        "title": "Where the work happens",
+        "p1": "Our fish processing and packing plant is in the Industrial Zone of Motobas, Kafr El Sheikh, in Egypt's Nile Delta.",
+        "p2": "This is where fish is received, graded, prepared, packed and loaded for dispatch.",
+        "addresses_title": "Addresses"
+    },
+    "principles": {
+        "eyebrow": "How we work",
+        "title": "We start with specifications, not slogans",
+        "intro": "Four commitments that shape how we deal with buyers.",
+        "i1_title": "Specifications first",
+        "i1_text": "We start from what you need (species, size, packing, quantity and target market), then confirm what can be delivered.",
+        "i2_title": "Clear communication",
+        "i2_text": "You get the information you need to decide, including what is still to be confirmed.",
+        "i3_title": "Operational discipline",
+        "i3_text": "Hygiene and handling are part of daily work on the processing floor, not a line in a brochure.",
+        "i4_title": "Long-term relationships",
+        "i4_text": "We aim for repeat supply built on consistency rather than one-off deals."
+    },
+    "people": {
+        "eyebrow": "People",
+        "title": "The team behind the work",
+        "p1": "Buyers deal with real people: the teams on the processing floor, in quality and in the export office.",
+        "p2": "Your first point of contact is the export team, reachable by phone, WhatsApp or email."
+    },
+    "direction": {
+        "eyebrow": "Our direction",
+        "title": "Vision and mission",
+        "vision_title": "Vision",
+        "vision_text": "To be a trusted Egyptian partner in production and supply for regional and international markets, through business built on quality, clarity and lasting relationships.",
+        "mission_title": "Mission",
+        "mission_text": "To provide products and supply services that fit the needs of our business partners, connecting production and processing expertise in Egypt with the requirements of the markets we serve.",
+        "identity_title": "The new identity",
+        "identity_text": "The AZAFCO International identity keeps the AZAFCO name and its heritage, and presents it in a form that matches our ambition to work with international partners and importers."
+    },
+    "cta": {
+        "eyebrow": "Work with AZAFCO International",
+        "title": "Explore our businesses or start a partnership conversation",
+        "intro": "For sector cooperation and investment, use the corporate partnership enquiry. It is kept separate from fish supply requests.",
+        "primary": "Explore Our Businesses",
+        "secondary": "Corporate partnership enquiry",
+        "email_label": "Email",
+        "supply_lead": "Buying fish?",
+        "supply_link": "Request a quote"
+    },
+    "pending": {
+        "milestones": "Founding year and verified milestones (plant opening dates: Motobas / Baltim)",
+        "assets": "Other facilities and assets (farms, head office address); map only after address approval",
+        "leadership": "Leadership names, titles, portraits and statements",
+        "profile": "Company profile (PDF) for download",
+        "invest": "Investments: approved description"
+    }
+}

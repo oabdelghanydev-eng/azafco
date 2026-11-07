@@ -1,0 +1,85 @@
+{
+    "meta": {
+        "title": "Seafood & Aquaculture: Fish Supply from Egypt",
+        "description": "AZAFCO's core business: fish farming, processing, packing and export coordination for importers, distributors, foodservice and hotel buyers."
+    },
+    "hero": {
+        "eyebrow": "Seafood & Aquaculture",
+        "title": "Seafood is the core of AZAFCO",
+        "intro": "We connect fish farming and sourcing with processing, packing and export coordination, so commercial buyers get the information they need to plan purchasing and supply.",
+        "primary": "View Seafood Catalogue",
+        "secondary": "See Processing & Packing"
+    },
+    "chain": {
+        "eyebrow": "How supply works",
+        "title": "From the farm to your destination",
+        "intro": "Each order follows the same path. The specification agreed with you guides every step.",
+        "farm_title": "Farming and sourcing",
+        "farm_text": "Fish farming is a core part of AZAFCO's operations, matched to the species, quantities and timing buyers need.",
+        "select_title": "Selection",
+        "select_text": "Product is selected and graded against the size and quality agreed for the order.",
+        "process_title": "Processing",
+        "process_text": "Fish are prepared in the factory according to the agreed specification and applicable requirements.",
+        "pack_title": "Packing",
+        "pack_text": "Pack type, net weight and labels follow the specification confirmed in writing.",
+        "export_title": "Export logistics",
+        "export_text": "Shipping options and the documents each order needs are reviewed before dispatch."
+    },
+    "species": {
+        "eyebrow": "Species at a glance",
+        "title": "What we supply",
+        "intro": "Open a species for its specification card, or search the full catalogue.",
+        "view_all": "View Seafood Catalogue"
+    },
+    "farm": {
+        "eyebrow": "Farming and supply",
+        "title": "Supply that starts at the farm",
+        "text_1": "Fish farming is a core part of the AZAFCO system. Our team works to understand each buyer's commercial needs: which species, what quantities and when."
+    },
+    "processing": {
+        "eyebrow": "Processing precision",
+        "title": "Prepared to the agreed specification",
+        "text": "Export orders are handled by selecting, grading, processing and packing the product according to the specification agreed with the customer and the requirements that apply.",
+        "point_1": "Grading against the size range in your order",
+        "point_2": "Packing, net weight and labels as confirmed in writing",
+        "point_3": "Results reviewed before the shipment leaves",
+        "link": "See Processing & Packing"
+    },
+    "requirements": {
+        "eyebrow": "Buyer requirements",
+        "title": "Start with the specification",
+        "intro": "Tell us the species, size, presentation, packing, order volume and destination. The team will contact you to review what can be delivered.",
+        "format_title": "Format",
+        "format_text": "Whole or another presentation; fresh or frozen only where offered.",
+        "grade_title": "Grade",
+        "grade_text": "The size grade and quality requirements for your market.",
+        "weight_title": "Weight",
+        "weight_text": "Weight range per piece and net weight per pack.",
+        "packing_title": "Packing",
+        "packing_text": "Pack type, labels and label language.",
+        "destination_title": "Destination",
+        "destination_text": "Country, city, delivery terms and required documents."
+    },
+    "quality": {
+        "eyebrow": "Quality assurance",
+        "title": "Quality you can check, not just read about",
+        "text": "Quality starts with a clear specification and is shown through records. You can review the product specification and the facility or shipment documents that apply to your order.",
+        "link": "Review Quality & Traceability",
+        "docs": "Request quality documents"
+    },
+    "audience": {
+        "eyebrow": "Who we serve",
+        "title": "Built for commercial buyers",
+        "importers": "Seafood importers",
+        "distributors": "Wholesale and distribution companies",
+        "foodservice": "Food and catering suppliers",
+        "horeca": "Hotels and restaurant groups",
+        "partners": "Companies looking for a long-term supply partner"
+    },
+    "cta": {
+        "eyebrow": "Discuss your requirement",
+        "title": "Discuss your seafood requirements",
+        "intro": "Specify the species, weight, processing, packing, order volume and destination country. The export team will review whether it can be delivered and contact you.",
+        "label": "Request a Quote"
+    }
+}

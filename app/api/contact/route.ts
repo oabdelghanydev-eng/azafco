@@ -11,7 +11,12 @@
  * (so it is never lost) and the client gets an error code; the form then shows
  * the company email / WhatsApp as a fallback.
  *
- * Responses: { ok: true } | { ok: false, error: 'invalid', fields } (400)
+ * Two payload shapes (backward compatible):
+ *   - legacy partnership form (components/PartnershipForm.tsx): no `form` key
+ *   - site v2 RFQ (components/v2/rfq/RfqForm.tsx): `form: 'rfq'`, validated with
+ *     components/v2/rfq/schema.ts; success also returns a reference `ref`.
+ *
+ * Responses: { ok: true, ref? } | { ok: false, error: 'invalid', fields } (400)
  *   | { ok: false, error: 'too_large' } (413) | { ok: false, error: 'rate_limited' } (429)
  *   | { ok: false, error: 'not_configured' } (503) | { ok: false, error: 'send_failed' } (502)
  */
@@ -28,6 +33,8 @@ import {
     validateEnquiry,
     type PartnershipEnquiry,
 } from '@/lib/partnershipForm';
+import { RFQ_FORM_ID, makeRfqReference, normalizeRfq, validateRfq, type RfqData } from '@/components/v2/rfq/schema';
+import { RFQ_COUNTRIES } from '@/components/v2/rfq/countries';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -112,6 +119,121 @@ function buildEmail(e: PartnershipEnquiry, locale: string, ip: string) {
     return { subject, text, html };
 }
 
+// ── Site v2 RFQ (form: 'rfq') ───────────────────────────────────────────────
+
+const countryNameEn = (() => {
+    let names: Intl.DisplayNames | null = null;
+    try {
+        names = new Intl.DisplayNames(['en'], { type: 'region' });
+    } catch {
+        names = null;
+    }
+    return (code: string) => (code && code !== 'OTHER' ? names?.of(code) ?? code : code);
+})();
+
+function buildRfqEmail(d: RfqData, ref: string, locale: string, ip: string) {
+    const dest = d.destination === 'OTHER' ? `${d.destinationOther} (typed)` : countryNameEn(d.destination);
+    const country = d.country === 'OTHER' ? `${d.countryOther} (typed)` : countryNameEn(d.country);
+    const dial = RFQ_COUNTRIES.find((c) => c.code === d.phoneCountry)?.dial;
+    const phone = `${dial ? `+${dial} ` : ''}${d.phone}`;
+    const species = d.species === 'other' ? 'Other / several (see notes)' : speciesLabels([d.species]).join(', ');
+
+    const rows: [string, string][] = [
+        ['Reference', ref],
+        ['Enquiry type', d.topic],
+    ];
+    if (d.variant === 'full') {
+        rows.push(
+            ['Species', species],
+            ['Grade / size', d.grade || '—'],
+            ['Product form', d.productForm || '—'],
+            ['Packaging', d.packaging || '—'],
+            ['Volume per shipment', `${d.volume} ${d.volumeUnit}`],
+            ['Frequency', d.frequency || '—'],
+            ['Destination', dest],
+            ['Required date', d.requiredDate || '—'],
+            ['Preferred Incoterm', d.incoterm || '—'],
+            ['Documents requested', d.documents.join(', ') || '—'],
+            ['Buyer type', d.buyerType],
+        );
+    } else {
+        if (d.corporateTopic) rows.push(['Corporate topic', d.corporateTopic]);
+        if (d.documents.length) rows.push(['Documents requested', d.documents.join(', ')]);
+    }
+    rows.push(
+        ['Company', d.company],
+        ['Name', d.name],
+        ['Job title', d.jobTitle || '—'],
+        ['Email', d.email],
+        ['Phone / WhatsApp', phone],
+        ['Company country', country],
+        ['Notes', d.notes || '—'],
+        ['Site language', locale],
+        ['Sent from page', d.source || '—'],
+        ['UTM', Object.entries(d.utm).map(([k, v]) => `${k}=${v}`).join(' ') || '—'],
+    );
+
+    const heading = d.variant === 'full' ? 'New request for quotation' : d.topic === 'documents' ? 'New document request' : 'New corporate enquiry';
+    const text =
+        rows.map(([k, v]) => `${k}: ${v}`).join('\n') +
+        `\n\nSent from the website on ${new Date().toISOString()} (IP ${ip}).\nReply to this email to answer the sender directly.`;
+    const html =
+        `<h2 style="font-family:sans-serif">${escapeHtml(heading)}</h2>` +
+        `<table style="font-family:sans-serif;border-collapse:collapse" cellpadding="6">` +
+        rows
+            .map(
+                ([k, v]) =>
+                    `<tr><td style="vertical-align:top;font-weight:bold;border-bottom:1px solid #eee">${escapeHtml(k)}</td>` +
+                    `<td style="border-bottom:1px solid #eee;white-space:pre-wrap">${escapeHtml(v)}</td></tr>`,
+            )
+            .join('') +
+        `</table><p style="font-family:sans-serif;color:#666;font-size:12px">Sent from the website form (IP ${escapeHtml(ip)}). Reply to this email to answer the sender directly.</p>`;
+
+    const subject =
+        d.variant === 'full'
+            ? oneLine(`RFQ ${ref}: ${species}, ${d.volume} ${d.volumeUnit} to ${dest} (${d.company})`)
+            : oneLine(`${d.topic === 'documents' ? 'Document request' : 'Corporate enquiry'} ${ref}: ${d.company} (${country})`);
+    return { subject, text, html };
+}
+
+async function handleRfq(body: Record<string, unknown>, ip: string) {
+    const rfq = normalizeRfq(body);
+    const fields = validateRfq(rfq);
+    if (Object.keys(fields).length > 0) return json({ ok: false, error: 'invalid', fields }, 400);
+
+    const locale = typeof body.locale === 'string' && (locales as readonly string[]).includes(body.locale) ? body.locale : 'unknown';
+    const ref = makeRfqReference();
+    const { subject, text, html } = buildRfqEmail(rfq, ref, locale, ip);
+    const logPayload = JSON.stringify({ ...rfq, ref, locale });
+
+    const apiKey = process.env.RESEND_API_KEY;
+    const to = (process.env.CONTACT_TO_EMAIL || '').split(',').map(s => s.trim()).filter(Boolean);
+    const from = process.env.CONTACT_FROM_EMAIL;
+    if (!apiKey || to.length === 0 || !from) {
+        // Preview deployments without keys: keep the RFQ in the log, tell the form to offer email/WhatsApp.
+        console.error('[contact] email not configured (RESEND_API_KEY / CONTACT_TO_EMAIL / CONTACT_FROM_EMAIL); RFQ NOT emailed:', logPayload);
+        return json({ ok: false, error: 'not_configured' }, 503);
+    }
+
+    try {
+        const res = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ from, to, reply_to: rfq.email, subject, text, html }),
+            signal: AbortSignal.timeout(10_000),
+        });
+        if (!res.ok) {
+            const detail = await res.text().catch(() => '');
+            console.error(`[contact] Resend responded ${res.status}: ${detail.slice(0, 500)}; RFQ NOT emailed:`, logPayload);
+            return json({ ok: false, error: 'send_failed' }, 502);
+        }
+    } catch (err) {
+        console.error('[contact] Resend request failed:', err, '; RFQ NOT emailed:', logPayload);
+        return json({ ok: false, error: 'send_failed' }, 502);
+    }
+    return json({ ok: true, ref });
+}
+
 export async function POST(request: Request) {
     const ip = (request.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown';
 
@@ -146,6 +268,9 @@ export async function POST(request: Request) {
     }
 
     if (rateLimited(ip)) return json({ ok: false, error: 'rate_limited' }, 429);
+
+    // Site v2 RFQ / corporate / documents form
+    if (body.form === RFQ_FORM_ID) return handleRfq(body, ip);
 
     const enquiry = normalizeEnquiry(body);
     const fields = validateEnquiry(enquiry);

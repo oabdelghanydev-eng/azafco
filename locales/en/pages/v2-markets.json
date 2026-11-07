@@ -1,0 +1,163 @@
+{
+    "meta": {
+        "title": "Fish Export Markets: Gulf and Beyond",
+        "description": "Fresh fish supply for importers and distributors in the Gulf and other markets, shaped around each destination's specifications and import rules."
+    },
+    "breadcrumb": "Export Markets",
+    "hero": {
+        "eyebrow": "Export markets",
+        "title": "Export partnerships shaped around each market",
+        "intro": "We work with importers and distributors across our markets, with close attention to Gulf commercial requirements, documentation and product specifications.",
+        "primary": "Discuss your market",
+        "secondary": "Read the importer process"
+    },
+    "proposition": {
+        "eyebrow": "Market requirements",
+        "title": "Every market has different requirements",
+        "intro": "Successful supply does not start when the shipment arrives. It starts with understanding customer preferences, technical specifications, import rules and packing requirements in each destination.",
+        "points": [
+            {
+                "title": "Specifications",
+                "text": "Species, size grades and presentation agreed per buyer and per market."
+            },
+            {
+                "title": "Packing and labels",
+                "text": "Packing and labelling discussed against what your market and customers expect."
+            },
+            {
+                "title": "Documents",
+                "text": "Export documents reviewed for each destination as part of the commercial offer."
+            }
+        ]
+    },
+    "active": {
+        "eyebrow": "Current markets",
+        "title": "Where we supply today",
+        "intro": "Countries listed here are markets with current export activity. Select a country to start an enquiry with the destination already filled in.",
+        "gulf_focus": "We welcome enquiries from importers and distributors in Kuwait, the UAE, Bahrain and Qatar, subject to supply availability and destination regulations.",
+        "card_cta": "Start an enquiry for {country}",
+        "details_label": "Market notes:"
+    },
+    "other": {
+        "eyebrow": "Status",
+        "title": "Paused and planned markets",
+        "intro": "Shown separately so that current activity is never overstated. A planned market is not a market we supply today.",
+        "new_destination": "Your country is not listed? You can still send a request: we review new destinations case by case."
+    },
+    "regions": {
+        "gulf": "Gulf",
+        "levant": "Levant",
+        "middle_east": "Middle East",
+        "europe": "Europe",
+        "americas": "Americas",
+        "other": "Other"
+    },
+    "process": {
+        "eyebrow": "Export process",
+        "title": "From request to shipment documents",
+        "steps": [
+            {
+                "title": "Request",
+                "text": "You send the species, specification, volume, destination and timing."
+            },
+            {
+                "title": "Specification and compliance review",
+                "text": "We check the request against availability, plant capability and the destination's requirements."
+            },
+            {
+                "title": "Quotation",
+                "text": "Price, quantity, packing, terms and offer validity are set out in a formal quotation."
+            },
+            {
+                "title": "Coordination",
+                "text": "After agreement, both sides coordinate production timing, packing and transport."
+            },
+            {
+                "title": "Shipping documents",
+                "text": "The export documents agreed for the destination are prepared with the shipment."
+            }
+        ]
+    },
+    "transport": {
+        "eyebrow": "Transport",
+        "title": "How fish travels",
+        "intro": "Fresh fish is shipped chilled. The transport mode for each destination is confirmed in the quotation.",
+        "modes": [
+            {
+                "title": "Air freight",
+                "text": "Chilled fish packed for air cargo, for destinations served by air."
+            },
+            {
+                "title": "Road transport",
+                "text": "Refrigerated road transport where the destination is reachable by land."
+            }
+        ],
+        "note": "We do not publish fixed transit times: schedules depend on the destination, route and booking, and are confirmed per shipment."
+    },
+    "support": {
+        "eyebrow": "Buyer support",
+        "title": "Documents and responsibilities",
+        "items": [
+            {
+                "title": "Documents per destination",
+                "text": "Tell us which documents your authorities and customers require. We confirm what we can provide when we review your request."
+            },
+            {
+                "title": "Clear responsibilities",
+                "text": "Who handles export documents, import clearance and delivery is set out in the quotation and contract, not assumed."
+            },
+            {
+                "title": "Working with new distributors",
+                "text": "If you are a distributor or importer looking for a supply partner, tell us about your company, sales channels and expected buying programme."
+            }
+        ],
+        "guide_link": "Read the guide to importing fresh fish from Egypt"
+    },
+    "disclaimer": "Being ready to export does not mean a permit is automatically available for every market or species. All operations are subject to approvals, availability and contract terms.",
+    "cta": {
+        "eyebrow": "Market enquiry",
+        "title": "Discuss your destination with the export team",
+        "intro": "Share your country, products and expected volumes. We review the destination requirements with you before any commitment.",
+        "button": "Discuss your market"
+    },
+    "detail": {
+        "meta_title": "Fresh Fish Supply to {country}",
+        "meta_description": "Egyptian fresh fish for importers and distributors in {country}: species, packing, transport and documents discussed for each enquiry.",
+        "eyebrow": "Export market",
+        "title": "Fresh fish supply for buyers in {country}",
+        "intro": "{country} is one of our current export markets. Products, packing, transport and documents are discussed for each enquiry, not promised in general.",
+        "primary": "Start an enquiry for {country}",
+        "secondary": "See all markets",
+        "status_title": "Market status",
+        "discuss_eyebrow": "What we discuss",
+        "discuss_title": "What we agree with buyers in {country}",
+        "discuss": [
+            {
+                "title": "Products and grades",
+                "text": "Species and size grades for your customers, confirmed against current availability."
+            },
+            {
+                "title": "Packing and labels",
+                "text": "Packing format and label requirements for your channel."
+            },
+            {
+                "title": "Transport and cold chain",
+                "text": "Chilled shipment by the transport mode confirmed in the quotation."
+            },
+            {
+                "title": "Documents",
+                "text": "The export documents required for import into {country}, confirmed per request."
+            }
+        ],
+        "products_eyebrow": "Products",
+        "products_title": "Species we supply",
+        "products_intro": "Availability and sizes vary; each product page lists what can be confirmed.",
+        "other_title": "Other current markets",
+        "cta_title": "Talk to the export team about {country}",
+        "cta_intro": "Send the species, volume and timing. The destination is already filled in."
+    },
+    "pending": {
+        "saudi": "Saudi Arabia: potential target market, list only after sales confirms activity",
+        "since": "Year each market started (not shown until verified)"
+    }
+}

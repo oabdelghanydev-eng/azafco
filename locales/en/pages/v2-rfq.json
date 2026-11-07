@@ -1,0 +1,208 @@
+{
+    "meta": {
+        "title": "Request a Quote for Fresh Fish from Egypt",
+        "description": "Send your seafood requirement to AZAFCO's export team: species, size, packing, volume and destination. Quotes are confirmed per request."
+    },
+    "breadcrumb": "Request a Quote",
+    "hero": {
+        "eyebrow": "Request for quotation",
+        "title": "Tell us the specification. We will review supply and terms.",
+        "intro": "Two short steps: first what you need, then who you are. The more precise the requirement, the more useful our reply."
+    },
+    "short_hero": {
+        "corporate_title": "Corporate and partnership enquiries",
+        "corporate_intro": "For partnerships, investment or other business topics. No product details needed.",
+        "documents_title": "Request documents",
+        "documents_intro": "Ask for product specifications, certificates or the company profile. We confirm what can be shared for your request."
+    },
+    "aside": {
+        "title": "What happens after you submit",
+        "steps": [
+            "The export team reviews your requirement against current availability and the specification.",
+            "We contact you to confirm the details and any open points.",
+            "If we can supply, you receive a formal quotation. Price, quantity, packing and terms are confirmed in it."
+        ],
+        "no_promise": "Sending a request does not commit you or us to an order. Prices and availability are confirmed only in a written quotation.",
+        "prepare_title": "Helpful to have ready",
+        "prepare": [
+            "Species and size grade",
+            "Volume per shipment and how often",
+            "Destination country and delivery timing",
+            "Packing and labelling requirements"
+        ],
+        "direct_title": "Prefer to talk first?",
+        "direct_intro": "Reach the export team by phone, WhatsApp or email.",
+        "privacy_title": "Your data",
+        "privacy_text": "We use your details only to answer this enquiry. Please do not send confidential documents through the form."
+    },
+    "switch": {
+        "to_corporate": "Not buying seafood? <link>Send a corporate enquiry</link>",
+        "to_seafood": "Looking to buy seafood? <link>Request a quote instead</link>"
+    },
+    "form": {
+        "steps_label": "Form progress",
+        "step_of": "Step {current} of {total}",
+        "step_done": "completed",
+        "step1_short": "Requirement",
+        "step2_short": "Company details",
+        "step1_title": "Supply requirement",
+        "step2_title": "Business details",
+        "short_title_corporate": "Your corporate enquiry",
+        "short_title_documents": "Your document request",
+        "required_note": "Fields marked * are required.",
+        "required": "required",
+        "optional": "optional",
+        "select_placeholder": "Select…",
+        "species_label": "Species",
+        "species_placeholder": "Select a species",
+        "species_other": "Other or several species (add in notes)",
+        "grade_label": "Grade / size",
+        "grade_hint": "For example 300–500 g per fish, or your grading specification.",
+        "form_label": "Product form",
+        "form_options": {
+            "fresh_whole": "Whole, fresh chilled",
+            "other": "Other (describe in notes, subject to confirmation)"
+        },
+        "packaging_label": "Packaging",
+        "packaging_options": {
+            "eps_ice": "EPS box with ice",
+            "buyer_spec": "Our own packing specification",
+            "not_sure": "Not sure yet"
+        },
+        "frequency_label": "How often",
+        "frequencies": {
+            "one_off": "One shipment",
+            "weekly": "Weekly",
+            "monthly": "Monthly",
+            "not_sure": "Not sure yet"
+        },
+        "volume_label": "Estimated volume per shipment",
+        "volume_hint": "An estimate is fine.",
+        "volume_amount_label": "Quantity",
+        "unit_label": "Unit",
+        "units": {
+            "kg": "kg",
+            "tonnes": "tonnes",
+            "boxes": "boxes"
+        },
+        "destination_label": "Destination country",
+        "country_placeholder": "Select a country",
+        "other_country": "Other country (type it)",
+        "destination_other_label": "Destination country name",
+        "date_label": "Required date",
+        "date_hint": "When you need the first delivery. Leave empty if flexible.",
+        "more_details": "Add trade details (optional)",
+        "incoterm_label": "Preferred Incoterm, if known",
+        "incoterm_hint": "Your preference only. Terms are agreed in the quotation.",
+        "incoterm_not_sure": "Not sure / to discuss",
+        "documents_label": "Documents you will need",
+        "documents": {
+            "health_certificate": "Health certificate",
+            "certificate_of_origin": "Certificate of origin",
+            "specification_sheet": "Product specification sheet",
+            "certificates": "Quality certificates",
+            "company_profile": "Company profile",
+            "other": "Other (add in notes)"
+        },
+        "corporate_topic_label": "Topic",
+        "corporate_topics": {
+            "partnership": "Business partnership",
+            "investment": "Investment",
+            "supplier": "Supplying goods or services to AZAFCO",
+            "media": "Media or press",
+            "other": "Other"
+        },
+        "company_label": "Company name",
+        "name_label": "Your name",
+        "job_label": "Job title",
+        "email_label": "Work email",
+        "email_hint": "We reply to this address.",
+        "country_label": "Company country",
+        "country_other_label": "Company country name",
+        "phone_label": "Phone / WhatsApp",
+        "phone_hint": "Choose the country code, then the number without the leading zero.",
+        "phone_prefix_label": "Country code",
+        "phone_prefix_placeholder": "Country code",
+        "phone_prefix_other": "Other (include + code in the number)",
+        "phone_number_label": "Phone number",
+        "buyer_type_label": "Business type",
+        "buyer_types": {
+            "importer": "Importer",
+            "distributor": "Wholesaler / distributor",
+            "horeca": "Hotel, restaurant or catering group",
+            "foodservice": "Foodservice supplier",
+            "retail": "Retail chain",
+            "other": "Other"
+        },
+        "notes_label": "Notes",
+        "notes_label_short": "Your message",
+        "notes_hint": "Labelling, grading, certificate or delivery requirements.",
+        "notes_hint_corporate": "A short introduction to your company and the cooperation you propose.",
+        "notes_hint_documents": "Which product and market the documents are for.",
+        "privacy_note": "We use these details only to answer your enquiry.",
+        "consent_label": "I agree that AZAFCO may use these details to answer my enquiry, as described in the <link>privacy policy</link>.",
+        "opens_new_tab": "(opens in a new tab)",
+        "honeypot_label": "Leave this field empty",
+        "next": "Next: company details",
+        "back": "Back to requirement",
+        "submit": "Send request",
+        "submit_short": "Send enquiry",
+        "submitting": "Sending your request…",
+        "error_summary": "{count, plural, one {Please check # field above.} other {Please check # fields above.}}",
+        "errors": {
+            "required": "Please fill in this field.",
+            "too_long": "This is too long. Please shorten it.",
+            "invalid_email": "Enter an email address like name@company.com.",
+            "invalid_phone": "Enter a phone number with 6 to 15 digits.",
+            "invalid_option": "Choose an option from the list.",
+            "invalid_number": "Enter a number greater than 0, for example 500.",
+            "invalid_date": "Enter a valid date.",
+            "consent": "Please confirm so we can answer your enquiry."
+        },
+        "server": {
+            "title": "Your request was not sent",
+            "unavailable": "The form is not available right now. Your details are still here: try again, or send them by email or WhatsApp.",
+            "network": "We could not reach the server. Check your connection and try again. Your details are still here.",
+            "rate_limited": "Too many attempts in a short time. Please wait a few minutes, or send your request by email.",
+            "retry": "Try again",
+            "email_instead": "Send by email",
+            "whatsapp_instead": "Message on WhatsApp"
+        },
+        "topic_line": "Enquiry",
+        "topics": {
+            "product": "Product quote",
+            "market": "Market enquiry",
+            "specifications": "Specifications request",
+            "general": "Quote request",
+            "corporate": "Corporate enquiry",
+            "documents": "Document request"
+        },
+        "mail_subject": "Request for quotation (website)"
+    },
+    "thanks": {
+        "meta_title": "Request Received",
+        "meta_description": "Your enquiry to AZAFCO International was received. The export team will review it and contact you to confirm the next steps.",
+        "eyebrow": "Request received",
+        "title": "Thank you. Your enquiry was sent.",
+        "title_corporate": "Thank you. Your corporate enquiry was sent.",
+        "title_documents": "Thank you. Your document request was sent.",
+        "intro": "The team will review your request and contact you to confirm the next steps.",
+        "ref_label": "Your reference",
+        "ref_hint": "Quote this reference if you contact us about this request.",
+        "summary_title": "What you sent",
+        "summary_species": "Species",
+        "summary_volume": "Volume per shipment",
+        "summary_destination": "Destination",
+        "next_title": "What happens next",
+        "next_steps": [
+            "Your requirement is reviewed against current availability and the specification.",
+            "We contact you to confirm details and any open points.",
+            "If we can supply, you receive a formal quotation with confirmed terms."
+        ],
+        "no_promise": "This confirmation is not a quotation or an order confirmation.",
+        "continue_title": "While you wait",
+        "browse_products": "Browse products",
+        "read_guides": "Read buyer guides",
+        "back_home": "Back to home"
+    }
+}

@@ -15,6 +15,20 @@ import species from './pages/species.json';
 import marketDetail from './pages/market-detail.json';
 import faqPage from './pages/faq.json';
 import guides from './pages/guides.json';
+// TODO translate: v2 shell strings use English until translated
+import homeV2Ns from '../en/pages/v2-home.json';
+import aboutV2Ns from '../en/pages/v2-about.json';
+import businessesV2Ns from '../en/pages/v2-businesses.json';
+import seafoodV2Ns from '../en/pages/v2-seafood.json';
+import catalogueV2Ns from '../en/pages/v2-catalogue.json';
+import processingV2Ns from '../en/pages/v2-processing.json';
+import qualityV2Ns from '../en/pages/v2-quality.json';
+import marketsV2Ns from '../en/pages/v2-markets.json';
+import importersV2Ns from '../en/pages/v2-importers.json';
+import insightsV2Ns from '../en/pages/v2-insights.json';
+import contactV2Ns from '../en/pages/v2-contact.json';
+import rfqV2Ns from '../en/pages/v2-rfq.json';
+import v2Common from '../en/pages/v2-common.json';
 import productData from './data/products.json';
 import marketData from './data/markets.json';
 import newsData from './data/news.json';
@@ -47,6 +61,20 @@ const messages = {
     market_detail_page: marketDetail,
     faq_page: faqPage,
     guides_page: guides,
+    // Site v2 shell (header, footer, CTAs, component kit)
+    v2: v2Common,
+    home_v2: homeV2Ns,
+    about_v2: aboutV2Ns,
+    businesses_v2: businessesV2Ns,
+    seafood_v2: seafoodV2Ns,
+    catalogue_v2: catalogueV2Ns,
+    processing_v2: processingV2Ns,
+    quality_v2: qualityV2Ns,
+    markets_v2: marketsV2Ns,
+    importers_v2: importersV2Ns,
+    insights_v2: insightsV2Ns,
+    contact_v2: contactV2Ns,
+    rfq_v2: rfqV2Ns,
     data: {
         products: productData,
         markets: marketData,

@@ -1,331 +1,322 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { FaArrowLeft, FaBox, FaDna, FaCalendarCheck, FaHandshake, FaRulerHorizontal, FaThermometerHalf, FaWater } from 'react-icons/fa';
-import { locales, ogLocaleMap, Locale } from '@/i18n';
-import { companyConfig } from '@/config/company.config';
-import { Link } from '@/navigation';
-import Layout from '@/components/Layout';
-import { products, getProductBySlug, categoryLabelKey, Product } from '@/data/products';
+import {
+    Breadcrumbs,
+    Button,
+    CTABand,
+    FAQAccordion,
+    Pending,
+    PageHero,
+    ProductCard,
+    Section,
+    SectionHeader,
+    SpecTable,
+} from '@/components/v2';
+import { DocumentIcon } from '@/components/v2/icons';
+import {
+    baseUrl,
+    getCatalogue,
+    getRootT,
+    jsonLd,
+    pageMetadata,
+    relatedProducts,
+    toCatalogueProduct,
+} from '@/components/v2/products/catalogue';
+import { locales } from '@/i18n';
+import { getProductBySlug, products } from '@/data/products';
+import { productHref, rfqHref, routes } from '@/lib/v2/routes';
 
-type Props = {
-    params: Promise<{ locale: string; slug: string }>;
-};
+type Props = { params: Promise<{ locale: string; slug: string }> };
 
-const baseUrl = companyConfig.contact.baseUrl;
-const TITLE_MAX = 60; // full <title>, including the layout's " | AZAFCO" template
+const TITLE_MAX = 60; // full <title> incl. the layout's " | AZAFCO" template
 const DESCRIPTION_MAX = 155;
-const RELATED_COUNT = 4;
 
-// Only the slugs below are valid; anything else 404s.
+// Only slugs in data/products.ts are valid; renamed slugs are redirected in next.config.js.
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-    return locales.flatMap((locale) => products.map((product) => ({ locale, slug: product.slug })));
-}
-
-type Translator = {
-    (key: string, values?: Record<string, string | number>): string;
-    raw(key: string): unknown;
-};
-
-/** All species facts come from data/products.ts + data.products.<translationKey> translations. */
-function getSpeciesData(t: Translator, product: Product) {
-    const key = `data.products.${product.translationKey}`;
-    return {
-        name: t(`${key}.name`),
-        description: t(`${key}.description`),
-        altNames: (t.raw(`${key}.alt_names`) ?? []) as string[],
-        sizes: (t.raw(`${key}.sizes`) ?? []) as string[],
-        storageTemp: t(`${key}.storage_temp`),
-        packaging: t(`${key}.packaging`),
-        availability: t(`${key}.availability`),
-        categoryLabel: t(categoryLabelKey(product.category)),
-        imageAlt: ((t.raw('products_page.alt_template') ?? '{product}') as string).replace('{product}', t(`${key}.name`)),
-    };
-}
-
-const pagePath = (slug: string) => `/products/${slug}`;
-
-function fitTitle(t: Translator, name: string): string {
-    const template = (t.raw('metadata.site.title_template') ?? '%s') as string;
-    const fits = (title: string) => template.replace('%s', title).length <= TITLE_MAX;
-    const long = t('species_page.meta_title', { name });
-    if (fits(long)) return long;
-    const short = t('species_page.meta_title_short', { name });
-    return fits(short) ? short : name;
-}
-
-function fitDescription(t: Translator, species: ReturnType<typeof getSpeciesData>): string {
-    const separator = (t.raw('species_page.list_separator') ?? ', ') as string;
-    const values = {
-        sizes: species.sizes.join(separator),
-        packaging: species.packaging,
-        temp: species.storageTemp,
-        availability: species.availability,
-    };
-    // Longest variant that fits: description + sizes/packing, + packing only, description alone
-    const candidates = [
-        `${species.description} ${t('species_page.meta_description_suffix', values)}`,
-        `${species.description} ${t('species_page.meta_description_suffix_short', values)}`,
-        species.description,
-    ];
-    const fitting = candidates.find((c) => c.length <= DESCRIPTION_MAX);
-    if (fitting) return fitting;
-    const cut = species.description.slice(0, DESCRIPTION_MAX - 1);
-    return `${cut.slice(0, cut.lastIndexOf(' '))}…`;
+    return locales.flatMap((locale) => products.map((p) => ({ locale, slug: p.slug })));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale, slug } = await params;
     const product = getProductBySlug(slug);
     if (!product) return {};
+    const root = await getRootT(locale);
+    const t = await getTranslations({ locale, namespace: 'catalogue_v2.detail' });
+    const p = toCatalogueProduct(root, locale, product);
 
-    const t = await getTranslations({ locale });
-    const species = getSpeciesData(t, product);
-    const title = fitTitle(t, species.name);
-    const description = fitDescription(t, species);
-    const path = pagePath(slug);
+    const template = (root.raw('metadata.site.title_template') ?? '%s') as string;
+    const fits = (s: string) => template.replace('%s', s).length <= TITLE_MAX;
+    const long = t('meta_title', { name: p.name });
+    const short = t('meta_title_short', { name: p.name });
+    const title = fits(long) ? long : fits(short) ? short : p.name;
 
-    return {
+    const descLong = t('meta_description', { name: p.name });
+    const description = descLong.length <= DESCRIPTION_MAX ? descLong : t('meta_description_short', { name: p.name });
+
+    return pageMetadata({
+        locale,
+        path: productHref(slug),
         title,
         description,
-        alternates: {
-            canonical: `${baseUrl}/${locale}${path}`,
-            languages: {
-                'ar': `${baseUrl}/ar${path}`,
-                'en': `${baseUrl}/en${path}`,
-                'es': `${baseUrl}/es${path}`,
-                'ru': `${baseUrl}/ru${path}`,
-                'de': `${baseUrl}/de${path}`,
-                'fr': `${baseUrl}/fr${path}`,
-                'x-default': `${baseUrl}${path}`,
-            },
-        },
-        openGraph: {
-            title,
-            description,
-            url: `${baseUrl}/${locale}${path}`,
-            type: 'website',
-            siteName: t('metadata.site.name'),
-            locale: ogLocaleMap[locale as Locale] || 'en_US',
-            images: [{ url: product.image, alt: species.imageAlt }],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title,
-            description,
-            images: [product.image],
-        },
-    };
+        siteName: root('metadata.site.name'),
+        image: { url: p.image.src, alt: p.image.alt },
+    });
 }
 
-function JsonLd({ schemas }: { schemas: object[] }) {
-    return (
-        <>
-            {schemas.map((schema, index) => (
-                <script
-                    key={index}
-                    type="application/ld+json"
-                    // Escape "<" so translated text can never close the script tag
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
-                />
-            ))}
-        </>
-    );
-}
-
-export default async function SpeciesPage({ params }: Props) {
+export default async function ProductDetailPage({ params }: Props) {
     const { locale, slug } = await params;
     const product = getProductBySlug(slug);
     if (!product) notFound();
-
     setRequestLocale(locale);
-    const t = await getTranslations({ locale });
-    const species = getSpeciesData(t, product);
+
+    const t = await getTranslations({ locale, namespace: 'catalogue_v2' });
+    const tv = await getTranslations({ locale, namespace: 'v2' });
+    const catalogue = await getCatalogue(locale);
+    const p = catalogue.find((c) => c.slug === slug)!;
+    const related = relatedProducts(catalogue, slug, 3);
+    const name = p.name;
+    const water = t(`water.${p.category}`);
+    const note = t.has(`detail.notes.${slug}`) ? t(`detail.notes.${slug}`) : null;
+
     const localeUrl = `${baseUrl}/${locale}`;
-    const pageUrl = `${localeUrl}${pagePath(slug)}`;
-    const imageUrl = `${baseUrl}${product.image}`;
+    const pageUrl = `${localeUrl}${productHref(slug)}`;
 
-    // Related: same category first, then the rest, in catalogue order
-    const others = products.filter((p) => p.slug !== product.slug);
-    const related = [
-        ...others.filter((p) => p.category === product.category),
-        ...others.filter((p) => p.category !== product.category),
-    ].slice(0, RELATED_COUNT);
-
-    // No offers / price / aggregateRating: AZAFCO publishes none.
+    // No offers / price / rating / availability: AZAFCO publishes none.
     const productSchema = {
         '@context': 'https://schema.org',
         '@type': 'Product',
         '@id': `${pageUrl}#product`,
-        name: species.name,
-        description: species.description,
-        image: imageUrl,
+        name,
+        description: t('detail.meta_description', { name }),
+        image: `${baseUrl}${p.image.src}`,
         url: pageUrl,
-        category: t('schema.freshFishCategory'),
-        ...(species.altNames.length > 0 && { alternateName: species.altNames }),
-        // schema.org Product has no scientific-name property; PropertyValue is the standard extension point
+        category: t('schema.category'),
+        ...(p.altNames.length > 0 && { alternateName: p.altNames }),
+        countryOfOrigin: { '@type': 'Country', name: 'Egypt' },
         additionalProperty: [
-            { '@type': 'PropertyValue', name: t('species_page.scientific_name'), value: product.scientificName },
-            { '@type': 'PropertyValue', name: t('species_page.category'), value: species.categoryLabel },
+            ...(p.scientificName ? [{ '@type': 'PropertyValue', name: t('detail.scientific_name'), value: p.scientificName }] : []),
+            { '@type': 'PropertyValue', name: t('detail.water_type'), value: water },
         ],
-        brand: { '@type': 'Brand', name: t('schema.alternateName') },
+        brand: { '@type': 'Brand', name: 'AZAFCO International' },
         manufacturer: { '@id': `${baseUrl}/#organization` },
     };
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: t('schema.home'), item: localeUrl },
-            { '@type': 'ListItem', position: 2, name: t('schema.products'), item: `${localeUrl}/products` },
-            { '@type': 'ListItem', position: 3, name: species.name, item: pageUrl },
+            { '@type': 'ListItem', position: 1, name: tv('breadcrumbs.home'), item: localeUrl },
+            { '@type': 'ListItem', position: 2, name: tv('nav.seafood'), item: `${localeUrl}${routes.seafood}` },
+            { '@type': 'ListItem', position: 3, name: tv('nav.products'), item: `${localeUrl}${routes.products}` },
+            { '@type': 'ListItem', position: 4, name, item: pageUrl },
         ],
     };
 
-    const specs = [
-        { icon: <FaDna />, label: t('species_page.scientific_name'), value: <i lang="la">{product.scientificName}</i> },
-        { icon: <FaWater />, label: t('species_page.category'), value: species.categoryLabel },
-        { icon: <FaThermometerHalf />, label: t('species_page.storage_temp'), value: species.storageTemp },
-        { icon: <FaBox />, label: t('species_page.packaging'), value: species.packaging },
-        { icon: <FaCalendarCheck />, label: t('species_page.availability'), value: species.availability },
+    const sizes = p.sizes.length ? (
+        <ul className="flex flex-wrap gap-2">
+            {p.sizes.map((s) => (
+                <li key={s} className="rounded-control bg-surface-mist px-2.5 py-1 text-body-sm" dir="auto">
+                    {s}
+                </li>
+            ))}
+        </ul>
+    ) : null;
+
+    const faq = [
+        { id: 'sizes', question: t('detail.faq_sizes_q'), answer: t('detail.faq_sizes_a') },
+        { id: 'packing', question: t('detail.faq_packing_q'), answer: t('detail.faq_packing_a') },
+        { id: 'price', question: t('detail.faq_price_q'), answer: t('detail.faq_price_a') },
     ];
-    const orderingNotes = [t('data.products._note.custom_sizes'), t('data.products._note.min_order')];
 
     return (
         <>
-            <JsonLd schemas={[productSchema, breadcrumbSchema]} />
-            <Layout>
-                {/* Hero */}
-                <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-12 md:py-16">
-                    <div className="container-custom">
-                        <nav aria-label={t('species_page.breadcrumb_label')} className="mb-4 text-sm text-white/80">
-                            <ol className="flex flex-wrap items-center gap-2">
-                                <li><Link href="/" className="hover:text-white underline-offset-2 hover:underline">{t('schema.home')}</Link></li>
-                                <li aria-hidden="true">/</li>
-                                <li><Link href="/products" className="hover:text-white underline-offset-2 hover:underline">{t('schema.products')}</Link></li>
-                                <li aria-hidden="true">/</li>
-                                <li aria-current="page" className="text-white">{species.name}</li>
-                            </ol>
-                        </nav>
-                        <h1 className="text-3xl md:text-5xl font-bold mb-3">{species.name}</h1>
-                        <p className="text-white/90 text-lg mb-2"><i lang="la">{product.scientificName}</i></p>
-                        {species.altNames.length > 0 && (
-                            <p className="text-white/80">
-                                <span className="font-semibold">{t('species_page.also_known_as')}:</span>{' '}
-                                {species.altNames.join(' • ')}
-                            </p>
-                        )}
-                    </div>
-                </section>
+            {[productSchema, breadcrumbSchema].map((s, i) => (
+                <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(s) }} />
+            ))}
 
-                {/* Image + specs */}
-                <section className="py-12 md:py-16 bg-gray-50">
-                    <div className="container-custom grid gap-8 lg:gap-12 md:grid-cols-2 items-start">
-                        <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-xl shadow-lg bg-gray-200">
-                            <Image
-                                src={product.image}
-                                alt={species.imageAlt}
-                                fill
-                                priority
-                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 448px"
-                                quality={80}
-                                className="object-cover"
+            <PageHero
+                variant="split"
+                eyebrow={t('detail.eyebrow')}
+                title={name}
+                intro={
+                    <>
+                        {p.scientificName ? (
+                            <p className="mb-4 text-heading-sm italic text-ink-muted" lang="la" dir="ltr">
+                                {p.scientificName}
+                            </p>
+                        ) : null}
+                        <p>{t('detail.intro')}</p>
+                        {p.altNames.length > 0 ? (
+                            <p className="mt-4 text-body-sm">
+                                <span className="font-semibold text-ink">{t('detail.also_known_as')}: </span>
+                                {p.altNames.join(' · ')}
+                            </p>
+                        ) : null}
+                    </>
+                }
+                image={p.image}
+                breadcrumbs={
+                    <Breadcrumbs
+                        items={[
+                            { label: tv('nav.seafood'), href: routes.seafood },
+                            { label: tv('nav.products'), href: routes.products },
+                            { label: name },
+                        ]}
+                    />
+                }
+                primaryAction={{ label: t('detail.primary', { name }), href: rfqHref({ product: slug, type: 'product' }) }}
+                secondaryAction={{ label: t('detail.secondary'), href: '#specifications', external: true }}
+            />
+
+            {/* Spec card + grading */}
+            <Section variant="offwhite" spacing="md" labelledBy="specifications-title" id="specifications" className="scroll-mt-24">
+                <div className="grid gap-10 lg:grid-cols-12">
+                    <div className="lg:col-span-7">
+                        <SectionHeader id="specifications-title" eyebrow={t('detail.spec_eyebrow')} title={t('detail.spec_title')} intro={t('detail.spec_intro')} size="md" />
+                        <SpecTable
+                            caption={t('detail.spec_caption', { name })}
+                            rows={[
+                                { label: t('detail.trade_name'), value: name },
+                                {
+                                    label: t('detail.scientific_name'),
+                                    value: p.scientificName ? (
+                                        <i lang="la" dir="ltr">
+                                            {p.scientificName}
+                                        </i>
+                                    ) : null,
+                                },
+                                { label: t('detail.origin'), value: t('detail.origin_value') },
+                                { label: t('detail.water_type'), value: water },
+                                { label: t('detail.form'), value: null },
+                                { label: t('detail.sizes'), value: sizes },
+                                { label: t('detail.packaging'), value: p.packaging ?? null },
+                                { label: t('detail.handling'), value: null },
+                            ]}
+                        />
+                        <p className="mt-4 max-w-prose-v2 text-body-sm text-ink-muted">{t('detail.spec_note')}</p>
+                        {!p.scientificName ? (
+                            <div className="mt-4">
+                                <Pending label={`${slug}: species identification (scientific name)`} />
+                            </div>
+                        ) : null}
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            <Pending label={`${name}: approved product forms, official size-grade table, storage/transport temperature`} />
+                            <Pending label={`${name}: spec sheet PDF (download)`} />
+                        </div>
+                        {note ? (
+                            <p role="note" className="mt-6 rounded-card border-s-4 border-gold bg-white p-5 text-body-sm text-ink">
+                                {note}
+                            </p>
+                        ) : null}
+                    </div>
+
+                    <div className="space-y-8 lg:col-span-5">
+                        <div className="rounded-card border border-line bg-white p-6">
+                            <h3 className="text-heading-md text-navy">{t('detail.grading_title')}</h3>
+                            <p className="mt-3 text-body-sm text-ink-muted">{t('detail.grading_text')}</p>
+                        </div>
+                        <div>
+                            <h3 className="mb-4 text-heading-md text-navy">{t('detail.commercial_title')}</h3>
+                            <SpecTable
+                                hideCaption
+                                caption={t('detail.commercial_caption', { name })}
+                                rows={[
+                                    { label: t('detail.moq'), value: null },
+                                    { label: t('detail.lead_time'), value: null },
+                                    { label: t('detail.incoterms'), value: null },
+                                    { label: t('detail.price'), value: t('detail.price_value') },
+                                ]}
                             />
                         </div>
+                    </div>
+                </div>
+            </Section>
 
-                        <div>
-                            <p className="text-lg text-gray-700 mb-8">{species.description}</p>
-
-                            <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('species_page.specs_title')}</h2>
-                            <dl className="grid gap-4 sm:grid-cols-2 mb-6">
-                                {specs.map((spec) => (
-                                    <div key={spec.label} className="bg-white rounded-lg shadow p-4">
-                                        <dt className="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                            <span className="text-primary-500">{spec.icon}</span>
-                                            {spec.label}
-                                        </dt>
-                                        <dd className="mt-1 font-semibold text-gray-800">{spec.value}</dd>
-                                    </div>
-                                ))}
-                                <div className="bg-white rounded-lg shadow p-4 sm:col-span-2">
-                                    <dt className="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                        <span className="text-primary-500"><FaRulerHorizontal /></span>
-                                        {t('species_page.available_sizes')}
-                                    </dt>
-                                    <dd className="mt-2">
-                                        <ul className="flex flex-wrap gap-2">
-                                            {species.sizes.map((size) => (
-                                                <li key={size} className="text-sm bg-gray-100 text-gray-800 px-3 py-1 rounded">{size}</li>
-                                            ))}
-                                        </ul>
-                                    </dd>
-                                </div>
-                            </dl>
-
-                            <h2 className="text-xl font-bold text-primary-800 mb-2">{t('species_page.ordering_title')}</h2>
-                            <ul className="list-disc ps-5 text-gray-700 space-y-1 mb-8">
-                                {orderingNotes.map((note) => <li key={note}>{note}</li>)}
-                            </ul>
-
-                            <div className="flex flex-wrap items-center gap-4">
-                                <Link href="/contact" className="btn-secondary inline-flex items-center gap-2">
-                                    <FaHandshake />
-                                    {t('species_page.cta_button')}
-                                </Link>
-                                <Link href="/products" className="inline-flex items-center gap-2 text-primary-700 font-semibold hover:underline">
-                                    <FaArrowLeft className="rtl:rotate-180" aria-hidden="true" />
-                                    {t('species_page.back_to_products')}
-                                </Link>
-                            </div>
+            {/* Packing & logistics + quality documents */}
+            <Section variant="light" spacing="md" labelledBy="packing-docs">
+                <h2 id="packing-docs" className="sr-only">
+                    {`${t('detail.packing_title')} · ${t('detail.docs_title')}`}
+                </h2>
+                <div className="grid gap-6 md:grid-cols-2">
+                    <article className="flex flex-col rounded-card border border-line p-6 md:p-8">
+                        <h3 className="v2-heading font-display text-heading-xl">{t('detail.packing_title')}</h3>
+                        <p className="mt-4 text-body text-fg-muted">{t('detail.packing_text')}</p>
+                        <div className="mt-4">
+                            <Pending block label="Photos of actual boxes, labels and palletisation for this product" />
                         </div>
-                    </div>
-                </section>
+                        <div className="mt-auto pt-6">
+                            <Button href={routes.processing} variant="text">
+                                {t('detail.packing_link')}
+                            </Button>
+                        </div>
+                    </article>
+                    <article className="flex flex-col rounded-card border border-line p-6 md:p-8">
+                        <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-control bg-navy-50 text-navy">
+                            <DocumentIcon size={22} />
+                        </span>
+                        <h3 className="v2-heading font-display text-heading-xl">{t('detail.docs_title')}</h3>
+                        <p className="mt-4 text-body text-fg-muted">{t('detail.docs_text')}</p>
+                        <div className="mt-auto flex flex-wrap items-center gap-4 pt-6">
+                            <Button href={rfqHref({ product: slug, type: 'specifications' })} variant="secondary">
+                                {t('detail.docs_cta')}
+                            </Button>
+                            <Button href={routes.quality} variant="text">
+                                {t('detail.docs_link')}
+                            </Button>
+                        </div>
+                    </article>
+                </div>
+            </Section>
 
-                {/* Related species */}
-                <section className="py-12 md:py-16 bg-white">
-                    <div className="container-custom">
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary-800 mb-8 text-center">{t('species_page.related_title')}</h2>
-                        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                            {related.map((item) => {
-                                const name = t(`data.products.${item.translationKey}.name`);
-                                return (
-                                    <li key={item.slug}>
-                                        <Link href={pagePath(item.slug)} className="card group block">
-                                            <div className="relative aspect-[4/3] bg-gray-200 overflow-hidden">
-                                                <Image
-                                                    src={item.image}
-                                                    alt={((t.raw('products_page.alt_template') ?? '{product}') as string).replace('{product}', name)}
-                                                    fill
-                                                    sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 300px"
-                                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                                />
-                                            </div>
-                                            <h3 className="p-3 md:p-4 font-bold text-primary-800">{name}</h3>
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </section>
+            {/* Related products */}
+            {related.length > 0 ? (
+                <Section variant="offwhite" spacing="md" labelledBy="related-products">
+                    <SectionHeader
+                        id="related-products"
+                        eyebrow={t('detail.related_eyebrow')}
+                        title={t('detail.related_title')}
+                        size="md"
+                        action={
+                            <Button href={routes.products} variant="text">
+                                {tv('cta.view_all')}
+                            </Button>
+                        }
+                    />
+                    <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        {related.map((r) => (
+                            <li key={r.slug}>
+                                <ProductCard
+                                    name={r.name}
+                                    scientificName={r.scientificName}
+                                    href={r.href}
+                                    image={r.image}
+                                    tag={t(`water.${r.category}`)}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            ) : null}
 
-                {/* CTA */}
-                <section className="py-12 md:py-16 bg-primary-900 text-white">
-                    <div className="container-custom text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">{t('species_page.cta_title')}</h2>
-                        <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">{t('species_page.cta_text')}</p>
-                        <Link
-                            href="/contact"
-                            className="bg-secondary-500 text-white px-8 py-4 rounded-full font-bold hover:bg-secondary-600 transition-all duration-300 shadow-xl inline-flex items-center gap-3"
-                        >
-                            <FaHandshake className="text-xl" />
-                            {t('species_page.cta_button')}
-                        </Link>
-                    </div>
-                </section>
-            </Layout>
+            <Section variant="light" spacing="md" labelledBy="product-faq">
+                <div className="mx-auto max-w-3xl">
+                    <SectionHeader id="product-faq" title={t('detail.faq_title', { name })} size="md" />
+                    <FAQAccordion items={faq} exclusiveName={`faq-${slug}`} />
+                </div>
+            </Section>
+
+            {/* Inline RFQ teaser: product preselected */}
+            <CTABand
+                headingId="product-rfq"
+                eyebrow={t('detail.rfq_eyebrow')}
+                title={t('detail.rfq_title', { name })}
+                intro={t('detail.rfq_intro', { name })}
+                ctaLabel={t('detail.rfq_cta', { name })}
+                prefill={{ product: slug, type: 'product' }}
+                reassurance={[t('detail.rfq_after_1'), t('detail.rfq_after_2'), t('detail.rfq_after_3')]}
+            />
         </>
     );
 }

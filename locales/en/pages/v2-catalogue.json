@@ -1,0 +1,144 @@
+{
+    "meta": {
+        "title": "Seafood Catalogue: Egyptian Fish for Export",
+        "description": "Fish species AZAFCO supplies for wholesale and export. Sizes, product form and packing are confirmed in writing for each order. Request specifications."
+    },
+    "hero": {
+        "eyebrow": "Seafood catalogue",
+        "title": "Find the species. Confirm the specification.",
+        "intro": "Choose the species your business needs, then send us your size, form, packing and destination. Sizes, presentation and availability vary with production cycles, demand and market, so every specification is confirmed per order.",
+        "secondary": "How processing works"
+    },
+    "grid": {
+        "eyebrow": "Species",
+        "title": "Species we supply",
+        "intro": "Search by trade name, local market name or scientific name, in English or Arabic."
+    },
+    "water": {
+        "freshwater": "Freshwater",
+        "marine": "Marine",
+        "brackish": "Brackish water"
+    },
+    "card": {
+        "image_alt": "{name}, product photo",
+        "origin": "Origin",
+        "origin_value": "Egypt"
+    },
+    "browser": {
+        "search_label": "Search species",
+        "search_placeholder": "e.g. tilapia, sea bass, بوري",
+        "search_hint": "Results update as you type.",
+        "clear_search": "Clear search",
+        "water_type": "Water type",
+        "all": "All species",
+        "result_count": "{count, plural, =0 {No species} =1 {1 species} other {# species}} of {total}",
+        "reset": "Clear filters",
+        "empty_title": "No species match your search",
+        "empty_text": "We could not find \"{query}\" in the catalogue. Check the spelling, clear the filters, or send us the species and specification you need.",
+        "empty_cta": "Ask about another species"
+    },
+    "note": {
+        "title": "Specifications are confirmed per order",
+        "text": "Size grades, product form, packing, net weight and availability are agreed in writing for each order. Prices are given in a quotation based on species, specification, volume, destination and trade terms. We do not publish list prices or stock levels."
+    },
+    "specify": {
+        "eyebrow": "Before you request",
+        "title": "What helps us quote accurately",
+        "intro": "The more precise the request, the faster the export team can confirm what can be supplied.",
+        "species_title": "Species and size grade",
+        "species_text": "The species and the weight range per piece you need.",
+        "form_title": "Product form",
+        "form_text": "Whole or another presentation, and fresh or frozen where offered.",
+        "packing_title": "Packing and net weight",
+        "packing_text": "Pack type, net weight per pack and any label requirements.",
+        "volume_title": "Volume and frequency",
+        "volume_text": "Quantity per shipment and whether the order repeats.",
+        "destination_title": "Destination and documents",
+        "destination_text": "Country and city of delivery, and the documents your market requires.",
+        "timing_title": "Timing",
+        "timing_text": "Your preferred delivery window."
+    },
+    "custom": {
+        "eyebrow": "Custom requirement",
+        "title": "Can't find your grade or size?",
+        "intro": "Send us the specification you need. We review different sizes or packing against our actual capability and the quantities available, and we only offer an option once it is confirmed.",
+        "cta": "Request a Custom Grade"
+    },
+    "proof": {
+        "eyebrow": "Behind the catalogue",
+        "title": "Check the process before you order",
+        "processing_title": "Processing & Packing",
+        "processing_text": "How orders move from receiving and grading to packing and dispatch.",
+        "processing_link": "See processing",
+        "quality_title": "Quality & Traceability",
+        "quality_text": "Which specifications, records and documents you can review.",
+        "quality_link": "Review quality",
+        "importers_title": "For Importers",
+        "importers_text": "How an enquiry becomes a confirmed order.",
+        "importers_link": "Read the importer process"
+    },
+    "detail": {
+        "meta_title": "{name} from Egypt: Wholesale Supply",
+        "meta_title_short": "{name} from Egypt",
+        "meta_description": "Request {name} for wholesale export from Egypt. Size grade, product form, packing, volume and destination are confirmed in writing per order.",
+        "meta_description_short": "Request {name} from Egypt for wholesale export. Size, form and packing are confirmed in writing for each order.",
+        "eyebrow": "Wholesale supply from Egypt",
+        "intro": "Tell us the size grade, product form, packing, volume and destination. Our export team reviews the request and confirms a written specification and quotation for your market.",
+        "also_known_as": "Also known as",
+        "primary": "Request a Quote for {name}",
+        "secondary": "View specifications",
+        "spec_eyebrow": "Specification",
+        "spec_title": "Specification card",
+        "spec_intro": "Fields without an approved value are confirmed with the export team for each order.",
+        "spec_caption": "{name}: specification",
+        "trade_name": "Trade name",
+        "scientific_name": "Scientific name",
+        "origin": "Origin",
+        "origin_value": "Egypt",
+        "water_type": "Water type",
+        "form": "Product form",
+        "sizes": "Size grades (indicative)",
+        "packaging": "Pack type (indicative)",
+        "handling": "Storage and transport temperature",
+        "spec_note": "Size grades and pack type are indicative and come from our current product list. The grade, form, packing and temperature requirements for your order are confirmed in writing in the quotation.",
+        "grading_title": "Grades and options",
+        "grading_text": "Grades are set by weight range per piece. Tell us your target range, product form and packing, and we confirm which options can be supplied for your order. We do not show stock or availability labels on the website.",
+        "commercial_title": "Commercial terms",
+        "commercial_caption": "{name}: commercial terms",
+        "moq": "Minimum order quantity",
+        "lead_time": "Lead time",
+        "incoterms": "Incoterms",
+        "price": "Price",
+        "price_value": "Given in a quotation for your specification, volume and destination",
+        "packing_title": "Packing and logistics",
+        "packing_text": "Pack type, net weight, labels, language and the requirements of the destination country are agreed as part of your quotation. Transport method and delivery terms are confirmed for each shipment.",
+        "packing_link": "See how we pack",
+        "docs_title": "Quality documents",
+        "docs_text": "Tell us which documents your market and your quality team need. We confirm what can be provided for this product and its scope before you order.",
+        "docs_cta": "Request documents",
+        "docs_link": "Quality & Traceability",
+        "related_eyebrow": "Alternatives",
+        "related_title": "Related species",
+        "faq_title": "Questions about ordering {name}",
+        "faq_sizes_q": "Are several sizes available?",
+        "faq_sizes_a": "That depends on actual availability and your order. Send us your target weight range and we confirm what can be supplied.",
+        "faq_packing_q": "Can packing be customised?",
+        "faq_packing_a": "Custom pack sizes, net weights and labels are reviewed against the specification and the quantity you need.",
+        "faq_price_q": "Do you publish fixed prices?",
+        "faq_price_a": "No. Prices are issued in a commercial quotation with a stated validity, based on specification, volume, destination and trade terms.",
+        "rfq_eyebrow": "Request a quote",
+        "rfq_title": "Request a quote for {name}",
+        "rfq_intro": "The form opens with {name} already selected. Add your destination, target quantity, product form and timing.",
+        "rfq_cta": "Request a Quote for {name}",
+        "rfq_after_1": "We review your specification and quantity",
+        "rfq_after_2": "The export team contacts you to confirm the details",
+        "rfq_after_3": "You receive a written quotation, subject to confirmed availability",
+        "notes": {
+            "eel": "European eel (Anguilla anguilla) is listed in CITES Appendix II and cannot be supplied to buyers in the European Union. Availability for other destinations, and the export permits required, are confirmed with the export team."
+        }
+    },
+    "schema": {
+        "list_name": "AZAFCO seafood catalogue",
+        "category": "Fresh fish"
+    }
+}

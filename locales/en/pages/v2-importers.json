@@ -1,0 +1,170 @@
+{
+    "meta": {
+        "title": "Fish Supply for Importers and Distributors",
+        "description": "How to source fresh fish from AZAFCO: send your specification, we review supply, then quote packing, shipping and documents. Start an RFQ."
+    },
+    "breadcrumb": "For Importers",
+    "hero": {
+        "eyebrow": "For importers and distributors",
+        "title": "A clear procurement path from enquiry to quotation",
+        "intro": "Tell us the specification. We evaluate supply, packing and commercial terms, then reply with the next steps.",
+        "primary": "Start an RFQ",
+        "secondary": "Talk to the export team"
+    },
+    "serve": {
+        "eyebrow": "Who we work with",
+        "title": "Built for professional buyers",
+        "intro": "We supply businesses, not consumers. Each buyer type has its own questions, so we answer them in the quotation.",
+        "items": [
+            {
+                "title": "Seafood importers",
+                "text": "Species, sizes, packing and volumes matched to your market."
+            },
+            {
+                "title": "Wholesalers and distributors",
+                "text": "Clear grading, weights, packing and delivery terms in the quote."
+            },
+            {
+                "title": "Hotels, restaurants and catering",
+                "text": "Consistent quality, a documented process and a direct contact."
+            },
+            {
+                "title": "Foodservice suppliers",
+                "text": "Recurring supply discussed against capacity and your programme."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "How procurement works",
+        "title": "Four steps from specification to coordination",
+        "steps": [
+            {
+                "title": "Send your requirement",
+                "text": "Company, country, business type, species, size grade, product form, expected quantity, packing and delivery date."
+            },
+            {
+                "title": "Technical and commercial review",
+                "text": "We review the product, availability, our ability to meet the specification, market requirements and the relevant export documents."
+            },
+            {
+                "title": "A clear quotation",
+                "text": "Issued on confirmed data: price and its terms, quantity, packing, offer validity, shipping and the expected schedule."
+            },
+            {
+                "title": "Coordination and delivery",
+                "text": "After agreement and contract, both sides coordinate operations, delivery and documents."
+            }
+        ]
+    },
+    "prepare": {
+        "eyebrow": "Before you send",
+        "title": "What to prepare",
+        "intro": "A complete requirement gets a more useful first reply.",
+        "items": [
+            "Species",
+            "Size grade",
+            "Product form",
+            "Quantity per shipment and frequency",
+            "Destination country",
+            "Delivery timing",
+            "Packing and label requirements",
+            "Documents your market requires"
+        ]
+    },
+    "terms": {
+        "eyebrow": "Trade details",
+        "title": "Confirmed per quotation, not promised in advance",
+        "intro": "We do not publish price lists or blanket terms. These points are set in each formal quotation:",
+        "items": [
+            {
+                "title": "Price",
+                "text": "Depends on species, grade, volume, packing and delivery terms."
+            },
+            {
+                "title": "Minimum order",
+                "text": "Varies by species and terms."
+            },
+            {
+                "title": "Availability",
+                "text": "Confirmed against current supply when we review your request."
+            },
+            {
+                "title": "Documents",
+                "text": "The list and scope are confirmed for your destination."
+            },
+            {
+                "title": "Incoterms",
+                "text": "Agreed in the quotation and contract."
+            }
+        ]
+    },
+    "proof": {
+        "eyebrow": "Check before you ask",
+        "title": "Products, process and compliance",
+        "items": [
+            {
+                "title": "Products",
+                "text": "Species pages with what can be confirmed per product.",
+                "link": "View products"
+            },
+            {
+                "title": "Processing and packing",
+                "text": "How fish is handled, packed and dispatched.",
+                "link": "See processing"
+            },
+            {
+                "title": "Quality",
+                "text": "Quality process and documentation.",
+                "link": "See quality"
+            },
+            {
+                "title": "Export markets",
+                "text": "Current markets and how each destination is handled.",
+                "link": "See markets"
+            }
+        ]
+    },
+    "faq": {
+        "eyebrow": "Procurement FAQ",
+        "title": "Questions buyers ask before an RFQ",
+        "items": [
+            {
+                "q": "What is the minimum order quantity?",
+                "a": "It varies by species and terms. Send your expected volume and we confirm what is possible in the quotation."
+            },
+            {
+                "q": "Which sizes and grades can you supply?",
+                "a": "Sizes depend on the species and on current supply. Tell us your grade or grading specification, and we confirm what we can meet."
+            },
+            {
+                "q": "How is the fish packed?",
+                "a": "Fresh fish is packed in insulated EPS boxes with ice. Other packing formats or your own specification are reviewed per product and requirement."
+            },
+            {
+                "q": "Can you pack under our label?",
+                "a": "It is reviewed per product and requirement. Include your label requirements in the RFQ notes."
+            },
+            {
+                "q": "Which quality documents and certificates are available?",
+                "a": "The list and scope are confirmed when we review your request, for your product and destination."
+            },
+            {
+                "q": "How is the fish shipped?",
+                "a": "Chilled, by air freight or by road depending on the destination. The transport mode is confirmed in the quotation; we do not publish fixed transit times."
+            },
+            {
+                "q": "Do you accept recurring supply programmes?",
+                "a": "Yes, they can be discussed based on capacity and your needs. Tell us the frequency you expect."
+            },
+            {
+                "q": "When will I receive a quotation?",
+                "a": "It depends on how complete the specification is and on current availability. We first review the request, then contact you to confirm the details before a formal quotation."
+            }
+        ]
+    },
+    "rfq": {
+        "eyebrow": "Request for quotation",
+        "title": "Start your RFQ",
+        "intro": "Two short steps. Nothing is binding until a formal quotation is agreed."
+    }
+}

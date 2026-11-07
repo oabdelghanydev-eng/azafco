@@ -1,0 +1,110 @@
+{
+    "meta": {
+        "title": "AZAFCO International | Egyptian Fish Processing & Export",
+        "description": "AZAFCO International farms, processes, packs and exports Egyptian fish for importers, distributors and foodservice buyers. Request a quote."
+    },
+    "hero": {
+        "eyebrow": "AZAFCO International · Seafood & Aquaculture",
+        "title": "From Egyptian production to global partnerships",
+        "intro": "Egyptian fish, professionally processed and packed to the specification your business buys to. We work with importers, distributors and foodservice buyers from the first enquiry to the export hand-off.",
+        "secondary": "Browse Seafood Products"
+    },
+    "trust": {
+        "title": "AZAFCO at a glance",
+        "plant_title": "Fish processing and packing plant",
+        "plant_detail": "Industrial Zone, Motobas, Kafr El Sheikh, Egypt",
+        "register_title": "Registered Egyptian company",
+        "register_detail": "Commercial register No. 100776",
+        "spec_title": "Quotes built on your specification",
+        "spec_detail": "Species, size, presentation, packing, volume and destination",
+        "direct_title": "Direct line to the export team",
+        "direct_detail": "Phone, WhatsApp and email"
+    },
+    "seafood": {
+        "eyebrow": "Our core business",
+        "title": "Built around business buyers",
+        "p1": "When you source fish, you are not buying a product listing. You need clear specifications, processing that suits your market, and one direct conversation about volume, packing and shipping.",
+        "p2": "Seafood and aquaculture is AZAFCO's primary business, from production through processing and packing to export coordination. We start from your commercial requirement and work back to an offer that fits it.",
+        "link_overview": "Seafood & Aquaculture overview",
+        "link_products": "Product catalogue",
+        "link_processing": "Processing & Packing",
+        "link_quality": "Quality & Traceability"
+    },
+    "products": {
+        "eyebrow": "Core products",
+        "title": "Main species",
+        "intro": "Start with tilapia, sea bass and mullet, or see the full range. Each species page sets out what to specify (size, presentation, packing), and the details are confirmed in your quote.",
+        "view_all": "View all products"
+    },
+    "process": {
+        "eyebrow": "From origin to shipment",
+        "title": "One supply chain, four hand-offs",
+        "intro": "Every order moves through the same stages, each checked against the specification agreed with you.",
+        "s1_title": "Farming & sourcing",
+        "s1_text": "Fish comes from aquaculture production linked to AZAFCO's core business.",
+        "s2_title": "Receiving & grading",
+        "s2_text": "Fish is received at the plant and sorted to the size grade you ordered.",
+        "s3_title": "Processing & packing",
+        "s3_text": "Prepared and packed to the agreed presentation, pack type and net weight.",
+        "s4_title": "Export hand-off",
+        "s4_text": "The shipment is coordinated with the documents your destination requires."
+    },
+    "processing": {
+        "eyebrow": "Processing & Packing",
+        "title": "A plant run around buyer requirements",
+        "p1": "Processing and packing take place at our plant in Kafr El Sheikh, with crews working in full hygiene gear.",
+        "p2": "Before we quote, we confirm with you what we can prepare for your market, so the offer you receive is one we can deliver.",
+        "req_title": "What we agree with you before quoting",
+        "req_1": "Species and size grade",
+        "req_2": "Presentation",
+        "req_3": "Pack type and net weight",
+        "req_4": "Label content and language",
+        "req_5": "Documents for your destination",
+        "cta": "See Processing & Packing"
+    },
+    "quality": {
+        "eyebrow": "Quality",
+        "title": "Quality you can check in the documents",
+        "p1": "Specifications, product data and documents sit at the centre of every supply agreement.",
+        "p2": "Our team shares the relevant product and facility documents once their scope and validity have been confirmed for your order.",
+        "cta_docs": "Request documents & specifications",
+        "cta_quality": "Quality & Traceability"
+    },
+    "markets": {
+        "eyebrow": "Export approach",
+        "title": "We start from your destination",
+        "intro": "Import rules, documents and transport differ from one country to the next. Tell us where the fish is going, and we check that market's requirements before confirming an offer.",
+        "i1_title": "Your destination",
+        "i1_text": "The importing country and the expected point of entry.",
+        "i2_title": "Documents",
+        "i2_text": "We confirm with you which certificates and export documents the shipment needs.",
+        "i3_title": "Transport and timing",
+        "i3_text": "Transport mode and timing are agreed with you before the quote.",
+        "link_markets": "Export markets",
+        "link_importers": "How buying from AZAFCO works"
+    },
+    "group": {
+        "eyebrow": "AZAFCO International",
+        "title": "Beyond seafood",
+        "intro": "AZAFCO International also has agricultural, livestock and investment activities. Seafood remains our primary export-facing business and the focus of this website.",
+        "agri_title": "Agriculture",
+        "agri_text": "Farmland and fruit and vegetable production.",
+        "livestock_title": "Livestock",
+        "livestock_text": "Livestock farming activities.",
+        "invest_title": "Investments",
+        "invest_text": "Other investment activities under the AZAFCO International name.",
+        "link": "Our Businesses"
+    },
+    "cta": {
+        "title": "Importing fish for your market?",
+        "intro": "Share the species, quantity, destination and packing requirements, and our export team will start reviewing your request.",
+        "label": "Send a supply request"
+    },
+    "pending": {
+        "certificates": "Certificate copies with issuer, scope and expiry",
+        "markets": "Approved list of active export markets",
+        "capacity": "Monthly processing capacity (approved definition)",
+        "certificate_cards": "Certificate cards (ISO / HACCP / EU approval): copies, issuer, scope, expiry",
+        "farm_photo": "Fish farm / water operations photo"
+    }
+}
