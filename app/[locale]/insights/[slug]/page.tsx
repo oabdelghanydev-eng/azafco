@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, Button, CTABand, Container, Eyebrow, FeatureGrid, Section, SectionHeader } from '@/components/v2';
 import { mediaImage } from '@/lib/v2/media';
-import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
+import { insightHref, routes } from '@/lib/v2/routes';
 import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
 import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
@@ -85,23 +85,6 @@ export default async function InsightArticlePage({ params }: Props) {
         href: [routes.forImporters, routes.markets, routes.products][i],
         linkLabel: tv('cta.learn_more'),
     }));
-
-    const inlineCta = (
-        <aside aria-labelledby="inline-cta-title" data-surface="dark" className="rounded-card bg-navy-900 p-6 text-fg sm:p-8">
-            <h2 id="inline-cta-title" className="font-display text-heading-lg text-fg">
-                {t('article.inline_cta_title')}
-            </h2>
-            <p className="mt-2 text-body text-fg-muted">{t('article.inline_cta_text')}</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-                <Button href={rfqHref({ type: 'general' })} arrow dataAttrs={{ 'data-cta': 'article_inline_rfq' }}>
-                    {t('article.inline_cta_button')}
-                </Button>
-                <Button href={routes.forImporters} variant="outline">
-                    {t('article.inline_cta_secondary')}
-                </Button>
-            </div>
-        </aside>
-    );
 
     return (
         <>
@@ -184,8 +167,12 @@ export default async function InsightArticlePage({ params }: Props) {
                         </div>
                     </aside>
                     <div className="col-span-4 sm:col-span-8 lg:order-1 lg:col-span-8">
-                        <ImportingGuideBody locale={locale} reviewedLabel={reviewed} inlineCta={inlineCta} />
-                        <div className="mt-12 border-t border-line pt-6">
+                        <ImportingGuideBody locale={locale} reviewedLabel={reviewed} />
+                        {/* The article's single contact link (no inline quote box) */}
+                        <div className="mt-12 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-line pt-6">
+                            <Button href={routes.contact} variant="text" dataAttrs={{ 'data-cta': 'article_contact' }}>
+                                {tv('cta.contact_export_team')}
+                            </Button>
                             <Button href={routes.insights} variant="text">
                                 {t('article.back')}
                             </Button>
@@ -199,7 +186,7 @@ export default async function InsightArticlePage({ params }: Props) {
                 <FeatureGrid columns={3} style="card" items={related} />
             </Section>
 
-            <CTABand headingId="article-cta" eyebrow={t('cta.eyebrow')} title={t('cta.title')} intro={t('cta.intro')} />
+            <CTABand headingId="article-cta" eyebrow={t('cta.eyebrow')} intro={t('cta.intro')} showQuote={false} />
         </>
     );
 }

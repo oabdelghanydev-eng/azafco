@@ -134,9 +134,6 @@ export default async function MarketDetailPage({ params }: Props) {
                 headingId="md-cta"
                 prefill={{ country: market.countryCode, type: 'market' }}
                 eyebrow={t('cta.eyebrow')}
-                title={t('detail.cta_title', { country })}
-                intro={t('detail.cta_intro')}
-                ctaLabel={t('detail.primary', { country })}
             />
         </>
     );

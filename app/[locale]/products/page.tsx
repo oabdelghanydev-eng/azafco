@@ -6,7 +6,7 @@ import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
 import RangeBand from '@/components/v2/products/RangeBand';
 import { baseUrl, getCatalogue, getSearchNames, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { productCategories } from '@/data/products';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -41,7 +41,6 @@ export default async function CataloguePage({ params }: Props) {
                 scientificName={p.scientificName}
                 altNames={p.altNames}
                 href={p.href}
-                quoteHref={rfqHref({ product: p.slug })}
                 image={p.image}
                 facts={[
                     { label: t('card.origin'), value: t('card.origin_value') },
@@ -92,7 +91,6 @@ export default async function CataloguePage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.products') }]} />}
-                primaryAction={{ label: tv('cta.request_specifications'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
             />
 
@@ -156,9 +154,7 @@ export default async function CataloguePage({ params }: Props) {
             <CTABand
                 headingId="catalogue-custom"
                 eyebrow={t('custom.eyebrow')}
-                title={t('custom.title')}
                 intro={t('custom.intro')}
-                ctaLabel={t('custom.cta')}
                 prefill={{ type: 'specifications' }}
             />
         </>

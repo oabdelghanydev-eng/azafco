@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import Button from '@/components/v2/Button';
 import { CloseIcon } from '@/components/v2/icons';
 import { cn } from '@/lib/v2/cn';
-import { rfqHref } from '@/lib/v2/routes';
 
 export interface BrowserItem {
     slug: string;
@@ -174,12 +173,9 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                     <p className="mx-auto mt-3 max-w-prose-v2 text-body text-ink-muted">
                         {t('empty_text', { query: query.trim() || '—' })}
                     </p>
-                    <div className="mt-6 flex flex-wrap justify-center gap-3">
+                    <div className="mt-6 flex justify-center">
                         <Button variant="outline" onClick={reset}>
                             {t('reset')}
-                        </Button>
-                        <Button href={rfqHref({ type: 'specifications' })} arrow>
-                            {t('empty_cta')}
                         </Button>
                     </div>
                 </div>

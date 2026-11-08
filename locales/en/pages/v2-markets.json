@@ -8,7 +8,6 @@
         "eyebrow": "Export markets",
         "title": "Export partnerships shaped around each market",
         "intro": "We work with importers and distributors across our markets, with close attention to Gulf commercial requirements, documentation and product specifications.",
-        "primary": "Discuss your market",
         "secondary": "Read the importer process"
     },
     "proposition": {
@@ -116,9 +115,7 @@
     "disclaimer": "Being ready to export does not mean a permit is automatically available for every market or species. All operations are subject to approvals, availability and contract terms.",
     "cta": {
         "eyebrow": "Market enquiry",
-        "title": "Discuss your destination with the export team",
-        "intro": "Share your country, products and expected volumes. We review the destination requirements with you before any commitment.",
-        "button": "Discuss your market"
+        "intro": "Share your country, products and expected volumes. We review the destination requirements with you before any commitment."
     },
     "detail": {
         "meta_title": "Fresh Fish Supply to {country}",
@@ -126,7 +123,7 @@
         "eyebrow": "Export market",
         "title": "Fresh fish supply for buyers in {country}",
         "intro": "{country} is one of our current export markets. Products, packing, transport and documents are discussed for each enquiry, not promised in general.",
-        "primary": "Start an enquiry for {country}",
+        "primary": "Discuss supply to {country}",
         "secondary": "See all markets",
         "status_title": "Market status",
         "discuss_eyebrow": "What we discuss",
@@ -152,9 +149,7 @@
         "products_eyebrow": "Products",
         "products_title": "Species we supply",
         "products_intro": "Availability and sizes vary; each product page lists what can be confirmed.",
-        "other_title": "Other current markets",
-        "cta_title": "Talk to the export team about {country}",
-        "cta_intro": "Send the species, volume and timing. The destination is already filled in."
+        "other_title": "Other current markets"
     },
     "pending": {
         "saudi": "Saudi Arabia: potential target market, list only after sales confirms activity",

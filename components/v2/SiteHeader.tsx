@@ -13,9 +13,10 @@ import { ChevronDownIcon, CloseIcon, MenuIcon } from './icons';
 
 /**
  * Global header (client: dropdowns, drawer, scroll state).
- * Desktop (xl+): logo → 4 nav items (3 dropdowns) → EN/AR + globe → Contact → Request a Quote.
- * md–xl: logo, language, Request a Quote, menu button. <md: logo, language, menu button
- * (the RFQ lives in the fixed bottom bar, see MobileQuoteBar).
+ * Desktop (xl+): logo → 4 nav items (3 dropdowns) → EN/AR + globe → "Contact our export team"
+ * (one quiet outline item; no gold quote button in the header).
+ * md–xl: logo, language, contact item, menu button. <md: logo, language, menu button
+ * (contact sits at the foot of the drawer; WhatsApp is the small round button, see MobileQuoteBar).
  * Arabic mirrors via logical properties (start/end) and dir="rtl" on <html>.
  */
 export default function SiteHeader() {
@@ -108,11 +109,14 @@ export default function SiteHeader() {
 
                 <div className="ms-auto flex items-center gap-2 xl:ms-0">
                     <LanguageSwitch />
-                    <Button href={routes.contact} variant="outline" size="sm" className="hidden xl:inline-flex">
-                        {t('nav.contact')}
-                    </Button>
-                    <Button href={routes.rfq} size="sm" className="hidden md:inline-flex" dataAttrs={{ 'data-cta': 'header_rfq' }}>
-                        {t('cta.request_quote')}
+                    <Button
+                        href={routes.contact}
+                        variant="outline"
+                        size="sm"
+                        className="hidden md:inline-flex"
+                        dataAttrs={{ 'data-cta': 'header_contact' }}
+                    >
+                        {t('cta.contact_export_team')}
                     </Button>
                     <button
                         ref={menuBtn}
@@ -335,15 +339,12 @@ function MobileDrawer({ pathname, onClose }: { pathname: string; onClose: () => 
                                 )}
                             </li>
                         ))}
-                        <li>
-                            <DrawerLink href={routes.contact} label={t('nav.contact')} pathname={pathname} />
-                        </li>
                     </ul>
                 </nav>
                 <div className="space-y-4 border-t border-line p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
                     <LanguageSwitch />
-                    <Button href={routes.rfq} fullWidth size="lg" dataAttrs={{ 'data-cta': 'drawer_rfq' }}>
-                        {t('cta.request_quote')}
+                    <Button href={routes.contact} variant="outline" fullWidth size="lg" dataAttrs={{ 'data-cta': 'drawer_contact' }}>
+                        {t('cta.contact_export_team')}
                     </Button>
                 </div>
             </div>

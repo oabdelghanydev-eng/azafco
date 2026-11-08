@@ -7,7 +7,6 @@
         "eyebrow": "Quality & Traceability",
         "title": "Quality you can verify",
         "intro": "For an importer, \"high quality\" is not enough. What matters is a clear specification and the facility and shipment documents behind it, available for review.",
-        "primary": "Request Quality Documents",
         "secondary": "See Processing"
     },
     "system": {
@@ -42,8 +41,7 @@
         "standards_title": "How we name standards",
         "standards_text": "ISO 22000 (food safety management), ISO 9001 (quality management), ISO 14001 (environmental management) and ISO 45001 (occupational health and safety) are four separate ISO standards. HACCP is a food-safety system based on hazard analysis and critical control points; it is not an ISO standard.",
         "empty_title": "Certificate documents on request",
-        "empty_text": "Tell us which certificates your market or customer requires. We will confirm what can be provided, by whom it was issued and what it covers.",
-        "request": "Request certificate copies"
+        "empty_text": "Tell us which certificates your market or customer requires. We will confirm what can be provided, by whom it was issued and what it covers."
     },
     "trace": {
         "eyebrow": "Traceability",
@@ -75,9 +73,7 @@
     },
     "cta": {
         "eyebrow": "Document request",
-        "title": "Need the compliance file?",
-        "intro": "Your procurement or quality team can send the list of documents it needs. The AZAFCO team will confirm what can be provided and its scope.",
-        "label": "Request Compliance Documents"
+        "intro": "Your procurement or quality team can send the list of documents it needs. The AZAFCO team will confirm what can be provided and its scope."
     },
     "pending": {
         "traceability": "Lot/batch data that can actually be supplied per shipment",

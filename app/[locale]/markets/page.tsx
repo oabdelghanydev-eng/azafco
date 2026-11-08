@@ -53,7 +53,6 @@ export default async function MarketsPage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.export') }, { label: t('breadcrumb') }]} />}
-                primaryAction={{ label: t('hero.primary'), href: rfqHref({ type: 'market' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.forImporters }}
             />
 
@@ -113,10 +112,7 @@ export default async function MarketsPage({ params }: Props) {
                     </ul>
                     <Pending block label={t('pending.saudi')} className="mt-6" />
                     <p className="mt-6 text-body-sm text-fg-muted">
-                        {t('other.new_destination')}{' '}
-                        <Link href={rfqHref({ type: 'market' })} className="inline-flex min-h-[44px] items-center font-semibold text-navy underline decoration-gold decoration-2 underline-offset-4">
-                            {tv('cta.request_quote')}
-                        </Link>
+                        {t('other.new_destination')}
                     </p>
                 </Section>
             ) : null}
@@ -164,9 +160,7 @@ export default async function MarketsPage({ params }: Props) {
                 headingId="mk-cta"
                 prefill={{ type: 'market' }}
                 eyebrow={t('cta.eyebrow')}
-                title={t('cta.title')}
                 intro={t('cta.intro')}
-                ctaLabel={t('cta.button')}
             />
         </>
     );

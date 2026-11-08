@@ -139,7 +139,7 @@ export default async function V2KitPage({ params }: Props) {
                 intro={c.heroIntro}
                 size="2xl"
                 headingId="kit-hero"
-                primaryAction={{ label: t('v2.cta.request_quote'), href: rfqHref() }}
+                primaryAction={{ label: t('v2.cta.prepare_quote'), href: rfqHref() }}
                 secondaryAction={{ label: t('v2.cta.talk_to_export_team'), href: routes.contact }}
                 breadcrumbs={<Breadcrumbs items={[{ label: c.eyebrow }]} />}
             />
@@ -151,7 +151,7 @@ export default async function V2KitPage({ params }: Props) {
                 intro={c.splitIntro}
                 image={img('species-sea-bass')}
                 priority={false}
-                primaryAction={{ label: t('v2.cta.request_quote'), href: rfqHref({ type: 'specifications' }) }}
+                primaryAction={{ label: t('v2.cta.prepare_quote'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('v2.cta.view_specifications'), href: routes.products }}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('v2.nav.seafood'), href: routes.seafood }, { label: t('v2.nav.processing') }]} />}
                 proof={
@@ -169,7 +169,7 @@ export default async function V2KitPage({ params }: Props) {
             <Section variant="light" labelledBy="kit-buttons">
                 <SectionHeader id="kit-buttons" eyebrow="Button" title={c.buttons} size="md" />
                 <div className="flex flex-wrap items-center gap-3">
-                    <Button href={rfqHref()}>{t('v2.cta.request_quote')}</Button>
+                    <Button href={rfqHref()}>{t('v2.cta.prepare_quote')}</Button>
                     <Button href={routes.products} variant="secondary">
                         {t('v2.cta.view_specifications')}
                     </Button>
@@ -190,7 +190,7 @@ export default async function V2KitPage({ params }: Props) {
                         lg + arrow
                     </Button>
                     <Button loading loadingLabel={c.loading}>
-                        {t('v2.cta.request_quote')}
+                        {t('v2.cta.prepare_quote')}
                     </Button>
                     <Button disabled variant="secondary">
                         disabled
@@ -227,7 +227,7 @@ export default async function V2KitPage({ params }: Props) {
                     }
                 />
                 <div className="flex flex-wrap gap-3">
-                    <Button href={rfqHref()}>{t('v2.cta.request_quote')}</Button>
+                    <Button href={rfqHref()}>{t('v2.cta.prepare_quote')}</Button>
                     <Button href={routes.products} variant="secondary">
                         {t('v2.cta.view_specifications')}
                     </Button>

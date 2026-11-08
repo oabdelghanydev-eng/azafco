@@ -215,8 +215,8 @@ export default async function ProductDetailPage({ params }: Props) {
                         <h3 className="v2-heading font-display text-heading-xl">{t('detail.docs_title')}</h3>
                         <p className="mt-4 text-body text-fg-muted">{t('detail.docs_text')}</p>
                         <div className="mt-auto flex flex-wrap items-center gap-4 pt-6">
-                            <Button href={rfqHref({ type: 'documents' })} variant="secondary">
-                                {t('detail.docs_cta')}
+                            <Button href={rfqHref({ type: 'documents' })} variant="text">
+                                {tv('cta.request_document_pack')}
                             </Button>
                             <Button href={routes.quality} variant="text">
                                 {t('detail.docs_link')}
@@ -257,13 +257,9 @@ export default async function ProductDetailPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* Inline RFQ teaser: product preselected */}
+            {/* Contact band; its secondary quote link keeps this product preselected */}
             <CTABand
                 headingId="product-rfq"
-                eyebrow={t('detail.rfq_eyebrow')}
-                title={t('detail.rfq_title', { name })}
-                intro={t('detail.rfq_intro', { name })}
-                ctaLabel={t('detail.rfq_cta', { name })}
                 prefill={{ product: slug, type: 'product' }}
                 reassurance={[t('detail.rfq_after_1'), t('detail.rfq_after_2'), t('detail.rfq_after_3')]}
             />

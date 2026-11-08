@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
 import { mediaImage } from '@/lib/v2/media';
 import { Breadcrumbs, FeatureGrid, MapPinIcon, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
@@ -38,7 +38,6 @@ export default async function AboutPage({ params }: Props) {
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: routes.businesses }}
-                secondaryAction={{ label: t('hero.secondary'), href: rfqHref({ type: 'corporate' }) }}
             />
 
             {/* 02 · Origin and history: editorial only, no unverified timeline */}
@@ -158,8 +157,7 @@ export default async function AboutPage({ params }: Props) {
                 title={t('cta.title')}
                 intro={t('cta.intro')}
                 primary={{ label: t('cta.primary'), href: routes.businesses }}
-                secondary={{ label: t('cta.secondary'), href: rfqHref({ type: 'corporate' }) }}
-                supplyLink={{ lead: t('cta.supply_lead'), label: t('cta.supply_link'), href: rfqHref() }}
+                secondary={{ label: t('cta.secondary'), href: routes.contact }}
                 emailLabel={t('cta.email_label')}
                 extra={<Pending block label={t('pending.profile')} />}
             />

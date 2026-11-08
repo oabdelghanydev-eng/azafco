@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
 import { CheckIcon } from '@/components/v2';
@@ -49,7 +48,7 @@ export async function importingSectionTitles(locale: string) {
     } as Record<(typeof IMPORTING_SECTIONS)[number], string>;
 }
 
-export default async function ImportingGuideBody({ locale, reviewedLabel, inlineCta }: { locale: string; reviewedLabel: string; inlineCta: ReactNode }) {
+export default async function ImportingGuideBody({ locale, reviewedLabel }: { locale: string; reviewedLabel: string }) {
     const t = await getTranslations({ locale, namespace: 'guides_page.importing' });
     const tAll = await getTranslations({ locale });
     const sourceLabel = t('source_label');
@@ -178,8 +177,6 @@ export default async function ImportingGuideBody({ locale, reviewedLabel, inline
                     ))}
                 </ol>
             </section>
-
-            {inlineCta}
 
             {/* Cold chain */}
             <section id="cold-chain" aria-labelledby="cold-chain-title" className="flex flex-col gap-4">

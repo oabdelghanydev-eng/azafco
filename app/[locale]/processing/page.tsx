@@ -75,7 +75,6 @@ export default async function ProcessingPage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.processing') }]} />}
-                primaryAction={{ label: t('hero.primary'), href: rfqHref({ type: 'specifications' }) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.quality }}
             />
 
@@ -156,8 +155,8 @@ export default async function ProcessingPage({ params }: Props) {
                             <h3 className="text-heading-md text-navy">{t('checkpoints.docs_title')}</h3>
                             <p className="mt-2 text-body-sm text-ink-muted">{t('checkpoints.docs_text')}</p>
                             <div className="mt-5">
-                                <Button href={rfqHref({ type: 'documents' })} variant="secondary">
-                                    {t('checkpoints.docs_cta')}
+                                <Button href={rfqHref({ type: 'documents' })} variant="text">
+                                    {tv('cta.request_document_pack')}
                                 </Button>
                             </div>
                         </div>
@@ -196,23 +195,16 @@ export default async function ProcessingPage({ params }: Props) {
                     sizes="100vw"
                     className="-z-10 object-cover opacity-60"
                 />
-                <div className="flex flex-col gap-4 rounded-card border border-line bg-white p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
-                    <div>
-                        <h2 id="processing-visit" className="text-heading-md text-navy">{t('gallery.visit_title')}</h2>
-                        <p className="mt-2 max-w-prose-v2 text-body-sm text-ink-muted">{t('gallery.visit_text')}</p>
-                    </div>
-                    <Button href={rfqHref({ type: 'general' })} variant="outline" className="shrink-0">
-                        {t('gallery.visit_cta')}
-                    </Button>
+                <div className="rounded-card border border-line bg-white p-6 md:p-8">
+                    <h2 id="processing-visit" className="text-heading-md text-navy">{t('gallery.visit_title')}</h2>
+                    <p className="mt-2 max-w-prose-v2 text-body-sm text-ink-muted">{t('gallery.visit_text')}</p>
                 </div>
             </Section>
 
             <CTABand
                 headingId="processing-cta"
                 eyebrow={t('cta.eyebrow')}
-                title={t('cta.title')}
                 intro={t('cta.intro')}
-                ctaLabel={t('cta.label')}
                 prefill={{ type: 'specifications' }}
             />
         </>

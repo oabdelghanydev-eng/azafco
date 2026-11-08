@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { mediaImage } from '@/lib/v2/media';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
 import { Breadcrumbs, Button, FeatureGrid, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import BusinessArchitecture from '@/components/v2/businesses/BusinessArchitecture';
@@ -48,7 +48,6 @@ export default async function BusinessesPage({ params }: Props) {
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: routes.seafood }}
-                secondaryAction={{ label: t('hero.secondary'), href: rfqHref({ type: 'corporate' }) }}
             />
 
             {/* 02 · Business allocation: seafood dominant, the rest subordinate */}
@@ -89,14 +88,9 @@ export default async function BusinessesPage({ params }: Props) {
                         { label: t('seafood.link_importers'), href: routes.forImporters },
                     ]}
                 >
-                    <div className="flex flex-wrap gap-3">
-                        <Button href={routes.seafood} arrow>
-                            {t('seafood.cta_primary')}
-                        </Button>
-                        <Button href={rfqHref()} variant="outline">
-                            {t('seafood.cta_rfq')}
-                        </Button>
-                    </div>
+                    <Button href={routes.seafood} arrow>
+                        {t('seafood.cta_primary')}
+                    </Button>
                 </EditorialMedia>
             </Section>
 
@@ -125,15 +119,13 @@ export default async function BusinessesPage({ params }: Props) {
                 />
             </Section>
 
-            {/* 07 · Partner enquiry (separate from the fish RFQ) + 08 route back to seafood */}
+            {/* 07 · Partner enquiry: contact page + email (no RFQ button on corporate pages) */}
             <CorporateCta
                 id="biz-partner"
                 eyebrow={t('partner.eyebrow')}
                 title={t('partner.title')}
                 intro={t('partner.intro')}
-                primary={{ label: t('partner.primary'), href: rfqHref({ type: 'corporate' }) }}
-                secondary={{ label: t('partner.secondary'), href: routes.contact }}
-                supplyLink={{ lead: t('partner.supply_lead'), label: t('partner.supply_link'), href: rfqHref() }}
+                primary={{ label: t('partner.primary'), href: routes.contact }}
                 emailLabel={t('partner.email_label')}
                 extra={<Pending block label={t('pending.profile')} />}
             />

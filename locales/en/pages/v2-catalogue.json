@@ -36,7 +36,6 @@
         "reset": "Clear filters",
         "empty_title": "No species match your search",
         "empty_text": "We could not find \"{query}\" in the catalogue. Check the spelling, clear the filters, or send us the species and specification you need.",
-        "empty_cta": "Ask about another species",
         "form_type": "Product form",
         "all_forms": "All forms"
     },
@@ -63,9 +62,7 @@
     },
     "custom": {
         "eyebrow": "Custom requirement",
-        "title": "Can't find your grade or size?",
-        "intro": "Send us the specification you need. We review different sizes or packing against our actual capability and the quantities available, and we only offer an option once it is confirmed.",
-        "cta": "Request a Custom Grade"
+        "intro": "Send us the specification you need. We review different sizes or packing against our actual capability and the quantities available, and we only offer an option once it is confirmed."
     },
     "proof": {
         "eyebrow": "Behind the catalogue",
@@ -88,7 +85,7 @@
         "eyebrow": "Wholesale supply from Egypt",
         "intro": "Tell us the size grade, product form, packing, volume and destination. Our export team reviews the request and confirms a written specification and quotation for your market.",
         "also_known_as": "Also known as",
-        "primary": "Request a Quote for {name}",
+        "primary": "Ask about {name}",
         "secondary": "View specifications",
         "spec_eyebrow": "Specification",
         "spec_title": "Specification card",
@@ -108,7 +105,6 @@
         "grading_text": "Grades are set by weight range per piece. Tell us your target range, product form and packing, and we confirm which options can be supplied for your order. We do not show stock or availability labels on the website.",
         "docs_title": "Quality documents",
         "docs_text": "Tell us which documents your market and your quality team need. We confirm what can be provided for this product and its scope before you order.",
-        "docs_cta": "Request documents",
         "docs_link": "Quality & Traceability",
         "related_eyebrow": "Alternatives",
         "related_title": "Related species",
@@ -119,10 +115,6 @@
         "faq_packing_a": "Custom pack sizes, net weights and labels are reviewed against the specification and the quantity you need.",
         "faq_price_q": "Do you publish fixed prices?",
         "faq_price_a": "No. Prices are issued in a commercial quotation with a stated validity, based on specification, volume, destination and trade terms.",
-        "rfq_eyebrow": "Request a quote",
-        "rfq_title": "Request a quote for {name}",
-        "rfq_intro": "The email opens with {name} already filled in. Add your destination, target quantity, product form and timing, and send it from your company address.",
-        "rfq_cta": "Request a Quote for {name}",
         "rfq_after_1": "We review your specification and quantity",
         "rfq_after_2": "The export team contacts you to confirm the details",
         "rfq_after_3": "You receive a written quotation, subject to confirmed availability",

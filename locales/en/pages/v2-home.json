@@ -7,7 +7,7 @@
         "eyebrow": "AZAFCO International · Seafood & Aquaculture",
         "title": "From Egyptian production to global partnerships",
         "intro": "Egyptian fish, professionally processed and packed to the specification your business buys to. We work with importers, distributors and foodservice buyers from the first enquiry to the export hand-off.",
-        "secondary": "Browse Seafood Products"
+        "primary": "Browse the species register"
     },
     "trust": {
         "title": "AZAFCO at a glance",
@@ -68,7 +68,6 @@
         "title": "Quality you can check in the documents",
         "p1": "Specifications, product data and documents sit at the centre of every supply agreement.",
         "p2": "Our team shares the relevant product and facility documents once their scope and validity have been confirmed for your order.",
-        "cta_docs": "Request documents & specifications",
         "cta_quality": "Quality & Traceability"
     },
     "markets": {
@@ -98,9 +97,7 @@
         "link": "Our Businesses"
     },
     "cta": {
-        "title": "Importing fish for your market?",
-        "intro": "Share the species, quantity, destination and packing requirements, and our export team will start reviewing your request.",
-        "label": "Send a supply request"
+        "intro": "Share the species, quantity, destination and packing requirements, and our export team will start reviewing your request."
     },
     "pending": {
         "certificates": "Certificate copies with issuer, scope and expiry",

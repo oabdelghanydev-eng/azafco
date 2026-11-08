@@ -76,7 +76,6 @@ export default async function QualityPage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.quality') }]} />}
-                primaryAction={{ label: t('hero.primary'), href: rfqHref(DOCUMENTS_PREFILL) }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
             />
 
@@ -135,14 +134,15 @@ export default async function QualityPage({ params }: Props) {
                                     </span>
                                     <h3 className="text-heading-lg text-navy">{t('certs.empty_title')}</h3>
                                     <p className="mt-3 text-body text-ink-muted">{t('certs.empty_text')}</p>
-                                    <div className="mt-6">
-                                        <Button href={rfqHref(DOCUMENTS_PREFILL)} variant="secondary" arrow>
-                                            {t('certs.request')}
-                                        </Button>
-                                    </div>
                                 </div>
                             }
                         />
+                        {/* The page's single document request (text link, not a button) */}
+                        <div className="mt-6">
+                            <Button href={rfqHref(DOCUMENTS_PREFILL)} variant="text">
+                                {tv('cta.request_document_pack')}
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </Section>
@@ -185,10 +185,7 @@ export default async function QualityPage({ params }: Props) {
             <CTABand
                 headingId="quality-cta"
                 eyebrow={t('cta.eyebrow')}
-                title={t('cta.title')}
                 intro={t('cta.intro')}
-                ctaLabel={t('cta.label')}
-                prefill={DOCUMENTS_PREFILL}
             />
         </>
     );

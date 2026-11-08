@@ -64,8 +64,7 @@
         "eyebrow": "Quality assurance",
         "title": "Quality you can check, not just read about",
         "text": "Quality starts with a clear specification and is shown through records. You can review the product specification and the facility or shipment documents that apply to your order.",
-        "link": "Review Quality & Traceability",
-        "docs": "Request quality documents"
+        "link": "Review Quality & Traceability"
     },
     "audience": {
         "eyebrow": "Who we serve",
@@ -78,9 +77,7 @@
     },
     "cta": {
         "eyebrow": "Discuss your requirement",
-        "title": "Discuss your seafood requirements",
-        "intro": "Specify the species, weight, processing, packing, order volume and destination country. The export team will review whether it can be delivered and contact you.",
-        "label": "Request a Quote"
+        "intro": "Specify the species, weight, processing, packing, order volume and destination country. The export team will review whether it can be delivered and contact you."
     },
     "pending": {
         "farm": "Fish farm photos + verified farm areas, species and production figures"

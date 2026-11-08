@@ -166,7 +166,7 @@ export default async function SeafoodPage({ params }: Props) {
                                 {t('quality.link')}
                             </Button>
                             <Button href={rfqHref({ type: 'documents' })} variant="text">
-                                {t('quality.docs')}
+                                {tv('cta.request_document_pack')}
                             </Button>
                         </div>
                     </div>
@@ -188,9 +188,7 @@ export default async function SeafoodPage({ params }: Props) {
             <CTABand
                 headingId="seafood-cta"
                 eyebrow={t('cta.eyebrow')}
-                title={t('cta.title')}
                 intro={t('cta.intro')}
-                ctaLabel={t('cta.label')}
                 prefill={{ type: 'product' }}
             />
         </>

@@ -65,8 +65,7 @@ export default async function HomePage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                primaryAction={{ label: tv('cta.request_quote'), href: rfqHref() }}
-                secondaryAction={{ label: t('hero.secondary'), href: routes.products }}
+                primaryAction={{ label: t('hero.primary'), href: routes.products }}
             />
 
             {/* 02 · Trust strip (verified facts only; the rest stays Pending) */}
@@ -176,8 +175,8 @@ export default async function HomePage({ params }: Props) {
                 >
                     <Pending block label={t('pending.certificate_cards')} className="mb-6" />
                     <div className="flex flex-wrap gap-3">
-                        <Button href={rfqHref({ type: 'documents' })} variant="secondary" icon={<DocumentIcon />}>
-                            {t('quality.cta_docs')}
+                        <Button href={rfqHref({ type: 'documents' })} variant="text">
+                            {tv('cta.request_document_pack')}
                         </Button>
                         <Button href={routes.quality} variant="text" arrow>
                             {t('quality.cta_quality')}
@@ -248,7 +247,7 @@ export default async function HomePage({ params }: Props) {
             </Section>
 
             {/* 10 · Final conversion */}
-            <CTABand title={t('cta.title')} intro={t('cta.intro')} ctaLabel={t('cta.label')} />
+            <CTABand intro={t('cta.intro')} />
         </>
     );
 }

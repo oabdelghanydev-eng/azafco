@@ -149,7 +149,7 @@ export default async function InsightsPage({ params }: Props) {
             </Section>
 
             {/* 08 Closing CTA */}
-            <CTABand headingId="in-cta" eyebrow={t('cta.eyebrow')} title={t('cta.title')} intro={t('cta.intro')} />
+            <CTABand headingId="in-cta" eyebrow={t('cta.eyebrow')} intro={t('cta.intro')} showQuote={false} />
         </>
     );
 }

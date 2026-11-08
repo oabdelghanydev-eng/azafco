@@ -7,7 +7,6 @@
         "eyebrow": "Processing & Packing",
         "title": "Where specifications become product ready to ship",
         "intro": "The factory is where your specification is met. Here is the path a product takes, and the steps we can document, from receiving and grading to packing and preparation for dispatch.",
-        "primary": "Discuss Your Packing Requirement",
         "secondary": "Review Quality Standards"
     },
     "intro": {
@@ -55,8 +54,7 @@
         "grading": "At grading and packing: size, weight and pack checked against the order",
         "release": "Before dispatch: results reviewed before the shipment leaves",
         "docs_title": "Documents you can request",
-        "docs_text": "Qualified buyers can request verified facility information and the operating documents relevant to their order.",
-        "docs_cta": "Request facility information"
+        "docs_text": "Qualified buyers can request verified facility information and the operating documents relevant to their order."
     },
     "coldchain": {
         "eyebrow": "Cold chain",
@@ -71,14 +69,11 @@
         "intro": "Photographs from our processing hall and loading bays.",
         "label": "Processing and dispatch photos",
         "visit_title": "See it for yourself",
-        "visit_text": "Qualified buyers can ask for updated photographs, a technical meeting or a site visit, in line with company procedures.",
-        "visit_cta": "Ask about a visit"
+        "visit_text": "Qualified buyers can ask for updated photographs, a technical meeting or a site visit, in line with company procedures."
     },
     "cta": {
         "eyebrow": "Packing or processing enquiry",
-        "title": "Tell us how you need it packed",
-        "intro": "Share the species, product form, pack type, net weight, labels and destination. The export team will review feasibility and come back to you.",
-        "label": "Request Facility Information"
+        "intro": "Share the species, product form, pack type, net weight, labels and destination. The export team will review feasibility and come back to you."
     },
     "pending": {
         "facility": "Factory location(s), opening dates (Baltim 2018 / Motobas 2025 vs About page), approval/registration numbers, capacity definition",

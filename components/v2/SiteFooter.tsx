@@ -25,7 +25,7 @@ export default function SiteFooter() {
     return (
         <footer data-surface="dark" className="relative isolate overflow-hidden bg-navy-950 text-fg">
             <GeoArcs tone="onDark" swoosh={false} className="absolute -top-56 end-[-10rem] -z-10 w-[640px] opacity-60" />
-            <Container className="pt-16 pb-28 md:pb-12">
+            <Container className="pt-16 pb-12">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
                     {/* Identity */}
                     <div className="lg:col-span-4">

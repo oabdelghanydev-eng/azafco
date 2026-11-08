@@ -8,8 +8,8 @@ import { ArrowIcon } from './icons';
 /**
  * Trade species register (B2B), not a retail product card: no boxes, no tags,
  * no hover zoom. A wide row per species: the whole fish (transparent cut-out),
- * its trade / local / scientific names, a short fact list, and two actions
- * (specifications, quote). Use inside a <ul> with `divide-y divide-line`.
+ * its trade / local / scientific names, a short fact list, and one action
+ * (specifications). No per-row quote link: contact lives in the header/CTA band. Use inside a <ul> with `divide-y divide-line`.
  */
 export interface SpeciesRowProps {
     /** Running number in the register, e.g. 1 → "01" */
@@ -19,7 +19,6 @@ export interface SpeciesRowProps {
     /** Local market names (shown as one muted line) */
     altNames?: string[];
     href: string;
-    quoteHref: string;
     image?: ImageProps;
     /** Short published facts only (origin, water type, indicative grades). No prices. */
     /** A string[] value renders as separate no-wrap items (e.g. size grades) */
@@ -28,7 +27,7 @@ export interface SpeciesRowProps {
     className?: string;
 }
 
-export function SpeciesRow({ index, name, scientificName, altNames, href, quoteHref, image, facts, headingAs: H = 'h3', className }: SpeciesRowProps) {
+export function SpeciesRow({ index, name, scientificName, altNames, href, image, facts, headingAs: H = 'h3', className }: SpeciesRowProps) {
     const t = useTranslations('v2.cta');
     return (
         <article className={cn('grid grid-cols-4 items-center gap-x-6 gap-y-5 py-8 sm:grid-cols-8 lg:grid-cols-12 lg:gap-x-8 lg:py-10', className)}>
@@ -98,13 +97,6 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, quoteH
                         {t('view_specifications')}
                         <span className="sr-only">: {name}</span>
                         <ArrowIcon className="h-4 w-4" />
-                    </Link>
-                    <Link
-                        href={quoteHref}
-                        className="inline-flex min-h-[44px] items-center rounded-control border border-navy px-4 font-semibold text-navy transition-colors duration-fast hover:bg-navy hover:text-white motion-reduce:transition-none"
-                    >
-                        {t('request_quote')}
-                        <span className="sr-only">: {name}</span>
                     </Link>
                 </div>
             </div>

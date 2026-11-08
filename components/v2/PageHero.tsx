@@ -25,7 +25,7 @@ export interface PageHeroProps {
     intro?: ReactNode;
     /** Omit when no professional photo exists: renders a typographic navy hero instead */
     image?: ImageProps;
-    /** Primary (gold) action: usually rfqHref(...) */
+    /** Primary (gold) action: page navigation or a page-specific enquiry; no generic "Request a quote" */
     primaryAction?: HeroAction;
     secondaryAction?: HeroAction;
     /** Slot above the eyebrow, e.g. <Breadcrumbs /> */

@@ -8,8 +8,7 @@
         "eyebrow": "About AZAFCO International",
         "title": "One international brand. Several production activities. One clear commercial focus.",
         "intro": "AZAFCO International brings together a portfolio of production and investment activities, led by its core business: fish farming, processing, packing and export.",
-        "primary": "Explore Our Businesses",
-        "secondary": "Corporate partnership"
+        "primary": "Explore Our Businesses"
     },
     "story": {
         "eyebrow": "Our story",
@@ -76,9 +75,7 @@
         "intro": "For sector cooperation and investment, use the corporate partnership enquiry. It is kept separate from fish supply requests.",
         "primary": "Explore Our Businesses",
         "secondary": "Corporate partnership enquiry",
-        "email_label": "Email",
-        "supply_lead": "Buying fish?",
-        "supply_link": "Request a quote"
+        "email_label": "Email"
     },
     "pending": {
         "milestones": "Founding year and verified milestones (plant opening dates: Motobas / Baltim)",

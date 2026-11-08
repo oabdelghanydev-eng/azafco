@@ -30,9 +30,7 @@
         "current": "Current language"
     },
     "cta": {
-        "request_quote": "Request a Quote",
         "view_specifications": "View Specifications",
-        "request_specifications": "Request Product Specifications",
         "contact": "Contact",
         "talk_to_export_team": "Talk to Export Team",
         "learn_more": "Learn more",
@@ -42,12 +40,10 @@
         "call": "Call",
         "email": "Email",
         "loading": "Loading…",
-        "opens_new_tab": "(opens in a new tab)"
-    },
-    "mobile_bar": {
-        "label": "Quick actions",
-        "request_quote": "Request a Quote",
-        "whatsapp": "Message the export team on WhatsApp"
+        "opens_new_tab": "(opens in a new tab)",
+        "contact_export_team": "Contact our export team",
+        "prepare_quote": "Prepare a quote request",
+        "request_document_pack": "Request the document pack"
     },
     "footer": {
         "tagline": "From Egyptian Production to Global Partnerships.",
@@ -100,19 +96,20 @@
     },
     "cta_band": {
         "eyebrow": "Start a commercial conversation",
-        "title": "Tell us what you need to source",
-        "intro": "Share the species, size, packing, volume and destination. Our export team reviews every request.",
-        "after_title": "What happens after you send a request",
+        "title": "Talk to our export team",
+        "intro": "Call, message or email the export team about species, sizes, packing, destinations or documents.",
+        "after_title": "What happens next",
         "after_1": "Your requirements are reviewed by the export team",
         "after_2": "We contact you to confirm the details",
-        "after_3": "Quotes are subject to confirmation of availability and specification",
-        "direct_title": "Prefer to talk directly?",
-        "direct_intro": "Reach the export team by phone, WhatsApp or email."
+        "after_3": "Quotes are subject to confirmation of availability and specification"
     },
     "faq": {
         "toggle_hint": "Show answer"
     },
     "gallery": {
         "label": "Photo gallery"
+    },
+    "whatsapp_float": {
+        "label": "WhatsApp our export desk"
     }
 }

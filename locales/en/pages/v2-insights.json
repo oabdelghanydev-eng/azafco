@@ -35,7 +35,6 @@
     },
     "cta": {
         "eyebrow": "Need actual supply?",
-        "title": "Turn the guide into a request",
         "intro": "Send the species, specification, volume and destination. The export team reviews every request."
     },
     "article": {
@@ -47,10 +46,6 @@
         "sources_side": "Sources",
         "sources_side_text": "{count} official sources, listed at the end and linked in the text.",
         "back": "All insights",
-        "inline_cta_title": "Ready to source?",
-        "inline_cta_text": "Send your species, grade, volume and destination. The export team reviews your requirement and confirms the next steps.",
-        "inline_cta_button": "Request a Quote",
-        "inline_cta_secondary": "How procurement works",
         "related_title": "Continue with",
         "related": [
             {

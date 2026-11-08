@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { CertificateCard, Pending } from '@/components/v2';
 import { certificates, type Certificate, type CertificateGroup } from '@/data/certificates';
-import { rfqHref } from '@/lib/v2/routes';
 
 /**
  * Standards named on the current/previous site. Each is listed on its own:
@@ -45,8 +44,8 @@ export interface CertificateLibraryProps {
  * Certificate cards from data/certificates.ts, grouped by purpose (food safety,
  * export approvals, management systems). A card is shown only when the
  * certificate is in the list, still valid and not withheld (`publishable: false`);
- * each card shows issuer, scope, site and valid-until when present, plus a
- * "Request a copy" action (documents RFQ). Standards without a current certificate
+ * each card shows issuer, scope, site and valid-until when present. No per-card
+ * request button: the quality page carries one document-pack link. Standards without a current certificate
  * appear as <Pending> chips (preview only).
  */
 export default function CertificateLibrary({ locale, empty }: CertificateLibraryProps) {
@@ -55,7 +54,6 @@ export default function CertificateLibrary({ locale, empty }: CertificateLibrary
     // Shown only when current AND not explicitly withheld by the owner
     const current = certificates.filter((c) => isCurrent(c.validUntil) && c.publishable !== false);
     const groups = GROUPS.map((g) => ({ g, items: current.filter((c) => groupOf(c) === g) })).filter((x) => x.items.length > 0);
-    const request = rfqHref({ type: 'documents' });
     const missing = STANDARDS.filter((s) => !current.some((c) => c.name.toUpperCase().startsWith(s.toUpperCase())));
 
     return (
@@ -77,7 +75,6 @@ export default function CertificateLibrary({ locale, empty }: CertificateLibrary
                                         scope={c.scope}
                                         site={c.site}
                                         validUntil={validUntilIso(c.validUntil)}
-                                        requestHref={request}
                                         image={
                                             c.image
                                                 ? { src: c.image, alt: locale === 'ar' ? `صورة شهادة ${c.name}` : `${c.name} certificate`, width: 600, height: 840 }

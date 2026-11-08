@@ -8,8 +8,7 @@
         "eyebrow": "Our Businesses",
         "title": "A diversified portfolio with a clear core",
         "intro": "Our activities span seafood, agriculture, livestock and other investments. Seafood remains the primary focus of our business and of our export offer.",
-        "primary": "Explore Seafood Business",
-        "secondary": "Corporate partnership"
+        "primary": "Explore Seafood Business"
     },
     "allocation": {
         "eyebrow": "Business allocation",
@@ -31,8 +30,7 @@
         "link_processing": "Processing & Packing",
         "link_quality": "Quality & Traceability",
         "link_importers": "For Importers",
-        "cta_primary": "Explore Seafood Business",
-        "cta_rfq": "Request a Quote"
+        "cta_primary": "Explore Seafood Business"
     },
     "others": {
         "eyebrow": "Alongside seafood",
@@ -48,12 +46,9 @@
     "partner": {
         "eyebrow": "Corporate partnerships",
         "title": "New business partnerships",
-        "intro": "To discuss sector cooperation or investment, send a corporate enquiry from your company email. Fish supply requests go through the quote request.",
+        "intro": "To discuss sector cooperation or investment, send a corporate enquiry from your company email. Fish supply requests go to the export team.",
         "primary": "Contact Corporate Partnerships",
-        "secondary": "Contact page",
-        "email_label": "Email",
-        "supply_lead": "Buying fish?",
-        "supply_link": "Request a quote"
+        "email_label": "Email"
     },
     "pending": {
         "agri": "Agriculture: crops, land location/area, approved photos",
