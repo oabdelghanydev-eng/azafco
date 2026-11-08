@@ -50,5 +50,50 @@
     "main_office": "Sede central",
     "factory": "Planta de producción",
     "main_on_map": "Sede central en el mapa",
-    "factory_on_map": "Planta en el mapa"
+    "factory_on_map": "Planta en el mapa",
+    "partnership_form": {
+        "title": "Solicite una alianza o cotización",
+        "subtitle": "Cuéntenos qué necesita. Nuestro equipo de exportación responde en 24-48 horas con disponibilidad, calibres y una cotización.",
+        "required_hint": "Los campos marcados con * son obligatorios.",
+        "labels": {
+            "company": "Nombre de la empresa",
+            "name": "Su nombre",
+            "email": "Correo electrónico profesional",
+            "phone": "Teléfono / WhatsApp",
+            "country": "País",
+            "species": "Especies de interés",
+            "volume": "Volumen mensual previsto",
+            "message": "Mensaje"
+        },
+        "phone_hint": "Incluya el prefijo internacional, p. ej. +34…",
+        "species_hint": "Seleccione todas las que correspondan.",
+        "volume_placeholder": "Seleccione un rango",
+        "volume_options": {
+            "under_5": "Menos de 5 toneladas/mes",
+            "5_20": "5–20 toneladas/mes",
+            "20_50": "20–50 toneladas/mes",
+            "50_100": "50–100 toneladas/mes",
+            "over_100": "Más de 100 toneladas/mes",
+            "not_sure": "Aún no lo sé"
+        },
+        "message_placeholder": "Calibres, embalaje, puerto o aeropuerto de destino, calendario de entregas…",
+        "submit": "Enviar solicitud",
+        "submitting": "Enviando…",
+        "success_title": "Gracias, su solicitud ha sido enviada",
+        "success_body": "Nuestro equipo de exportación le responderá por correo electrónico o WhatsApp en un plazo de 24-48 horas.",
+        "send_another": "Enviar otra solicitud",
+        "error_title": "No se pudo enviar su solicitud",
+        "error_body": "Lo sentimos, se produjo un error por nuestra parte. Sus datos siguen en el formulario: inténtelo más tarde o contacte directamente con nuestro equipo de exportación:",
+        "error_rate_limited": "Se han enviado demasiadas solicitudes desde esta conexión. Inténtelo de nuevo en unos minutos o contáctenos directamente:",
+        "fallback_whatsapp": "Escribir por WhatsApp",
+        "privacy_note": "Utilizamos estos datos únicamente para responder a su solicitud.",
+        "honeypot_label": "Deje este campo vacío",
+        "errors": {
+            "required": "Este campo es obligatorio.",
+            "too_long": "Máximo {max} caracteres.",
+            "invalid_email": "Introduzca un correo electrónico válido.",
+            "invalid_phone": "Introduzca un número de teléfono válido con prefijo internacional.",
+            "invalid_option": "Elija una opción de la lista."
+        }
+    }
 }

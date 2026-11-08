@@ -6,10 +6,12 @@
         "markets": "Our Markets",
         "media": "Media Center",
         "about": "About Us",
-        "contact": "Contact Us"
+        "contact": "Contact Us",
+        "eu_buyers": "For EU Buyers",
+        "faq": "FAQ"
     },
     "footer": {
-        "description": "A leading Egyptian company specialized in packaging and exporting fresh fish",
+        "description": "Egyptian fresh-fish exporter since 2008, packing up to 2,500 tonnes a month",
         "quick_links": "Quick Links",
         "contact_us": "Contact Us",
         "partnership": "Request Business Partnership",

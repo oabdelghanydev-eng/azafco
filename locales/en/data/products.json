@@ -2,8 +2,7 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Nile Tilapia",
-            "Nile Perch"
+            "Nile Tilapia"
         ],
         "description": "Premium Nile Tilapia from certified Egyptian farms. Our #1 export product. HACCP certified with complete cold chain.",
         "sizes": [
@@ -14,16 +13,18 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "freshwater",
+        "category": "Freshwater",
         "availability": "Year-round supply"
     },
     "sea_bass": {
         "name": "Sea Bass",
         "alt_names": [
+            "European Seabass",
+            "European Bass",
             "Mediterranean Sea Bass",
-            "European Bass"
+            "Branzino"
         ],
-        "description": "Premium Sea Bass, perfect for grilling, frying, and fine dining. Restaurant favorite across Gulf region.",
+        "description": "Premium European sea bass, perfect for grilling, frying, and fine dining. Restaurant favorite across Gulf region.",
         "sizes": [
             "Medium (400-600g)",
             "Large (600g+)",
@@ -31,17 +32,17 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "saltwater",
+        "category": "Marine",
         "availability": "Year-round supply"
     },
     "mullet": {
-        "name": "Bouri - Biya - Mullet",
+        "name": "Grey Mullet (Bouri)",
         "alt_names": [
-            "Grey Mullet",
+            "Flathead Grey Mullet",
             "Striped Mullet",
-            "Bouri Fish"
+            "Bouri"
         ],
-        "description": "Fresh Egyptian Mullet, excellent for grilling and smoking. Traditional favorite in Gulf cuisine.",
+        "description": "Fresh Egyptian grey mullet (bouri), raised in brackish water. Excellent for grilling and smoking. Traditional favorite in Gulf cuisine.",
         "sizes": [
             "Small (150-250g)",
             "Medium (250-400g)",
@@ -49,15 +50,17 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "freshwater",
+        "category": "Brackish water",
         "availability": "Year-round supply"
     },
     "buni": {
-        "name": "Buni",
+        "name": "Bunni",
         "alt_names": [
-            "Sea Bream"
+            "Nile Barb",
+            "Niger Barb",
+            "Binny"
         ],
-        "description": "Premium sea buni for discerning customers. Excellent texture and flavor profile.",
+        "description": "Fresh bunni, a freshwater barb native to the Nile. Excellent texture and flavor profile.",
         "sizes": [
             "Medium (300-500g)",
             "Large (500g+)",
@@ -65,16 +68,16 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "saltwater",
+        "category": "Freshwater",
         "availability": "Year-round supply"
     },
     "mubarakah": {
-        "name": "Mubarakah",
+        "name": "Common Carp",
         "alt_names": [
-            "African Catfish",
-            "Clarias"
+            "Carp",
+            "Mabrouk"
         ],
-        "description": "Fresh Mubarakah, ideal for traditional dishes. Large sizes available for wholesale.",
+        "description": "Fresh common carp (mabrouk), ideal for traditional dishes. Large sizes available for wholesale.",
         "sizes": [
             "Large (1-2kg)",
             "Jumbo (2kg+)",
@@ -82,16 +85,17 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "freshwater",
+        "category": "Freshwater",
         "availability": "Year-round supply"
     },
     "catfish": {
-        "name": "Catfish",
+        "name": "African Catfish",
         "alt_names": [
-            "Channel Catfish",
-            "Egyptian Catfish"
+            "North African Catfish",
+            "Sharptooth Catfish",
+            "Karmout"
         ],
-        "description": "Fresh catfish from Egyptian freshwater farms. Popular choice for restaurants and distributors.",
+        "description": "Fresh African catfish (karmout) from Egyptian freshwater farms. Popular choice for restaurants and distributors.",
         "sizes": [
             "Medium (500-800g)",
             "Large (800g+)",
@@ -99,16 +103,17 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "freshwater",
+        "category": "Freshwater",
         "availability": "Year-round supply"
     },
     "lout": {
-        "name": "Lout",
+        "name": "Meagre",
         "alt_names": [
-            "Grouper",
-            "Sea Lout"
+            "Lout",
+            "Croaker",
+            "Corvina"
         ],
-        "description": "Fresh sea lout with firm texture. Premium quality for upscale restaurants and hotels.",
+        "description": "Fresh meagre (lout) with firm white flesh. Premium quality for upscale restaurants and hotels.",
         "sizes": [
             "Medium (400-600g)",
             "Large (600g+)",
@@ -116,16 +121,15 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "saltwater",
+        "category": "Marine",
         "availability": "Year-round supply"
     },
     "eels": {
-        "name": "Eels Fish",
+        "name": "European Eel",
         "alt_names": [
-            "Freshwater Eel",
-            "Egyptian Eel"
+            "Eel"
         ],
-        "description": "Fresh eels from Egyptian freshwater sources. Specialty product for select markets.",
+        "description": "Fresh European eel from the Nile Delta lakes. Specialty product for select markets outside the EU.",
         "sizes": [
             "Medium (300-500g)",
             "Large (500g+)",
@@ -133,7 +137,7 @@
         ],
         "storage_temp": "0 to 4°C",
         "packaging": "EPS Box",
-        "category": "freshwater",
+        "category": "Brackish water",
         "availability": "Year-round supply"
     },
     "_note": {

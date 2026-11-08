@@ -1,0 +1,23 @@
+{
+    "breadcrumb_label": "Ruta de navegación",
+    "back_to_products": "Volver a todos los productos",
+    "also_known_as": "También conocido como",
+    "specs_title": "Especificaciones",
+    "category": "Categoría",
+    "available_sizes": "Tallas disponibles",
+    "storage_temp": "Temperatura de conservación",
+    "packaging": "Embalaje",
+    "availability": "Disponibilidad",
+    "ordering_title": "Pedidos",
+    "cta_title": "¿Le interesa esta especie?",
+    "cta_text": "Indíquenos la talla, la cantidad y el destino, y nuestro equipo de exportación le enviará una cotización.",
+    "cta_button": "Solicitar cotización",
+    "related_title": "Otras especies que exportamos",
+    "view_details": "Ver detalles",
+    "meta_title": "{name} de Egipto: exportación al por mayor",
+    "meta_title_short": "{name} de Egipto",
+    "meta_description_suffix": "Tallas: {sizes}. Embalaje: {packaging}, {temp}.",
+    "meta_description_suffix_short": "Embalaje: {packaging}, {temp}. {availability}.",
+    "list_separator": ", ",
+    "scientific_name": "Nombre científico"
+}

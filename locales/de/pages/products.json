@@ -6,7 +6,9 @@
         "nile": "Nilfische",
         "sea": "Seefische",
         "freshwater": "Süßwasserfische",
-        "saltwater": "Salzwasserfische"
+        "saltwater": "Salzwasserfische",
+        "marine": "Meeresfische",
+        "brackish": "Brackwasserfische"
     },
     "category_fresh": "Frischfisch",
     "weight": "Gewicht",
@@ -29,8 +31,10 @@
     },
     "cta": {
         "title": "Auf der Suche nach einem zuverlässigen Fischlieferanten?",
-        "subtitle": "Wir beliefern über 500 Großhändler, Restaurants und Hotels in mehr als 9 Ländern",
+        "subtitle": "Wir beliefern über 500 Großhändler, Restaurants und Hotels in mehr als {countries} Ländern",
         "button": "Angebot anfordern"
     },
-    "alt_template": "Frischer {product} für Großhandelsexport aus Ägypten – AZAFCO International"
+    "alt_template": "Frischer {product} für Großhandelsexport aus Ägypten – AZAFCO International",
+    "marine": "Meer",
+    "brackish": "Brackwasser"
 }

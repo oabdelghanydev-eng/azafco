@@ -1,8 +1,8 @@
 {
     "title": "Export Markets",
-    "subtitle": "Serving distributors, restaurants, and hotels in +9 countries - we export worldwide",
+    "subtitle": "Serving distributors, restaurants, and hotels in +{countries} countries - we export worldwide",
     "countries_title": "Current Export Destinations",
-    "countries_subtitle": "17+ years experience • We can ship to any country via air or land",
+    "countries_subtitle": "{years}+ years experience • We can ship to any country via air or land",
     "advantages_title": "Why Partner With AZAFCO?",
     "advantages_subtitle": "Egypt's trusted fish supplier - ready to enter new markets worldwide",
     "cta_title": "Ready to Become Our Partner?",

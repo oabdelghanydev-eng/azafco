@@ -1,9 +1,9 @@
 {
     "name": "AZAFCO International",
     "fullName": "AZAFCO International Investment & Development",
-    "description": "Egypt's leading B2B fish exporter serving distributors, restaurants, and hotels with premium fresh fish since 2008.",
-    "workingHours": "24/7 Availability",
-    "workingHoursNote": "Open around the clock - department dependent",
+    "description": "Egyptian B2B fish exporter serving distributors, restaurants, and hotels with premium fresh fish since 2008.",
+    "workingHours": "Sat–Thu 8:00–17:00 (Cairo time)",
+    "workingHoursNote": "WhatsApp for urgent shipments",
     "addresses": {
         "main": {
             "title": "Main Office",
@@ -22,7 +22,7 @@
         "price": "Best competitive wholesale pricing",
         "quality": "ISO & HACCP certified quality",
         "flexibility": "Custom sizes, flexible orders",
-        "availability": "24/7 operations, constant supply",
+        "availability": "Reliable operations, constant supply",
         "service": "Meeting market needs with care"
     }
 }

@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "title": "Frischer Fisch aus Ägypten für EU-Importeure",
+        "description": "Ab 4. Nov. 2026 darf ägyptischer Zuchtfisch in alle 27 EU-Staaten. AZAFCO liefert frische Tilapia, Wolfsbarsch und Meeräsche bei 0–4 °C. Angebot anfragen."
+    },
+    "breadcrumb": "EU-Einkäufer",
+    "hero": {
+        "badge": "Der EU-Markt öffnet am 4. November 2026",
+        "title": "Frischer Fisch aus Ägypten für Importeure und Großhändler in der EU",
+        "subtitle": "AZAFCO exportiert seit 2008 frischen Fisch aus Kafr El-Sheikh. Jetzt, da sich die Europäische Union für ägyptischen Zuchtfisch öffnet, nehmen wir Anfragen von Importeuren, Großhändlern und Distributoren aus ganz Europa entgegen.",
+        "cta_contact": "Angebot anfragen",
+        "cta_species": "Unsere Fischarten"
+    },
+    "opening": {
+        "title": "Was sich am 4. November 2026 ändert",
+        "p1": "Ab dem 4. November 2026 darf ägyptischer Zuchtfisch in alle 27 Mitgliedstaaten der Europäischen Union exportiert werden. Für EU-Einkäufer eröffnet das eine neue Bezugsquelle für frischen Fisch: Ägypten liegt in der Aquakultur auf Platz 1 in Afrika und auf Platz 6 weltweit.",
+        "p2": "Unsere Fabrik steht in Kafr El-Sheikh, dem Gouvernement, das fast die Hälfte des ägyptischen Fischs produziert. Wir arbeiten jeden Tag mit diesem Angebot und sprechen gern mit EU-Einkäufern über Arten, Größen und Mengen."
+    },
+    "about": {
+        "title": "Wer wir sind",
+        "p1": "AZAFCO International Investment & Development ist ein ägyptischer B2B-Exporteur für frischen Fisch, gegründet 2008 in Kafr El-Sheikh. Wir beliefern Distributoren, Großhändler, Restaurants und Hotels – mit einer Kapazität von über 2.500 Tonnen pro Monat und mehr als 500 Kunden.",
+        "p2": "Europa ist für uns nicht neu: Unsere erste Lieferung nach Spanien ging 2018 hinaus. Heute geht unser Fisch an Abnehmer in der Golfregion und im Nahen Osten, und unser Exportteam ist rund um die Uhr erreichbar.",
+        "link": "Mehr über AZAFCO"
+    },
+    "stats": {
+        "years": "Jahre Export",
+        "tonnage": "Tonnen pro Monat",
+        "clients": "Kunden",
+        "employees": "Mitarbeiter"
+    },
+    "species": {
+        "title": "Unsere Fischarten",
+        "subtitle": "Frischer Fisch, sortiert nach den Größen, die Ihr Markt braucht. Individuelle Größen sind für alle Arten möglich.",
+        "sizes_label": "Größen",
+        "note": "Nennen Sie uns die gewünschten Arten und Größen – wir bestätigen, was wir an Ihren Bestimmungsort in der EU liefern können.",
+        "view_all": "Alle Produkte ansehen"
+    },
+    "process": {
+        "title": "So bestellen Sie",
+        "subtitle": "Vier Schritte von der ersten Anfrage bis zur Lieferung",
+        "steps": [
+            {
+                "title": "Anfrage senden",
+                "desc": "Nennen Sie uns Arten, Größen, Mengen und Bestimmungsort – über unsere Kontaktseite, WhatsApp oder E-Mail."
+            },
+            {
+                "title": "Details abstimmen",
+                "desc": "Wir bestätigen Verfügbarkeit, Größen, Verpackung und die Exportdokumente für Ihre Sendung und schicken Ihnen ein Angebot."
+            },
+            {
+                "title": "Sortieren und Verpacken",
+                "desc": "Ihr Fisch wird nach Ihren Größen sortiert und in EPS-Boxen verpackt, durchgehend bei 0–4 °C."
+            },
+            {
+                "title": "Versand",
+                "desc": "Ihre Bestellung reist gekühlt per Luftfracht, und unser Team bleibt bis zur Ankunft mit Ihnen in Kontakt."
+            }
+        ]
+    },
+    "shipping": {
+        "title": "Kühlkette und Verpackung",
+        "subtitle": "Frischer Fisch braucht Sorgfalt in jeder Phase – von unserer Fabrik bis in Ihr Lager",
+        "items": [
+            {
+                "title": "Kühlkette 0–4 °C",
+                "desc": "Temperaturkontrolle vom Fang bis zur Lieferung."
+            },
+            {
+                "title": "EPS-Boxen",
+                "desc": "Der Fisch wird für den Export in isolierte EPS-Boxen verpackt."
+            },
+            {
+                "title": "Luftfracht",
+                "desc": "Wir versenden gekühlten Fisch per Luftfracht an Ziele weltweit."
+            },
+            {
+                "title": "Ganzjährige Versorgung",
+                "desc": "Unsere Fischarten sind das ganze Jahr verfügbar, mit Größen und Mengen nach Ihrem Bedarf."
+            }
+        ]
+    },
+    "quality": {
+        "title": "Qualität und Zertifizierungen",
+        "text": "Lebensmittelsicherheit und Qualitätsmanagement stehen im Mittelpunkt unserer Arbeit und beruhen auf ISO- und HACCP-Systemen. Details finden Sie auf unserer Zertifikatsseite; aktuelle Kopien schicken wir Ihnen gern mit Ihrer Anfrage.",
+        "link": "Unsere Zertifikate ansehen"
+    },
+    "cta": {
+        "title": "Sie kaufen frischen Fisch für den EU-Markt?",
+        "subtitle": "Sagen Sie uns, was Sie brauchen. Unser Exportteam antwortet mit Verfügbarkeit und einem Angebot.",
+        "button": "Exportteam kontaktieren"
+    }
+}

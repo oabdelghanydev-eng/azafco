@@ -1,22 +1,26 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Product } from '../data/products'
-import { FaThermometerHalf, FaBox, FaSearchPlus } from 'react-icons/fa'
+import { Product, categoryLabelKey, categoryBadgeClass } from '../data/products'
+import { FaThermometerHalf, FaBox, FaSearchPlus, FaArrowRight } from 'react-icons/fa'
 import ImageModal from './ImageModal'
 import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/navigation'
 
 interface ProductCardProps {
     product: Product
     index?: number
     showDetails?: boolean
+    /** First cards of a listing that are visible on load: render without the opacity entrance and preload the image (LCP). */
+    aboveFold?: boolean
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetails = true, aboveFold = false }) => {
     const t = useTranslations()
     const locale = useLocale()
     const [isModalOpen, setIsModalOpen] = useState(false)
     const isAr = locale === 'ar'
+    const speciesHref = `/products/${product.slug}`
 
     // Get product data from translations using the translation key
     const productName = t(`data.products.${product.translationKey}.name`)
@@ -33,17 +37,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
 
 
     // Get category label based on locale
-    const getCategoryLabel = () => {
-        if (product.category === 'river') {
-            return t('products_page.freshwater')
-        }
-        return t('products_page.saltwater')
-    }
+    const getCategoryLabel = () => t(categoryLabelKey(product.category))
 
     return (
         <>
             <motion.article
-                initial={{ opacity: 0, y: 20 }}
+                initial={aboveFold ? false : { opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="card group hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
@@ -62,17 +61,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                         alt={b2bAltText}
                         width={400}
                         height={300}
-                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 300px"
                         quality={75}
+                        priority={aboveFold}
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIRAAAgEEAQUBAAAAAAAAAAAAAQIDAAQFESESBhMxQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AyDHY+5vZ44oIJJZJGCoiLskn8Arfs/TWRxkc8cV5cRRySAB0SQKzD8IqUDQAA2P/2Q=="
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {/* Category Badge */}
-                    <span className={`absolute top-2 ${isAr ? 'right-2' : 'left-2'} px-2 py-1 rounded text-xs font-semibold ${product.category === 'river'
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-cyan-500 text-white'
-                        }`}>
+                    <span className={`absolute top-2 ${isAr ? 'right-2' : 'left-2'} px-2 py-1 rounded text-xs font-semibold text-white ${categoryBadgeClass[product.category]}`}>
                         {getCategoryLabel()}
                     </span>
                     {/* Zoom hint */}
@@ -84,7 +81,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                 {/* Product Info */}
                 <div className="p-3 md:p-5">
                     <h3 className="text-base md:text-xl font-bold text-primary-800 mb-1">
-                        {productName}
+                        <Link href={speciesHref} className="hover:text-primary-600 hover:underline underline-offset-2">
+                            {productName}
+                        </Link>
                     </h3>
 
                     {/* Alt Names for SEO - long-tail keywords */}
@@ -123,6 +122,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0, showDetai
                             </div>
                         </>
                     )}
+
+                    {/* Link to the species page */}
+                    <Link
+                        href={speciesHref}
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:text-primary-800 hover:underline underline-offset-2"
+                    >
+                        {t('species_page.view_details')}
+                        <span className="sr-only"> {productName}</span>
+                        <FaArrowRight className="text-xs rtl:rotate-180" aria-hidden="true" />
+                    </Link>
                 </div>
             </motion.article>
 

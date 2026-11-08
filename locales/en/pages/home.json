@@ -1,10 +1,10 @@
 {
     "hero": {
-        "title": "AZAFCO International",
-        "title_subtitle": "Investment & Development",
+        "title": "Fresh Fish Exporter from Egypt",
+        "title_subtitle": "Tilapia, Mullet & Sea Bass",
         "leaders_since": "Leaders in fresh fish export since",
         "subtitle": "Premium Fresh Fish Export from Egypt Worldwide",
-        "description": "Egypt's leading B2B fish exporter serving distributors, restaurants, and hotels globally. +2,500 tons monthly with ISO & HACCP certification. Air & land shipping to any destination.",
+        "description": "Egyptian B2B fish exporter serving distributors, restaurants, and hotels globally. +2,500 tons monthly with ISO & HACCP certification. Air & land shipping to any destination.",
         "cta_whatsapp": "Contact via WhatsApp",
         "cta_partnership": "Request Business Partnership",
         "background_alt": "AZAFCO Fish Processing Factory in Egypt"
@@ -25,12 +25,12 @@
         "subtitle": "Egypt's Trusted Fish Exporter Since 2008",
         "quality": "ISO & HACCP Certified",
         "fresh": "Fresh & Safe",
-        "experience": "17+ Years Experience",
+        "experience": "{years}+ Years Experience",
         "global": "Worldwide Export"
     },
     "cta": {
         "title": "Ready to Start Your Partnership?",
-        "description": "Join 500+ satisfied distributors and restaurants across +9 countries worldwide",
+        "description": "Join 500+ satisfied distributors and restaurants across +{countries} countries worldwide",
         "button": "Start Partnership"
     },
     "features": {

@@ -2,7 +2,7 @@
     "questions": [
         {
             "question": "Quels types de poisson AZAFCO exporte-t-il ?",
-            "answer": "Nous exportons du tilapia du Nil, du bar, du mulet (Bouri), du Mubarakah, du silure, du Buni, du Lout et des anguilles. Produits supplémentaires disponibles sur demande. Tous les produits sont certifiés ISO et HACCP."
+            "answer": "Nous exportons du tilapia du Nil, du bar, du mulet (Bouri), de la carpe commune, du poisson-chat africain, du bunni, du maigre (Lout) et de l’anguille européenne. Produits supplémentaires disponibles sur demande. Tous les produits sont certifiés ISO et HACCP."
         },
         {
             "question": "Dans quels pays exportez-vous ?",
@@ -30,11 +30,11 @@
         },
         {
             "question": "Combien de poisson exportez-vous par mois ?",
-            "answer": "Nous exportons plus de 2 500 tonnes de poisson frais par mois vers 8 pays. Le Koweït reçoit plus de 650 tonnes, les ÉAU plus de 400 tonnes, le Qatar plus de 350 tonnes, l'Irak plus de 175 tonnes et Bahreïn plus de 100 tonnes."
+            "answer": "Nous exportons plus de 2 500 tonnes de poisson frais par mois vers plus de {countries} pays. Le Koweït reçoit plus de 650 tonnes, les ÉAU plus de 400 tonnes, le Qatar plus de 350 tonnes, l'Irak plus de 175 tonnes et Bahreïn plus de 100 tonnes."
         },
         {
             "question": "Depuis combien de temps AZAFCO est-il en activité ?",
-            "answer": "AZAFCO International a été fondée en 2008 à Kafr El-Sheikh, Égypte. Nous avons plus de 17 ans d'expérience et servons plus de 500 clients avec plus de 300 employés."
+            "answer": "AZAFCO International a été fondée en 2008 à Kafr El-Sheikh, Égypte. Nous avons plus de {years} ans d'expérience et servons plus de 500 clients avec plus de 300 employés."
         },
         {
             "question": "Quelles conditions de paiement offrez-vous ?",

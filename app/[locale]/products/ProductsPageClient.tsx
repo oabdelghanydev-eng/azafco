@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Layout from '@/components/Layout';
 import ProductCard from '@/components/ProductCard';
-import { products } from '@/data/products';
+import { products, productCategories } from '@/data/products';
 
 export default function ProductsPageClient() {
     const t = useTranslations();
@@ -15,8 +15,10 @@ export default function ProductsPageClient() {
 
     const categories = [
         { id: 'all', name: t('products_page.filter.all') },
-        { id: 'river', name: t('products_page.filter.freshwater') },
-        { id: 'sea', name: t('products_page.filter.saltwater') },
+        // Only show filters that match at least one product
+        ...productCategories
+            .filter((category) => products.some((p) => p.category === category))
+            .map((category) => ({ id: category, name: t(`products_page.filter.${category}`) })),
     ];
 
     const filteredProducts = selectedCategory === 'all'
@@ -55,19 +57,14 @@ export default function ProductsPageClient() {
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-primary-800 to-primary-600 text-white py-16">
                 <div className="container-custom">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-center"
-                    >
+                    <div className="text-center hero-rise">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4" id="products-page-title">
                             {t('products_page.title')}
                         </h1>
                         <p className="text-xl text-white/80">
                             {t('products_page.subtitle')}
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -98,6 +95,7 @@ export default function ProductsPageClient() {
                                 product={product}
                                 index={index}
                                 showDetails={true}
+                                aboveFold={index < 4}
                             />
                         ))}
                     </div>
