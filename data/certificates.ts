@@ -26,9 +26,9 @@ export interface Certificate {
 
 // Current certificates (owner PDFs in D:\azafco\cert, received 7 Nov 2026).
 // Name on the certificates reads "IZAFCO INTERNATIONAL INVESTMENT & DEVELOPMENT",
-// site "Baltim Industrial Zone, Kafr El Sheikh": both open owner questions.
+// site "Baltim Industrial Zone": both being corrected, so site and image are
+// not shown until the reissued certificates arrive.
 const TUV = 'TÜV AUSTRIA Egypt (EGAC-accredited, IAF MLA)'
-const SITE = 'Baltim Industrial Zone, Kafr El Sheikh, Egypt'
 const SCOPE = 'Production of frozen fish'
 
 export const certificates: Certificate[] = [
@@ -36,39 +36,39 @@ export const certificates: Certificate[] = [
         id: 101,
         name: 'ISO 9001:2015',
         description: 'Quality management system',
-        image: '/certificate/v2/iso-9001-2015.webp',
+        // image withheld: the certificate shows the site address, which is being corrected
+        image: '',
         issuer: TUV,
         validUntil: '2029-03-15',
         group: 'management_system',
         number: 'Tuveg-000039',
         scope: SCOPE,
-        site: SITE,
         publishable: true,
     },
     {
         id: 102,
         name: 'ISO 14001:2015',
         description: 'Environmental management system',
-        image: '/certificate/v2/iso-14001-2015.webp',
+        // image withheld: the certificate shows the site address, which is being corrected
+        image: '',
         issuer: TUV,
         validUntil: '2029-02-19',
         group: 'management_system',
         number: 'Tuveg-000035',
         scope: SCOPE,
-        site: SITE,
         publishable: true,
     },
     {
         id: 103,
         name: 'ISO 45001:2018',
         description: 'Occupational health and safety management system',
-        image: '/certificate/v2/iso-45001-2018.webp',
+        // image withheld: the certificate shows the site address, which is being corrected
+        image: '',
         issuer: TUV,
         validUntil: '2029-02-19',
         group: 'management_system',
         number: 'Tuveg-000036',
         scope: SCOPE,
-        site: SITE,
         publishable: true,
     },
 ]
