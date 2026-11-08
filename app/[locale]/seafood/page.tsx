@@ -17,6 +17,7 @@ import { CheckIcon } from '@/components/v2/icons';
 import SpeciesIndex from '@/components/v2/seafood/SpeciesIndex';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes } from '@/lib/v2/routes';
+import { mediaImage } from '@/lib/v2/media';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -60,6 +61,8 @@ export default async function SeafoodPage({ params }: Props) {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
 
             <PageHero
+                image={mediaImage('photo-seafood-hero', locale)}
+                imagePosition="center 40%"
                 variant="fullbleed"
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}

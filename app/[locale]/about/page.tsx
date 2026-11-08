@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
 import { rfqHref, routes } from '@/lib/v2/routes';
+import { mediaImage } from '@/lib/v2/media';
 import { Breadcrumbs, FeatureGrid, MapPinIcon, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import BusinessArchitecture from '@/components/v2/businesses/BusinessArchitecture';
@@ -30,6 +31,7 @@ export default async function AboutPage({ params }: Props) {
 
             {/* 01 · Opening corporate manifesto */}
             <PageHero
+                image={mediaImage('photo-harvest', locale)}
                 variant="split"
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}

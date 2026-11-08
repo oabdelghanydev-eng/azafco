@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
 import { rfqHref, routes } from '@/lib/v2/routes';
+import { mediaImage } from '@/lib/v2/media';
 import {
     Button,
     CTABand,
@@ -49,12 +51,16 @@ export default async function HomePage({ params }: Props) {
         activeMarkets.map((m) => m.name),
     );
 
+    const delta = mediaImage('photo-delta-landscape', locale);
+
     return (
         <>
             <PageStructuredData locale={locale} pageType="home" />
 
             {/* 01 · Hero */}
             <PageHero
+                image={mediaImage('photo-home-hero', locale)}
+                imagePosition="center 55%"
                 size="2xl"
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
@@ -120,6 +126,19 @@ export default async function HomePage({ params }: Props) {
                 />
                 <Pending block label={t('pending.farm_photo')} className="mt-10" />
             </Section>
+
+            {/* 05b · Full-width photo band (section break between origin and processing).
+                Illustrative photo, so no caption; alt describes what is visible. */}
+            <div className="relative h-[220px] overflow-hidden bg-surface-mist sm:h-[300px] lg:h-[420px]">
+                <Image
+                    src={delta.src}
+                    alt={delta.alt}
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                    style={{ objectPosition: 'center 55%' }}
+                />
+            </div>
 
             {/* 06 · Processing capability */}
             <Section variant="navy" spacing="lg" labelledBy="home-processing">

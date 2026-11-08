@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
     Breadcrumbs,
@@ -16,6 +17,7 @@ import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import Workflow from '@/components/v2/processing/Workflow';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes } from '@/lib/v2/routes';
+import { mediaImage } from '@/lib/v2/media';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -66,6 +68,8 @@ export default async function ProcessingPage({ params }: Props) {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
 
             <PageHero
+                image={mediaImage('photo-processing', locale)}
+                imagePosition="60% center"
                 variant="split"
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
@@ -182,7 +186,16 @@ export default async function ProcessingPage({ params }: Props) {
             </Section>
 
             {/* Site visit (photo gallery removed until professional plant photography exists) */}
-            <Section variant="offwhite" spacing="sm" labelledBy="processing-visit">
+            <Section variant="offwhite" spacing="sm" labelledBy="processing-visit" className="isolate overflow-hidden">
+                {/* Decorative ice texture behind the white card; text sits on bg-white, so contrast is unchanged */}
+                <Image
+                    src={mediaImage('photo-ice-texture', locale).src}
+                    alt=""
+                    aria-hidden="true"
+                    fill
+                    sizes="100vw"
+                    className="-z-10 object-cover opacity-60"
+                />
                 <div className="flex flex-col gap-4 rounded-card border border-line bg-white p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
                     <div>
                         <h2 id="processing-visit" className="text-heading-md text-navy">{t('gallery.visit_title')}</h2>

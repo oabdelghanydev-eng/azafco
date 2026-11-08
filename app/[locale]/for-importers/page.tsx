@@ -11,6 +11,7 @@ import {
     SectionHeader,
 } from '@/components/v2';
 import { routes } from '@/lib/v2/routes';
+import { mediaImage } from '@/lib/v2/media';
 import RfqRequestPanel from '@/components/v2/rfq/RfqRequestPanel';
 import RfqAside from '@/components/v2/rfq/RfqAside';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
@@ -54,6 +55,8 @@ export default async function ForImportersPage({ params }: Props) {
 
             {/* 01 Buyer-first hero */}
             <PageHero
+                image={mediaImage('photo-cold-chain', locale)}
+                imagePosition="45% center"
                 variant="split"
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}

@@ -1,5 +1,6 @@
 /**
- * Site v2 media manifest. Real, professional AZAFCO photos only (no stock).
+ * Site v2 media manifest. Real, professional AZAFCO photos (no stock), plus a small set of
+ * lead-approved illustrative AI photos (`illustrative: true`, ids `photo-*`).
  * Plant photos are produced by `node scripts/v2-images.mjs` into public/images/v2/;
  * species cut-outs live in public/images/species/.
  * Alt text describes only what is visible. Do not add claims (certificates,
@@ -15,7 +16,9 @@ export type MediaSubject =
     | 'quality' // hygiene / inspection context (NOT proof of certification)
     | 'dispatch' // loading bays, refrigerated trucks
     | 'product' // fish close-ups
-    | 'people'; // staff, visits, meetings
+    | 'people' // staff, visits, meetings
+    | 'farm' // ponds, harvest, landscape
+    | 'texture'; // background textures (ice)
 
 export interface MediaItem {
     id: string;
@@ -32,6 +35,11 @@ export interface MediaItem {
     cutout?: boolean;
     /** Owner follow-up attached to this photo (consent, species, etc.) */
     note?: string;
+    /**
+     * AI-generated contextual photo (lead-approved, 8 Nov 2026). Illustrative only: never
+     * caption or alt it as AZAFCO's own farm, plant, staff or equipment.
+     */
+    illustrative?: boolean;
 }
 
 /** Shape accepted by v2 components (PageHero, ProductCard, MediaGallery…) */
@@ -183,6 +191,111 @@ export const media: MediaItem[] = [
         tags: ['sea-bream'],
         cutout: true,
         alt: { en: 'Whole gilthead sea bream, side view', ar: 'سمكة دنيس كاملة، منظر جانبي' },
+    },
+    // ── Illustrative photos (AI-generated, lead-approved 8 Nov 2026) ──
+    // Sources + prompts: docs/images/ai-candidates (MANIFEST.md); built by `python scripts/ai-photos.py`
+    // into public/images/photos/. Generic context, not documentary: alt describes what is
+    // visible and never says "our farm / plant / team". Replace with real shoots when they exist.
+    {
+        id: 'photo-home-hero',
+        src: '/images/photos/home-hero.webp',
+        srcSmall: '/images/photos/home-hero-800.webp',
+        width: 1536,
+        height: 1024,
+        subject: 'farm',
+        illustrative: true,
+        alt: {
+            en: 'Earthen fish ponds with a paddlewheel aerator at sunrise in the Nile Delta',
+            ar: 'أحواض سمكية ترابية تعمل فيها بدّالة تهوية عند شروق الشمس في دلتا النيل',
+        },
+    },
+    {
+        id: 'photo-seafood-hero',
+        src: '/images/photos/seafood-hero.webp',
+        srcSmall: '/images/photos/seafood-hero-800.webp',
+        width: 1536,
+        height: 1024,
+        subject: 'product',
+        illustrative: true,
+        alt: {
+            en: 'Two whole fresh tilapia on crushed ice in a white insulated box',
+            ar: 'سمكتا بلطي طازجتان كاملتان على ثلج مجروش داخل صندوق أبيض معزول',
+        },
+    },
+    {
+        id: 'photo-processing',
+        src: '/images/photos/processing.webp',
+        srcSmall: '/images/photos/processing-800.webp',
+        width: 1536,
+        height: 1024,
+        subject: 'processing',
+        illustrative: true,
+        alt: {
+            en: 'Gloved hands placing a whole tilapia into a crate of crushed ice on a stainless steel table',
+            ar: 'يدان بقفازين تضعان سمكة بلطي كاملة في صندوق به ثلج مجروش فوق طاولة من الستانلس ستيل',
+        },
+    },
+    {
+        id: 'photo-quality',
+        src: '/images/photos/quality.webp',
+        srcSmall: '/images/photos/quality-800.webp',
+        width: 1448,
+        height: 1086,
+        subject: 'quality',
+        illustrative: true,
+        alt: {
+            en: 'A probe thermometer inserted into a whole tilapia on ice in a stainless steel tray',
+            ar: 'ترمومتر بمجسّ مغروس في سمكة بلطي كاملة على الثلج داخل صينية من الستانلس ستيل',
+        },
+    },
+    {
+        id: 'photo-cold-chain',
+        src: '/images/photos/cold-chain.webp',
+        srcSmall: '/images/photos/cold-chain-800.webp',
+        width: 1536,
+        height: 1024,
+        subject: 'dispatch',
+        illustrative: true,
+        alt: {
+            en: 'A pallet of white insulated boxes being loaded into a refrigerated truck at a loading dock at dawn',
+            ar: 'منصة عليها صناديق بيضاء معزولة تُحمَّل في شاحنة مبرّدة على رصيف التحميل عند الفجر',
+        },
+    },
+    {
+        id: 'photo-harvest',
+        src: '/images/photos/harvest.webp',
+        srcSmall: '/images/photos/harvest-800.webp',
+        width: 1536,
+        height: 1024,
+        subject: 'farm',
+        illustrative: true,
+        alt: {
+            en: 'Two workers pulling a seine net with tilapia to the bank of an earthen pond',
+            ar: 'عاملان يسحبان شبكة جرّ فيها أسماك بلطي إلى ضفة حوض ترابي',
+        },
+    },
+    {
+        id: 'photo-delta-landscape',
+        src: '/images/photos/delta-landscape.webp',
+        srcSmall: '/images/photos/delta-landscape-800.webp',
+        width: 1817,
+        height: 866,
+        subject: 'farm',
+        illustrative: true,
+        alt: {
+            en: 'Aerial view of earthen fish ponds with paddlewheel aerators in the Nile Delta',
+            ar: 'منظر جوي لأحواض سمكية ترابية تعمل فيها بدّالات تهوية في دلتا النيل',
+        },
+    },
+    {
+        id: 'photo-ice-texture',
+        src: '/images/photos/ice-texture.webp',
+        srcSmall: '/images/photos/ice-texture-800.webp',
+        width: 1672,
+        height: 941,
+        subject: 'texture',
+        illustrative: true,
+        alt: { en: 'Close-up of crushed flake ice', ar: 'لقطة قريبة لثلج مجروش' },
     },
 ];
 

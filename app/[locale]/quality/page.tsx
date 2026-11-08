@@ -17,6 +17,7 @@ import { DocumentIcon } from '@/components/v2/icons';
 import CertificateLibrary from '@/components/v2/quality/CertificateLibrary';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes, type RfqPrefill } from '@/lib/v2/routes';
+import { mediaImage } from '@/lib/v2/media';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -68,6 +69,8 @@ export default async function QualityPage({ params }: Props) {
             ))}
 
             <PageHero
+                image={mediaImage('photo-quality', locale)}
+                imagePosition="55% center"
                 variant="split"
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
