@@ -6,14 +6,14 @@ import {
     CTABand,
     Eyebrow,
     FeatureGrid,
-    GeoArcs,
+    HeadingPhoto,
     PageHero,
     Pending,
     ProcessSteps,
     Section,
     SectionHeader,
 } from '@/components/v2';
-import { CheckIcon } from '@/components/v2/icons';
+import { BoxIcon, CheckIcon, HarvestNetIcon, KnifeIcon, SortGradeIcon, TruckIcon } from '@/components/v2/icons';
 import SpeciesIndex from '@/components/v2/seafood/SpeciesIndex';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes } from '@/lib/v2/routes';
@@ -43,6 +43,13 @@ export default async function SeafoodPage({ params }: Props) {
     const catalogue = await getCatalogue(locale);
 
     const chain = ['farm', 'select', 'process', 'pack', 'export'] as const;
+    const chainIcons = {
+        farm: <HarvestNetIcon size={24} />,
+        select: <SortGradeIcon size={24} />,
+        process: <KnifeIcon size={24} />,
+        pack: <BoxIcon size={24} />,
+        export: <TruckIcon size={24} />,
+    };
     const requirements = ['format', 'grade', 'weight', 'packing', 'destination'] as const;
     const audience = ['importers', 'distributors', 'foodservice', 'horeca', 'partners'] as const;
 
@@ -76,7 +83,7 @@ export default async function SeafoodPage({ params }: Props) {
             <Section variant="light" spacing="md" labelledBy="seafood-chain">
                 <SectionHeader id="seafood-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
                 <ProcessSteps
-                    steps={chain.map((k) => ({ title: t(`chain.${k}_title`), description: t(`chain.${k}_text`) }))}
+                    steps={chain.map((k) => ({ title: t(`chain.${k}_title`), description: t(`chain.${k}_text`), icon: chainIcons[k] }))}
                 />
             </Section>
 
@@ -99,14 +106,14 @@ export default async function SeafoodPage({ params }: Props) {
             </Section>
 
             {/* Farm / supply: no farm photos yet, so a typographic navy band */}
-            <Section variant="navy" spacing="lg" labelledBy="seafood-farm" className="overflow-hidden">
-                <GeoArcs tone="onDark" className="pointer-events-none absolute -end-40 -top-40 w-[560px] opacity-60" />
+            <Section variant="navy" spacing="lg" labelledBy="seafood-farm">
                 <div className="relative grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                         <Eyebrow className="mb-5">{t('farm.eyebrow')}</Eyebrow>
                         <h2 id="seafood-farm" className="v2-heading font-display text-display-lg">
                             {t('farm.title')}
                         </h2>
+                        <HeadingPhoto id="photo-harvest" />
                     </div>
                     <div className="space-y-5 text-body-lg text-fg-muted lg:col-span-6 lg:col-start-7">
                         <p>{t('farm.text_1')}</p>
@@ -124,6 +131,7 @@ export default async function SeafoodPage({ params }: Props) {
                             {t('processing.title')}
                         </h2>
                         <span aria-hidden="true" className="mt-8 hidden h-1 w-16 rounded-full bg-gold lg:block" />
+                        <HeadingPhoto id="photo-processing" />
                     </div>
                     <div className="lg:col-span-6 lg:col-start-7">
                         <p className="text-body-lg text-fg-muted">{t('processing.text')}</p>
@@ -149,7 +157,17 @@ export default async function SeafoodPage({ params }: Props) {
                 <FeatureGrid
                     columns={3}
                     style="card"
-                    items={requirements.map((k) => ({ title: t(`requirements.${k}_title`), description: t(`requirements.${k}_text`) }))}
+                    items={[
+                        ...requirements.map((k) => ({ title: t(`requirements.${k}_title`), description: t(`requirements.${k}_text`) })),
+                        // Fills the sixth slot of the 3-column grid: a contact link, not a quote button
+                        {
+                            title: tv('fill.spec_title'),
+                            description: tv('fill.spec_text'),
+                            href: routes.contact,
+                            linkLabel: tv('cta.contact_export_team'),
+                            tint: true,
+                        },
+                    ]}
                 />
             </Section>
 

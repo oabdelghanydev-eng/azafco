@@ -13,6 +13,8 @@ export interface Feature {
     linkLabel?: string;
     /** Anchor id on the item (deep links such as /businesses#agriculture) */
     id?: string;
+    /** Tinted tile (e.g. a closing link that fills the last grid slot) */
+    tint?: boolean;
 }
 
 export interface FeatureGridProps {
@@ -48,6 +50,7 @@ export default function FeatureGrid({ items, columns = 3, style = 'plain', headi
                     style === 'card'
                         ? 'rounded-card border border-rule p-6 transition-colors duration-base hover:bg-tint motion-reduce:transition-none'
                         : 'border-t border-rule pt-5',
+                    f.tint && 'rounded-card border-transparent bg-tint-strong p-6 hover:bg-tint',
                 );
                 return (
                     <li key={i} id={f.id} className={f.id ? 'scroll-mt-28' : undefined}>

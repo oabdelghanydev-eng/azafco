@@ -10,6 +10,7 @@ import {
     Section,
     SectionHeader,
 } from '@/components/v2';
+import { marketStepIcons } from '@/components/v2/markets/stepIcons';
 import { routes } from '@/lib/v2/routes';
 import { mediaImage } from '@/lib/v2/media';
 import RfqRequestPanel from '@/components/v2/rfq/RfqRequestPanel';
@@ -67,7 +68,7 @@ export default async function ForImportersPage({ params }: Props) {
             />
 
             {/* 02 Who we serve */}
-            <Section variant="light" labelledBy="fi-serve">
+            <Section variant="offwhite" labelledBy="fi-serve">
                 <SectionHeader id="fi-serve" eyebrow={t('serve.eyebrow')} title={t('serve.title')} intro={t('serve.intro')} />
                 <FeatureGrid columns={4} style="card" items={serve.map((s) => ({ title: s.title, description: s.text }))} />
             </Section>
@@ -75,7 +76,7 @@ export default async function ForImportersPage({ params }: Props) {
             {/* 03 How procurement works */}
             <Section variant="navy" labelledBy="fi-process">
                 <SectionHeader id="fi-process" eyebrow={t('process.eyebrow')} title={t('process.title')} />
-                <ProcessSteps steps={steps.map((s) => ({ title: s.title, description: s.text }))} />
+                <ProcessSteps steps={steps.map((s, i) => ({ title: s.title, description: s.text, icon: marketStepIcons[i] }))} />
             </Section>
 
             {/* 04 What to prepare + 05 Trade details */}

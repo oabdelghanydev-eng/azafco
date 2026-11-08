@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
 import { routes } from '@/lib/v2/routes';
 import { mediaImage } from '@/lib/v2/media';
-import { Breadcrumbs, FeatureGrid, MapPinIcon, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
+import { Breadcrumbs, FeatureGrid, HeadingPhoto, MapPinIcon, PageHero, Pending, Section, SectionHeader } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import BusinessArchitecture from '@/components/v2/businesses/BusinessArchitecture';
 import CorporateCta from '@/components/v2/businesses/CorporateCta';
@@ -45,6 +45,7 @@ export default async function AboutPage({ params }: Props) {
                 <div className="grid gap-8 lg:grid-cols-12 lg:gap-8">
                     <div className="lg:col-span-5">
                         <SectionHeader id="about-story" eyebrow={t('story.eyebrow')} title={t('story.title')} className="mb-0 md:mb-0" />
+                        <HeadingPhoto id="photo-delta-landscape" />
                     </div>
                     <div className="space-y-5 lg:col-span-6 lg:col-start-7">
                         <p className="text-body-lg text-fg">{t('story.p1')}</p>
@@ -91,6 +92,7 @@ export default async function AboutPage({ params }: Props) {
                     eyebrow={t('footprint.eyebrow')}
                     title={t('footprint.title')}
                     body={[t('footprint.p1'), t('footprint.p2')]}
+                    headingPhoto="photo-cold-chain"
                 >
                     <h3 className="text-heading-sm text-fg">{t('footprint.addresses_title')}</h3>
                     <ul className="mt-4 space-y-4">

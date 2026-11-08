@@ -5,7 +5,6 @@ import { rfqHref, type RfqPrefill } from '@/lib/v2/routes';
 import { cn } from '@/lib/v2/cn';
 import Button from './Button';
 import { Container, Eyebrow } from './Layout';
-import GeoArcs from './GeoArcs';
 import { CheckIcon, MailIcon, PhoneIcon, WhatsAppIcon } from './icons';
 
 export interface CTABandProps {
@@ -42,8 +41,7 @@ export default function CTABand({
     const row = 'flex min-h-[48px] items-center gap-4 py-2 text-heading-sm font-medium text-fg hover:underline';
 
     return (
-        <section data-surface="dark" aria-labelledby={headingId} className={cn('relative isolate overflow-hidden bg-navy-900 py-16 text-fg md:py-24', className)}>
-            <GeoArcs tone="onDark" className="absolute -bottom-48 -end-40 -z-10 w-[640px]" />
+        <section data-surface="dark" data-reveal="" aria-labelledby={headingId} className={cn('relative isolate overflow-hidden bg-navy-900 py-16 text-fg md:py-24', className)}>
             <Container grid className="gap-y-12">
                 <div className="col-span-4 sm:col-span-8 lg:col-span-7">
                     <Eyebrow className="mb-5">{eyebrow ?? t('cta_band.eyebrow')}</Eyebrow>

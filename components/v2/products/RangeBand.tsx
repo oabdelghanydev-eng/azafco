@@ -33,9 +33,13 @@ export default function RangeBand({ id, eyebrow, title, intro, action, items, li
     return (
         <Section variant="navy" spacing="md" labelledBy={id}>
             <SectionHeader id={id} eyebrow={eyebrow} title={title} intro={intro} action={action} size="md" />
-            <ul aria-label={listLabel} className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-6 lg:gap-y-8">
+            {/* Mobile: horizontal snap strip with a peek of the next fish; grid from sm */}
+            <ul
+                aria-label={listLabel}
+                className="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-x-3 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:snap-none sm:grid-cols-3 sm:gap-x-4 sm:gap-y-6 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-6 lg:gap-y-8"
+            >
                 {withImage.map((it) => (
-                    <li key={it.slug}>
+                    <li key={it.slug} className="w-[40%] shrink-0 snap-start sm:w-auto">
                         <Link
                             href={it.href}
                             className="group flex h-full flex-col items-center rounded-card px-2 pb-3 pt-1 text-center transition-colors duration-fast hover:bg-white/5 motion-reduce:transition-none"

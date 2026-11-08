@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
@@ -6,14 +7,15 @@ import {
     Button,
     CTABand,
     Eyebrow,
+    FactsStrip,
     FeatureGrid,
-    GeoArcs,
+    HeadingPhoto,
     PageHero,
     Pending,
     Section,
     SectionHeader,
 } from '@/components/v2';
-import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
+import { CheckIcon, CrateIcon, DocumentIcon, KnifeIcon, ScaleIcon, SortGradeIcon, ThermometerIcon, TruckIcon } from '@/components/v2/icons';
 import Workflow from '@/components/v2/processing/Workflow';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes } from '@/lib/v2/routes';
@@ -49,6 +51,14 @@ export default async function ProcessingPage({ params }: Props) {
         { key: 'temperature' },
         { key: 'dispatch', checkpoint: true },
     ] as const;
+    const stepIcons: Record<(typeof steps)[number]['key'], ReactNode> = {
+        receiving: <CrateIcon size={24} />,
+        grading: <SortGradeIcon size={24} />,
+        processing: <KnifeIcon size={24} />,
+        packing: <ScaleIcon size={24} />,
+        temperature: <ThermometerIcon size={24} />,
+        dispatch: <TruckIcon size={24} />,
+    };
     const capabilities = ['pack', 'weight', 'label', 'destination'] as const;
     const checkpoints = ['receiving', 'grading', 'release'] as const;
 
@@ -78,14 +88,23 @@ export default async function ProcessingPage({ params }: Props) {
                 secondaryAction={{ label: t('hero.secondary'), href: routes.quality }}
             />
 
-            {/* Factory introduction: function only; location/dates/capacity wait for reconciled facts */}
-            <Section variant="offwhite" spacing="md" labelledBy="processing-intro">
+            {/* Published facts, computed from the data */}
+            <Section variant="offwhite" spacing="sm" labelledBy="processing-facts">
+                <h2 id="processing-facts" className="sr-only">
+                    {tv('facts.title')}
+                </h2>
+                <FactsStrip />
+            </Section>
+
+            {/* Factory introduction: function only; dates/capacity wait for reconciled facts */}
+            <Section variant="light" spacing="md" labelledBy="processing-intro">
                 <div className="grid gap-8 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                         <Eyebrow className="mb-5">{t('intro.eyebrow')}</Eyebrow>
                         <h2 id="processing-intro" className="v2-heading font-display text-display-lg">
                             {t('intro.title')}
                         </h2>
+                        <HeadingPhoto id="photo-seafood-hero" />
                     </div>
                     <div className="space-y-4 lg:col-span-6 lg:col-start-7">
                         <p className="text-body-lg text-fg-muted">{t('intro.text')}</p>
@@ -94,8 +113,7 @@ export default async function ProcessingPage({ params }: Props) {
                 </div>
             </Section>
 
-            <Section variant="navy" spacing="lg" labelledBy="processing-workflow" className="overflow-hidden">
-                <GeoArcs tone="onDark" className="pointer-events-none absolute -bottom-56 -start-40 w-[560px] opacity-50" />
+            <Section variant="navy" spacing="lg" labelledBy="processing-workflow">
                 <div className="relative">
                     <SectionHeader id="processing-workflow" eyebrow={t('workflow.eyebrow')} title={t('workflow.title')} intro={t('workflow.intro')} />
                     <Workflow
@@ -105,6 +123,7 @@ export default async function ProcessingPage({ params }: Props) {
                             title: t(`workflow.${s.key}_title`),
                             description: t(`workflow.${s.key}_text`),
                             checkpoint: 'checkpoint' in s ? s.checkpoint : false,
+                            icon: stepIcons[s.key],
                         }))}
                     />
                     <div className="mt-6">
@@ -172,6 +191,7 @@ export default async function ProcessingPage({ params }: Props) {
                         <h2 id="processing-coldchain" className="v2-heading font-display text-heading-xl">
                             {t('coldchain.title')}
                         </h2>
+                        <HeadingPhoto id="photo-cold-chain" />
                     </div>
                     <div className="space-y-4 text-body-lg text-fg-muted lg:col-span-6 lg:col-start-7">
                         <p>{t('coldchain.text_1')}</p>

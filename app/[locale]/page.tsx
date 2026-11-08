@@ -5,20 +5,24 @@ import { PageStructuredData } from '@/components/StructuredData';
 import { rfqHref, routes } from '@/lib/v2/routes';
 import { mediaImage } from '@/lib/v2/media';
 import {
+    BoxIcon,
     Button,
     CTABand,
     CheckIcon,
     DocumentIcon,
+    FactsStrip,
     FeatureGrid,
     GlobeIcon,
+    HarvestNetIcon,
     MailIcon,
-    MapPinIcon,
     PageHero,
     Pending,
     ProcessSteps,
     ProofStrip,
     Section,
     SectionHeader,
+    SortGradeIcon,
+    TruckIcon,
 } from '@/components/v2';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import RangeBand from '@/components/v2/products/RangeBand';
@@ -68,19 +72,19 @@ export default async function HomePage({ params }: Props) {
                 primaryAction={{ label: t('hero.primary'), href: routes.products }}
             />
 
-            {/* 02 · Trust strip (verified facts only; the rest stays Pending) */}
+            {/* 02 · Facts (computed from data: species, markets, ISO certificates, plant) + trust strip */}
             <Section variant="offwhite" spacing="sm" labelledBy="home-trust">
                 <h2 id="home-trust" className="sr-only">
                     {t('trust.title')}
                 </h2>
+                <FactsStrip />
                 <ProofStrip
+                    className="mt-8"
                     items={[
-                        { title: t('trust.plant_title'), detail: t('trust.plant_detail'), icon: <MapPinIcon /> },
                         { title: t('trust.register_title'), detail: t('trust.register_detail'), icon: <DocumentIcon /> },
                         { title: t('trust.spec_title'), detail: t('trust.spec_detail'), icon: <CheckIcon /> },
                         { title: t('trust.direct_title'), detail: t('trust.direct_detail'), icon: <MailIcon /> },
                         { title: t('trust.markets_title'), detail: activeMarketList, icon: <GlobeIcon /> },
-                        { title: '', pending: t('pending.certificates') },
                     ]}
                 />
             </Section>
@@ -92,6 +96,7 @@ export default async function HomePage({ params }: Props) {
                     eyebrow={t('seafood.eyebrow')}
                     title={t('seafood.title')}
                     body={[t('seafood.p1'), t('seafood.p2')]}
+                    headingPhoto="photo-seafood-hero"
                     links={[
                         { label: t('seafood.link_overview'), href: routes.seafood },
                         { label: t('seafood.link_products'), href: routes.products },
@@ -121,7 +126,11 @@ export default async function HomePage({ params }: Props) {
                 <SectionHeader id="home-process" eyebrow={t('process.eyebrow')} title={t('process.title')} intro={t('process.intro')} />
                 <ProcessSteps
                     orientation="horizontal"
-                    steps={[1, 2, 3, 4].map((n) => ({ title: t(`process.s${n}_title`), description: t(`process.s${n}_text`) }))}
+                    steps={[1, 2, 3, 4].map((n) => ({
+                        title: t(`process.s${n}_title`),
+                        description: t(`process.s${n}_text`),
+                        icon: [<HarvestNetIcon key="1" size={24} />, <SortGradeIcon key="2" size={24} />, <BoxIcon key="3" size={24} />, <TruckIcon key="4" size={24} />][n - 1],
+                    }))}
                 />
                 <Pending block label={t('pending.farm_photo')} className="mt-10" />
             </Section>
@@ -146,6 +155,7 @@ export default async function HomePage({ params }: Props) {
                     eyebrow={t('processing.eyebrow')}
                     title={t('processing.title')}
                     body={[t('processing.p1'), t('processing.p2')]}
+                    headingPhoto="photo-processing"
                 >
                     <h3 className="text-heading-sm text-fg">{t('processing.req_title')}</h3>
                     <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
@@ -172,6 +182,7 @@ export default async function HomePage({ params }: Props) {
                     eyebrow={t('quality.eyebrow')}
                     title={t('quality.title')}
                     body={[t('quality.p1'), t('quality.p2')]}
+                    headingPhoto="photo-quality"
                 >
                     <Pending block label={t('pending.certificate_cards')} className="mb-6" />
                     <div className="flex flex-wrap gap-3">

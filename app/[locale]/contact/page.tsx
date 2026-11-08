@@ -55,6 +55,68 @@ export default async function ContactPage({ params, searchParams }: Props) {
                     {/* id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working */}
                     <div id="partnership" className="col-span-4 scroll-mt-28 sm:col-span-8 lg:col-span-8">
                         <ContactRoutes prefillSpecies={product} prefillCountry={country} />
+
+                        {/* What happens after the enquiry: 01-02-03 timeline in the main column */}
+                        <section aria-labelledby="ct-next" className="mt-14 border-t border-line pt-10">
+                            <h2 id="ct-next" className="font-display text-heading-md text-navy">
+                                {t('next.title')}
+                            </h2>
+                            <ol className="mt-6 grid gap-8 md:grid-cols-3 md:gap-6">
+                                {steps.map((s, i) => (
+                                    <li key={s} className="relative ps-14 md:ps-0">
+                                        {i < steps.length - 1 ? (
+                                            <span
+                                                aria-hidden="true"
+                                                className="absolute start-5 top-12 -bottom-6 w-px bg-line md:-end-4 md:bottom-auto md:start-14 md:top-5 md:h-px md:w-auto"
+                                            />
+                                        ) : null}
+                                        <span
+                                            aria-hidden="true"
+                                            className="absolute start-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-body-sm font-semibold tabular-nums text-navy md:relative md:mb-4"
+                                        >
+                                            {String(i + 1).padStart(2, '0')}
+                                        </span>
+                                        <p className="pt-2 text-body-sm text-ink-muted md:pt-0">
+                                            <span className="sr-only">{String(i + 1).padStart(2, '0')}. </span>
+                                            {s}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ol>
+                            <Pending label={t('pending.response_sla')} className="mt-4" />
+                        </section>
+
+                        {/* Registered company + privacy note, side by side */}
+                        <div className="mt-12 grid gap-6 md:grid-cols-2">
+                            <section aria-labelledby="ct-trust" className="rounded-card bg-surface-offwhite p-6">
+                                <h2 id="ct-trust" className="font-display text-heading-sm text-navy">
+                                    {t('trust.title')}
+                                </h2>
+                                <dl className="mt-2 grid grid-cols-1 gap-2 text-body-sm">
+                                    <div>
+                                        <dt className="text-caption text-ink-muted">{t('trust.legal_name')}</dt>
+                                        <dd dir="ltr" className="text-start font-medium text-ink rtl:text-right">
+                                            {companyConfig.identity.legalName}
+                                        </dd>
+                                    </div>
+                                    <div>
+                                        <dt className="text-caption text-ink-muted">{t('trust.register')}</dt>
+                                        <dd dir="ltr" className="font-medium text-ink rtl:text-right">
+                                            {companyConfig.registration.commercialRegister}
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </section>
+                            <section aria-labelledby="ct-privacy" className="rounded-card border border-line p-6">
+                                <h2 id="ct-privacy" className="font-display text-heading-sm text-navy">
+                                    {t('privacy.title')}
+                                </h2>
+                                <p className="mt-2 text-body-sm text-ink-muted">{t('privacy.text')}</p>
+                                <Link href={routes.privacy} className="mt-1 inline-flex min-h-[44px] items-center text-body-sm font-semibold text-navy underline underline-offset-4">
+                                    {t('privacy.link')}
+                                </Link>
+                            </section>
+                        </div>
                     </div>
 
                     {/* 04–08 Direct channels, locations, next step, privacy, trust */}
@@ -136,52 +198,6 @@ export default async function ContactPage({ params, searchParams }: Props) {
                             </ul>
                         </section>
 
-                        <section aria-labelledby="ct-next">
-                            <h2 id="ct-next" className="font-display text-heading-sm text-navy">
-                                {t('next.title')}
-                            </h2>
-                            <ol className="mt-3 space-y-3">
-                                {steps.map((s, i) => (
-                                    <li key={s} className="flex gap-3 text-body-sm text-ink-muted">
-                                        <span aria-hidden="true" className="font-semibold text-gold-ink">
-                                            {String(i + 1).padStart(2, '0')}
-                                        </span>
-                                        <span>{s}</span>
-                                    </li>
-                                ))}
-                            </ol>
-                            <Pending label={t('pending.response_sla')} className="mt-3" />
-                        </section>
-
-                        <section aria-labelledby="ct-privacy">
-                            <h2 id="ct-privacy" className="font-display text-heading-sm text-navy">
-                                {t('privacy.title')}
-                            </h2>
-                            <p className="mt-2 text-body-sm text-ink-muted">{t('privacy.text')}</p>
-                            <Link href={routes.privacy} className="mt-1 inline-flex min-h-[44px] items-center text-body-sm font-semibold text-navy underline underline-offset-4">
-                                {t('privacy.link')}
-                            </Link>
-                        </section>
-
-                        <section aria-labelledby="ct-trust" className="border-t border-line pt-6">
-                            <h2 id="ct-trust" className="font-display text-heading-sm text-navy">
-                                {t('trust.title')}
-                            </h2>
-                            <dl className="mt-2 grid grid-cols-1 gap-2 text-body-sm">
-                                <div>
-                                    <dt className="text-caption text-ink-muted">{t('trust.legal_name')}</dt>
-                                    <dd dir="ltr" className="text-start font-medium text-ink rtl:text-right">
-                                        {companyConfig.identity.legalName}
-                                    </dd>
-                                </div>
-                                <div>
-                                    <dt className="text-caption text-ink-muted">{t('trust.register')}</dt>
-                                    <dd dir="ltr" className="font-medium text-ink rtl:text-right">
-                                        {companyConfig.registration.commercialRegister}
-                                    </dd>
-                                </div>
-                            </dl>
-                        </section>
                     </aside>
                 </Container>
             </section>

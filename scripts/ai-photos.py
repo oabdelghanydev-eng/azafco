@@ -26,9 +26,9 @@ OUT = ROOT / "public" / "images" / "photos"
 # slot -> approved source file
 APPROVED = {
     "home-hero": "home-hero-v1.png",
-    "seafood-hero": "seafood-hero-v2.png",
-    "processing": "processing-v1.png",
-    "quality": "quality-v1.png",
+    "seafood-hero": "seafood-hero-fresh-v1.png",
+    "processing": "processing-fresh-v2.png",
+    "quality": "quality-water-v1.png",
     "cold-chain": "cold-chain-v1.png",
     "harvest": "harvest-v2.png",
     "delta-landscape": "delta-landscape-v1.png",

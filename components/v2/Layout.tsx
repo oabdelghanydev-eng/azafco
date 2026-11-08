@@ -48,6 +48,8 @@ export interface SectionProps {
     contained?: boolean;
     as?: ElementType;
     className?: string;
+    /** Gentle fade-up on first scroll into view (components/v2/RevealSections). Default true. */
+    reveal?: boolean;
 }
 
 const surface: Record<SectionVariant, string> = {
@@ -72,12 +74,14 @@ export function Section({
     contained = true,
     as: Tag = 'section',
     className,
+    reveal = true,
 }: SectionProps) {
     return (
         <Tag
             id={id}
             aria-labelledby={labelledBy}
             data-surface={variant === 'navy' ? 'dark' : 'light'}
+            data-reveal={reveal ? '' : undefined}
             className={cn('relative text-fg', surface[variant], space[spacing], className)}
         >
             {contained ? <Container>{children}</Container> : children}

@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from '@/navigation';
 import { companyConfig } from '@/config/company.config';
 import { cn } from '@/lib/v2/cn';
-import { ArrowIcon, Button, Container, Eyebrow, GeoArcs, MailIcon } from '@/components/v2';
+import { ArrowIcon, Button, Container, Eyebrow, MailIcon } from '@/components/v2';
 
 interface Action {
     label: string;
@@ -45,10 +45,10 @@ export default function CorporateCta({
     return (
         <section
             data-surface="dark"
+            data-reveal=""
             aria-labelledby={id}
             className={cn('relative isolate overflow-hidden bg-navy-900 py-16 text-fg md:py-24', className)}
         >
-            <GeoArcs tone="onDark" className="absolute -bottom-48 -end-40 -z-10 w-[640px]" />
             <Container>
                 <div className="max-w-3xl">
                     <Eyebrow className="mb-5">{eyebrow}</Eyebrow>

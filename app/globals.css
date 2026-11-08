@@ -478,3 +478,20 @@ select:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* v2: gentle section reveal (components/v2/RevealSections.tsx).
+   Sections are visible by default; JS hides only sections below the fold
+   (.v2-reveal-pending) and reveals them once. Never under reduced motion or in print. */
+[data-reveal] {
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
+}
+[data-reveal].v2-reveal-pending {
+  opacity: 0;
+  transform: translateY(12px);
+}
+@media (prefers-reduced-motion: reduce), print {
+  [data-reveal].v2-reveal-pending {
+    opacity: 1;
+    transform: none;
+  }
+}

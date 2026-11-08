@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
-import { CertificateCard, Pending } from '@/components/v2';
+import { CertificateCard, DocumentIcon, Pending } from '@/components/v2';
 import { certificates, type Certificate, type CertificateGroup } from '@/data/certificates';
 
 /**
@@ -38,6 +38,14 @@ export interface CertificateLibraryProps {
     locale: string;
     /** Rendered when no certificate is verified + current (production today) */
     empty: ReactNode;
+    /**
+     * The page's single document-pack link. When the last group leaves an empty
+     * slot in the 2-column grid it fills that slot as a tinted tile; otherwise
+     * it renders under the library.
+     */
+    documentLink?: ReactNode;
+    /** Short line shown above the link inside the tile */
+    documentText?: ReactNode;
 }
 
 /**
@@ -48,12 +56,14 @@ export interface CertificateLibraryProps {
  * request button: the quality page carries one document-pack link. Standards without a current certificate
  * appear as <Pending> chips (preview only).
  */
-export default function CertificateLibrary({ locale, empty }: CertificateLibraryProps) {
+export default function CertificateLibrary({ locale, empty, documentLink, documentText }: CertificateLibraryProps) {
     const tp = useTranslations('v2.pending');
     const tc = useTranslations('v2.certificate');
     // Shown only when current AND not explicitly withheld by the owner
     const current = certificates.filter((c) => isCurrent(c.validUntil) && c.publishable !== false);
     const groups = GROUPS.map((g) => ({ g, items: current.filter((c) => groupOf(c) === g) })).filter((x) => x.items.length > 0);
+    const lastGroup = groups[groups.length - 1]?.g;
+    const tileFill = !!documentLink && groups.length > 0 && groups[groups.length - 1].items.length % 2 === 1;
     const missing = STANDARDS.filter((s) => !current.some((c) => c.name.toUpperCase().startsWith(s.toUpperCase())));
 
     return (
@@ -83,12 +93,25 @@ export default function CertificateLibrary({ locale, empty }: CertificateLibrary
                                     />
                                 </li>
                             ))}
+                            {tileFill && g === lastGroup ? (
+                                <li className="hidden sm:block">
+                                    <div className="flex h-full flex-col justify-end rounded-card bg-surface-mist p-6">
+                                        <span className="mb-auto flex h-12 w-12 items-center justify-center rounded-control bg-white text-navy">
+                                            <DocumentIcon size={24} />
+                                        </span>
+                                        {documentText ? <p className="mt-6 text-body-sm text-ink-muted">{documentText}</p> : null}
+                                        <div className="mt-3">{documentLink}</div>
+                                    </div>
+                                </li>
+                            ) : null}
                         </ul>
                     </section>
                 ))
             ) : (
                 empty
             )}
+            {/* Link under the library when it does not fill a grid slot (always on mobile: the tile is sm+ only) */}
+            {documentLink ? <div className={tileFill ? 'sm:hidden' : undefined}>{documentLink}</div> : null}
             {missing.length > 0 ? (
                 <div className="flex flex-wrap gap-2">
                     {missing.map((s) => (

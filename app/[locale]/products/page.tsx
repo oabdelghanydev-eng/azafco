@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, CTABand, FeatureGrid, PageHero, Section, SpeciesRow, SectionHeader } from '@/components/v2';
 import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
-import RangeBand from '@/components/v2/products/RangeBand';
+import { getSpeciesSpec } from '@/lib/v2/specs';
 import { baseUrl, getCatalogue, getSearchNames, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { productCategories } from '@/data/products';
 import { routes } from '@/lib/v2/routes';
@@ -30,6 +30,8 @@ export default async function CataloguePage({ params }: Props) {
         .map((c) => ({ value: c, label: t(`water.${c}`) }));
 
     const items = catalogue.map((p, i) => {
+        // Published product forms (data/specs.ts), shown in the register's fact column
+        const forms = Array.from(new Set(getSpeciesSpec(p.slug).forms.map((f) => f.kind)));
         return {
         slug: p.slug,
         category: p.category,
@@ -42,10 +44,15 @@ export default async function CataloguePage({ params }: Props) {
                 altNames={p.altNames}
                 href={p.href}
                 image={p.image}
-                facts={[
-                    { label: t('card.origin'), value: t('card.origin_value') },
-                    { label: t('card.water'), value: t(`water.${p.category}`) },
-                ]}
+                chips={[t(`water.${p.category}`), t('card.origin_value')]}
+                facts={
+                    forms.length
+                        ? [{ label: t('browser.form_type'), value: forms.map((k) => t(`specs.forms.${k}`)) }]
+                        : [
+                              { label: t('card.origin'), value: t('card.origin_value') },
+                              { label: t('card.water'), value: t(`water.${p.category}`) },
+                          ]
+                }
             />
         ),
         };
@@ -94,16 +101,7 @@ export default async function CataloguePage({ params }: Props) {
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
             />
 
-            {/* Range band: every species cut-out, same scale, linking to its page */}
-            <RangeBand
-                id="catalogue-range"
-                eyebrow={t('range.eyebrow')}
-                title={t('range.title')}
-                intro={t('range.intro_products')}
-                listLabel={t('range.list_label')}
-                items={catalogue.map((p) => ({ slug: p.slug, name: p.name, href: p.href, image: p.image }))}
-            />
-
+            {/* The species register below is the one list on this page (the navy range band stays on Home) */}
             <Section variant="light" spacing="md" labelledBy="catalogue-species">
                 <SectionHeader id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} size="md" />
                 <CatalogueBrowser items={items} categories={categories} />

@@ -23,14 +23,21 @@ export interface SpeciesRowProps {
     /** Short published facts only (origin, water type, indicative grades). No prices. */
     /** A string[] value renders as separate no-wrap items (e.g. size grades) */
     facts: { label: string; value: string | string[] }[];
+    /** Small tags under the names (facts the row already has, e.g. water type, origin) */
+    chips?: string[];
     headingAs?: 'h2' | 'h3';
     className?: string;
 }
 
-export function SpeciesRow({ index, name, scientificName, altNames, href, image, facts, headingAs: H = 'h3', className }: SpeciesRowProps) {
+export function SpeciesRow({ index, name, scientificName, altNames, href, image, facts, chips, headingAs: H = 'h3', className }: SpeciesRowProps) {
     const t = useTranslations('v2.cta');
     return (
-        <article className={cn('grid grid-cols-4 items-center gap-x-6 gap-y-5 py-8 sm:grid-cols-8 lg:grid-cols-12 lg:gap-x-8 lg:py-10', className)}>
+        <article
+            className={cn(
+                'grid grid-cols-4 items-center gap-x-6 gap-y-5 border-s-2 border-transparent px-3 py-8 transition-colors duration-base hover:border-gold hover:bg-navy-50 focus-within:border-gold focus-within:bg-navy-50 motion-reduce:transition-none sm:grid-cols-8 lg:grid-cols-12 lg:gap-x-8 lg:px-5 lg:py-10',
+                className,
+            )}
+        >
             <Link
                 href={href}
                 tabIndex={-1}
@@ -66,6 +73,15 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, image,
                     </p>
                 ) : null}
                 {altNames && altNames.length ? <p className="mt-2 text-body-sm text-fg-muted">{altNames.join(' · ')}</p> : null}
+                {chips && chips.length ? (
+                    <ul className="mt-4 flex flex-wrap gap-2">
+                        {chips.map((c) => (
+                            <li key={c} className="inline-flex items-center rounded-full border border-navy-200 bg-white px-3 py-1 text-caption font-medium text-navy">
+                                {c}
+                            </li>
+                        ))}
+                    </ul>
+                ) : null}
             </div>
 
             <div className="col-span-4 sm:col-span-8 lg:col-span-4">

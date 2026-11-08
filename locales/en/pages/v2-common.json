@@ -75,7 +75,13 @@
     "market": {
         "status_active": "Active market",
         "status_planned": "Planned",
-        "status_paused": "Paused"
+        "status_paused": "Paused",
+        "fact_species": "Species",
+        "fact_species_value": "{count} in our register",
+        "fact_transport": "Transport",
+        "fact_transport_value": "Chilled; mode confirmed in the quotation",
+        "fact_documents": "Documents",
+        "fact_documents_value": "Confirmed per request"
     },
     "certificate": {
         "issuer": "Issuer",
@@ -111,5 +117,19 @@
     },
     "whatsapp_float": {
         "label": "WhatsApp our export desk"
+    },
+    "facts": {
+        "title": "Facts at a glance",
+        "species": "Species in our register",
+        "markets": "Active export markets",
+        "iso": "ISO management system certificates",
+        "iso_note": "{issuer}, valid to {year}",
+        "plant": "Processing plant",
+        "plant_value": "Motobas, Kafr El Sheikh"
+    },
+    "fill": {
+        "spec_title": "Have a full specification?",
+        "spec_text": "Send it to the export team and we will review it with you.",
+        "documents_text": "Copies and further documents are shared on request."
     }
 }

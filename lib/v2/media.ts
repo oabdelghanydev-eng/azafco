@@ -244,8 +244,8 @@ export const media: MediaItem[] = [
         subject: 'quality',
         illustrative: true,
         alt: {
-            en: 'A probe thermometer inserted into a whole tilapia on ice in a stainless steel tray',
-            ar: 'ترمومتر بمجسّ مغروس في سمكة بلطي كاملة على الثلج داخل صينية من الستانلس ستيل',
+            en: 'A gloved hand checking the temperature of the ice-water slurry around whole fresh tilapia',
+            ar: 'قياس حرارة مياه التبريد المثلّجة حول أسماك بلطي كاملة طازجة',
         },
     },
     {

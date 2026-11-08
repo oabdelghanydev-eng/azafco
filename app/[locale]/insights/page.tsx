@@ -139,7 +139,7 @@ export default async function InsightsPage({ params }: Props) {
             ) : null}
 
             {/* 07 Editorial guardrails */}
-            <Section variant="light" spacing="sm" labelledBy="in-standards">
+            <Section variant={rest.length > 0 ? 'light' : 'offwhite'} spacing="sm" labelledBy="in-standards">
                 <div className="max-w-prose-v2 border-s-2 border-gold ps-6">
                     <h2 id="in-standards" className="font-display text-heading-md text-navy">
                         {t('standards.title')}

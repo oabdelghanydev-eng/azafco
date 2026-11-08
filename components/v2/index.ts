@@ -47,4 +47,8 @@ export { default as GeoArcs } from './GeoArcs';
 export type { GeoArcsProps } from './GeoArcs';
 export { default as Logo } from './Logo';
 export type { LogoProps, LogoKind } from './Logo';
+export { default as HeadingPhoto } from './HeadingPhoto';
+export type { HeadingPhotoProps } from './HeadingPhoto';
+export { default as FactsStrip, publishedFacts } from './FactsStrip';
+export type { FactsStripProps } from './FactsStrip';
 export * from './icons';

@@ -75,7 +75,13 @@
     "market": {
         "status_active": "سوق نشط",
         "status_planned": "سوق مخطط",
-        "status_paused": "متوقف مؤقتًا"
+        "status_paused": "متوقف مؤقتًا",
+        "fact_species": "الأصناف",
+        "fact_species_value": "{count} صنفًا في السجل",
+        "fact_transport": "النقل",
+        "fact_transport_value": "مبرّد؛ تُحدَّد الوسيلة في عرض السعر",
+        "fact_documents": "المستندات",
+        "fact_documents_value": "تُؤكَّد مع كل طلب"
     },
     "certificate": {
         "issuer": "جهة الإصدار",
@@ -111,5 +117,19 @@
     },
     "whatsapp_float": {
         "label": "واتساب فريق التصدير"
+    },
+    "facts": {
+        "title": "حقائق سريعة",
+        "species": "صنفًا في سجل أصنافنا",
+        "markets": "أسواق تصدير نشطة",
+        "iso": "شهادات ISO لأنظمة الإدارة",
+        "iso_note": "صادرة من {issuer}، سارية حتى {year}",
+        "plant": "مصنع التجهيز",
+        "plant_value": "مطوبس، كفر الشيخ"
+    },
+    "fill": {
+        "spec_title": "لديك مواصفات كاملة؟",
+        "spec_text": "أرسلها إلى فريق التصدير ونراجعها معك.",
+        "documents_text": "نشارك النسخ والمستندات الإضافية عند الطلب."
     }
 }

@@ -6,6 +6,7 @@ import {
     CTABand,
     Eyebrow,
     FAQAccordion,
+    FactsStrip,
     FeatureGrid,
     PageHero,
     Pending,
@@ -13,7 +14,7 @@ import {
     Section,
     SectionHeader,
 } from '@/components/v2';
-import { DocumentIcon } from '@/components/v2/icons';
+import { ClipboardCheckIcon, CrateIcon, DocumentIcon, ScaleIcon } from '@/components/v2/icons';
 import CertificateLibrary from '@/components/v2/quality/CertificateLibrary';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes, type RfqPrefill } from '@/lib/v2/routes';
@@ -42,6 +43,12 @@ export default async function QualityPage({ params }: Props) {
 
     const system = ['spec', 'receiving', 'process', 'release'] as const;
     const share = ['spec', 'shipment', 'docs'] as const;
+    const systemIcons = {
+        spec: <DocumentIcon size={24} />,
+        receiving: <CrateIcon size={24} />,
+        process: <ScaleIcon size={24} />,
+        release: <ClipboardCheckIcon size={24} />,
+    };
     const faq = ([1, 2, 3, 4, 5] as const).map((n) => ({ id: `q${n}`, question: t(`faq.q${n}`), answer: t(`faq.a${n}`) }));
 
     const localeUrl = `${baseUrl}/${locale}`;
@@ -79,13 +86,22 @@ export default async function QualityPage({ params }: Props) {
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
             />
 
+            {/* Published facts, computed from the data */}
+            <Section variant="offwhite" spacing="sm" labelledBy="quality-facts">
+                <h2 id="quality-facts" className="sr-only">
+                    {tv('facts.title')}
+                </h2>
+                <FactsStrip />
+            </Section>
+
             {/* Quality system: internal procedure, clearly not a certification */}
-            <Section variant="offwhite" spacing="md" labelledBy="quality-system">
+            <Section variant="light" spacing="md" labelledBy="quality-system">
                 <SectionHeader id="quality-system" eyebrow={t('system.eyebrow')} title={t('system.title')} intro={t('system.intro')} />
                 <ProcessSteps
                     steps={system.map((k) => ({
                         title: t(`system.${k}_title`),
                         description: t(`system.${k}_text`),
+                        icon: systemIcons[k],
                         extra: (
                             <span className="inline-flex items-center gap-1.5 rounded-full border border-rule bg-panel px-2.5 py-0.5 text-caption font-medium text-fg-muted">
                                 <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-navy" />
@@ -97,7 +113,7 @@ export default async function QualityPage({ params }: Props) {
                 <p className="mt-10 max-w-prose-v2 border-s-4 border-gold ps-4 text-body text-fg">{t('system.legend_note')}</p>
             </Section>
 
-            <Section variant="light" spacing="md" labelledBy="quality-share">
+            <Section variant="offwhite" spacing="md" labelledBy="quality-share">
                 <SectionHeader id="quality-share" eyebrow={t('share.eyebrow')} title={t('share.title')} />
                 <FeatureGrid
                     columns={3}
@@ -111,7 +127,7 @@ export default async function QualityPage({ params }: Props) {
             </Section>
 
             {/* Certificates library */}
-            <Section variant="offwhite" spacing="lg" labelledBy="quality-certs">
+            <Section variant="light" spacing="lg" labelledBy="quality-certs">
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                         <Eyebrow className="mb-5">{t('certs.eyebrow')}</Eyebrow>
@@ -119,7 +135,7 @@ export default async function QualityPage({ params }: Props) {
                             {t('certs.title')}
                         </h2>
                         <p className="mt-5 text-body-lg text-fg-muted">{t('certs.intro')}</p>
-                        <div className="mt-8 rounded-card border border-line bg-white p-6">
+                        <div className="mt-8 rounded-card border border-line bg-surface-offwhite p-6">
                             <h3 className="text-heading-sm text-navy">{t('certs.standards_title')}</h3>
                             <p className="mt-2 text-body-sm text-ink-muted">{t('certs.standards_text')}</p>
                         </div>
@@ -136,13 +152,14 @@ export default async function QualityPage({ params }: Props) {
                                     <p className="mt-3 text-body text-ink-muted">{t('certs.empty_text')}</p>
                                 </div>
                             }
+                            /* The page's single document request (text link, not a button): fills the empty grid slot */
+                            documentText={tv('fill.documents_text')}
+                            documentLink={
+                                <Button href={rfqHref(DOCUMENTS_PREFILL)} variant="text">
+                                    {tv('cta.request_document_pack')}
+                                </Button>
+                            }
                         />
-                        {/* The page's single document request (text link, not a button) */}
-                        <div className="mt-6">
-                            <Button href={rfqHref(DOCUMENTS_PREFILL)} variant="text">
-                                {tv('cta.request_document_pack')}
-                            </Button>
-                        </div>
                     </div>
                 </div>
             </Section>

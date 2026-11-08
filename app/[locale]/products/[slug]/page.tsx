@@ -250,7 +250,7 @@ export default async function ProductDetailPage({ params }: Props) {
                 </Section>
             ) : null}
 
-            <Section variant="light" spacing="md" labelledBy="product-faq">
+            <Section variant={related.length > 0 ? 'light' : 'offwhite'} spacing="md" labelledBy="product-faq">
                 <div className="mx-auto max-w-3xl">
                     <SectionHeader id="product-faq" title={t('detail.faq_title', { name })} size="md" />
                     <FAQAccordion items={faq} exclusiveName={`faq-${slug}`} />

@@ -11,6 +11,7 @@ import StructuredData from '@/components/StructuredData';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
+import RevealSections from '@/components/v2/RevealSections';
 import '../globals.css';
 
 // Site v2 typography (brief §06): Inter for Latin display + body (variable font),
@@ -180,6 +181,7 @@ export default async function RootLayout({
                         <SiteFooter />
                     </div>
                     <MobileQuoteBar />
+                    <RevealSections />
                 </NextIntlClientProvider>
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}

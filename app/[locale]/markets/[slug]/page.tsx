@@ -9,6 +9,7 @@ import { activeMarketSlugs } from '@/data/markets';
 import { activeMarketConfigs, getActiveMarketConfig, regionOf } from '@/components/v2/markets/marketData';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
+import { marketStepIcons } from '@/components/v2/markets/stepIcons';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 type Item = { title: string; text: string };
@@ -42,6 +43,7 @@ export default async function MarketDetailPage({ params }: Props) {
 
     const t = await getTranslations({ locale, namespace: 'markets_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
+    const tm = await getTranslations({ locale, namespace: 'v2.market' });
     const tAll = await getTranslations({ locale });
     const name = (key: string) => tAll(`data.markets.${key}.country`);
     const country = name(market.key);
@@ -76,7 +78,17 @@ export default async function MarketDetailPage({ params }: Props) {
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-4">
                         <h2 className="sr-only">{t('detail.status_title')}</h2>
-                        <MarketCard name={country} status={market.status} region={t(`regions.${regionOf(market)}`)} countryCode={market.countryCode} />
+                        <MarketCard
+                            name={country}
+                            status={market.status}
+                            region={t(`regions.${regionOf(market)}`)}
+                            countryCode={market.countryCode}
+                            facts={[
+                                { label: tm('fact_species'), value: tm('fact_species_value', { count: products.length }) },
+                                { label: tm('fact_transport'), value: tm('fact_transport_value') },
+                                { label: tm('fact_documents'), value: tm('fact_documents_value') },
+                            ]}
+                        />
                         <Pending block label={t('pending.since')} className="mt-4" />
                     </div>
                     <div className="lg:col-span-8">
@@ -104,7 +116,7 @@ export default async function MarketDetailPage({ params }: Props) {
 
             <Section variant="navy" labelledBy="md-process">
                 <SectionHeader id="md-process" size="md" eyebrow={t('process.eyebrow')} title={t('process.title')} />
-                <ProcessSteps steps={steps.map((s) => ({ title: s.title, description: s.text }))} />
+                <ProcessSteps steps={steps.map((s, i) => ({ title: s.title, description: s.text, icon: marketStepIcons[i] }))} />
             </Section>
 
             {others.length > 0 ? (

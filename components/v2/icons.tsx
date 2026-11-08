@@ -142,3 +142,106 @@ export function ExternalIcon({ className, ...p }: IconProps) {
         </svg>
     );
 }
+
+/* ── Process / supply-chain line icons (24px, 1.5px stroke) ──────────────── */
+
+/** Pond with a harvest net */
+export function HarvestNetIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M3 18c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0" />
+            <path d="M6 14l3-9h6l3 9" />
+            <path d="M7.3 10h9.4M9 5l1.5 9M15 5l-1.5 9" />
+        </svg>
+    );
+}
+
+/** Sorting / grading by size */
+export function SortGradeIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M4 6h16M6.5 12h11M9 18h6" />
+        </svg>
+    );
+}
+
+/** Receiving crate */
+export function CrateIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M3 9h18l-1.5 10h-15z" />
+            <path d="M8 13h8M7 5.5c1.5-1 3.5-1 5 0s3.5 1 5 0" />
+        </svg>
+    );
+}
+
+/** Processing (filleting knife) */
+export function KnifeIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M4 20l7-7" />
+            <path d="M11 13l8.5-8.5c.8 3.5-.7 7-4 9.5L13 15.5z" />
+        </svg>
+    );
+}
+
+/** Packed box */
+export function BoxIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M3.5 7.5L12 3.5l8.5 4v9L12 20.5l-8.5-4z" />
+            <path d="M3.5 7.5L12 11.5l8.5-4M12 11.5v9" />
+        </svg>
+    );
+}
+
+/** Weighing scale */
+export function ScaleIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <rect x="4" y="9" width="16" height="11" rx="2" />
+            <path d="M8 5h8M12 5v4M10 15l2-2.5" />
+        </svg>
+    );
+}
+
+/** Temperature control */
+export function ThermometerIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M10 13.5V5a2 2 0 014 0v8.5a4 4 0 11-4 0z" />
+            <path d="M12 10v6M16.5 6h2M16.5 9h2" />
+        </svg>
+    );
+}
+
+/** Road dispatch */
+export function TruckIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5v3h-7" />
+            <circle cx="6.5" cy="17.5" r="1.75" />
+            <circle cx="17" cy="17.5" r="1.75" />
+        </svg>
+    );
+}
+
+/** Review / compliance check */
+export function ClipboardCheckIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <path d="M9 4.5H6.5v16h11v-16H15" />
+            <path d="M9 3.5h6v2.5H9zM9 13l2 2 4-4.5" />
+        </svg>
+    );
+}
+
+/** Coordination / schedule */
+export function CalendarIcon(p: IconProps) {
+    return (
+        <svg {...base(p)}>
+            <rect x="3.5" y="5" width="17" height="15" rx="2" />
+            <path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6" />
+        </svg>
+    );
+}

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Link } from '@/navigation';
 import { cn } from '@/lib/v2/cn';
 import type { ImageProps } from '@/lib/v2/media';
-import { ArrowIcon, Eyebrow } from '@/components/v2';
+import { ArrowIcon, Eyebrow, HeadingPhoto } from '@/components/v2';
 
 export interface EditorialLink {
     label: string;
@@ -26,6 +26,9 @@ export interface EditorialMediaProps {
     imagePosition?: string;
     /** Bordered link list under the text (min 44px rows) */
     links?: EditorialLink[];
+    /** Text-only layout: small duotone photo (media id) under the heading, desktop only */
+    headingPhoto?: string;
+    headingPhotoPosition?: string;
     /** Buttons / extra blocks under the text */
     children?: ReactNode;
     className?: string;
@@ -51,6 +54,8 @@ export default function EditorialMedia({
     aspect = '4/3',
     imagePosition = 'center',
     links,
+    headingPhoto,
+    headingPhotoPosition,
     children,
     className,
 }: EditorialMediaProps) {
@@ -64,6 +69,7 @@ export default function EditorialMedia({
                         {title}
                     </h2>
                     <span aria-hidden="true" className="mt-8 hidden h-1 w-16 rounded-full bg-gold lg:block" />
+                    {headingPhoto ? <HeadingPhoto id={headingPhoto} position={headingPhotoPosition} /> : null}
                 </div>
                 <div className="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7">
                     {body?.map((p, i) => (
