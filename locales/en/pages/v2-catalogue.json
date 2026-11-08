@@ -23,8 +23,7 @@
         "image_alt": "{name}, product photo",
         "origin": "Origin",
         "origin_value": "Egypt",
-        "water": "Water",
-        "grades": "Indicative grades"
+        "water": "Water"
     },
     "browser": {
         "search_label": "Search species",
@@ -107,16 +106,6 @@
         "spec_note": "Size grades and pack type are indicative and come from our current product list. The grade, form, packing and temperature requirements for your order are confirmed in writing in the quotation.",
         "grading_title": "Grades and options",
         "grading_text": "Grades are set by weight range per piece. Tell us your target range, product form and packing, and we confirm which options can be supplied for your order. We do not show stock or availability labels on the website.",
-        "commercial_title": "Commercial terms",
-        "commercial_caption": "{name}: commercial terms",
-        "moq": "Minimum order quantity",
-        "lead_time": "Lead time",
-        "incoterms": "Incoterms",
-        "price": "Price",
-        "price_value": "Given in a quotation for your specification, volume and destination",
-        "packing_title": "Packing and logistics",
-        "packing_text": "Pack type, net weight, labels, language and the requirements of the destination country are agreed as part of your quotation. Transport method and delivery terms are confirmed for each shipment.",
-        "packing_link": "See how we pack",
         "docs_title": "Quality documents",
         "docs_text": "Tell us which documents your market and your quality team need. We confirm what can be provided for this product and its scope before you order.",
         "docs_cta": "Request documents",
@@ -146,35 +135,9 @@
         "category": "Fresh fish"
     },
     "pending": {
-        "species_id": "{name}: species identification (scientific name)",
-        "product_forms": "{name}: approved product forms, official size-grade table, storage/transport temperature",
-        "spec_sheet": "{name}: spec sheet PDF (download)",
-        "packing_photos": "Photos of actual boxes, labels and palletisation for this product"
+        "species_id": "{name}: species identification (scientific name)"
     },
     "specs": {
-        "matrix_title": "Product forms and grades",
-        "matrix_intro": "One row per product form. Pick a grade to open a quote request with the species, form and grade already filled in. Fields without an approved value are confirmed with the export team for each order.",
-        "matrix_caption": "{name}: product forms, size grades, shelf life, temperature and packing",
-        "col_form": "Product form",
-        "col_grades": "Size grades (weight per piece)",
-        "col_shelf_life": "Shelf life",
-        "col_temp": "Storage and transport temperature",
-        "col_pack": "Pack type",
-        "col_net_weight": "Net weight per box",
-        "col_species": "Species",
-        "indicative": "Indicative, from our current product list",
-        "indicative_note": "Indicative values come from our current product list. The grade, form, packing and temperature for your order are confirmed in writing in the quotation.",
-        "quote_grade": "Quote this grade",
-        "quote_form": "Quote this form",
-        "days": "{count, plural, =1 {1 day} other {# days}}",
-        "hours": "{count, plural, =1 {1 hour} other {# hours}} (typical)",
-        "temp_range": "{min} to {max} °C",
-        "kg": "{value} kg",
-        "moq_short": "min. {value} kg",
-        "units": {
-            "g": "g",
-            "kg": "kg"
-        },
         "forms": {
             "fresh_whole": "Whole, fresh chilled",
             "fresh_gutted": "Gutted, fresh chilled",
@@ -182,41 +145,7 @@
             "frozen_whole": "Whole, frozen",
             "frozen_gutted": "Gutted, frozen",
             "frozen_fillet": "Fillet, frozen"
-        },
-        "grades": {
-            "small": "Small",
-            "medium": "Medium",
-            "large": "Large",
-            "extra_large": "Extra large",
-            "jumbo": "Jumbo"
-        },
-        "pack_types": {
-            "eps_box": "EPS box",
-            "carton": "Carton",
-            "plastic_crate": "Plastic crate",
-            "vacuum_pack": "Vacuum pack",
-            "other": "Other (see quotation)"
-        },
-        "modes": {
-            "air": "Air freight",
-            "reefer_truck": "Reefer truck",
-            "sea": "Sea freight"
-        },
-        "logistics_caption": "{name}: packing and logistics",
-        "box_type": "Box type",
-        "box_dims": "Box outer dimensions",
-        "box_dims_value": "{dims} cm",
-        "boxes_per_pallet": "Boxes per pallet",
-        "shipping_modes": "Shipping modes",
-        "moq_mode": "Minimum order, {mode}",
-        "moq": "Minimum order",
-        "farm_to_plant": "Farm to plant",
-        "plant_to_port": "Plant to airport, port or border",
-        "logistics_empty": "Box size, pallet configuration, shipping mode and minimum order are agreed for each shipment and set out in your quotation.",
-        "pending_logistics": "{name}: box outer dimensions, boxes per pallet, shipping modes, MOQ per mode, farm-to-plant and plant-to-port hours",
-        "summary_eyebrow": "Packing and logistics",
-        "summary_title": "Packing and logistics by species",
-        "summary_intro": "Box, pallet and shipping details per species. Anything not listed is confirmed in your quotation."
+        }
     },
     "range": {
         "eyebrow": "Species",

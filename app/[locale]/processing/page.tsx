@@ -15,7 +15,6 @@ import {
 import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import Workflow from '@/components/v2/processing/Workflow';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { LogisticsSummary } from '@/components/v2/products/SpecMatrix';
 import { rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -181,9 +180,6 @@ export default async function ProcessingPage({ params }: Props) {
                     </div>
                 </div>
             </Section>
-
-            {/* Packing & logistics by species (data/specs.ts): renders nothing until the owner supplies data */}
-            <LogisticsSummary items={catalogue.map((p) => ({ slug: p.slug, name: p.name, href: p.href }))} />
 
             {/* Site visit (photo gallery removed until professional plant photography exists) */}
             <Section variant="offwhite" spacing="sm" labelledBy="processing-visit">

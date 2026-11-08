@@ -14,7 +14,6 @@ import {
     SpecTable,
 } from '@/components/v2';
 import { DocumentIcon } from '@/components/v2/icons';
-import { FormSpecMatrix, PackingLogisticsBlock } from '@/components/v2/products/SpecMatrix';
 import {
     baseUrl,
     getCatalogue,
@@ -187,10 +186,6 @@ export default async function ProductDetailPage({ params }: Props) {
                                 <Pending label={t('pending.species_id', { name })} />
                             </div>
                         ) : null}
-                        <div className="mt-4 flex flex-wrap gap-2">
-                            <Pending label={t('pending.product_forms', { name })} />
-                            <Pending label={t('pending.spec_sheet', { name })} />
-                        </div>
                         {note ? (
                             <p role="note" className="mt-6 rounded-card border-s-4 border-gold bg-white p-5 text-body-sm text-ink">
                                 {note}
@@ -203,48 +198,16 @@ export default async function ProductDetailPage({ params }: Props) {
                             <h3 className="text-heading-md text-navy">{t('detail.grading_title')}</h3>
                             <p className="mt-3 text-body-sm text-ink-muted">{t('detail.grading_text')}</p>
                         </div>
-                        <div>
-                            <h3 className="mb-4 text-heading-md text-navy">{t('detail.commercial_title')}</h3>
-                            <SpecTable
-                                hideCaption
-                                caption={t('detail.commercial_caption', { name })}
-                                rows={[
-                                    { label: t('detail.moq'), value: null },
-                                    { label: t('detail.lead_time'), value: null },
-                                    { label: t('detail.incoterms'), value: null },
-                                    { label: t('detail.price'), value: t('detail.price_value') },
-                                ]}
-                            />
-                        </div>
                     </div>
-                </div>
-
-                {/* Per-form spec matrix (data/specs.ts): one row per product form, "Quote this grade" per grade */}
-                <div className="mt-12 border-t border-line pt-10">
-                    <FormSpecMatrix slug={slug} name={name} headingId="product-forms" />
                 </div>
             </Section>
 
-            {/* Packing & logistics + quality documents */}
+            {/* Quality documents */}
             <Section variant="light" spacing="md" labelledBy="packing-docs">
                 <h2 id="packing-docs" className="sr-only">
-                    {`${t('detail.packing_title')} · ${t('detail.docs_title')}`}
+                    {t('detail.docs_title')}
                 </h2>
-                <div className="grid gap-6 md:grid-cols-2">
-                    <article className="flex flex-col rounded-card border border-line p-6 md:p-8">
-                        <h3 className="v2-heading font-display text-heading-xl">{t('detail.packing_title')}</h3>
-                        <div className="mt-4">
-                            <PackingLogisticsBlock slug={slug} name={name} />
-                        </div>
-                        <div className="mt-4">
-                            <Pending block label={t('pending.packing_photos')} />
-                        </div>
-                        <div className="mt-auto pt-6">
-                            <Button href={routes.processing} variant="text">
-                                {t('detail.packing_link')}
-                            </Button>
-                        </div>
-                    </article>
+                <div className="grid gap-6">
                     <article className="flex flex-col rounded-card border border-line p-6 md:p-8">
                         <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-control bg-navy-50 text-navy">
                             <DocumentIcon size={22} />
