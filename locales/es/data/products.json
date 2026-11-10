@@ -2,8 +2,7 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Tilapia del Nilo",
-            "Perca del Nilo"
+            "Tilapia del Nilo"
         ],
         "description": "Tilapia del Nilo premium de granjas egipcias certificadas. Nuestro producto de exportación #1. Certificado HACCP con cadena de frío completa.",
         "sizes": [
@@ -20,10 +19,11 @@
     "sea_bass": {
         "name": "Lubina",
         "alt_names": [
-            "Lubina Mediterránea",
-            "Lubina Europea"
+            "Róbalo",
+            "Lubina europea",
+            "Llobarro"
         ],
-        "description": "Lubina premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
+        "description": "Lubina europea premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
         "sizes": [
             "Mediano (400-600g)",
             "Grande (600g+)",
@@ -35,13 +35,14 @@
         "availability": "Disponible todo el año"
     },
     "mullet": {
-        "name": "Lisa",
+        "name": "Mújol",
         "alt_names": [
-            "Lisa Gris",
-            "Lisa Rayada",
-            "Pescado Bouri"
+            "Pardete",
+            "Mugil",
+            "Lisa",
+            "Bouri"
         ],
-        "description": "Lisa egipcia fresca, excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
+        "description": "Mújol egipcio fresco, criado en aguas salobres. Excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
         "sizes": [
             "Pequeño (150-250g)",
             "Mediano (250-400g)",
@@ -52,12 +53,13 @@
         "category": "Agua dulce",
         "availability": "Disponible todo el año"
     },
-    "buni": {
-        "name": "Buni",
+    "grass_carp": {
+        "name": "Carpa herbívora",
         "alt_names": [
-            "Dorada"
+            "Amur blanco",
+            "Carpa china"
         ],
-        "description": "Buni de mar premium para clientes exigentes. Excelente textura y perfil de sabor.",
+        "description": "Carpa herbívora fresca (Ctenopharyngodon idella), una carpa de agua dulce criada en Egipto.",
         "sizes": [
             "Mediano (300-500g)",
             "Grande (500g+)",
@@ -65,16 +67,16 @@
         ],
         "storage_temp": "0 a 4°C",
         "packaging": "Caja EPS",
-        "category": "Agua salada",
+        "category": "Agua dulce",
         "availability": "Disponible todo el año"
     },
     "mubarakah": {
-        "name": "Mubarakah",
+        "name": "Carpa común",
         "alt_names": [
-            "Bagre Africano",
-            "Clarias"
+            "Carpa",
+            "Mabrouk"
         ],
-        "description": "Mubarakah fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
+        "description": "Carpa común fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
         "sizes": [
             "Grande (1-2kg)",
             "Jumbo (2kg+)",
@@ -86,12 +88,13 @@
         "availability": "Disponible todo el año"
     },
     "catfish": {
-        "name": "Bagre",
+        "name": "Pez gato africano",
         "alt_names": [
-            "Bagre de Canal",
-            "Bagre Egipcio"
+            "Clarias",
+            "Tinto",
+            "Siluro africano"
         ],
-        "description": "Bagre fresco de granjas de agua dulce egipcias. Opción popular para restaurantes y distribuidores.",
+        "description": "Pez gato africano fresco de granjas egipcias de agua dulce. Opción popular para restaurantes y distribuidores.",
         "sizes": [
             "Mediano (500-800g)",
             "Grande (800g+)",
@@ -103,12 +106,12 @@
         "availability": "Disponible todo el año"
     },
     "lout": {
-        "name": "Lout",
+        "name": "Corvina",
         "alt_names": [
-            "Mero",
-            "Lout de Mar"
+            "Corvina real",
+            "Lout"
         ],
-        "description": "Lout de mar fresco con textura firme. Calidad premium para restaurantes y hoteles de alta gama.",
+        "description": "Corvina fresca de carne blanca y firme. Calidad premium para restaurantes y hoteles de alta gama.",
         "sizes": [
             "Mediano (400-600g)",
             "Grande (600g+)",
@@ -118,6 +121,77 @@
         "packaging": "Caja EPS",
         "category": "Agua salada",
         "availability": "Disponible todo el año"
+    },
+    "thinlip_mullet": {
+        "name": "Morragute",
+        "alt_names": [
+            "Mújol de labio fino",
+            "Tobar"
+        ],
+        "description": "Morragute fresco (Chelon ramada), un mújol criado en aguas salobres en Egipto. Producto distinto de nuestro mújol (Mugil cephalus).",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "bayad_catfish": {
+        "name": "Bagre bayad",
+        "alt_names": [
+            "Bayad"
+        ],
+        "description": "Bagre bayad fresco (Bagrus bajad), un pez gato de agua dulce originario del Nilo. Procede sobre todo de captura salvaje en el Nilo.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "silver_carp": {
+        "name": "Carpa plateada",
+        "alt_names": [
+            "Carpa china plateada"
+        ],
+        "description": "Carpa plateada fresca (Hypophthalmichthys molitrix), una carpa de agua dulce criada en Egipto.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "mirror_carp": {
+        "name": "Carpa espejo",
+        "alt_names": [
+            "Carpa común (espejo)"
+        ],
+        "description": "Carpa espejo fresca, la forma de escamas espejo de la carpa común (Cyprinus carpio), criada en Egipto.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua dulce",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+    },
+    "sea_bream": {
+        "name": "Dorada",
+        "alt_names": [
+            "Dorada real"
+        ],
+        "description": "Dorada fresca (Sparus aurata), un pescado marino criado en Egipto.",
+        "sizes": [
+            "Tamaños personalizados disponibles"
+        ],
+        "storage_temp": "0 a 4°C",
+        "packaging": "Caja EPS",
+        "category": "Agua salada",
+        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
     },
     "eels": {
         "name": "Anguila",

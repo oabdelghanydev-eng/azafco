@@ -2,8 +2,7 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Tilapia du Nil",
-            "Perche du Nil"
+            "Tilapia du Nil"
         ],
         "description": "Tilapia du Nil premium provenant de fermes égyptiennes certifiées. Notre produit d'exportation #1. Certifié HACCP avec chaîne du froid complète.",
         "sizes": [
@@ -20,10 +19,12 @@
     "sea_bass": {
         "name": "Bar",
         "alt_names": [
-            "Bar Méditerranéen",
-            "Bar Européen"
+            "Loup de mer",
+            "Loup",
+            "Bar commun",
+            "Bar européen"
         ],
-        "description": "Bar premium, parfait pour griller, frire et la haute cuisine. Favori des restaurants dans la région du Golfe.",
+        "description": "Bar européen premium, parfait pour griller, frire et la haute cuisine. Favori des restaurants dans la région du Golfe.",
         "sizes": [
             "Moyen (400-600g)",
             "Grand (600g+)",
@@ -35,13 +36,13 @@
         "availability": "Disponible toute l'année"
     },
     "mullet": {
-        "name": "Mulet",
+        "name": "Mulet cabot",
         "alt_names": [
-            "Mulet Gris",
-            "Mulet Rayé",
-            "Poisson Bouri"
+            "Mulet à grosse tête",
+            "Mulet gris",
+            "Bouri"
         ],
-        "description": "Mulet égyptien frais, excellent pour griller et fumer. Favori traditionnel dans la cuisine du Golfe.",
+        "description": "Mulet égyptien frais, élevé en eau saumâtre. Excellent grillé ou fumé. Favori traditionnel de la cuisine du Golfe.",
         "sizes": [
             "Petit (150-250g)",
             "Moyen (250-400g)",
@@ -52,12 +53,13 @@
         "category": "Eau douce",
         "availability": "Disponible toute l'année"
     },
-    "buni": {
-        "name": "Buni",
+    "grass_carp": {
+        "name": "Amour blanc",
         "alt_names": [
-            "Dorade"
+            "Carpe herbivore",
+            "Carpe amour"
         ],
-        "description": "Buni de mer premium pour clients exigeants. Excellente texture et profil gustatif.",
+        "description": "Amour blanc frais (Ctenopharyngodon idella), une carpe d'eau douce élevée en Égypte.",
         "sizes": [
             "Moyen (300-500g)",
             "Grand (500g+)",
@@ -65,16 +67,16 @@
         ],
         "storage_temp": "0 à 4°C",
         "packaging": "Boîte EPS",
-        "category": "Eau salée",
+        "category": "Eau douce",
         "availability": "Disponible toute l'année"
     },
     "mubarakah": {
-        "name": "Mubarakah",
+        "name": "Carpe commune",
         "alt_names": [
-            "Silure Africain",
-            "Clarias"
+            "Carpe",
+            "Mabrouk"
         ],
-        "description": "Mubarakah fraîche, idéale pour les plats traditionnels. Grandes tailles disponibles pour le commerce de gros.",
+        "description": "Carpe commune fraîche, idéale pour les plats traditionnels. Grandes tailles disponibles pour le commerce de gros.",
         "sizes": [
             "Grand (1-2kg)",
             "Jumbo (2kg+)",
@@ -86,12 +88,12 @@
         "availability": "Disponible toute l'année"
     },
     "catfish": {
-        "name": "Silure",
+        "name": "Poisson-chat africain",
         "alt_names": [
-            "Poisson-chat",
-            "Silure Égyptien"
+            "Silure africain",
+            "Clarias"
         ],
-        "description": "Silure frais des fermes d'eau douce égyptiennes. Choix populaire pour restaurants et distributeurs.",
+        "description": "Poisson-chat africain frais des fermes d'eau douce égyptiennes. Choix populaire pour restaurants et distributeurs.",
         "sizes": [
             "Moyen (500-800g)",
             "Grand (800g+)",
@@ -103,12 +105,13 @@
         "availability": "Disponible toute l'année"
     },
     "lout": {
-        "name": "Lout",
+        "name": "Maigre",
         "alt_names": [
-            "Mérou",
-            "Lout de Mer"
+            "Maigre commun",
+            "Courbine",
+            "Lout"
         ],
-        "description": "Lout de mer frais à texture ferme. Qualité premium pour restaurants et hôtels haut de gamme.",
+        "description": "Maigre frais à chair blanche et ferme. Qualité premium pour restaurants et hôtels haut de gamme.",
         "sizes": [
             "Moyen (400-600g)",
             "Grand (600g+)",
@@ -118,6 +121,78 @@
         "packaging": "Boîte EPS",
         "category": "Eau salée",
         "availability": "Disponible toute l'année"
+    },
+    "thinlip_mullet": {
+        "name": "Mulet porc",
+        "alt_names": [
+            "Mulet à lèvres minces",
+            "Tobar"
+        ],
+        "description": "Mulet porc frais (Chelon ramada), élevé en eau saumâtre en Égypte. Un produit distinct de notre mulet cabot (Mugil cephalus).",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "bayad_catfish": {
+        "name": "Bayad",
+        "alt_names": [
+            "Silure bayad"
+        ],
+        "description": "Bayad frais (Bagrus bajad), un poisson-chat d'eau douce originaire du Nil. Principalement issu de la pêche dans le Nil.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "silver_carp": {
+        "name": "Carpe argentée",
+        "alt_names": [
+            "Amour argenté"
+        ],
+        "description": "Carpe argentée fraîche (Hypophthalmichthys molitrix), une carpe d'eau douce élevée en Égypte.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "mirror_carp": {
+        "name": "Carpe miroir",
+        "alt_names": [
+            "Carpe commune (miroir)"
+        ],
+        "description": "Carpe miroir fraîche, la forme miroir de la carpe commune (Cyprinus carpio), élevée en Égypte.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau douce",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+    },
+    "sea_bream": {
+        "name": "Daurade royale",
+        "alt_names": [
+            "Dorade royale",
+            "Daurade"
+        ],
+        "description": "Daurade royale fraîche (Sparus aurata), un poisson marin élevé en Égypte.",
+        "sizes": [
+            "Tailles personnalisées disponibles"
+        ],
+        "storage_temp": "0 à 4°C",
+        "packaging": "Boîte EPS",
+        "category": "Eau salée",
+        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
     },
     "eels": {
         "name": "Anguille",
