@@ -22,8 +22,9 @@ export const config = {
     // - Next.js internals (_next)
     // - Certificate verification pages (/v/)
     // - QR contact card (/qr)
+    // - Hidden offer pages (/offer/...)
     matcher: [
-        '/((?!api|v|qr|_next|_vercel|.*\\..*).*)',
+        '/((?!api|v|qr|offer|_next|_vercel|.*\\..*).*)',
         // Also match root
         '/'
     ]
