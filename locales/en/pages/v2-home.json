@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "AZAFCO International | Egyptian Fish Processing & Export",
-        "description": "AZAFCO International farms, processes, packs and exports Egyptian fish for importers, distributors and foodservice buyers. Request a quote."
+        "description": "AZAFCO International farms, processes, packs and exports Egyptian fish for importers, distributors and foodservice buyers, from first enquiry to export."
     },
     "hero": {
         "eyebrow": "AZAFCO International · Seafood & Aquaculture",
@@ -15,7 +15,7 @@
         "plant_detail": "Industrial Zone, Motobas, Kafr El Sheikh, Egypt",
         "register_title": "Registered Egyptian company",
         "register_detail": "Commercial register No. 100776",
-        "spec_title": "Quotes built on your specification",
+        "spec_title": "Supply offers built on your specification",
         "spec_detail": "Species, size, presentation, packing, volume and destination",
         "direct_title": "Direct line to the export team",
         "direct_detail": "Phone, WhatsApp and email",
@@ -34,7 +34,7 @@
     "products": {
         "eyebrow": "Core products",
         "title": "Main species",
-        "intro": "Start with tilapia, sea bass and mullet, or see the full range. Each species page sets out what to specify (size, presentation, packing), and the details are confirmed in your quote.",
+        "intro": "Start with tilapia, sea bass and mullet, or see the full range. Each species page sets out what to specify (size, presentation, packing), and the details are confirmed in your written offer.",
         "view_all": "View all products"
     },
     "process": {
@@ -54,8 +54,8 @@
         "eyebrow": "Processing & Packing",
         "title": "A plant run around buyer requirements",
         "p1": "Processing and packing take place at our plant in Kafr El Sheikh, with crews working in full hygiene gear.",
-        "p2": "Before we quote, we confirm with you what we can prepare for your market, so the offer you receive is one we can deliver.",
-        "req_title": "What we agree with you before quoting",
+        "p2": "Before we make an offer, we confirm with you what we can prepare for your market, so the offer you receive is one we can deliver.",
+        "req_title": "What we agree with you before making an offer",
         "req_1": "Species and size grade",
         "req_2": "Presentation",
         "req_3": "Pack type and net weight",
@@ -79,7 +79,7 @@
         "i2_title": "Documents",
         "i2_text": "We confirm with you which certificates and export documents the shipment needs.",
         "i3_title": "Transport and timing",
-        "i3_text": "Transport mode and timing are agreed with you before the quote.",
+        "i3_text": "Transport mode and timing are agreed with you before the offer.",
         "link_markets": "Export markets",
         "link_importers": "How buying from AZAFCO works",
         "active_label": "Current export markets:"

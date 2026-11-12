@@ -1,0 +1,79 @@
+/* Design G footer ("ice letters"): effects that are awkward in utilities */
+
+/* Contact rows: subtle wash, title turns gold, arrow fills gold and nudges toward the reading end */
+.row {
+    transition: background-color 0.2s;
+}
+.row:hover {
+    background-color: rgba(255, 255, 255, 0.035);
+}
+.go {
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+.row:hover .go,
+.row:focus-visible .go {
+    background: #f7b500;
+    border-color: #f7b500;
+    color: #001b47;
+    transform: translateX(4px);
+}
+:global([dir='rtl']) .row:hover .go,
+:global([dir='rtl']) .row:focus-visible .go {
+    transform: translateX(-4px);
+}
+.row:hover .title,
+.row:focus-visible .title {
+    color: #f7b500;
+}
+.title {
+    transition: color 0.2s;
+}
+
+/* Photo fade: from navy at the bottom (phone), from navy on the text side (desktop) */
+.fade {
+    background: linear-gradient(180deg, rgba(0, 27, 71, 0) 0%, rgba(0, 27, 71, 0.45) 50%, #001b47 100%);
+}
+@media (min-width: 1024px) {
+    .fade {
+        background: linear-gradient(
+            to right,
+            #001b47 0%,
+            rgba(0, 27, 71, 0.88) 14%,
+            rgba(0, 27, 71, 0.5) 42%,
+            rgba(0, 27, 71, 0.12) 78%,
+            rgba(0, 27, 71, 0) 100%
+        );
+    }
+    :global([dir='rtl']) .fade {
+        background: linear-gradient(
+            to left,
+            #001b47 0%,
+            rgba(0, 27, 71, 0.88) 14%,
+            rgba(0, 27, 71, 0.5) 42%,
+            rgba(0, 27, 71, 0.12) 78%,
+            rgba(0, 27, 71, 0) 100%
+        );
+    }
+}
+
+/* AZAFCO ice wordmark behind the contact block */
+.wordmark {
+    mix-blend-mode: screen;
+    user-select: none;
+    pointer-events: none;
+    line-height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .row,
+    .go,
+    .title {
+        transition: none;
+    }
+    .row:hover .go,
+    .row:focus-visible .go,
+    :global([dir='rtl']) .row:hover .go,
+    :global([dir='rtl']) .row:focus-visible .go {
+        transform: none;
+    }
+}

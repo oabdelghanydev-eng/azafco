@@ -1,20 +1,20 @@
 {
     "meta": {
         "title": "Fish Supply for Importers and Distributors",
-        "description": "How to source fresh fish from AZAFCO: send your specification, we review supply, then quote packing, shipping and documents. Start an RFQ."
+        "description": "How to source fresh fish from AZAFCO: send your specification, we review supply, then confirm packing, shipping and documents in a written offer."
     },
     "breadcrumb": "For Importers",
     "hero": {
         "eyebrow": "For importers and distributors",
-        "title": "A clear procurement path from enquiry to quotation",
+        "title": "A clear procurement path from enquiry to written offer",
         "intro": "Tell us the specification. We evaluate supply, packing and commercial terms, then reply with the next steps.",
-        "primary": "Start an RFQ",
+        "primary": "Send your requirements",
         "secondary": "Talk to the export team"
     },
     "serve": {
         "eyebrow": "Who we work with",
         "title": "Built for professional buyers",
-        "intro": "We supply businesses, not consumers. Each buyer type has its own questions, so we answer them in the quotation.",
+        "intro": "We supply businesses, not consumers. Each buyer type has its own questions, so we answer them in the written offer.",
         "items": [
             {
                 "title": "Seafood importers",
@@ -22,7 +22,7 @@
             },
             {
                 "title": "Wholesalers and distributors",
-                "text": "Clear grading, weights, packing and delivery terms in the quote."
+                "text": "Clear grading, weights, packing and delivery terms in the offer."
             },
             {
                 "title": "Hotels, restaurants and catering",
@@ -47,7 +47,7 @@
                 "text": "We review the product, availability, our ability to meet the specification, market requirements and the relevant export documents."
             },
             {
-                "title": "A clear quotation",
+                "title": "A clear written offer",
                 "text": "Issued on confirmed data: price and its terms, quantity, packing, offer validity, shipping and the expected schedule."
             },
             {
@@ -73,8 +73,8 @@
     },
     "terms": {
         "eyebrow": "Trade details",
-        "title": "Confirmed per quotation, not promised in advance",
-        "intro": "We do not publish price lists or blanket terms. These points are set in each formal quotation:",
+        "title": "Confirmed per offer, not promised in advance",
+        "intro": "We do not publish price lists or blanket terms. These points are set in each formal written offer:",
         "items": [
             {
                 "title": "Price",
@@ -94,7 +94,7 @@
             },
             {
                 "title": "Incoterms",
-                "text": "Agreed in the quotation and contract."
+                "text": "Agreed in the written offer and contract."
             }
         ]
     },
@@ -126,11 +126,11 @@
     },
     "faq": {
         "eyebrow": "Procurement FAQ",
-        "title": "Questions buyers ask before an RFQ",
+        "title": "Questions buyers ask before sending requirements",
         "items": [
             {
                 "q": "What is the minimum order quantity?",
-                "a": "It varies by species and terms. Send your expected volume and we confirm what is possible in the quotation."
+                "a": "It varies by species and terms. Send your expected volume and we confirm what is possible in the written offer."
             },
             {
                 "q": "Which sizes and grades can you supply?",
@@ -142,7 +142,7 @@
             },
             {
                 "q": "Can you pack under our label?",
-                "a": "It is reviewed per product and requirement. Include your label requirements in the RFQ notes."
+                "a": "It is reviewed per product and requirement. Include your label requirements in the notes of your request."
             },
             {
                 "q": "Which quality documents and certificates are available?",
@@ -150,21 +150,21 @@
             },
             {
                 "q": "How is the fish shipped?",
-                "a": "Chilled, by air freight or by road depending on the destination. The transport mode is confirmed in the quotation; we do not publish fixed transit times."
+                "a": "Chilled, by air freight or by road depending on the destination. The transport mode is confirmed in the written offer; we do not publish fixed transit times."
             },
             {
                 "q": "Do you accept recurring supply programmes?",
                 "a": "Yes, they can be discussed based on capacity and your needs. Tell us the frequency you expect."
             },
             {
-                "q": "When will I receive a quotation?",
-                "a": "It depends on how complete the specification is and on current availability. We first review the request, then contact you to confirm the details before a formal quotation."
+                "q": "When will I receive a written offer?",
+                "a": "It depends on how complete the specification is and on current availability. We first review the request, then contact you to confirm the details before a formal written offer."
             }
         ]
     },
     "rfq": {
-        "eyebrow": "Request for quotation",
-        "title": "Start your RFQ",
-        "intro": "Two short steps. Nothing is binding until a formal quotation is agreed."
+        "eyebrow": "Send your requirements",
+        "title": "Start a partnership",
+        "intro": "Two short steps. Nothing is binding until a formal written offer is agreed."
     }
 }

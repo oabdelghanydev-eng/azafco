@@ -1,1 +1,35 @@
-{}
+{
+    "kicker": "Start a partnership",
+    "title_1": "Every shipment",
+    "title_2": "starts with a message",
+    "lead": "Tell us the species, the quantity and the destination, and we take it from there.",
+    "whatsapp": {
+        "title": "WhatsApp",
+        "sub": "Management direct · for fast deals"
+    },
+    "email": {
+        "title": "Email",
+        "sub": "Export team · details and documents"
+    },
+    "factory": {
+        "title": "Factory",
+        "sub": "Visit · see it on the map",
+        "address": "Industrial Zone, Motobas, Kafr El Sheikh"
+    },
+    "new_tab": "(opens in a new tab)",
+    "photo_alt": "Refrigerated truck loading insulated boxes at dawn",
+    "logo_alt": "AZAFCO International",
+    "tagline_1": "Fresh fish exporter",
+    "tagline_2": "from the Nile Delta since 2008",
+    "links_label": "Site links",
+    "langs_label": "Languages",
+    "back_to_top": "Back to top",
+    "copyright": "© 2026 AZAFCO International for Investment and Development S.A.E.",
+    "float_label": "WhatsApp · Management direct",
+    "secondary_label": "More links",
+    "secondary": {
+        "for_importers": "For importers",
+        "contact": "Contact",
+        "privacy": "Privacy policy"
+    }
+}

@@ -1,14 +1,14 @@
 {
     "meta": {
         "title": "Fresh Egyptian Fish for EU Importers & Wholesalers",
-        "description": "From 4 Nov 2026, Egyptian farmed fish can be sold in all 27 EU countries. AZAFCO supplies fresh tilapia, sea bass and mullet at 0–4°C. Request a quote."
+        "description": "From 4 Nov 2026, Egyptian farmed fish can be sold in all 27 EU countries. AZAFCO supplies fresh tilapia, sea bass and mullet at 0–4°C. Start a partnership."
     },
     "breadcrumb": "EU Buyers",
     "hero": {
         "badge": "The EU market opens on 4 November 2026",
         "title": "Fresh Fish from Egypt for EU Importers and Wholesalers",
         "subtitle": "AZAFCO has exported fresh fish from Kafr El Sheikh since 2008. As the European Union opens to Egyptian farmed fish, we are taking enquiries from importers, wholesalers and distributors across Europe.",
-        "cta_contact": "Request a Quote",
+        "cta_contact": "Start a partnership",
         "cta_species": "See Our Species"
     },
     "opening": {
@@ -45,7 +45,7 @@
             },
             {
                 "title": "Agree the details",
-                "desc": "We confirm availability, sizing, packing and the export documents your shipment needs, then send you a quote."
+                "desc": "We confirm availability, sizing, packing and the export documents your shipment needs, then send you a written offer."
             },
             {
                 "title": "Grading and packing",
@@ -86,7 +86,7 @@
     },
     "cta": {
         "title": "Buying fresh fish for the EU market?",
-        "subtitle": "Tell us what you need. Our export team will reply with availability and a quote.",
+        "subtitle": "Tell us what you need. Our export team will reply with availability and a written offer.",
         "button": "Contact Our Export Team"
     }
 }

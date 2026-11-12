@@ -1,1 +1,17 @@
-{}
+{
+    "logo_alt": "AZAFCO International",
+    "home_label": "AZAFCO International, home",
+    "nav_label": "Main",
+    "nav": {
+        "about": "About us",
+        "fish": "Our fish",
+        "chain": "Value chain",
+        "quality": "Quality",
+        "markets": "Markets",
+        "contact": "Contact"
+    },
+    "lang_aria": "Language: {name}",
+    "lang_list_label": "Choose a language",
+    "menu_open": "Menu",
+    "menu_close": "Close"
+}

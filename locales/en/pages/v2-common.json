@@ -42,7 +42,7 @@
         "loading": "Loading…",
         "opens_new_tab": "(opens in a new tab)",
         "contact_export_team": "Contact our export team",
-        "prepare_quote": "Prepare a quote request",
+        "prepare_quote": "Send your requirements",
         "request_document_pack": "Request the document pack"
     },
     "footer": {
@@ -79,7 +79,7 @@
         "fact_species": "Species",
         "fact_species_value": "{count} in our register",
         "fact_transport": "Transport",
-        "fact_transport_value": "Chilled; mode confirmed in the quotation",
+        "fact_transport_value": "Chilled; mode confirmed in the written offer",
         "fact_documents": "Documents",
         "fact_documents_value": "Confirmed per request"
     },
@@ -107,7 +107,7 @@
         "after_title": "What happens next",
         "after_1": "Your requirements are reviewed by the export team",
         "after_2": "We contact you to confirm the details",
-        "after_3": "Quotes are subject to confirmation of availability and specification"
+        "after_3": "Offers are subject to confirmation of availability and specification"
     },
     "faq": {
         "toggle_hint": "Show answer"

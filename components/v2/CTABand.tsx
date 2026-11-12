@@ -11,10 +11,16 @@ export interface CTABandProps {
     /** Defaults come from v2.cta_band. The heading is always "Talk to our export team". */
     eyebrow?: ReactNode;
     intro?: ReactNode;
-    /** Prefill for the secondary quote link (product page → { product: slug, type: 'product' }) */
+    /** Prefill for the secondary requirements link (product page → { product: slug, type: 'product' }) */
     prefill?: RfqPrefill;
-    /** Show the secondary "Prepare a quote request" link (default true; off on corporate/editorial pages) */
+    /** Show the secondary "Send your requirements" link (default true; off on corporate/editorial pages) */
     showQuote?: boolean;
+    /**
+     * 'closing' (default): the band is the last block before the G footer, whose
+     * contact block already lists WhatsApp / email, so the band renders nothing.
+     * 'inline': render the full band (mid-page use, or a page without the G footer).
+     */
+    placement?: 'closing' | 'inline';
     /** "What happens next" list; default 3 neutral steps (no response-time promise) */
     reassurance?: string[];
     headingId?: string;
@@ -22,9 +28,13 @@ export interface CTABandProps {
 }
 
 /**
- * Closing contact band: the export team's phone / WhatsApp / email are the main
- * content; the quote request (/rfq, a prepared email/WhatsApp message) is a quiet
+ * Contact band: the export team's phone / WhatsApp / email are the main
+ * content; the requirements request (/rfq, a prepared email/WhatsApp message) is a quiet
  * secondary outline link. Contact data comes from config/company.config.ts.
+ *
+ * Every current page uses it as the page-closing block, directly above the G footer
+ * (same channels), so by default (placement="closing") it renders nothing to avoid a
+ * duplicate contact block. Pass placement="inline" to show it.
  */
 export default function CTABand({
     eyebrow,
@@ -34,8 +44,10 @@ export default function CTABand({
     reassurance,
     headingId = 'cta-band-title',
     className,
+    placement = 'closing',
 }: CTABandProps) {
     const t = useTranslations('v2');
+    if (placement === 'closing') return null;
     const steps = reassurance ?? [t('cta_band.after_1'), t('cta_band.after_2'), t('cta_band.after_3')];
     const c = companyConfig.contact;
     const row = 'flex min-h-[48px] items-center gap-4 py-2 text-heading-sm font-medium text-fg hover:underline';

@@ -1,13 +1,13 @@
 {
     "meta": {
-        "title": "Request a Quote for Fresh Fish from Egypt",
-        "description": "Send your seafood requirement to AZAFCO's export team: species, size, packing, volume and destination. Quotes are confirmed per request."
+        "title": "Send Your Fresh Fish Requirements to AZAFCO, Egypt",
+        "description": "Send your seafood requirement to AZAFCO's export team: species, size, packing, volume and destination. Offers are confirmed per request."
     },
-    "breadcrumb": "Request a Quote",
+    "breadcrumb": "Send your requirements",
     "hero": {
-        "eyebrow": "Request for quotation",
+        "eyebrow": "Start a partnership",
         "title": "Send your request from your company email or WhatsApp",
-        "intro": "We reply to requests sent from a company email address or a business WhatsApp number, and we confirm the buyer before we quote. Open the prepared message, complete the blank lines and send it."
+        "intro": "We reply to requests sent from a company email address or a business WhatsApp number, and we confirm the buyer before we make an offer. Open the prepared message, complete the blank lines and send it."
     },
     "short_hero": {
         "corporate_title": "Corporate and partnership enquiries",
@@ -20,9 +20,9 @@
         "steps": [
             "The export team reviews your requirement against current availability and the specification.",
             "We contact you to confirm the details and any open points.",
-            "If we can supply, you receive a formal quotation. Price, quantity, packing and terms are confirmed in it."
+            "If we can supply, you receive a formal written offer. Price, quantity, packing and terms are confirmed in it."
         ],
-        "no_promise": "Sending a request does not commit you or us to an order. Prices and availability are confirmed only in a written quotation.",
+        "no_promise": "Sending a request does not commit you or us to an order. Prices and availability are confirmed only in a written offer.",
         "prepare_title": "Helpful to have ready",
         "prepare": [
             "Species and size grade",
@@ -35,7 +35,7 @@
     },
     "switch": {
         "to_corporate": "Not buying seafood? <link>Send a corporate enquiry</link>",
-        "to_seafood": "Looking to buy seafood? <link>Request a quote instead</link>"
+        "to_seafood": "Looking to buy seafood? <link>Send your requirements instead</link>"
     },
     "request": {
         "title": "Your request, ready to send",
@@ -55,18 +55,18 @@
     },
     "mail": {
         "greeting": "Hello AZAFCO export team,",
-        "intro_quote": "Please quote for the following:",
+        "intro_quote": "We would like to discuss supply of the following:",
         "intro_specs": "Please send the specifications for the following:",
         "intro_corporate": "I would like to discuss the following:",
         "intro_documents": "Please send the following documents:",
-        "subject_quote": "Request for quotation",
-        "subject_quote_for": "Request for quotation: {item}",
+        "subject_quote": "Supply requirements",
+        "subject_quote_for": "Supply requirements: {item}",
         "subject_specs": "Specification request",
         "subject_specs_for": "Specification request: {item}",
         "subject_corporate": "Corporate enquiry",
         "subject_documents": "Document request",
         "subject_documents_for": "Document request: {item}",
-        "wa_intro_quote": "Hello AZAFCO, I would like a quotation.",
+        "wa_intro_quote": "Hello AZAFCO, I would like to discuss a supply partnership.",
         "wa_intro_specs": "Hello AZAFCO, I would like the specifications.",
         "wa_intro_corporate": "Hello AZAFCO, I have a corporate enquiry.",
         "wa_intro_documents": "Hello AZAFCO, I would like to request documents.",

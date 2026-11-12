@@ -1,1 +1,15 @@
-{}
+{
+    "eyebrow": "Quality",
+    "title": "Three valid ISO certificates",
+    "intro": "Issued to our plant in Motobas by TÜV AUSTRIA Egypt. <copies>Copies are available on request</copies>.",
+    "copiesLabel": "Copies are available on request: email the export team (details and documents) at business@azafco.com.eg",
+    "copiesSubject": "ISO certificates",
+    "certificate": "Certificate",
+    "validUntil": "Valid until {date}",
+    "validUntilInline": "valid until {date}",
+    "certs": {
+        "iso9001": { "code": "ISO 9001:2015", "name": "Quality management", "no": "Tuveg-000039", "until": "March 2029" },
+        "iso14001": { "code": "ISO 14001:2015", "name": "Environmental management", "no": "Tuveg-000035", "until": "February 2029" },
+        "iso45001": { "code": "ISO 45001:2018", "name": "Occupational health and safety", "no": "Tuveg-000036", "until": "February 2029" }
+    }
+}

@@ -26,9 +26,12 @@ const inter = Inter({
 // Design G (navy/gold): Manrope for Latin, IBM Plex Sans Arabic for Arabic
 const manrope = Manrope({
     subsets: ['latin', 'latin-ext', 'cyrillic'],
-    weight: ['500', '600', '700', '800'],
+    weight: ['400', '500', '600', '700', '800'],
     display: 'swap',
     variable: '--font-manrope',
+    // No auto 'Manrope Fallback' (local Arial): Arial has Arabic glyphs and would catch
+    // Arabic text before IBM Plex Sans Arabic in the .g-font stack.
+    adjustFontFallback: false,
 });
 
 const plexArabic = IBM_Plex_Sans_Arabic({

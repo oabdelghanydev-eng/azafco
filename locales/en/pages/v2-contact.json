@@ -12,9 +12,9 @@
     "routes": {
         "legend": "What is your enquiry about?",
         "intro": "Each route prepares a message for you to send from your company email or WhatsApp, so we can see who the request comes from.",
-        "seafood_title": "Seafood supply quote",
+        "seafood_title": "Seafood supply partnership",
         "seafood_text": "For importers and procurement teams: product, size, packing, quantity, destination and timing.",
-        "seafood_action": "Prepare a quote request",
+        "seafood_action": "Send your requirements",
         "documents_title": "Request documents",
         "documents_text": "Specifications, certificates or the company profile. A short request: no species or volume needed.",
         "documents_action": "Prepare a document request",
@@ -42,12 +42,12 @@
         "steps": [
             "The right team reviews your enquiry.",
             "We contact you to confirm the details.",
-            "For supply requests, a formal quotation follows if we can supply."
+            "For supply requests, a formal written offer follows if we can supply."
         ]
     },
     "privacy": {
         "title": "Why we ask for this information",
-        "text": "We use your contact details and requirement only to answer your enquiry and prepare a quotation, as described in our privacy policy.",
+        "text": "We use your contact details and requirement only to answer your enquiry and prepare a supply offer, as described in our privacy policy.",
         "link": "Read the privacy policy"
     },
     "trust": {
@@ -69,7 +69,7 @@
                 "text": "Species pages and specifications."
             },
             {
-                "title": "Request a quote",
+                "title": "Start a partnership",
                 "text": "Send your requirement to the export team."
             },
             {

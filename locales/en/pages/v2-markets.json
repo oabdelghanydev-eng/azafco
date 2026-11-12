@@ -64,8 +64,8 @@
                 "text": "We check the request against availability, plant capability and the destination's requirements."
             },
             {
-                "title": "Quotation",
-                "text": "Price, quantity, packing, terms and offer validity are set out in a formal quotation."
+                "title": "Written offer",
+                "text": "Price, quantity, packing, terms and offer validity are set out in a formal written offer."
             },
             {
                 "title": "Coordination",
@@ -80,7 +80,7 @@
     "transport": {
         "eyebrow": "Transport",
         "title": "How fish travels",
-        "intro": "Fresh fish is shipped chilled. The transport mode for each destination is confirmed in the quotation.",
+        "intro": "Fresh fish is shipped chilled. The transport mode for each destination is confirmed in the written offer.",
         "modes": [
             {
                 "title": "Air freight",
@@ -103,7 +103,7 @@
             },
             {
                 "title": "Clear responsibilities",
-                "text": "Who handles export documents, import clearance and delivery is set out in the quotation and contract, not assumed."
+                "text": "Who handles export documents, import clearance and delivery is set out in the written offer and contract, not assumed."
             },
             {
                 "title": "Working with new distributors",
@@ -139,7 +139,7 @@
             },
             {
                 "title": "Transport and cold chain",
-                "text": "Chilled shipment by the transport mode confirmed in the quotation."
+                "text": "Chilled shipment by the transport mode confirmed in the written offer."
             },
             {
                 "title": "Documents",

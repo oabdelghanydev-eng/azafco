@@ -1,1 +1,41 @@
-{}
+{
+  "groupLabel": "Hero messages",
+  "slides": [
+    {
+      "label": "From the Nile Delta to the world",
+      "kicker": "Fresh fish exporter since 2008",
+      "title": "Fresh Egyptian fish for the world’s importers",
+      "text": "We farm, pack and export twelve species from the Nile Delta, whole and chilled on ice.",
+      "alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+    },
+    {
+      "label": "Integrated from pond to pallet",
+      "kicker": "Value chain",
+      "title": "One company from the pond to the pallet",
+      "text": "Farming, grading, packing and dispatch are run by one team in Motobas, Kafr El Sheikh.",
+      "alt": "Aerial view of earthen fish ponds with aerators and palms in the Nile Delta"
+    },
+    {
+      "label": "Twelve species, graded by weight",
+      "kicker": "Our fish",
+      "title": "Twelve farmed fish species, graded by weight",
+      "text": "From Nile tilapia to sea bass and sea bream, sold whole and fresh chilled.",
+      "alt": "Whole fresh fish on crushed ice seen from above"
+    },
+    {
+      "label": "Seven markets by air and land",
+      "kicker": "Global presence",
+      "title": "Seven export markets, served by air and land",
+      "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon.",
+      "alt": "Refrigerated truck loading insulated boxes at a dock at dawn"
+    }
+  ],
+  "ctaPartner": "Start a partnership",
+  "ctaFish": "See our fish",
+  "stats": [
+    { "value": "12", "label": "farmed fish species" },
+    { "value": "7", "label": "export markets served today" },
+    { "value": "2008", "label": "year founded" },
+    { "value": "2,500", "label": "tonnes a month, packing capacity" }
+  ]
+}

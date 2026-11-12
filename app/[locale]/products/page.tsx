@@ -154,6 +154,7 @@ export default async function CataloguePage({ params }: Props) {
                 eyebrow={t('custom.eyebrow')}
                 intro={t('custom.intro')}
                 prefill={{ type: 'specifications' }}
+                placement="inline"
             />
         </>
     );
