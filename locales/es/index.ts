@@ -17,6 +17,14 @@ import faqPage from './pages/faq.json';
 import guides from './pages/guides.json';
 // TODO translate: v2 shell strings use English until translated
 import homeV2Ns from '../en/pages/v2-home.json';
+import gHeaderNs from '../en/pages/g-header.json';
+import gFooterNs from '../en/pages/g-footer.json';
+import gHeroNs from '../en/pages/g-hero.json';
+import gAboutNs from '../en/pages/g-about.json';
+import gFishNs from '../en/pages/g-fish.json';
+import gChainNs from '../en/pages/g-chain.json';
+import gQualityNs from '../en/pages/g-quality.json';
+import gMarketsNs from '../en/pages/g-markets.json';
 import aboutV2Ns from '../en/pages/v2-about.json';
 import businessesV2Ns from '../en/pages/v2-businesses.json';
 import seafoodV2Ns from '../en/pages/v2-seafood.json';
@@ -64,6 +72,14 @@ const messages = {
     // Site v2 shell (header, footer, CTAs, component kit)
     v2: v2Common,
     home_v2: homeV2Ns,
+    g_header_v2: gHeaderNs,
+    g_footer_v2: gFooterNs,
+    g_hero_v2: gHeroNs,
+    g_about_v2: gAboutNs,
+    g_fish_v2: gFishNs,
+    g_chain_v2: gChainNs,
+    g_quality_v2: gQualityNs,
+    g_markets_v2: gMarketsNs,
     about_v2: aboutV2Ns,
     businesses_v2: businessesV2Ns,
     seafood_v2: seafoodV2Ns,

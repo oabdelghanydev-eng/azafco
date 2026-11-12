@@ -1,35 +1,13 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
-import { rfqHref, routes } from '@/lib/v2/routes';
-import { mediaImage } from '@/lib/v2/media';
-import {
-    BoxIcon,
-    Button,
-    CTABand,
-    CheckIcon,
-    DocumentIcon,
-    FactsStrip,
-    FeatureGrid,
-    GlobeIcon,
-    HarvestNetIcon,
-    MailIcon,
-    PageHero,
-    Pending,
-    ProcessSteps,
-    ProofStrip,
-    Section,
-    SectionHeader,
-    SortGradeIcon,
-    TruckIcon,
-} from '@/components/v2';
-import EditorialMedia from '@/components/v2/home/EditorialMedia';
-import RangeBand from '@/components/v2/products/RangeBand';
-import { getCatalogue } from '@/components/v2/products/catalogue';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
-import { activeMarketConfigs } from '@/components/v2/markets/marketData';
-import { Link } from '@/navigation';
+import GHero from '@/components/g/home/GHero';
+import GAbout from '@/components/g/home/GAbout';
+import GFish from '@/components/g/home/GFish';
+import GChain from '@/components/g/home/GChain';
+import GQuality from '@/components/g/home/GQuality';
+import GMarkets from '@/components/g/home/GMarkets';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -41,224 +19,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return buildPageMetadata({ locale, path: '', title: t('title'), description: t('description') });
 }
 
+/** Home page, design G (navy/gold). Sections in the order of the approved G canvas boards. */
 export default async function HomePage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const t = await getTranslations({ locale, namespace: 'home_v2' });
-    const tv = await getTranslations({ locale, namespace: 'v2' });
-    const tc = await getTranslations({ locale, namespace: 'catalogue_v2.range' });
-    const catalogue = await getCatalogue(locale);
-    const tm = await getTranslations({ locale, namespace: 'data.markets' });
-    // Active markets from config/company.config.ts (same source as /markets)
-    const activeMarkets = activeMarketConfigs.map((m) => ({ key: m.key, name: tm(`${m.key}.country`) }));
-    const activeMarketList = new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }).format(
-        activeMarkets.map((m) => m.name),
-    );
-
-    const delta = mediaImage('photo-delta-landscape', locale);
 
     return (
-        <>
+        <div className="g-scope">
             <PageStructuredData locale={locale} pageType="home" />
-
-            {/* 01 · Hero */}
-            <PageHero
-                image={mediaImage('photo-home-hero', locale)}
-                imagePosition="center 55%"
-                size="2xl"
-                eyebrow={t('hero.eyebrow')}
-                title={t('hero.title')}
-                intro={t('hero.intro')}
-                primaryAction={{ label: t('hero.primary'), href: routes.products }}
-            />
-
-            {/* 02 · Facts (computed from data: species, markets, ISO certificates, plant) + trust strip */}
-            <Section variant="offwhite" spacing="sm" labelledBy="home-trust">
-                <h2 id="home-trust" className="sr-only">
-                    {t('trust.title')}
-                </h2>
-                <FactsStrip />
-                <ProofStrip
-                    className="mt-8"
-                    items={[
-                        { title: t('trust.register_title'), detail: t('trust.register_detail'), icon: <DocumentIcon /> },
-                        { title: t('trust.spec_title'), detail: t('trust.spec_detail'), icon: <CheckIcon /> },
-                        { title: t('trust.direct_title'), detail: t('trust.direct_detail'), icon: <MailIcon /> },
-                        { title: t('trust.markets_title'), detail: activeMarketList, icon: <GlobeIcon /> },
-                    ]}
-                />
-            </Section>
-
-            {/* 03 · Seafood dominance */}
-            <Section variant="light" labelledBy="home-seafood">
-                <EditorialMedia
-                    id="home-seafood"
-                    eyebrow={t('seafood.eyebrow')}
-                    title={t('seafood.title')}
-                    body={[t('seafood.p1'), t('seafood.p2')]}
-                    headingPhoto="photo-seafood-hero"
-                    links={[
-                        { label: t('seafood.link_overview'), href: routes.seafood },
-                        { label: t('seafood.link_products'), href: routes.products },
-                        { label: t('seafood.link_processing'), href: routes.processing },
-                        { label: t('seafood.link_quality'), href: routes.quality },
-                    ]}
-                />
-            </Section>
-
-            {/* 04 · Species range: every real cut-out, same scale, each linking to its page */}
-            <RangeBand
-                id="home-products"
-                eyebrow={tc('eyebrow')}
-                title={tc('title')}
-                intro={tc('intro_home')}
-                listLabel={tc('list_label')}
-                action={
-                    <Button href={routes.products} variant="outline" arrow>
-                        {t('products.view_all')}
-                    </Button>
-                }
-                items={catalogue.map((p) => ({ slug: p.slug, name: p.name, href: p.href, image: p.image }))}
-            />
-
-            {/* 05 · From origin to shipment */}
-            <Section variant="light" labelledBy="home-process">
-                <SectionHeader id="home-process" eyebrow={t('process.eyebrow')} title={t('process.title')} intro={t('process.intro')} />
-                <ProcessSteps
-                    orientation="horizontal"
-                    steps={[1, 2, 3, 4].map((n) => ({
-                        title: t(`process.s${n}_title`),
-                        description: t(`process.s${n}_text`),
-                        icon: [<HarvestNetIcon key="1" size={24} />, <SortGradeIcon key="2" size={24} />, <BoxIcon key="3" size={24} />, <TruckIcon key="4" size={24} />][n - 1],
-                    }))}
-                />
-                <Pending block label={t('pending.farm_photo')} className="mt-10" />
-            </Section>
-
-            {/* 05b · Full-width photo band (section break between origin and processing).
-                Illustrative photo, so no caption; alt describes what is visible. */}
-            <div className="relative h-[220px] overflow-hidden bg-surface-mist sm:h-[300px] lg:h-[420px]">
-                <Image
-                    src={delta.src}
-                    alt={delta.alt}
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                    style={{ objectPosition: 'center 55%' }}
-                />
-            </div>
-
-            {/* 06 · Processing capability */}
-            <Section variant="navy" spacing="lg" labelledBy="home-processing">
-                <EditorialMedia
-                    id="home-processing"
-                    eyebrow={t('processing.eyebrow')}
-                    title={t('processing.title')}
-                    body={[t('processing.p1'), t('processing.p2')]}
-                    headingPhoto="photo-processing"
-                >
-                    <h3 className="text-heading-sm text-fg">{t('processing.req_title')}</h3>
-                    <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
-                        {[1, 2, 3, 4, 5].map((n) => (
-                            <li key={n} className="flex items-start gap-3 text-body-sm text-fg-muted">
-                                <CheckIcon size={18} className="mt-0.5 shrink-0 text-gold" />
-                                <span>{t(`processing.req_${n}`)}</span>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="mt-8">
-                        <Button href={routes.processing} variant="outline" arrow>
-                            {t('processing.cta')}
-                        </Button>
-                    </div>
-                    <Pending label={t('pending.capacity')} className="mt-6" />
-                </EditorialMedia>
-            </Section>
-
-            {/* 07 · Quality proof */}
-            <Section variant="light" labelledBy="home-quality">
-                <EditorialMedia
-                    id="home-quality"
-                    eyebrow={t('quality.eyebrow')}
-                    title={t('quality.title')}
-                    body={[t('quality.p1'), t('quality.p2')]}
-                    headingPhoto="photo-quality"
-                >
-                    <Pending block label={t('pending.certificate_cards')} className="mb-6" />
-                    <div className="flex flex-wrap gap-3">
-                        <Button href={rfqHref({ type: 'documents' })} variant="text">
-                            {tv('cta.request_document_pack')}
-                        </Button>
-                        <Button href={routes.quality} variant="text" arrow>
-                            {t('quality.cta_quality')}
-                        </Button>
-                    </div>
-                </EditorialMedia>
-            </Section>
-
-            {/* 08 · Markets / export approach (active list from config, same as /markets) */}
-            <Section variant="offwhite" labelledBy="home-markets">
-                <SectionHeader id="home-markets" eyebrow={t('markets.eyebrow')} title={t('markets.title')} intro={t('markets.intro')} />
-                <FeatureGrid
-                    columns={3}
-                    items={[1, 2, 3].map((n) => ({
-                        title: t(`markets.i${n}_title`),
-                        description: t(`markets.i${n}_text`),
-                        icon: n === 1 ? <GlobeIcon /> : n === 2 ? <DocumentIcon /> : <CheckIcon />,
-                    }))}
-                />
-                <div className="mt-10 flex flex-wrap gap-3">
-                    <Button href={routes.markets} variant="outline" arrow>
-                        {t('markets.link_markets')}
-                    </Button>
-                    <Button href={routes.forImporters} variant="text" arrow>
-                        {t('markets.link_importers')}
-                    </Button>
-                </div>
-                <p className="mt-8 text-body-sm text-fg-muted">
-                    <span className="font-semibold text-fg">{t('markets.active_label')}</span>{' '}
-                    {activeMarkets.map((m, i) => (
-                        <span key={m.key}>
-                            {i > 0 ? (locale === 'ar' ? '، ' : ', ') : null}
-                            <Link href={`${routes.markets}/${m.key}`} className="font-medium text-navy underline-offset-4 hover:underline">
-                                {m.name}
-                            </Link>
-                        </span>
-                    ))}
-                </p>
-            </Section>
-
-            {/* 09 · Corporate group teaser (deliberately small) */}
-            <Section variant="light" spacing="md" labelledBy="home-group">
-                <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
-                    <div className="lg:col-span-4">
-                        <SectionHeader
-                            id="home-group"
-                            eyebrow={t('group.eyebrow')}
-                            title={t('group.title')}
-                            intro={t('group.intro')}
-                            size="md"
-                            className="mb-6 md:mb-6"
-                        />
-                        <Button href={routes.businesses} variant="text" arrow>
-                            {t('group.link')}
-                        </Button>
-                    </div>
-                    <div className="lg:col-span-7 lg:col-start-6 lg:pt-12">
-                        <FeatureGrid
-                            columns={3}
-                            items={[
-                                { title: t('group.agri_title'), description: t('group.agri_text') },
-                                { title: t('group.livestock_title'), description: t('group.livestock_text') },
-                                { title: t('group.invest_title'), description: t('group.invest_text') },
-                            ]}
-                        />
-                    </div>
-                </div>
-            </Section>
-
-            {/* 10 · Final conversion */}
-            <CTABand intro={t('cta.intro')} />
-        </>
+            <GHero />
+            <GAbout />
+            <GFish />
+            <GChain />
+            <GQuality />
+            <GMarkets />
+        </div>
     );
 }

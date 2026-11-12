@@ -495,3 +495,9 @@ select:focus-visible {
     transform: none;
   }
 }
+
+/* Design G (navy/gold): Manrope for Latin, IBM Plex Sans Arabic for Arabic glyphs */
+.g-font,
+.g-scope {
+  font-family: var(--font-manrope), var(--font-plex-arabic), system-ui, sans-serif;
+}

@@ -4,12 +4,12 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
-import { Inter, IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { Inter, IBM_Plex_Sans_Arabic, Manrope } from 'next/font/google';
 import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
-import SiteHeader from '@/components/v2/SiteHeader';
-import SiteFooter from '@/components/v2/SiteFooter';
+import GHeader from '@/components/g/GHeader';
+import GFooter from '@/components/g/GFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
 import RevealSections from '@/components/v2/RevealSections';
 import '../globals.css';
@@ -21,6 +21,14 @@ const inter = Inter({
     subsets: ['latin', 'latin-ext', 'cyrillic'],
     display: 'swap',
     variable: '--font-inter',
+});
+
+// Design G (navy/gold): Manrope for Latin, IBM Plex Sans Arabic for Arabic
+const manrope = Manrope({
+    subsets: ['latin', 'latin-ext', 'cyrillic'],
+    weight: ['500', '600', '700', '800'],
+    display: 'swap',
+    variable: '--font-manrope',
 });
 
 const plexArabic = IBM_Plex_Sans_Arabic({
@@ -136,7 +144,7 @@ export default async function RootLayout({
     const skipLabel = (await getTranslations({ locale, namespace: 'v2' }))('skip_to_main');
 
     return (
-        <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${inter.variable} ${plexArabic.variable}`} suppressHydrationWarning>
+        <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${inter.variable} ${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
             <head>
                 {/* Performance: DNS Prefetch */}
                 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -174,11 +182,11 @@ export default async function RootLayout({
                         {skipLabel}
                     </a>
                     <div className="flex min-h-screen flex-col">
-                        <SiteHeader />
+                        <GHeader />
                         <main id="main-content" tabIndex={-1} className="flex-grow focus:outline-none">
                             {children}
                         </main>
-                        <SiteFooter />
+                        <GFooter />
                     </div>
                     <MobileQuoteBar />
                     <RevealSections />
