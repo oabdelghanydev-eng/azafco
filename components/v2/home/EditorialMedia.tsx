@@ -88,7 +88,7 @@ export default function EditorialMedia({
             <div
                 className={cn(
                     'col-span-4 sm:col-span-8 lg:col-span-6',
-                    imageSide === 'start' ? 'lg:order-1' : 'lg:order-2',
+                    imageSide === 'start' ? 'lg:order-1' : 'lg:order-2 lg:col-start-7',
                 )}
             >
                 <div className={cn('relative overflow-hidden rounded-card bg-surface-mist', aspectClass[aspect])}>

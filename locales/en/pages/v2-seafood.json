@@ -1,83 +1,83 @@
 {
     "meta": {
-        "title": "Seafood & Aquaculture: Fish Supply from Egypt",
-        "description": "AZAFCO's core business: farmed fish sourcing, processing, packing and export coordination for importers, distributors, foodservice and hotel buyers."
+        "title": "Fish farming, sourcing and export from Egypt",
+        "description": "We farm and source fresh fish in Egypt, then grade, pack and export it for importers, distributors and foodservice buyers in the Middle East and beyond."
     },
+    "breadcrumb": "Seafood and aquaculture",
     "hero": {
-        "eyebrow": "Seafood & Aquaculture",
-        "title": "Seafood is the core of AZAFCO",
-        "intro": "We connect aquaculture production and sourcing with processing, packing and export coordination, so commercial buyers get the information they need to plan purchasing and supply.",
-        "primary": "View Seafood Catalogue",
-        "secondary": "See Processing & Packing"
+        "eyebrow": "Seafood and aquaculture",
+        "title": "From the pond to the pallet",
+        "intro": "We farm and source fish, then inspect, wash, ice, grade, pack and export it, with our own refrigerated trucks, logistics and cold stores.",
+        "primary": "View our fish",
+        "secondary": "Processing and packing"
     },
     "chain": {
-        "eyebrow": "How supply works",
-        "title": "From origin to your destination",
-        "intro": "Each order follows the same path. The specification agreed with you guides every step.",
+        "eyebrow": "Value chain",
+        "title": "Every stage is handled by AZAFCO",
+        "intro": "Fish we farm and fish we buy from other producers follow the same path, and the specification agreed with you guides every stage.",
         "farm_title": "Farming and sourcing",
-        "farm_text": "Fish comes from aquaculture production linked to AZAFCO's core business, matched to the species, quantities and timing buyers need.",
-        "select_title": "Selection",
-        "select_text": "Product is selected and graded against the size and quality agreed for the order.",
-        "process_title": "Processing",
-        "process_text": "Fish are prepared in the factory according to the agreed specification and applicable requirements.",
-        "pack_title": "Packing",
-        "pack_text": "Pack type, net weight and labels follow the specification confirmed in writing.",
-        "export_title": "Export logistics",
-        "export_text": "Shipping options and the documents each order needs are reviewed before dispatch."
+        "farm_text": "We farm fish and buy from other producers, matched to the species, quantities and timing you need.",
+        "harvest_title": "Harvest",
+        "harvest_text": "Fish are harvested and brought to our plant in Motobas, Kafr El Sheikh.",
+        "pack_title": "Washing, icing and packing",
+        "pack_text": "Fish are washed, iced, graded by weight per piece and packed on ice.",
+        "inspect_title": "Inspection",
+        "inspect_text": "Checked against the agreed specification before the boxes are closed.",
+        "export_title": "Export",
+        "export_text": "Our own refrigerated trucks, then air or road freight."
     },
     "species": {
-        "eyebrow": "Species at a glance",
-        "title": "What we supply",
-        "intro": "Open a species for its specification card, or search the full catalogue.",
-        "view_all": "View Seafood Catalogue"
+        "eyebrow": "Our fish",
+        "title": "12 main species",
+        "intro": "Open a species for its specification card, or search the full list.",
+        "more_species": "These are our main, most-requested species; we supply other species on request.",
+        "view_all": "View all species"
     },
     "farm": {
-        "eyebrow": "Sourcing and supply",
+        "eyebrow": "Farming and sourcing",
         "title": "Supply that starts at the source",
-        "text_1": "Fish comes from aquaculture production linked to AZAFCO's core business. Our team works to understand each buyer's commercial needs: which species, what quantities and when."
+        "text_1": "We farm fish and buy from other producers, so we can match each buyer's species, quantities and timing. Tell us your volume and delivery window, and we plan supply with you."
     },
     "processing": {
-        "eyebrow": "Processing precision",
+        "eyebrow": "Processing",
         "title": "Prepared to the agreed specification",
-        "text": "Export orders are handled by selecting, grading, processing and packing the product according to the specification agreed with the customer and the requirements that apply.",
-        "point_1": "Grading against the size range in your order",
+        "text": "We inspect, wash, ice, grade and pack every order to the specification agreed with you.",
+        "point_1": "Graded by weight per piece, to the range in your order",
         "point_2": "Packing, net weight and labels as confirmed in writing",
-        "point_3": "Results reviewed before the shipment leaves",
-        "link": "See Processing & Packing"
+        "point_3": "Checked against the agreed specification before the boxes are closed",
+        "link": "See processing and packing"
     },
     "requirements": {
-        "eyebrow": "Buyer requirements",
+        "eyebrow": "Your requirements",
         "title": "Start with the specification",
-        "intro": "Tell us the species, size, presentation, packing, order volume and destination. The team will contact you to review what can be delivered.",
-        "format_title": "Format",
-        "format_text": "Whole or another presentation; fresh or frozen only where offered.",
-        "grade_title": "Grade",
-        "grade_text": "The size grade and quality requirements for your market.",
-        "weight_title": "Weight",
-        "weight_text": "Weight range per piece and net weight per pack.",
+        "intro": "Tell us the species, weight grade, product form, packing, volume and destination. The export team reviews what we can supply and contacts you.",
+        "format_title": "Product form",
+        "format_text": "Our fish are sold whole and fresh chilled. Ask the export team about any other form you need.",
+        "grade_title": "Weight grade",
+        "grade_text": "The weight range per piece your market needs.",
+        "weight_title": "Net weight",
+        "weight_text": "Net weight per box.",
         "packing_title": "Packing",
-        "packing_text": "Pack type, labels and label language.",
+        "packing_text": "Box type, labels and label language.",
         "destination_title": "Destination",
         "destination_text": "Country, city, delivery terms and required documents."
     },
     "quality": {
-        "eyebrow": "Quality assurance",
-        "title": "Quality you can check, not just read about",
-        "text": "Quality starts with a clear specification and is shown through records. You can review the product specification and the facility or shipment documents that apply to your order.",
-        "link": "Review Quality & Traceability"
+        "eyebrow": "Quality",
+        "title": "Certified, and checked on every order",
+        "text": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates, certified by TÜV AUSTRIA. Every order is checked against the agreed specification before the boxes are closed.",
+        "link": "Quality and certificates",
+        "docs_email": "Email the export team about documents",
+        "docs_subject": "Quality documents for our market"
     },
     "audience": {
-        "eyebrow": "Who we serve",
+        "eyebrow": "Who this is for",
         "title": "Built for commercial buyers",
-        "importers": "Seafood importers",
+        "importers": "Fish importers",
         "distributors": "Wholesale and distribution companies",
-        "foodservice": "Food and catering suppliers",
-        "horeca": "Hotels and restaurant groups",
+        "foodservice": "Foodservice and catering suppliers",
+        "horeca": "Hotel and restaurant groups",
         "partners": "Companies looking for a long-term supply partner"
-    },
-    "cta": {
-        "eyebrow": "Discuss your requirement",
-        "intro": "Specify the species, weight, processing, packing, order volume and destination country. The export team will review whether it can be delivered and contact you."
     },
     "pending": {
         "farm": "Fish farm photos + verified farm areas, species and production figures"

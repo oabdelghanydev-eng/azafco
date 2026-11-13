@@ -10,7 +10,9 @@ import StatPanel from './StatPanel';
  * markets (config markets with status 'active'), current publishable ISO
  * management-system certificates (data/certificates.ts: count, issuer, earliest
  * expiry year), and the plant location stated on Home/About/Contact.
- * No volumes, years, clients or capacity.
+ * No volumes, years, clients or capacity. The strip never shows expiry dates or
+ * certificate numbers (owner decision 13 Nov); isoValidYear stays in the return
+ * value for callers only.
  */
 export function publishedFacts() {
     const today = new Date().toISOString().slice(0, 10);
@@ -38,22 +40,25 @@ export interface FactsStripProps {
     className?: string;
 }
 
-/** Four-cell facts strip (StatPanel). Surface-aware. */
+/**
+ * Four-cell facts strip (StatPanel). Surface-aware.
+ * Markets show as "7+" / «+7» (owner decision: 7 registered active markets, framed
+ * as "the Middle East and beyond"); the ISO note names the certification body only.
+ */
 export default function FactsStrip({ className }: FactsStripProps) {
     const t = useTranslations('v2.facts');
     const f = publishedFacts();
-    const isoNote =
-        f.isoIssuer && f.isoValidYear ? t('iso_note', { issuer: f.isoIssuer, year: String(f.isoValidYear) }) : undefined;
+    const isoNote = f.isoIssuer ? t('iso_note') : undefined;
     return (
         <StatPanel
             className={className}
             columns={4}
             stats={[
                 { value: f.species, label: t('species'), verified: f.species > 0 },
-                { value: f.markets, label: t('markets'), verified: f.markets > 0 },
+                { value: t('markets_value', { count: f.markets }), label: t('markets'), verified: f.markets > 0 },
                 { value: f.isoCount, label: t('iso'), note: isoNote, verified: f.isoCount > 0 },
                 {
-                    value: <span className="block text-heading-lg">{t('plant_value')}</span>,
+                    value: <span className="block pt-1 text-heading-lg">{t('plant_value')}</span>,
                     label: t('plant'),
                     verified: true,
                 },

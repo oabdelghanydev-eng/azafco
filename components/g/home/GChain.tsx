@@ -10,7 +10,7 @@ const STAGES = [
     { key: 'farming', src: '/images/g/farm-ponds.webp' },
     { key: 'harvest', src: '/images/g/harvest.webp' },
     { key: 'packing', src: '/images/g/sorting-packing.webp' },
-    { key: 'temperature', src: '/images/g/temperature-check.webp' },
+    { key: 'inspection', src: '/images/g/temperature-check.webp' },
     { key: 'export', src: '/images/g/logistics-truck.webp' },
 ] as const;
 

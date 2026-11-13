@@ -8,8 +8,8 @@ import GFooterNav from './GFooterNav';
 import GFooterWordmark from './GFooterWordmark';
 import s from './GFooter.module.css';
 
-/** Board link for the factory row (Google Maps search, Motobas). */
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Motobas%20Kafr%20El%20Sheikh';
+/** Factory pin (from the old site's factory map embed). */
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=31.433264,30.475957';
 
 /** "+20 100 773 6419" from the config number (201007736419) */
 function phoneDisplay(n: string): string {
@@ -48,19 +48,17 @@ interface RowProps {
     sub: string;
     value: React.ReactNode;
     external?: boolean;
+    /** Locale-aware site route (next-intl Link) instead of a plain href */
+    internal?: boolean;
     newTab: string;
     rtl: boolean;
     cta: string;
 }
 
-function ContactRow({ n, href, title, sub, value, external, newTab, rtl, cta }: RowProps) {
-    return (
-        <a
-            href={href}
-            data-cta={cta}
-            {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            className={`${s.row} grid grid-cols-[30px_minmax(0,1fr)_44px] items-center gap-x-3 border-b border-white/[.16] py-5 lg:px-3 lg:py-6 xl:grid-cols-[56px_minmax(0,1fr)_minmax(0,1fr)_52px] xl:gap-5 ${FOCUS_DARK}`}
-        >
+function ContactRow({ n, href, title, sub, value, external, internal, newTab, rtl, cta }: RowProps) {
+    const className = `${s.row} grid grid-cols-[30px_minmax(0,1fr)_44px] items-center gap-x-3 border-b border-white/[.16] py-5 lg:px-3 lg:py-6 xl:grid-cols-[56px_minmax(0,1fr)_minmax(0,1fr)_52px] xl:gap-5 ${FOCUS_DARK}`;
+    const body = (
+        <>
             <span
                 dir="ltr"
                 aria-hidden="true"
@@ -82,6 +80,25 @@ function ContactRow({ n, href, title, sub, value, external, newTab, rtl, cta }: 
                 <Arrow rtl={rtl} />
             </span>
             {external && <span className="sr-only">{newTab}</span>}
+        </>
+    );
+
+    if (internal) {
+        return (
+            <Link href={href} data-cta={cta} className={className}>
+                {body}
+            </Link>
+        );
+    }
+
+    return (
+        <a
+            href={href}
+            data-cta={cta}
+            {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            className={className}
+        >
+            {body}
         </a>
     );
 }
@@ -118,6 +135,13 @@ export default function GFooter() {
             ))}
         </nav>
     );
+
+    // Commercial register and tax card numbers, kept LTR inside the Arabic sentence
+    const registration = t.rich('registration', {
+        cr: companyConfig.registration.commercialRegister,
+        tax: companyConfig.registration.taxCard,
+        n: (chunks) => <span dir="ltr">{chunks}</span>,
+    });
 
     const backToTop = (
         <a
@@ -194,6 +218,17 @@ export default function GFooter() {
                         />
                         <ContactRow
                             n="03"
+                            href={routes.rfq}
+                            cta="footer_requirements"
+                            title={t('form.title')}
+                            sub={t('form.sub')}
+                            value={<span className="text-[15px] font-semibold leading-[1.4] lg:text-[18px]">{t('form.value')}</span>}
+                            internal
+                            newTab={t('new_tab')}
+                            rtl={rtl}
+                        />
+                        <ContactRow
+                            n="04"
                             href={MAPS_URL}
                             cta="footer_map"
                             title={t('factory.title')}
@@ -232,6 +267,7 @@ export default function GFooter() {
                     <div className="mt-6 border-t border-white/[.14] pt-2 text-[12px] leading-[1.7] text-white/60">
                         {secondary('-mb-1 flex flex-wrap gap-x-5')}
                         <p className="m-0 pt-1">{t('copyright')}</p>
+                        <p className="m-0">{registration}</p>
                     </div>
                 </div>
 
@@ -258,7 +294,10 @@ export default function GFooter() {
                         </div>
                     </div>
                     <div className="mt-[26px] flex flex-wrap items-center justify-between gap-x-8 border-t border-white/[.12] pt-[7px] text-[13px] text-white/60">
-                        <p className="m-0 py-[11px]">{t('copyright')}</p>
+                        <p className="m-0 flex flex-wrap gap-x-6 py-[11px]">
+                            <span>{t('copyright')}</span>
+                            <span>{registration}</span>
+                        </p>
                         {secondary('flex flex-wrap gap-x-6')}
                     </div>
                 </div>

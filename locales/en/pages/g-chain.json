@@ -1,13 +1,13 @@
 {
     "eyebrow": "Value chain",
-    "title": "Every stage stays inside the company",
-    "intro": "Farming, grading, packing and dispatch are run by one team, so what we agree is what we pack.",
+    "title": "We handle every stage, from the pond to the pallet",
+    "intro": "We work to one agreed specification at each step, and we run our own refrigerated trucks, logistics and cold stores.",
     "stageLabel": "Stage {n}",
     "stages": {
-        "farming": { "title": "Farming", "text": "Earthen ponds in the Nile Delta." },
-        "harvest": { "title": "Harvest", "text": "Netted and taken to the plant in Motobas." },
-        "packing": { "title": "Grading and packing", "text": "Sorted by weight, packed whole on ice." },
-        "temperature": { "title": "Temperature control", "text": "Checked against the agreed spec before boxes close." },
-        "export": { "title": "Export", "text": "Refrigerated trucks, then air or road." }
+        "farming": { "title": "Farming and sourcing", "text": "Our own farms, plus fish we buy from suppliers." },
+        "harvest": { "title": "Harvest", "text": "Netted and taken to our plant in Motobas." },
+        "packing": { "title": "Washing, icing and packing", "text": "Washed, graded by weight and packed whole on ice." },
+        "inspection": { "title": "Inspection", "text": "Checked against the agreed specification before the boxes are closed." },
+        "export": { "title": "Export", "text": "Our own refrigerated trucks, then air or road freight." }
     }
 }

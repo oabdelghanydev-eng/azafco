@@ -15,9 +15,11 @@ export interface HeroAction {
 
 export interface PageHeroProps {
     /**
-     * `fullbleed`: cinematic photo behind the text, navy scrim, white type.
-     * `split`: editorial headline on the start side, real facility photo on the end side.
-     * Without `image` both variants render the typographic navy hero (GeoArcs, no photo).
+     * Design G navy hero in every case (the H1 sits on navy, white type, gold eyebrow rule):
+     * `fullbleed`: tall hero, photo behind the text with the G gradient overlay.
+     * `split`: the same photo + overlay treatment, a little shorter. With a cut-out image
+     * (`image.cutout`, e.g. a whole fish) the cut-out stands on the end side over a navy field.
+     * Without `image` both variants render the typographic navy hero (no photo).
      */
     variant?: 'fullbleed' | 'split';
     title: ReactNode;
@@ -25,7 +27,7 @@ export interface PageHeroProps {
     intro?: ReactNode;
     /** Omit when no professional photo exists: renders a typographic navy hero instead */
     image?: ImageProps;
-    /** Primary (gold) action: page navigation or a page-specific enquiry; no generic "Request a quote" */
+    /** Primary (gold) action: page navigation or a page-specific enquiry */
     primaryAction?: HeroAction;
     secondaryAction?: HeroAction;
     /** Slot above the eyebrow, e.g. <Breadcrumbs /> */
@@ -36,13 +38,20 @@ export interface PageHeroProps {
     imagePosition?: string;
     /** Hero is usually the LCP: keep true on the first hero of a page */
     priority?: boolean;
-    /** `display-2xl` for the home page, `display-xl` default */
+    /** `2xl` for a landing-style hero (taller, largest H1), `xl` default */
     size?: 'xl' | '2xl';
     headingId?: string;
     className?: string;
 }
 
-/** Page hero. The H1 lives here: use one PageHero per page. */
+/**
+ * Slot content written for light surfaces (ink / navy text classes) is mapped to
+ * the dark-surface tokens inside the hero, so page code never puts dark text on navy.
+ */
+const onNavy =
+    '[&_.text-ink]:text-fg [&_.text-navy]:text-fg [&_.text-ink-muted]:text-fg-muted [&_.text-ink-subtle]:text-fg-muted';
+
+/** Page hero (design G). The H1 lives here: use one PageHero per page. */
 export default function PageHero({
     variant = 'fullbleed',
     title,
@@ -59,10 +68,11 @@ export default function PageHero({
     headingId,
     className,
 }: PageHeroProps) {
-    const h1 = cn('v2-heading font-display', size === '2xl' ? 'text-display-2xl' : 'text-display-xl');
+    const h1 = cn('v2-heading m-0 font-display', size === '2xl' ? 'text-display-2xl' : 'text-display-xl');
+
     const actions =
         primaryAction || secondaryAction ? (
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
                 {primaryAction ? (
                     <Button href={primaryAction.href} external={primaryAction.external} size="lg" arrow>
                         {primaryAction.label}
@@ -76,59 +86,52 @@ export default function PageHero({
             </div>
         ) : null;
 
+    const text = (
+        <>
+            {breadcrumbs ? <div className="mb-6 lg:mb-8">{breadcrumbs}</div> : null}
+            {eyebrow ? <Eyebrow className="mb-3.5 lg:mb-5">{eyebrow}</Eyebrow> : null}
+            <h1 id={headingId} className={h1}>
+                {title}
+            </h1>
+            {intro ? <div className="mt-4 max-w-[600px] text-body-lg text-fg-muted lg:mt-6">{intro}</div> : null}
+            {actions}
+            {proof ? <div className="mt-10">{proof}</div> : null}
+        </>
+    );
+
+    const shell = (extra: string) =>
+        cn('relative isolate overflow-hidden bg-navy-900 text-fg', extra, className);
+
+    // ── Typographic hero: navy field, globe arcs as the only decoration ──────────
     if (!image) {
-        // Typographic hero: no photo, navy field, globe arcs as the only decoration.
         return (
-            <section
-                data-surface="dark"
-                className={cn('relative isolate overflow-hidden bg-navy-950 text-fg', className)}
-                aria-labelledby={headingId}
-            >
-                <div aria-hidden="true" className="absolute inset-0 -z-20 bg-gradient-to-br from-navy-900 via-navy-950 to-navy-950 rtl:bg-gradient-to-bl" />
+            <section data-page-hero="" data-surface="dark" className={shell('v2-hero-field')} aria-labelledby={headingId}>
                 <GeoArcs
                     tone="onDark"
-                    className="absolute -end-48 -top-24 -z-10 w-[440px] opacity-60 sm:-end-32 sm:w-[560px] lg:-end-20 lg:-top-32 lg:w-[720px] lg:opacity-90"
+                    className="absolute -end-48 -top-24 -z-10 w-[440px] opacity-40 sm:-end-32 sm:w-[560px] lg:-end-20 lg:-top-32 lg:w-[720px] lg:opacity-60"
                 />
-                <Container className={cn('relative', size === '2xl' ? 'py-20 md:py-28 lg:py-36' : 'py-16 md:py-20 lg:py-28')}>
-                    <div className="max-w-3xl">
-                        {breadcrumbs ? <div className="mb-8">{breadcrumbs}</div> : null}
-                        {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
-                        <h1 id={headingId} className={h1}>
-                            {title}
-                        </h1>
-                        {intro ? <div className="mt-6 max-w-prose-v2 text-body-lg text-fg-muted">{intro}</div> : null}
-                        {actions}
-                        {proof ? <div className="mt-10">{proof}</div> : null}
-                    </div>
+                <Container className={cn('relative', size === '2xl' ? 'py-20 md:py-24 lg:py-32' : 'py-14 md:py-20 lg:py-28')}>
+                    <div className={cn('max-w-[760px]', onNavy)}>{text}</div>
                 </Container>
             </section>
         );
     }
 
-    if (variant === 'split') {
+    // ── Cut-out (e.g. a whole fish on a transparent background): stands on the end side ──
+    if (image.cutout) {
         return (
-            <section data-surface="light" className={cn('relative overflow-hidden bg-white text-fg', className)} aria-labelledby={headingId}>
-                <GeoArcs className="absolute -start-40 -top-40 hidden w-[520px] lg:block" />
-                <Container grid className="relative items-center gap-y-10 py-12 md:py-16 lg:py-20">
+            <section data-page-hero="" data-surface="dark" className={shell('v2-hero-field')} aria-labelledby={headingId}>
+                <Container grid className="relative items-center gap-y-6 py-12 md:py-16 lg:gap-y-10 lg:py-24">
+                    <div className={cn('col-span-4 sm:col-span-8 lg:col-span-6', onNavy)}>{text}</div>
                     <div className="col-span-4 sm:col-span-8 lg:col-span-6">
-                        {breadcrumbs ? <div className="mb-8">{breadcrumbs}</div> : null}
-                        {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
-                        <h1 id={headingId} className={h1}>
-                            {title}
-                        </h1>
-                        {intro ? <div className="mt-6 max-w-prose-v2 text-body-lg text-fg-muted">{intro}</div> : null}
-                        {actions}
-                        {proof ? <div className="mt-10">{proof}</div> : null}
-                    </div>
-                    <div className="col-span-4 sm:col-span-8 lg:col-span-6">
-                        <div className={cn('relative aspect-[4/3] overflow-hidden rounded-card bg-surface-mist', image.cutout ? 'bg-gradient-to-b from-surface-mist to-white' : 'lg:aspect-[4/5]')}>
+                        <div className="relative mx-auto aspect-[16/9] w-full max-w-[640px]">
                             <Image
                                 src={image.src}
                                 alt={image.alt}
                                 fill
                                 priority={priority}
-                                sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, 100vw"
-                                className={image.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)]' : 'object-cover'}
+                                sizes="(min-width: 1320px) 610px, (min-width: 1024px) 46vw, (min-width: 640px) 90vw, 100vw"
+                                className="object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.4)] rtl:-scale-x-100"
                                 style={{ objectPosition: imagePosition }}
                             />
                         </div>
@@ -138,10 +141,18 @@ export default function PageHero({
         );
     }
 
+    // ── Photo hero (fullbleed and split): photo + G gradient overlay ────────────
+    const tall = variant === 'fullbleed' || size === '2xl';
     return (
         <section
+            data-page-hero=""
             data-surface="dark"
-            className={cn('relative isolate flex min-h-[560px] items-end overflow-hidden bg-navy-950 text-fg md:min-h-[640px] lg:min-h-[78vh]', className)}
+            className={shell(
+                cn(
+                    'flex items-end lg:items-center',
+                    tall ? 'min-h-[600px] md:min-h-[620px] lg:min-h-[680px]' : 'min-h-[520px] md:min-h-[540px] lg:min-h-[560px]',
+                ),
+            )}
             aria-labelledby={headingId}
         >
             <Image
@@ -153,23 +164,9 @@ export default function PageHero({
                 className="-z-20 object-cover"
                 style={{ objectPosition: imagePosition }}
             />
-            {/* Scrim: strongest behind the text (start side + bottom) for AA contrast on any photo */}
-            <div
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950/95 via-navy-950/60 to-navy-950/20 lg:bg-gradient-to-r lg:from-navy-950/95 lg:via-navy-950/70 lg:to-navy-950/10 rtl:lg:bg-gradient-to-l"
-            />
-            <GeoArcs tone="onDark" className="absolute -end-32 -top-32 -z-10 hidden w-[620px] opacity-70 lg:block" />
-            <Container className="relative pb-12 pt-28 md:pb-16 lg:pb-20">
-                <div className="max-w-3xl">
-                    {breadcrumbs ? <div className="mb-8">{breadcrumbs}</div> : null}
-                    {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
-                    <h1 id={headingId} className={h1}>
-                        {title}
-                    </h1>
-                    {intro ? <div className="mt-6 max-w-prose-v2 text-body-lg text-fg-muted">{intro}</div> : null}
-                    {actions}
-                    {proof ? <div className="mt-10">{proof}</div> : null}
-                </div>
+            <div aria-hidden="true" className="v2-hero-overlay absolute inset-0 -z-10" />
+            <Container className={cn('relative pb-8 lg:pb-20', tall ? 'pt-[200px] lg:pt-24' : 'pt-[180px] lg:pt-20')}>
+                <div className={cn('max-w-[760px]', onNavy)}>{text}</div>
             </Container>
         </section>
     );

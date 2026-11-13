@@ -25,6 +25,7 @@ export interface FAQAccordionProps {
  * Accessible FAQ built on native <details>/<summary>: keyboard (Enter/Space),
  * screen-reader state and find-in-page work with zero JS, so it stays a
  * server component. Add FAQPage JSON-LD separately if the page needs it.
+ * Design G: hairline dividers, bold questions, round toggle that turns gold when open.
  */
 export default function FAQAccordion({ items, defaultOpen, exclusiveName, className }: FAQAccordionProps) {
     return (
@@ -37,16 +38,16 @@ export default function FAQAccordion({ items, defaultOpen, exclusiveName, classN
                     open={defaultOpen === i || undefined}
                     {...(exclusiveName ? { name: exclusiveName } : {})}
                 >
-                    <summary className="flex min-h-[56px] cursor-pointer items-center justify-between gap-6 py-5 text-heading-sm text-fg">
+                    <summary className="flex min-h-[64px] cursor-pointer items-center justify-between gap-6 py-5 text-heading-sm text-fg transition-colors duration-base hover:text-link motion-reduce:transition-none lg:py-6">
                         <span>{item.question}</span>
                         <span
                             aria-hidden="true"
-                            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-rule text-fg transition-transform duration-base group-open:rotate-45 motion-reduce:transition-none"
+                            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-solid border-edge text-fg transition-[transform,background-color,border-color] duration-base group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-[#001B47] motion-reduce:transition-none"
                         >
-                            <PlusIcon size={16} />
+                            <PlusIcon size={18} />
                         </span>
                     </summary>
-                    <div className="max-w-prose-v2 pb-6 pe-14 text-body text-fg-muted">{item.answer}</div>
+                    <div className="max-w-[720px] pb-6 pe-16 text-body text-fg-muted lg:pb-7">{item.answer}</div>
                 </details>
             ))}
         </div>

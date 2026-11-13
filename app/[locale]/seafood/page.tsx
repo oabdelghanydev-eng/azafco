@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
     Breadcrumbs,
     Button,
-    CTABand,
     Eyebrow,
     FeatureGrid,
     HeadingPhoto,
@@ -13,11 +12,12 @@ import {
     Section,
     SectionHeader,
 } from '@/components/v2';
-import { BoxIcon, CheckIcon, HarvestNetIcon, KnifeIcon, SortGradeIcon, TruckIcon } from '@/components/v2/icons';
+import { BoxIcon, CheckIcon, ClipboardCheckIcon, CrateIcon, HarvestNetIcon, MailIcon, TruckIcon } from '@/components/v2/icons';
 import SpeciesIndex from '@/components/v2/seafood/SpeciesIndex';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
 import { mediaImage } from '@/lib/v2/media';
+import { companyConfig } from '@/config/company.config';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -40,16 +40,19 @@ export default async function SeafoodPage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'seafood_v2' });
     const tc = await getTranslations({ locale, namespace: 'catalogue_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
+    // Published species only (eel is kept in data but unpublished)
     const catalogue = await getCatalogue(locale);
 
-    const chain = ['farm', 'select', 'process', 'pack', 'export'] as const;
+    // The five approved value-chain stages (RELEASE-DECISIONS, 14 Nov 2026)
+    const chain = ['farm', 'harvest', 'pack', 'inspect', 'export'] as const;
     const chainIcons = {
         farm: <HarvestNetIcon size={24} />,
-        select: <SortGradeIcon size={24} />,
-        process: <KnifeIcon size={24} />,
+        harvest: <CrateIcon size={24} />,
         pack: <BoxIcon size={24} />,
+        inspect: <ClipboardCheckIcon size={24} />,
         export: <TruckIcon size={24} />,
     };
+    const docsHref = `mailto:${companyConfig.contact.email}?subject=${encodeURIComponent(t('quality.docs_subject'))}`;
     const requirements = ['format', 'grade', 'weight', 'packing', 'destination'] as const;
     const audience = ['importers', 'distributors', 'foodservice', 'horeca', 'partners'] as const;
 
@@ -59,7 +62,7 @@ export default async function SeafoodPage({ params }: Props) {
         '@type': 'BreadcrumbList',
         itemListElement: [
             { '@type': 'ListItem', position: 1, name: tv('breadcrumbs.home'), item: localeUrl },
-            { '@type': 'ListItem', position: 2, name: tv('nav.seafood'), item: `${localeUrl}${routes.seafood}` },
+            { '@type': 'ListItem', position: 2, name: t('breadcrumb'), item: `${localeUrl}${routes.seafood}` },
         ],
     };
 
@@ -74,20 +77,20 @@ export default async function SeafoodPage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood') }]} />}
+                breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 primaryAction={{ label: t('hero.primary'), href: routes.products }}
                 secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
             />
 
             {/* Buyer-spec language in the first scroll */}
-            <Section variant="light" spacing="md" labelledBy="seafood-chain">
+            <Section variant="light" spacing="lg" labelledBy="seafood-chain">
                 <SectionHeader id="seafood-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
                 <ProcessSteps
                     steps={chain.map((k) => ({ title: t(`chain.${k}_title`), description: t(`chain.${k}_text`), icon: chainIcons[k] }))}
                 />
             </Section>
 
-            <Section variant="offwhite" spacing="md" labelledBy="seafood-species">
+            <Section variant="offwhite" spacing="lg" labelledBy="seafood-species">
                 <SectionHeader
                     id="seafood-species"
                     eyebrow={t('species.eyebrow')}
@@ -103,6 +106,8 @@ export default async function SeafoodPage({ params }: Props) {
                     items={catalogue}
                     meta={Object.fromEntries(catalogue.map((p) => [p.slug, tc(`water.${p.category}`)]))}
                 />
+                {/* Owner, 13 Nov 2026: the 12 are the main species; others on request */}
+                <p className="mt-8 border-s-2 border-gold ps-4 text-body-lg font-medium text-fg">{t('species.more_species')}</p>
             </Section>
 
             {/* Farm / supply: no farm photos yet, so a typographic navy band */}
@@ -152,14 +157,14 @@ export default async function SeafoodPage({ params }: Props) {
                 </div>
             </Section>
 
-            <Section variant="offwhite" spacing="md" labelledBy="seafood-requirements">
+            <Section variant="offwhite" spacing="lg" labelledBy="seafood-requirements">
                 <SectionHeader id="seafood-requirements" eyebrow={t('requirements.eyebrow')} title={t('requirements.title')} intro={t('requirements.intro')} />
                 <FeatureGrid
                     columns={3}
                     style="card"
                     items={[
                         ...requirements.map((k) => ({ title: t(`requirements.${k}_title`), description: t(`requirements.${k}_text`) })),
-                        // Fills the sixth slot of the 3-column grid: a contact link, not a quote button
+                        // Fills the sixth slot of the 3-column grid: a contact link
                         {
                             title: tv('fill.spec_title'),
                             description: tv('fill.spec_text'),
@@ -171,7 +176,7 @@ export default async function SeafoodPage({ params }: Props) {
                 />
             </Section>
 
-            <Section variant="light" spacing="md" labelledBy="seafood-quality">
+            <Section variant="light" spacing="lg" labelledBy="seafood-quality">
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-6">
                         <Eyebrow className="mb-5">{t('quality.eyebrow')}</Eyebrow>
@@ -183,8 +188,8 @@ export default async function SeafoodPage({ params }: Props) {
                             <Button href={routes.quality} variant="secondary" arrow>
                                 {t('quality.link')}
                             </Button>
-                            <Button href={rfqHref({ type: 'documents' })} variant="text">
-                                {tv('cta.request_document_pack')}
+                            <Button href={docsHref} external variant="text" icon={<MailIcon size={18} />} dataAttrs={{ 'data-cta': 'seafood_documents_email' }}>
+                                {t('quality.docs_email')}
                             </Button>
                         </div>
                     </div>
@@ -202,13 +207,7 @@ export default async function SeafoodPage({ params }: Props) {
                     </div>
                 </div>
             </Section>
-
-            <CTABand
-                headingId="seafood-cta"
-                eyebrow={t('cta.eyebrow')}
-                intro={t('cta.intro')}
-                prefill={{ type: 'product' }}
-            />
+            {/* The G footer closes the page with the WhatsApp (management) and email (export team) rows. */}
         </>
     );
 }

@@ -35,7 +35,7 @@ export default function ProofStrip({ items, compact = false, className }: ProofS
         <div className={className}>
             <ul
                 className={cn(
-                    'grid divide-rule',
+                    'm-0 grid list-none divide-rule p-0',
                     compact
                         ? 'grid-cols-2 gap-y-4 sm:flex sm:flex-wrap sm:divide-x rtl:sm:divide-x-reverse'
                         : 'grid-cols-1 gap-y-6 border-y border-rule py-6 sm:grid-cols-2 lg:flex lg:divide-x rtl:lg:divide-x-reverse',
@@ -50,9 +50,9 @@ export default function ProofStrip({ items, compact = false, className }: ProofS
                         )}
                     >
                         {item.icon ? <span className="mt-0.5 shrink-0 text-eyebrow">{item.icon}</span> : null}
-                        <div>
-                            <p className={cn('font-semibold text-fg', compact ? 'text-body-sm' : 'text-body')}>{item.title}</p>
-                            {item.detail ? <p className="mt-0.5 text-caption text-fg-muted">{item.detail}</p> : null}
+                        <div className="min-w-0">
+                            <p className={cn('m-0 font-bold text-fg', compact ? 'text-body-sm' : 'text-body')}>{item.title}</p>
+                            {item.detail ? <p className="m-0 mt-0.5 text-body-sm text-fg-muted">{item.detail}</p> : null}
                         </div>
                     </li>
                 ))}

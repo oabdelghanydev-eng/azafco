@@ -10,7 +10,7 @@
         "processing": "التجهيز والتعبئة",
         "quality": "الجودة",
         "export": "حلول التصدير",
-        "markets": "أسواق التصدير",
+        "markets": "الأسواق",
         "for_importers": "للمستوردين",
         "company": "شركتنا",
         "about": "من نحن",
@@ -20,19 +20,12 @@
         "menu": "القائمة",
         "open_menu": "فتح القائمة",
         "close_menu": "إغلاق القائمة",
-        "home_link_label": "ازافكو العالمية، الصفحة الرئيسية"
-    },
-    "language": {
-        "label": "اللغة",
-        "switch_to_ar": "العربية",
-        "switch_to_en": "English",
-        "more": "لغات أخرى",
-        "current": "اللغة الحالية"
+        "home_link_label": "الصفحة الرئيسية لازافكو العالمية"
     },
     "cta": {
-        "view_specifications": "عرض المواصفات",
+        "view_specifications": "اطّلع على المواصفات",
         "contact": "تواصل معنا",
-        "talk_to_export_team": "تواصل مع فريق التصدير",
+        "talk_to_export_team": "تحدّث مع فريق التصدير",
         "learn_more": "اعرف المزيد",
         "read_more": "اقرأ المزيد",
         "view_all": "عرض الكل",
@@ -40,23 +33,13 @@
         "call": "اتصال",
         "email": "البريد الإلكتروني",
         "loading": "جارٍ التحميل…",
-        "opens_new_tab": "(يفتح في نافذة جديدة)",
+        "opens_new_tab": "(يفتح في علامة تبويب جديدة)",
         "contact_export_team": "تواصل مع فريق التصدير",
-        "prepare_quote": "أرسل متطلباتك",
-        "request_document_pack": "اطلب ملف المستندات"
-    },
-    "footer": {
-        "tagline": "من الإنتاج في مصر إلى شراكات في العالم.",
-        "description": "شريك مصري في إنتاج الأسماك وتجهيزها وتعبئتها وتصديرها، ضمن مجموعة دولية تضم أنشطة إنتاجية أخرى.",
-        "contact_heading": "فريق التصدير",
-        "factory": "المصنع",
-        "office": "المكتب الرئيسي",
-        "hours": "مواعيد العمل",
-        "legal_heading": "معلومات قانونية",
-        "privacy": "سياسة الخصوصية",
-        "legal_name": "الاسم القانوني",
-        "commercial_register": "السجل التجاري",
-        "rights": "جميع الحقوق محفوظة."
+        "send_requirements": "أرسل متطلباتك",
+        "start_partnership": "لنبدأ شراكة",
+        "whatsapp_management": "واتساب · الإدارة مباشرة",
+        "email_export_team": "راسل فريق التصدير",
+        "request_document_pack": "اسأل فريق التصدير عن المستندات"
     },
     "breadcrumbs": {
         "label": "مسار التنقل",
@@ -64,32 +47,30 @@
     },
     "pending": {
         "prefix": "بانتظار تأكيد الإدارة:",
-        "certificate_card": "{name}: نسخة الشهادة، الجهة المانحة، النطاق، تاريخ الانتهاء، والموافقة على النشر",
-        "certificate_scope": "نطاق الشهادة (المواقع والمنتجات المشمولة)"
+        "certificate_card": "{name}: بانتظار موافقة الإدارة على النشر"
     },
     "spec": {
         "attribute": "البند",
         "value": "القيمة",
-        "confirmed_with_sales": "يُؤكَّد مع فريق المبيعات"
+        "confirmed_with_sales": "تُحدد مع كل طلب",
+        "attribute_label": "{label}:"
     },
     "market": {
         "status_active": "سوق نشط",
-        "status_planned": "سوق مخطط",
-        "status_paused": "متوقف مؤقتًا",
+        "status_planned": "ضمن الخطة",
+        "status_paused": "التصدير متوقف مؤقتًا",
         "fact_species": "الأصناف",
-        "fact_species_value": "{count} صنفًا في السجل",
+        "fact_species_value": "{count} صنفًا رئيسيًا",
         "fact_transport": "النقل",
-        "fact_transport_value": "مبرّد؛ تُحدَّد الوسيلة في العرض التجاري",
+        "fact_transport_value": "مبرّد، جوًا أو برًا، ويُحدد مع كل طلب",
         "fact_documents": "المستندات",
-        "fact_documents_value": "تُؤكَّد مع كل طلب"
+        "fact_documents_value": "يؤكد فريق التصدير المستندات المطلوبة لسوقك"
     },
     "certificate": {
         "issuer": "جهة الإصدار",
-        "scope": "النطاق",
-        "valid_until": "سارية حتى",
         "view": "عرض الشهادة",
-        "site": "الموقع المشمول",
-        "request_copy": "اطلب نسخة",
+        "request_copy": "استفسر عن هذه الشهادة",
+        "request_copy_for": ": {name}",
         "groups": {
             "food_safety": "سلامة الغذاء",
             "export_approval": "اعتمادات التصدير",
@@ -101,13 +82,20 @@
         "minutes": "{count, plural, one {قراءة دقيقة واحدة} two {قراءة دقيقتين} few {قراءة # دقائق} other {قراءة # دقيقة}}"
     },
     "cta_band": {
-        "eyebrow": "ابدأ محادثة تجارية",
-        "title": "تحدّث مع فريق التصدير",
-        "intro": "اتصل بفريق التصدير أو راسله عبر واتساب أو البريد الإلكتروني بخصوص الأصناف والمقاسات والتعبئة والوجهات والمستندات.",
+        "eyebrow": "لنبدأ شراكة",
+        "title": "كل شحنة تبدأ برسالة",
+        "intro": "شاركنا الصنف والكمية وبلد الوصول، ويراجع فريق التصدير إمكانية التوريد والشروط التجارية.",
+        "whatsapp_title": "واتساب",
+        "whatsapp_sub": "الإدارة مباشرة · للاتفاق السريع",
+        "email_title": "البريد الإلكتروني",
+        "email_sub": "فريق التصدير · التفاصيل والمستندات",
         "after_title": "ماذا يحدث بعد ذلك؟",
+        "after_free": "إرسال متطلباتك لا يُلزمك بأي طلب",
         "after_1": "يراجع فريق التصدير متطلباتك",
         "after_2": "نتواصل معك لتأكيد التفاصيل",
-        "after_3": "العرض التجاري مرهون بتأكيد التوفر والمواصفات"
+        "after_3": "تُحدد الأسعار مع كل طلب، حسب التوفر والمواصفة المتفق عليها",
+        "email_subject": "استفسار من موقع ازافكو: {topic}",
+        "email_topic_general": "استفسار عام"
     },
     "faq": {
         "toggle_hint": "اعرض الإجابة"
@@ -116,20 +104,21 @@
         "label": "معرض الصور"
     },
     "whatsapp_float": {
-        "label": "واتساب فريق التصدير"
+        "label": "واتساب · الإدارة مباشرة"
     },
     "facts": {
         "title": "حقائق سريعة",
-        "species": "صنفًا في سجل أصنافنا",
-        "markets": "أسواق تصدير نشطة",
-        "iso": "شهادات ISO لأنظمة الإدارة",
-        "iso_note": "صادرة من {issuer}، سارية حتى {year}",
+        "species": "صنفًا رئيسيًا",
+        "markets": "أسواق تصدير",
+        "markets_value": "+{count}",
+        "iso": "شهادات ISO",
+        "iso_note": "معتمدة من TÜV AUSTRIA",
         "plant": "مصنع التجهيز",
         "plant_value": "مطوبس، كفر الشيخ"
     },
     "fill": {
         "spec_title": "لديك مواصفات كاملة؟",
         "spec_text": "أرسلها إلى فريق التصدير ونراجعها معك.",
-        "documents_text": "نشارك النسخ والمستندات الإضافية عند الطلب."
+        "documents_text": "لأي استفسار عن المستندات، تواصل مع فريق التصدير."
     }
 }

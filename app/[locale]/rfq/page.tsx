@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Breadcrumbs, Container, Eyebrow, GeoArcs } from '@/components/v2';
 import RfqRequestPanel from '@/components/v2/rfq/RfqRequestPanel';
 import RfqAside from '@/components/v2/rfq/RfqAside';
 import { isShortTopic, resolveRfqParams } from '@/components/v2/rfq/options';
 import { pageMetadata, breadcrumbJsonLd } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
+import { GPageHead, gBody, gSectionY, gSmall, gWrap } from '@/components/v2/contact/g';
+import { cn } from '@/lib/v2/cn';
 import { Link } from '@/navigation';
 import { rfqHref, routes } from '@/lib/v2/routes';
 
@@ -22,12 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 /**
- * /rfq: "send your request" page. No web form (owner decision, 7 Nov 2026):
+ * /rfq: "Send your requirements" page. No web form (owner decision, 7 Nov 2026):
  * the buyer sends the prepared message from their own company email or WhatsApp.
+ * The route name stays /rfq; the visible wording never says "quote" or "RFQ".
  */
 export default async function RfqPage({ params, searchParams }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
+    const ar = locale === 'ar';
     const { topic, product, country, form, grade } = resolveRfqParams(await searchParams);
     const short = isShortTopic(topic);
 
@@ -38,41 +41,32 @@ export default async function RfqPage({ params, searchParams }: Props) {
     const intro = short ? t(`short_hero.${topic}_intro`) : t('hero.intro');
 
     return (
-        <>
+        <div className={cn('g-font bg-white text-[#0d1f3f]', gBody(ar))}>
             <JsonLd data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [{ name: t('breadcrumb'), path: routes.rfq }])} />
 
-            <section data-surface="light" aria-labelledby="rfq-title" className="relative overflow-hidden bg-surface-offwhite pb-10 pt-8 text-fg md:pb-14 md:pt-12">
-                <GeoArcs className="absolute -end-48 -top-48 hidden w-[560px] opacity-60 lg:block" />
-                <Container>
-                    <Breadcrumbs items={[{ label: t('breadcrumb') }]} />
-                    <Eyebrow className="mt-8">{t('hero.eyebrow')}</Eyebrow>
-                    <h1 id="rfq-title" className="v2-heading mt-4 max-w-4xl font-display text-display-lg">
-                        {title}
-                    </h1>
-                    <p className="mt-4 max-w-prose-v2 text-body-lg text-fg-muted">{intro}</p>
-                    <p className="mt-4 text-body-sm text-fg-muted">
-                        {t.rich(short ? 'switch.to_seafood' : 'switch.to_corporate', {
-                            link: (chunks) => (
-                                <Link
-                                    href={short ? rfqHref() : rfqHref({ type: 'corporate' })}
-                                    className="inline-flex min-h-[44px] items-center font-semibold text-navy underline decoration-gold decoration-2 underline-offset-4"
-                                >
-                                    {chunks}
-                                </Link>
-                            ),
-                        })}
-                    </p>
-                </Container>
-            </section>
+            <GPageHead ar={ar} crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={title} titleId="rfq-title" intro={intro}>
+                <p className={cn('mb-0 mt-5 text-white/[.78]', gSmall(ar))}>
+                    {t.rich(short ? 'switch.to_seafood' : 'switch.to_corporate', {
+                        link: (chunks) => (
+                            <Link
+                                href={short ? rfqHref() : rfqHref({ type: 'corporate' })}
+                                className="inline-flex min-h-[44px] items-center font-bold text-white underline decoration-[#f7b500] decoration-2 underline-offset-4 hover:text-[#f7b500] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f7b500]"
+                            >
+                                {chunks}
+                            </Link>
+                        ),
+                    })}
+                </p>
+            </GPageHead>
 
-            <section className="bg-white py-10 text-fg md:py-16" data-surface="light">
-                <Container grid className="gap-y-12">
-                    <div className="col-span-4 sm:col-span-8 lg:order-2 lg:col-span-8">
+            <section aria-labelledby="rfq-send-title" className={cn(gWrap, gSectionY)}>
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16">
+                    <div className="min-w-0 lg:order-2">
                         <RfqRequestPanel topic={topic} product={product} country={country} form={form} grade={grade} />
                     </div>
-                    <RfqAside short={short} className="col-span-4 sm:col-span-8 lg:order-1 lg:col-span-4" />
-                </Container>
+                    <RfqAside short={short} className="min-w-0 lg:order-1" />
+                </div>
             </section>
-        </>
+        </div>
     );
 }

@@ -35,17 +35,17 @@ export default function InsightCard({ title, href, excerpt, image, category, dat
                     />
                 </div>
             ) : null}
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-subtle">
-                {category ? <span className="font-semibold uppercase tracking-wide text-navy rtl:tracking-normal">{category}</span> : null}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-muted">
+                {category ? <span className="font-bold text-navy">{category}</span> : null}
                 {date ? <time dateTime={date}>{format.dateTime(new Date(date), { dateStyle: 'medium' })}</time> : null}
                 {readingMinutes ? <span>{t('minutes', { count: readingMinutes })}</span> : null}
             </div>
-            <H className="mt-2 text-heading-md text-navy">
+            <H className="m-0 mt-2 text-heading-md text-ink">
                 <Link href={href} className="underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline">
                     {title}
                 </Link>
             </H>
-            {excerpt ? <p className="mt-2 text-body-sm text-ink-muted">{excerpt}</p> : null}
+            {excerpt ? <p className="m-0 mt-2 text-body-sm text-ink-muted">{excerpt}</p> : null}
         </article>
     );
 }

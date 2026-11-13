@@ -29,19 +29,19 @@ export default function SpecTable({ caption, rows, emptyLabel, hideCaption = fal
     const empty = emptyLabel ?? t('confirmed_with_sales');
     const isEmpty = (v: SpecRow['value']) => v === null || v === undefined || v === '';
     const Empty = () => (
-        <span className="inline-flex items-center gap-2 text-ink-subtle">
+        <span className="inline-flex items-center gap-2 text-ink-muted">
             <span aria-hidden="true" className="h-px w-4 bg-line-strong" />
             {empty}
         </span>
     );
 
     return (
-        <div data-surface="light" className={cn('rounded-card border border-line bg-white text-ink', className)}>
+        <div data-surface="light" className={cn('rounded-card border border-t-4 border-line border-t-gold bg-white text-ink', className)}>
             {/* Desktop table */}
             <table className="hidden w-full border-collapse text-start text-body-sm md:table">
                 <caption
                     className={cn(
-                        'px-6 pt-5 pb-3 text-start text-heading-sm text-navy',
+                        'px-6 pb-3 pt-5 text-start text-heading-md text-ink',
                         hideCaption && 'sr-only',
                     )}
                 >
@@ -55,7 +55,7 @@ export default function SpecTable({ caption, rows, emptyLabel, hideCaption = fal
                 </thead>
                 <tbody>
                     {rows.map((r, i) => (
-                        <tr key={i} className="border-t border-line">
+                        <tr key={i} className="border-t border-line-soft">
                             <th scope="row" className="w-2/5 px-6 py-3.5 text-start align-top font-medium text-ink-muted">
                                 {r.label}
                             </th>
@@ -67,10 +67,10 @@ export default function SpecTable({ caption, rows, emptyLabel, hideCaption = fal
 
             {/* Mobile list */}
             <div className="md:hidden">
-                <p className={cn('px-4 pt-4 pb-2 text-heading-sm text-navy', hideCaption && 'sr-only')}>{caption}</p>
-                <dl>
+                <p className={cn('m-0 px-4 pb-2 pt-4 text-heading-md text-ink', hideCaption && 'sr-only')}>{caption}</p>
+                <dl className="m-0">
                     {rows.map((r, i) => (
-                        <div key={i} className="border-t border-line px-4 py-3">
+                        <div key={i} className="border-t border-line-soft px-4 py-3">
                             <dt className="text-caption text-ink-subtle">{r.label}</dt>
                             <dd className="mt-0.5 text-body-sm font-medium text-ink">{isEmpty(r.value) ? <Empty /> : r.value}</dd>
                         </div>

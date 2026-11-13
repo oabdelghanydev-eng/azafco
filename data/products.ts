@@ -26,10 +26,11 @@ export interface Product {
     scientificName: string
     image: string
     available: boolean
-    // true = kept in data but hidden everywhere on the site (catalogue, seafood
-    // index, related products, sitemap, RFQ species list; product page 404s)
-    // until the owner confirms the species is still sold.
-    pendingConfirmation?: boolean
+    // false = sold, but not shown on the site: kept in data (HS table in the
+    // import guide, translations) and hidden everywhere else (catalogue, seafood
+    // index, related products, sitemap, RFQ species list; the product page 404s).
+    // Default (omitted) = published.
+    published?: boolean
 }
 
 // Locale-agnostic product data - all translatable strings are in locale JSON files
@@ -146,7 +147,8 @@ export const allProducts: Product[] = [
         image: '/images/species/sea-bream.webp',
         available: true,
     },
-    // Not on the owner's 7 Nov 2026 list; kept until the owner confirms whether eel is still sold
+    // Eel is sold but not shown (owner, 13 Nov 2026: the 12 above are the main,
+    // most-requested species; other species are supplied on request).
     {
         id: 8,
         slug: 'eel',
@@ -155,13 +157,13 @@ export const allProducts: Product[] = [
         scientificName: 'Anguilla anguilla',
         image: '' /* no photo in the owner's set (7 Nov 2026) */,
         available: true,
-        pendingConfirmation: true,
+        published: false,
     },
 ]
 
-// Published products: everything except species awaiting owner confirmation.
+// Published products: the 12 main species shown on the site (eel excluded).
 // Use this list everywhere on the site; `allProducts` only for data maintenance.
-export const products: Product[] = allProducts.filter((p) => !p.pendingConfirmation)
+export const products: Product[] = allProducts.filter((p) => p.published !== false)
 
 // Published species-page slugs (used by generateStaticParams and the sitemap)
 export const productSlugs: string[] = products.map((p) => p.slug)

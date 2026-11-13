@@ -2,109 +2,93 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Nile Tilapia"
+            "Nile tilapia"
         ],
-        "description": "Premium Nile Tilapia from certified Egyptian farms. Our #1 export product. HACCP certified with complete cold chain.",
+        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
         "sizes": [
-            "Small (200-300g)",
-            "Medium (300-500g)",
-            "Large (500g+)",
-            "Custom sizes available"
+            "Small (200–300 g)",
+            "Medium (300–500 g)",
+            "Large (500 g and above)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "sea_bass": {
-        "name": "Sea Bass",
+        "name": "Sea bass",
         "alt_names": [
-            "European Seabass",
-            "European Bass",
-            "Mediterranean Sea Bass",
+            "European sea bass",
             "Branzino"
         ],
-        "description": "Premium European sea bass, perfect for grilling, frying, and fine dining. Restaurant favorite across Gulf region.",
+        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
         "sizes": [
-            "Medium (400-600g)",
-            "Large (600g+)",
-            "Custom sizes available"
+            "Medium (400–600 g)",
+            "Large (600 g and above)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Marine",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "mullet": {
-        "name": "Grey Mullet",
+        "name": "Grey mullet",
         "alt_names": [
-            "Flathead Grey Mullet",
-            "Striped Mullet",
+            "Flathead grey mullet",
             "Bouri"
         ],
-        "description": "Fresh Egyptian grey mullet (bouri), raised in brackish water. Excellent for grilling and smoking. Traditional favorite in Gulf cuisine.",
+        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
         "sizes": [
-            "Small (150-250g)",
-            "Medium (250-400g)",
-            "Custom sizes available"
+            "Small (150–250 g)",
+            "Medium (250–400 g)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Brackish water",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "grass_carp": {
-        "name": "Grass Carp",
+        "name": "Grass carp",
         "alt_names": [
-            "White Amur",
+            "White amur",
             "Hashayesh"
         ],
-        "description": "Fresh grass carp (Ctenopharyngodon idella), a freshwater carp farmed in Egypt.",
+        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
         "sizes": [
-            "Medium (300-500g)",
-            "Large (500g+)",
-            "Custom sizes available"
+            "Medium (300–500 g)",
+            "Large (500 g and above)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "mubarakah": {
-        "name": "Common Carp",
+        "name": "Common carp",
         "alt_names": [
-            "Carp",
-            "Mabrouk"
+            "Scaled carp",
+            "Qishra"
         ],
-        "description": "Fresh common carp (mabrouk), ideal for traditional dishes. Large sizes available for wholesale.",
+        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
         "sizes": [
-            "Large (1-2kg)",
-            "Jumbo (2kg+)",
-            "Custom sizes available"
+            "Large (1–2 kg)",
+            "Jumbo (2 kg and above)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "catfish": {
         "name": "Catfish",
         "alt_names": [
-            "North African Catfish",
-            "African Catfish",
-            "Sharptooth Catfish",
+            "African catfish",
+            "North African catfish",
             "Karmout"
         ],
-        "description": "Fresh catfish (karmout, Clarias gariepinus) from Egyptian freshwater farms. Popular choice for restaurants and distributors.",
+        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
         "sizes": [
-            "Medium (500-800g)",
-            "Large (800g+)",
-            "Custom sizes available"
+            "Medium (500–800 g)",
+            "Large (800 g and above)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "lout": {
         "name": "Meagre",
@@ -113,109 +97,81 @@
             "Croaker",
             "Corvina"
         ],
-        "description": "Fresh meagre (lout) with firm white flesh. Premium quality for upscale restaurants and hotels.",
+        "description": "Meagre, known in Egypt as lout, is a marine fish.",
         "sizes": [
-            "Medium (400-600g)",
-            "Large (600g+)",
-            "Custom sizes available"
+            "Medium (400–600 g)",
+            "Large (600 g and above)"
         ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "packaging": "EPS foam box",
         "category": "Marine",
-        "availability": "Year-round supply"
+        "availability": "Confirmed per order"
     },
     "thinlip_mullet": {
-        "name": "Thinlip Mullet",
+        "name": "Thinlip mullet",
         "alt_names": [
-            "Thinlip Grey Mullet",
+            "Thinlip grey mullet",
             "Tobar"
         ],
-        "description": "Fresh thinlip mullet (Chelon ramada), a grey mullet farmed in brackish water in Egypt. A separate product from our grey mullet (Mugil cephalus).",
-        "sizes": [
-            "Custom sizes available"
-        ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "sizes": [],
+        "packaging": "EPS foam box",
         "category": "Brackish water",
-        "availability": "On request, ask us for current availability"
+        "availability": "Confirmed per order"
     },
     "bayad_catfish": {
-        "name": "Bayad Catfish",
+        "name": "Bayad catfish",
         "alt_names": [
             "Bayad",
-            "Nile Bagrid Catfish"
+            "Nile bagrid catfish"
         ],
-        "description": "Fresh bayad catfish (Bagrus bajad), a freshwater catfish native to the Nile. Mostly wild-caught from the Nile.",
-        "sizes": [
-            "Custom sizes available"
-        ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "sizes": [],
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "On request, ask us for current availability"
+        "availability": "Confirmed per order"
     },
     "silver_carp": {
-        "name": "Silver Carp",
+        "name": "Silver carp",
         "alt_names": [],
-        "description": "Fresh silver carp (Hypophthalmichthys molitrix), a freshwater carp farmed in Egypt.",
-        "sizes": [
-            "Custom sizes available"
-        ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "description": "Silver carp is a freshwater carp.",
+        "sizes": [],
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "On request, ask us for current availability"
+        "availability": "Confirmed per order"
     },
     "mirror_carp": {
-        "name": "Mirror Carp",
+        "name": "Mirror carp",
         "alt_names": [
-            "Common Carp (mirror)",
+            "Common carp (mirror)",
             "Mabrouka"
         ],
-        "description": "Fresh mirror carp, the mirror-scaled form of common carp (Cyprinus carpio), farmed in Egypt.",
-        "sizes": [
-            "Custom sizes available"
-        ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
         "category": "Freshwater",
-        "availability": "On request, ask us for current availability"
+        "availability": "Confirmed per order"
     },
     "sea_bream": {
-        "name": "Sea Bream",
+        "name": "Sea bream",
         "alt_names": [
-            "Gilthead Seabream",
-            "Gilthead Bream",
+            "Gilthead sea bream",
             "Dorade"
         ],
-        "description": "Fresh gilthead sea bream (Sparus aurata), a marine fish farmed in Egypt.",
-        "sizes": [
-            "Custom sizes available"
-        ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
         "category": "Marine",
-        "availability": "On request, ask us for current availability"
+        "availability": "Confirmed per order"
     },
     "eels": {
-        "name": "European Eel",
+        "name": "European eel",
         "alt_names": [
             "Eel"
         ],
-        "description": "Fresh European eel from the Nile Delta lakes. Specialty product for select markets outside the EU.",
-        "sizes": [
-            "Medium (300-500g)",
-            "Large (500g+)",
-            "Custom sizes available"
-        ],
-        "storage_temp": "0 to 4°C",
-        "packaging": "EPS Box",
+        "description": "European eel is a brackish-water fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
         "category": "Brackish water",
-        "availability": "Year-round supply"
-    },
-    "_note": {
-        "custom_sizes": "We offer great flexibility in sizes - all products can be customized to order",
-        "more_products": "Additional products available upon request. Contact us for specific requirements.",
-        "min_order": "Minimum order: 1 carton"
+        "availability": "Confirmed per order"
     }
 }

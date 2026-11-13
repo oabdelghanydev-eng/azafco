@@ -2,10 +2,11 @@
  * Server-side helpers shared by the v2 seafood pages (catalogue, product
  * detail, seafood overview, processing, quality).
  *
- * Species facts come only from data/products.ts + data.products.<key>
- * (locales/<locale>/data/products.json). Free-text descriptions in that file
- * carry unapproved claims ("#1", "HACCP certified", "0 to 4°C", "year-round",
- * "1 carton MOQ") and are deliberately NOT used here.
+ * Species facts come only from data/products.ts, data/specs.ts (indicative
+ * grades / forms / pack type) and data.products.<key> (name, alt names and the
+ * one-line description in locales/<locale>/data/products.json). Only the 12
+ * published species are used (eel is kept in data but unpublished).
+ * No farmed / wild labels, no stock or availability claims.
  */
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
@@ -14,15 +15,18 @@ import { locales, ogLocaleMap, ogImageMap, type Locale, publishedLocales } from 
 import { products, type Product, type ProductCategory } from '@/data/products';
 import { mediaImage, productMediaId, type ImageProps } from '@/lib/v2/media';
 import { productHref } from '@/lib/v2/routes';
+import { formatGradeRange, getSpeciesSpec, type FormKind } from '@/lib/v2/specs';
 
 export const baseUrl = companyConfig.contact.baseUrl;
 
 /**
  * Slugs whose scientific name is NOT yet verified (docs/reports/species-identification.md).
- * `buni` (Nile barb vs grass carp) is medium confidence; once seo/species-fix
- * 3824efc lands, the slug becomes `grass-carp` (high confidence) and this entry is inert.
+ * All 12 published scientific names are on the approved neutral-names table (owner's list,
+ * 7 Nov 2026). Confidence is high for 11; bayad (Bagrus bajad) is rated medium-high because
+ * B. docmak looks similar, but its name is approved for display.
+ * Add a slug here to hide its scientific name until it is confirmed.
  */
-const UNVERIFIED_SCIENTIFIC = new Set<string>(['buni']);
+const UNVERIFIED_SCIENTIFIC = new Set<string>();
 
 export interface CatalogueProduct {
     slug: string;
@@ -30,6 +34,8 @@ export interface CatalogueProduct {
     category: ProductCategory;
     name: string;
     altNames: string[];
+    /** One-line factual description (catalogue_v2.descriptions.<slug>) */
+    description?: string;
     /** Only set when the identification is verified */
     scientificName?: string;
     image: ImageProps;
@@ -57,16 +63,17 @@ export function toCatalogueProduct(t: RootT, locale: string, p: Product): Catalo
     const key = `data.products.${p.translationKey}`;
     const name = t.has(`${key}.name`) ? t(`${key}.name`) : p.slug;
     const mediaId = productMediaId(p.slug);
-    const fallbackAlt = t.has('catalogue_v2.card.image_alt') ? t('catalogue_v2.card.image_alt', { name }) : name;
-    const image: ImageProps = mediaId
-        ? mediaImage(mediaId, locale)
-        : { src: p.image, alt: fallbackAlt, width: 960, height: 1280 };
+    // Alt text from the locale files (every locale, same short species name as the page)
+    const alt = t.has('catalogue_v2.card.image_alt') ? t('catalogue_v2.card.image_alt', { name }) : name;
+    const image: ImageProps = mediaId ? { ...mediaImage(mediaId, locale), alt } : { src: p.image, alt, width: 960, height: 1280 };
     return {
         slug: p.slug,
         href: productHref(p.slug),
         category: p.category,
         name,
         altNames: rawArray(t, `${key}.alt_names`),
+        // In this namespace (not data.products.<key>.description) so every locale shows approved copy
+        description: t.has(`catalogue_v2.descriptions.${p.slug}`) ? t(`catalogue_v2.descriptions.${p.slug}`) : undefined,
         scientificName: UNVERIFIED_SCIENTIFIC.has(p.slug) ? undefined : p.scientificName,
         image,
     };
@@ -88,6 +95,39 @@ export async function getSearchNames(): Promise<Record<string, string[]>> {
         out[p.slug].push(p.slug.replace(/-/g, ' '));
     }
     return out;
+}
+
+export interface SpecView {
+    /** Product form codes and labels, e.g. "Whole, fresh chilled" */
+    forms: { kind: FormKind; label: string }[];
+    /** Indicative weight grades, e.g. "Small (200–300 g)"; empty when the data has none */
+    grades: string[];
+    /** Indicative pack type label, e.g. "EPS foam box" */
+    pack?: string;
+}
+
+/**
+ * Published, indicative spec values for one species (data/specs.ts), labelled
+ * from catalogue_v2.specs.*. Nothing is invented: missing data stays empty.
+ */
+export function getSpecView(t: RootT, locale: string, slug: string): SpecView {
+    const spec = getSpeciesSpec(slug);
+    const ns = 'catalogue_v2.specs';
+    const units = { g: t(`${ns}.units.g`), kg: t(`${ns}.units.kg`), isolate: locale === 'ar' };
+    const forms = Array.from(new Set(spec.forms.map((f) => f.kind))).map((kind) => ({ kind, label: t(`${ns}.forms.${kind}`) }));
+    const grades: string[] = [];
+    for (const f of spec.forms) {
+        for (const g of f.grades) {
+            const range = formatGradeRange(g, units);
+            if (!range) continue;
+            const label = g.label && t.has(`${ns}.grades.${g.label}`) ? t(`${ns}.grades.${g.label}`) : null;
+            const text = label ? `${label} (${range})` : range;
+            if (!grades.includes(text)) grades.push(text);
+        }
+    }
+    const packType = spec.forms.find((f) => f.packType)?.packType ?? spec.logistics.boxType;
+    const pack = packType && t.has(`${ns}.packs.${packType}`) ? t(`${ns}.packs.${packType}`) : undefined;
+    return { forms, grades, pack };
 }
 
 /** Related products: same water type first, then the rest, in catalogue order. */

@@ -39,47 +39,48 @@ export default function ProductCard({
     className,
 }: ProductCardProps) {
     const t = useTranslations('v2.cta');
+    const ts = useTranslations('v2.spec');
     return (
         <article
             data-surface="light"
             className={cn(
-                'group relative flex h-full flex-col overflow-hidden rounded-card border border-line bg-white text-fg shadow-card',
-                'transition-shadow duration-base hover:shadow-raised motion-reduce:transition-none',
+                'group relative flex h-full flex-col overflow-hidden rounded-card border border-line bg-white text-fg',
+                'transition-[border-color,box-shadow] duration-base hover:border-navy hover:shadow-card motion-reduce:transition-none',
                 className,
             )}
         >
-            <div className="relative aspect-[4/3] bg-surface-mist">
+            <div className="relative aspect-[4/3] bg-surface-offwhite">
                 {image ? (
                     <Image
                         src={image.src}
                         alt={image.alt}
                         fill
                         sizes="(min-width: 1280px) 300px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className={`${image.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)]' : 'object-cover'} transition-transform duration-slow group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100`}
+                        className={image.cutout ? 'object-contain p-[4%] drop-shadow-[0_10px_14px_rgba(0,27,71,0.22)] rtl:-scale-x-100' : 'object-cover transition-transform duration-slow group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100'}
                     />
                 ) : null}
                 {tag ? (
-                    <span className="absolute start-3 top-3 rounded-control bg-white/95 px-2.5 py-1 text-caption font-semibold text-navy">
+                    <span className="absolute start-3 top-3 rounded-full bg-white px-3 py-1 text-caption font-bold text-navy">
                         {tag}
                     </span>
                 ) : null}
             </div>
-            <div className="flex flex-1 flex-col p-5">
-                <H className="text-heading-md text-navy">
+            <div className="flex flex-1 flex-col px-5 pb-6 pt-5 lg:px-6">
+                <H className="m-0 text-heading-md text-ink">
                     <Link href={href} className="after:absolute after:inset-0 after:content-['']">
                         {name}
                     </Link>
                 </H>
                 {scientificName ? (
-                    <p className="mt-1 text-caption italic text-ink-subtle" lang="la" dir="ltr">
+                    <p className="m-0 mt-1 text-caption italic text-ink-muted" lang="la" dir="ltr">
                         {scientificName}
                     </p>
                 ) : null}
                 {attributes?.length ? (
-                    <dl className="mt-4 space-y-1.5 text-body-sm">
+                    <dl className="m-0 mt-4 space-y-1.5 text-body-sm">
                         {attributes.map((a) => (
                             <div key={a.label} className="flex gap-2">
-                                <dt className="text-ink-subtle">{a.label}:</dt>
+                                <dt className="text-ink-muted">{ts('attribute_label', { label: a.label })}</dt>
                                 <dd className="font-medium text-ink">{a.value}</dd>
                             </div>
                         ))}
@@ -87,10 +88,10 @@ export default function ProductCard({
                 ) : null}
                 <span
                     aria-hidden="true"
-                    className="mt-auto inline-flex items-center gap-2 pt-5 text-body-sm font-semibold text-navy underline decoration-gold decoration-2 underline-offset-[6px]"
+                    className="v2-btn mt-auto inline-flex items-center gap-2.5 pt-5 text-body-sm text-navy underline-offset-4 group-hover:underline"
                 >
                     {ctaLabel ?? t('view_specifications')}
-                    <ArrowIcon size={16} className="transition-transform duration-base group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
+                    <ArrowIcon size={18} className="transition-transform duration-base group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transition-none" />
                 </span>
             </div>
         </article>

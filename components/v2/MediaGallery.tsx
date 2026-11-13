@@ -33,21 +33,21 @@ export default function MediaGallery({ items, columns = 3, aspect = '4/3', label
         columns === 2 ? '(min-width: 640px) 50vw, 100vw' : columns === 3 ? '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw' : '(min-width: 1024px) 25vw, 50vw';
 
     return (
-        <ul aria-label={label ?? t('label')} className={cn('grid gap-4 md:gap-6', cols, className)}>
+        <ul aria-label={label ?? t('label')} className={cn('m-0 grid list-none gap-3 p-0 md:gap-4 lg:gap-5', cols, className)}>
             {items.map(({ id, caption }) => {
                 const m = getMedia(id);
                 const alt = locale === 'ar' ? m.alt.ar : m.alt.en;
                 return (
                     <li key={id}>
-                        <figure>
-                            <div className={cn('relative overflow-hidden rounded-card bg-surface-mist', ratio)}>
+                        <figure className="m-0">
+                            <div className={cn('relative overflow-hidden rounded-card bg-surface-offwhite', ratio)}>
                                 {aspect === 'natural' ? (
                                     <Image src={m.src} alt={alt} width={m.width} height={m.height} sizes={sizes} className="h-auto w-full" />
                                 ) : (
-                                    <Image src={m.src} alt={alt} fill sizes={sizes} className={m.cutout ? 'object-contain p-[2%] drop-shadow-[0_10px_14px_rgba(0,45,114,0.14)] bg-surface-mist' : 'object-cover'} />
+                                    <Image src={m.src} alt={alt} fill sizes={sizes} className={m.cutout ? 'object-contain bg-surface-offwhite p-[2%] drop-shadow-[0_10px_14px_rgba(0,27,71,0.2)]' : 'object-cover'} />
                                 )}
                             </div>
-                            {caption ? <figcaption className="mt-2 text-caption text-fg-muted">{caption}</figcaption> : null}
+                            {caption ? <figcaption className="mt-2.5 text-body-sm text-fg-muted">{caption}</figcaption> : null}
                         </figure>
                     </li>
                 );

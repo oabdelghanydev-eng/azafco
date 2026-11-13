@@ -4,8 +4,14 @@
  *   import { Section, SectionHeader, Button, ProductCard } from '@/components/v2';
  *
  * Everything here is hook-light and works in server components except the
- * files marked 'use client' (SiteHeader, LanguageSwitch, MobileQuoteBar),
- * which are mounted once by app/[locale]/layout.tsx.
+ * files marked 'use client' (MobileQuoteBar, RevealSections).
+ * The site header and footer are the design G ones (components/g/GHeader,
+ * components/g/GFooter), mounted once by app/[locale]/layout.tsx.
+ *
+ * Visual system = design G (docs/team/web/g/RELEASE-DECISIONS.md): Manrope +
+ * IBM Plex Sans Arabic, navy #001B47 / #002D72, gold #F7B500, off-white #F2F5FA,
+ * 1320px container, 112px section padding from lg, pill buttons, eyebrows with a
+ * 44px gold rule, white cards with a thin border (gold top bar on proof cards).
  */
 export { Container, Section, Eyebrow, SectionHeader } from './Layout';
 export type { ContainerProps, SectionProps, SectionVariant, SectionSpacing, EyebrowProps, SectionHeaderProps } from './Layout';

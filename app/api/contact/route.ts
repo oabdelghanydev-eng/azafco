@@ -1,24 +1,34 @@
 /**
- * POST /api/contact - partnership / quote enquiry from the /[locale]/contact form.
+ * POST /api/contact - enquiry from a website form (partnership / requirements).
+ *
+ * Note (14 Nov 2026): the live site has no web form (owner decision, 7 Nov 2026:
+ * enquiries come from the buyer's own email or WhatsApp via /rfq). The endpoint
+ * stays so a form can be re-enabled without backend work, and it must fail cleanly.
  *
  * Sends the enquiry by email through Resend's HTTP API (no SDK, plain fetch).
  * Env vars (see .env.example):
+ *   CONTACT_FORM_ENABLED  must be "1" or the endpoint answers 404 before reading
+ *                         the body (no form on the site today, so no enquiry PII
+ *                         from bot posts ends up in the logs)
  *   RESEND_API_KEY      Resend API key
  *   CONTACT_TO_EMAIL    recipient(s), comma-separated
  *   CONTACT_FROM_EMAIL  sender on a domain verified in Resend, e.g. "AZAFCO Website <website@azafco.com.eg>"
  *
  * If they are missing or Resend fails, the enquiry is written to the server log
- * (so it is never lost) and the client gets an error code; the form then shows
- * the company email / WhatsApp as a fallback.
+ * (so it is never lost) and the client gets an error code plus `fallback`
+ * (export-team email + management WhatsApp), so a form can always show a way
+ * to reach us instead of a blank failure.
  *
  * Two payload shapes (backward compatible):
  *   - legacy partnership form (components/PartnershipForm.tsx): no `form` key
- *   - site v2 RFQ (components/v2/rfq/RfqForm.tsx): `form: 'rfq'`, validated with
+ *   - site v2 requirements form (`form: 'rfq'`), validated with
  *     components/v2/rfq/schema.ts; success also returns a reference `ref`.
  *
  * Responses: { ok: true, ref? } | { ok: false, error: 'invalid', fields } (400)
  *   | { ok: false, error: 'too_large' } (413) | { ok: false, error: 'rate_limited' } (429)
  *   | { ok: false, error: 'not_configured' } (503) | { ok: false, error: 'send_failed' } (502)
+ *   | { ok: false, error: 'forbidden' } (403) | { ok: false, error: 'server_error' } (500)
+ * Every error except field validation also carries `fallback: { email, whatsapp }`.
  */
 
 import { NextResponse } from 'next/server';
@@ -35,6 +45,7 @@ import {
 } from '@/lib/partnershipForm';
 import { RFQ_FORM_ID, makeRfqReference, normalizeRfq, validateRfq, type RfqData } from '@/components/v2/rfq/schema';
 import { RFQ_COUNTRIES } from '@/components/v2/rfq/countries';
+import { companyConfig } from '@/config/company.config';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -54,8 +65,32 @@ function rateLimited(ip: string): boolean {
     return recent.length > RATE_LIMIT.max;
 }
 
+/** Channels a form shows when sending fails: email = export team, WhatsApp = management (fast deals) */
+const FALLBACK = { email: companyConfig.contact.email, whatsapp: companyConfig.contact.social.whatsapp } as const;
+
 function json(body: Record<string, unknown>, status = 200) {
-    return NextResponse.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
+    // Errors other than field validation always tell the client where to write instead
+    const payload = body.ok === false && body.error !== 'invalid' ? { ...body, fallback: FALLBACK } : body;
+    return NextResponse.json(payload, { status, headers: { 'Cache-Control': 'no-store' } });
+}
+
+/** Resend settings from the env, or null if any of the three is missing */
+function emailConfig() {
+    const apiKey = process.env.RESEND_API_KEY?.trim();
+    const to = (process.env.CONTACT_TO_EMAIL || '').split(',').map(s => s.trim()).filter(Boolean);
+    const from = process.env.CONTACT_FROM_EMAIL?.trim();
+    return apiKey && to.length > 0 && from ? { apiKey, to, from } : null;
+}
+
+/** Names of the missing env vars, for the server log only (never sent to the client) */
+function missingEnv(): string {
+    return [
+        !process.env.RESEND_API_KEY?.trim() && 'RESEND_API_KEY',
+        !(process.env.CONTACT_TO_EMAIL || '').trim() && 'CONTACT_TO_EMAIL',
+        !process.env.CONTACT_FROM_EMAIL?.trim() && 'CONTACT_FROM_EMAIL',
+    ]
+        .filter(Boolean)
+        .join(', ');
 }
 
 function escapeHtml(value: string): string {
@@ -173,7 +208,7 @@ function buildRfqEmail(d: RfqData, ref: string, locale: string, ip: string) {
         ['UTM', Object.entries(d.utm).map(([k, v]) => `${k}=${v}`).join(' ') || '—'],
     );
 
-    const heading = d.variant === 'full' ? 'New request for quotation' : d.topic === 'documents' ? 'New document request' : 'New corporate enquiry';
+    const heading = d.variant === 'full' ? 'New supply requirements' : d.topic === 'documents' ? 'New document request' : 'New corporate enquiry';
     const text =
         rows.map(([k, v]) => `${k}: ${v}`).join('\n') +
         `\n\nSent from the website on ${new Date().toISOString()} (IP ${ip}).\nReply to this email to answer the sender directly.`;
@@ -191,7 +226,7 @@ function buildRfqEmail(d: RfqData, ref: string, locale: string, ip: string) {
 
     const subject =
         d.variant === 'full'
-            ? oneLine(`RFQ ${ref}: ${species}, ${d.volume} ${d.volumeUnit} to ${dest} (${d.company})`)
+            ? oneLine(`Requirements ${ref}: ${species}, ${d.volume} ${d.volumeUnit} to ${dest} (${d.company})`)
             : oneLine(`${d.topic === 'documents' ? 'Document request' : 'Corporate enquiry'} ${ref}: ${d.company} (${country})`);
     return { subject, text, html };
 }
@@ -206,14 +241,13 @@ async function handleRfq(body: Record<string, unknown>, ip: string) {
     const { subject, text, html } = buildRfqEmail(rfq, ref, locale, ip);
     const logPayload = JSON.stringify({ ...rfq, ref, locale });
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const to = (process.env.CONTACT_TO_EMAIL || '').split(',').map(s => s.trim()).filter(Boolean);
-    const from = process.env.CONTACT_FROM_EMAIL;
-    if (!apiKey || to.length === 0 || !from) {
-        // Preview deployments without keys: keep the RFQ in the log, tell the form to offer email/WhatsApp.
-        console.error('[contact] email not configured (RESEND_API_KEY / CONTACT_TO_EMAIL / CONTACT_FROM_EMAIL); RFQ NOT emailed:', logPayload);
+    const cfg = emailConfig();
+    if (!cfg) {
+        // Deployments without keys: keep the request in the log, tell the form to offer email/WhatsApp.
+        console.error(`[contact] email not configured (missing: ${missingEnv()}); requirements NOT emailed:`, logPayload);
         return json({ ok: false, error: 'not_configured' }, 503);
     }
+    const { apiKey, to, from } = cfg;
 
     try {
         const res = await fetch('https://api.resend.com/emails', {
@@ -224,17 +258,32 @@ async function handleRfq(body: Record<string, unknown>, ip: string) {
         });
         if (!res.ok) {
             const detail = await res.text().catch(() => '');
-            console.error(`[contact] Resend responded ${res.status}: ${detail.slice(0, 500)}; RFQ NOT emailed:`, logPayload);
+            console.error(`[contact] Resend responded ${res.status}: ${detail.slice(0, 500)}; requirements NOT emailed:`, logPayload);
             return json({ ok: false, error: 'send_failed' }, 502);
         }
     } catch (err) {
-        console.error('[contact] Resend request failed:', err, '; RFQ NOT emailed:', logPayload);
+        console.error('[contact] Resend request failed:', err, '; requirements NOT emailed:', logPayload);
         return json({ ok: false, error: 'send_failed' }, 502);
     }
     return json({ ok: true, ref });
 }
 
+/** Off unless a form is switched back on (CONTACT_FORM_ENABLED=1). */
+const formEnabled = () => process.env.CONTACT_FORM_ENABLED?.trim() === '1';
+
 export async function POST(request: Request) {
+    // Disabled: answer before the body is parsed or logged
+    if (!formEnabled()) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404, headers: { 'Cache-Control': 'no-store' } });
+    try {
+        return await handlePost(request);
+    } catch (err) {
+        // Never an HTML 500 page: the client always gets JSON with the fallback channels
+        console.error('[contact] unexpected error:', err);
+        return json({ ok: false, error: 'server_error' }, 500);
+    }
+}
+
+async function handlePost(request: Request) {
     const ip = (request.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown';
 
     // Reject cross-site posts (the form always posts from the same origin)
@@ -254,7 +303,7 @@ export async function POST(request: Request) {
     let body: Record<string, unknown>;
     try {
         body = JSON.parse(raw);
-        if (!body || typeof body !== 'object') throw new Error('not an object');
+        if (!body || typeof body !== 'object' || Array.isArray(body)) throw new Error('not an object');
     } catch {
         return json({ ok: false, error: 'invalid', fields: {} }, 400);
     }
@@ -269,7 +318,7 @@ export async function POST(request: Request) {
 
     if (rateLimited(ip)) return json({ ok: false, error: 'rate_limited' }, 429);
 
-    // Site v2 RFQ / corporate / documents form
+    // Site v2 requirements / corporate / documents form
     if (body.form === RFQ_FORM_ID) return handleRfq(body, ip);
 
     const enquiry = normalizeEnquiry(body);
@@ -278,15 +327,13 @@ export async function POST(request: Request) {
 
     const locale = typeof body.locale === 'string' && (locales as readonly string[]).includes(body.locale) ? body.locale : 'unknown';
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const to = (process.env.CONTACT_TO_EMAIL || '').split(',').map(s => s.trim()).filter(Boolean);
-    const from = process.env.CONTACT_FROM_EMAIL;
-
-    if (!apiKey || to.length === 0 || !from) {
+    const cfg = emailConfig();
+    if (!cfg) {
         // Keep the enquiry in the server log so it can be recovered.
-        console.error('[contact] email not configured (RESEND_API_KEY / CONTACT_TO_EMAIL / CONTACT_FROM_EMAIL); enquiry NOT emailed:', JSON.stringify({ ...enquiry, locale }));
+        console.error(`[contact] email not configured (missing: ${missingEnv()}); enquiry NOT emailed:`, JSON.stringify({ ...enquiry, locale }));
         return json({ ok: false, error: 'not_configured' }, 503);
     }
+    const { apiKey, to, from } = cfg;
 
     const { subject, text, html } = buildEmail(enquiry, locale, ip);
 

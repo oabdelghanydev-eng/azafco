@@ -29,17 +29,17 @@ export default function Breadcrumbs({ items, includeHome = true, className }: Br
     const all: Crumb[] = includeHome ? [{ label: t('home'), href: routes.home }, ...items] : items;
     return (
         <nav aria-label={t('label')} className={cn('text-caption', className)}>
-            <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-fg-muted">
+            <ol className="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0 text-fg-muted">
                 {all.map((c, i) => {
                     const last = i === all.length - 1;
                     return (
                         <li key={`${c.label}-${i}`} className="flex items-center gap-2">
                             {c.href && !last ? (
-                                <Link href={c.href} className="underline-offset-4 hover:text-fg hover:underline">
+                                <Link href={c.href} className="inline-block py-1 underline-offset-4 transition-colors hover:text-link-hover hover:underline">
                                     {c.label}
                                 </Link>
                             ) : (
-                                <span aria-current={last ? 'page' : undefined} className={cn(last && 'text-fg font-medium')}>
+                                <span aria-current={last ? 'page' : undefined} className={cn(last && 'font-semibold text-fg')}>
                                     {c.label}
                                 </span>
                             )}

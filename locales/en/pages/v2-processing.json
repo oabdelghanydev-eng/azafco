@@ -1,85 +1,131 @@
 {
     "meta": {
-        "title": "Fish Processing & Packing for Export",
-        "description": "How AZAFCO turns buyer specifications into graded, packed fish ready for dispatch: receiving, grading, processing, packing, temperature control."
+        "title": "Fish processing, packing and export from Egypt",
+        "description": "From the pond to the pallet: we farm and source fish, then wash, ice, grade, pack, inspect and export it with our own refrigerated trucks and cold stores."
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home",
+        "current": "Value chain"
     },
     "hero": {
-        "eyebrow": "Processing & Packing",
-        "title": "Where specifications become product ready to ship",
-        "intro": "The factory is where your specification is met. Here is the path a product takes, and the steps we can document, from receiving and grading to packing and preparation for dispatch.",
-        "secondary": "Review Quality Standards"
+        "kicker": "Value chain",
+        "title": "From the pond to the pallet, every stage handled by AZAFCO",
+        "intro": "We farm and source the fish, then wash, ice, grade, pack, inspect and export it ourselves, with our own refrigerated trucks, logistics and cold stores.",
+        "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind",
+        "primary": "Start a partnership",
+        "secondary": "Our quality standards"
     },
-    "intro": {
-        "eyebrow": "The factory",
-        "title": "Built around the buyer's specification",
-        "text": "Our operating team matches each customer order to the work instructions and quality limits for that product type, and reviews the results before the shipment leaves."
+    "stats": {
+        "label": "Key figures",
+        "items": [
+            {
+                "value": "12",
+                "label": "main fish species"
+            },
+            {
+                "value": "7+",
+                "label": "export markets"
+            },
+            {
+                "value": "3",
+                "label": "ISO certificates"
+            },
+            {
+                "value": "2,500",
+                "label": "t/month packing capacity"
+            }
+        ]
     },
-    "workflow": {
-        "eyebrow": "Product journey",
-        "title": "From receiving to dispatch",
-        "checkpoint": "Quality checkpoint",
-        "intro": "Six stages, each tied to the specification agreed for your order.",
-        "receiving_title": "Receiving",
-        "receiving_text": "Fish are received and inspected under the plant's procedures.",
-        "grading_title": "Grading",
-        "grading_text": "Product is sorted and graded by size against the order.",
-        "processing_title": "Processing",
-        "processing_text": "Prepared according to the production order for the agreed product form.",
-        "packing_title": "Weighing and packing",
-        "packing_text": "Weighed and packed to the agreed pack type, net weight and labels.",
-        "temperature_title": "Temperature control",
-        "temperature_text": "Storage and transport temperatures are set per product and its safety requirements.",
-        "dispatch_title": "Dispatch",
-        "dispatch_text": "Shipment details are documented and the order is prepared for handover."
+    "chain": {
+        "eyebrow": "How we work",
+        "title": "Five stages, one agreed specification",
+        "intro": "Every order follows the same path, and each stage works to the specification we agree with you.",
+        "stageLabel": "Stage {n}",
+        "stages": {
+            "farming": {
+                "title": "Farming and sourcing",
+                "text": "We farm fish ourselves and also buy fish from other producers.",
+                "alt": "Aerial view of earthen fish ponds with aerators and palm trees"
+            },
+            "harvest": {
+                "title": "Harvest",
+                "text": "The fish are netted and taken to our plant in Motobas, Kafr El Sheikh.",
+                "alt": "Two workers pulling a net full of tilapia to the bank of an earthen pond"
+            },
+            "packing": {
+                "title": "Washing, icing and packing",
+                "text": "The fish are washed, iced, graded by weight and packed whole on ice, to the packing agreed for your order.",
+                "alt": "Gloved hands placing a whole tilapia into a crate of crushed ice on a steel table"
+            },
+            "inspection": {
+                "title": "Inspection",
+                "text": "Checked against the agreed specification before the boxes are closed.",
+                "alt": "A gloved hand holding a probe in iced water beside two whole tilapia"
+            },
+            "export": {
+                "title": "Export",
+                "text": "Our own refrigerated trucks, then air or road freight.",
+                "alt": "A worker moving a pallet of white boxes into a refrigerated truck at a loading dock"
+            }
+        },
+        "plantMap": "See our plant on Google Maps",
+        "newTab": "(opens in a new tab)"
     },
-    "capabilities": {
-        "eyebrow": "Packing options",
-        "title": "Packing built around your market",
-        "intro": "These details are settled commercially for each order, subject to feasibility and the regulations of the destination country.",
-        "pack_title": "Pack type and size",
-        "pack_text": "The box or crate type and pack size for your channel.",
-        "weight_title": "Net weight",
-        "weight_text": "Net weight per pack, agreed in the specification.",
-        "label_title": "Labels and language",
-        "label_text": "Label content and language, including commercial and scientific names where the market requires them.",
-        "destination_title": "Destination requirements",
-        "destination_text": "Requirements of the destination country, where they apply.",
-        "constraints": "No packing option is treated as final until it is confirmed in writing."
+    "logistics": {
+        "eyebrow": "Logistics",
+        "title": "Our own trucks and cold stores",
+        "intro": "We run our own refrigerated trucks, logistics and cold stores. Every stage is handled by AZAFCO.",
+        "items": {
+            "trucks": {
+                "title": "Refrigerated trucks",
+                "text": "Our own refrigerated trucks move the packed boxes from the plant."
+            },
+            "stores": {
+                "title": "Cold stores",
+                "text": "We run our own cold stores as part of our logistics."
+            },
+            "freight": {
+                "title": "Air or road freight",
+                "text": "We ship by air and road to the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe is next in our plan."
+            }
+        }
     },
-    "checkpoints": {
-        "eyebrow": "Quality checkpoints",
-        "title": "Where checks happen",
-        "intro": "Checks sit at the points where the specification can change: when product arrives, when it is graded and packed, and before it leaves.",
-        "receiving": "At receiving: inspection under the plant's procedures",
-        "grading": "At grading and packing: size, weight and pack checked against the order",
-        "release": "Before dispatch: results reviewed before the shipment leaves",
-        "docs_title": "Documents you can request",
-        "docs_text": "Qualified buyers can request verified facility information and the operating documents relevant to their order."
+    "agree": {
+        "eyebrow": "Your specification",
+        "title": "What we agree with you before each order",
+        "intro": "Tell us what your market needs. We confirm each detail with you before the order.",
+        "items": {
+            "species": {
+                "title": "Species and weight grade",
+                "text": "The species and the weight grade per fish. We supply other species on request."
+            },
+            "form": {
+                "title": "Product form",
+                "text": "Whole, fresh chilled and packed on ice."
+            },
+            "packing": {
+                "title": "Packing and net weight",
+                "text": "The packing and the net weight per box, to suit your sales channel."
+            },
+            "labels": {
+                "title": "Labels and destination",
+                "text": "Label content and language, and the requirements of the destination country."
+            }
+        },
+        "prices": "Prices confirmed per order.",
+        "speciesLink": "See our main species"
     },
-    "coldchain": {
-        "eyebrow": "Cold chain",
-        "title": "Temperatures set per product, not one number for everything",
-        "text_1": "Storage and transport temperatures depend on the product type, its safety requirements and the way it is supplied.",
-        "text_2": "We publish approved values per product only after review with the quality team. Until then, the temperature requirements for your order are confirmed in the written offer.",
-        "link": "See quality and traceability"
-    },
-    "gallery": {
-        "eyebrow": "Inside the operation",
-        "title": "The plant and the people",
-        "intro": "Photographs from our processing hall and loading bays.",
-        "label": "Processing and dispatch photos",
-        "visit_title": "See it for yourself",
-        "visit_text": "Qualified buyers can ask for updated photographs, a technical meeting or a site visit, in line with company procedures."
-    },
-    "cta": {
-        "eyebrow": "Packing or processing enquiry",
-        "intro": "Share the species, product form, pack type, net weight, labels and destination. The export team will review feasibility and come back to you."
+    "closing": {
+        "eyebrow": "Next step",
+        "title": "Tell us what your market needs",
+        "text": "Share the species, quantity, weight grade and destination. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
+        "primary": "Start a partnership",
+        "secondary": "Send your requirements",
+        "whatsapp": "WhatsApp management"
     },
     "pending": {
-        "facility": "Factory location(s), opening dates (Baltim 2018 / Motobas 2025 vs About page), approval/registration numbers, capacity definition",
-        "steps": "Step order and control points to be confirmed by the plant manager",
-        "pack_formats": "Validated pack formats (box/crate types, net weights), label options, operational constraints",
-        "packing_photos": "Packing line / boxed product photos",
-        "temperature": "Verified storage/transport temperature per product + control points and logs"
+        "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",
+        "pack_formats": "Validated pack formats (box types, net weights) and label options"
     }
 }

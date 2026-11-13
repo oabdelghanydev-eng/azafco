@@ -1,63 +1,84 @@
 {
     "meta": {
-        "title": "About AZAFCO International | Egyptian Seafood-Led Group",
-        "description": "AZAFCO International is an Egyptian company led by fish farming, processing and export, with agriculture, livestock and investment activities."
+        "title": "About us | AZAFCO International, Egyptian fish since 2008",
+        "description": "Founded in 2008, AZAFCO International farms, sources, packs and exports fresh Egyptian fish to 7+ markets, with 2,500 t/month packing capacity."
     },
-    "breadcrumb": "About",
+    "breadcrumb": "About us",
     "hero": {
         "eyebrow": "About AZAFCO International",
-        "title": "One international brand. Several production activities. One clear commercial focus.",
-        "intro": "AZAFCO International brings together a portfolio of production and investment activities, led by its core business: fish farming, processing, packing and export.",
-        "primary": "Explore Our Businesses"
+        "title": "Egyptian fish, handled by us from the pond to the pallet",
+        "intro": "Founded in 2008, we farm and source fish in Egypt, then inspect, pack and export it fresh to importers, distributors and foodservice buyers across the Middle East and beyond.",
+        "primary": "Start a partnership",
+        "secondary": "WhatsApp: direct to management",
+        "reassure": "Start with a message: species, quantity and destination. Prices confirmed per order.",
+        "image_alt": "Two workers pulling a seine net full of fish to the bank of an earthen pond"
     },
     "story": {
         "eyebrow": "Our story",
-        "title": "Seafood first, by design",
-        "p1": "AZAFCO began in fish. Over successive stages of development and operation, its activities grew to serve buyers at home and abroad.",
-        "p2": "Under the AZAFCO International identity, we present the company as what it is: a multi-activity Egyptian business led by deep specialisation in seafood, organised to work with international partners and importers."
+        "title": "Built on fish since 2008",
+        "p1": "We were founded in 2008. Our first export market for fresh fish was the UAE in 2008, followed by Kuwait in 2009, Bahrain in 2012, Lebanon in 2015, Qatar in 2024, Iraq in 2025 and Syria in 2026.",
+        "p2": "Today we ship by air and road to 7+ markets, with Europe next in our plan. Fish remains our core business; under the AZAFCO International identity it sits alongside our agriculture, livestock and investment activities."
     },
-    "architecture": {
-        "eyebrow": "Business architecture",
-        "title": "How the group fits together",
-        "intro": "One parent brand. Seafood at the core, with other productive activities alongside it.",
-        "parent_role": "Parent company and corporate brand",
-        "core_tag": "Core business",
-        "core_name": "Seafood & Aquaculture",
-        "core_text": "Fish farming, processing, packing and export for commercial buyers. The focus of our supply offer and of this website.",
-        "core_link": "Explore the seafood business",
-        "others_label": "Other activities",
-        "agri_title": "Agriculture",
-        "agri_text": "Farmland and fruit and vegetable production.",
-        "livestock_title": "Livestock",
-        "livestock_text": "Livestock farming activities.",
-        "invest_title": "Investments",
-        "invest_text": "Other investments, described once approved for publication."
+    "facts": {
+        "founded_value": "2008",
+        "founded_label": "Year founded",
+        "capacity_value": "2,500",
+        "capacity_label": "t/month packing capacity",
+        "iso_value": "3",
+        "iso_label": "ISO certificates, certified by TÜV AUSTRIA",
+        "iso_note": "ISO 9001:2015 · ISO 14001:2015 · ISO 45001:2018",
+        "iso_link": "Quality and certificates",
+        "markets_value": "7+",
+        "markets_label": "markets in the Middle East and beyond"
+    },
+    "operations": {
+        "eyebrow": "What we do",
+        "title": "Every stage is handled by AZAFCO",
+        "intro": "We farm and source the fish, prepare it at our own plant and move it in our own refrigerated trucks, so you deal with one company from the pond to the pallet.",
+        "s1_title": "Farming and sourcing",
+        "s1_text": "We farm our own fish and also buy from other producers. All of it is washed, graded and inspected at our own plant.",
+        "s2_title": "Harvest",
+        "s2_text": "The fish is harvested and taken to our plant in Motobas, Kafr El Sheikh.",
+        "s3_title": "Washing, icing and packing",
+        "s3_text": "Washed, iced, graded by weight and packed whole on ice.",
+        "s4_title": "Inspection",
+        "s4_text": "Checked against the agreed specification before the boxes are closed.",
+        "s5_title": "Export",
+        "s5_text": "Our own refrigerated trucks, then air or road freight."
+    },
+    "businesses": {
+        "eyebrow": "Our businesses",
+        "title": "Fish at the core, with other activities alongside",
+        "p1": "Farming, sourcing, packing and exporting fresh fish is our core business and the focus of this website.",
+        "p2": "AZAFCO International also works in agriculture, livestock and investment.",
+        "image_alt": "Whole fresh fish on crushed ice seen from above",
+        "link_products": "Product catalogue",
+        "link_importers": "For importers",
+        "link_businesses": "Our businesses",
+        "link_seafood": "Our fish business"
     },
     "footprint": {
-        "eyebrow": "Operating footprint",
-        "title": "Where the work happens",
-        "p1": "Our fish processing and packing plant is in the Industrial Zone of Motobas, Kafr El Sheikh, in Egypt's Nile Delta.",
-        "p2": "This is where fish is received, graded, prepared, packed and loaded for dispatch.",
-        "addresses_title": "Addresses"
+        "eyebrow": "Where we work",
+        "title": "Our plant, trucks and cold stores",
+        "p1": "Our fish processing and packing plant is in the Industrial Zone of Motobas, Kafr El Sheikh, in Egypt's Nile Delta. Here the fish is received, washed, iced, graded and packed, then loaded for dispatch.",
+        "p2": "We run our own refrigerated trucks, cold stores and logistics, from the plant to air or road freight.",
+        "image_alt": "Whole fresh fish on crushed ice in white insulated boxes in a packing hall",
+        "addresses_title": "Addresses",
+        "map_link": "See the plant on Google Maps",
+        "opens_new_tab": "(opens in a new tab)"
     },
     "principles": {
         "eyebrow": "How we work",
         "title": "We start with specifications, not slogans",
-        "intro": "Four commitments that shape how we deal with buyers.",
+        "intro": "Four commitments that shape how we work with buyers.",
         "i1_title": "Specifications first",
-        "i1_text": "We start from what you need (species, size, packing, quantity and target market), then confirm what can be delivered.",
-        "i2_title": "Clear communication",
-        "i2_text": "You get the information you need to decide, including what is still to be confirmed.",
+        "i1_text": "We start from what you need (species, weight grade, packing, quantity and destination), then confirm what we can supply.",
+        "i2_title": "Clear terms",
+        "i2_text": "Specifications, documents and commercial terms are set out clearly and confirmed per order.",
         "i3_title": "Operational discipline",
-        "i3_text": "Hygiene and handling are part of daily work on the processing floor, not a line in a brochure.",
+        "i3_text": "Hygiene, icing and careful handling are daily routines on our processing floor.",
         "i4_title": "Long-term relationships",
-        "i4_text": "We aim for repeat supply built on consistency rather than one-off deals."
-    },
-    "people": {
-        "eyebrow": "People",
-        "title": "The team behind the work",
-        "p1": "Buyers deal with real people: the teams on the processing floor, in quality and in the export office.",
-        "p2": "Your first point of contact is the export team, reachable by phone, WhatsApp or email."
+        "i4_text": "We aim for repeat supply built on consistency, not one-off deals."
     },
     "direction": {
         "eyebrow": "Our direction",
@@ -65,23 +86,8 @@
         "vision_title": "Vision",
         "vision_text": "To be a trusted Egyptian partner in production and supply for regional and international markets, through business built on quality, clarity and lasting relationships.",
         "mission_title": "Mission",
-        "mission_text": "To provide products and supply services that fit the needs of our business partners, connecting production and processing expertise in Egypt with the requirements of the markets we serve.",
-        "identity_title": "The new identity",
-        "identity_text": "The AZAFCO International identity keeps the AZAFCO name and its heritage, and presents it in a form that matches our ambition to work with international partners and importers."
-    },
-    "cta": {
-        "eyebrow": "Work with AZAFCO International",
-        "title": "Explore our businesses or start a partnership conversation",
-        "intro": "For sector cooperation and investment, use the corporate partnership enquiry. It is kept separate from fish supply requests.",
-        "primary": "Explore Our Businesses",
-        "secondary": "Corporate partnership enquiry",
-        "email_label": "Email"
-    },
-    "pending": {
-        "milestones": "Founding year and verified milestones (plant opening dates: Motobas / Baltim)",
-        "assets": "Other facilities and assets (farms, head office address); map only after address approval",
-        "leadership": "Leadership names, titles, portraits and statements",
-        "profile": "Company profile (PDF) for download",
-        "invest": "Investments: approved description"
+        "mission_text": "To supply products and services that fit the needs of our business partners, connecting production and processing in Egypt with the requirements of the markets we serve.",
+        "identity_title": "Our identity",
+        "identity_text": "AZAFCO International keeps the AZAFCO name and its heritage, in a form that matches our work with partners and importers in the Middle East and beyond."
     }
 }

@@ -1,170 +1,207 @@
 {
     "meta": {
-        "title": "Fish Supply for Importers and Distributors",
-        "description": "How to source fresh fish from AZAFCO: send your specification, we review supply, then confirm packing, shipping and documents in a written offer."
+        "title": "Start a fish supply partnership: for importers",
+        "description": "How to start with AZAFCO International: send your requirements, review supply with our export team and agree each order. Prices confirmed per order."
     },
-    "breadcrumb": "For Importers",
+    "breadcrumb": "For importers",
     "hero": {
         "eyebrow": "For importers and distributors",
-        "title": "A clear procurement path from enquiry to written offer",
-        "intro": "Tell us the specification. We evaluate supply, packing and commercial terms, then reply with the next steps.",
+        "title": "Start a fresh fish supply partnership",
+        "intro": "Tell us the species, quantity and destination. Our export team reviews supply and commercial terms with you; prices are confirmed per order.",
         "primary": "Send your requirements",
-        "secondary": "Talk to the export team"
+        "secondary": "Message management on WhatsApp",
+        "image_alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
     },
     "serve": {
         "eyebrow": "Who we work with",
-        "title": "Built for professional buyers",
-        "intro": "We supply businesses, not consumers. Each buyer type has its own questions, so we answer them in the written offer.",
+        "title": "Importers, distributors and foodservice",
+        "intro": "We supply businesses, not consumers. Each type of buyer has its own questions, and we answer them when we agree the order.",
         "items": [
             {
-                "title": "Seafood importers",
-                "text": "Species, sizes, packing and volumes matched to your market."
+                "title": "Fish importers",
+                "text": "Species, weight grades, packing and quantities for your market."
             },
             {
                 "title": "Wholesalers and distributors",
-                "text": "Clear grading, weights, packing and delivery terms in the offer."
+                "text": "Clear grading, net weights, packing and delivery terms for each order."
             },
             {
                 "title": "Hotels, restaurants and catering",
-                "text": "Consistent quality, a documented process and a direct contact."
+                "text": "An agreed specification and one export team to talk to."
             },
             {
                 "title": "Foodservice suppliers",
-                "text": "Recurring supply discussed against capacity and your programme."
+                "text": "Recurring supply planned against our packing capacity and your programme."
             }
         ]
     },
     "process": {
-        "eyebrow": "How procurement works",
-        "title": "Four steps from specification to coordination",
+        "eyebrow": "How to start",
+        "title": "Four steps to your first shipment",
         "steps": [
             {
-                "title": "Send your requirement",
-                "text": "Company, country, business type, species, size grade, product form, expected quantity, packing and delivery date."
+                "title": "Send your requirements",
+                "text": "Company, country, species, weight grade, product form, quantity, packing and delivery date."
             },
             {
-                "title": "Technical and commercial review",
-                "text": "We review the product, availability, our ability to meet the specification, market requirements and the relevant export documents."
+                "title": "Review with our export team",
+                "text": "We check supply, the specification, your market's requirements and the export documents it needs."
             },
             {
-                "title": "A clear written offer",
-                "text": "Issued on confirmed data: price and its terms, quantity, packing, offer validity, shipping and the expected schedule."
+                "title": "Agree the order",
+                "text": "Species, grade, quantity, packing, transport, schedule and price are confirmed in writing for each order."
             },
             {
-                "title": "Coordination and delivery",
-                "text": "After agreement and contract, both sides coordinate operations, delivery and documents."
+                "title": "Pack and ship",
+                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
             }
         ]
     },
     "prepare": {
         "eyebrow": "Before you send",
         "title": "What to prepare",
-        "intro": "A complete requirement gets a more useful first reply.",
+        "intro": "The more complete your requirements, the more useful our first reply.",
         "items": [
             "Species",
-            "Size grade",
+            "Weight grade",
             "Product form",
             "Quantity per shipment and frequency",
             "Destination country",
-            "Delivery timing",
+            "Delivery date",
             "Packing and label requirements",
             "Documents your market requires"
         ]
     },
+    "documents": {
+        "eyebrow": "Documents",
+        "title": "What the export team provides",
+        "intro": "Email the export team for details and documents. These are the documents we work with:",
+        "items": [
+            {
+                "title": "Product specification",
+                "text": "Species, weight grade, product form and packing for your order."
+            },
+            {
+                "title": "Company profile",
+                "text": "An overview of AZAFCO International and how we work."
+            },
+            {
+                "title": "Shipment documents",
+                "text": "The export documents agreed for your destination, prepared with each shipment."
+            }
+        ],
+        "guide_link": "Which documents a fresh fish shipment usually needs"
+    },
     "terms": {
         "eyebrow": "Trade details",
-        "title": "Confirmed per offer, not promised in advance",
-        "intro": "We do not publish price lists or blanket terms. These points are set in each formal written offer:",
+        "title": "Confirmed per order",
+        "intro": "We do not publish price lists or general terms. These points are agreed in writing for each order:",
         "items": [
             {
                 "title": "Price",
-                "text": "Depends on species, grade, volume, packing and delivery terms."
+                "text": "Confirmed per order: it depends on the species, weight grade, quantity, packing and delivery terms."
             },
             {
                 "title": "Minimum order",
-                "text": "Varies by species and terms."
+                "text": "Depends on the species and the order terms."
             },
             {
                 "title": "Availability",
-                "text": "Confirmed against current supply when we review your request."
+                "text": "Confirmed against current supply when we review your requirements."
             },
             {
-                "title": "Documents",
-                "text": "The list and scope are confirmed for your destination."
+                "title": "Transport",
+                "text": "Chilled, by air or road; the route is confirmed for each order."
             },
             {
                 "title": "Incoterms",
-                "text": "Agreed in the written offer and contract."
+                "text": "Agreed for each order."
             }
         ]
     },
     "proof": {
         "eyebrow": "Check before you ask",
-        "title": "Products, process and compliance",
+        "title": "Species, process, quality and markets",
         "items": [
             {
-                "title": "Products",
-                "text": "Species pages with what can be confirmed per product.",
-                "link": "View products"
+                "title": "Species",
+                "text": "12 main species, whole and fresh chilled.",
+                "link": "View species"
             },
             {
                 "title": "Processing and packing",
-                "text": "How fish is handled, packed and dispatched.",
+                "text": "How fish is graded, packed on ice and dispatched.",
                 "link": "See processing"
             },
             {
                 "title": "Quality",
-                "text": "Quality process and documentation.",
+                "text": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA.",
                 "link": "See quality"
             },
             {
-                "title": "Export markets",
-                "text": "Current markets and how each destination is handled.",
+                "title": "Markets",
+                "text": "7+ markets across the Middle East and beyond.",
                 "link": "See markets"
             }
         ]
     },
     "faq": {
-        "eyebrow": "Procurement FAQ",
-        "title": "Questions buyers ask before sending requirements",
+        "eyebrow": "Importer FAQ",
+        "title": "Questions importers ask before they start",
         "items": [
             {
-                "q": "What is the minimum order quantity?",
-                "a": "It varies by species and terms. Send your expected volume and we confirm what is possible in the written offer."
+                "q": "How do we start working together?",
+                "a": "Email your requirements to the export team at business@azafco.com.eg, or use the prepared message on this page. For fast deals, message our management directly on WhatsApp. We then review supply and the order terms with you."
             },
             {
-                "q": "Which sizes and grades can you supply?",
-                "a": "Sizes depend on the species and on current supply. Tell us your grade or grading specification, and we confirm what we can meet."
+                "q": "How are prices set?",
+                "a": "Prices are confirmed per order. They depend on the species, weight grade, quantity, packing and delivery terms. We do not publish price lists."
+            },
+            {
+                "q": "What is the minimum order quantity?",
+                "a": "It depends on the species and the order terms. Send your expected quantity and we confirm what is possible for your order."
+            },
+            {
+                "q": "Which sizes and weight grades can you supply?",
+                "a": "Weight grades depend on the species and current supply. Tell us the grade you need and we confirm what we can meet."
+            },
+            {
+                "q": "Which species do you supply?",
+                "a": "The 12 species on our site are our main, most-requested species; we supply other species on request."
             },
             {
                 "q": "How is the fish packed?",
-                "a": "Fresh fish is packed in insulated EPS boxes with ice. Other packing formats or your own specification are reviewed per product and requirement."
+                "a": "Whole and fresh chilled, packed on ice in insulated EPS boxes. Other packing or your own specification is reviewed for each product."
             },
             {
                 "q": "Can you pack under our label?",
-                "a": "It is reviewed per product and requirement. Include your label requirements in the notes of your request."
+                "a": "This is reviewed for each product and requirement. Add your label requirements to the notes of your request."
             },
             {
-                "q": "Which quality documents and certificates are available?",
-                "a": "The list and scope are confirmed when we review your request, for your product and destination."
+                "q": "Which certificates do you hold?",
+                "a": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates. The export documents for each shipment are agreed for your destination."
             },
             {
                 "q": "How is the fish shipped?",
-                "a": "Chilled, by air freight or by road depending on the destination. The transport mode is confirmed in the written offer; we do not publish fixed transit times."
+                "a": "Chilled, in our own refrigerated trucks from the plant, then by air or road freight depending on the destination. We do not publish fixed transit times; they are confirmed for each shipment."
             },
             {
-                "q": "Do you accept recurring supply programmes?",
-                "a": "Yes, they can be discussed based on capacity and your needs. Tell us the frequency you expect."
+                "q": "Which markets do you ship to?",
+                "a": "We ship to 7+ markets, including the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe, Russia and the USA are in our plan. If your country is not listed, contact the export team."
             },
             {
-                "q": "When will I receive a written offer?",
-                "a": "It depends on how complete the specification is and on current availability. We first review the request, then contact you to confirm the details before a formal written offer."
+                "q": "Do you take recurring supply programmes?",
+                "a": "Yes. Our packing capacity is up to 2,500 t/month, and recurring supply is planned against it and your needs. Tell us the frequency you expect."
+            },
+            {
+                "q": "How do we know a message is really from AZAFCO International?",
+                "a": "Our official channels are the export team email business@azafco.com.eg and the management WhatsApp +20 100 773 6419. Order terms are confirmed in writing for each order. If a message about your order comes from any other address or number, check it with us on these channels before you act on it."
             }
         ]
     },
     "rfq": {
-        "eyebrow": "Send your requirements",
-        "title": "Start a partnership",
-        "intro": "Two short steps. Nothing is binding until a formal written offer is agreed."
+        "eyebrow": "Start a partnership",
+        "title": "Send your requirements",
+        "intro": "Choose email or WhatsApp; each opens a prepared message. Nothing is binding until the order terms are agreed in writing."
     }
 }

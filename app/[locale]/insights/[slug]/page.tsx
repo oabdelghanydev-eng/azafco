@@ -2,13 +2,15 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
-import { Breadcrumbs, Button, CTABand, Container, Eyebrow, FeatureGrid, Section, SectionHeader } from '@/components/v2';
+import { Link } from '@/navigation';
 import { mediaImage } from '@/lib/v2/media';
-import { insightHref, routes } from '@/lib/v2/routes';
+import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
+import { cn } from '@/lib/v2/cn';
 import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
 import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
+import { FOCUS_LIGHT, GArrow, GEyebrow, GLinkButton, GPageHead, gBody, gCard, gH3, gSmall, gWrap } from '@/components/v2/contact/g';
 import { companyConfig } from '@/config/company.config';
 import { ogImageMap, type Locale } from '@/i18n';
 
@@ -41,6 +43,7 @@ export default async function InsightArticlePage({ params }: Props) {
     const entry = getInsight(slug);
     if (!entry) notFound();
     setRequestLocale(locale);
+    const ar = locale === 'ar';
 
     const t = await getTranslations({ locale, namespace: 'insights_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
@@ -79,15 +82,17 @@ export default async function InsightArticlePage({ params }: Props) {
         publisher: org,
     };
 
-    const related = (t.raw('article.related') as { title: string; text: string }[]).map((r, i) => ({
-        title: r.title,
-        description: r.text,
-        href: [routes.forImporters, routes.markets, routes.products][i],
-        linkLabel: tv('cta.learn_more'),
-    }));
+    const relatedHrefs = [routes.forImporters, routes.markets, routes.products];
+    const related = (t.raw('article.related') as { title: string; text: string }[]).map((r, i) => ({ ...r, href: relatedHrefs[i] }));
+
+    const meta = [
+        { label: t('article.by'), value: t('article.author') },
+        { label: t('article.published'), value: <time dateTime={entry.datePublished}>{fmt(entry.datePublished)}</time> },
+        { label: t('article.reviewed'), value: <time dateTime={entry.lastReviewed}>{reviewed}</time> },
+    ];
 
     return (
-        <>
+        <div className={cn('g-font bg-white text-[#0d1f3f]', gBody(ar))}>
             <JsonLd data={article} />
             <JsonLd
                 data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [
@@ -97,61 +102,52 @@ export default async function InsightArticlePage({ params }: Props) {
             />
 
             {/* Article header */}
-            <section data-surface="light" aria-labelledby="article-title" className="bg-surface-offwhite pb-10 pt-8 text-fg md:pb-14 md:pt-12">
-                <Container>
-                    <Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.insights }, { label: tg('breadcrumb') }]} />
-                    <div className="mt-8 max-w-4xl">
-                        <Eyebrow>{t(`categories.${entry.category}`)}</Eyebrow>
-                        <h1 id="article-title" className="v2-heading mt-4 font-display text-display-lg">
-                            {title}
-                        </h1>
-                        <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-body-sm">
-                            <div>
-                                <dt className="text-caption text-fg-muted">{t('article.by')}</dt>
-                                <dd className="font-semibold text-fg">{t('article.author')}</dd>
-                            </div>
-                            <div>
-                                <dt className="text-caption text-fg-muted">{t('article.published')}</dt>
-                                <dd className="font-semibold text-fg">
-                                    <time dateTime={entry.datePublished}>{fmt(entry.datePublished)}</time>
-                                </dd>
-                            </div>
-                            <div>
-                                <dt className="text-caption text-fg-muted">{t('article.reviewed')}</dt>
-                                <dd className="font-semibold text-fg">
-                                    <time dateTime={entry.lastReviewed}>{reviewed}</time>
-                                </dd>
-                            </div>
-                        </dl>
-                        <p className="mt-3 text-body-sm text-fg-muted">{tv('insight.minutes', { count: minutes })}</p>
+            <GPageHead
+                ar={ar}
+                crumbs={[{ label: t('breadcrumb'), href: routes.insights }, { label: tg('breadcrumb') }]}
+                eyebrow={t(`categories.${entry.category}`)}
+                title={title}
+                titleId="article-title"
+            >
+                <dl className="m-0 mt-8 flex flex-wrap gap-x-10 gap-y-4 border-t border-white/[.16] pt-6">
+                    {meta.map((m) => (
+                        <div key={m.label}>
+                            <dt className={cn('text-white/[.66]', gSmall(ar))}>{m.label}</dt>
+                            <dd className="m-0 font-bold text-white">{m.value}</dd>
+                        </div>
+                    ))}
+                    <div>
+                        <dt className="sr-only">{t('article.reading_time')}</dt>
+                        <dd className={cn('m-0 text-white/[.66] sm:pt-[1.6em]', gSmall(ar))}>{tv('insight.minutes', { count: minutes })}</dd>
                     </div>
-                </Container>
-            </section>
+                </dl>
+            </GPageHead>
 
             {image ? (
-                <div className="bg-white">
-                    <Container>
-                        <div className="relative -mt-2 aspect-[16/7] overflow-hidden rounded-card md:mt-0">
-                            <Image src={image.src} alt={image.alt} fill priority sizes="(min-width: 1280px) 1200px, 100vw" className="object-cover" />
-                        </div>
-                    </Container>
+                <div className={cn(gWrap, 'pt-10 lg:pt-14')}>
+                    <div className="relative aspect-[16/7] overflow-hidden rounded">
+                        <Image src={image.src} alt={image.alt} fill priority sizes="(min-width: 1320px) 1256px, 100vw" className="object-cover" />
+                    </div>
                 </div>
             ) : null}
 
             {/* Body + side rail */}
-            <article aria-labelledby="article-title" className="bg-white py-12 text-ink md:py-16">
-                <Container grid className="gap-y-10">
-                    <aside className="col-span-4 sm:col-span-8 lg:order-2 lg:col-span-4 lg:col-start-9">
+            <article aria-labelledby="article-title" className={cn(gWrap, 'py-14 lg:py-24')}>
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-16">
+                    <aside className="min-w-0 lg:order-2">
                         <div className="flex flex-col gap-6 lg:sticky lg:top-28">
-                            <nav aria-labelledby="toc-title" className="rounded-card border border-line p-5">
-                                <h2 id="toc-title" className="font-display text-heading-sm text-navy">
+                            <nav aria-labelledby="toc-title" className="rounded border border-[#d5dde9] p-5 lg:p-6">
+                                <h2 id="toc-title" className={cn(gH3(ar), 'text-[#0d1f3f]')}>
                                     {t('article.toc')}
                                 </h2>
-                                <ol className="mt-3 flex flex-col">
+                                <ol className="m-0 mt-3 flex list-none flex-col p-0">
                                     {IMPORTING_SECTIONS.map((id, i) => (
                                         <li key={id}>
-                                            <a href={`#${id}`} className="flex min-h-[44px] items-center gap-3 text-body-sm text-ink hover:text-navy hover:underline">
-                                                <span aria-hidden="true" className="text-caption font-semibold text-gold-ink">
+                                            <a
+                                                href={`#${id}`}
+                                                className={cn('flex min-h-[44px] items-center gap-3 text-[#0d1f3f] hover:text-[#002d72] hover:underline', gSmall(ar), FOCUS_LIGHT)}
+                                            >
+                                                <span aria-hidden="true" className="w-6 shrink-0 font-bold text-[#002d72]">
                                                     {String(i + 1).padStart(2, '0')}
                                                 </span>
                                                 {sectionTitles[id]}
@@ -160,33 +156,57 @@ export default async function InsightArticlePage({ params }: Props) {
                                     ))}
                                 </ol>
                             </nav>
-                            <div className="rounded-card bg-surface-offwhite p-5">
-                                <p className="font-display text-heading-sm text-navy">{t('article.sources_side')}</p>
-                                <p className="mt-1 text-body-sm text-ink-muted">{t('article.sources_side_text', { count: importingSourceCount })}</p>
+                            <div className="rounded bg-[#f2f5fa] p-5 lg:p-6">
+                                <p className={cn(gH3(ar), 'text-[#0d1f3f]')}>{t('article.sources_side')}</p>
+                                <p className={cn('mb-0 mt-1 text-[#4a5a75]', gSmall(ar))}>{t('article.sources_side_text', { count: importingSourceCount })}</p>
                             </div>
                         </div>
                     </aside>
-                    <div className="col-span-4 sm:col-span-8 lg:order-1 lg:col-span-8">
+                    <div className="min-w-0 lg:order-1">
                         <ImportingGuideBody locale={locale} reviewedLabel={reviewed} />
-                        {/* The article's single contact link (no inline quote box) */}
-                        <div className="mt-12 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-line pt-6">
-                            <Button href={routes.contact} variant="text" dataAttrs={{ 'data-cta': 'article_contact' }}>
-                                {tv('cta.contact_export_team')}
-                            </Button>
-                            <Button href={routes.insights} variant="text">
+                        {/* The article's single requirements link (no inline offer box) */}
+                        <div className="mt-14 flex flex-col gap-3 border-t border-[#d5dde9] pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                            <GLinkButton href={rfqHref()} ar={ar} variant="gold" arrow dataAttrs={{ 'data-cta': 'article_requirements' }}>
+                                {t('article.contact')}
+                            </GLinkButton>
+                            <GLinkButton href={routes.insights} ar={ar} variant="outline">
                                 {t('article.back')}
-                            </Button>
+                            </GLinkButton>
                         </div>
                     </div>
-                </Container>
+                </div>
             </article>
 
-            <Section variant="offwhite" labelledBy="article-related">
-                <SectionHeader id="article-related" size="md" title={t('article.related_title')} />
-                <FeatureGrid columns={3} style="card" items={related} />
-            </Section>
-
-            <CTABand headingId="article-cta" eyebrow={t('cta.eyebrow')} intro={t('cta.intro')} showQuote={false} />
-        </>
+            {/* Related pages */}
+            <section aria-labelledby="article-related" className="bg-[#f2f5fa]">
+                <div className={cn(gWrap, 'py-16 lg:py-24')}>
+                    <GEyebrow ar={ar} className="mb-2 lg:mb-3">
+                        {t('article.related_eyebrow')}
+                    </GEyebrow>
+                    <h2
+                        id="article-related"
+                        className={cn('m-0 text-[#0d1f3f]', ar ? 'text-[26px] font-bold leading-[1.45] lg:text-[34px]' : 'text-[27px] font-extrabold leading-[1.2] tracking-[-0.02em] lg:text-[36px]')}
+                    >
+                        {t('article.related_title')}
+                    </h2>
+                    <ul className="m-0 mt-8 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
+                        {related.map((r) => (
+                            <li key={r.title} className="min-w-0">
+                                <Link href={r.href} className={cn(gCard(), 'group flex h-full flex-col p-6 transition-colors hover:border-[#002d72] lg:p-8', FOCUS_LIGHT)}>
+                                    <span className={cn(gH3(ar), 'block text-[#0d1f3f]')}>{r.title}</span>
+                                    <span className={cn('mb-5 mt-2 block flex-1 text-[#4a5a75]', gSmall(ar))}>{r.text}</span>
+                                    <span
+                                        aria-hidden="true"
+                                        className="grid h-11 w-11 place-items-center rounded-full border border-[#d5dde9] text-[#002d72] transition-colors group-hover:border-[#f7b500] group-hover:bg-[#f7b500] group-hover:text-[#001b47]"
+                                    >
+                                        <GArrow ar={ar} />
+                                    </span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
+        </div>
     );
 }

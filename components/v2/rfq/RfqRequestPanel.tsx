@@ -5,16 +5,16 @@
  * the buyer's own company email or WhatsApp number, so the source is checkable.
  * This panel prepares the message from the page the buyer came from
  * (?product, ?grade, ?form, ?country, ?type) and offers:
- *   1. Email the export team  (mailto: with subject + labelled body)
- *   2. Message on WhatsApp     (wa.me with a shorter text)
+ *   1. Email the export team (details and documents): mailto: with subject + labelled body
+ *   2. WhatsApp, direct to management (fast deals): wa.me with a shorter text
  *   3. Phone (tel:) + the address and subject as plain, copyable text
  * Clicks are tracked by RfqTracker (rfq_email_click / rfq_whatsapp_click / rfq_phone_click).
  */
 import { getLocale, getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
-import Button from '@/components/v2/Button';
 import { MailIcon, PhoneIcon, WhatsAppIcon } from '@/components/v2/icons';
 import { cn } from '@/lib/v2/cn';
+import { FOCUS_LIGHT, GLinkButton, gCard, gH3, gSmall, phoneDisplay } from '@/components/v2/contact/g';
 import { isShortTopic, prefillLabels, type RfqTopic } from './options';
 import { mailtoHref, whatsappHref, type RfqLine, type RfqMessageInput } from './message';
 import RfqTracker from './RfqTracker';
@@ -37,6 +37,7 @@ export interface RfqRequestPanelProps {
 
 export default async function RfqRequestPanel({ topic, product, country, form, grade, idPrefix = 'rfq', headingAs: H = 'h2', className }: RfqRequestPanelProps) {
     const locale = await getLocale();
+    const ar = locale === 'ar';
     const t = await getTranslations({ locale, namespace: 'rfq_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2.cta' });
     const p = await prefillLabels(locale, { product, country, form, grade });
@@ -92,6 +93,8 @@ export default async function RfqRequestPanel({ topic, product, country, form, g
                 { label: L('volume') },
                 { label: L('frequency') },
                 { label: L('destination'), value: p.country },
+                { label: L('freight') },
+                { label: L('terms') },
                 { label: L('date') },
                 ...identity,
             ],
@@ -133,72 +136,92 @@ export default async function RfqRequestPanel({ topic, product, country, form, g
     ).filter((r): r is { label: string; value: string } => Boolean(r.value));
 
     const titleKey = topic === 'corporate' ? 'title_corporate' : topic === 'documents' ? 'title_documents' : 'title';
+    const phone = phoneDisplay(c.whatsappNumber);
 
     return (
-        <section aria-labelledby={`${idPrefix}-send-title`} className={cn('rounded-card border border-line bg-white p-6 shadow-card md:p-8', className)}>
+        <section aria-labelledby={`${idPrefix}-send-title`} className={cn('g-font', gCard(true), 'p-6 text-[#0d1f3f] md:p-8 lg:p-10', className)}>
             <RfqTracker />
-            <H id={`${idPrefix}-send-title`} className="font-display text-heading-lg text-navy">
+            <H
+                id={`${idPrefix}-send-title`}
+                className={cn('m-0 text-[#0d1f3f]', ar ? 'text-[24px] font-bold leading-[1.45] lg:text-[30px]' : 'text-[25px] font-extrabold leading-[1.2] tracking-[-0.02em] lg:text-[32px]')}
+            >
                 {t(`request.${titleKey}`)}
             </H>
-            <p className="mt-2 max-w-prose-v2 text-body text-ink-muted">{t('request.intro')}</p>
+            <p className="mb-0 mt-3 max-w-[640px] text-[#4a5a75]">{t('request.intro')}</p>
 
             {summary.length ? (
-                <div className="mt-6 rounded-card bg-surface-offwhite p-5">
-                    <Sub className="text-body-sm font-semibold text-ink">{t('request.summary_title')}</Sub>
-                    <dl className="mt-3 grid gap-4 sm:grid-cols-2">
+                <div className="mt-6 rounded bg-[#f2f5fa] p-5">
+                    <Sub className={cn('m-0 font-bold text-[#0d1f3f]', gSmall(ar))}>{t('request.summary_title')}</Sub>
+                    <dl className="m-0 mt-3 grid gap-4 sm:grid-cols-2">
                         {summary.map((r) => (
                             <div key={r.label}>
-                                <dt className="text-caption text-ink-muted">{r.label}</dt>
-                                <dd className="mt-1 font-semibold text-ink">
+                                <dt className={cn('text-[#4a5a75]', gSmall(ar))}>{r.label}</dt>
+                                <dd className="m-0 mt-1 font-bold text-[#0d1f3f]">
                                     <bdi>{r.value}</bdi>
                                 </dd>
                             </div>
                         ))}
                     </dl>
-                    <p className="mt-3 text-caption text-ink-muted">{t('request.summary_note')}</p>
+                    <p className={cn('mb-0 mt-3 text-[#4a5a75]', gSmall(ar))}>{t('request.summary_note')}</p>
                 </div>
             ) : null}
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href={mailto} external size="lg" icon={<MailIcon size={20} />} dataAttrs={track('rfq_email_click')}>
-                    {t('request.email_cta')}
-                </Button>
-                <Button href={wa} external variant="secondary" size="lg" icon={<WhatsAppIcon size={20} />} dataAttrs={track('rfq_whatsapp_click')}>
-                    {t('request.whatsapp_cta')}
-                    <span className="sr-only"> {tv('opens_new_tab')}</span>
-                </Button>
+            {/* Two channels, two roles (as in the G footer): email = export team, WhatsApp = management */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="flex min-w-0 flex-col">
+                    <GLinkButton href={mailto} external ar={ar} variant="gold" icon={<MailIcon size={20} />} className="w-full" dataAttrs={track('rfq_email_click')}>
+                        {t('request.email_cta')}
+                    </GLinkButton>
+                    <p className={cn('mb-0 mt-2 text-center text-[#4a5a75]', gSmall(ar))}>{t('request.email_role')}</p>
+                </div>
+                <div className="flex min-w-0 flex-col">
+                    <GLinkButton
+                        href={wa}
+                        external
+                        newTabLabel={tv('opens_new_tab')}
+                        ar={ar}
+                        variant="navy"
+                        icon={<WhatsAppIcon size={20} />}
+                        className="w-full"
+                        dataAttrs={track('rfq_whatsapp_click')}
+                    >
+                        {t('request.whatsapp_cta')}
+                    </GLinkButton>
+                    <p className={cn('mb-0 mt-2 text-center text-[#4a5a75]', gSmall(ar))}>{t('request.whatsapp_role')}</p>
+                </div>
             </div>
-            <p className="mt-3 text-caption text-ink-muted">{t('request.attach_note')}</p>
+            <p className={cn('mb-0 mt-5 text-[#4a5a75]', gSmall(ar))}>{t('request.attach_note')}</p>
 
-            <div className="mt-8 border-t border-line pt-6">
-                <Sub className="font-display text-heading-sm text-navy">{t('request.fallback_title')}</Sub>
-                <p className="mt-1 text-body-sm text-ink-muted">{t('request.fallback_text')}</p>
-                <dl className="mt-4 grid gap-4 text-body-sm sm:grid-cols-2">
+            {/* Never a dead end: plain, copyable address + subject + phone if the mail app does not open */}
+            <div className="mt-8 border-t border-[#d5dde9] pt-6">
+                <Sub className={cn(gH3(ar), 'text-[#0d1f3f]')}>{t('request.fallback_title')}</Sub>
+                <p className={cn('mb-0 mt-1 text-[#4a5a75]', gSmall(ar))}>{t('request.fallback_text')}</p>
+                <dl className="m-0 mt-4 grid gap-4 sm:grid-cols-2">
                     <div>
-                        <dt className="text-caption text-ink-muted">{t('request.email_label')}</dt>
-                        <dd className="mt-1">
-                            <bdi dir="ltr" className="select-all break-all font-semibold text-navy">
+                        <dt className={cn('text-[#4a5a75]', gSmall(ar))}>{t('request.email_label')}</dt>
+                        <dd className="m-0 mt-1">
+                            <bdi dir="ltr" className="select-all break-all font-bold text-[#002d72]">
                                 {c.email}
                             </bdi>
                         </dd>
                     </div>
                     <div>
-                        <dt className="text-caption text-ink-muted">{t('request.subject_label')}</dt>
-                        <dd className="mt-1">
-                            <bdi className="select-all font-semibold text-ink">{msg.subject}</bdi>
+                        <dt className={cn('text-[#4a5a75]', gSmall(ar))}>{t('request.subject_label')}</dt>
+                        <dd className="m-0 mt-1">
+                            <bdi className="select-all font-bold text-[#0d1f3f]">{msg.subject}</bdi>
                         </dd>
                     </div>
                     <div>
-                        <dt className="text-caption text-ink-muted">{t('request.phone_label')}</dt>
-                        <dd>
+                        <dt className={cn('text-[#4a5a75]', gSmall(ar))}>{t('request.phone_label')}</dt>
+                        <dd className="m-0">
                             <a
                                 href={`tel:${c.phone}`}
-                                className="inline-flex min-h-[44px] items-center gap-2 font-semibold text-navy underline-offset-4 hover:underline"
+                                className={cn('inline-flex min-h-[44px] items-center gap-2 font-bold text-[#002d72] underline-offset-4 hover:underline', FOCUS_LIGHT)}
                                 {...track('rfq_phone_click')}
                             >
                                 <PhoneIcon size={18} className="shrink-0" />
                                 <span className="sr-only">{tv('call')}: </span>
-                                <bdi dir="ltr">{c.phoneDisplay}</bdi>
+                                <bdi dir="ltr">{phone}</bdi>
                             </a>
                         </dd>
                     </div>

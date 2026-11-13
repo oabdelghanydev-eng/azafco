@@ -1,43 +1,12 @@
 {
+    "_note": "Only metadata.site is read (root layout, pageMetadata helpers, product pages). Page titles and descriptions live in each page's *_v2.meta (or privacy.meta). The legacy page-level keys were removed on 14 Nov 2026 so they are not translated and cannot drift from the live meta. Titles using title_template get ' | AZAFCO' appended: keep them <= 51 characters.",
     "site": {
-        "name": "AZAFCO - ازافكو العالمية",
-        "title_default": "Fresh Fish Exporter from Egypt | AZAFCO",
+        "name": "AZAFCO International",
+        "title_default": "AZAFCO International | Fresh Egyptian fish for importers",
         "title_template": "%s | AZAFCO",
         "author": "AZAFCO International",
         "creator": "AZAFCO International",
         "publisher": "AZAFCO International",
-        "og_alt": "AZAFCO International - Fresh Fish Export from Egypt"
-    },
-    "home": {
-        "title": "Fresh Fish Exporter from Egypt",
-        "description": "AZAFCO International, Egypt B2B fish exporter since 2008. 2,500+ tons monthly to {countries}+ countries. ISO & HACCP certified tilapia, sea bass, mullet."
-    },
-    "products": {
-        "title": "Fresh Tilapia, Sea Bass & Mullet from Egypt",
-        "description": "Fresh fish wholesale from Egypt: tilapia, sea bass, mullet and 8+ varieties. Custom sizes, flexible orders, ISO certified. Shipping by air and land."
-    },
-    "about": {
-        "title": "About Us: Egyptian Fresh Fish Exporter Since 2008",
-        "description": "AZAFCO International: Egyptian B2B fish exporter with 300+ employees and 500+ clients in {countries}+ countries. EU-approved factory, ISO 22000 and HACCP."
-    },
-    "contact": {
-        "title": "Contact Us: Wholesale Fresh Fish Enquiries",
-        "description": "Partner with an Egyptian fresh fish exporter shipping 2,500+ tons monthly. Flexible ordering, competitive pricing. WhatsApp: +20-100-7736419."
-    },
-    "markets": {
-        "title": "Export Markets: Fresh Fish Shipped by Air & Land",
-        "description": "AZAFCO exports 2,500+ tons of fresh fish monthly to {countries}+ countries by air and land. Trusted by 500+ distributors since 2008, ready for new markets."
-    },
-    "media": {
-        "title": "Egyptian Fish Export News & Media Center",
-        "description": "AZAFCO news: international expansion updates, company achievements and industry milestones, plus TV appearances and government recognition since 2008."
-    },
-    "certificates": {
-        "title": "ISO 22000 & HACCP Certified Fish Exporter",
-        "description": "AZAFCO holds {isoCount} ISO certifications plus HACCP: ISO 22000, ISO 9001, ISO 14001, ISO 45001. One of 6 Egyptian factories authorized for EU export."
-    },
-    "privacy": {
-        "title": "Privacy Policy",
-        "description": "AZAFCO International Privacy Policy - How we protect your data and handle inquiries confidentially."
+        "og_alt": "AZAFCO International: fresh Egyptian fish for importers"
     }
 }

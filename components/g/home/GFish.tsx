@@ -6,7 +6,8 @@ import styles from './GFish.module.css';
 
 /**
  * "Our fish" section of the G landing (boards GroupAr / Group / *Mobile, section#fish).
- * Navy section over the fish-on-ice photo with the 12 species tiles.
+ * Navy section over the fish-on-ice photo with the 12 main species tiles
+ * (names = locales/*\/data/products.json) and the "other species on request" line.
  * Each tile links quietly to its product page (data/products.ts slug).
  */
 
@@ -118,6 +119,17 @@ export default async function GFish() {
                         </li>
                     ))}
                 </ul>
+
+                {/* The 12 are the main species; others are supplied on request (owner, 13 Nov) */}
+                <p
+                    className={
+                        ar
+                            ? 'mb-0 mt-6 text-[17px] leading-[1.85] text-white/[.88] lg:mt-8 lg:text-[18px]'
+                            : 'mb-0 mt-6 text-[16px] leading-[1.6] text-white/[.88] lg:mt-8 lg:text-[17px] lg:leading-[1.65]'
+                    }
+                >
+                    {t('note')}
+                </p>
             </div>
         </section>
     );

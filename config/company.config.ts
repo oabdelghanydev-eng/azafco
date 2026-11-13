@@ -192,7 +192,7 @@ export const companyConfig = {
         totalVolumeEstimate: 2500,  // Use this for display (rounded estimate)
         // Export countries shown site-wide as "+N" (TODO: confirm with management;
         // markets above list 7 active, 1 paused, 2 planned)
-        exportCountries: 9,
+        exportCountries: 7,
     },
 } as const;
 

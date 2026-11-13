@@ -3,12 +3,18 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Breadcrumbs, CTABand, FeatureGrid, PageHero, Section, SpeciesRow, SectionHeader } from '@/components/v2';
 import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
-import { getSpeciesSpec } from '@/lib/v2/specs';
-import { baseUrl, getCatalogue, getSearchNames, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
+import { baseUrl, getCatalogue, getRootT, getSearchNames, getSpecView, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
+import { companyConfig } from '@/config/company.config';
 import { productCategories } from '@/data/products';
 import { routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
+
+/** id of the inline "custom requirements" band heading; the hero's partnership button points here */
+const CUSTOM_ID = 'catalogue-custom';
+
+/** Approved company facts (RELEASE-DECISIONS, 13 Nov 2026), in the G home key-figures style */
+const FACTS = ['species', 'markets', 'founded', 'iso', 'capacity'] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -22,39 +28,38 @@ export default async function CataloguePage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'catalogue_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
+    const root = await getRootT(locale);
+    // Published species only (eel is kept in data but unpublished)
     const [catalogue, searchNames] = await Promise.all([getCatalogue(locale), getSearchNames()]);
-
 
     const categories = productCategories
         .filter((c) => catalogue.some((p) => p.category === c))
         .map((c) => ({ value: c, label: t(`water.${c}`) }));
 
     const items = catalogue.map((p, i) => {
-        // Published product forms (data/specs.ts), shown in the register's fact column
-        const forms = Array.from(new Set(getSpeciesSpec(p.slug).forms.map((f) => f.kind)));
+        // Published, indicative values from data/specs.ts: product form and weight grades
+        const spec = getSpecView(root, locale, p.slug);
+        const facts: { label: string; value: string | string[] }[] = [];
+        if (spec.forms.length) facts.push({ label: t('browser.form_type'), value: spec.forms.map((f) => f.label) });
+        if (spec.grades.length) facts.push({ label: t('card.grades'), value: spec.grades });
+        if (!facts.length) facts.push({ label: t('card.origin'), value: t('card.origin_value') });
         return {
-        slug: p.slug,
-        category: p.category,
-        terms: [p.name, ...p.altNames, ...(searchNames[p.slug] ?? [])],
-        card: (
-            <SpeciesRow
-                index={i + 1}
-                name={p.name}
-                scientificName={p.scientificName}
-                altNames={p.altNames}
-                href={p.href}
-                image={p.image}
-                chips={[t(`water.${p.category}`), t('card.origin_value')]}
-                facts={
-                    forms.length
-                        ? [{ label: t('browser.form_type'), value: forms.map((k) => t(`specs.forms.${k}`)) }]
-                        : [
-                              { label: t('card.origin'), value: t('card.origin_value') },
-                              { label: t('card.water'), value: t(`water.${p.category}`) },
-                          ]
-                }
-            />
-        ),
+            slug: p.slug,
+            category: p.category,
+            forms: spec.forms.map((f) => f.kind),
+            terms: [p.name, ...p.altNames, ...(searchNames[p.slug] ?? [])],
+            card: (
+                <SpeciesRow
+                    index={i + 1}
+                    name={p.name}
+                    scientificName={p.scientificName}
+                    altNames={p.altNames}
+                    href={p.href}
+                    image={p.image}
+                    chips={[t(`water.${p.category}`), t('card.origin_value')]}
+                    facts={facts}
+                />
+            ),
         };
     });
 
@@ -78,13 +83,15 @@ export default async function CataloguePage({ params }: Props) {
             '@type': 'BreadcrumbList',
             itemListElement: [
                 { '@type': 'ListItem', position: 1, name: tv('breadcrumbs.home'), item: localeUrl },
-                { '@type': 'ListItem', position: 2, name: tv('nav.seafood'), item: `${localeUrl}${routes.seafood}` },
-                { '@type': 'ListItem', position: 3, name: tv('nav.products'), item: `${localeUrl}${routes.products}` },
+                { '@type': 'ListItem', position: 2, name: t('breadcrumb'), item: `${localeUrl}${routes.products}` },
             ],
         },
     ];
 
     const specify = ['species', 'form', 'packing', 'volume', 'destination', 'timing'] as const;
+    // Smallest first step for a cold buyer: WhatsApp to management, prefilled
+    const whatsappHref = `${companyConfig.contact.social.whatsapp}?text=${encodeURIComponent(t('hero.whatsapp_message'))}`;
+    const isAr = locale === 'ar';
 
     return (
         <>
@@ -97,14 +104,57 @@ export default async function CataloguePage({ params }: Props) {
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                breadcrumbs={<Breadcrumbs items={[{ label: tv('nav.seafood'), href: routes.seafood }, { label: tv('nav.products') }]} />}
-                secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
+                breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
+                primaryAction={{ label: t('hero.primary'), href: `#${CUSTOM_ID}`, external: true }}
+                secondaryAction={{ label: t('hero.secondary'), href: whatsappHref, external: true }}
             />
 
-            {/* The species register below is the one list on this page (the navy range band stays on Home) */}
-            <Section variant="light" spacing="md" labelledBy="catalogue-species">
+            {/* Supplier proof above the fold: the G home key-figures strip */}
+            <section aria-label={t('hero.facts.label')} className="bg-white text-[#0d1f3f]">
+                <div className="mx-auto box-border max-w-[1320px] lg:px-8">
+                    <dl className="m-0 grid grid-cols-2 border-0 border-b border-solid border-[#e3e8f0] px-5 lg:grid-cols-5 lg:px-0">
+                        {FACTS.map((k, i) => {
+                            const lastOdd = i === FACTS.length - 1 && FACTS.length % 2 === 1;
+                            const cell = [
+                                // phone: 2 columns with inner rules; the odd last fact spans the row
+                                'border-0 border-solid border-[#e3e8f0] py-[22px]',
+                                lastOdd ? 'col-span-2' : '',
+                                i < FACTS.length - (FACTS.length % 2 ? 1 : 2) ? 'border-b' : '',
+                                !lastOdd && i % 2 === 1 ? 'ps-4 border-s' : 'pe-3',
+                                // desktop: one row, no rules
+                                'lg:col-span-1 lg:border-0 lg:py-9 lg:ps-0',
+                                i === FACTS.length - 1 ? 'lg:pe-0' : 'lg:pe-6',
+                            ].join(' ');
+                            return (
+                                <div key={k} className={`flex flex-col-reverse ${cell}`}>
+                                    <dt
+                                        className={`font-semibold text-[#4a5a75] ${
+                                            isAr ? 'mt-2 text-[15px] leading-[1.6] lg:text-[17px] lg:leading-[1.8]' : 'mt-1.5 text-[14px] lg:mt-2 lg:text-[16px]'
+                                        }`}
+                                    >
+                                        {t(`hero.facts.${k}.label`)}
+                                    </dt>
+                                    <dd
+                                        className={`m-0 text-[40px] font-extrabold leading-none text-[#002d72] lg:text-[52px] ${
+                                            isAr ? '' : 'tracking-[-0.02em]'
+                                        }`}
+                                    >
+                                        {t(`hero.facts.${k}.value`)}
+                                    </dd>
+                                </div>
+                            );
+                        })}
+                    </dl>
+                </div>
+            </section>
+
+            {/* The species register: the one list on this page */}
+            <Section variant="light" spacing="lg" labelledBy="catalogue-species">
                 <SectionHeader id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} size="md" />
                 <CatalogueBrowser items={items} categories={categories} />
+
+                {/* Owner, 13 Nov 2026: the 12 are the main species; others on request */}
+                <p className="mt-8 border-s-2 border-gold ps-4 text-body-lg font-medium text-fg">{t('grid.more_species')}</p>
 
                 {/* Quality reassurance: specifications confirmed per order */}
                 <aside
@@ -123,7 +173,7 @@ export default async function CataloguePage({ params }: Props) {
                 </aside>
             </Section>
 
-            <Section variant="offwhite" spacing="md" labelledBy="catalogue-specify">
+            <Section variant="offwhite" spacing="lg" labelledBy="catalogue-specify">
                 <SectionHeader id="catalogue-specify" eyebrow={t('specify.eyebrow')} title={t('specify.title')} intro={t('specify.intro')} size="md" />
                 <FeatureGrid
                     columns={3}
@@ -135,7 +185,7 @@ export default async function CataloguePage({ params }: Props) {
                 />
             </Section>
 
-            <Section variant="light" spacing="md" labelledBy="catalogue-proof">
+            <Section variant="light" spacing="lg" labelledBy="catalogue-proof">
                 <SectionHeader id="catalogue-proof" eyebrow={t('proof.eyebrow')} title={t('proof.title')} size="md" />
                 <FeatureGrid
                     columns={3}
@@ -148,13 +198,15 @@ export default async function CataloguePage({ params }: Props) {
                 />
             </Section>
 
-            {/* Custom requirement block = closing RFQ */}
+            {/* Custom requirements: inline contact band (WhatsApp, email, requirements form) */}
             <CTABand
-                headingId="catalogue-custom"
+                headingId={CUSTOM_ID}
+                className="scroll-mt-24"
                 eyebrow={t('custom.eyebrow')}
                 intro={t('custom.intro')}
                 prefill={{ type: 'specifications' }}
                 placement="inline"
+                reassurance={[t('custom.after_1'), t('custom.after_2'), t('custom.after_3')]}
             />
         </>
     );

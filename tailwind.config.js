@@ -32,7 +32,7 @@ module.exports = {
           800: '#663900',
           900: '#331c00',
         },
-        // v2 brand + neutrals
+        // v2 brand + neutrals (design G: navy #001B47 / #002D72, gold #F7B500, off-white #F2F5FA)
         navy: {
           DEFAULT: '#002D72',
           50: '#F2F5FA',
@@ -42,7 +42,7 @@ module.exports = {
           600: '#0A3A82',
           700: '#002D72',
           800: '#00245C',
-          900: '#001A44',
+          900: '#001B47', // G section / hero navy
           950: '#00112E',
         },
         gold: {
@@ -54,17 +54,18 @@ module.exports = {
           ink: '#7A5A00', // gold-family TEXT, only on white / gold-50/100
         },
         ink: {
-          DEFAULT: '#1B2433', // body text (15.6:1 on white)
-          muted: '#4B5768',   // secondary text (7.3:1 white, 6.8:1 off-white)
+          DEFAULT: '#0D1F3F', // G body/heading ink (16.6:1 on white)
+          muted: '#4A5A75',   // G secondary text (6.9:1 white, 6.4:1 off-white)
           subtle: '#5A6677',  // captions/meta (5.8:1 white, 5.4:1 off-white)
         },
         surface: {
           DEFAULT: '#FFFFFF',
-          offwhite: '#F5F7FA',
+          offwhite: '#F2F5FA', // G off-white
           mist: '#E8EDF4',
         },
         line: {
-          DEFAULT: '#DCE3EC',  // decorative dividers
+          DEFAULT: '#D5DDE9',  // G card / control borders (decorative)
+          soft: '#E3E8F0',     // G hairline dividers
           strong: '#8794A8',   // form-control borders (3.07:1, meets 1.4.11)
         },
         // Surface-aware (set by <Section variant>, see globals.css)
@@ -78,6 +79,12 @@ module.exports = {
         'btn2': 'var(--v2-btn2-bg)',
         'btn2-fg': 'var(--v2-btn2-fg)',
         'btn2-hover': 'var(--v2-btn2-hover)',
+        // G kit (surface-aware): card border, standalone links, big figures, timeline line
+        edge: 'var(--v2-line)',
+        link: 'var(--v2-link)',
+        'link-hover': 'var(--v2-link-hover)',
+        stat: 'var(--v2-stat)',
+        connector: 'var(--v2-connector)',
       },
       // ── v2 design tokens (site v2) ──────────────────────────────────────
       // Brand: navy #002D72, gold #F7B500. Gold is NEVER used for text on
@@ -87,38 +94,41 @@ module.exports = {
       // secondary scales stay for routes not yet rebuilt.
       fontFamily: {
         // Old pages use `font-arabic`; it now resolves to the v2 body stack
-        // (Inter for LTR, IBM Plex Sans Arabic first for Arabic).
+        // (design G: Manrope for Latin, IBM Plex Sans Arabic for Arabic glyphs).
         'arabic': ['var(--v2-font-body)', 'system-ui', 'sans-serif'],
         'body': ['var(--v2-font-body)', 'system-ui', 'sans-serif'],
         'display': ['var(--v2-font-display)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        // Editorial display sizes (fluid). Line-height / tracking come from CSS
-        // variables so Arabic gets more leading and no negative tracking.
-        'display-2xl': ['clamp(2.75rem, 1.6rem + 4.6vw, 5.5rem)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: '700' }],
-        'display-xl': ['clamp(2.25rem, 1.5rem + 3vw, 4.25rem)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: '700' }],
-        'display-lg': ['clamp(2rem, 1.5rem + 2vw, 3.25rem)', { lineHeight: 'var(--v2-lh-heading)', letterSpacing: 'var(--v2-ls-heading)', fontWeight: '700' }],
-        'heading-xl': ['clamp(1.625rem, 1.35rem + 1.1vw, 2.25rem)', { lineHeight: 'var(--v2-lh-heading)', letterSpacing: 'var(--v2-ls-heading)', fontWeight: '700' }],
-        'heading-lg': ['1.5rem', { lineHeight: 'var(--v2-lh-heading)', fontWeight: '600' }],
-        'heading-md': ['1.25rem', { lineHeight: 'var(--v2-lh-heading)', fontWeight: '600' }],
-        'heading-sm': ['1.0625rem', { lineHeight: 'var(--v2-lh-heading)', fontWeight: '600' }],
+        // Design G type scale. Sizes, line-heights, tracking and weights come from
+        // CSS variables (app/globals.css) so Arabic gets its own size/leading/weight
+        // and no negative tracking. h1 (heroes) clamp(36px, 5vw, 72px); h2 29px → 50px.
+        'display-2xl': ['var(--v2-fs-h1-lg)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
+        'display-xl': ['var(--v2-fs-h1)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
+        'display-lg': ['var(--v2-fs-h2)', { lineHeight: 'var(--v2-lh-h2)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
+        'heading-xl': ['var(--v2-fs-h2-sm)', { lineHeight: 'var(--v2-lh-h2)', letterSpacing: 'var(--v2-ls-heading)', fontWeight: 'var(--v2-fw-display)' }],
+        'heading-lg': ['var(--v2-fs-h3-lg)', { lineHeight: 'var(--v2-lh-heading)', letterSpacing: 'var(--v2-ls-heading)', fontWeight: 'var(--v2-fw-h3)' }],
+        'heading-md': ['var(--v2-fs-h3)', { lineHeight: 'var(--v2-lh-heading)', fontWeight: 'var(--v2-fw-h3)' }],
+        'heading-sm': ['var(--v2-fs-h4)', { lineHeight: 'var(--v2-lh-heading)', fontWeight: '700' }],
         'body-lg': ['var(--v2-fs-body-lg)', { lineHeight: 'var(--v2-lh-body)' }],
         'body': ['var(--v2-fs-body)', { lineHeight: 'var(--v2-lh-body)' }],
-        'body-sm': ['0.9375rem', { lineHeight: 'var(--v2-lh-body)' }],
-        'caption': ['0.875rem', { lineHeight: '1.5' }],
-        'overline': ['0.8125rem', { lineHeight: '1.4', letterSpacing: 'var(--v2-ls-overline)', fontWeight: '600' }],
+        'body-sm': ['var(--v2-fs-body-sm)', { lineHeight: 'var(--v2-lh-body)' }],
+        'caption': ['var(--v2-fs-caption)', { lineHeight: '1.5' }],
+        'overline': ['var(--v2-fs-overline)', { lineHeight: '1.4', letterSpacing: 'var(--v2-ls-overline)', fontWeight: 'var(--v2-fw-overline)' }],
+        // Big figures (G stats strip: 42px → 56px)
+        'figure': ['clamp(2.625rem, 2rem + 1.6vw, 3.5rem)', { lineHeight: '1', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
       },
       maxWidth: {
-        'v2': '80rem',        // 1280px content container
+        'v2': '82.5rem',      // 1320px content container (design G)
         'prose-v2': '42rem',  // comfortable measure for body copy
       },
       borderRadius: {
         'control': '6px',
-        'card': '10px',
+        'card': '4px',        // design G cards and photos
       },
       boxShadow: {
-        'card': '0 1px 2px rgba(0, 26, 68, 0.06), 0 4px 16px rgba(0, 26, 68, 0.06)',
-        'raised': '0 8px 32px rgba(0, 26, 68, 0.14)',
+        'card': '0 1px 2px rgba(0, 27, 71, 0.05), 0 4px 14px rgba(0, 27, 71, 0.05)',
+        'raised': '0 18px 40px rgba(0, 27, 71, 0.16)', // G dropdown / hover lift
         'header': '0 1px 0 rgba(0, 26, 68, 0.08), 0 4px 16px rgba(0, 26, 68, 0.06)',
       },
       transitionDuration: {

@@ -2,40 +2,40 @@
   "groupLabel": "Hero messages",
   "slides": [
     {
-      "label": "From the Nile Delta to the world",
+      "label": "From Egyptian production to global partnerships",
       "kicker": "Fresh fish exporter since 2008",
-      "title": "Fresh Egyptian fish for the world’s importers",
-      "text": "We farm, pack and export twelve species from the Nile Delta, whole and chilled on ice.",
+      "title": "Fresh Egyptian fish for importers across the Middle East and beyond",
+      "text": "We farm and source 12 main fish species, then grade, pack and export them whole and fresh chilled on ice.",
       "alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
     },
     {
-      "label": "Integrated from pond to pallet",
+      "label": "From the pond to the pallet",
       "kicker": "Value chain",
-      "title": "One company from the pond to the pallet",
-      "text": "Farming, grading, packing and dispatch are run by one team in Motobas, Kafr El Sheikh.",
-      "alt": "Aerial view of earthen fish ponds with aerators and palms in the Nile Delta"
+      "title": "We handle every stage, from the pond to the pallet",
+      "text": "We grade, pack and dispatch from our plant in Motobas, Kafr El Sheikh, with our own refrigerated trucks and cold stores.",
+      "alt": "Aerial view of earthen fish ponds with aerators and palms"
     },
     {
-      "label": "Twelve species, graded by weight",
+      "label": "12 main species, graded by weight",
       "kicker": "Our fish",
-      "title": "Twelve farmed fish species, graded by weight",
-      "text": "From Nile tilapia to sea bass and sea bream, sold whole and fresh chilled.",
+      "title": "12 main fish species, graded by weight",
+      "text": "From tilapia to sea bass and sea bream, sold whole and fresh chilled.",
       "alt": "Whole fresh fish on crushed ice seen from above"
     },
     {
-      "label": "Seven markets by air and land",
-      "kicker": "Global presence",
-      "title": "Seven export markets, served by air and land",
-      "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon.",
+      "label": "7+ markets by air and road",
+      "kicker": "Our markets",
+      "title": "The Middle East and beyond, by air and road",
+      "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon, with Europe next in our plan.",
       "alt": "Refrigerated truck loading insulated boxes at a dock at dawn"
     }
   ],
   "ctaPartner": "Start a partnership",
   "ctaFish": "See our fish",
   "stats": [
-    { "value": "12", "label": "farmed fish species" },
-    { "value": "7", "label": "export markets served today" },
-    { "value": "2008", "label": "year founded" },
-    { "value": "2,500", "label": "tonnes a month, packing capacity" }
+    { "value": "12", "label": "main fish species" },
+    { "value": "7+", "label": "export markets" },
+    { "value": "3", "label": "ISO certificates" },
+    { "value": "2,500", "label": "t/month packing capacity" }
   ]
 }

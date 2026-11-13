@@ -5,20 +5,64 @@
  * Each schema is only emitted on the page it describes:
  * - StructuredData (layout, every page): Organization, WebSite
  * - PageStructuredData (per page):
- *   - home / contact: LocalBusiness
- *   - products: ItemList of products
- *   - inner pages: BreadcrumbList
+ *   - home / contact: LocalBusiness (the Motobas processing plant)
+ *   - inner pages (about / contact / markets): BreadcrumbList
+ *   The products page and species pages emit their own ItemList / Product.
  *
- * All text content is sourced from translations (no hardcoded strings)
+ * All text content is sourced from translations (schema.*, no hardcoded strings).
+ * Approved facts only (docs/team/web/g/RELEASE-DECISIONS.md):
+ * - 12 main species = data/products.ts `products` (eel is excluded there)
+ * - certificates = the three ISO standards; TÜV AUSTRIA named once (recognizedBy), no numbers
+ * - identity = legal name, commercial register and tax card (the same numbers shown on /contact and in the footer)
+ * - founder is emitted only when schema.founder exists (removed until the owner confirms the spelling)
+ * - markets = active markets from companyConfig (7), no price, no MOQ, no reply time
  */
 
 import { getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { ogImageMap, Locale } from '@/i18n';
+import { products } from '@/data/products';
+import { routes } from '@/lib/v2/routes';
 
-type PageType = 'home' | 'products' | 'about' | 'contact' | 'markets' | 'media' | 'certificates';
+type PageType = 'home' | 'about' | 'contact' | 'markets';
 
 const baseUrl = companyConfig.contact.baseUrl;
+
+/**
+ * Motobas processing plant (RELEASE-DECISIONS §4, same point as the factory map
+ * embed in data/company.ts). TODO(lead): move to companyConfig.addresses.factory.geo.
+ * The office coordinates (companyConfig.geo) are not emitted.
+ */
+const FACTORY_GEO = { latitude: 31.433264, longitude: 30.475957 } as const;
+const FACTORY_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${FACTORY_GEO.latitude},${FACTORY_GEO.longitude}`;
+
+/** Current identity logo (components/v2/Logo.tsx), 739 x 496. */
+const LOGO = { path: '/brand/logo-primary.svg', width: 739, height: 496 } as const;
+
+/** Visible breadcrumb label of each inner page (same text as the on-page breadcrumb). */
+const BREADCRUMB_KEYS: Record<Exclude<PageType, 'home'>, { label: string; fallback: string; path: string }> = {
+    about: { label: 'about_v2.breadcrumb', fallback: 'schema.about', path: routes.about },
+    contact: { label: 'contact_v2.breadcrumb', fallback: 'schema.contact', path: routes.contact },
+    markets: { label: 'markets_v2.breadcrumb', fallback: 'schema.markets', path: routes.markets },
+};
+
+/** Drops undefined / null / empty-string values and empty arrays (no empty fields in JSON-LD). */
+function clean<T>(value: T): T {
+    if (Array.isArray(value)) {
+        return value.map(clean).filter(v => v !== undefined && v !== null && v !== '') as unknown as T;
+    }
+    if (value && typeof value === 'object') {
+        const out: Record<string, unknown> = {};
+        for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
+            const c = clean(v);
+            if (c === undefined || c === null || c === '') continue;
+            if (Array.isArray(c) && c.length === 0) continue;
+            out[k] = c;
+        }
+        return out as T;
+    }
+    return value;
+}
 
 function JsonLd({ schemas }: { schemas: object[] }) {
     return (
@@ -27,7 +71,8 @@ function JsonLd({ schemas }: { schemas: object[] }) {
                 <script
                     key={index}
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                    // Escape "<" so copy can never close the script tag
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(clean(schema)).replace(/</g, '\\u003c') }}
                 />
             ))}
         </>
@@ -43,66 +88,147 @@ const factoryAddress = {
     addressCountry: 'EG'
 };
 
-const activeMarketCodes = companyConfig.markets
-    .filter(m => m.status === 'active')
-    .map(m => m.countryCode);
+const activeMarkets = companyConfig.markets.filter(m => m.status === 'active');
+
+/** Untyped root translator (keys below are built at runtime). */
+type RootT = {
+    (key: string, values?: Record<string, string | number>): string;
+    raw(key: string): unknown;
+    has(key: string): boolean;
+};
+
+async function rootT(locale: string): Promise<RootT> {
+    return (await getTranslations({ locale })) as unknown as RootT;
+}
+
+/**
+ * Message or undefined when the key is missing (es/ru/de/fr may lag behind ar/en
+ * until translated); clean() then drops the field instead of emitting the key path.
+ */
+function opt(t: RootT, key: string): string | undefined {
+    return t.has(key) ? t(key) : undefined;
+}
+
+/** Raw object/array from a translation key, or the fallback when missing. */
+function rawOr<T>(t: RootT, key: string, fallback: T): T {
+    if (!t.has(key)) return fallback;
+    const v = t.raw(key);
+    return v && typeof v === 'object' ? (v as T) : fallback;
+}
+
+/** String array from a translation key, or [] when missing. */
+function rawStrings(t: RootT, key: string): string[] {
+    if (!t.has(key)) return [];
+    const v = t.raw(key);
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && x.trim() !== '') : [];
+}
+
+/**
+ * Active markets as schema.org Country nodes: localized name from data.markets
+ * (English config name as fallback) plus the ISO 3166-1 code as identifier.
+ */
+function areaServedCountries(t: RootT) {
+    return activeMarkets.map(m => ({
+        '@type': 'Country',
+        name: opt(t, `data.markets.${m.key}.country`) ?? m.name,
+        identifier: m.countryCode
+    }));
+}
 
 // ═══════════════════════════════════════════════════════════════
 // SITE-WIDE: Organization + WebSite
 // ═══════════════════════════════════════════════════════════════
 export default async function StructuredData({ locale }: { locale: string }) {
-    const t = await getTranslations({ locale });
-    const schemaImage = `${baseUrl}${ogImageMap[locale as Locale]}`;
+    const t = await rootT(locale);
+    const localeUrl = `${baseUrl}/${locale}`;
+    const schemaImage = `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`;
 
-    const alternateNames = (t.raw('schema.alternateNames') ?? ['AZAFCO International', 'AZAFCO']) as string[];
-    const knowsAboutList = (t.raw('schema.knowsAbout') ?? []) as string[];
-    const services = t.raw('schema.services') as Record<string, { name: string; description: string }> | undefined;
+    const alternateNames = rawStrings(t, 'schema.alternateNames');
+    const services = rawOr<Record<string, { name: string; description: string }>>(t, 'schema.services', {});
+    const credentials = rawOr<{ name: string; description: string }[]>(t, 'schema.credentials', []);
+    const certificationBody = opt(t, 'schema.certificationBody');
+    const founderName = opt(t, 'schema.founder');
+    const catalogName = opt(t, 'schema.catalogName');
+    const commercialRegister = companyConfig.registration.commercialRegister;
 
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': `${baseUrl}/#organization`,
         name: t('schema.companyName'),
+        legalName: opt(t, 'schema.legalName') ?? companyConfig.identity.legalName,
         alternateName: alternateNames,
         url: baseUrl,
         logo: {
             '@type': 'ImageObject',
-            url: `${baseUrl}/images/logo.svg`,
-            width: '300',
-            height: '100'
+            '@id': `${baseUrl}/#logo`,
+            url: `${baseUrl}${LOGO.path}`,
+            contentUrl: `${baseUrl}${LOGO.path}`,
+            width: LOGO.width,
+            height: LOGO.height,
+            caption: t('schema.companyName')
         },
         image: schemaImage,
-        description: t('schema.description'),
+        description: opt(t, 'schema.description'),
+        slogan: opt(t, 'schema.slogan'),
         foundingDate: String(companyConfig.identity.foundingYear),
-        founder: {
-            '@type': 'Person',
-            name: companyConfig.identity.founder
-        },
-        legalName: companyConfig.identity.legalName,
+        founder: founderName ? { '@type': 'Person', name: founderName } : undefined,
         taxID: companyConfig.registration.taxCard,
-        vatID: companyConfig.registration.taxCard,
+        // Commercial register: the most checkable identity fact, also shown on /contact and in the footer
+        identifier: commercialRegister
+            ? [{ '@type': 'PropertyValue', propertyID: opt(t, 'schema.commercialRegisterLabel'), value: commercialRegister }]
+            : undefined,
         email: companyConfig.contact.email,
-        // No hasCredential / numberOfEmployees: certificates and headcount are not
-        // verified yet (site v2 review). Re-add only from verified data.
+        telephone: companyConfig.contact.phone,
         address: factoryAddress,
+        // WhatsApp = management direct (fast deals); email = export team (details and documents)
         contactPoint: [
             {
                 '@type': 'ContactPoint',
+                name: opt(t, 'schema.contactManagement'),
                 telephone: companyConfig.contact.whatsapp,
+                url: companyConfig.contact.social.whatsapp,
                 contactType: 'sales',
                 availableLanguage: ['Arabic', 'English'],
-                areaServed: activeMarketCodes
+                areaServed: activeMarkets.map(m => m.countryCode)
+            },
+            {
+                '@type': 'ContactPoint',
+                name: opt(t, 'schema.contactExport'),
+                email: companyConfig.contact.email,
+                // 'sales', not 'customer service': this is the channel for new buyers' details and documents
+                contactType: 'sales',
+                availableLanguage: ['Arabic', 'English'],
+                areaServed: activeMarkets.map(m => m.countryCode)
             }
         ],
+        areaServed: areaServedCountries(t),
+        // Only real, owned profiles (companyConfig.contact.social). WhatsApp is a contact channel, not a profile.
         sameAs: [companyConfig.contact.social.facebook],
-        knowsAbout: knowsAboutList,
-        slogan: t('schema.slogan'),
-        makesOffer: Object.values(services ?? {}).map(service => ({
+        knowsAbout: rawStrings(t, 'schema.knowsAbout'),
+        // ISO 9001 / 14001 / 45001; the certification body appears once per credential as recognizedBy,
+        // not in the descriptions. No certificate numbers, dates, site or scope.
+        hasCredential: credentials.map(c => ({
+            '@type': 'EducationalOccupationalCredential',
+            name: c.name,
+            description: c.description,
+            credentialCategory: opt(t, 'schema.credentialCategory'),
+            recognizedBy: certificationBody ? { '@type': 'Organization', name: certificationBody } : undefined
+        })),
+        hasOfferCatalog: catalogName && {
+            '@type': 'OfferCatalog',
+            name: catalogName,
+            description: opt(t, 'schema.catalogDesc'),
+            url: `${localeUrl}${routes.products}`,
+            numberOfItems: products.length
+        },
+        makesOffer: Object.values(services).map(service => ({
             '@type': 'Offer',
             itemOffered: {
                 '@type': 'Service',
                 name: service.name,
-                description: service.description
+                description: service.description,
+                provider: { '@id': `${baseUrl}/#organization` }
             }
         }))
     };
@@ -114,7 +240,7 @@ export default async function StructuredData({ locale }: { locale: string }) {
         name: t('schema.websiteName'),
         alternateName: alternateNames,
         url: baseUrl,
-        description: t('schema.websiteDescription'),
+        description: opt(t, 'schema.websiteDescription'),
         inLanguage: locale,
         publisher: {
             '@id': `${baseUrl}/#organization`
@@ -125,12 +251,11 @@ export default async function StructuredData({ locale }: { locale: string }) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// PER-PAGE: LocalBusiness, product list, breadcrumbs
+// PER-PAGE: LocalBusiness, breadcrumbs
 // ═══════════════════════════════════════════════════════════════
 export async function PageStructuredData({ locale, pageType }: { locale: string; pageType: PageType }) {
-    const t = await getTranslations({ locale });
+    const t = await rootT(locale);
     const localeUrl = `${baseUrl}/${locale}`;
-    const pageUrl = pageType === 'home' ? localeUrl : `${localeUrl}/${pageType}`;
     const schemas: object[] = [];
 
     if (pageType === 'home' || pageType === 'contact') {
@@ -139,61 +264,43 @@ export async function PageStructuredData({ locale, pageType }: { locale: string;
             '@type': 'LocalBusiness',
             '@id': `${baseUrl}/#localbusiness`,
             name: t('schema.factoryName'),
-            alternateName: t('schema.factoryAlternateName'),
-            image: `${baseUrl}${ogImageMap[locale as Locale]}`,
+            alternateName: opt(t, 'schema.factoryAlternateName'),
+            description: opt(t, 'schema.factoryDescription'),
+            image: `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`,
+            logo: { '@id': `${baseUrl}/#logo` },
             url: localeUrl,
             telephone: companyConfig.contact.whatsapp,
             email: companyConfig.contact.email,
+            priceRange: opt(t, 'schema.priceRange'),
             parentOrganization: { '@id': `${baseUrl}/#organization` },
             address: factoryAddress,
             geo: {
                 '@type': 'GeoCoordinates',
-                latitude: companyConfig.geo.latitude,
-                longitude: companyConfig.geo.longitude
+                latitude: FACTORY_GEO.latitude,
+                longitude: FACTORY_GEO.longitude
             },
+            hasMap: FACTORY_MAP_URL,
+            // Office hours (Cairo time), as stated on the contact page
             openingHoursSpecification: {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
                 opens: '08:00',
                 closes: '17:00'
             },
-            areaServed: companyConfig.markets
-                .filter(m => m.status === 'active')
-                .map(m => ({ '@type': 'Country', name: m.name }))
-        });
-    }
-
-    if (pageType === 'products') {
-        // No offers/ratings until species pages carry real specs (Phase 3)
-        schemas.push({
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            '@id': `${pageUrl}#products`,
-            name: t('products_page.title'),
-            numberOfItems: companyConfig.products.length,
-            itemListElement: companyConfig.products.map((product, index) => ({
-                '@type': 'ListItem',
-                position: index + 1,
-                item: {
-                    '@type': 'Product',
-                    name: t(`data.products.${product.key}.name`),
-                    description: t(`data.products.${product.key}.description`),
-                    image: `${baseUrl}${product.image}`,
-                    category: t('schema.freshFishCategory'),
-                    brand: { '@type': 'Brand', name: t('schema.alternateName') },
-                    manufacturer: { '@id': `${baseUrl}/#organization` }
-                }
-            }))
+            areaServed: areaServedCountries(t)
         });
     }
 
     if (pageType !== 'home') {
+        const crumb = BREADCRUMB_KEYS[pageType];
+        const homeLabel = t.has('v2.breadcrumbs.home') ? t('v2.breadcrumbs.home') : t('schema.home');
+        const pageLabel = t.has(crumb.label) ? t(crumb.label) : t(crumb.fallback);
         schemas.push({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-                { '@type': 'ListItem', position: 1, name: t('schema.home'), item: localeUrl },
-                { '@type': 'ListItem', position: 2, name: t(`schema.${pageType}`), item: pageUrl }
+                { '@type': 'ListItem', position: 1, name: homeLabel, item: localeUrl },
+                { '@type': 'ListItem', position: 2, name: pageLabel, item: `${localeUrl}${crumb.path}` }
             ]
         });
     }

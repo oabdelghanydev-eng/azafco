@@ -11,27 +11,38 @@ import { WhatsAppIcon } from './icons';
 const HIDE_ON: string[] = [routes.rfq, routes.contact];
 
 /**
+ * Find the hero the float must not cover: the G home hero (#top), a kit PageHero
+ * ([data-page-hero]) or, for any other page template, the section holding the
+ * page's h1 inside <main>.
+ */
+function findHero(): Element | null {
+    return (
+        document.getElementById('top') ??
+        document.querySelector('[data-page-hero]') ??
+        document.querySelector('#main-content h1')?.closest('section, header') ??
+        null
+    );
+}
+
+/**
  * Small round WhatsApp button in the G palette (navy #002d72, gold ring, gold on hover) (the only fixed layer; no quote bar, no pulse,
  * no popup). Bottom end corner (left in RTL), above the iOS home indicator via
  * env(safe-area-inset-bottom). 52px on mobile, 48px from md up.
- * On the home page it fades in once the hero (#top) is out of view (no fade with
- * reduced motion). The file keeps its old name to avoid churn in app/[locale]/layout.tsx.
+ * On every page it fades in only once the page hero is out of view, so at 390px it
+ * never sits on the hero text, actions or stats strip (no fade with reduced motion).
+ * Pages without a recognisable hero show it from the start.
+ * The file keeps its old name to avoid churn in app/[locale]/layout.tsx.
  */
 export default function MobileQuoteBar() {
     const t = useTranslations('g_footer_v2');
     const pathname = usePathname();
     const hidden = HIDE_ON.some((p) => pathname === p || pathname.startsWith(`${p}/`));
-    const home = pathname === '/' || pathname === '';
-    // Home: wait until the hero (#top) has left the viewport so the button does not
-    // sit on the hero/stats tabs at rest. Other pages: shown from the start.
-    const [pastHero, setPastHero] = useState(!home);
+    // Hidden until the effect has located the hero (no flash on top of it after hydration)
+    const [pastHero, setPastHero] = useState(false);
 
     useEffect(() => {
-        if (!home) {
-            setPastHero(true);
-            return;
-        }
-        const hero = document.getElementById('top');
+        if (hidden) return;
+        const hero = findHero();
         if (!hero || typeof IntersectionObserver === 'undefined') {
             setPastHero(true);
             return;
@@ -40,7 +51,7 @@ export default function MobileQuoteBar() {
         const io = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting), { threshold: 0 });
         io.observe(hero);
         return () => io.disconnect();
-    }, [home]);
+    }, [pathname, hidden]);
 
     if (hidden) return null;
     // The number is the owner's (management direct), not the export team: label says so

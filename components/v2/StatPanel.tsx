@@ -23,24 +23,27 @@ export interface StatPanelProps {
 }
 
 /**
- * Large figures with labels. Forces an explicit `verified` flag per figure
- * because the brief forbids unapproved production numbers / counts.
+ * Large figures with labels, as the G key-figures strip: each figure under a
+ * hairline with a short gold segment, big navy number (white on navy), muted label.
+ * Forces an explicit `verified` flag per figure because the brief forbids
+ * unapproved production numbers / counts.
  */
 export default function StatPanel({ stats, columns = 4, className }: StatPanelProps) {
-    const cols = { 2: 'sm:grid-cols-2', 3: 'sm:grid-cols-3', 4: 'sm:grid-cols-2 lg:grid-cols-4' }[columns];
+    const cols = { 2: 'grid-cols-2', 3: 'grid-cols-1 sm:grid-cols-3', 4: 'grid-cols-2 lg:grid-cols-4' }[columns];
     const shown = stats.filter((s) => s.verified);
     const pending = stats.filter((s) => !s.verified);
     return (
         <div className={className}>
             {shown.length ? (
-                <dl className={cn('grid gap-px overflow-hidden rounded-card border border-rule bg-rule', cols)}>
+                <dl className={cn('m-0 grid gap-x-5 gap-y-8 lg:gap-x-8', cols)}>
                     {shown.map((s, i) => (
-                        <div key={i} className="flex flex-col-reverse bg-panel p-6">
-                            <dt className="mt-2 text-body-sm text-fg-muted">
+                        <div key={i} className="relative flex min-w-0 flex-col-reverse border-t border-rule pt-5 lg:pt-7">
+                            <span aria-hidden="true" className="absolute -top-px start-0 h-[3px] w-11 bg-gold" />
+                            <dt className="mt-2 text-body-sm font-semibold text-fg-muted lg:mt-2.5 lg:text-body">
                                 {s.label}
-                                {s.note ? <span className="mt-1 block text-caption">{s.note}</span> : null}
+                                {s.note ? <span className="mt-1 block text-caption font-normal">{s.note}</span> : null}
                             </dt>
-                            <dd className="font-display text-display-lg text-fg tabular-nums">{s.value}</dd>
+                            <dd className="m-0 font-display text-figure text-stat tabular-nums [overflow-wrap:anywhere]">{s.value}</dd>
                         </div>
                     ))}
                 </dl>

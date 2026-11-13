@@ -2,7 +2,7 @@ import type { ElementType, ReactNode } from 'react';
 import { cn } from '@/lib/v2/cn';
 
 /* ────────────────────────────────────────────────────────────────────────────
- * Container: 1280px max, 16/24/40px side padding.
+ * Container: 1320px max (design G), 20px side padding on phones, 32px from md.
  * `grid` turns it into the layout grid: 4 cols mobile, 8 tablet, 12 desktop.
  * ──────────────────────────────────────────────────────────────────────────── */
 export interface ContainerProps {
@@ -19,7 +19,7 @@ export function Container({ children, grid = false, narrow = false, as: Tag = 'd
     return (
         <Tag
             className={cn(
-                'mx-auto w-full px-4 sm:px-6 lg:px-10',
+                'mx-auto box-border w-full px-5 md:px-8',
                 narrow ? 'max-w-4xl' : 'max-w-v2',
                 grid && 'grid grid-cols-4 gap-x-4 sm:grid-cols-8 sm:gap-x-6 lg:grid-cols-12 lg:gap-x-8',
                 className,
@@ -31,8 +31,9 @@ export function Container({ children, grid = false, narrow = false, as: Tag = 'd
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
- * Section: vertical rhythm + surface. `navy` sets data-surface="dark" so every
- * surface-aware token (fg, fg-muted, eyebrow, rule, focus ring) flips.
+ * Section: vertical rhythm + surface (design G: 64px on phones, 112px from lg).
+ * `navy` (#001B47) sets data-surface="dark" so every surface-aware token
+ * (fg, fg-muted, eyebrow, rule, focus ring, buttons) flips.
  * ──────────────────────────────────────────────────────────────────────────── */
 export type SectionVariant = 'light' | 'offwhite' | 'navy';
 export type SectionSpacing = 'none' | 'sm' | 'md' | 'lg';
@@ -60,9 +61,9 @@ const surface: Record<SectionVariant, string> = {
 
 const space: Record<SectionSpacing, string> = {
     none: '',
-    sm: 'py-10 md:py-12',
-    md: 'py-16 md:py-20',
-    lg: 'py-20 md:py-28',
+    sm: 'py-10 md:py-12 lg:py-14',
+    md: 'py-16 md:py-20 lg:py-28',
+    lg: 'py-20 md:py-24 lg:py-28',
 };
 
 export function Section({
@@ -90,7 +91,8 @@ export function Section({
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
- * Eyebrow: small overline above headings. Navy on light, gold on navy.
+ * Eyebrow (design G): 2px gold rule (28px, 44px from lg) + short label.
+ * Label navy on light, gold on navy. Sentence case, not uppercase.
  * ──────────────────────────────────────────────────────────────────────────── */
 export interface EyebrowProps {
     children: ReactNode;
@@ -100,8 +102,8 @@ export interface EyebrowProps {
 
 export function Eyebrow({ children, as: Tag = 'p', className }: EyebrowProps) {
     return (
-        <Tag className={cn('flex items-center gap-3 text-overline uppercase text-eyebrow', className)}>
-            <span aria-hidden="true" className="h-px w-8 bg-gold" />
+        <Tag className={cn('m-0 flex items-center gap-2.5 text-overline text-eyebrow lg:gap-3.5', className)}>
+            <span aria-hidden="true" className="block h-[2px] w-7 shrink-0 bg-gold lg:w-11" />
             <span>{children}</span>
         </Tag>
     );
@@ -140,18 +142,18 @@ export function SectionHeader({
     return (
         <div
             className={cn(
-                'mb-10 flex flex-col gap-6 md:mb-12',
-                !centered && !!action && 'md:flex-row md:items-end md:justify-between',
+                'mb-8 flex flex-col gap-6 md:mb-10 lg:mb-14',
+                !centered && !!action && 'md:flex-row md:items-end md:justify-between md:gap-x-16',
                 centered && 'items-center text-center',
                 className,
             )}
         >
-            <div className={cn('max-w-3xl', centered && 'mx-auto')}>
-                {eyebrow ? <Eyebrow className={cn('mb-4', centered && 'justify-center')}>{eyebrow}</Eyebrow> : null}
-                <H id={id} className={cn('v2-heading font-display', size === 'lg' ? 'text-display-lg' : 'text-heading-xl')}>
+            <div className={cn('max-w-[760px]', centered && 'mx-auto')}>
+                {eyebrow ? <Eyebrow className={cn('mb-3 lg:mb-4', centered && 'justify-center')}>{eyebrow}</Eyebrow> : null}
+                <H id={id} className={cn('v2-heading m-0 font-display', size === 'lg' ? 'text-display-lg' : 'text-heading-xl')}>
                     {title}
                 </H>
-                {intro ? <div className="mt-4 text-body-lg text-fg-muted">{intro}</div> : null}
+                {intro ? <div className={cn('mt-4 max-w-[680px] text-body-lg text-fg-muted lg:mt-5', centered && 'mx-auto')}>{intro}</div> : null}
             </div>
             {action ? <div className="shrink-0">{action}</div> : null}
         </div>

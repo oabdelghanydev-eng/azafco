@@ -102,8 +102,8 @@ export default function GHeroSlides({ slides, isAr, groupLabel, ctaPartner, ctaF
                         <h1
                             className={
                                 isAr
-                                    ? 'm-0 text-[34px] font-bold leading-[1.35] lg:text-[clamp(40px,5vw,72px)] lg:leading-[1.3]'
-                                    : 'm-0 text-[36px] font-extrabold leading-[1.1] tracking-[-0.02em] lg:text-[clamp(40px,5.2vw,76px)] lg:leading-[1.06]'
+                                    ? 'm-0 text-[32px] font-bold leading-[1.35] lg:text-[clamp(40px,4.45vw,64px)] lg:leading-[1.3]'
+                                    : 'm-0 text-[34px] font-extrabold leading-[1.1] tracking-[-0.02em] lg:text-[clamp(40px,4.6vw,66px)] lg:leading-[1.06]'
                             }
                         >
                             {slide.title}

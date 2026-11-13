@@ -9,12 +9,12 @@
         "last_reviewed": "Last reviewed: {date}"
     },
     "importing": {
-        "meta_title": "Import Fresh Fish from Egypt: HS Codes & Documents",
-        "meta_description": "HS codes for 8 Egyptian fish species, the documents for fresh fish exports and EU import (health certificate, TRACES, origin) and cold-chain basics.",
+        "meta_title": "Import fish from Egypt: HS codes and documents",
+        "meta_description": "HS codes for key fish species, the documents for fresh fish exports and EU import (health certificate, TRACES, origin) and cold-chain basics.",
         "breadcrumb": "Importing fresh fish from Egypt",
-        "card_summary": "HS codes for eight species, the documents a fresh fish shipment needs, EU import steps and cold-chain basics.",
-        "h1": "Importing Fresh Fish from Egypt: HS Codes, Documents and Cold Chain",
-        "intro": "This guide is for importers, wholesalers and distributors who are planning to buy fresh, chilled whole fish from Egypt. It covers the tariff codes for the species we supply, the documents a shipment usually needs, the extra steps for the European Union, and the basics of keeping fish cold on the way.",
+        "card_summary": "HS codes for key species, the documents a fresh fish shipment needs, EU import steps and cold-chain basics.",
+        "h1": "Importing fresh fish from Egypt: HS codes, documents and cold chain",
+        "intro": "This guide is for importers, wholesalers and distributors who are planning to buy fresh, chilled whole fish from Egypt. It covers the tariff codes for key species, the documents a shipment usually needs, the extra steps for the European Union and the basics of keeping fish cold on the way.",
         "last_reviewed": "Last reviewed: {date}",
         "disclaimer": "This guide gives general information. It is not legal or customs advice. Rules change, so confirm the current requirements with your customs broker and the authorities of the importing country before you ship.",
         "toc_title": "In this guide",
@@ -29,22 +29,11 @@
             "col_hs": "HS code (6 digits)",
             "col_cn": "EU CN code (8 digits)",
             "col_notes": "Notes",
-            "species": {
-                "tilapia": "Nile tilapia",
-                "sea_bass": "European seabass",
-                "mullet": "Flathead grey mullet",
-                "buni": "Bunni (Nile barb)",
-                "mubarakah": "Common carp",
-                "catfish": "North African catfish",
-                "lout": "Meagre",
-                "eels": "European eel"
-            },
             "notes": {
-                "other_fish": "Not named in a specific subheading, so it falls under 0302.89 \"Other\".",
-                "buni": "Labeobarbus is not one of the carp genera named in 0302.73, so bunni falls under 0302.89; in the EU it is a freshwater fish (0302 89 10). Grass carp (Ctenopharyngodon idellus) would be 0302.73.",
-                "eel": "Listed in CITES Appendix II. Trade in European eel with countries outside the EU has been prohibited since 2010, so it cannot be imported into the EU."
+                "other_fish": "Not named in a specific subheading, so it falls under 0302.89 \"Other\"."
             },
-            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant is responsible for the final classification. Duty rates and preferences change, so check the importing country's tariff (for the EU, TARIC or Access2Markets) before you quote a landed price."
+            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant is responsible for the final classification. Duty rates and preferences change, so check the importing country's tariff (for the EU, TARIC or Access2Markets) before you calculate a landed price.",
+            "more": "Codes for our other main species will be added after review; your customs declarant confirms the final classification."
         },
         "docs": {
             "title": "Documents for a fresh fish shipment",
@@ -56,7 +45,7 @@
                 },
                 "packing_list": {
                     "title": "Packing list",
-                    "text": "Box-by-box detail: number of boxes, net and gross weight, species and size grade, and box marks. It lets the airline, the border post and the buyer check the consignment."
+                    "text": "Box-by-box detail: number of boxes, net and gross weight, species and weight grade and box marks. It lets the airline, the border post and the buyer check the consignment."
                 },
                 "health_certificate": {
                     "title": "Official health certificate",
@@ -77,10 +66,6 @@
                 "labelling": {
                     "title": "Labelling for EU buyers",
                     "text": "Fish offered to consumers or mass caterers in the EU must show the commercial and scientific name, the production method (caught or farmed), the catch or production area and the other information listed in Article 35 of Regulation (EU) No 1379/2013. Agree the box labels with your supplier before the first shipment."
-                },
-                "cites": {
-                    "title": "CITES permit (European eel only)",
-                    "text": "European eel is listed in CITES Appendix II, so exports need a CITES export permit from the exporting country. The EU has prohibited trade in European eel with non-EU countries since 2010, so eel cannot be imported into the EU."
                 }
             }
         },
@@ -109,23 +94,23 @@
                     "text": "Check the fish temperature, the ice and the condition of the boxes, and record any problem with photos before you sign for the delivery."
                 }
             },
-            "azafco": "How AZAFCO ships: our fish is packed in EPS boxes, kept at 0–4°C and shipped chilled by air."
+            "azafco": "How AZAFCO ships: whole fish packed on ice in EPS boxes, moved in our own refrigerated trucks, then by air or road freight."
         },
         "enquiry": {
-            "title": "How to start an enquiry",
-            "intro": "Send us the details below and our export team will reply with availability, terms and the documents your shipment needs.",
+            "title": "How to send your requirements",
+            "intro": "Send us the details below. The export team reviews availability, terms and the documents your shipment needs.",
             "checklist": [
-                "Species and size grades",
+                "Species and weight grades",
                 "Approximate volume and how often you want to order",
                 "Destination country and arrival airport",
                 "Preferred Incoterm",
                 "Documents or certifications your market requires",
                 "Label requirements, if you sell to retail in the EU"
             ],
-            "cta_contact": "Send an enquiry",
+            "cta_contact": "Send your requirements",
             "cta_eu": "Information for EU buyers",
-            "species_title": "Species pages",
-            "species_text": "Sizes, packing and availability for each species we supply."
+            "species_title": "Our main species",
+            "species_text": "These are our main, most-requested species; we supply other species on request."
         },
         "sources": {
             "title": "Sources",

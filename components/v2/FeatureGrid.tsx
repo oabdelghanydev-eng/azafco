@@ -20,37 +20,44 @@ export interface Feature {
 export interface FeatureGridProps {
     items: Feature[];
     columns?: 2 | 3 | 4;
-    /** `plain` = text blocks with top rule; `card` = bordered cards */
+    /**
+     * `plain` = text blocks under a hairline with a short gold segment (G eyebrow rule);
+     * `card` = G cards: white, thin border, 4px gold top bar.
+     */
     style?: 'plain' | 'card';
     headingAs?: 'h3' | 'h4';
     className?: string;
 }
 
-/** Grid of capabilities / segments / buyer requirements. Surface-aware. */
+/** Grid of capabilities / segments / buyer requirements (design G). Surface-aware. */
 export default function FeatureGrid({ items, columns = 3, style = 'plain', headingAs: H = 'h3', className }: FeatureGridProps) {
     const cols = { 2: 'sm:grid-cols-2', 3: 'sm:grid-cols-2 lg:grid-cols-3', 4: 'sm:grid-cols-2 lg:grid-cols-4' }[columns];
     return (
-        <ul className={cn('grid gap-6 lg:gap-8', cols, className)}>
+        <ul className={cn('m-0 grid list-none gap-4 p-0 md:gap-5 lg:gap-6', style === 'plain' && 'gap-y-8 lg:gap-y-10', cols, className)}>
             {items.map((f, i) => {
                 const body = (
                     <>
+                        {style === 'plain' && !f.tint ? (
+                            <span aria-hidden="true" className="absolute -top-px start-0 h-[3px] w-11 bg-gold" />
+                        ) : null}
                         {f.icon ? <span className="mb-4 inline-flex text-eyebrow">{f.icon}</span> : null}
-                        <H className="text-heading-md text-fg">{f.title}</H>
-                        {f.description ? <div className="mt-2 text-body-sm text-fg-muted">{f.description}</div> : null}
+                        <H className="m-0 text-heading-md text-fg">{f.title}</H>
+                        {f.description ? <div className="mt-2 text-body text-fg-muted">{f.description}</div> : null}
                         {f.href ? (
-                            <span className="mt-4 inline-flex items-center gap-2 text-body-sm font-semibold text-fg underline decoration-gold decoration-2 underline-offset-[6px]">
+                            <span className="v2-btn mt-auto inline-flex items-center gap-2.5 pt-5 text-body text-link group-hover:text-link-hover group-hover:underline group-hover:underline-offset-4">
                                 {f.linkLabel}
-                                <ArrowIcon size={16} />
+                                <ArrowIcon size={18} className="transition-transform duration-base group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transition-none" />
                             </span>
                         ) : null}
                     </>
                 );
                 const box = cn(
-                    'block h-full',
+                    'group relative flex h-full flex-col',
                     style === 'card'
-                        ? 'rounded-card border border-rule p-6 transition-colors duration-base hover:bg-tint motion-reduce:transition-none'
-                        : 'border-t border-rule pt-5',
-                    f.tint && 'rounded-card border-transparent bg-tint-strong p-6 hover:bg-tint',
+                        ? 'rounded-card border border-edge border-t-4 border-t-gold bg-panel px-5 pb-6 pt-5 lg:px-7 lg:pb-7 lg:pt-6'
+                        : 'border-t border-rule pt-6',
+                    f.href && style === 'card' && 'transition-[border-color,box-shadow] duration-base hover:border-x-[color:var(--v2-link)] hover:border-b-[color:var(--v2-link)] hover:shadow-card motion-reduce:transition-none',
+                    f.tint && 'rounded-card border-0 bg-tint-strong p-6 hover:bg-tint lg:p-7',
                 );
                 return (
                     <li key={i} id={f.id} className={f.id ? 'scroll-mt-28' : undefined}>

@@ -1,83 +1,92 @@
 {
     "meta": {
-        "title": "Quality & Traceability: Documents You Can Verify",
-        "description": "How AZAFCO supports buyer due diligence: product specifications, shipment records, certificates with issuer, scope and validity, and document requests."
+        "title": "Quality control and ISO certificates",
+        "description": "Our management systems hold ISO 9001, ISO 14001 and ISO 45001 certificates from TÜV AUSTRIA, and each order is checked against the agreed specification."
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home",
+        "current": "Quality"
     },
     "hero": {
-        "eyebrow": "Quality & Traceability",
-        "title": "Quality you can verify",
-        "intro": "For an importer, \"high quality\" is not enough. What matters is a clear specification and the facility and shipment documents behind it, available for review.",
-        "secondary": "See Processing"
-    },
-    "system": {
-        "eyebrow": "Quality system",
-        "title": "Specification, inspection, release",
-        "intro": "Quality starts with the specification and is shown through records. Each stage is linked to the one before it.",
-        "spec_title": "Agreed specification",
-        "spec_text": "Species, size grade, form, packing and documents are agreed in writing before production.",
-        "receiving_title": "Documented sourcing and receiving",
-        "receiving_text": "Product is received and inspected under the plant's procedures.",
-        "process_title": "Checks during processing and packing",
-        "process_text": "Size, weight and packing are matched to the order instructions.",
-        "release_title": "Review and release",
-        "release_text": "Results are reviewed before the shipment leaves, and shipment details are documented.",
-        "legend_procedure": "Internal procedure",
-        "legend_note": "These are AZAFCO's internal operating steps. They are not a certification. Certificates are listed separately below, with their issuer, scope and validity."
-    },
-    "share": {
-        "eyebrow": "What we share",
-        "title": "What buyers can review",
-        "spec_title": "Product specification",
-        "spec_text": "The approved specification card for the product in your order.",
-        "shipment_title": "Packing and shipment data",
-        "shipment_text": "Packing details and the shipment records for your order.",
-        "docs_title": "Certificates and documents",
-        "docs_text": "Relevant certificates and documents, when they are available, valid and applicable to the product and market."
+        "kicker": "Quality",
+        "title": "Quality checked against your specification",
+        "intro": "We hold three ISO certificates for our management systems. Every order is checked against the specification agreed with you before the boxes are closed.",
+        "imageAlt": "Whole fresh fish on crushed ice seen from above",
+        "primary": "Start a partnership",
+        "secondary": "See our value chain"
     },
     "certs": {
-        "eyebrow": "Certifications",
-        "title": "Certificates library",
-        "intro": "We show a certificate here only with its issuer, scope and validity, once it has been verified internally. Procurement and quality teams can request the documents that apply to their order at any time.",
-        "standards_title": "How we name standards",
-        "standards_text": "ISO 22000 (food safety management), ISO 9001 (quality management), ISO 14001 (environmental management) and ISO 45001 (occupational health and safety) are four separate ISO standards. HACCP is a food-safety system based on hazard analysis and critical control points; it is not an ISO standard.",
-        "empty_title": "Certificate documents on request",
-        "empty_text": "Tell us which certificates your market or customer requires. We will confirm what can be provided, by whom it was issued and what it covers."
+        "eyebrow": "ISO certificates",
+        "title": "We hold three ISO certificates",
+        "intro": "Our management systems are certified by TÜV AUSTRIA.",
+        "items": {
+            "iso9001": {
+                "name": "Quality management",
+                "covers": "How we plan, run and review our work to meet customer requirements."
+            },
+            "iso14001": {
+                "name": "Environmental management",
+                "covers": "How we manage the environmental impact of our operations."
+            },
+            "iso45001": {
+                "name": "Occupational health and safety",
+                "covers": "How we protect the health and safety of the people who work with us."
+            }
+        }
     },
-    "trace": {
-        "eyebrow": "Traceability",
-        "title": "Traceability, described accurately",
-        "text_1": "We aim to document the key traceability points, from source and batch through processing and packing to shipment.",
-        "text_2": "We describe only the traceability that our records actually support for the product and batch. Ask us which lot and batch data can be supplied with your order.",
-        "markets_title": "Market requirements",
-        "markets_text": "Regulatory requirements differ from country to country, so the requirements and approvals that apply are reviewed for each product and market before any supply commitment."
-    },
-    "visuals": {
-        "eyebrow": "On site",
-        "title": "Hygiene in the processing area",
-        "intro": "Photographs from inside the plant. They show working practice, not certification.",
-        "label": "Processing-area hygiene photos"
+    "practice": {
+        "eyebrow": "In practice",
+        "title": "How we check quality on every order",
+        "intro": "These are our working steps for each order. They follow the value chain that AZAFCO runs from the pond to the pallet.",
+        "stepLabel": "Step {n}",
+        "steps": {
+            "spec": {
+                "title": "Agreed specification",
+                "text": "We agree the species, weight grade, packing and labels with you before the order."
+            },
+            "packing": {
+                "title": "Washing, grading and packing",
+                "text": "Washed, iced, graded by weight and packed whole on ice."
+            },
+            "final": {
+                "title": "Final check",
+                "text": "Checked against the agreed specification before the boxes are closed."
+            },
+            "cold": {
+                "title": "Cold chain",
+                "text": "Our own cold stores and refrigerated trucks, then air or road freight."
+            }
+        },
+        "link": "See the full value chain"
     },
     "faq": {
-        "eyebrow": "Buyer compliance",
+        "eyebrow": "Questions from buyers",
         "title": "Questions from procurement and quality teams",
-        "q1": "Which documents can you supply with a shipment?",
-        "a1": "That depends on the product and the destination market. Send us the list your market or customer requires, and we will confirm what can be provided and its scope before you order.",
-        "q2": "Can we see certificate copies before ordering?",
-        "a2": "Yes, you can request them. We share copies that are current and applicable, with issuer, scope and validity. We do not publish certificates that are expired or still being verified.",
-        "q3": "Is HACCP one of your ISO certifications?",
-        "a3": "No. HACCP is a food-safety system based on hazard analysis and critical control points. ISO 22000, ISO 9001, ISO 14001 and ISO 45001 are separate ISO standards. We list each one on its own, with its own status.",
+        "q1": "Which ISO certificates do you hold?",
+        "a1": "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management and ISO 45001:2018 for occupational health and safety.",
+        "q2": "How do you check that an order matches our specification?",
+        "a2": "We agree the species, weight grade, packing and labels with you before the order. The fish are washed, iced, graded by weight and packed whole on ice, then checked against the agreed specification before the boxes are closed.",
+        "q3": "How do you keep the fish cold until shipment?",
+        "a3": "The fish are washed, iced and packed whole on ice. We run our own cold stores and refrigerated trucks, then ship by air or road freight. We confirm the temperature requirements for your product when we agree the order.",
         "q4": "Can you meet our market's labelling or import requirements?",
-        "a4": "Requirements differ by country. We review the applicable requirements and approvals for each product and market before confirming supply.",
-        "q5": "What traceability data comes with an order?",
-        "a5": "We only commit to the lot and batch information our records support for that product. Ask for it in your request and we will confirm what will be supplied."
+        "a4": "Requirements differ by country. Tell us yours, and we review them for each product and market before we confirm supply.",
+        "q5": "What traceability information comes with an order?",
+        "a5": "Tell us what your market or customer requires. We confirm which lot and shipment details we can provide before you order.",
+        "q6": "How do we start?",
+        "a6": "For fast deals, message our management directly on WhatsApp at <wa>+20 100 773 6419</wa>. For details and documents, email our export team at <mail>business@azafco.com.eg</mail>."
     },
-    "cta": {
-        "eyebrow": "Document request",
-        "intro": "Your procurement or quality team can send the list of documents it needs. The AZAFCO team will confirm what can be provided and its scope."
+    "closing": {
+        "eyebrow": "Next step",
+        "title": "Share your specification",
+        "text": "Tell us the species, weight grade, packing and destination, and any requirements of your market. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
+        "primary": "Start a partnership",
+        "secondary": "Send your requirements",
+        "whatsapp": "WhatsApp management",
+        "email": "Email the export team"
     },
     "pending": {
-        "traceability": "Lot/batch data that can actually be supplied per shipment",
-        "market_approvals": "Market approvals (e.g. EU listing) with numbers, dates and scope",
-        "qc_photos": "Approved QC / laboratory / inspection photos or checklists"
+        "traceability": "Lot and batch data that can be supplied with each shipment",
+        "market_approvals": "Market approvals (e.g. EU listing) once granted"
     }
 }

@@ -4,35 +4,28 @@
         "main_label": "Main navigation",
         "footer_label": "Footer navigation",
         "home": "Home",
-        "seafood": "Seafood & Aquaculture",
+        "seafood": "Seafood and aquaculture",
         "seafood_overview": "Overview",
         "products": "Products",
-        "processing": "Processing & Packing",
+        "processing": "Processing and packing",
         "quality": "Quality",
-        "export": "Export Solutions",
+        "export": "Export solutions",
         "markets": "Markets",
-        "for_importers": "For Importers",
-        "company": "Our Company",
-        "about": "About",
-        "businesses": "Our Businesses",
+        "for_importers": "For importers",
+        "company": "Our company",
+        "about": "About us",
+        "businesses": "Our businesses",
         "insights": "Insights",
         "contact": "Contact",
         "menu": "Menu",
         "open_menu": "Open menu",
         "close_menu": "Close menu",
-        "home_link_label": "AZAFCO International, home"
-    },
-    "language": {
-        "label": "Language",
-        "switch_to_ar": "العربية",
-        "switch_to_en": "English",
-        "more": "More languages",
-        "current": "Current language"
+        "home_link_label": "AZAFCO International home page"
     },
     "cta": {
-        "view_specifications": "View Specifications",
+        "view_specifications": "View specifications",
         "contact": "Contact",
-        "talk_to_export_team": "Talk to Export Team",
+        "talk_to_export_team": "Talk to the export team",
         "learn_more": "Learn more",
         "read_more": "Read more",
         "view_all": "View all",
@@ -42,21 +35,11 @@
         "loading": "Loading…",
         "opens_new_tab": "(opens in a new tab)",
         "contact_export_team": "Contact our export team",
-        "prepare_quote": "Send your requirements",
-        "request_document_pack": "Request the document pack"
-    },
-    "footer": {
-        "tagline": "From Egyptian Production to Global Partnerships.",
-        "description": "An Egyptian partner in producing, processing, packing and exporting fish, under an international group with other productive activities.",
-        "contact_heading": "Export team",
-        "factory": "Factory",
-        "office": "Main office",
-        "hours": "Office hours",
-        "legal_heading": "Legal",
-        "privacy": "Privacy Policy",
-        "legal_name": "Legal name",
-        "commercial_register": "Commercial register",
-        "rights": "All rights reserved."
+        "send_requirements": "Send your requirements",
+        "start_partnership": "Start a partnership",
+        "whatsapp_management": "WhatsApp · Direct to management",
+        "email_export_team": "Email the export team",
+        "request_document_pack": "Ask the export team about documents"
     },
     "breadcrumbs": {
         "label": "Breadcrumb",
@@ -64,32 +47,30 @@
     },
     "pending": {
         "prefix": "Pending owner confirmation:",
-        "certificate_card": "{name}: certificate copy, issuer, scope, expiry, approval to publish",
-        "certificate_scope": "Certificate scope (sites/products covered)"
+        "certificate_card": "{name}: owner approval to publish"
     },
     "spec": {
         "attribute": "Attribute",
         "value": "Value",
-        "confirmed_with_sales": "Confirmed with sales"
+        "confirmed_with_sales": "Confirmed per order",
+        "attribute_label": "{label}:"
     },
     "market": {
         "status_active": "Active market",
         "status_planned": "Planned",
-        "status_paused": "Paused",
+        "status_paused": "Exports paused",
         "fact_species": "Species",
-        "fact_species_value": "{count} in our register",
+        "fact_species_value": "{count} main species",
         "fact_transport": "Transport",
-        "fact_transport_value": "Chilled; mode confirmed in the written offer",
+        "fact_transport_value": "Chilled, by air or road; confirmed per order",
         "fact_documents": "Documents",
-        "fact_documents_value": "Confirmed per request"
+        "fact_documents_value": "The export team confirms the documents required for your market"
     },
     "certificate": {
         "issuer": "Issuer",
-        "scope": "Scope",
-        "valid_until": "Valid until",
         "view": "View certificate",
-        "site": "Site covered",
-        "request_copy": "Request a copy",
+        "request_copy": "Ask about this certificate",
+        "request_copy_for": ": {name}",
         "groups": {
             "food_safety": "Food safety",
             "export_approval": "Export approvals",
@@ -101,13 +82,20 @@
         "minutes": "{count} min read"
     },
     "cta_band": {
-        "eyebrow": "Start a commercial conversation",
-        "title": "Talk to our export team",
-        "intro": "Call, message or email the export team about species, sizes, packing, destinations or documents.",
+        "eyebrow": "Start a partnership",
+        "title": "Every shipment starts with a message",
+        "intro": "Tell us the species, quantity and destination. Our export team will review supply and commercial terms.",
+        "whatsapp_title": "WhatsApp",
+        "whatsapp_sub": "Direct to management · for fast deals",
+        "email_title": "Email",
+        "email_sub": "Export team · details and documents",
         "after_title": "What happens next",
-        "after_1": "Your requirements are reviewed by the export team",
+        "after_free": "Sending your requirements does not commit you to an order",
+        "after_1": "The export team reviews your requirements",
         "after_2": "We contact you to confirm the details",
-        "after_3": "Offers are subject to confirmation of availability and specification"
+        "after_3": "Prices confirmed per order, subject to availability and the agreed specification",
+        "email_subject": "Enquiry from azafco.com.eg: {topic}",
+        "email_topic_general": "general"
     },
     "faq": {
         "toggle_hint": "Show answer"
@@ -116,20 +104,21 @@
         "label": "Photo gallery"
     },
     "whatsapp_float": {
-        "label": "WhatsApp our export desk"
+        "label": "WhatsApp · Direct to management"
     },
     "facts": {
         "title": "Facts at a glance",
-        "species": "Species in our register",
-        "markets": "Active export markets",
-        "iso": "ISO management system certificates",
-        "iso_note": "{issuer}, valid to {year}",
+        "species": "Main species",
+        "markets": "Export markets",
+        "markets_value": "{count}+",
+        "iso": "ISO certificates",
+        "iso_note": "Certified by TÜV AUSTRIA",
         "plant": "Processing plant",
         "plant_value": "Motobas, Kafr El Sheikh"
     },
     "fill": {
         "spec_title": "Have a full specification?",
         "spec_text": "Send it to the export team and we will review it with you.",
-        "documents_text": "Copies and further documents are shared on request."
+        "documents_text": "For document questions, contact the export team."
     }
 }

@@ -1,7 +1,7 @@
 import type { SVGProps } from 'react';
 
 /**
- * Thin, restrained line icons (1.5px stroke, 24 grid). Decorative by default
+ * Thin, restrained line icons (1.6px stroke as the G header icons, 24 grid). Decorative by default
  * (aria-hidden); give the parent control an accessible name.
  * Directional icons (ArrowIcon, ChevronEndIcon) flip automatically in RTL.
  */
@@ -14,7 +14,7 @@ function base({ size = 20, className, ...rest }: IconProps) {
         viewBox: '0 0 24 24',
         fill: 'none',
         stroke: 'currentColor',
-        strokeWidth: 1.5,
+        strokeWidth: 1.6,
         strokeLinecap: 'round' as const,
         strokeLinejoin: 'round' as const,
         'aria-hidden': true,

@@ -11,12 +11,14 @@ import { ArrowIcon } from './icons';
  * - no `href` → <button>. `loading` disables it, sets aria-busy, shows a spinner.
  * - `disabled` on a link renders a non-interactive <span aria-disabled>.
  *
- * Variants (all pass WCAG AA on their intended surface):
- *   primary   gold bg + navy text (7.15:1) — the RFQ action. Works on light and navy.
- *   secondary navy bg + white on light; white bg + navy inside navy sections (CSS vars).
- *   outline   1.5px border in current fg colour (navy on light, white on navy).
- *   ghost     transparent, tinted on hover.
- *   text      inline link with arrow, no box.
+ * Design G pill buttons (all pass WCAG AA on their intended surface):
+ *   primary   gold pill + navy #001B47 text (9.5:1), hover lighter gold. Works on light and navy.
+ *   secondary G outline pill (same as `outline`): 1.5px navy border + navy text on light,
+ *             filled navy on hover; white/70 border + white text on navy, gold on hover.
+ *   outline   as secondary.
+ *   ghost     transparent pill, tinted on hover.
+ *   text      standalone link: navy (white on navy), bold, trailing arrow, underline on hover.
+ * Sizes keep 44px+ tap targets: sm 44px, md 48px, lg 54px (56px from lg, as the G hero).
  */
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'text';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -49,18 +51,20 @@ export interface ButtonProps {
 }
 
 const sizes: Record<ButtonSize, string> = {
-    sm: 'min-h-[40px] px-4 text-body-sm',
-    md: 'min-h-[44px] px-5 text-body-sm md:text-body',
-    lg: 'min-h-[52px] px-7 text-body',
+    sm: 'min-h-[44px] px-5 text-body-sm',
+    md: 'min-h-[48px] px-7 text-body',
+    lg: 'min-h-[54px] px-8 text-body lg:min-h-[56px] lg:px-[34px]',
 };
 
+const outlinePill =
+    'border-[1.5px] border-solid border-[color:var(--v2-outline-border)] text-[color:var(--v2-outline-fg)] hover:border-[color:var(--v2-outline-hover-border)] hover:bg-[color:var(--v2-outline-hover-bg)] hover:text-[color:var(--v2-outline-hover-fg)]';
+
 const variants: Record<ButtonVariant, string> = {
-    primary:
-        'bg-gold text-navy hover:bg-gold-400 active:bg-[#E5AA00] shadow-[inset_0_-1px_0_rgba(0,26,68,0.12)]',
-    secondary: 'bg-btn2 text-btn2-fg hover:bg-btn2-hover',
-    outline: 'border-[1.5px] border-current text-fg hover:bg-tint active:bg-tint-strong',
+    primary: 'bg-gold text-[#001B47] hover:bg-gold-400 hover:text-[#001B47] active:bg-[#E5AA00]',
+    secondary: outlinePill,
+    outline: outlinePill,
     ghost: 'text-fg hover:bg-tint active:bg-tint-strong',
-    text: 'text-fg underline decoration-gold decoration-2 underline-offset-[6px] hover:decoration-[3px] px-0 min-h-[44px]',
+    text: 'min-h-[44px] px-0 text-link underline-offset-4 hover:text-link-hover hover:underline',
 };
 
 const disabledCls = 'pointer-events-none opacity-50 saturate-50';
@@ -85,9 +89,9 @@ export default function Button({
 }: ButtonProps) {
     const showArrow = arrow ?? variant === 'text';
     const cls = cn(
-        'group inline-flex select-none items-center justify-center gap-2 font-semibold transition-colors duration-base ease-out',
+        'v2-btn group inline-flex select-none items-center justify-center gap-2.5 text-center leading-tight transition-colors duration-base ease-out',
         'motion-reduce:transition-none',
-        variant !== 'text' && 'rounded-control',
+        variant !== 'text' && 'rounded-full py-2.5',
         variant === 'text' ? 'text-body' : sizes[size],
         variants[variant],
         fullWidth && 'w-full',
@@ -103,7 +107,7 @@ export default function Button({
             {showArrow && !loading ? (
                 <ArrowIcon
                     size={18}
-                    className="shrink-0 transition-transform duration-base group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 motion-reduce:transition-none"
+                    className="shrink-0 transition-transform duration-base group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transition-none"
                 />
             ) : null}
         </>

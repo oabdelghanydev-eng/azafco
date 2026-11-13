@@ -1,59 +1,46 @@
 {
     "meta": {
-        "title": "Our Businesses | AZAFCO International",
-        "description": "AZAFCO International's business portfolio: seafood and aquaculture at the core, alongside agriculture, livestock and other investment activities."
+        "title": "Our businesses | AZAFCO International",
+        "description": "AZAFCO International: fish farming, sourcing, packing and export at the core, alongside agriculture, livestock and investment activities in Egypt."
     },
-    "breadcrumb": "Our Businesses",
+    "breadcrumb": "Our businesses",
     "hero": {
-        "eyebrow": "Our Businesses",
-        "title": "A diversified portfolio with a clear core",
-        "intro": "Our activities span seafood, agriculture, livestock and other investments. Seafood remains the primary focus of our business and of our export offer.",
-        "primary": "Explore Seafood Business"
+        "eyebrow": "Our businesses",
+        "title": "Fish at our core, with agriculture, livestock and investment alongside",
+        "intro": "AZAFCO International works in fish, agriculture, livestock and investment. Fish is our core business: we farm, source, pack and export fresh fish to 7+ markets in the Middle East and beyond.",
+        "primary": "Start a partnership",
+        "secondary": "Our fish business",
+        "reassure": "Start with a message: species, quantity and destination. Prices confirmed per order.",
+        "image_alt": "Aerial view of earthen fish ponds with aerators and palm trees"
     },
     "allocation": {
-        "eyebrow": "Business allocation",
-        "title": "How our activities fit together",
-        "intro": "One corporate brand. Seafood leads; the other activities sit alongside it.",
+        "eyebrow": "Business structure",
+        "title": "How our businesses fit together",
+        "intro": "One parent brand. Fish leads, and our other activities sit alongside it.",
+        "parent_name": "AZAFCO International",
         "parent_role": "Parent company and corporate brand",
         "core_tag": "Core business",
-        "core_name": "Seafood & Aquaculture",
-        "core_text": "Fish farming, processing, packing and export for commercial buyers.",
-        "core_link": "Explore the seafood business",
-        "others_label": "Other activities"
+        "core_name": "Seafood and aquaculture",
+        "core_text": "We farm and source fish, then pack and export it fresh: 12 main species, a packing capacity of up to 2,500 t/month and 7+ markets.",
+        "core_link": "Explore our fish business",
+        "others_label": "Other activities",
+        "agri_title": "Agriculture",
+        "agri_text": "Farmland with fruit and vegetable production.",
+        "livestock_title": "Livestock",
+        "livestock_text": "Livestock farms in Egypt.",
+        "invest_title": "Investments",
+        "invest_text": "Part of our corporate portfolio. This website focuses on our fish business."
     },
     "seafood": {
         "eyebrow": "Core business",
-        "title": "Seafood & Aquaculture",
-        "p1": "Our primary business, and the most visible part of our operations and trading relationships: fish farming activities, processing, packing and export to commercial buyers.",
-        "p2": "Importers, distributors and foodservice buyers can review species, processing and quality information, then send a specification-based request.",
+        "title": "Fish, from the pond to the pallet",
+        "p1": "We farm and source fish, then wash, ice, grade, inspect and pack it at our plant in Motobas, Kafr El Sheikh. From there, our own refrigerated trucks, cold stores and logistics take it to air or road freight.",
+        "p2": "We supply 12 main species, and other species on request, whole and fresh chilled. We hold three ISO certificates (ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018), certified by TÜV AUSTRIA.",
+        "image_alt": "Whole fresh fish on crushed ice in white insulated boxes in a packing hall",
         "link_products": "Product catalogue",
-        "link_processing": "Processing & Packing",
-        "link_quality": "Quality & Traceability",
-        "link_importers": "For Importers",
-        "cta_primary": "Explore Seafood Business"
-    },
-    "others": {
-        "eyebrow": "Alongside seafood",
-        "title": "Other activities in the portfolio",
-        "intro": "These activities are part of AZAFCO International. To keep this page factual, we publish operating details only once they have been approved.",
-        "agri_title": "Agriculture and crop production",
-        "agri_text": "The company's portfolio includes farmland and activities in fruit and vegetable production. Crop details and seasonal capacity are published once the data is approved.",
-        "livestock_title": "Livestock",
-        "livestock_text": "Our activities include livestock farming. Its operating scope, products and figures will be presented once its profile is ready.",
-        "invest_title": "Other investments",
-        "invest_text": "We believe in building productive, diversified businesses. Projects and investments are disclosed in line with our corporate communication policy."
-    },
-    "partner": {
-        "eyebrow": "Corporate partnerships",
-        "title": "New business partnerships",
-        "intro": "To discuss sector cooperation or investment, send a corporate enquiry from your company email. Fish supply requests go to the export team.",
-        "primary": "Contact Corporate Partnerships",
-        "email_label": "Email"
-    },
-    "pending": {
-        "agri": "Agriculture: crops, land location/area, approved photos",
-        "livestock": "Livestock: species, scale, products, approved photos",
-        "invest": "Investments: approved project list and description",
-        "profile": "Company profile (PDF) for download"
+        "link_processing": "Processing and packing",
+        "link_quality": "Quality and certificates",
+        "link_importers": "For importers",
+        "cta_primary": "Explore our fish business"
     }
 }

@@ -1,15 +1,14 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { companyConfig } from '@/config/company.config';
+import { Link } from '@/navigation';
+import { routes } from '@/lib/v2/routes';
 
 /**
  * Quality section of design G (boards: Group*.dc.html, section#quality):
- * the three valid ISO certificates issued by TÜV AUSTRIA Egypt.
- * Certificate numbers and dates mirror data/certificates.ts.
+ * the three ISO standards, certified by TÜV AUSTRIA (named once, in the intro).
+ * Release decision 14 Nov: standard names only. No certificate numbers, dates,
+ * site or scope, and no "copies on request" link.
  */
 const CERTS = ['iso9001', 'iso14001', 'iso45001'] as const;
-
-/** Export team mailbox (details and documents). */
-const EXPORT_EMAIL = companyConfig.contact.email;
 
 export default async function GQuality() {
     const [t, locale] = await Promise.all([getTranslations('g_quality_v2'), getLocale()]);
@@ -30,11 +29,8 @@ export default async function GQuality() {
         ? 'text-[24px] leading-[1.2] lg:text-[30px]'
         : 'text-[24px] leading-[1.1] lg:text-[30px] lg:tracking-[-0.01em]';
     const name = ar
-        ? 'mt-2 mb-2 text-[17px] leading-[1.5] lg:mt-2.5 lg:mb-4 lg:text-[19px]'
-        : 'mt-2 mb-3 text-[16px] lg:mt-2.5 lg:mb-[18px] lg:text-[18px]';
-    const meta = ar
-        ? 'text-[15px] leading-[1.6] lg:text-[16px] lg:leading-[1.85]'
-        : 'text-[14px] lg:text-[15px]';
+        ? 'mt-2 mb-0 text-[17px] leading-[1.5] lg:mt-2.5 lg:text-[19px]'
+        : 'mt-2 mb-0 text-[16px] lg:mt-2.5 lg:text-[18px]';
 
     return (
         <section
@@ -49,19 +45,7 @@ export default async function GQuality() {
                         {t('title')}
                     </h2>
                 </div>
-                <p className={`text-[#4a5a75] lg:m-0 ${intro}`}>
-                    {t.rich('intro', {
-                        copies: (chunks) => (
-                            <a
-                                href={`mailto:${EXPORT_EMAIL}?subject=${encodeURIComponent(t('copiesSubject'))}`}
-                                aria-label={t('copiesLabel')}
-                                className="font-semibold text-[#002d72] underline underline-offset-4 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002d72]"
-                            >
-                                {chunks}
-                            </a>
-                        ),
-                    })}
-                </p>
+                <p className={`text-[#4a5a75] lg:m-0 ${intro}`}>{t('intro')}</p>
             </div>
 
             <ul className="m-0 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4 lg:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:gap-5">
@@ -74,20 +58,28 @@ export default async function GQuality() {
                             <span dir="ltr">{t(`certs.${key}.code`)}</span>
                         </p>
                         <p className={`font-bold ${name}`}>{t(`certs.${key}.name`)}</p>
-                        <p className={`m-0 text-[#4a5a75] ${meta}`}>
-                            {t('certificate')} <span dir="ltr">{t(`certs.${key}.no`)}</span>
-                            {/* phone: one line "… · valid until …"; desktop: second line */}
-                            <span className="md:hidden">
-                                {' · '}
-                                {t('validUntilInline', { date: t(`certs.${key}.until`) })}
-                            </span>
-                            <span className={`hidden md:block ${ar ? '' : 'md:mt-0.5'}`}>
-                                {t('validUntil', { date: t(`certs.${key}.until`) })}
-                            </span>
-                        </p>
                     </li>
                 ))}
             </ul>
+
+            {/* Next step for QA buyers: same text link as GAbout's "How we work" */}
+            <Link
+                href={routes.quality}
+                data-cta="home_quality"
+                className={`group inline-flex items-center gap-2.5 py-3 text-[#002d72] underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002d72] ${
+                    ar ? 'mt-5 font-bold lg:mt-8' : 'mt-5 font-extrabold lg:mt-8'
+                }`}
+            >
+                {t('link')}
+                <span
+                    aria-hidden="true"
+                    className={`inline-block motion-safe:transition-transform ${
+                        ar ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'
+                    }`}
+                >
+                    {ar ? '←' : '→'}
+                </span>
+            </Link>
         </section>
     );
 }

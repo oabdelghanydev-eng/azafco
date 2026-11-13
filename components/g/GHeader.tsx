@@ -5,7 +5,21 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/navigation';
 import { locales, localeConfig, type Locale } from '@/i18n';
 import { routes } from '@/lib/v2/routes';
+import { companyConfig } from '@/config/company.config';
 import { GNavLink, useGNav } from './GFooterNav';
+
+/** "+20 100 773 6419" from the config number (201007736419), as in GFooter */
+function phoneDisplay(n: string): string {
+    return `+${n.slice(0, 2)} ${n.slice(2, 5)} ${n.slice(5, 8)} ${n.slice(8)}`;
+}
+
+function ChatIcon() {
+    return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+            <path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4z" strokeLinejoin="round" />
+        </svg>
+    );
+}
 
 // Same keys as components/v2/LanguageSwitch.tsx (remembers the explicit choice)
 const LOCALE_STORAGE_KEY = 'azafco-preferred-locale';
@@ -141,7 +155,22 @@ export default function GHeader() {
                     ))}
                 </nav>
 
-                <div className="relative flex shrink-0 items-center">
+                <div className="relative flex shrink-0 items-center lg:gap-2.5">
+                    {/* WhatsApp to management (lg+): icon-only circle at lg, label from xl, number from 1360px so the row never wraps */}
+                    <a
+                        href={companyConfig.contact.social.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-cta="header_whatsapp"
+                        aria-label={t('whatsapp_aria')}
+                        className={`hidden h-11 min-w-[44px] items-center justify-center gap-2 rounded-full border-[1.5px] border-solid border-[#002d72] bg-white px-0 font-bold leading-none text-[#002d72] transition-colors hover:bg-[#002d72] hover:text-white lg:inline-flex xl:h-[46px] xl:px-[18px] ${locale === 'ar' ? 'text-[16px]' : 'text-[15px]'} ${FOCUS}`}
+                    >
+                        <ChatIcon />
+                        <span className="hidden xl:inline">{t('whatsapp_cta')}</span>
+                        <span dir="ltr" className="hidden text-[14px] font-semibold min-[1360px]:inline">
+                            {phoneDisplay(companyConfig.contact.whatsappNumber)}
+                        </span>
+                    </a>
                     <button
                         type="button"
                         aria-expanded={lang}

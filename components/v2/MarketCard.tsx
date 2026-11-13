@@ -41,8 +41,8 @@ export default function MarketCard({ name, status, region, description, countryC
         <article
             data-surface="light"
             className={cn(
-                'relative flex h-full flex-col rounded-card border border-line bg-white p-5 text-ink',
-                href && 'transition-shadow duration-base hover:shadow-card motion-reduce:transition-none',
+                'relative flex h-full flex-col rounded-card border border-line bg-white px-5 pb-6 pt-5 text-ink lg:px-6',
+                href && 'transition-[border-color,box-shadow] duration-base hover:border-navy hover:shadow-card motion-reduce:transition-none',
                 className,
             )}
         >
@@ -60,25 +60,25 @@ export default function MarketCard({ name, status, region, description, countryC
                             loading="lazy"
                         />
                     ) : null}
-                    <h3 className="text-heading-md text-navy">{Title}</h3>
+                    <h3 className="m-0 text-heading-md text-ink">{Title}</h3>
                 </div>
-                <span className={cn('inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-caption font-semibold', statusStyle[status])}>
+                <span className={cn('inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-caption font-bold', statusStyle[status])}>
                     {status === 'active' ? <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold" /> : null}
                     {t(`status_${status}`)}
                 </span>
             </div>
-            {region ? <p className="mt-2 text-caption text-ink-subtle">{region}</p> : null}
+            {region ? <p className="m-0 mt-2 text-caption text-ink-muted">{region}</p> : null}
             {facts?.length ? (
-                <dl className="mt-4 space-y-2 border-t border-line pt-4 text-body-sm">
+                <dl className="m-0 mt-4 space-y-2 border-t border-line-soft pt-4 text-body-sm">
                     {facts.map((f) => (
                         <div key={f.label}>
-                            <dt className="text-caption text-ink-subtle">{f.label}</dt>
+                            <dt className="text-caption text-ink-muted">{f.label}</dt>
                             <dd className="font-medium text-ink">{f.value}</dd>
                         </div>
                     ))}
                 </dl>
             ) : null}
-            {description ? <p className="mt-3 text-body-sm text-ink-muted">{description}</p> : null}
+            {description ? <p className="m-0 mt-3 text-body-sm text-ink-muted">{description}</p> : null}
             {href ? (
                 <span aria-hidden="true" className="mt-auto inline-flex pt-4 text-navy">
                     <ArrowIcon size={18} />

@@ -6,8 +6,8 @@ import { ArrowIcon } from '@/components/v2';
 export interface ArchitectureUnit {
     name: string;
     description?: ReactNode;
-    /** Optional honest note under the description (e.g. "details published once approved") */
-    note?: ReactNode;
+    /** Anchor id on the item (deep links such as /businesses#agriculture) */
+    id?: string;
 }
 
 export interface BusinessArchitectureProps {
@@ -67,10 +67,9 @@ export default function BusinessArchitecture({
                     <p className="mb-3 text-overline uppercase text-fg-muted">{othersLabel}</p>
                     <ul className="divide-y divide-rule border-y border-rule">
                         {others.map((o) => (
-                            <li key={o.name} className="py-5">
+                            <li key={o.name} id={o.id} className={cn('py-5', o.id && 'scroll-mt-28')}>
                                 <H className="text-heading-sm text-fg">{o.name}</H>
                                 {o.description ? <div className="mt-1.5 text-body-sm text-fg-muted">{o.description}</div> : null}
-                                {o.note ? <div className={cn('mt-2 text-caption text-fg-muted')}>{o.note}</div> : null}
                             </li>
                         ))}
                     </ul>
