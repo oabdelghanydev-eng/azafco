@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "title": "Our businesses | AZAFCO International",
+        "description": "AZAFCO International: fish farming, sourcing, packing and export at the core, alongside agriculture, livestock and investment activities in Egypt."
+    },
+    "breadcrumb": "Our businesses",
+    "hero": {
+        "eyebrow": "Our businesses",
+        "title": "Fish at our core, with agriculture, livestock and investment alongside",
+        "intro": "AZAFCO International works in fish, agriculture, livestock and investment. Fish is our core business: we farm, source, pack and export fresh fish to 7+ markets in the Middle East and beyond.",
+        "primary": "Start a partnership",
+        "secondary": "Our fish business",
+        "reassure": "Start with a message: species, quantity and destination. Prices confirmed per order.",
+        "image_alt": "Aerial view of earthen fish ponds with aerators and palm trees"
+    },
+    "allocation": {
+        "eyebrow": "Business structure",
+        "title": "How our businesses fit together",
+        "intro": "One parent brand. Fish leads, and our other activities sit alongside it.",
+        "parent_name": "AZAFCO International",
+        "parent_role": "Parent company and corporate brand",
+        "core_tag": "Core business",
+        "core_name": "Seafood and aquaculture",
+        "core_text": "We farm and source fish, then pack and export it fresh: 12 main species, a packing capacity of up to 2,500 t/month and 7+ markets.",
+        "core_link": "Explore our fish business",
+        "others_label": "Other activities",
+        "agri_title": "Agriculture",
+        "agri_text": "Farmland with fruit and vegetable production.",
+        "livestock_title": "Livestock",
+        "livestock_text": "Livestock farms in Egypt.",
+        "invest_title": "Investments",
+        "invest_text": "Part of our corporate portfolio. This website focuses on our fish business."
+    },
+    "seafood": {
+        "eyebrow": "Core business",
+        "title": "Fish, from the pond to the pallet",
+        "p1": "We farm and source fish, then wash, ice, grade, inspect and pack it at our plant in Motobas, Kafr El Sheikh. From there, our own refrigerated trucks, cold stores and logistics take it to air or road freight.",
+        "p2": "We supply 12 main species, and other species on request, whole and fresh chilled. We hold three ISO certificates (ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018), certified by TÜV AUSTRIA.",
+        "image_alt": "Whole fresh fish on crushed ice in white insulated boxes in a packing hall",
+        "link_products": "Product catalogue",
+        "link_processing": "Processing and packing",
+        "link_quality": "Quality and certificates",
+        "link_importers": "For importers",
+        "cta_primary": "Explore our fish business"
+    }
+}

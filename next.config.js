@@ -49,15 +49,16 @@ const nextConfig = {
       // Site v2: guides moved into Insights
       { source: '/:locale(ar|en|es|ru|de|fr)/guides', destination: '/:locale/insights', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/guides/:slug', destination: '/:locale/insights/:slug', permanent: true },
-      // Site v2: legacy pages with unapproved claims retired (review 7 Nov 2026)
-      { source: '/:locale(ar|en)/faq', destination: '/:locale/for-importers#faq', permanent: true },
-      { source: '/:locale(ar|en)/certificates', destination: '/:locale/quality', permanent: true },
-      { source: '/:locale(ar|en)/eu-buyers', destination: '/:locale/markets', permanent: true },
-      { source: '/:locale(ar|en)/media', destination: '/:locale/insights', permanent: true },
-      // Site v2: no web form (owner decision 7 Nov 2026); enquiries go by email/WhatsApp from /rfq
-      { source: '/:locale(ar|en)/rfq/thank-you', destination: '/:locale/rfq', permanent: true },
-      // Site v2: corporate sectors live as sections of /businesses
-      { source: '/:locale(ar|en)/:sector(agriculture|livestock|investments)', destination: '/:locale/businesses#:sector', permanent: true },
+      // Old site pages retired in the 2026 redesign (keep their links and rankings)
+      { source: '/:locale(ar|en|es|ru|de|fr)/faq', destination: '/:locale/for-importers#faq', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/certificates', destination: '/:locale/quality', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/eu-buyers', destination: '/:locale/markets', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/media', destination: '/:locale/insights', permanent: true },
+      // Requirements page: was /rfq (no web form; buyers send by email/WhatsApp)
+      { source: '/:locale(ar|en|es|ru|de|fr)/rfq/thank-you', destination: '/:locale/requirements', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/rfq', destination: '/:locale/requirements', permanent: true },
+      // Corporate sectors live as sections of /businesses
+      { source: '/:locale(ar|en|es|ru|de|fr)/:sector(agriculture|livestock|investments)', destination: '/:locale/businesses#:sector', permanent: true },
     ]
   },
 

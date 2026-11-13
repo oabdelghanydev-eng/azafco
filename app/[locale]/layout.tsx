@@ -4,26 +4,19 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
-import { Inter, IBM_Plex_Sans_Arabic, Manrope } from 'next/font/google';
+import { IBM_Plex_Sans_Arabic, Manrope } from 'next/font/google';
 import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
+import { hreflangAlternates, ogAlternateLocales } from '@/components/v2/businesses/pageMetadata';
 import GHeader from '@/components/g/GHeader';
 import GFooter from '@/components/g/GFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
 import RevealSections from '@/components/v2/RevealSections';
 import '../globals.css';
 
-// Site v2 typography (brief §06): Inter for Latin display + body (variable font),
-// IBM Plex Sans Arabic for Arabic. Exposed as CSS variables; globals.css picks
-// the order per language (--v2-font-body / --v2-font-display).
-const inter = Inter({
-    subsets: ['latin', 'latin-ext', 'cyrillic'],
-    display: 'swap',
-    variable: '--font-inter',
-});
-
-// Design G (navy/gold): Manrope for Latin, IBM Plex Sans Arabic for Arabic
+// Design G typography: Manrope for Latin and Cyrillic, IBM Plex Sans Arabic for Arabic.
+// Exposed as CSS variables; globals.css builds the stacks (--v2-font-body / --v2-font-display).
 const manrope = Manrope({
     subsets: ['latin', 'latin-ext', 'cyrillic'],
     weight: ['400', '500', '600', '700', '800'],
@@ -73,8 +66,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         openGraph: {
             type: 'website',
             locale: ogLocaleMap[locale as Locale] || 'en_US',
-            alternateLocale: ['ar_EG', 'en_US'].filter(l => !l.startsWith(locale)),
-            url: baseUrl,
+            alternateLocale: ogAlternateLocales(locale),
+            url: `${baseUrl}/${locale}`,
             siteName: t('site.name'),
             images: [
                 {
@@ -104,13 +97,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             // Property verified via Google Analytics integration
             // No HTML meta tag needed
         },
+        // Default for any page without its own metadata: the locale home. Every page
+        // sets its own canonical + hreflang via buildPageMetadata / pageMetadata.
         alternates: {
-            canonical: baseUrl,
-            languages: {
-                'ar': `${baseUrl}/ar`,
-                'en': `${baseUrl}/en`,
-                'x-default': `${baseUrl}`,
-            },
+            canonical: `${baseUrl}/${locale}`,
+            languages: hreflangAlternates(''),
         },
     };
 }
@@ -147,7 +138,7 @@ export default async function RootLayout({
     const skipLabel = (await getTranslations({ locale, namespace: 'v2' }))('skip_to_main');
 
     return (
-        <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${inter.variable} ${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
+        <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
             <head>
                 {/* Performance: DNS Prefetch */}
                 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

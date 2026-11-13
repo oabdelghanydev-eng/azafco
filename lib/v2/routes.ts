@@ -18,7 +18,7 @@ export const routes = {
     businesses: '/businesses',
     insights: '/insights',
     contact: '/contact',
-    rfq: '/rfq',
+    rfq: '/requirements',
     privacy: '/privacy-policy',
 } as const;
 
@@ -58,9 +58,9 @@ const GRADE_MAX = 120;
 
 /**
  * Build an /rfq link with prefill params.
- *   rfqHref()                                  -> '/rfq'
- *   rfqHref({ product: 'sea-bass' })           -> '/rfq?product=sea-bass'
- *   rfqHref({ country: 'kw', type: 'market' }) -> '/rfq?country=KW&type=market'
+ *   rfqHref()                                  -> '/requirements'
+ *   rfqHref({ product: 'sea-bass' })           -> '/requirements?product=sea-bass'
+ *   rfqHref({ country: 'kw', type: 'market' }) -> '/requirements?country=KW&type=market'
  *   rfqHref({ product: 'tilapia', type: 'product', form: 'fresh_whole', grade: 'Medium (300–500 g)' })
  */
 export function rfqHref(prefill: RfqPrefill = {}): string {

@@ -1,0 +1,100 @@
+{
+    "meta": {
+        "title": "Send your fresh fish requirements",
+        "description": "Send your fish requirements to AZAFCO International: species, weight grade, packing, quantity and destination. Prices are confirmed per order."
+    },
+    "breadcrumb": "Send your requirements",
+    "hero": {
+        "eyebrow": "Start a partnership",
+        "title": "Send your requirements",
+        "intro": "Open a prepared message, fill in the blank lines and send it from your company email or business WhatsApp. That lets us confirm who is asking, and our replies always come from the azafco.com.eg domain."
+    },
+    "short_hero": {
+        "corporate_title": "Corporate and partnership enquiries",
+        "corporate_intro": "For partnerships, investment or other business topics. Write from your company email; no product details needed.",
+        "documents_title": "Request documents",
+        "documents_intro": "Ask from your company email for product specifications or the company profile. We confirm what we can share for your request."
+    },
+    "aside": {
+        "title": "What happens after you write to us",
+        "steps": [
+            "The export team reviews your requirements against the specification and current availability.",
+            "We contact you to confirm the details and any open points.",
+            "Prices, quantity, packing and terms are confirmed in writing for each order."
+        ],
+        "no_promise": "Sending your requirements does not commit you or us to an order. Prices are confirmed per order.",
+        "prepare_title": "Helpful to have ready",
+        "prepare": [
+            "Species and weight grade",
+            "Quantity per shipment and how often",
+            "Destination country and delivery timing",
+            "Air or road freight, and arrival airport or border crossing",
+            "Preferred Incoterm and payment terms",
+            "Packing and labelling requirements"
+        ],
+        "attach_title": "Have a specification?",
+        "attach_text": "Attach your specification or packing sheet to the email if you have one."
+    },
+    "switch": {
+        "to_corporate": "Not buying fish? <link>Send a corporate enquiry</link>",
+        "to_seafood": "Looking to buy fish? <link>Send your requirements instead</link>"
+    },
+    "request": {
+        "title": "Your message, ready to send",
+        "title_corporate": "Your enquiry, ready to send",
+        "title_documents": "Your document request, ready to send",
+        "intro": "Choose a channel. Each button opens a prepared message: complete the blank lines, then send it.",
+        "summary_title": "Already filled in from the page you came from",
+        "summary_note": "You can change any line in the message before you send it.",
+        "email_cta": "Email the export team",
+        "email_role": "Export team · details and documents",
+        "whatsapp_cta": "Message management on WhatsApp",
+        "whatsapp_role": "Direct to management · for fast deals",
+        "attach_note": "If you have a specification or packing sheet, attach it to the email.",
+        "fallback_title": "If your email app does not open",
+        "fallback_text": "Write from your company email to this address and use this subject line.",
+        "email_label": "Email",
+        "subject_label": "Subject",
+        "phone_label": "Phone (management)"
+    },
+    "mail": {
+        "greeting": "Hello AZAFCO export team,",
+        "intro_quote": "We would like to discuss supply of the following:",
+        "intro_specs": "Please send the specifications for the following:",
+        "intro_corporate": "I would like to discuss the following:",
+        "intro_documents": "Please send the following documents:",
+        "subject_quote": "Supply requirements",
+        "subject_quote_for": "Supply requirements: {item}",
+        "subject_specs": "Specification request",
+        "subject_specs_for": "Specification request: {item}",
+        "subject_corporate": "Corporate enquiry",
+        "subject_documents": "Document request",
+        "subject_documents_for": "Document request: {item}",
+        "wa_intro_quote": "Hello AZAFCO, I would like to discuss a supply partnership.",
+        "wa_intro_specs": "Hello AZAFCO, I would like the specifications.",
+        "wa_intro_corporate": "Hello AZAFCO, I have a corporate enquiry.",
+        "wa_intro_documents": "Hello AZAFCO, I would like to request documents.",
+        "labels": {
+            "species": "Species",
+            "grade": "Weight grade",
+            "form": "Product form",
+            "packing": "Packing",
+            "volume": "Quantity per shipment",
+            "frequency": "Frequency",
+            "destination": "Destination",
+            "freight": "Freight (air or road) and arrival airport or border crossing",
+            "terms": "Preferred Incoterm and payment terms",
+            "date": "Required date",
+            "company": "Company",
+            "name": "Name",
+            "job": "Job title",
+            "website": "Website",
+            "phone": "Phone",
+            "topic": "Topic",
+            "message": "Message",
+            "documents": "Documents needed",
+            "product": "Product",
+            "market": "Market"
+        }
+    }
+}

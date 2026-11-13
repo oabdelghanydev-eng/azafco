@@ -1,0 +1,11 @@
+{
+    "eyebrow": "Quality",
+    "title": "We hold 3 ISO certificates",
+    "intro": "Our management systems are certified by TÜV AUSTRIA to these standards.",
+    "link": "How we work on quality",
+    "certs": {
+        "iso9001": { "code": "ISO 9001:2015", "name": "Quality management" },
+        "iso14001": { "code": "ISO 14001:2015", "name": "Environmental management" },
+        "iso45001": { "code": "ISO 45001:2018", "name": "Occupational health and safety" }
+    }
+}

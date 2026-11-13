@@ -104,8 +104,9 @@ export const companyConfig = {
     // GEO COORDINATES & LOCATION
     // ─────────────────────────────────────────────────────────────────────────
     geo: {
-        latitude: 31.2653,
-        longitude: 30.9366,
+        // Plant (owner's factory map pin, old site); used for geo meta tags
+        latitude: 31.433264,
+        longitude: 30.475957,
         postalCode: '33511',
         region: 'EG-KFS',
         placename: 'Kafr El Sheikh, Egypt',
@@ -128,7 +129,7 @@ export const companyConfig = {
 
     // ─────────────────────────────────────────────────────────────────────────
     // MARKETS (Ordered by rank - Kuwait #1)
-    // We export worldwide via air & land - these are our current active markets
+    // Active, paused and planned markets (7 active, shown as 7+; owner 13 Nov 2026)
     // ─────────────────────────────────────────────────────────────────────────
     markets: [
         { key: 'kuwait', name: 'Kuwait', rank: 1, volumeTons: 650, since: 2009, status: 'active', countryCode: 'KW' },
@@ -166,8 +167,6 @@ export const companyConfig = {
     // CERTIFICATIONS
     // ─────────────────────────────────────────────────────────────────────────
     certifications: [
-        { code: 'ISO_22000', name: 'ISO 22000:2018', description: 'Food Safety Management System' },
-        { code: 'HACCP', name: 'HACCP', description: 'Hazard Analysis Critical Control Points' },
         { code: 'ISO_9001', name: 'ISO 9001:2015', description: 'Quality Management System' },
         { code: 'ISO_14001', name: 'ISO 14001:2015', description: 'Environmental Management System' },
         { code: 'ISO_45001', name: 'ISO 45001:2018', description: 'Occupational Health and Safety' },
@@ -190,8 +189,8 @@ export const companyConfig = {
     staticStats: {
         clients: 500,
         totalVolumeEstimate: 2500,  // Use this for display (rounded estimate)
-        // Export countries shown site-wide as "+N" (TODO: confirm with management;
-        // markets above list 7 active, 1 paused, 2 planned)
+        // Export markets shown site-wide as "7+" (owner, 13 Nov 2026: 7 registered
+        // active markets; more shipped beyond them)
         exportCountries: 7,
     },
 } as const;

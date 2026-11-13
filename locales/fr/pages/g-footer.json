@@ -1,0 +1,41 @@
+{
+    "kicker": "Start a partnership",
+    "title_1": "Every shipment",
+    "title_2": "starts with a message",
+    "lead": "Tell us the species, quantity and destination. Our export team will review supply and commercial terms. Prices confirmed per order.",
+    "whatsapp": {
+        "title": "WhatsApp",
+        "sub": "Direct to management · for fast deals"
+    },
+    "email": {
+        "title": "Email",
+        "sub": "Export team · details and documents"
+    },
+    "form": {
+        "title": "Send your requirements",
+        "sub": "Species, weight grade, quantity and destination",
+        "value": "Online form"
+    },
+    "factory": {
+        "title": "Factory",
+        "sub": "Visit · see it on the map",
+        "address": "No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El Sheikh"
+    },
+    "registration": "Commercial register <n>{cr}</n> · Tax card <n>{tax}</n>",
+    "new_tab": "(opens in a new tab)",
+    "photo_alt": "Refrigerated truck loading insulated boxes at dawn",
+    "logo_alt": "AZAFCO International",
+    "tagline_1": "Fresh fish exporter",
+    "tagline_2": "from Egypt since 2008",
+    "links_label": "Site links",
+    "langs_label": "Languages",
+    "back_to_top": "Back to top",
+    "copyright": "© 2026 AZAFCO International for Investment and Development S.A.E.",
+    "float_label": "WhatsApp · Direct to management",
+    "secondary_label": "More links",
+    "secondary": {
+        "for_importers": "For importers",
+        "contact": "Contact",
+        "privacy": "Privacy policy"
+    }
+}

@@ -1,29 +1,19 @@
-// AR locale barrel export
+// AR locale barrel: every namespace the site renders (one JSON file each).
+// Namespaces ending in _v2 (and common, v2) are also sent to the browser.
 import common from './common.json';
-import navigation from './navigation.json';
-import home from './pages/home.json';
-import products from './pages/products.json';
-import markets from './pages/markets.json';
-import media from './pages/media.json';
-import about from './pages/about.json';
-import contact from './pages/contact.json';
-import certificates from './pages/certificates.json';
-import privacy from './pages/privacy.json';
-import notFound from './pages/not-found.json';
-import euBuyers from './pages/eu-buyers.json';
-import species from './pages/species.json';
-import marketDetail from './pages/market-detail.json';
-import faqPage from './pages/faq.json';
-import guides from './pages/guides.json';
+import privacyNs from './pages/privacy.json';
+import notFoundNs from './pages/not-found.json';
+import guidesPageNs from './pages/guides.json';
+import v2Ns from './pages/v2-common.json';
 import homeV2Ns from './pages/v2-home.json';
-import gHeaderNs from './pages/g-header.json';
-import gFooterNs from './pages/g-footer.json';
-import gHeroNs from './pages/g-hero.json';
-import gAboutNs from './pages/g-about.json';
-import gFishNs from './pages/g-fish.json';
-import gChainNs from './pages/g-chain.json';
-import gQualityNs from './pages/g-quality.json';
-import gMarketsNs from './pages/g-markets.json';
+import gHeaderV2Ns from './pages/g-header.json';
+import gFooterV2Ns from './pages/g-footer.json';
+import gHeroV2Ns from './pages/g-hero.json';
+import gAboutV2Ns from './pages/g-about.json';
+import gFishV2Ns from './pages/g-fish.json';
+import gChainV2Ns from './pages/g-chain.json';
+import gQualityV2Ns from './pages/g-quality.json';
+import gMarketsV2Ns from './pages/g-markets.json';
 import aboutV2Ns from './pages/v2-about.json';
 import businessesV2Ns from './pages/v2-businesses.json';
 import seafoodV2Ns from './pages/v2-seafood.json';
@@ -35,50 +25,27 @@ import importersV2Ns from './pages/v2-importers.json';
 import insightsV2Ns from './pages/v2-insights.json';
 import contactV2Ns from './pages/v2-contact.json';
 import rfqV2Ns from './pages/v2-rfq.json';
-import v2Common from './pages/v2-common.json';
 import productData from './data/products.json';
 import marketData from './data/markets.json';
-import newsData from './data/news.json';
 import companyData from './data/company.json';
 import metadata from './seo/metadata.json';
-import faq from './seo/faq.json';
-import keywords from './seo/keywords.json';
 import schema from './seo/schema.json';
 
 const messages = {
     common,
-    nav: navigation.nav,
-    footer: navigation.footer,
-    home,
-    // Short names (legacy usage)
-    about,
-    contact,
-    products,
-    // Full names with _page suffix
-    products_page: products,
-    markets_page: markets,
-    media_page: media,
-    about_page: about,
-    contact_page: contact,
-    certificates_page: certificates,
-    privacy,
-    not_found: notFound,
-    eu_buyers_page: euBuyers,
-    species_page: species,
-    market_detail_page: marketDetail,
-    faq_page: faqPage,
-    guides_page: guides,
-    // Site v2 shell (header, footer, CTAs, component kit)
-    v2: v2Common,
+    privacy: privacyNs,
+    not_found: notFoundNs,
+    guides_page: guidesPageNs,
+    v2: v2Ns,
     home_v2: homeV2Ns,
-    g_header_v2: gHeaderNs,
-    g_footer_v2: gFooterNs,
-    g_hero_v2: gHeroNs,
-    g_about_v2: gAboutNs,
-    g_fish_v2: gFishNs,
-    g_chain_v2: gChainNs,
-    g_quality_v2: gQualityNs,
-    g_markets_v2: gMarketsNs,
+    g_header_v2: gHeaderV2Ns,
+    g_footer_v2: gFooterV2Ns,
+    g_hero_v2: gHeroV2Ns,
+    g_about_v2: gAboutV2Ns,
+    g_fish_v2: gFishV2Ns,
+    g_chain_v2: gChainV2Ns,
+    g_quality_v2: gQualityV2Ns,
+    g_markets_v2: gMarketsV2Ns,
     about_v2: aboutV2Ns,
     businesses_v2: businessesV2Ns,
     seafood_v2: seafoodV2Ns,
@@ -93,13 +60,10 @@ const messages = {
     data: {
         products: productData,
         markets: marketData,
-        news: newsData,
-        company: companyData
+        company: companyData,
     },
     metadata,
-    faq,
-    keywords,
-    schema
+    schema,
 };
 
 export default messages;

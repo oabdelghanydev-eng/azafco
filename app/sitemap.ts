@@ -19,7 +19,7 @@ const pages = [
     { path: 'quality', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'for-importers', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: 'businesses', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: 'rfq', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: 'requirements', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'insights', priority: 0.6, changeFrequency: 'weekly' as const },
     ...productSlugs.map((slug) => ({ path: `products/${slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
     ...activeMarketSlugs.map((slug) => ({ path: `markets/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // language alternates (hreflang). lastModified is omitted: a build-time
     // date on every URL tells search engines nothing changed meaningfully.
     for (const page of pages) {
-        // ar/en only: es/ru/de/fr redirect to English until translated
+        // All published locales (i18n publishedLocales)
         const languages: Record<string, string> = Object.fromEntries(
             locales.map((locale) => [locale, pageUrl(locale, page.path)])
         );

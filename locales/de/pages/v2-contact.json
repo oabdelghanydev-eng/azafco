@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "title": "Contact us: WhatsApp, email, office and factory",
+        "description": "WhatsApp AZAFCO International management for fast deals, or email the export team for details and documents. Office and factory in Kafr El Sheikh."
+    },
+    "breadcrumb": "Contact us",
+    "hero": {
+        "eyebrow": "Contact us",
+        "title": "Start with a clear requirement",
+        "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents."
+    },
+    "channels": {
+        "eyebrow": "Direct channels",
+        "title": "Choose the channel that fits your request",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Direct to management · for fast deals"
+        },
+        "email": {
+            "title": "Email",
+            "sub": "Export team · details and documents"
+        },
+        "phone": {
+            "title": "Phone",
+            "sub": "Call management on the same number"
+        },
+        "hours": "Office hours",
+        "new_tab": "(opens in a new tab)"
+    },
+    "routes": {
+        "eyebrow": "Send your requirements",
+        "legend": "What is your enquiry about?",
+        "intro": "Each option prepares a message for you to send from your company email or WhatsApp, so we know who the request comes from.",
+        "seafood_title": "Fish supply",
+        "seafood_text": "For importers and procurement teams: species, weight grade, packing, quantity, destination and timing.",
+        "seafood_action": "Send your requirements",
+        "documents_title": "Documents",
+        "documents_text": "Product specifications or the company profile. A short request: no species or quantity needed.",
+        "documents_action": "Request documents",
+        "corporate_title": "Corporate partnership or other topics",
+        "corporate_text": "Partnerships, investment or other topics: a short introduction to your company and the cooperation you propose.",
+        "corporate_action": "Send a corporate enquiry"
+    },
+    "locations": {
+        "eyebrow": "Locations",
+        "title": "Main office and factory",
+        "factory": "Factory",
+        "office": "Main office",
+        "map_open": "Open in Google Maps",
+        "map_title_factory": "Map of the AZAFCO International factory in Motobas",
+        "map_title_office": "Map of the AZAFCO International main office",
+        "map_note": "Maps are loaded from Google Maps."
+    },
+    "next": {
+        "title": "What happens after you write to us",
+        "steps": [
+            "The export team reviews your requirements against the specification and current availability.",
+            "We contact you to confirm the details and any open points.",
+            "Prices, quantity, packing and terms are confirmed in writing for each order."
+        ],
+        "no_promise": "Sending your requirements does not commit you or us to an order. Prices are confirmed per order."
+    },
+    "privacy": {
+        "title": "How we use your details",
+        "text": "We use the contact details and requirements you send only to answer your enquiry and to handle any business that follows, as set out in our privacy policy.",
+        "link": "Read the privacy policy"
+    },
+    "trust": {
+        "title": "Registered company",
+        "register": "Commercial register",
+        "tax": "Tax card",
+        "proof_title": "Track record",
+        "proof": [
+            "Founded in 2008",
+            "7+ markets across the Middle East",
+            "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA"
+        ],
+        "proof_link": "See quality and certificates"
+    }
+}
