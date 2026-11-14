@@ -27,8 +27,10 @@ export default function ContactRoutes() {
         <>
             <SectionHeading id="contact-routes-title" layout="split" eyebrow={t('eyebrow')} title={t('legend')} intro={t('intro')} />
             {/* Three columns only from xl: at 1024 a third of the row is too narrow for the action labels
-                (they wrapped inside the pill), so lg shows full-width rows with the action beside the text. */}
-            <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 lg:gap-5 xl:grid-cols-3">
+                (they wrapped inside the pill), so lg shows full-width rows with the action beside the text.
+                At xl each card is a subgrid over four shared rows (number, title, text, action), so a title
+                that wraps to two lines in one card keeps the texts and actions of all three aligned. */}
+            <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 lg:gap-5 xl:grid-cols-3 xl:grid-rows-[auto_auto_1fr_auto]">
                 {list.map(({ key }, i) => {
                     const button = {
                         variant: key === 'seafood' ? ('primary' as const) : ('outline' as const),
@@ -43,10 +45,11 @@ export default function ContactRoutes() {
                             className={cardClass({
                                 accent: key === 'seafood',
                                 padding: 'md',
-                                className: 'flex min-w-0 flex-col lg:flex-row lg:items-center lg:gap-10 xl:flex-col xl:items-stretch xl:gap-0',
+                                className:
+                                    'flex min-w-0 flex-col lg:flex-row lg:items-center lg:gap-10 xl:row-span-4 xl:grid xl:grid-rows-[subgrid] xl:items-stretch xl:gap-0',
                             })}
                         >
-                            <div className="flex min-w-0 flex-1 flex-col">
+                            <div className="flex min-w-0 flex-1 flex-col xl:contents">
                                 <span aria-hidden="true" className={cn('text-ink-muted', typography.overline)}>
                                     {String(i + 1).padStart(2, '0')}
                                 </span>

@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import type { ImageProps } from '@/lib/v2/media';
 import { routes } from '@/lib/v2/routes';
-import { Breadcrumbs, Button, PageHero, Section, SectionHeading, cn, typography } from '@/components/ui';
+import { Breadcrumbs, Button, PageHero, Section, SectionHeading, cn, isolateStandards, typography } from '@/components/ui';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import BusinessArchitecture from '@/components/v2/businesses/BusinessArchitecture';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
@@ -101,7 +101,7 @@ export default async function BusinessesPage({ params }: Props) {
                     id="biz-seafood"
                     eyebrow={t('seafood.eyebrow')}
                     title={t('seafood.title')}
-                    body={[t('seafood.p1'), t('seafood.p2')]}
+                    body={[t('seafood.p1'), isolateStandards(t('seafood.p2'))]}
                     image={gImage('sorting-packing', t('seafood.image_alt'))}
                     links={[
                         { label: t('seafood.link_products'), href: routes.products },

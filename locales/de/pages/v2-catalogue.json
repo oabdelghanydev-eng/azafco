@@ -91,7 +91,7 @@
         "species_title": "Fischart und Gewichtsklasse",
         "species_text": "Die Fischart und der Gewichtsbereich pro Stück, den Sie benötigen.",
         "form_title": "Produktform",
-        "form_text": "Unser Fisch wird ganz und frisch gekühlt verkauft. Fragen Sie das Exportteam nach jeder anderen Form, die Sie benötigen.",
+        "form_text": "Unser Fisch wird ganz und frisch gekühlt verkauft. Wenn Sie eine andere Form benötigen, fragen Sie das Exportteam.",
         "packing_title": "Verpackung und Nettogewicht",
         "packing_text": "Boxtyp, Nettogewicht pro Box und etwaige Anforderungen an die Etiketten.",
         "volume_title": "Menge und Häufigkeit",
@@ -114,7 +114,7 @@
         "after_3": "Gewichtsklasse, Verpackung und Preis werden für Ihren Auftrag schriftlich bestätigt"
     },
     "proof": {
-        "eyebrow": "Hinter der Liste",
+        "eyebrow": "Hintergrund",
         "title": "Prüfen Sie den Ablauf vor der Bestellung",
         "processing_title": "Verarbeitung und Verpackung",
         "processing_text": "Wie der Fisch vom Abfischen über Waschen, Beeisen, Sortieren und Verpacken bis zum Versand gelangt.",

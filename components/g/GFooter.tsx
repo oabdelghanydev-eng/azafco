@@ -42,7 +42,7 @@ interface RowProps {
 }
 
 function ContactRow({ n, href, title, sub, value, external, internal, newTab, cta }: RowProps) {
-    const className = `${s.row} grid grid-cols-[30px_minmax(0,1fr)_44px] items-center gap-x-3 border-b border-white/[.16] py-5 lg:px-3 lg:py-6 xl:grid-cols-[56px_minmax(0,1fr)_minmax(0,1fr)_52px] xl:gap-5 ${FOCUS_DARK}`;
+    const className = `${s.row} grid grid-cols-[30px_minmax(0,1fr)_44px] items-center gap-x-3 border-b border-white/[.16] py-5 lg:px-3 lg:py-6 xl:grid-cols-[56px_minmax(0,1.4fr)_minmax(0,1fr)_52px] xl:gap-x-4 ${FOCUS_DARK}`;
     const body = (
         <>
             <span
@@ -176,7 +176,7 @@ export default function GFooter() {
                 </div>
 
                 {/* Contact block */}
-                <div className="relative z-[1] box-border px-5 pb-14 md:px-8 lg:order-1 lg:z-[2] lg:pb-[120px] lg:pe-16 lg:ps-[max(32px,calc((100vw_-_1320px)/2_+_32px))] lg:pt-24">
+                <div className="relative z-[1] box-border px-5 pb-14 md:px-8 lg:order-1 lg:z-[2] lg:pb-[120px] lg:pe-16 xl:pe-10 lg:ps-[max(32px,calc((100vw_-_1320px)/2_+_32px))] lg:pt-24">
                     <Eyebrow tone="dark" className="relative -mt-9 mb-2 lg:mb-3 lg:mt-0">
                         {t('kicker')}
                     </Eyebrow>

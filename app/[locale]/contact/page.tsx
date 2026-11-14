@@ -20,6 +20,7 @@ import {
     cn,
     focusRing,
     phoneDisplay,
+    isolateStandards,
     typography,
 } from '@/components/ui';
 import ContactRoutes from '@/components/v2/contact/ContactRoutes';
@@ -225,7 +226,7 @@ export default async function ContactPage({ params }: Props) {
                             {proof.map((item) => (
                                 <li key={item} className={cn('flex items-start gap-2.5 text-ink-muted', typography.small)}>
                                     <CheckIcon size={20} className="mt-0.5 text-navy" />
-                                    <span>{item}</span>
+                                    <span>{isolateStandards(item)}</span>
                                 </li>
                             ))}
                         </ul>

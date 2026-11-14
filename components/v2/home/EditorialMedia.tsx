@@ -17,7 +17,7 @@ export interface EditorialMediaProps {
     title: ReactNode;
     eyebrow?: ReactNode;
     /** Paragraphs */
-    body?: string[];
+    body?: ReactNode[];
     /** Omit when no photo exists: text-only editorial layout */
     image?: ImageProps;
     /** Which side the photo sits on (logical: flips in RTL) */

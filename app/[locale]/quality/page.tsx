@@ -18,6 +18,7 @@ import {
     TextLink,
     TruckIcon,
     focusRing,
+    isolateStandards,
     typography,
 } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
@@ -76,7 +77,7 @@ export default async function QualityPage({ params }: Props) {
     const faq = FAQ.map((n) => ({
         id: `q${n}`,
         question: t(`faq.q${n}`),
-        answer: t.rich(`faq.a${n}`, richTags),
+        answer: isolateStandards(t.rich(`faq.a${n}`, richTags)),
         text: t.markup(`faq.a${n}`, plainTags),
     }));
 

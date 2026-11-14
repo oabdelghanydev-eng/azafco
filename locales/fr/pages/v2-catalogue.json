@@ -68,7 +68,7 @@
     },
     "browser": {
         "search_label": "Rechercher une espèce",
-        "search_placeholder": "ex. tilapia, bar, بوري",
+        "search_placeholder": "p. ex. tilapia, bar, بوري",
         "search_hint": "Les résultats s’affichent au fil de la saisie.",
         "clear_search": "Effacer la recherche",
         "water_type": "Type d’eau",
@@ -121,10 +121,10 @@
         "processing_link": "Voir la transformation",
         "quality_title": "Qualité et certificats",
         "quality_text": "Nos certificats ISO et la façon dont chaque commande est vérifiée par rapport à la spécification convenue.",
-        "quality_link": "Voir la qualité",
+        "quality_link": "Voir la page qualité",
         "importers_title": "Pour les importateurs",
         "importers_text": "Comment une demande devient une commande confirmée.",
-        "importers_link": "Lire le processus importateur"
+        "importers_link": "Voir le processus de commande"
     },
     "detail": {
         "meta_title": "{name} d’Égypte pour l’export en gros",

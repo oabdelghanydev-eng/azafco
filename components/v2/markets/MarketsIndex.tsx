@@ -30,6 +30,11 @@ export interface MarketsIndexProps {
     origin: string;
     /** Heading level of the block title */
     as?: 'h2' | 'h3';
+    /**
+     * Market detail pages: longer, sentence-like titles. Uses the smaller h2 role and
+     * a 5/12 text column from xl (instead of 430px) so es/de/fr titles stay short.
+     */
+    compact?: boolean;
 }
 
 export default function MarketsIndex({
@@ -45,6 +50,7 @@ export default function MarketsIndex({
     mapLabel,
     origin,
     as: H = 'h2',
+    compact = false,
 }: MarketsIndexProps) {
     const mapMarkets = active
         .map((m) => ({ code: m.countryCode.toLowerCase(), short: m.short }))
@@ -54,10 +60,15 @@ export default function MarketsIndex({
 
     return (
         <Section variant="navy" labelledBy={headingId} contained={false}>
-            <div className="mx-auto box-border w-full max-w-v2 px-5 md:px-8 lg:grid lg:grid-cols-[430px_minmax(0,1fr)] lg:items-center lg:gap-12">
+            <div
+                className={cn(
+                    'mx-auto box-border w-full max-w-v2 px-5 md:px-8 lg:grid lg:grid-cols-[430px_minmax(0,1fr)] lg:items-center lg:gap-12',
+                    compact && 'xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]',
+                )}
+            >
                 <div className="mx-auto min-w-0 max-w-[640px] lg:mx-0 lg:max-w-none">
                     <Eyebrow className="mb-3 lg:mb-4">{eyebrow}</Eyebrow>
-                    <H id={headingId} className={cn('v2-heading m-0', typography.h2)}>
+                    <H id={headingId} className={cn('v2-heading m-0', compact ? typography.h2Sm : typography.h2)}>
                         {title}
                     </H>
                     {intro ? <p className={cn('m-0 mt-3.5 text-fg-muted lg:mt-5', typography.body)}>{intro}</p> : null}

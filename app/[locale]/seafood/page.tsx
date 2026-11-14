@@ -11,6 +11,7 @@ import {
     SectionHeading,
     TextLink,
     cn,
+    isolateStandards,
     typography,
 } from '@/components/ui';
 import FeatureGrid from '@/components/v2/FeatureGrid';
@@ -184,7 +185,7 @@ export default async function SeafoodPage({ params }: Props) {
                         <h2 id="seafood-quality" className={cn('v2-heading m-0', typography.h2)}>
                             {t('quality.title')}
                         </h2>
-                        <p className={cn('m-0 mt-5 max-w-prose-v2 text-fg-muted', typography.lead)}>{t('quality.text')}</p>
+                        <p className={cn('m-0 mt-5 max-w-prose-v2 text-fg-muted', typography.lead)}>{isolateStandards(t('quality.text'))}</p>
                         <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:gap-3.5">
                             <Button href={routes.quality} variant="outline" size="lg" stretch="phone" arrow>
                                 {t('quality.link')}

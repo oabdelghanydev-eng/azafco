@@ -14,7 +14,7 @@
     },
     "serve": {
         "eyebrow": "Avec qui nous travaillons",
-        "title": "Importateurs, distributeurs et restauration hors foyer",
+        "title": "Importateurs, distributeurs et restauration hors domicile",
         "intro": "Nous approvisionnons des entreprises, pas des particuliers. Chaque type d’acheteur a ses propres questions, et nous y répondons lorsque nous convenons de la commande.",
         "items": [
             {
@@ -30,7 +30,7 @@
                 "text": "Une spécification convenue et un seul interlocuteur : l’équipe export."
             },
             {
-                "title": "Fournisseurs de la restauration hors foyer",
+                "title": "Fournisseurs de la restauration hors domicile",
                 "text": "Un approvisionnement régulier, planifié selon notre capacité de conditionnement et votre programme."
             }
         ]
@@ -136,7 +136,7 @@
             {
                 "title": "Qualité",
                 "text": "ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018, certifiés par TÜV AUSTRIA.",
-                "link": "Voir la qualité"
+                "link": "Voir la page qualité"
             },
             {
                 "title": "Marchés",
@@ -175,7 +175,7 @@
             },
             {
                 "q": "Pouvez-vous conditionner sous notre étiquette ?",
-                "a": "Cela s’étudie selon le produit et l’exigence. Ajoutez vos exigences d’étiquetage dans les remarques de votre demande."
+                "a": "Nous l’étudions au cas par cas, selon le produit et vos exigences. Précisez vos exigences d’étiquetage dans les remarques de votre demande."
             },
             {
                 "q": "Quels certificats détenez-vous ?",

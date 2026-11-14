@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "Fischverarbeitung, Verpackung und Export aus Ägypten",
-        "description": "Unser Werk in Motobas, Kafr el-Sheikh, wäscht, beeist, sortiert, verpackt und prüft ganzen frischen Fisch. Unsere Kühl-Lkw und Kühlhäuser halten ihn gekühlt."
+        "title": "Fischverarbeitung, Verpackung, Export aus Ägypten",
+        "description": "In unserem Werk in Motobas waschen, beeisen, sortieren, verpacken und prüfen wir ganzen frischen Fisch. Eigene Kühl-Lkw und Kühlhäuser halten ihn kühl."
     },
     "breadcrumbs": {
         "label": "Pfadnavigation",
@@ -98,7 +98,7 @@
         "items": {
             "species": {
                 "title": "Fischart und Gewichtsklasse",
-                "text": "Die Fischart und die Gewichtsklasse pro Fisch. Weitere Arten liefern wir auf Anfrage."
+                "text": "Die Fischart und die Gewichtsklasse pro Stück. Weitere Arten liefern wir auf Anfrage."
             },
             "form": {
                 "title": "Produktform",

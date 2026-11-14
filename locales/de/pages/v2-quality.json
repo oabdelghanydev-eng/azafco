@@ -19,7 +19,7 @@
     "certs": {
         "eyebrow": "ISO-Zertifikate",
         "title": "Wir verfügen über drei ISO-Zertifikate",
-        "intro": "Unsere Managementsysteme sind durch TÜV AUSTRIA zertifiziert. Welche Lebensmittelsicherheits- und Gesundheitsdokumente Ihr Markt verlangt, klärt unser Exportteam vor Ihrer Bestellung: Es bestätigt, welche Unterlagen jede Lieferung begleiten.",
+        "intro": "Unsere Managementsysteme sind durch TÜV AUSTRIA zertifiziert. Welche Unterlagen zu Lebensmittelsicherheit und Gesundheit Ihr Markt verlangt, klärt unser Exportteam vor Ihrer Bestellung und bestätigt, was jede Lieferung begleitet.",
         "items": {
             "iso9001": {
                 "name": "Qualitätsmanagement",

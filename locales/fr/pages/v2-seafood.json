@@ -6,7 +6,7 @@
     "breadcrumb": "Produits de la mer et aquaculture",
     "hero": {
         "eyebrow": "Produits de la mer et aquaculture",
-        "title": "Du poisson égyptien élevé et acheté par nos soins pour les importateurs",
+        "title": "Du poisson égyptien, de nos élevages et de nos fournisseurs, pour les importateurs",
         "intro": "Nous élevons et achetons du poisson, puis le contrôlons, le lavons, le mettons sous glace, le calibrons, le conditionnons et l’exportons, avec nos propres camions frigorifiques, notre logistique et nos entrepôts frigorifiques.",
         "primary": "Voir nos poissons",
         "secondary": "Transformation et conditionnement"
@@ -25,7 +25,7 @@
     "farm": {
         "eyebrow": "Élevage et approvisionnement",
         "title": "Un approvisionnement qui commence à la source",
-        "text_1": "Nous élevons du poisson et en achetons auprès d’autres producteurs, afin de répondre aux espèces, quantités et délais de chaque acheteur. Indiquez-nous votre volume et votre fenêtre de livraison, et nous planifions l’approvisionnement avec vous."
+        "text_1": "Nous élevons du poisson et en achetons auprès d’autres producteurs, afin de répondre aux besoins de chaque acheteur en espèces, en quantités et en délais. Indiquez-nous votre volume et votre fenêtre de livraison, et nous planifions l’approvisionnement avec vous."
     },
     "processing": {
         "eyebrow": "Transformation",
@@ -53,7 +53,7 @@
     },
     "quality": {
         "eyebrow": "Qualité",
-        "title": "Certifiés, et contrôlés à chaque commande",
+        "title": "Certifiés et contrôlés à chaque commande",
         "text": "Nous détenons les certificats ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018, délivrés par TÜV AUSTRIA. Chaque commande est vérifiée par rapport à la spécification convenue avant la fermeture des caisses.",
         "link": "Qualité et certificats",
         "docs_email": "Écrire à l’équipe export au sujet des documents",
@@ -64,7 +64,7 @@
         "title": "Conçu pour les acheteurs professionnels",
         "importers": "Importateurs de poisson",
         "distributors": "Grossistes et sociétés de distribution",
-        "foodservice": "Fournisseurs de la restauration et du traiteur",
+        "foodservice": "Fournisseurs de la restauration hors domicile et traiteurs",
         "horeca": "Groupes hôteliers et de restauration",
         "partners": "Entreprises en quête d’un partenaire d’approvisionnement à long terme"
     },

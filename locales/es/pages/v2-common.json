@@ -86,7 +86,7 @@
         "label": "Galería de fotos"
     },
     "whatsapp_float": {
-        "label": "WhatsApp · directo a la dirección"
+        "label": "WhatsApp · directo a la gerencia"
     },
     "facts": {
         "title": "Datos clave",
@@ -107,6 +107,7 @@
         "title": "Analítica en este navegador",
         "on": "La analítica está activada en este navegador.",
         "off": "La analítica está desactivada en este navegador.",
+        "unset": "Aún no ha elegido en este navegador. La analítica sigue la configuración predeterminada de su región.",
         "enable": "Activar la analítica",
         "disable": "Desactivar la analítica"
     }

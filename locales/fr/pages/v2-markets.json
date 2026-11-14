@@ -1,12 +1,12 @@
 {
     "meta": {
-        "title": "Export de poisson frais : le Moyen-Orient et au-delà",
-        "description": "Poisson frais d’Égypte pour les importateurs de plus de 7 marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak et Syrie, par avion et par route. L’Europe suivra."
+        "title": "Export de poisson frais : Moyen-Orient et au-delà",
+        "description": "Poisson frais d’Égypte pour plus de 7 marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak et Syrie, par avion et route. L’Europe est notre prochaine étape."
     },
     "breadcrumb": "Marchés",
     "hero": {
         "eyebrow": "Nos marchés",
-        "title": "Exportation de poisson frais vers le Moyen-Orient et au-delà",
+        "title": "Exportation de poisson frais vers le Moyen‑Orient et au‑delà",
         "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan.",
         "primary": "Démarrer un partenariat",
         "secondary": "Voir nos espèces",
@@ -138,7 +138,7 @@
         "other": "Autres"
     },
     "detail": {
-        "meta_title": "Exportation de poisson frais {country}",
+        "meta_title": "Export de poisson frais {country}",
         "meta_description": "Poisson frais d’Égypte pour les importateurs {country}, marché actif depuis {year}. Réfrigéré, par avion ou route. Prix confirmés à chaque commande.",
         "eyebrow": "Marché actif depuis {year}",
         "title": "Poisson frais d’Égypte pour les importateurs basés {country}",

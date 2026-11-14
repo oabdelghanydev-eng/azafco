@@ -10,7 +10,7 @@
             "Mediano (300–500 g)",
             "Grande (500 g o más)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -25,7 +25,7 @@
             "Mediano (400–600 g)",
             "Grande (600 g o más)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua de mar",
         "availability": "Confirmada en cada pedido"
     },
@@ -40,7 +40,7 @@
             "Pequeño (150–250 g)",
             "Mediano (250–400 g)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua salobre",
         "availability": "Confirmada en cada pedido"
     },
@@ -55,7 +55,7 @@
             "Mediano (300–500 g)",
             "Grande (500 g o más)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -70,7 +70,7 @@
             "Grande (1–2 kg)",
             "Jumbo (2 kg o más)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -86,7 +86,7 @@
             "Mediano (500–800 g)",
             "Grande (800 g o más)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -102,7 +102,7 @@
             "Mediano (400–600 g)",
             "Grande (600 g o más)"
         ],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua de mar",
         "availability": "Confirmada en cada pedido"
     },
@@ -114,7 +114,7 @@
         ],
         "description": "El morragute, conocido en Egipto como tobar, es un mújol de aguas salobres. Es un producto distinto de nuestro mújol.",
         "sizes": [],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua salobre",
         "availability": "Confirmada en cada pedido"
     },
@@ -126,7 +126,7 @@
         ],
         "description": "El bagre bayad es un bagre de agua dulce originario del Nilo.",
         "sizes": [],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -135,7 +135,7 @@
         "alt_names": [],
         "description": "La carpa plateada es una carpa de agua dulce.",
         "sizes": [],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -147,7 +147,7 @@
         ],
         "description": "La carpa espejo es la forma de la carpa común con escamas en espejo: solo tiene unas pocas escamas grandes. Es un pez de agua dulce.",
         "sizes": [],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce",
         "availability": "Confirmada en cada pedido"
     },
@@ -159,7 +159,7 @@
         ],
         "description": "La dorada, conocida en el comercio internacional como gilthead sea bream o dorade, es un pez marino.",
         "sizes": [],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua de mar",
         "availability": "Confirmada en cada pedido"
     },
@@ -170,7 +170,7 @@
         ],
         "description": "La anguila europea es un pez de aguas salobres.",
         "sizes": [],
-        "packaging": "Caja de poliestireno expandido (EPS)",
+        "packaging": "Caja isotérmica de EPS",
         "category": "Agua salobre",
         "availability": "Confirmada en cada pedido"
     }

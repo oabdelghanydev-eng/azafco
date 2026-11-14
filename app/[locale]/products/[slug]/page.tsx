@@ -12,6 +12,7 @@ import {
     SectionHeading,
     TextLink,
     cn,
+    isolateStandards,
     noBreakValue,
     typography,
 } from '@/components/ui';
@@ -263,7 +264,7 @@ export default async function ProductDetailPage({ params }: Props) {
                         <h2 id="packing-docs" className={cn('v2-heading m-0', typography.h2Sm)}>
                             {t('detail.docs_title')}
                         </h2>
-                        <p className={cn('m-0 mt-4 max-w-prose-v2 text-ink-muted', typography.body)}>{t('detail.docs_text')}</p>
+                        <p className={cn('m-0 mt-4 max-w-prose-v2 text-ink-muted', typography.body)}>{isolateStandards(t('detail.docs_text'))}</p>
                         <div className="mt-4 flex flex-wrap items-center gap-x-8">
                             <TextLink href={docsHref} dataAttrs={{ 'data-cta': 'product_documents_email' }}>
                                 {t('detail.docs_email')}

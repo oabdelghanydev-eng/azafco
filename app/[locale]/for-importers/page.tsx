@@ -10,6 +10,7 @@ import {
     SectionHeading,
     WhatsAppIcon,
     cn,
+    isolateStandards,
     typography,
 } from '@/components/ui';
 import FAQAccordion from '@/components/v2/FAQAccordion';
@@ -46,6 +47,8 @@ export default async function ForImportersPage({ params }: Props) {
     const proof = t.raw('proof.items') as Item[];
     const proofHrefs = [routes.products, routes.processing, routes.quality, routes.markets];
     const faq = (t.raw('faq.items') as { q: string; a: string }[]).map((f, i) => ({ id: `faq-${i + 1}`, question: f.q, answer: f.a }));
+    // Rendered answers isolate ISO names (Arabic bidi); the JSON-LD keeps the plain text
+    const faqItems = faq.map((f) => ({ ...f, answer: isolateStandards(f.answer) }));
 
     const faqJsonLd = {
         '@context': 'https://schema.org',
@@ -158,7 +161,7 @@ export default async function ForImportersPage({ params }: Props) {
                 <FeatureGrid
                     columns={4}
                     style="card"
-                    items={proof.map((p, i) => ({ title: p.title, description: p.text, href: proofHrefs[i], linkLabel: p.link }))}
+                    items={proof.map((p, i) => ({ title: p.title, description: isolateStandards(p.text), href: proofHrefs[i], linkLabel: p.link }))}
                 />
             </Section>
 
@@ -169,7 +172,7 @@ export default async function ForImportersPage({ params }: Props) {
                         <SectionHeading id="fi-faq" size="md" eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
                     </div>
                     <div className="lg:col-span-8">
-                        <FAQAccordion items={faq} />
+                        <FAQAccordion items={faqItems} />
                     </div>
                 </div>
             </Section>

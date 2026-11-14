@@ -1,6 +1,6 @@
 {
     "meta": {
-        "title": "Poisson d’Égypte : traitement, emballage, export",
+        "title": "Transformation et export de poisson frais d’Égypte",
         "description": "À Motobas (Kafr el-Cheikh), notre usine lave, glace, calibre, emballe et contrôle le poisson frais entier ; nos camions et chambres froides le gardent au froid."
     },
     "breadcrumbs": {
@@ -55,7 +55,7 @@
             },
             "packing": {
                 "title": "Lavage, glaçage et conditionnement",
-                "text": "Le poisson est lavé, glacé, calibré au poids et conditionné entier sous glace, selon le conditionnement convenu pour votre commande.",
+                "text": "Le poisson est lavé, glacé, calibré au poids et conditionné entier sous glace, selon le format convenu pour votre commande.",
                 "alt": "Mains gantées déposant un tilapia entier dans une caisse de glace pilée sur une table en inox"
             },
             "inspection": {

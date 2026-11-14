@@ -122,6 +122,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                                             title: tv('consent.title'),
                                             on: tv('consent.on'),
                                             off: tv('consent.off'),
+                                            unset: tv('consent.unset'),
                                             enable: tv('consent.enable'),
                                             disable: tv('consent.disable'),
                                         }}

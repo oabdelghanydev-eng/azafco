@@ -49,4 +49,4 @@ export { Icon, ICON_STROKE } from './Icon';
 export type { IconProps as IconComponentProps, IconSize } from './Icon';
 export * from './icons';
 
-export { noBreakValue, phoneDisplay } from './format';
+export { isolateStandards, noBreakValue, phoneDisplay } from './format';

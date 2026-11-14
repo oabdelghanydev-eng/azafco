@@ -15,7 +15,7 @@
         "grass_carp": { "name": "Graskarpfen", "alt": "Ganzer Graskarpfen, Seitenansicht" },
         "silver_carp": { "name": "Silberkarpfen", "alt": "Ganzer Silberkarpfen, Seitenansicht" },
         "catfish": { "name": "Afrikanischer Raubwels", "alt": "Ganzer Afrikanischer Raubwels, Seitenansicht" },
-        "bayad_catfish": { "name": "Bagrus-Wels (Bagrus bajad)", "alt": "Ganzer Bagrus-Wels, Seitenansicht" }
+        "bayad_catfish": { "name": "Bagrus-Wels", "alt": "Ganzer Bagrus-Wels, Seitenansicht" }
     },
     "pageLink": "Alle Fischarten ansehen"
 }

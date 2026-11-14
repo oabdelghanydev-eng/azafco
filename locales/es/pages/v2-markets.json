@@ -118,7 +118,7 @@
             },
             {
                 "title": "Dos canales directos",
-                "text": "WhatsApp llega directamente a nuestra dirección, para operaciones rápidas. El correo electrónico llega al equipo de exportación, para detalles y documentos."
+                "text": "WhatsApp llega directamente a nuestra gerencia, para operaciones rápidas. El correo electrónico llega al equipo de exportación, para detalles y documentos."
             }
         ],
         "guide_link": "Lea la guía para importar pescado fresco de Egipto"
@@ -144,7 +144,7 @@
         "title": "Pescado fresco egipcio para importadores en {country}",
         "intro": "Atendemos a importadores en {country} desde {year}. La especie, el calibre, el embalaje, el transporte y los documentos se acuerdan con cada importador.",
         "primary": "Iniciemos una colaboración",
-        "secondary": "Escriba a la dirección por WhatsApp",
+        "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
         "facts_title": "En resumen: {country}",
         "facts": {
@@ -185,7 +185,7 @@
         "products_title": "Nuestras especies principales",
         "products_note": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido.",
         "map_eyebrow": "Nuestros mercados",
-        "map_title": "Rutas de envío a {country} y a nuestros otros mercados",
+        "map_title": "Rutas a {country} y a nuestros otros mercados",
         "map_intro": "Enviamos por vía aérea y por carretera a más de 7 mercados, y Europa es el siguiente paso de nuestro plan.",
         "buyers_title": "A quién abastecemos en {country}",
         "glance_eyebrow": "Perfil del mercado"

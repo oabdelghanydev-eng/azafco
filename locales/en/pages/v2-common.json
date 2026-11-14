@@ -107,6 +107,7 @@
         "title": "Analytics on this browser",
         "on": "Analytics are on for this browser.",
         "off": "Analytics are off for this browser.",
+        "unset": "You have not made a choice on this browser. Analytics follow the default for your region.",
         "enable": "Turn analytics on",
         "disable": "Turn analytics off"
     }

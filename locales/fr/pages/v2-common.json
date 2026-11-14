@@ -15,7 +15,7 @@
         "company": "Notre entreprise",
         "about": "À propos",
         "businesses": "Nos activités",
-        "insights": "Analyses",
+        "insights": "Ressources",
         "contact": "Contact",
         "menu": "Menu",
         "open_menu": "Ouvrir le menu",
@@ -100,13 +100,14 @@
     },
     "fill": {
         "spec_title": "Vous avez une spécification complète ?",
-        "spec_text": "Envoyez-la à l’équipe export, et nous l’étudierons avec vous.",
+        "spec_text": "Envoyez-la à l’équipe export et nous l’étudierons avec vous.",
         "documents_text": "Pour toute question sur les documents, contactez l’équipe export."
     },
     "consent": {
         "title": "Mesure d’audience sur ce navigateur",
         "on": "La mesure d’audience est activée sur ce navigateur.",
         "off": "La mesure d’audience est désactivée sur ce navigateur.",
+        "unset": "Vous n’avez pas encore fait de choix sur ce navigateur. La mesure d’audience suit le réglage par défaut de votre région.",
         "enable": "Activer la mesure d’audience",
         "disable": "Désactiver la mesure d’audience"
     }

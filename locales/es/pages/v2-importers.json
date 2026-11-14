@@ -1,6 +1,6 @@
 {
     "meta": {
-        "title": "Colaboración de suministro de pescado: importadores",
+        "title": "Importadores: colaboración en suministro de pescado",
         "description": "Cómo empezar: envíe sus requisitos, revise la disponibilidad con el equipo de exportación de AZAFCO y acuerde el pedido. Precios confirmados en cada pedido."
     },
     "breadcrumb": "Para importadores",
@@ -9,7 +9,7 @@
         "title": "Inicie una colaboración de suministro de pescado fresco",
         "intro": "Indíquenos la especie, la cantidad y el destino. Nuestro equipo de exportación revisa con usted la disponibilidad y las condiciones comerciales; los precios se confirman en cada pedido.",
         "primary": "Envíe sus requisitos",
-        "secondary": "Escriba a la dirección por WhatsApp",
+        "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Dorada, lubina y tilapia frescas y enteras sobre hielo picado, bajo una luz fría"
     },
     "serve": {
@@ -151,7 +151,7 @@
         "items": [
             {
                 "q": "¿Cómo empezamos a trabajar juntos?",
-                "a": "Envíe sus requisitos por correo electrónico al equipo de exportación, a business@azafco.com.eg, o utilice el mensaje preparado de esta página. Para operaciones rápidas, escriba directamente a nuestra dirección por WhatsApp. Después revisamos con usted la disponibilidad y confirmamos por escrito las condiciones comerciales."
+                "a": "Envíe sus requisitos por correo electrónico al equipo de exportación, a business@azafco.com.eg, o utilice el mensaje preparado de esta página. Para operaciones rápidas, escriba directamente a nuestra gerencia por WhatsApp. Después revisamos con usted la disponibilidad y confirmamos por escrito las condiciones comerciales."
             },
             {
                 "q": "¿Cómo se fijan los precios?",
@@ -195,7 +195,7 @@
             },
             {
                 "q": "¿Cómo sabemos que un mensaje procede realmente de AZAFCO International?",
-                "a": "Nuestros canales oficiales son el correo del equipo de exportación, business@azafco.com.eg, y el WhatsApp de la dirección, +20 100 773 6419. Las condiciones del pedido se confirman por escrito en cada pedido. Si recibe un mensaje sobre su pedido desde cualquier otra dirección o número, compruébelo con nosotros por estos canales antes de actuar."
+                "a": "Nuestros canales oficiales son el correo del equipo de exportación, business@azafco.com.eg, y el WhatsApp de la gerencia, +20 100 773 6419. Las condiciones del pedido se confirman por escrito en cada pedido. Si recibe un mensaje sobre su pedido desde cualquier otra dirección o número, compruébelo con nosotros por estos canales antes de actuar."
             }
         ]
     }

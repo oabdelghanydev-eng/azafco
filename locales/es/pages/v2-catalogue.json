@@ -10,7 +10,7 @@
         "title": "12 especies principales de pescado fresco de Egipto",
         "intro": "Se venden enteras y frescas refrigeradas, calibradas según el peso de cada pieza y envasadas en hielo. Acordamos con usted el calibre, el embalaje y el precio de cada pedido.",
         "primary": "Iniciemos una colaboración",
-        "secondary": "Escriba a la dirección por WhatsApp",
+        "secondary": "Escriba a la gerencia por WhatsApp",
         "whatsapp_message": "Hola, AZAFCO International: estamos revisando su lista de pescado. Especie, destino y cantidad:",
         "facts": {
             "label": "AZAFCO International en cifras",
@@ -177,9 +177,9 @@
         "contact": {
             "eyebrow": "Iniciemos una colaboración",
             "title": "{name}: hable con nosotros",
-            "intro": "Escriba a la dirección por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para especificaciones y documentos.",
+            "intro": "Escriba a la gerencia por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para especificaciones y documentos.",
             "whatsapp_title": "WhatsApp",
-            "whatsapp_sub": "Directo a la dirección · para operaciones rápidas",
+            "whatsapp_sub": "Directo a la gerencia · para operaciones rápidas",
             "whatsapp_message": "Hola, AZAFCO International: nos interesa {name}. Destino y cantidad:",
             "email_title": "Correo electrónico",
             "email_sub": "Equipo de exportación · detalles y documentos",
@@ -218,7 +218,7 @@
             "jumbo": "Jumbo"
         },
         "packs": {
-            "eps_box": "Caja de poliestireno expandido (EPS)",
+            "eps_box": "Caja isotérmica de EPS",
             "carton": "Caja de cartón",
             "plastic_crate": "Caja de plástico",
             "vacuum_pack": "Envasado al vacío",

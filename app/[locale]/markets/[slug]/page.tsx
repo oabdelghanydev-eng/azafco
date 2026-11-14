@@ -14,6 +14,7 @@ import {
     WhatsAppIcon,
     buttonClass,
     cn,
+    isolateStandards,
     typography,
 } from '@/components/ui';
 import FeatureGrid from '@/components/v2/FeatureGrid';
@@ -99,7 +100,7 @@ export default async function MarketDetailPage({ params }: Props) {
         },
         {
             label: t('detail.facts.quality_label'),
-            value: t('detail.facts.quality_value'),
+            value: isolateStandards(t('detail.facts.quality_value')),
             link: { href: routes.quality, label: t('detail.facts.quality_link') },
         },
         { label: t('detail.facts.transport_label'), value: t('detail.facts.transport_value') },
@@ -198,6 +199,7 @@ export default async function MarketDetailPage({ params }: Props) {
             {/* This market on the route map, with links to the other markets (the page's one navy band) */}
             <MarketsIndex
                 headingId="md-markets"
+                compact
                 eyebrow={t('detail.map_eyebrow')}
                 title={t('detail.map_title', { country: inCountry })}
                 intro={t('detail.map_intro')}

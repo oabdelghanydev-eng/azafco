@@ -107,6 +107,7 @@
         "title": "Analyse in diesem Browser",
         "on": "Die Analyse ist in diesem Browser aktiviert.",
         "off": "Die Analyse ist in diesem Browser deaktiviert.",
+        "unset": "Sie haben in diesem Browser noch keine Auswahl getroffen. Die Analyse folgt der Standardeinstellung für Ihre Region.",
         "enable": "Analyse aktivieren",
         "disable": "Analyse deaktivieren"
     }

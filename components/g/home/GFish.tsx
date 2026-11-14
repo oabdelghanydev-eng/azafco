@@ -72,7 +72,7 @@ export default async function GFish() {
                                 <span
                                     lang="la"
                                     dir="ltr"
-                                    className="mt-0.5 block text-left text-caption italic text-fg-muted [overflow-wrap:anywhere] rtl:text-right"
+                                    className="mt-0.5 block hyphens-auto break-words text-left text-micro italic text-fg-muted sm:text-caption rtl:text-right"
                                 >
                                     {s.latin}
                                 </span>

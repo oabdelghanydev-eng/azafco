@@ -21,7 +21,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { phoneDisplay } from '@/components/ui/format';
 import { getPrefillNames } from './options';
-import type { RfqMailCopy } from './compose';
+import { labelSeparator, type RfqMailCopy } from './compose';
 import type { RfqTopic } from './params';
 import RfqRequestPanelView, { type RfqPanelContact, type RfqPanelCopy } from './RfqRequestPanelView';
 import { RfqPanelFromQuery } from './RfqQuery';
@@ -64,6 +64,7 @@ export default async function RfqRequestPanel({ topic = 'general', product, coun
     const mail: RfqMailCopy = {
         text: formatGroup(tt, t.raw('mail'), 'mail.'),
         labels: formatGroup(tt, t.raw('mail.labels'), 'mail.labels.'),
+        separator: labelSeparator(locale),
     };
     const copy: RfqPanelCopy = {
         request: formatGroup(tt, t.raw('request'), 'request.'),

@@ -29,16 +29,27 @@ export interface RfqMessageInput {
     waIntro: string;
     /** WhatsApp: shorter list (prefilled lines + a few identity lines) */
     waLines: RfqLine[];
+    /** Between label and value (labelSeparator); default ": " */
+    separator?: string;
 }
 
 const CRLF = '\r\n';
 
+/**
+ * Label/value separator of the prepared messages. French typography puts a no-break
+ * space before the colon ("Espèce : Tilapia"), as in the /fr/products email template
+ * (catalogue_v2 contact.email_body); every other locale uses ": ".
+ */
+export function labelSeparator(locale: string): string {
+    return locale === 'fr' ? ' : ' : ': ';
+}
+
 /** "Species: Tilapia" or "Company: " (blank after the colon) */
-const line = (l: RfqLine) => `${l.label}: ${l.value?.trim() ?? ''}`;
+const lineWith = (separator = ': ') => (l: RfqLine) => `${l.label}${separator}${l.value?.trim() ?? ''}`;
 
 /** Plain-text email body (CRLF line breaks, as RFC 6068 expects). */
 export function emailBody(m: RfqMessageInput): string {
-    return [m.greeting, '', m.intro, '', ...m.lines.map(line)].join(CRLF);
+    return [m.greeting, '', m.intro, '', ...m.lines.map(lineWith(m.separator))].join(CRLF);
 }
 
 /** mailto: URL with subject and body, both percent-encoded. */
@@ -48,7 +59,7 @@ export function mailtoHref(email: string, m: RfqMessageInput): string {
 
 /** WhatsApp text: shorter than the email. */
 export function whatsappText(m: RfqMessageInput): string {
-    return [m.waIntro, '', ...m.waLines.map(line)].join('\n');
+    return [m.waIntro, '', ...m.waLines.map(lineWith(m.separator))].join('\n');
 }
 
 /**
@@ -67,6 +78,8 @@ export interface RfqMailCopy {
     text: Record<string, string>;
     /** mail.labels.* */
     labels: Record<string, string>;
+    /** labelSeparator(locale); default ": " */
+    separator?: string;
 }
 
 /** Prefill already turned into display text (params.ts labelPrefill). */
@@ -90,6 +103,7 @@ export function buildRfqMessage(topic: Topic, p: RfqMessageValues, copy: RfqMail
 
     if (topic === 'corporate') {
         return {
+            separator: copy.separator,
             subject: T('subject_corporate'),
             greeting: T('greeting'),
             intro: T('intro_corporate'),
@@ -100,6 +114,7 @@ export function buildRfqMessage(topic: Topic, p: RfqMessageValues, copy: RfqMail
     }
     if (topic === 'documents') {
         return {
+            separator: copy.separator,
             subject: p.species ? fill(T('subject_documents_for'), p.species) : T('subject_documents'),
             greeting: T('greeting'),
             intro: T('intro_documents'),
@@ -117,6 +132,7 @@ export function buildRfqMessage(topic: Topic, p: RfqMessageValues, copy: RfqMail
     const item = p.species ?? p.country;
     const base = topic === 'specifications' ? 'specs' : 'quote';
     return {
+        separator: copy.separator,
         subject: item ? fill(T(`subject_${base}_for`), item) : T(`subject_${base}`),
         greeting: T('greeting'),
         intro: T(`intro_${base}`),

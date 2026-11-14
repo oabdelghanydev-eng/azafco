@@ -48,14 +48,14 @@
         "summary_note": "Puede cambiar cualquier línea del mensaje antes de enviarlo.",
         "email_cta": "Correo al equipo de exportación",
         "email_role": "Equipo de exportación · detalles y documentos",
-        "whatsapp_cta": "Escriba a la dirección por WhatsApp",
-        "whatsapp_role": "Directo a la dirección · para operaciones rápidas",
+        "whatsapp_cta": "Escriba a la gerencia por WhatsApp",
+        "whatsapp_role": "Directo a la gerencia · para operaciones rápidas",
         "attach_note": "Si tiene una especificación o ficha de embalaje, adjúntela al correo.",
         "fallback_title": "Si su aplicación de correo no se abre",
         "fallback_text": "Escriba desde el correo de su empresa a esta dirección y use este asunto.",
         "email_label": "Correo electrónico",
         "subject_label": "Asunto",
-        "phone_label": "Teléfono (dirección)"
+        "phone_label": "Teléfono (gerencia)"
     },
     "mail": {
         "greeting": "Estimado equipo de exportación de AZAFCO:",

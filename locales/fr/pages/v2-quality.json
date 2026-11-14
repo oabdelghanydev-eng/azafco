@@ -55,7 +55,7 @@
             },
             "cold": {
                 "title": "Chaîne du froid",
-                "text": "Nos propres entrepôts frigorifiques et camions frigorifiques, puis fret aérien ou routier."
+                "text": "Nos propres entrepôts et camions frigorifiques, puis fret aérien ou routier."
             }
         },
         "link": "Voir toute la chaîne de valeur"
@@ -68,7 +68,7 @@
         "q2": "Comment vérifiez-vous qu’une commande correspond à notre spécification ?",
         "a2": "Nous convenons avec vous de l’espèce, du calibre, du conditionnement et des étiquettes avant la commande. Le poisson est lavé, glacé, calibré au poids et conditionné entier sous glace, puis vérifié par rapport à la spécification convenue avant la fermeture des caisses.",
         "q3": "Comment gardez-vous le poisson au froid jusqu’à l’expédition ?",
-        "a3": "Le poisson est lavé, glacé et conditionné entier sous glace. Nous exploitons nos propres entrepôts frigorifiques et camions frigorifiques, puis nous expédions par fret aérien ou routier. Nous confirmons les exigences de température de votre produit lorsque nous convenons de la commande.",
+        "a3": "Le poisson est lavé, glacé et conditionné entier sous glace. Nous exploitons nos propres entrepôts et camions frigorifiques, puis nous expédions par fret aérien ou routier. Nous confirmons les exigences de température de votre produit lorsque nous convenons de la commande.",
         "q4": "Pouvez-vous répondre aux exigences d’étiquetage ou d’importation de notre marché ?",
         "a4": "Les exigences varient d’un pays à l’autre. Indiquez-nous les vôtres, et nous les étudions pour chaque produit et chaque marché avant de confirmer l’approvisionnement.",
         "q5": "Quelles informations de traçabilité accompagnent une commande ?",

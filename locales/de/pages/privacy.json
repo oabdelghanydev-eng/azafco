@@ -44,7 +44,7 @@
         },
         "hosting": {
             "title": "Hosting",
-            "text": "Die Website wird von Vercel gehostet. Wie jeder Webserver verarbeitet er Ihre IP-Adresse und grundlegende Anfragedaten, um die Seiten auszuliefern."
+            "text": "Die Website wird von Vercel gehostet. Wie jeder Webserver verarbeiten die Server von Vercel Ihre IP-Adresse und grundlegende Anfragedaten, um die Seiten auszuliefern."
         },
         "maps": {
             "title": "Karten und Links zu anderen Diensten",

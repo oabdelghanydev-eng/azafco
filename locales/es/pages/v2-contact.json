@@ -1,25 +1,25 @@
 {
     "meta": {
         "title": "Contacto: WhatsApp, correo, oficina y fábrica",
-        "description": "WhatsApp con la dirección de AZAFCO para operaciones rápidas; correo al equipo de exportación para detalles y documentos. Oficina y fábrica en Kafr el-Sheikh."
+        "description": "WhatsApp con la gerencia de AZAFCO para operaciones rápidas; correo al equipo de exportación para detalles y documentos. Oficina y fábrica en Kafr el-Sheikh."
     },
     "breadcrumb": "Contacto",
     "hero": {
         "eyebrow": "Contacto",
         "title": "Iniciemos una colaboración con un solo mensaje",
-        "intro": "Escriba a la dirección por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para detalles y documentos.",
+        "intro": "Escriba a la gerencia por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para detalles y documentos.",
         "actions": {
-            "whatsapp": "Escriba a la dirección por WhatsApp",
+            "whatsapp": "Escriba a la gerencia por WhatsApp",
             "email": "Correo al equipo de exportación"
         }
     },
     "channels": {
         "eyebrow": "Canales directos",
         "title": "Elija el canal que mejor se adapte a su consulta",
-        "intro": "Un número para la dirección por WhatsApp y por teléfono, y un correo para el equipo de exportación.",
+        "intro": "Un número para la gerencia por WhatsApp y por teléfono, y un correo para el equipo de exportación.",
         "whatsapp": {
             "title": "WhatsApp",
-            "sub": "Directo a la dirección · para operaciones rápidas"
+            "sub": "Directo a la gerencia · para operaciones rápidas"
         },
         "email": {
             "title": "Correo electrónico",
@@ -27,12 +27,12 @@
         },
         "phone": {
             "title": "Teléfono",
-            "sub": "Llame a la dirección al mismo número"
+            "sub": "Llame a la gerencia al mismo número"
         },
         "hours": "Horario de oficina",
         "vcard": {
             "title": "Guarde nuestros datos de contacto",
-            "text": "Una tarjeta de contacto (vCard) que añade a su teléfono el número de la dirección y el correo del equipo de exportación.",
+            "text": "Una tarjeta de contacto (vCard) que añade a su teléfono el número de la gerencia y el correo del equipo de exportación.",
             "action": "Descargar la tarjeta de contacto"
         },
         "new_tab": "(se abre en una pestaña nueva)"
@@ -49,7 +49,7 @@
         "documents_action": "Solicitar documentos",
         "corporate_title": "Colaboración corporativa u otros temas",
         "corporate_text": "Colaboraciones, inversión u otros temas: una breve presentación de su empresa y de la cooperación que propone.",
-        "corporate_action": "Enviar una consulta corporativa"
+        "corporate_action": "Enviar una consulta"
     },
     "locations": {
         "eyebrow": "Ubicaciones",

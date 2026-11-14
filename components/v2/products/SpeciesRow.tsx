@@ -96,11 +96,18 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, image,
             </div>
 
             <div className="col-span-4 min-w-0 sm:col-span-8 lg:col-span-4">
-                <dl className={cn('m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 gap-y-2 border-0 border-s-2 border-solid border-gold ps-5', typography.small)}>
+                {/* Label beside value while the column spans the row (phone, tablet); stacked from lg,
+                    where the column is a third of the row and long es/de/fr labels would squeeze the values */}
+                <dl
+                    className={cn(
+                        'm-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 gap-y-2 border-0 border-s-2 border-solid border-gold ps-5 lg:grid-cols-1 lg:gap-y-3',
+                        typography.small,
+                    )}
+                >
                     {facts.map((f) => (
-                        <div key={f.label} className="contents">
+                        <div key={f.label} className="contents lg:block">
                             <dt className="text-fg-muted">{f.label}</dt>
-                            <dd className="m-0 font-medium text-fg">
+                            <dd className="m-0 font-medium text-fg lg:mt-0.5">
                                 {Array.isArray(f.value) ? (
                                     <ul className="m-0 list-none space-y-1 p-0">
                                         {f.value.map((v) => (
