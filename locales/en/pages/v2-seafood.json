@@ -11,20 +11,9 @@
         "primary": "View our fish",
         "secondary": "Processing and packing"
     },
-    "chain": {
-        "eyebrow": "Value chain",
-        "title": "Farmed and sourced fish, one path",
-        "intro": "Fish we farm and fish we buy from other producers follow the same path, and the specification agreed with you guides every stage.",
-        "farm_title": "Farming and sourcing",
-        "farm_text": "We farm fish and buy from other producers, matched to the species, quantities and timing you need.",
-        "harvest_title": "Harvest",
-        "harvest_text": "Fish are harvested and brought to our plant in Motobas, Kafr El Sheikh.",
-        "pack_title": "Washing, icing and packing",
-        "pack_text": "Fish are washed, iced, graded by weight per piece and packed on ice.",
-        "inspect_title": "Inspection",
-        "inspect_text": "Checked against the agreed specification before the boxes are closed.",
-        "export_title": "Export",
-        "export_text": "Our own refrigerated trucks, then air or road freight."
+    "stages": {
+        "line": "We handle every stage, from the pond to the pallet.",
+        "link": "See the five stages"
     },
     "species": {
         "eyebrow": "Our fish",

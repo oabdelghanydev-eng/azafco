@@ -11,7 +11,8 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
-import { locales, ogLocaleMap, ogImageMap, type Locale, publishedLocales } from '@/i18n';
+import { ogLocaleMap, ogImageMap, type Locale } from '@/i18n';
+import { hreflangAlternates } from '@/components/v2/businesses/pageMetadata';
 import { products, type Product, type ProductCategory } from '@/data/products';
 import { mediaImage, productMediaId, type ImageProps } from '@/lib/v2/media';
 import { productHref } from '@/lib/v2/routes';
@@ -189,9 +190,7 @@ export function pageMetadata({
     siteName: string;
     image?: { url: string; alt: string; width?: number; height?: number };
 }): Metadata {
-    const languages: Record<string, string> = {};
-    for (const l of publishedLocales) languages[l] = `${baseUrl}/${l}${path}`;
-    languages['x-default'] = `${baseUrl}${path}`;
+    const languages = hreflangAlternates(path);
     const og = image ?? { url: ogImageMap[locale as Locale] ?? ogImageMap.en, alt: title, width: 1200, height: 630 };
     return {
         title,

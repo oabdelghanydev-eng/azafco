@@ -12,6 +12,7 @@ import {
     SectionHeading,
     TextLink,
     cn,
+    noBreakValue,
     typography,
 } from '@/components/ui';
 import FAQAccordion from '@/components/v2/FAQAccordion';
@@ -32,13 +33,15 @@ import {
 import { companyConfig } from '@/config/company.config';
 import { locales } from '@/i18n';
 import { getProductBySlug, products } from '@/data/products';
-import { productHref, routes } from '@/lib/v2/routes';
+import { insightHref, productHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const TITLE_MAX = 60; // full <title> incl. the layout's " | AZAFCO" template
 const DESCRIPTION_MAX = 155;
 const CONTACT_ID = 'start-partnership';
+/** The importer guide with the HS codes (data/guides.ts) */
+const HS_GUIDE_SLUG = 'importing-fresh-fish-from-egypt';
 
 // Only the 12 published slugs (data/products.ts `products`) are valid: eel is kept in
 // data but unpublished, so /products/eel 404s. Renamed slugs redirect in next.config.js.
@@ -218,7 +221,7 @@ export default async function ProductDetailPage({ params }: Props) {
                                         <ul className="m-0 list-none space-y-1 p-0">
                                             {spec.grades.map((g) => (
                                                 <li key={g}>
-                                                    <bdi>{g}</bdi>
+                                                    <bdi>{noBreakValue(g)}</bdi>
                                                 </li>
                                             ))}
                                         </ul>
@@ -266,6 +269,9 @@ export default async function ProductDetailPage({ params }: Props) {
                                 {t('detail.docs_email')}
                             </TextLink>
                             <TextLink href={routes.quality}>{t('detail.docs_link')}</TextLink>
+                            <TextLink href={insightHref(HS_GUIDE_SLUG)} dataAttrs={{ 'data-cta': 'product_hs_guide' }}>
+                                {t('detail.docs_guide')}
+                            </TextLink>
                         </div>
                     </div>
                 </Card>

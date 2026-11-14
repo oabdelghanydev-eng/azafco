@@ -1,12 +1,13 @@
 /**
  * generateMetadata helper for the v2 pages owned by page agent C
  * (markets, for-importers, insights, contact, rfq). Canonical + hreflang for
- * published locales (ar/en) + x-default, OpenGraph, Twitter. Candidate for lib/v2.
+ * published locales + x-default (shared hreflangAlternates), OpenGraph, Twitter. Candidate for lib/v2.
  */
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { locales, ogImageMap, ogLocaleMap, type Locale, publishedLocales } from '@/i18n';
+import { ogImageMap, ogLocaleMap, type Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
+import { hreflangAlternates } from '@/components/v2/businesses/pageMetadata';
 
 const baseUrl = companyConfig.contact.baseUrl;
 
@@ -24,9 +25,7 @@ export interface PageMetaInput {
 
 export async function pageMetadata({ locale, path, title, description, type = 'website', publishedTime, modifiedTime, noindex }: PageMetaInput): Promise<Metadata> {
     const site = await getTranslations({ locale, namespace: 'metadata.site' });
-    const languages: Record<string, string> = {};
-    for (const l of publishedLocales) languages[l] = `${baseUrl}/${l}${path}`;
-    languages['x-default'] = `${baseUrl}${path}`;
+    const languages = hreflangAlternates(path);
     const url = `${baseUrl}/${locale}${path}`;
     const image = ogImageMap[locale as Locale] ?? ogImageMap.en;
 

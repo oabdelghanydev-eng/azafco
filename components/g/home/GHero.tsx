@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { StatStrip } from '@/components/ui';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import GHeroSlides, { type GHeroSlide } from './GHeroSlides';
 
 type SlideCopy = Omit<GHeroSlide, 'img' | 'pos'>;
@@ -20,6 +21,10 @@ const SLIDE_MEDIA: Pick<GHeroSlide, 'img' | 'pos'>[] = [
  */
 export default function GHero() {
     const t = useTranslations('g_hero_v2');
+    // Approved WhatsApp button label and the standard prefilled opening (same as header, footer and float)
+    const tFooter = useTranslations('g_footer_v2');
+    const tHeader = useTranslations('g_header_v2');
+    const whatsapp = { href: whatsappLink(tHeader('whatsapp_message')), label: tFooter('float_label'), newTab: tFooter('new_tab') };
 
     const copy = (t.raw('slides') ?? []) as SlideCopy[];
     const slides: GHeroSlide[] = SLIDE_MEDIA.filter((_, k) => copy[k]).map((m, k) => ({ ...copy[k], ...m }));
@@ -28,7 +33,7 @@ export default function GHero() {
     return (
         <>
             <section id="top" data-surface="dark" className="g-font relative overflow-hidden bg-navy-900 text-body text-white">
-                <GHeroSlides slides={slides} groupLabel={t('groupLabel')} ctaPartner={t('ctaPartner')} ctaFish={t('ctaFish')} />
+                <GHeroSlides slides={slides} groupLabel={t('groupLabel')} ctaPartner={t('ctaPartner')} ctaFish={t('ctaFish')} whatsapp={whatsapp} />
             </section>
 
             <StatStrip items={stats} label={t('statsLabel')} className="g-font text-body" />

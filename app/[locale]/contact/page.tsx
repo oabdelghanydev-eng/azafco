@@ -23,17 +23,18 @@ import {
     typography,
 } from '@/components/ui';
 import ContactRoutes from '@/components/v2/contact/ContactRoutes';
-import { resolveRfqParams } from '@/components/v2/rfq/options';
 import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
 import { companyInfo } from '@/data/company';
 import { routes } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import { Link } from '@/navigation';
 
+// No searchParams here: the page is statically rendered (metadata in <head>).
+// ?product= / ?country= are carried into the enquiry routes in the browser (ContactRoutes).
 type Props = {
     params: Promise<{ locale: string }>;
-    searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 /** Factory pin (old site's factory map; RELEASE-DECISIONS §4). Same as the G footer. */
@@ -62,10 +63,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({ locale, path: routes.contact, title: t('title'), description: t('description') });
 }
 
-export default async function ContactPage({ params, searchParams }: Props) {
+export default async function ContactPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const { product, country } = resolveRfqParams(await searchParams);
 
     const t = await getTranslations({ locale, namespace: 'contact_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
@@ -75,10 +75,12 @@ export default async function ContactPage({ params, searchParams }: Props) {
     const newTab = t('channels.new_tab');
     const phone = phoneDisplay(c.whatsappNumber);
     const mailto = `mailto:${c.email}`;
+    // Management WhatsApp with the standard prefilled opening (ledger C12)
+    const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
 
     // Same roles as the G footer: WhatsApp = management direct (fast deals), email = export team.
     const channels = [
-        { key: 'whatsapp', href: c.social.whatsapp, value: phone, icon: <WhatsAppIcon size={24} /> },
+        { key: 'whatsapp', href: waHref, value: phone, icon: <WhatsAppIcon size={24} /> },
         { key: 'email', href: mailto, value: c.email, icon: <MailIcon size={24} /> },
         { key: 'phone', href: `tel:${c.phone}`, value: phone, icon: <PhoneIcon size={24} /> },
     ] as const;
@@ -113,7 +115,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
             <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="contact-title" intro={t('hero.intro')}>
                 <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
                     <Button
-                        href={c.social.whatsapp}
+                        href={waHref}
                         size="lg"
                         stretch="phone"
                         icon={<WhatsAppIcon size={20} />}
@@ -179,7 +181,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
             {/* 03 Enquiry routes → /requirements (prepared email / WhatsApp message; no web form).
                 id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working. */}
             <Section variant="offwhite" id="partnership" labelledBy="contact-routes-title">
-                <ContactRoutes prefillSpecies={product} prefillCountry={country} />
+                <ContactRoutes />
             </Section>
 
             {/* 04 After you write (no-obligation note) + registration, official channels (anti-fraud), privacy */}

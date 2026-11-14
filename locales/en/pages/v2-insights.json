@@ -42,7 +42,6 @@
         "toc": "In this article",
         "sources_side": "Sources",
         "sources_side_text": "{count, plural, one {# official source, listed at the end and linked in the text.} other {# official sources, listed at the end and linked in the text.}}",
-        "back": "All insights",
         "related_title": "Continue with",
         "related": [
             {
@@ -59,15 +58,7 @@
             }
         ],
         "table_mobile_note": "Codes per species",
-        "contact": "Send your requirements",
         "related_eyebrow": "Read next",
         "reading_time": "Reading time"
-    },
-    "cta": {
-        "eyebrow": "Start a partnership",
-        "title": "Ready to talk about supply?",
-        "text": "Send us your species, weight grade, quantity and destination. The export team reviews your requirements and contacts you to confirm the details.",
-        "primary": "Send your requirements",
-        "secondary": "See our fish"
     }
 }

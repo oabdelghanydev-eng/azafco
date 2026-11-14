@@ -4,7 +4,6 @@ import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/serve
 import {
     ArrowIcon,
     Button,
-    Card,
     Eyebrow,
     PageHead,
     Section,
@@ -18,7 +17,7 @@ import {
 import { InsightCard } from '@/components/v2';
 import NewsCard from '@/components/v2/insights/NewsCard';
 import { getMedia, mediaImage } from '@/lib/v2/media';
-import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
+import { insightHref, routes } from '@/lib/v2/routes';
 import { Link } from '@/navigation';
 import { insights, readingMinutes } from '@/components/v2/insights/articles';
 import { industryItems, latestPress, pressItems } from '@/data/news';
@@ -166,6 +165,16 @@ export default async function InsightsPage({ params }: Props) {
                 </Section>
             ) : null}
 
+            {/* Editorial standards (the one navy band; mid-page, so it never sits on the navy footer) */}
+            <Section variant="navy" labelledBy="in-standards" spacing="lg">
+                <div className="max-w-[760px]">
+                    <Eyebrow as="h2" id="in-standards">
+                        {t('standards.title')}
+                    </Eyebrow>
+                    <p className={cn('mb-0 mt-4 text-fg-muted', typography.lead)}>{t('standards.text')}</p>
+                </div>
+            </Section>
+
             {/* 04 News and press teaser */}
             {teaser.length > 0 ? (
                 <Section variant="offwhite" labelledBy="in-news">
@@ -216,39 +225,6 @@ export default async function InsightsPage({ params }: Props) {
                     </ul>
                 </Section>
             ) : null}
-
-            {/* 06 Editorial standards (the one navy band) */}
-            <Section variant="navy" labelledBy="in-standards" spacing="lg">
-                <div className="max-w-[760px]">
-                    <Eyebrow as="h2" id="in-standards">
-                        {t('standards.title')}
-                    </Eyebrow>
-                    <p className={cn('mb-0 mt-4 text-fg-muted', typography.lead)}>{t('standards.text')}</p>
-                </div>
-            </Section>
-
-            {/* 07 Closing: requirements or the fish */}
-            <Section variant="offwhite" labelledBy="in-cta">
-                <Card accent padding="lg">
-                    <div className="lg:flex lg:items-end lg:justify-between lg:gap-16">
-                        <div className="max-w-[680px]">
-                            <Eyebrow className="mb-3">{t('cta.eyebrow')}</Eyebrow>
-                            <h2 id="in-cta" className={cn('m-0 text-ink', typography.h2Sm)}>
-                                {t('cta.title')}
-                            </h2>
-                            <p className={cn('m-0 mt-4 text-ink-muted', typography.body)}>{t('cta.text')}</p>
-                        </div>
-                        <div className="mt-8 grid shrink-0 gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-0">
-                            <Button href={rfqHref()} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'insights_requirements' }}>
-                                {t('cta.primary')}
-                            </Button>
-                            <Button href={routes.products} variant="outline" size="lg" stretch="phone">
-                                {t('cta.secondary')}
-                            </Button>
-                        </div>
-                    </div>
-                </Card>
-            </Section>
         </>
     );
 }

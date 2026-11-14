@@ -1,27 +1,21 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
-    BoxIcon,
     Breadcrumbs,
     Button,
     CheckIcon,
-    ClipboardCheckIcon,
-    CrateIcon,
     Eyebrow,
-    HarvestNetIcon,
     MailIcon,
     PageHero,
     Section,
     SectionHeading,
     TextLink,
-    TruckIcon,
     cn,
     typography,
 } from '@/components/ui';
 import FeatureGrid from '@/components/v2/FeatureGrid';
 import HeadingPhoto from '@/components/v2/HeadingPhoto';
 import Pending from '@/components/v2/Pending';
-import ProcessSteps from '@/components/v2/ProcessSteps';
 import SpeciesIndex from '@/components/v2/seafood/SpeciesIndex';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { routes } from '@/lib/v2/routes';
@@ -52,15 +46,6 @@ export default async function SeafoodPage({ params }: Props) {
     // Published species only (eel is kept in data but unpublished)
     const catalogue = await getCatalogue(locale);
 
-    // The five approved value-chain stages (RELEASE-DECISIONS, 14 Nov 2026)
-    const chain = ['farm', 'harvest', 'pack', 'inspect', 'export'] as const;
-    const chainIcons = {
-        farm: <HarvestNetIcon size={24} />,
-        harvest: <CrateIcon size={24} />,
-        pack: <BoxIcon size={24} />,
-        inspect: <ClipboardCheckIcon size={24} />,
-        export: <TruckIcon size={24} />,
-    };
     const docsHref = `mailto:${companyConfig.contact.email}?subject=${encodeURIComponent(t('quality.docs_subject'))}`;
     const requirements = ['format', 'grade', 'weight', 'packing', 'destination'] as const;
     const audience = ['importers', 'distributors', 'foodservice', 'horeca', 'partners'] as const;
@@ -99,12 +84,14 @@ export default async function SeafoodPage({ params }: Props) {
                 }
             />
 
-            {/* Buyer-spec language in the first scroll */}
-            <Section variant="white" labelledBy="seafood-chain">
-                <SectionHeading id="seafood-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
-                <ProcessSteps
-                    steps={chain.map((k) => ({ title: t(`chain.${k}_title`), description: t(`chain.${k}_text`), icon: chainIcons[k] }))}
-                />
+            {/* One line instead of the five-stage chain (the stages live on /processing) */}
+            <Section as="div" variant="white" spacing="sm">
+                <div className="flex flex-col items-start gap-1 border-0 border-s-2 border-solid border-gold ps-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                    <p className={cn('m-0 font-semibold text-fg', typography.lead)}>{t('stages.line')}</p>
+                    <TextLink href={routes.processing} className="shrink-0" dataAttrs={{ 'data-cta': 'seafood_stages' }}>
+                        {t('stages.link')}
+                    </TextLink>
+                </div>
             </Section>
 
             <Section variant="offwhite" labelledBy="seafood-species">

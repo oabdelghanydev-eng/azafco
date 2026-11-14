@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { routes } from '@/lib/v2/routes';
+import { activeMarketSlugs } from '@/data/markets';
+import { activeMarketConfigs } from '@/components/v2/markets/marketData';
 import { Eyebrow, cn, typography, TextLink } from '@/components/ui';
 import styles from './GMarkets.module.css';
 import { FLAGS, MAP_COUNTRIES, PLANNED_FLAGS } from './gMarketsMap';
@@ -37,6 +39,12 @@ const MARKETS = [
 }>;
 
 const PLANNED = ['eu', 'ru', 'us'] as const;
+
+/** /markets/<slug> for a map code (flag code = ISO country code), only where that page exists. */
+function marketHref(code: string): string | undefined {
+    const key = activeMarketConfigs.find((c) => c.countryCode.toLowerCase() === code)?.key;
+    return key && activeMarketSlugs.includes(key) ? `${routes.markets}/${key}` : undefined;
+}
 
 const M_CLASS = [styles.m0, styles.m1, styles.m2, styles.m3, styles.m4, styles.m5, styles.m6];
 
@@ -131,11 +139,16 @@ function MarketsMap({ variant, label, origin, shortNames }: MapProps) {
 export default async function GMarkets() {
     const t = await getTranslations('g_markets_v2');
 
-    const items = MARKETS.map((m) => ({
-        code: m.code,
-        name: t(`markets.${m.code}.name`),
-        since: t('since', { year: String(m.since) }),
-    }));
+    const items = MARKETS.map((m) => {
+        const name = t(`markets.${m.code}.name`);
+        return {
+            code: m.code,
+            name,
+            since: t('since', { year: String(m.since) }),
+            href: marketHref(m.code),
+            linkLabel: t('marketLink', { name }),
+        };
+    });
     const shortNames = MARKETS.map((m) => t(`markets.${m.code}.short`));
     const mapLabel = t('mapLabel');
     const origin = t('origin');

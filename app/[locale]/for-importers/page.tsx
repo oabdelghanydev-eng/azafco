@@ -16,10 +16,8 @@ import FAQAccordion from '@/components/v2/FAQAccordion';
 import FeatureGrid from '@/components/v2/FeatureGrid';
 import ProcessSteps from '@/components/v2/ProcessSteps';
 import { marketStepIcons } from '@/components/v2/markets/stepIcons';
-import { insightHref, routes } from '@/lib/v2/routes';
-import { companyConfig } from '@/config/company.config';
-import RfqRequestPanel from '@/components/v2/rfq/RfqRequestPanel';
-import RfqAside from '@/components/v2/rfq/RfqAside';
+import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 
@@ -32,13 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({ locale, path: routes.forImporters, title: t('title'), description: t('description') });
 }
 
-const RFQ_ANCHOR = 'request';
-
 export default async function ForImportersPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'importers_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
+    // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
+    const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
 
     const serve = t.raw('serve.items') as Item[];
     const steps = t.raw('process.steps') as Item[];
@@ -71,11 +69,11 @@ export default async function ForImportersPage({ params }: Props) {
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 actions={
                     <>
-                        <Button href={`${routes.forImporters}#${RFQ_ANCHOR}`} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'importers_hero_requirements' }}>
+                        <Button href={rfqHref()} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'importers_hero_requirements' }}>
                             {t('hero.primary')}
                         </Button>
                         <Button
-                            href={companyConfig.contact.social.whatsapp}
+                            href={waHref}
                             variant="outline"
                             size="lg"
                             stretch="phone"
@@ -173,18 +171,6 @@ export default async function ForImportersPage({ params }: Props) {
                     <div className="lg:col-span-8">
                         <FAQAccordion items={faq} />
                     </div>
-                </div>
-            </Section>
-
-            {/* 08 Send your requirements: prepared email / WhatsApp messages (no web form) */}
-            <Section variant="offwhite" labelledBy="fi-rfq" id={RFQ_ANCHOR}>
-                <SectionHeading id="fi-rfq" eyebrow={t('rfq.eyebrow')} title={t('rfq.title')} intro={t('rfq.intro')} />
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-                    <div className="lg:order-2 lg:col-span-8">
-                        <RfqRequestPanel topic="general" idPrefix="fi-rfq" headingAs="h3" />
-                    </div>
-                    {/* short: the 'what to prepare' list already has its own section (04) */}
-                    <RfqAside short headingAs="h3" className="lg:order-1 lg:col-span-4" />
                 </div>
             </Section>
         </>

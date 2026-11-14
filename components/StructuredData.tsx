@@ -16,12 +16,14 @@
  * - identity = legal name, commercial register and tax card (the same numbers shown on /contact and in the footer)
  * - founder is emitted only when schema.founder exists (removed until the owner confirms the spelling)
  * - markets = active markets from companyConfig (7), no price, no MOQ, no reply time
+ * - no offers or prices: no hasOfferCatalog, makesOffer or priceRange (prices are confirmed per order)
+ * - Organization and WebSite `name` = companyConfig.identity.tradeName (English) in every locale,
+ *   so the shared @id nodes agree; the localized name goes into alternateName
  */
 
 import { getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { ogImageMap, Locale } from '@/i18n';
-import { products } from '@/data/products';
 import { routes } from '@/lib/v2/routes';
 
 type PageType = 'home' | 'about' | 'contact' | 'markets';
@@ -140,22 +142,25 @@ function areaServedCountries(t: RootT) {
 // ═══════════════════════════════════════════════════════════════
 export default async function StructuredData({ locale }: { locale: string }) {
     const t = await rootT(locale);
-    const localeUrl = `${baseUrl}/${locale}`;
     const schemaImage = `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`;
 
-    const alternateNames = rawStrings(t, 'schema.alternateNames');
-    const services = rawOr<Record<string, { name: string; description: string }>>(t, 'schema.services', {});
+    // English brand name in every locale (one entity, one name); the localized name
+    // (AR ازافكو العالمية) is listed as an alternate name instead.
+    const brandName = companyConfig.identity.tradeName;
+    const localizedName = opt(t, 'schema.companyName');
+    const alternateNames = Array.from(
+        new Set([...(localizedName && localizedName !== brandName ? [localizedName] : []), ...rawStrings(t, 'schema.alternateNames')])
+    ).filter(n => n !== brandName);
     const credentials = rawOr<{ name: string; description: string }[]>(t, 'schema.credentials', []);
     const certificationBody = opt(t, 'schema.certificationBody');
     const founderName = opt(t, 'schema.founder');
-    const catalogName = opt(t, 'schema.catalogName');
     const commercialRegister = companyConfig.registration.commercialRegister;
 
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': `${baseUrl}/#organization`,
-        name: t('schema.companyName'),
+        name: brandName,
         legalName: opt(t, 'schema.legalName') ?? companyConfig.identity.legalName,
         alternateName: alternateNames,
         url: baseUrl,
@@ -214,22 +219,6 @@ export default async function StructuredData({ locale }: { locale: string }) {
             description: c.description,
             credentialCategory: opt(t, 'schema.credentialCategory'),
             recognizedBy: certificationBody ? { '@type': 'Organization', name: certificationBody } : undefined
-        })),
-        hasOfferCatalog: catalogName && {
-            '@type': 'OfferCatalog',
-            name: catalogName,
-            description: opt(t, 'schema.catalogDesc'),
-            url: `${localeUrl}${routes.products}`,
-            numberOfItems: products.length
-        },
-        makesOffer: Object.values(services).map(service => ({
-            '@type': 'Offer',
-            itemOffered: {
-                '@type': 'Service',
-                name: service.name,
-                description: service.description,
-                provider: { '@id': `${baseUrl}/#organization` }
-            }
         }))
     };
 
@@ -237,7 +226,7 @@ export default async function StructuredData({ locale }: { locale: string }) {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         '@id': `${baseUrl}/#website`,
-        name: t('schema.websiteName'),
+        name: brandName,
         alternateName: alternateNames,
         url: baseUrl,
         description: opt(t, 'schema.websiteDescription'),
@@ -271,7 +260,6 @@ export async function PageStructuredData({ locale, pageType }: { locale: string;
             url: localeUrl,
             telephone: companyConfig.contact.whatsapp,
             email: companyConfig.contact.email,
-            priceRange: opt(t, 'schema.priceRange'),
             parentOrganization: { '@id': `${baseUrl}/#organization` },
             address: factoryAddress,
             geo: {

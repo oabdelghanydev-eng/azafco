@@ -23,7 +23,7 @@ import {
     typography,
 } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -190,27 +190,6 @@ export default async function ProcessingPage({ params }: Props) {
                 <div className="mt-4">
                     <Pending label={t('pending.pack_formats')} />
                 </div>
-            </Section>
-
-            {/* Closing action (DESIGN-SYSTEM §6.3: offwhite section + accent card) */}
-            <Section variant="offwhite" labelledBy="processing-closing" reveal={false}>
-                <Card accent padding="lg">
-                    <div className="max-w-[760px]">
-                        <Eyebrow className="mb-3 lg:mb-4">{t('closing.eyebrow')}</Eyebrow>
-                        <h2 id="processing-closing" className={`v2-heading m-0 ${typography.h2}`}>
-                            {t('closing.title')}
-                        </h2>
-                        <p className="mb-0 mt-4 text-ink-muted">{t('closing.text')}</p>
-                    </div>
-                    <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                        <Button href={routes.contact} size="lg" stretch="phone" dataAttrs={{ 'data-cta': 'processing_closing_partner' }}>
-                            {t('closing.primary')}
-                        </Button>
-                        <Button href={rfqHref({ type: 'specifications' })} variant="outline" size="lg" stretch="phone">
-                            {t('closing.secondary')}
-                        </Button>
-                    </div>
-                </Card>
             </Section>
         </div>
     );

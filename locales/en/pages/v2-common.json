@@ -37,8 +37,6 @@
         "contact_export_team": "Contact our export team",
         "send_requirements": "Send your requirements",
         "start_partnership": "Start a partnership",
-        "whatsapp_management": "WhatsApp · direct to management",
-        "email_export_team": "Email the export team",
         "request_document_pack": "Ask the export team about documents"
     },
     "breadcrumbs": {
@@ -81,22 +79,6 @@
         "read_article": "Read article",
         "minutes": "{count} min read"
     },
-    "cta_band": {
-        "eyebrow": "Start a partnership",
-        "title": "Every shipment starts with a message",
-        "intro": "Tell us the species, quantity and destination. Our export team will review supply and commercial terms.",
-        "whatsapp_title": "WhatsApp",
-        "whatsapp_sub": "Direct to management · for fast deals",
-        "email_title": "Email",
-        "email_sub": "Export team · details and documents",
-        "after_title": "What happens next",
-        "after_free": "Sending your requirements does not commit you to an order",
-        "after_1": "The export team reviews your requirements",
-        "after_2": "We contact you to confirm the details",
-        "after_3": "Prices confirmed per order, subject to availability and the agreed specification",
-        "email_subject": "Enquiry from azafco.com.eg: {topic}",
-        "email_topic_general": "general"
-    },
     "faq": {
         "toggle_hint": "Show answer"
     },
@@ -120,5 +102,12 @@
         "spec_title": "Have a full specification?",
         "spec_text": "Send it to the export team and we will review it with you.",
         "documents_text": "For document questions, contact the export team."
+    },
+    "consent": {
+        "title": "Cookies and analytics",
+        "text": "With your consent, we use cookies from Google Analytics and Microsoft Clarity to see how the site is used and to measure our marketing. If you reject, they stay off.",
+        "accept": "Accept",
+        "reject": "Reject",
+        "privacy": "Privacy policy"
     }
 }

@@ -128,12 +128,6 @@
         "text": "Tell us your destination. Our export team reviews each new market case by case.",
         "action": "Contact the export team"
     },
-    "closing": {
-        "eyebrow": "Next step",
-        "title": "Tell us your market and what you need",
-        "text": "Message our management on WhatsApp for fast deals, or email the export team for details and documents.",
-        "primary": "Start a partnership"
-    },
     "disclaimer": "Every shipment depends on the import rules of the destination, current supply and the order terms agreed in writing.",
     "regions": {
         "gulf": "Gulf",

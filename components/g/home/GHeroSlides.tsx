@@ -4,6 +4,7 @@ import { routes } from '@/lib/v2/routes';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
+import { WhatsAppIcon } from '@/components/ui/icons';
 import { Eyebrow } from '@/components/ui/Layout';
 import { cn, containerClass, focusRing, typography } from '@/components/ui/tokens';
 
@@ -23,6 +24,8 @@ interface Props {
     groupLabel: string;
     ctaPartner: string;
     ctaFish: string;
+    /** Below lg the secondary button is WhatsApp to management (prefilled wa.me link from the server) */
+    whatsapp: { href: string; label: string; newTab: string };
 }
 
 /**
@@ -45,7 +48,7 @@ const tabScrim = 'absolute inset-x-0 bottom-0 hidden h-60 bg-gradient-to-t from-
  * Sits inside the hero <section data-surface="dark">, so the eyebrow, the outline
  * button and the focus ring take their on-navy colours from the surface tokens.
  */
-export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish }: Props) {
+export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish, whatsapp }: Props) {
     const [active, setActive] = useState(0);
     // Slide images are mounted only once a slide is wanted (picked, or its tab hovered/focused),
     // so slides 2-4 never download unless the visitor asks for them and never compete with the LCP image.
@@ -117,7 +120,28 @@ export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish }:
                         <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'home_hero_partner' }}>
                             {ctaPartner}
                         </Button>
-                        <Button href="#fish" external variant="outline" size="lg" stretch="phone" dataAttrs={{ 'data-cta': 'home_hero_fish' }}>
+                        {/* Phone and tablet: WhatsApp to management; desktop: see our fish (ledger C12) */}
+                        <Button
+                            href={whatsapp.href}
+                            variant="outline"
+                            size="lg"
+                            stretch="phone"
+                            icon={<WhatsAppIcon size={20} />}
+                            newTabLabel={whatsapp.newTab}
+                            className="lg:hidden"
+                            dataAttrs={{ 'data-cta': 'home_hero_whatsapp' }}
+                        >
+                            {whatsapp.label}
+                        </Button>
+                        <Button
+                            href="#fish"
+                            external
+                            variant="outline"
+                            size="lg"
+                            stretch="phone"
+                            className="hidden lg:inline-flex"
+                            dataAttrs={{ 'data-cta': 'home_hero_fish' }}
+                        >
                             {ctaFish}
                         </Button>
                     </div>

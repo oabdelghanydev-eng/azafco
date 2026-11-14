@@ -19,13 +19,12 @@ import {
 import FeatureGrid from '@/components/v2/FeatureGrid';
 import ProcessSteps from '@/components/v2/ProcessSteps';
 import { insightHref, productHref, rfqHref, routes } from '@/lib/v2/routes';
-import { companyConfig } from '@/config/company.config';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import { Link } from '@/navigation';
 import { products } from '@/data/products';
 import { activeMarketSlugs } from '@/data/markets';
 import { activeMarketConfigs, getActiveMarketConfig, pausedMarkets, plannedMarkets, regionOf } from '@/components/v2/markets/marketData';
 import MarketsIndex from '@/components/v2/markets/MarketsIndex';
-import MarketsClosing from '@/components/v2/markets/MarketsClosing';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 import { marketStepIcons } from '@/components/v2/markets/stepIcons';
@@ -74,6 +73,8 @@ export default async function MarketDetailPage({ params }: Props) {
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
     const tp = await getTranslations({ locale, namespace: 'data.products' });
+    // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
+    const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
     // Bare name for breadcrumbs and headings that start with it; sentence form inside running text
     const country = tm(`${market.key}.country`);
     const inCountry = sentenceName(tm, market.key);
@@ -143,7 +144,7 @@ export default async function MarketDetailPage({ params }: Props) {
                             {t('detail.primary')}
                         </Button>
                         <Button
-                            href={companyConfig.contact.social.whatsapp}
+                            href={waHref}
                             variant="outline"
                             size="lg"
                             stretch="phone"
@@ -227,22 +228,9 @@ export default async function MarketDetailPage({ params }: Props) {
             <Section variant="white" labelledBy="md-process">
                 <SectionHeading id="md-process" size="md" eyebrow={t('process.eyebrow')} title={t('process.title')} />
                 <ProcessSteps steps={steps.map((s, i) => ({ title: s.title, description: s.text, icon: marketStepIcons[i] }))} />
+                {/* Kept from the removed closing card (the G footer carries the contact block) */}
+                <p className={cn('m-0 mt-10 border-0 border-t border-solid border-rule pt-5 text-fg-muted', typography.caption)}>{t('disclaimer')}</p>
             </Section>
-
-            {/* Closing: one accent card (WhatsApp = management, email = export team); the G footer follows */}
-            <MarketsClosing
-                headingId="md-contact"
-                eyebrow={t('closing.eyebrow')}
-                title={t('closing.title')}
-                text={t('closing.text')}
-                primary={{ label: t('closing.primary'), href: rfqHref({ country: market.countryCode, type: 'market' }) }}
-                whatsappLabel={tv('cta.whatsapp_management')}
-                emailLabel={tv('cta.email_export_team')}
-                emailSubject={tv('cta_band.email_subject', { topic: country })}
-                newTabLabel={newTab}
-                disclaimer={t('disclaimer')}
-                cta="market"
-            />
         </>
     );
 }

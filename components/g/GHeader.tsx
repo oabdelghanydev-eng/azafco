@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { localeConfig, type Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import { phoneDisplay } from '@/components/ui/format';
 import GHeaderClient from './GHeaderClient';
 import { G_NAV_KEYS_WITH_CONTACT, type GNavKey } from './nav';
@@ -22,7 +23,7 @@ export default function GHeader() {
             locale={locale}
             langName={langName}
             langs={publishedLangs()}
-            whatsappHref={companyConfig.contact.social.whatsapp}
+            whatsappHref={whatsappLink(t('whatsapp_message'))}
             phone={phoneDisplay(companyConfig.contact.whatsappNumber)}
             copy={{
                 homeLabel: t('home_label'),

@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "The site sets one cookie of its own (NEXT_LOCALE) to remember your language. Google Analytics, Microsoft Clarity and Google Maps may set their own cookies. You can block or delete cookies in your browser settings; the site still works without them."
+            "text": "The site sets one cookie of its own (NEXT_LOCALE) to remember your language. Google Analytics and Microsoft Clarity run only if you accept them in the cookie banner; you can change your choice at any time with \"Cookie settings\" at the bottom of every page. Google Maps may set its own cookies when a map loads. You can also block or delete cookies in your browser settings; the site still works without them."
         },
         "sharing": {
             "title": "Sharing",

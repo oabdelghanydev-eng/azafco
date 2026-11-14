@@ -43,7 +43,7 @@ export default function MarketNotes({ items, buyersLabel, detailsLabel, newMarke
                 >
                     <div className="flex items-center gap-3">
                         <span aria-hidden="true" className="relative h-10 w-10 flex-none overflow-hidden rounded-full bg-white ring-1 ring-line">
-                            <Image src={flagSrc(m.countryCode)} alt="" fill sizes="40px" className="object-cover" />
+                            <Image src={flagSrc(m.countryCode)} alt="" aria-hidden="true" fill sizes="40px" className="object-cover" />
                         </span>
                         <h3 className={cn('m-0 min-w-0 flex-1 text-ink', typography.h3)}>
                             <Link

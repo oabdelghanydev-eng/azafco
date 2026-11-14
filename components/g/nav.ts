@@ -10,14 +10,24 @@ export type GNavKey = (typeof G_NAV_KEYS)[number] | 'contact';
 /** Header order: the five board items, then Contact */
 export const G_NAV_KEYS_WITH_CONTACT: readonly GNavKey[] = [...G_NAV_KEYS, 'contact'];
 
-/** Real route behind each board anchor (inner pages link here). */
-export const G_NAV_ROUTE: Record<GNavKey, string> = {
+/** Footer only: two more pages the header does not list (internal links to /seafood and /insights). */
+export const G_FOOTER_EXTRA_KEYS = ['seafood', 'insights'] as const;
+export type GFooterExtraKey = (typeof G_FOOTER_EXTRA_KEYS)[number];
+export type GFooterNavKey = (typeof G_NAV_KEYS)[number] | GFooterExtraKey;
+
+/** Footer order: the five board items, then Seafood and Insights. */
+export const G_FOOTER_NAV_KEYS: readonly GFooterNavKey[] = [...G_NAV_KEYS, ...G_FOOTER_EXTRA_KEYS];
+
+/** Real route behind each nav item (header and footer). */
+export const G_NAV_ROUTE: Record<GNavKey | GFooterExtraKey, string> = {
     about: routes.about,
     fish: routes.products,
     chain: routes.processing,
     quality: routes.quality,
     markets: routes.markets,
     contact: routes.contact,
+    seafood: routes.seafood,
+    insights: routes.insights,
 };
 
 /**

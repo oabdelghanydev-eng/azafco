@@ -42,20 +42,9 @@
         "motobas": "New plant opened in the Motobas Industrial Zone, Kafr El Sheikh",
         "governor": "Visit by the Governor of Kafr El Sheikh to our Motobas plant"
     },
-    "operations": {
-        "eyebrow": "What we do",
-        "title": "Every stage is handled by AZAFCO",
-        "intro": "We farm and source the fish, prepare it at our own plant and move it in our own refrigerated trucks, so you deal with one company from the pond to the pallet.",
-        "s1_title": "Farming and sourcing",
-        "s1_text": "We farm our own fish and also buy from other producers. All of it is washed, graded and inspected at our own plant.",
-        "s2_title": "Harvest",
-        "s2_text": "The fish is harvested and taken to our plant in Motobas, Kafr El Sheikh.",
-        "s3_title": "Washing, icing and packing",
-        "s3_text": "Washed, iced, graded by weight and packed whole on ice.",
-        "s4_title": "Inspection",
-        "s4_text": "Checked against the agreed specification before the boxes are closed.",
-        "s5_title": "Export",
-        "s5_text": "Our own refrigerated trucks, then air or road freight."
+    "stages": {
+        "line": "We handle every stage, from the pond to the pallet.",
+        "link": "See the five stages"
     },
     "businesses": {
         "eyebrow": "Our businesses",

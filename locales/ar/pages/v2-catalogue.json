@@ -62,7 +62,9 @@
         "origin": "المنشأ",
         "origin_value": "مصر",
         "water": "نوع المياه",
-        "grades": "فئات الوزن (استرشادية)"
+        "grades": "فئات الوزن (استرشادية)",
+        "grades_label": "فئات الوزن",
+        "grades_per_order": "تُحدد مع كل طلب"
     },
     "browser": {
         "search_label": "ابحث عن صنف",
@@ -157,6 +159,7 @@
         "docs_email": "راسل فريق التصدير",
         "docs_subject": "{name}: المستندات المطلوبة لسوقنا",
         "docs_link": "الجودة والشهادات",
+        "docs_guide": "دليل أكواد HS ومستندات التصدير",
         "related_eyebrow": "أصناف أخرى",
         "related_title": "أصناف ذات صلة",
         "faq_title": "أسئلة عن طلب {name}",

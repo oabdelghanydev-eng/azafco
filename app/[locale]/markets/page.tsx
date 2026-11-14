@@ -20,7 +20,6 @@ import { insightHref, routes } from '@/lib/v2/routes';
 import { activeMarketConfigs, pausedMarkets, plannedMarkets } from '@/components/v2/markets/marketData';
 import MarketsIndex from '@/components/v2/markets/MarketsIndex';
 import MarketNotes from '@/components/v2/markets/MarketNotes';
-import MarketsClosing from '@/components/v2/markets/MarketsClosing';
 import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import { PageStructuredData } from '@/components/StructuredData';
 
@@ -37,7 +36,6 @@ export default async function MarketsPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'markets_v2' });
-    const tv = await getTranslations({ locale, namespace: 'v2' });
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
 
     const stats = t.raw('stats') as { value: string; label: string }[];
@@ -80,7 +78,7 @@ export default async function MarketsPage({ params }: Props) {
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
                 actions={
                     <>
-                        <Button href={`${routes.forImporters}#request`} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'markets_hero_partnership' }}>
+                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'markets_hero_partnership' }}>
                             {t('hero.primary')}
                         </Button>
                         <Button href={routes.products} variant="outline" size="lg" stretch="phone">
@@ -158,22 +156,9 @@ export default async function MarketsPage({ params }: Props) {
                         </div>
                     </div>
                 </div>
+                {/* Kept from the removed closing card (the G footer carries the contact block) */}
+                <p className={cn('m-0 mt-12 border-0 border-t border-solid border-rule pt-5 text-fg-muted', typography.caption)}>{t('disclaimer')}</p>
             </Section>
-
-            {/* Closing: one accent card (WhatsApp = management, email = export team); the G footer follows */}
-            <MarketsClosing
-                headingId="mk-contact"
-                eyebrow={t('closing.eyebrow')}
-                title={t('closing.title')}
-                text={t('closing.text')}
-                primary={{ label: t('closing.primary'), href: `${routes.forImporters}#request` }}
-                whatsappLabel={tv('cta.whatsapp_management')}
-                emailLabel={tv('cta.email_export_team')}
-                emailSubject={tv('cta_band.email_subject', { topic: t('breadcrumb') })}
-                newTabLabel={tv('cta.opens_new_tab')}
-                disclaimer={t('disclaimer')}
-                cta="markets"
-            />
         </>
     );
 }

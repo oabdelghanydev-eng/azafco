@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
-import { ArrowIcon, Badge, cn, focusRing, typography } from '@/components/ui';
+import { ArrowIcon, Badge, cn, focusRing, noBreakValue, typography } from '@/components/ui';
 import type { ImageProps } from '@/lib/v2/media';
 
 /**
@@ -63,7 +63,7 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, image,
                 {image ? (
                     <Image
                         src={image.src}
-                        alt=""
+                        alt={image.alt}
                         fill
                         sizes="(min-width: 1320px) 400px, (min-width: 1024px) 30vw, (min-width: 640px) 36vw, 100vw"
                         className={fishClass(image)}
@@ -105,12 +105,12 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, image,
                                     <ul className="m-0 list-none space-y-1 p-0">
                                         {f.value.map((v) => (
                                             <li key={v}>
-                                                <bdi>{v}</bdi>
+                                                <bdi>{noBreakValue(v)}</bdi>
                                             </li>
                                         ))}
                                     </ul>
                                 ) : (
-                                    f.value
+                                    noBreakValue(f.value)
                                 )}
                             </dd>
                         </div>
@@ -156,7 +156,7 @@ export function SpeciesEntry({ name, scientificName, href, image, headingAs: H =
                 {image ? (
                     <Image
                         src={image.src}
-                        alt=""
+                        alt={image.alt}
                         fill
                         sizes="(min-width: 1320px) 400px, (min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                         className={fishClass(image)}

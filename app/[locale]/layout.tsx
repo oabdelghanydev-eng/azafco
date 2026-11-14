@@ -13,6 +13,9 @@ import GHeader from '@/components/g/GHeader';
 import GFooter from '@/components/g/GFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
 import RevealSections from '@/components/v2/RevealSections';
+import ConsentBanner, { type ConsentBannerCopy } from '@/components/v2/ConsentBanner';
+import { CONSENT_STORAGE_KEY, CONSENT_TYPES } from '@/components/v2/consent';
+import { routes } from '@/lib/v2/routes';
 import '../globals.css';
 
 // Design G typography: Manrope for Latin and Cyrillic, IBM Plex Sans Arabic for Arabic.
@@ -134,7 +137,21 @@ export default async function RootLayout({
 
     // Get direction for the locale
     const dir = localeConfig[locale as Locale]?.dir || 'ltr';
-    const skipLabel = (await getTranslations({ locale, namespace: 'v2' }))('skip_to_main');
+    const tv = await getTranslations({ locale, namespace: 'v2' });
+    const skipLabel = tv('skip_to_main');
+
+    // Consent banner copy (v2.consent). es/ru/de/fr fall back to English until translated.
+    const tConsent = tv.has('consent.title') ? tv : await getTranslations({ locale: 'en', namespace: 'v2' });
+    const consentCopy: ConsentBannerCopy = {
+        title: tConsent('consent.title'),
+        text: tConsent('consent.text'),
+        accept: tConsent('consent.accept'),
+        reject: tConsent('consent.reject'),
+        privacy: tConsent('consent.privacy'),
+    };
+    const gaId = companyConfig.analytics.googleAnalyticsId;
+    const consentDenied = JSON.stringify(Object.fromEntries(CONSENT_TYPES.map((k) => [k, 'denied'])));
+    const consentGranted = JSON.stringify(Object.fromEntries(CONSENT_TYPES.map((k) => [k, 'granted'])));
 
     return (
         <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
@@ -177,16 +194,21 @@ export default async function RootLayout({
                     </div>
                     <MobileQuoteBar />
                     <RevealSections />
+                    {/* Cookie consent: GA Consent Mode update + Microsoft Clarity only after Accept */}
+                    <ConsentBanner copy={consentCopy} clarityId={companyConfig.analytics.clarityId} privacyHref={routes.privacy} />
                 </NextIntlClientProvider>
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}
                 {process.env.NODE_ENV === 'production' && <Analytics />}
 
-                {/* Google Analytics 4 - Best Practice: afterInteractive */}
+                {/* Google Analytics 4 with Consent Mode v2: every consent type defaults to 'denied'
+                    before the config call (cookieless pings only). A visitor who accepted earlier
+                    (localStorage, see components/v2/ConsentBanner.tsx) is granted again before the
+                    first hit. Microsoft Clarity is not loaded here: ConsentBanner injects it after Accept. */}
                 <Script
                     id="ga4-gtag"
                     strategy="afterInteractive"
-                    src={`https://www.googletagmanager.com/gtag/js?id=${companyConfig.analytics.googleAnalyticsId}`}
+                    src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
                 />
                 <Script
                     id="ga4-config"
@@ -195,23 +217,15 @@ export default async function RootLayout({
                         __html: `
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
+                            window.gtag = gtag;
+                            gtag('consent', 'default', Object.assign(${consentDenied}, { wait_for_update: 500 }));
+                            try {
+                                if (localStorage.getItem('${CONSENT_STORAGE_KEY}') === 'granted') {
+                                    gtag('consent', 'update', ${consentGranted});
+                                }
+                            } catch (e) {}
                             gtag('js', new Date());
-                            gtag('config', '${companyConfig.analytics.googleAnalyticsId}');
-                        `,
-                    }}
-                />
-
-                {/* Microsoft Clarity - Best Practice: lazyOnload for non-critical analytics */}
-                <Script
-                    id="clarity-script"
-                    strategy="lazyOnload"
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            (function(c,l,a,r,i,t,y){
-                                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-                                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                            })(window, document, "clarity", "script", "${companyConfig.analytics.clarityId}");
+                            gtag('config', '${gaId}');
                         `,
                     }}
                 />

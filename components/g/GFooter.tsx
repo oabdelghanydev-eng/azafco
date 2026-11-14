@@ -4,11 +4,12 @@ import { Link } from '@/navigation';
 import type { Locale } from '@/i18n';
 import { companyConfig } from '@/config/company.config';
 import { routes } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import GFooterContactGate from './GFooterContactGate';
 import GFooterLangs from './GFooterLangs';
 import GFooterNav from './GFooterNav';
 import GFooterWordmark from './GFooterWordmark';
-import { G_NAV_KEYS, type GNavKey } from './nav';
+import { G_FOOTER_EXTRA_KEYS, G_NAV_KEYS, type GFooterNavKey } from './nav';
 import { publishedLangs } from './publishedLangs';
 import { ArrowIcon, ArrowUpIcon } from '@/components/ui/icons';
 import { IconButton } from '@/components/ui/IconButton';
@@ -97,11 +98,16 @@ function ContactRow({ n, href, title, sub, value, external, internal, newTab, ct
 export default function GFooter() {
     const t = useTranslations('g_footer_v2');
     const tNav = useTranslations('g_header_v2');
+    const tSite = useTranslations('v2.nav');
     const locale = useLocale() as Locale;
     const rtl = locale === 'ar';
-    const { email, whatsappNumber, social } = companyConfig.contact;
+    const { email, whatsappNumber } = companyConfig.contact;
     const langs = publishedLangs();
-    const navLabels = Object.fromEntries(G_NAV_KEYS.map((k) => [k, tNav(`nav.${k}`)])) as Partial<Record<GNavKey, string>>;
+    // Header labels for the five board items; the site-wide labels for Seafood and Insights
+    const navLabels = Object.fromEntries([
+        ...G_NAV_KEYS.map((k) => [k, tNav(`nav.${k}`)]),
+        ...G_FOOTER_EXTRA_KEYS.map((k) => [k, tSite(k)]),
+    ]) as Partial<Record<GFooterNavKey, string>>;
     const valueCls = cn('font-semibold leading-snug', typography.body);
 
     const valueLtr = (text: string) => (
@@ -121,6 +127,14 @@ export default function GFooter() {
                     {t(`secondary.${l.key}`)}
                 </Link>
             ))}
+            {/* Re-opens the consent banner (components/v2/ConsentBanner.tsx listens for [data-consent-open]) */}
+            <button
+                type="button"
+                data-consent-open=""
+                className={`inline-flex min-h-11 cursor-pointer items-center border-0 bg-transparent p-0 text-inherit transition-colors hover:text-gold ${FOCUS_DARK}`}
+            >
+                {t('secondary.cookies')}
+            </button>
         </nav>
     );
 
@@ -182,7 +196,7 @@ export default function GFooter() {
                     <div className="mt-7 border-t border-gold/55 lg:mt-10">
                         <ContactRow
                             n="01"
-                            href={social.whatsapp}
+                            href={whatsappLink(tNav('whatsapp_message'))}
                             cta="footer_whatsapp"
                             title={t('whatsapp.title')}
                             sub={t('whatsapp.sub')}

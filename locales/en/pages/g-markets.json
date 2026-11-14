@@ -42,5 +42,6 @@
         "us": "United States"
     },
     "paused": "Spain: exports paused",
-    "pageLink": "See all markets"
+    "pageLink": "See all markets",
+    "marketLink": "{name}: market page"
 }

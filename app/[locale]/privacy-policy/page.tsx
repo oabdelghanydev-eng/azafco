@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'privacy.meta' });
     // Legal page: kept out of the index, links still followed
-    return pageMetadata({ locale, path: routes.privacy, title: t('title'), description: t('description'), noindex: true });
+    return pageMetadata({ locale, path: routes.privacy, title: t('title'), description: t('description') });
 }
 
 export default async function PrivacyPolicyPage({ params }: Props) {

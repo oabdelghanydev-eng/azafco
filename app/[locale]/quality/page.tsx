@@ -21,7 +21,8 @@ import {
     typography,
 } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import { companyConfig } from '@/config/company.config';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -53,12 +54,14 @@ export default async function QualityPage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'quality_v2' });
 
-    const { email, social } = companyConfig.contact;
+    const { email } = companyConfig.contact;
+    // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
+    const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
     const inlineLink = `font-semibold text-navy underline underline-offset-4 hover:text-navy-900 ${focusRing}`;
     // a6 carries <wa>/<mail> tags: links on the page, plain text in the FAQPage JSON-LD.
     const richTags = {
         wa: (c: ReactNode) => (
-            <a href={social.whatsapp} target="_blank" rel="noopener noreferrer" data-cta="quality_faq_whatsapp" className={inlineLink}>
+            <a href={waHref} target="_blank" rel="noopener noreferrer" data-cta="quality_faq_whatsapp" className={inlineLink}>
                 <bdi dir="ltr">{c}</bdi>
                 <span className="sr-only"> {t('newTab')}</span>
             </a>
@@ -160,27 +163,6 @@ export default async function QualityPage({ params }: Props) {
             <Section variant="white" labelledBy="quality-faq" reveal={false}>
                 <SectionHeading id="quality-faq" eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
                 <FAQAccordion items={faq} exclusiveName="quality-faq" className="max-w-[920px]" />
-            </Section>
-
-            {/* Closing action (DESIGN-SYSTEM §6.3: offwhite section + accent card) */}
-            <Section variant="offwhite" labelledBy="quality-closing" reveal={false}>
-                <Card accent padding="lg">
-                    <div className="max-w-[760px]">
-                        <Eyebrow className="mb-3 lg:mb-4">{t('closing.eyebrow')}</Eyebrow>
-                        <h2 id="quality-closing" className={`v2-heading m-0 ${typography.h2}`}>
-                            {t('closing.title')}
-                        </h2>
-                        <p className="mb-0 mt-4 text-ink-muted">{t('closing.text')}</p>
-                    </div>
-                    <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                        <Button href={routes.contact} size="lg" stretch="phone" dataAttrs={{ 'data-cta': 'quality_closing_partner' }}>
-                            {t('closing.primary')}
-                        </Button>
-                        <Button href={rfqHref({ type: 'specifications' })} variant="outline" size="lg" stretch="phone">
-                            {t('closing.secondary')}
-                        </Button>
-                    </div>
-                </Card>
             </Section>
         </div>
     );

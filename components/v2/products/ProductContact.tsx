@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { companyConfig } from '@/config/company.config';
 import { ArrowIcon, CheckIcon, Eyebrow, MailIcon, TextLink, WhatsAppIcon, cn, focusRing, phoneDisplay, typography } from '@/components/ui';
 import { rfqHref } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 
 export interface ProductContactProps {
     /** Product slug (data/products.ts), preselected on the requirements form */
@@ -77,8 +78,8 @@ function Route({
  */
 export default function ProductContact({ slug, name, id = 'start-partnership', className }: ProductContactProps) {
     const t = useTranslations('catalogue_v2.detail.contact');
-    const { email, whatsappNumber, social } = companyConfig.contact;
-    const waHref = `${social.whatsapp}?text=${encodeURIComponent(t('whatsapp_message', { name }))}`;
+    const { email, whatsappNumber } = companyConfig.contact;
+    const waHref = whatsappLink(t('whatsapp_message', { name }));
     const mailHref = `mailto:${email}?subject=${encodeURIComponent(t('email_subject', { name }))}&body=${encodeURIComponent(
         t('email_body', { name }).replace(/\n/g, '\r\n'),
     )}`;

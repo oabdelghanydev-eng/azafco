@@ -6,22 +6,23 @@ import { companyConfig } from '@/config/company.config';
 const baseUrl = companyConfig.contact.baseUrl;
 
 /**
- * hreflang alternates for a locale-less path.
+ * hreflang alternates for a locale-less path. The one helper for every page,
+ * the root layout and the sitemap.
  *
  * Built from i18n `locales`, gated by `isPublishedLocale` (i18n `publishedLocales`):
- * a locale gets an alternate only once its copy is published. To publish es/ru/de/fr,
- * the lead adds them to `publishedLocales` in i18n.ts (and removes their 307 redirect
- * in next.config.js); every page using this helper then lists all of them, plus
- * x-default (the locale-less URL, which the middleware routes by language).
+ * a locale gets an alternate only once its copy is published. x-default is the
+ * English page (`/en<path>`): the locale-less URL only redirects, so it must not
+ * be an hreflang target.
  *
  * @param path locale-less path: '' for home, '/about', '/products/tilapia'
  */
-export function hreflangAlternates(path: '' | `/${string}`): Record<string, string> {
+export function hreflangAlternates(path: string): Record<string, string> {
+    const p = path === '' || path === '/' ? '' : path.startsWith('/') ? path : `/${path}`;
     const languages: Record<string, string> = {};
     for (const l of locales) {
-        if (isPublishedLocale(l)) languages[l] = `${baseUrl}/${l}${path}`;
+        if (isPublishedLocale(l)) languages[l] = `${baseUrl}/${l}${p}`;
     }
-    languages['x-default'] = `${baseUrl}${path}`;
+    languages['x-default'] = `${baseUrl}/en${p}`;
     return languages;
 }
 
@@ -32,7 +33,7 @@ export function ogAlternateLocales(locale: string): string[] {
 
 /**
  * Shared metadata for the v2 corporate pages (home / about / businesses):
- * self-canonical, hreflang (published locales + x-default), Open Graph and Twitter.
+ * self-canonical, hreflang (published locales + x-default → /en), Open Graph and Twitter.
  * An unpublished locale (still redirected to English) is marked noindex as a guard,
  * so it can never be indexed if the redirect is removed before the copy is translated.
  *

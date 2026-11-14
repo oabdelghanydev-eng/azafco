@@ -2,12 +2,12 @@
 
 import { Link, usePathname } from '@/navigation';
 import { isActivePath } from '@/lib/v2/routes';
-import { G_NAV_KEYS, G_NAV_KEYS_WITH_CONTACT, G_NAV_ROUTE, type GNavKey } from './nav';
+import { G_FOOTER_NAV_KEYS, G_NAV_KEYS, G_NAV_KEYS_WITH_CONTACT, G_NAV_ROUTE, type GFooterNavKey, type GNavKey } from './nav';
 
-export type { GNavKey } from './nav';
+export type { GFooterNavKey, GNavKey } from './nav';
 
-export interface GNavItem {
-    key: GNavKey;
+export interface GNavItem<K extends string = GNavKey> {
+    key: K;
     /** Locale-less route for the next-intl Link */
     href: string;
     /** Kept for the GNavLink API; always false now (every item is a route) */
@@ -26,6 +26,12 @@ export function useGNav(withContact: boolean): GNavItem[] {
     return keys.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));
 }
 
+/** Footer list: the header items (without Contact) plus Seafood and Insights. */
+function useGFooterNav(): GNavItem<GFooterNavKey>[] {
+    const pathname = usePathname();
+    return G_FOOTER_NAV_KEYS.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));
+}
+
 /** Renders one nav item as an in-page anchor (home) or a localized route link. */
 export function GNavLink({
     item,
@@ -33,7 +39,7 @@ export function GNavLink({
     onClick,
     children,
 }: {
-    item: GNavItem;
+    item: GNavItem<string>;
     className: string;
     onClick?: () => void;
     children: React.ReactNode;
@@ -63,11 +69,11 @@ export default function GFooterNav({
     linkClassName,
 }: {
     label: string;
-    labels: Partial<Record<GNavKey, string>>;
+    labels: Partial<Record<GFooterNavKey, string>>;
     className: string;
     linkClassName: string;
 }) {
-    const items = useGNav(false);
+    const items = useGFooterNav();
     return (
         <nav aria-label={label} className={className}>
             {items.map((item) => (

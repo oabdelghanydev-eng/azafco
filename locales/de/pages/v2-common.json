@@ -37,8 +37,6 @@
         "contact_export_team": "Exportteam kontaktieren",
         "send_requirements": "Anforderungen senden",
         "start_partnership": "Partnerschaft starten",
-        "whatsapp_management": "WhatsApp · Geschäftsleitung",
-        "email_export_team": "E-Mail an das Exportteam",
         "request_document_pack": "Exportteam zu Dokumenten fragen"
     },
     "breadcrumbs": {
@@ -80,22 +78,6 @@
     "insight": {
         "read_article": "Artikel lesen",
         "minutes": "{count} Min. Lesezeit"
-    },
-    "cta_band": {
-        "eyebrow": "Partnerschaft starten",
-        "title": "Jede Lieferung beginnt mit einer Nachricht",
-        "intro": "Nennen Sie uns Fischart, Menge und Zielort. Unser Exportteam prüft Liefermöglichkeiten und Handelskonditionen.",
-        "whatsapp_title": "WhatsApp",
-        "whatsapp_sub": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",
-        "email_title": "E-Mail",
-        "email_sub": "Exportteam · Details und Dokumente",
-        "after_title": "So geht es weiter",
-        "after_free": "Das Senden Ihrer Anforderungen ist unverbindlich",
-        "after_1": "Das Exportteam prüft Ihre Anforderungen",
-        "after_2": "Wir melden uns bei Ihnen, um die Details zu bestätigen",
-        "after_3": "Preise werden pro Auftrag bestätigt, abhängig von Verfügbarkeit und vereinbarter Spezifikation",
-        "email_subject": "Anfrage über azafco.com.eg: {topic}",
-        "email_topic_general": "allgemein"
     },
     "faq": {
         "toggle_hint": "Antwort anzeigen"

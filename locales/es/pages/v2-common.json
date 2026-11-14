@@ -37,8 +37,6 @@
         "contact_export_team": "Contacte con el equipo de exportación",
         "send_requirements": "Envíe sus requisitos",
         "start_partnership": "Iniciemos una colaboración",
-        "whatsapp_management": "WhatsApp · Directo a la dirección",
-        "email_export_team": "Correo al equipo de exportación",
         "request_document_pack": "Consultar documentos con el equipo de exportación"
     },
     "breadcrumbs": {
@@ -80,22 +78,6 @@
     "insight": {
         "read_article": "Leer artículo",
         "minutes": "{count} min de lectura"
-    },
-    "cta_band": {
-        "eyebrow": "Iniciemos una colaboración",
-        "title": "Cada envío empieza con un mensaje",
-        "intro": "Indíquenos la especie, la cantidad y el destino. Nuestro equipo de exportación revisará el suministro y las condiciones comerciales.",
-        "whatsapp_title": "WhatsApp",
-        "whatsapp_sub": "Directo a la dirección · para operaciones rápidas",
-        "email_title": "Correo electrónico",
-        "email_sub": "Equipo de exportación · detalles y documentos",
-        "after_title": "Qué ocurre después",
-        "after_free": "Enviar sus requisitos no le compromete a realizar un pedido",
-        "after_1": "El equipo de exportación revisa sus requisitos",
-        "after_2": "Nos ponemos en contacto con usted para confirmar los detalles",
-        "after_3": "Precios confirmados en cada pedido, según la disponibilidad y la especificación acordada",
-        "email_subject": "Consulta desde azafco.com.eg: {topic}",
-        "email_topic_general": "general"
     },
     "faq": {
         "toggle_hint": "Mostrar respuesta"

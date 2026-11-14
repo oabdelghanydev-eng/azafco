@@ -14,6 +14,11 @@ export default createMiddleware({
 
     // Automatic locale detection based on Accept-Language header
     localeDetection: true,
+
+    // No hreflang `Link` response header: every page sets its own alternates in
+    // <head> (x-default → /en). The header pointed x-default at the locale-less
+    // URL and conflicted with the head tags.
+    alternateLinks: false,
 });
 
 export const config = {

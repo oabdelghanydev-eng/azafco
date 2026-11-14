@@ -1,10 +1,11 @@
 import { useTranslations } from 'next-intl';
-import { companyConfig } from '@/config/company.config';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import WhatsAppFloat from './WhatsAppFloat';
 
 /**
  * Floating WhatsApp button (the only fixed layer; no quote bar, no pulse, no popup).
- * Server wrapper: reads the management WhatsApp link and the copy here and passes
+ * Server wrapper: builds the management WhatsApp link (prefilled opening message,
+ * g_header_v2.whatsapp_message, lib/v2/whatsapp) and reads the copy here, and passes
  * them to the small client file (WhatsAppFloat), so the browser gets neither the
  * company config nor the g_footer_v2 messages.
  *
@@ -20,5 +21,6 @@ import WhatsAppFloat from './WhatsAppFloat';
  */
 export default function MobileQuoteBar() {
     const t = useTranslations('g_footer_v2');
-    return <WhatsAppFloat href={companyConfig.contact.social.whatsapp} label={t('float_label')} newTab={t('new_tab')} />;
+    const tHeader = useTranslations('g_header_v2');
+    return <WhatsAppFloat href={whatsappLink(tHeader('whatsapp_message'))} label={t('float_label')} newTab={t('new_tab')} />;
 }

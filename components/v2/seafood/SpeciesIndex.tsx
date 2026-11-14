@@ -29,6 +29,7 @@ export default function SpeciesIndex({ items, meta }: SpeciesIndexProps) {
                             <Image
                                 src={p.image.src}
                                 alt=""
+                                aria-hidden="true"
                                 fill
                                 sizes="56px"
                                 className={p.image.cutout ? 'object-contain p-0.5' : 'object-cover'}

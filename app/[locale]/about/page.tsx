@@ -3,30 +3,24 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
 import { routes } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 import type { ImageProps } from '@/lib/v2/media';
 import {
     Breadcrumbs,
     Button,
     Card,
-    ClipboardCheckIcon,
     ExternalLink,
-    Icon,
-    IceIcon,
     MapPinIcon,
     PageHero,
     Section,
     SectionHeading,
     Stat,
     TextLink,
-    TruckIcon,
     WhatsAppIcon,
-    FishIcon,
     cn,
     typography,
 } from '@/components/ui';
-import { LuWaves } from 'react-icons/lu';
 import HeadingPhoto from '@/components/v2/HeadingPhoto';
-import ProcessSteps from '@/components/v2/ProcessSteps';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import Milestones, { type MilestoneYear } from '@/components/v2/businesses/Milestones';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
@@ -65,12 +59,6 @@ const COMPANY_MILESTONES: { year: number; key: 'founded' | 'baltim' | 'motobas' 
     { year: 2025, key: 'governor' },
 ];
 
-/** Farming (pond), harvest, washing/icing/packing, inspection, export. */
-function PondIcon({ size = 24 }: { size?: 24 }) {
-    return <Icon icon={LuWaves} size={size} />;
-}
-const OPERATION_ICONS = [PondIcon, FishIcon, IceIcon, ClipboardCheckIcon, TruckIcon];
-
 /**
  * The ISO standard names ("A · B · C" in the JSON) as unbreakable chunks, so a narrow
  * figure cell never splits "ISO" from its number or starts a line with the separator.
@@ -108,6 +96,8 @@ export default async function AboutPage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'about_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
+    // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
+    const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
 
     // Timeline: company milestones + the first export year of each active market,
     // grouped by year (within a year: company item, market openings, then the visit).
@@ -144,7 +134,7 @@ export default async function AboutPage({ params }: Props) {
                             {t('hero.primary')}
                         </Button>
                         <Button
-                            href={companyConfig.contact.social.whatsapp}
+                            href={waHref}
                             variant="outline"
                             size="lg"
                             stretch="phone"
@@ -219,21 +209,14 @@ export default async function AboutPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* 04 · In-house operations, pond to pallet */}
-            <Section variant="offwhite" labelledBy="about-operations">
-                <SectionHeading
-                    id="about-operations"
-                    eyebrow={t('operations.eyebrow')}
-                    title={t('operations.title')}
-                    intro={t('operations.intro')}
-                />
-                <ProcessSteps
-                    steps={OPERATION_ICONS.map((StepIcon, i) => ({
-                        icon: <StepIcon size={24} />,
-                        title: t(`operations.s${i + 1}_title`),
-                        description: t(`operations.s${i + 1}_text`),
-                    }))}
-                />
+            {/* 04 · One line instead of the five-stage chain (the stages live on /processing) */}
+            <Section as="div" variant="offwhite" spacing="sm">
+                <div className="flex flex-col items-start gap-1 border-0 border-s-2 border-solid border-gold ps-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                    <p className={cn('m-0 font-semibold text-fg', typography.lead)}>{t('stages.line')}</p>
+                    <TextLink href={routes.processing} className="shrink-0" dataAttrs={{ 'data-cta': 'about_stages' }}>
+                        {t('stages.link')}
+                    </TextLink>
+                </div>
             </Section>
 
             {/* 05 · Our businesses (detail on /businesses) */}

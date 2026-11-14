@@ -93,7 +93,7 @@ export default function MarketsIndex({
                                                 isCurrent ? 'ring-gold' : 'ring-white/30',
                                             )}
                                         >
-                                            <Image src={flagSrc(m.countryCode)} alt="" fill sizes="32px" className="object-cover" />
+                                            <Image src={flagSrc(m.countryCode)} alt="" aria-hidden="true" fill sizes="32px" className="object-cover" />
                                         </span>
                                         <span className="min-w-0 flex-1">{m.name}</span>
                                         <span className="whitespace-nowrap text-caption font-semibold text-fg-muted">{m.since}</span>
@@ -119,7 +119,7 @@ export default function MarketsIndex({
                                                     aria-hidden="true"
                                                     className="relative h-[30px] w-[30px] flex-none overflow-hidden rounded-full bg-white opacity-85 outline-dashed outline-[1.5px] outline-offset-[3px] outline-white/60"
                                                 >
-                                                    <Image src={flagSrc(m.countryCode)} alt="" fill sizes="30px" className="object-cover" />
+                                                    <Image src={flagSrc(m.countryCode)} alt="" aria-hidden="true" fill sizes="30px" className="object-cover" />
                                                 </span>
                                                 <span className="text-body font-bold">{m.name}</span>
                                             </li>

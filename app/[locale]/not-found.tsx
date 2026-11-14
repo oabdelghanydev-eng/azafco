@@ -1,7 +1,27 @@
+import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
 import { rfqHref, routes } from '@/lib/v2/routes';
 import { ArrowIcon, Button, PageHead, Section, cardClass, cn, focusRing, typography } from '@/components/ui';
+
+/**
+ * Own metadata for the 404 (it would otherwise inherit the layout's home canonical
+ * and hreflang): title "Page not found", noindex, no canonical, no alternates.
+ * `alternates: {}` replaces the layout's alternates object as a whole.
+ */
+export async function generateMetadata({ params }: { params?: Promise<{ locale?: string }> }): Promise<Metadata> {
+    const locale = (await params)?.locale ?? (await getLocale());
+    const local = await getTranslations({ locale, namespace: 'not_found' });
+    // es/ru/de/fr fall back to English until not_found.meta is translated
+    const t = local.has('meta.title') ? local : await getTranslations({ locale: 'en', namespace: 'not_found' });
+    return {
+        title: t('meta.title'),
+        description: local('intro'),
+        robots: { index: false, follow: true },
+        alternates: {},
+    };
+}
 
 /**
  * Localised 404 in design G (components/ui primitives): no dead end, routes back

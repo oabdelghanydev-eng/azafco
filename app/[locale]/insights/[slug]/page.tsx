@@ -4,12 +4,12 @@ import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/navigation';
 import { mediaImage } from '@/lib/v2/media';
-import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
+import { insightHref, routes } from '@/lib/v2/routes';
 import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
 import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
-import { ArrowIcon, Button, Container, PageHead, containerClass, Section, SectionHeading, cardClass, cn, focusRing, typography } from '@/components/ui';
+import { ArrowIcon, Container, PageHead, containerClass, Section, SectionHeading, cardClass, cn, focusRing, typography } from '@/components/ui';
 import { companyConfig } from '@/config/company.config';
 import { ogImageMap, type Locale } from '@/i18n';
 
@@ -161,15 +161,7 @@ export default async function InsightArticlePage({ params }: Props) {
                     </aside>
                     <div className="min-w-0 lg:order-1">
                         <ImportingGuideBody locale={locale} reviewedLabel={reviewed} />
-                        {/* The article's single requirements link (no inline offer box) */}
-                        <div className="mt-14 grid gap-2.5 border-t border-solid border-line pt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-3.5">
-                            <Button href={rfqHref()} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'article_requirements' }}>
-                                {t('article.contact')}
-                            </Button>
-                            <Button href={routes.insights} variant="outline" size="lg" stretch="phone">
-                                {t('article.back')}
-                            </Button>
-                        </div>
+                        {/* No closing button row: the G footer carries the contact block (ledger C9) */}
                     </div>
                 </div>
             </article>

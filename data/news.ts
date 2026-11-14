@@ -11,8 +11,12 @@
  * - milestones: founding 2008, Baltim 2018, Motobas 2025. No "one of 6 EU plants"
  *   claim. The ISO item names only ISO 9001, 14001 and 45001 and has no date
  *   (certificate dates are not shown on the site).
- * - photos: existing manifest photos only (lib/v2/media). They are illustrative
- *   context, never presented as photos of the event; cards label them as such.
+ * - photos: existing manifest photos only (lib/v2/media), on industry items only.
+ *   They are illustrative context, never presented as photos of the event; cards
+ *   label them as such. Company news items (visit, press feature, TV episode) show
+ *   no image until the owner sends real photos (B2B review, ledger C11).
+ * - sourceUrl only when it opens the coverage itself: the 2020 newspaper feature
+ *   has only the paper's home page, so it shows its source name and date as text.
  */
 
 export type NewsKind = 'press' | 'industry';
@@ -36,21 +40,18 @@ export const newsItems: NewsItem[] = [
         kind: 'press',
         date: '2025-09-17',
         sourceUrl: 'https://www.facebook.com/reel/1122525626517427',
-        imageId: 'photo-processing',
     },
     {
         key: 'press_feature',
         kind: 'press',
         date: '2020-11-18',
-        sourceUrl: 'https://alshrqalawsat.com/',
-        imageId: 'photo-quality',
+        // Article URL pending (owner question 10); the paper's home page is not a source link
     },
     {
         key: 'tv_program',
         kind: 'press',
         date: '2017-12-10',
         sourceUrl: 'https://www.youtube.com/watch?v=kuT4e6PXcFI',
-        imageId: 'photo-seafood-hero',
     },
 
     // ── Industry context (named sources, neutral wording) ──

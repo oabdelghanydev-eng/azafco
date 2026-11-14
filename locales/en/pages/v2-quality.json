@@ -76,13 +76,6 @@
         "q6": "How do we start?",
         "a6": "For fast deals, message our management directly on WhatsApp at <wa>+20 100 773 6419</wa>. For details and documents, email our export team at <mail>business@azafco.com.eg</mail>."
     },
-    "closing": {
-        "eyebrow": "Next step",
-        "title": "Share your specification",
-        "text": "Tell us the species, weight grade, packing and destination, and any requirements of your market. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
-        "primary": "Start a partnership",
-        "secondary": "Send your requirements"
-    },
     "pending": {
         "traceability": "Lot and batch data that can be supplied with each shipment",
         "market_approvals": "Market approvals (e.g. EU listing) once granted"

@@ -22,6 +22,7 @@ import { baseUrl, getCatalogue, getRootT, getSearchNames, getSpecView, jsonLd, p
 import { companyConfig } from '@/config/company.config';
 import { productCategories } from '@/data/products';
 import { rfqHref, routes } from '@/lib/v2/routes';
+import { whatsappLink } from '@/lib/v2/whatsapp';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -56,7 +57,9 @@ export default async function CataloguePage({ params }: Props) {
         const spec = getSpecView(root, locale, p.slug);
         const facts: { label: string; value: string | string[] }[] = [];
         if (spec.forms.length) facts.push({ label: t('browser.form_type'), value: spec.forms.map((f) => f.label) });
+        // Species without published grades (the five newer ones) say so instead of leaving a gap
         if (spec.grades.length) facts.push({ label: t('card.grades'), value: spec.grades });
+        else facts.push({ label: t('card.grades_label'), value: t('card.grades_per_order') });
         if (spec.pack) facts.push({ label: t('detail.packaging'), value: spec.pack });
         if (!facts.length) facts.push({ label: t('card.origin'), value: t('card.origin_value') });
         return {
@@ -106,8 +109,8 @@ export default async function CataloguePage({ params }: Props) {
 
     const specify = ['species', 'form', 'packing', 'volume', 'destination', 'timing'] as const;
     // Smallest first step for a cold buyer: WhatsApp to management, prefilled
-    const { email, social } = companyConfig.contact;
-    const whatsappHref = `${social.whatsapp}?text=${encodeURIComponent(t('hero.whatsapp_message'))}`;
+    const { email } = companyConfig.contact;
+    const whatsappHref = whatsappLink(t('hero.whatsapp_message'));
     const mailHref = `mailto:${email}?subject=${encodeURIComponent(t('custom.email_subject'))}`;
 
     return (

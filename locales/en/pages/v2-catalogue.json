@@ -62,7 +62,9 @@
         "origin": "Origin",
         "origin_value": "Egypt",
         "water": "Water",
-        "grades": "Weight grades (indicative)"
+        "grades": "Weight grades (indicative)",
+        "grades_label": "Weight grades",
+        "grades_per_order": "Confirmed per order"
     },
     "browser": {
         "search_label": "Search species",
@@ -157,6 +159,7 @@
         "docs_email": "Email the export team",
         "docs_subject": "{name}: documents for our market",
         "docs_link": "Quality and certificates",
+        "docs_guide": "HS codes and export documents guide",
         "related_eyebrow": "Other species",
         "related_title": "Related species",
         "faq_title": "{name}: ordering questions",

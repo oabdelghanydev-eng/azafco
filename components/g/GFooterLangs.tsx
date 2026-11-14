@@ -6,8 +6,9 @@ import { orderLangs, rememberChoice, type LangOption } from './langs';
 
 /**
  * Footer language pills (published locales only, from the server footer).
- * Desktop (lg+): one bordered capsule, short labels (ع / EN).
- * Phone: separate outlined pills; the active locale and Arabic show their native name.
+ * Every pill shows the language's native name, as in the header list (العربية,
+ * English…), at every width and in one text node (no hidden duplicate label).
+ * Desktop (lg+): one bordered capsule. Phone: separate outlined pills.
  */
 export default function GFooterLangs({ label, locale, langs }: { label: string; locale: Locale; langs: LangOption[] }) {
     const pathname = usePathname();
@@ -19,8 +20,6 @@ export default function GFooterLangs({ label, locale, langs }: { label: string; 
         >
             {orderLangs(locale, langs).map(({ code, nativeName }) => {
                 const cur = code === locale;
-                const short = code === 'ar' ? 'ع' : code.toUpperCase();
-                const phone = cur || code === 'ar' ? nativeName : code.toUpperCase();
                 return (
                     <Link
                         key={code}
@@ -29,7 +28,6 @@ export default function GFooterLangs({ label, locale, langs }: { label: string; 
                         lang={code}
                         hrefLang={code}
                         aria-current={cur ? 'true' : undefined}
-                        aria-label={nativeName}
                         onClick={() => rememberChoice(code)}
                         className="group -my-[5px] inline-flex min-h-tap items-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-gold lg:-my-1.5"
                     >
@@ -41,8 +39,7 @@ export default function GFooterLangs({ label, locale, langs }: { label: string; 
                                     : 'border border-white/25 font-semibold group-hover:text-gold lg:border-0 lg:px-2.5'
                             }`}
                         >
-                            <span className="lg:hidden">{phone}</span>
-                            <span className="hidden lg:inline">{short}</span>
+                            {nativeName}
                         </span>
                     </Link>
                 );
