@@ -1,43 +1,12 @@
 {
+    "_note": "Only metadata.site is read (root layout, pageMetadata helpers, product pages). Page titles and descriptions live in each page's *_v2.meta (or privacy.meta). The legacy page-level keys were removed on 14 Nov 2026 so they are not translated and cannot drift from the live meta. Titles using title_template get ' | AZAFCO' appended: keep them <= 51 characters.",
     "site": {
-        "name": "AZAFCO - ازافكو العالمية",
-        "title_default": "Exportateur de poisson frais d'Égypte | AZAFCO",
+        "name": "AZAFCO International",
+        "title_default": "AZAFCO International | Fresh Egyptian fish for importers",
         "title_template": "%s | AZAFCO",
         "author": "AZAFCO International",
         "creator": "AZAFCO International",
         "publisher": "AZAFCO International",
-        "og_alt": "AZAFCO International – Exportation de poisson frais d'Égypte – Livraison France, Europe, Afrique et monde entier"
-    },
-    "home": {
-        "title": "Exportateur de poisson frais d'Égypte",
-        "description": "AZAFCO International, exportateur B2B égyptien depuis 2008. Plus de 2 500 tonnes par mois, certifié ISO et HACCP. Livraison France, Europe et monde."
-    },
-    "products": {
-        "title": "Tilapia, bar et mulet frais d'Égypte",
-        "description": "Poisson frais d'Égypte : tilapia, bar, mulet et plus de 8 variétés. Tailles sur mesure, dès 1 carton, certifié ISO. Livraison France, Europe et monde."
-    },
-    "about": {
-        "title": "À propos : exportateur de poisson frais depuis 2008",
-        "description": "AZAFCO International : exportateur B2B de poisson égyptien, 300+ employés et 500+ clients dans plus de {countries} pays. Site agréé UE, ISO 22000 et HACCP."
-    },
-    "contact": {
-        "title": "Contact : poisson frais en gros sur demande",
-        "description": "Demandez un devis à un exportateur de poisson frais d'Égypte. Livraison France, Belgique, Suisse et plus. WhatsApp : +20-100-7736419. Réponse sous 24 h."
-    },
-    "markets": {
-        "title": "Marchés d'export : expédition aérienne et terrestre",
-        "description": "AZAFCO exporte plus de 2 500 tonnes de poisson frais par mois vers l'Europe, le Golfe et l'Afrique, par air et terre. 500+ grossistes depuis 2008."
-    },
-    "media": {
-        "title": "Actualités de l'export de poisson égyptien",
-        "description": "Actualités AZAFCO : expansion internationale, réalisations de l'entreprise et jalons du secteur. Apparitions TV et reconnaissance officielle depuis 2008."
-    },
-    "certificates": {
-        "title": "Exportateur de poisson certifié ISO 22000 et HACCP",
-        "description": "AZAFCO détient {isoCount} certifications ISO plus HACCP : ISO 22000, 9001, 14001, 45001. L'un des 6 sites égyptiens agréés pour l'export UE."
-    },
-    "privacy": {
-        "title": "Politique de confidentialité",
-        "description": "Politique de confidentialité d'AZAFCO International – Comment nous protégeons vos données et traitons les demandes confidentiellement."
+        "og_alt": "AZAFCO International: fresh Egyptian fish for importers"
     }
 }

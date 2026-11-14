@@ -4,6 +4,7 @@
         "description": "Tilapia, sea bass, sea bream, mullet, carp and catfish from Egypt for importers and distributors. Weight grade, packing and price confirmed per order."
     },
     "breadcrumb": "Our fish",
+    "new_tab": "(opens in a new tab)",
     "hero": {
         "eyebrow": "Our fish",
         "title": "12 main fresh fish species from Egypt",
@@ -13,10 +14,6 @@
         "whatsapp_message": "Hello AZAFCO International, we are looking at your fish list. Species, destination and quantity:",
         "facts": {
             "label": "AZAFCO International in figures",
-            "species": {
-                "value": "12",
-                "label": "main fish species"
-            },
             "markets": {
                 "value": "7+",
                 "label": "export markets"
@@ -104,7 +101,12 @@
     },
     "custom": {
         "eyebrow": "Custom requirements",
+        "title": "Need another weight grade or packing?",
         "intro": "Send us the specification you need. We review other weight grades or packing against our actual capability and the quantities available, and we confirm only what we can supply.",
+        "form": "Send your requirements",
+        "email": "Email the export team",
+        "email_subject": "Fish specification for our market",
+        "after_title": "What happens next",
         "after_1": "The export team reviews your specification and quantity",
         "after_2": "We contact you to confirm the details",
         "after_3": "Weight grade, packing and price are confirmed in writing for your order"
@@ -222,6 +224,7 @@
         "units": {
             "g": "g",
             "kg": "kg"
-        }
+        },
+        "and_above": "{value} and above"
     }
 }

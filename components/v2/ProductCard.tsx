@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { cn } from '@/lib/v2/cn';
 import type { ImageProps } from '@/lib/v2/media';
-import { ArrowIcon } from './icons';
+import { ArrowIcon } from '@/components/ui/icons';
 
 export interface ProductCardProps {
     name: string;

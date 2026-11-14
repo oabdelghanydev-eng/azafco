@@ -1,95 +1,102 @@
 {
     "kuwait": {
-        "country": "Кувейт",
-        "description": "Наш крупнейший экспортный рынок. Надёжный партнёр ведущих оптовиков, ресторанов и отелей по всему Кувейту.",
-        "features": [
-            "Крупнейший объём экспорта",
-            "Ведущие оптовики",
-            "Сети ресторанов",
-            "Гостиницы"
+        "country": "Kuwait",
+        "short": "Kuwait",
+        "sentence": "Kuwait",
+        "note": "Our largest export market. We supply distributors, restaurant chains and hotels in Kuwait.",
+        "buyers": [
+            "Distributors",
+            "Restaurant chains",
+            "Hotels"
         ]
     },
     "uae": {
-        "country": "Объединённые Арабские Эмираты",
-        "description": "Ключевой рынок Персидского залива. Обслуживание ведущих оптовиков, ресторанов и супермаркетов Дубая, Абу-Даби и Шарджи.",
-        "features": [
-            "Сертифицированные оптовики",
-            "Рестораны премиум-класса",
-            "Сети супермаркетов",
-            "Гостиницы"
+        "country": "United Arab Emirates",
+        "short": "UAE",
+        "sentence": "the United Arab Emirates",
+        "note": "Our first export market, since 2008. We supply distributors, restaurants, supermarket chains and hotels in Dubai, Abu Dhabi and Sharjah.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Supermarket chains",
+            "Hotels"
         ]
     },
     "qatar": {
-        "country": "Катар",
-        "description": "Растущий рынок с прочными партнёрствами с катарскими оптовиками, отелями и ресторанными группами.",
-        "features": [
-            "Крупные оптовики",
-            "Гостиничные сети",
-            "Рестораны",
-            "Кейтеринговые компании"
+        "country": "Qatar",
+        "short": "Qatar",
+        "sentence": "Qatar",
+        "note": "A growing market. We work with distributors, hotel chains, restaurants and catering companies in Qatar.",
+        "buyers": [
+            "Distributors",
+            "Hotel chains",
+            "Restaurants",
+            "Catering companies"
         ]
     },
     "iraq": {
-        "country": "Ирак",
-        "description": "Растущий рынок с высоким спросом и значительными перспективами развития.",
-        "features": [
-            "Местные оптовики",
-            "Оптовые рынки",
-            "Рестораны"
+        "country": "Iraq",
+        "short": "Iraq",
+        "sentence": "Iraq",
+        "note": "A market with growing demand. We supply local distributors, wholesale markets and restaurants in Iraq.",
+        "buyers": [
+            "Local distributors",
+            "Wholesale markets",
+            "Restaurants"
         ]
     },
     "bahrain": {
-        "country": "Бахрейн",
-        "description": "Активный рынок с сильным присутствием среди оптовиков, ресторанов и кооперативов.",
-        "features": [
-            "Оптовики",
-            "Рестораны",
-            "Кооперативы",
-            "Гостиницы"
+        "country": "Bahrain",
+        "short": "Bahrain",
+        "sentence": "Bahrain",
+        "note": "We supply distributors, restaurants, cooperative societies and hotels in Bahrain.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Cooperative societies",
+            "Hotels"
         ]
     },
     "lebanon": {
-        "country": "Ливан",
-        "description": "Требовательный рынок ценителей качества и свежести. Обслуживание элитных гастрономических заведений.",
-        "features": [
-            "Элитная гастрономия",
-            "Премиум-оптовики",
-            "Гостиницы"
+        "country": "Lebanon",
+        "short": "Lebanon",
+        "sentence": "Lebanon",
+        "note": "A market that values quality and freshness. We supply restaurants, distributors and hotels in Lebanon.",
+        "buyers": [
+            "Restaurants",
+            "Distributors",
+            "Hotels"
         ]
     },
     "spain": {
-        "country": "Испания",
-        "description": "Наш выход на европейский рынок – временно приостановлено, планируется возвращение. Сертификация ЕС действует.",
-        "features": [
-            "Европейские оптовики",
-            "Рыбные рынки"
-        ]
+        "country": "Spain",
+        "short": "Spain",
+        "sentence": "Spain"
     },
     "syria": {
-        "country": "Сирия",
-        "description": "Один из наших новейших и наиболее динамичных рынков. AZAFCO запустила операции в Сирии с мощным присутствием, обслуживая дистрибьюторов и рестораны по всей стране.",
-        "features": [
-            "Сильное присутствие на рынке",
-            "Местные оптовики",
-            "Рестораны",
-            "Оптовые рынки"
+        "country": "Syria",
+        "short": "Syria",
+        "sentence": "Syria",
+        "note": "Our newest market, opened in 2026. We supply distributors, restaurants and wholesale markets in Syria.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Wholesale markets"
         ]
     },
     "russia": {
-        "country": "Россия",
-        "description": "Перспективный крупный рынок со значительным потенциалом роста – активное планирование выхода на рынок.",
-        "features": [
-            "Международные оптовики",
-            "Розничные сети"
-        ]
+        "country": "Russia",
+        "short": "Russia",
+        "sentence": "Russia"
     },
     "usa": {
-        "country": "Соединённые Штаты Америки",
-        "description": "Наш предстоящий выход на североамериканский рынок. Планы расширения разрабатываются для обслуживания рынка США в ближайшем будущем.",
-        "features": [
-            "Международные оптовики",
-            "Розничные сети",
-            "Сети ресторанов"
-        ]
+        "country": "United States",
+        "short": "USA",
+        "sentence": "the United States"
+    },
+    "europe": {
+        "country": "Europe",
+        "short": "Europe",
+        "sentence": "Europe"
     }
 }

@@ -19,7 +19,7 @@ import '../globals.css';
 // Exposed as CSS variables; globals.css builds the stacks (--v2-font-body / --v2-font-display).
 const manrope = Manrope({
     subsets: ['latin', 'latin-ext', 'cyrillic'],
-    weight: ['400', '500', '600', '700', '800'],
+    // Variable font: one file per subset covers 400-800.
     display: 'swap',
     variable: '--font-manrope',
     // No auto 'Manrope Fallback' (local Arial): Arial has Arabic glyphs and would catch
@@ -125,13 +125,10 @@ export default async function RootLayout({
     // Enable static rendering
     setRequestLocale(locale);
 
-    // Get messages for the current locale
-    // Only the v2 namespaces (+ common) go to the browser: old namespaces still hold
-    // unapproved claims and must not ship in the page payload.
-    const allMessages = await getMessages();
-    const messages = Object.fromEntries(
-        Object.entries(allMessages).filter(([key]) => key === 'common' || key === 'v2' || key.endsWith('_v2'))
-    );
+    // Client components get their copy as props from server wrappers. Only the
+    // catalogue search (CatalogueBrowser) still reads messages in the browser.
+    const allMessages = (await getMessages()) as Record<string, any>;
+    const messages = { catalogue_v2: { browser: allMessages.catalogue_v2?.browser ?? {} } };
 
     // Get direction for the locale
     const dir = localeConfig[locale as Locale]?.dir || 'ltr';
@@ -140,12 +137,6 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
             <head>
-                {/* Performance: DNS Prefetch */}
-                <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-                <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
                 {/* Favicon: new identity (public/brand, from branding/group-identity). SVG first, ICO/PNG fallbacks */}
                 <link rel="icon" href="/brand/favicon-32.svg" type="image/svg+xml" />
                 <link rel="icon" href="/brand/favicon.ico" sizes="16x16 32x32" />

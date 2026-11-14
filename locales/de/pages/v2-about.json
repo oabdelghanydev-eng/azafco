@@ -31,6 +31,17 @@
         "markets_value": "7+",
         "markets_label": "markets in the Middle East and beyond"
     },
+    "journey": {
+        "eyebrow": "Our journey",
+        "title": "Milestones since 2008",
+        "intro": "Key dates from our founding to today: our factories and the markets we export to.",
+        "list_label": "Company milestones by year",
+        "founded": "AZAFCO International founded in Kafr El Sheikh, Egypt",
+        "market": "First exports to {country}",
+        "baltim": "First factory opened in the Baltim Industrial Zone, Kafr El Sheikh",
+        "motobas": "Second factory opened in the Motobas Industrial Zone, Kafr El Sheikh",
+        "governor": "Visit by the Governor of Kafr El Sheikh to our Motobas plant"
+    },
     "operations": {
         "eyebrow": "What we do",
         "title": "Every stage is handled by AZAFCO",
@@ -67,16 +78,16 @@
         "map_link": "See the plant on Google Maps",
         "opens_new_tab": "(opens in a new tab)"
     },
-    "principles": {
-        "eyebrow": "How we work",
+    "values": {
+        "eyebrow": "Our values",
         "title": "We start with specifications, not slogans",
-        "intro": "Four commitments that shape how we work with buyers.",
-        "i1_title": "Specifications first",
-        "i1_text": "We start from what you need (species, weight grade, packing, quantity and destination), then confirm what we can supply.",
-        "i2_title": "Clear terms",
-        "i2_text": "Specifications, documents and commercial terms are set out clearly and confirmed per order.",
-        "i3_title": "Operational discipline",
-        "i3_text": "Hygiene, icing and careful handling are daily routines on our processing floor.",
+        "intro": "The principles behind how we work with buyers.",
+        "i1_title": "Reliability",
+        "i1_text": "We have exported fresh fish since 2008, and our first markets, the UAE and Kuwait, are still active today.",
+        "i2_title": "Specifications first",
+        "i2_text": "We start from what you need (species, weight grade, packing, quantity and destination), then confirm what we can supply.",
+        "i3_title": "Clear terms",
+        "i3_text": "Specifications, documents and commercial terms are set out clearly and confirmed per order.",
         "i4_title": "Long-term relationships",
         "i4_text": "We aim for repeat supply built on consistency, not one-off deals."
     },

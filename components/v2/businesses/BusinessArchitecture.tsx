@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from '@/navigation';
-import { cn } from '@/lib/v2/cn';
-import { ArrowIcon } from '@/components/v2';
+import { ArrowIcon, Eyebrow, cardClass, cn, focusRing, typography } from '@/components/ui';
 
 export interface ArchitectureUnit {
     name: string;
@@ -22,10 +21,10 @@ export interface BusinessArchitectureProps {
 }
 
 /**
- * Brand architecture: parent → dominant seafood core → smaller activities.
- * Seafood takes ~2/3 of the width on desktop; the others are quiet text modules
- * (no image, no CTA) so they never compete with the seafood route.
- * Surface-aware; works on light and offwhite sections.
+ * Brand architecture: parent -> dominant fish core -> smaller activities.
+ * The fish core takes 7 of 12 columns from lg (an accent card that links to the
+ * fish business); the other activities are quiet text rows (no image, no CTA) so
+ * they never compete with it. Built on the design-system card, eyebrow and type roles.
  */
 export default function BusinessArchitecture({
     parent,
@@ -38,38 +37,49 @@ export default function BusinessArchitecture({
     return (
         <div className={className}>
             {/* Parent brand bar */}
-            <div className="flex flex-col gap-1 rounded-card bg-navy-900 px-6 py-5 text-white sm:flex-row sm:items-baseline sm:justify-between sm:gap-6" data-surface="dark">
-                <p className="text-heading-md font-semibold">{parent.name}</p>
-                <p className="text-body-sm text-fg-muted">{parent.role}</p>
+            <div
+                data-surface="dark"
+                className="flex flex-col gap-1 rounded-card bg-navy-900 px-5 py-5 text-fg sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 lg:px-8"
+            >
+                <p className={cn('m-0 text-fg', typography.h3)}>{parent.name}</p>
+                <p className={cn('m-0 text-fg-muted', typography.small)}>{parent.role}</p>
             </div>
 
             {/* Connector */}
-            <div aria-hidden="true" className="ms-8 h-6 border-s-2 border-gold" />
+            <div aria-hidden="true" className="ms-8 h-6 border-0 border-s-2 border-solid border-gold" />
 
             <div className="grid gap-6 lg:grid-cols-12 lg:gap-8">
-                {/* Core: seafood */}
+                {/* Core: fish */}
                 <Link
                     href={core.href}
-                    className="group relative flex flex-col rounded-card border border-rule bg-panel p-6 shadow-card transition-shadow duration-base hover:shadow-raised motion-reduce:transition-none md:p-10 lg:col-span-7"
+                    className={cardClass({
+                        accent: true,
+                        interactive: true,
+                        className: cn('group flex flex-col p-6 md:p-10 lg:col-span-7', focusRing),
+                    })}
                 >
-                    <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 rounded-t-card bg-gold" />
-                    <span className="text-overline uppercase text-eyebrow">{core.tag}</span>
-                    <H className="v2-heading mt-3 font-display text-display-lg">{core.name}</H>
-                    {core.description ? <div className="mt-4 max-w-prose-v2 text-body-lg text-fg-muted">{core.description}</div> : null}
-                    <span className="mt-auto inline-flex min-h-[44px] items-center gap-2 pt-8 font-semibold text-fg underline decoration-gold decoration-2 underline-offset-[6px]">
+                    <Eyebrow as="span" tone="light">
+                        {core.tag}
+                    </Eyebrow>
+                    <H className={cn('v2-heading m-0 mt-3', typography.h2)}>{core.name}</H>
+                    {core.description ? <div className={cn('mt-4 max-w-prose-v2 text-ink-muted', typography.lead)}>{core.description}</div> : null}
+                    <span className="v2-btn mt-auto inline-flex min-h-tap items-center gap-2.5 pt-8 text-body text-navy group-hover:underline group-hover:underline-offset-4">
                         {core.linkLabel}
-                        <ArrowIcon size={18} />
+                        <ArrowIcon
+                            size={20}
+                            className="transition-transform duration-base group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transition-none"
+                        />
                     </span>
                 </Link>
 
-                {/* Subordinate activities */}
+                {/* Other activities */}
                 <div className="lg:col-span-5">
-                    <p className="mb-3 text-overline uppercase text-fg-muted">{othersLabel}</p>
-                    <ul className="divide-y divide-rule border-y border-rule">
+                    <p className={cn('m-0 mb-3 text-fg-muted', typography.overline)}>{othersLabel}</p>
+                    <ul className="m-0 list-none divide-y divide-rule border-0 border-y border-solid border-rule p-0">
                         {others.map((o) => (
                             <li key={o.name} id={o.id} className={cn('py-5', o.id && 'scroll-mt-28')}>
-                                <H className="text-heading-sm text-fg">{o.name}</H>
-                                {o.description ? <div className="mt-1.5 text-body-sm text-fg-muted">{o.description}</div> : null}
+                                <H className={cn('m-0 text-fg', typography.h4)}>{o.name}</H>
+                                {o.description ? <div className={cn('mt-1.5 text-fg-muted', typography.small)}>{o.description}</div> : null}
                             </li>
                         ))}
                     </ul>

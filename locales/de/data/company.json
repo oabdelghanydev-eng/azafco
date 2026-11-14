@@ -1,28 +1,32 @@
 {
     "name": "AZAFCO International",
-    "fullName": "AZAFCO International for Investment and Development",
-    "description": "B2B-Fischexporteur aus Ägypten für Großhändler, Restaurants und Hotels – Premium-Frischfisch seit 2008.",
-    "workingHours": "Sa–Do 8:00–17:00 Uhr (Kairoer Zeit)",
-    "workingHoursNote": "WhatsApp für dringende Sendungen",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "description": "Egyptian company that farms and sources, grades, packs and exports fresh fish for importers, distributors and foodservice buyers. Founded in 2008.",
+    "workingHours": "Sat–Thu 8:00–17:00 (Cairo time)",
+    "workingHoursNote": "WhatsApp: direct to management, for fast deals",
+    "officialChannels": {
+        "title": "Official channels",
+        "text": "Our official channels are WhatsApp {phone} (management) and email from the azafco.com.eg domain (export team: {email}). If you receive bank details or payment instructions from any other number or address, confirm them with us on one of these channels before paying."
+    },
     "addresses": {
         "main": {
-            "title": "Hauptniederlassung",
-            "address": "Mastora, neben der Wohltätigkeitsorganisation, El-Borollos, Kafr El-Sheikh, Ägypten"
+            "title": "Main office",
+            "address": "Mastora, next to the Charity Association, El-Borollos, Kafr El Sheikh, Egypt"
         },
         "factory": {
-            "title": "Produktionsstätte",
-            "address": "Nr. 120 – Futtersektor – Industriezone – Motobas – Kafr El-Sheikh, Ägypten"
+            "title": "Factory",
+            "address": "No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El Sheikh, Egypt"
         }
     },
     "copyright": "AZAFCO International",
-    "privacyLink": "Datenschutzerklärung",
-    "leadersSince": "Führend im Frischfischexport seit",
-    "tagline": "Premium-Frischfisch aus Ägypten – weltweit",
+    "privacyLink": "Privacy policy",
+    "leadersSince": "Founded in",
+    "tagline": "From Egyptian production to global partnerships",
     "usps": {
-        "price": "Wettbewerbsfähige Großhandelspreise",
-        "quality": "ISO- & HACCP-zertifizierte Qualität",
-        "flexibility": "Individuelle Größen, flexible Bestellungen",
-        "availability": "Zuverlässiger Betrieb, kontinuierliche Lieferfähigkeit",
-        "service": "Zuverlässige Erfüllung Ihrer Marktanforderungen"
+        "price": "Prices confirmed per order",
+        "quality": "ISO 9001, 14001 and 45001, certified by TÜV AUSTRIA",
+        "flexibility": "Weight grade and packing agreed per order",
+        "availability": "Our own refrigerated trucks and cold stores",
+        "service": "From the pond to the pallet, every stage handled by AZAFCO"
     }
 }

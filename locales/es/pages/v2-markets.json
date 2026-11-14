@@ -40,6 +40,13 @@
         "map_label": "Map of shipping routes from Egypt to our seven active markets",
         "origin": "Egypt · Motobas"
     },
+    "notes": {
+        "eyebrow": "Market by market",
+        "title": "Who we supply in each market",
+        "intro": "The buyers we supply in each of our active markets today. Select a market for details.",
+        "buyers_label": "We supply",
+        "details": "Market details"
+    },
     "approach": {
         "eyebrow": "Market requirements",
         "title": "Each market has its own specification",
@@ -121,6 +128,12 @@
         "text": "Tell us your destination. Our export team reviews each new market case by case.",
         "action": "Contact the export team"
     },
+    "closing": {
+        "eyebrow": "Next step",
+        "title": "Tell us your market and what you need",
+        "text": "Message our management on WhatsApp for fast deals, or email the export team for details and documents.",
+        "primary": "Start a partnership"
+    },
     "disclaimer": "Every shipment depends on the import rules of the destination, current supply and the order terms agreed in writing.",
     "regions": {
         "gulf": "Gulf",
@@ -179,6 +192,8 @@
         "products_note": "These are our main, most-requested species; we supply other species on request.",
         "map_eyebrow": "Our markets",
         "map_title": "Shipping routes to {country} and our other markets",
-        "map_intro": "We ship by air and road to 7+ markets, with Europe next in our plan."
+        "map_intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
+        "buyers_title": "Who we supply in {country}",
+        "glance_eyebrow": "Market profile"
     }
 }

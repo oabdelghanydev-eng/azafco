@@ -1,216 +1,177 @@
 {
     "tilapia": {
-        "name": "Тилапия",
+        "name": "Tilapia",
         "alt_names": [
-            "Нильская тилапия"
+            "Nile tilapia"
         ],
-        "description": "Премиальная нильская тилапия с сертифицированных египетских ферм. Наш экспортный продукт №1. Сертификат HACCP с полной холодовой цепью.",
+        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
         "sizes": [
-            "Маленькая (200-300г)",
-            "Средняя (300-500г)",
-            "Большая (500г+)",
-            "Нестандартные размеры доступны"
+            "Small (200–300 g)",
+            "Medium (300–500 g)",
+            "Large (500 g and above)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "sea_bass": {
-        "name": "Сибас",
+        "name": "Sea bass",
         "alt_names": [
-            "Лаврак",
-            "Морской волк",
-            "Европейский сибас"
+            "European sea bass",
+            "Branzino"
         ],
-        "description": "Премиальный европейский сибас, идеален для гриля, жарки и высокой кухни. Фаворит ресторанов в регионе Персидского залива.",
+        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
         "sizes": [
-            "Средний (400-600г)",
-            "Большой (600г+)",
-            "Нестандартные размеры доступны"
+            "Medium (400–600 g)",
+            "Large (600 g and above)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Морская",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Marine",
+        "availability": "Confirmed per order"
     },
     "mullet": {
-        "name": "Кефаль-лобан",
+        "name": "Grey mullet",
         "alt_names": [
-            "Лобан",
-            "Серая кефаль",
-            "Бури"
+            "Flathead grey mullet",
+            "Bouri"
         ],
-        "description": "Свежая египетская кефаль-лобан, выращенная в солоноватой воде. Отлично подходит для гриля и копчения. Традиционный фаворит в кухне Залива.",
+        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
         "sizes": [
-            "Маленькая (150-250г)",
-            "Средняя (250-400г)",
-            "Нестандартные размеры доступны"
+            "Small (150–250 g)",
+            "Medium (250–400 g)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Солоноватоводная",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Brackish water",
+        "availability": "Confirmed per order"
     },
     "grass_carp": {
-        "name": "Белый амур",
+        "name": "Grass carp",
         "alt_names": [
-            "Амур"
+            "White amur",
+            "Hashayesh"
         ],
-        "description": "Свежий белый амур (Ctenopharyngodon idella) — пресноводная рыба семейства карповых, выращенная в Египте.",
+        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
         "sizes": [
-            "Средний (300-500г)",
-            "Большой (500г+)",
-            "Нестандартные размеры доступны"
+            "Medium (300–500 g)",
+            "Large (500 g and above)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "mubarakah": {
-        "name": "Карп",
+        "name": "Common carp",
         "alt_names": [
-            "Обыкновенный карп",
-            "Сазан",
-            "Мабрук"
+            "Scaled carp",
+            "Qishra"
         ],
-        "description": "Свежий обыкновенный карп, идеален для традиционных блюд. Крупные размеры доступны для оптовой продажи.",
+        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
         "sizes": [
-            "Большой (1-2кг)",
-            "Джамбо (2кг+)",
-            "Нестандартные размеры доступны"
+            "Large (1–2 kg)",
+            "Jumbo (2 kg and above)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "catfish": {
-        "name": "Клариевый сом",
+        "name": "Catfish",
         "alt_names": [
-            "Африканский клариевый сом",
-            "Африканский сом"
+            "African catfish",
+            "North African catfish",
+            "Karmout"
         ],
-        "description": "Свежий африканский клариевый сом с египетских пресноводных ферм. Популярный выбор для ресторанов и оптовиков.",
+        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
         "sizes": [
-            "Средний (500-800г)",
-            "Большой (800г+)",
-            "Нестандартные размеры доступны"
+            "Medium (500–800 g)",
+            "Large (800 g and above)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "lout": {
-        "name": "Горбыль",
+        "name": "Meagre",
         "alt_names": [
-            "Серебристый горбыль",
-            "Лут"
+            "Lout",
+            "Croaker",
+            "Corvina"
         ],
-        "description": "Свежий горбыль с плотным белым мясом. Премиальное качество для элитных ресторанов и отелей.",
+        "description": "Meagre, known in Egypt as lout, is a marine fish.",
         "sizes": [
-            "Средний (400-600г)",
-            "Большой (600г+)",
-            "Нестандартные размеры доступны"
+            "Medium (400–600 g)",
+            "Large (600 g and above)"
         ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Морская",
-        "availability": "Круглогодичное снабжение"
+        "packaging": "EPS foam box",
+        "category": "Marine",
+        "availability": "Confirmed per order"
     },
     "thinlip_mullet": {
-        "name": "Тонкогубая кефаль",
+        "name": "Thinlip mullet",
         "alt_names": [
-            "Кефаль",
-            "Тобар"
+            "Thinlip grey mullet",
+            "Tobar"
         ],
-        "description": "Свежая тонкогубая кефаль (Chelon ramada), выращенная в солоноватой воде в Египте. Отдельный продукт от нашей кефали-лобана (Mugil cephalus).",
-        "sizes": [
-            "Нестандартные размеры доступны"
-        ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Солоноватоводная",
-        "availability": "Под заказ, уточняйте текущее наличие"
+        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Brackish water",
+        "availability": "Confirmed per order"
     },
     "bayad_catfish": {
-        "name": "Баяд",
+        "name": "Bayad catfish",
         "alt_names": [
-            "Нильский багрус"
+            "Bayad",
+            "Nile bagrid catfish"
         ],
-        "description": "Свежий баяд (Bagrus bajad) — пресноводный сом, обитающий в Ниле. В основном дикий улов из Нила.",
-        "sizes": [
-            "Нестандартные размеры доступны"
-        ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Под заказ, уточняйте текущее наличие"
+        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "silver_carp": {
-        "name": "Толстолобик",
-        "alt_names": [
-            "Белый толстолобик"
-        ],
-        "description": "Свежий белый толстолобик (Hypophthalmichthys molitrix) — пресноводная рыба семейства карповых, выращенная в Египте.",
-        "sizes": [
-            "Нестандартные размеры доступны"
-        ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Под заказ, уточняйте текущее наличие"
+        "name": "Silver carp",
+        "alt_names": [],
+        "description": "Silver carp is a freshwater carp.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "mirror_carp": {
-        "name": "Зеркальный карп",
+        "name": "Mirror carp",
         "alt_names": [
-            "Карп"
+            "Common carp (mirror)",
+            "Mabrouka"
         ],
-        "description": "Свежий зеркальный карп — зеркальная форма обыкновенного карпа (Cyprinus carpio), выращенный в Египте.",
-        "sizes": [
-            "Нестандартные размеры доступны"
-        ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Пресноводная",
-        "availability": "Под заказ, уточняйте текущее наличие"
+        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "sea_bream": {
-        "name": "Дорада",
+        "name": "Sea bream",
         "alt_names": [
-            "Золотистый спар"
+            "Gilthead sea bream",
+            "Dorade"
         ],
-        "description": "Свежая дорада (Sparus aurata) — морская рыба, выращенная в Египте.",
-        "sizes": [
-            "Нестандартные размеры доступны"
-        ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Морская",
-        "availability": "Под заказ, уточняйте текущее наличие"
+        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Marine",
+        "availability": "Confirmed per order"
     },
     "eels": {
-        "name": "Европейский угорь",
+        "name": "European eel",
         "alt_names": [
-            "Речной угорь",
-            "Угорь"
+            "Eel"
         ],
-        "description": "Свежий европейский угорь из озёр дельты Нила. Специализированный продукт для избранных рынков за пределами ЕС.",
-        "sizes": [
-            "Средний (300-500г)",
-            "Большой (500г+)",
-            "Нестандартные размеры доступны"
-        ],
-        "storage_temp": "0–4°C",
-        "packaging": "EPS коробка",
-        "category": "Солоноватоводная",
-        "availability": "Круглогодичное снабжение"
-    },
-    "_note": {
-        "custom_sizes": "Мы предлагаем большую гибкость в размерах – все продукты могут быть изготовлены по вашим требованиям",
-        "more_products": "Дополнительные продукты доступны по запросу. Свяжитесь с нами для конкретных требований.",
-        "min_order": "Минимальный заказ: 1 коробка"
+        "description": "European eel is a brackish-water fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Brackish water",
+        "availability": "Confirmed per order"
     }
 }

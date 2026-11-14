@@ -1,15 +1,15 @@
 {
     "meta": {
         "title": "Insights for fish importers",
-        "description": "Practical guides for fish importers and distributors on HS codes, documents, packing and the cold chain, with the date and source of every fact."
+        "description": "Guides for fish importers on HS codes, documents and the cold chain, plus AZAFCO news and press, with the date and source of every fact."
     },
     "breadcrumb": "Insights",
     "hero": {
         "eyebrow": "Insights",
         "title": "Knowledge for better buying decisions",
-        "intro": "Practical guides on specifications, packing, documents and the cold chain, with the date and source of every fact.",
+        "intro": "Practical guides on documents and the cold chain, plus company news and press, with the date and source of every fact.",
         "primary": "Read the importer guide",
-        "secondary": "See our fish"
+        "secondary": "News and press"
     },
     "featured": {
         "eyebrow": "Featured guide",
@@ -22,8 +22,9 @@
         "importer_guide_text": "How to write a precise supply request, read specifications and compare suppliers.",
         "behind_operations": "Behind the operations",
         "behind_operations_text": "Grading, packing and dispatch at our plant, published after review.",
-        "company_news": "Company news",
-        "company_news_text": "Company developments, events and visits, with dates and references."
+        "company_news": "News and press",
+        "company_news_text": "Visits, media coverage, milestones and industry news, each with its date and a named source.",
+        "news_count": "{count, plural, one {# item} other {# items}}"
     },
     "grid": {
         "title": "All articles",

@@ -81,12 +81,11 @@
         "title": "Share your specification",
         "text": "Tell us the species, weight grade, packing and destination, and any requirements of your market. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
         "primary": "Start a partnership",
-        "secondary": "Send your requirements",
-        "whatsapp": "WhatsApp management",
-        "email": "Email the export team"
+        "secondary": "Send your requirements"
     },
     "pending": {
         "traceability": "Lot and batch data that can be supplied with each shipment",
         "market_approvals": "Market approvals (e.g. EU listing) once granted"
-    }
+    },
+    "newTab": "(opens in a new tab)"
 }

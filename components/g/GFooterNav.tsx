@@ -1,21 +1,10 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/navigation';
-import { isActivePath, routes } from '@/lib/v2/routes';
+import { isActivePath } from '@/lib/v2/routes';
+import { G_NAV_KEYS, G_NAV_KEYS_WITH_CONTACT, G_NAV_ROUTE, type GNavKey } from './nav';
 
-export const G_NAV_KEYS = ['about', 'fish', 'chain', 'quality', 'markets'] as const;
-export type GNavKey = (typeof G_NAV_KEYS)[number] | 'contact';
-
-/** Real route behind each board anchor (inner pages link here). */
-const ROUTE: Record<GNavKey, string> = {
-    about: routes.about,
-    fish: routes.products,
-    chain: routes.processing,
-    quality: routes.quality,
-    markets: routes.markets,
-    contact: routes.contact,
-};
+export type { GNavKey } from './nav';
 
 export interface GNavItem {
     key: GNavKey;
@@ -34,11 +23,11 @@ export interface GNavItem {
 export function useGNav(withContact: boolean): GNavItem[] {
     const pathname = usePathname();
     const home = pathname === '/' || pathname === '';
-    const keys: GNavKey[] = withContact ? [...G_NAV_KEYS, 'contact'] : [...G_NAV_KEYS];
+    const keys = withContact ? G_NAV_KEYS_WITH_CONTACT : G_NAV_KEYS;
     return keys.map((key) =>
         home
             ? { key, href: `#${key}`, anchor: true, current: false }
-            : { key, href: ROUTE[key], anchor: false, current: isActivePath(pathname, ROUTE[key]) },
+            : { key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) },
     );
 }
 
@@ -68,15 +57,27 @@ export function GNavLink({
     );
 }
 
-/** Footer site links (client: needs the pathname to pick anchors vs routes). */
-export default function GFooterNav({ label, className, linkClassName }: { label: string; className: string; linkClassName: string }) {
-    const tNav = useTranslations('g_header_v2');
+/**
+ * Footer site links (client: needs the pathname to pick anchors vs routes).
+ * Labels come from the server footer as props (no client messages).
+ */
+export default function GFooterNav({
+    label,
+    labels,
+    className,
+    linkClassName,
+}: {
+    label: string;
+    labels: Partial<Record<GNavKey, string>>;
+    className: string;
+    linkClassName: string;
+}) {
     const items = useGNav(false);
     return (
         <nav aria-label={label} className={className}>
             {items.map((item) => (
                 <GNavLink key={item.key} item={item} className={linkClassName}>
-                    {tNav(`nav.${item.key}`)}
+                    {labels[item.key]}
                 </GNavLink>
             ))}
         </nav>

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
-import { gType } from './GPage';
+import { Eyebrow, typography } from '@/components/ui';
 
 export interface WorkflowStage {
     key: string;
@@ -15,7 +15,6 @@ export interface WorkflowStage {
 }
 
 export interface WorkflowProps {
-    ar: boolean;
     stages: WorkflowStage[];
 }
 
@@ -24,34 +23,35 @@ export interface WorkflowProps {
  * (gold block behind a 3:2 photo, as in the home "Who we are" section).
  * Phone/tablet: photo above text. Desktop: two columns, the photo side alternating.
  * Ordered list, so the stage order is conveyed to screen readers too.
+ * Server component; Arabic/Latin type settings come from `lang` via the type tokens.
  */
-export default function Workflow({ ar, stages }: WorkflowProps) {
-    const ty = gType(ar);
+export default function Workflow({ stages }: WorkflowProps) {
     return (
         <ol className="m-0 grid list-none gap-14 p-0 lg:gap-24">
             {stages.map((s, i) => {
                 const flip = i % 2 === 1;
                 return (
-                    <li key={s.key} className="md:mx-auto md:max-w-[600px] lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-x-20">
+                    <li
+                        key={s.key}
+                        className="md:mx-auto md:max-w-[600px] lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-x-16 xl:gap-x-20"
+                    >
                         <div className={`relative min-w-0 pb-4 ps-4 lg:pb-7 lg:ps-7 ${flip ? 'lg:order-2' : ''}`}>
-                            <span aria-hidden="true" className="absolute bottom-0 start-0 h-[52%] w-[46%] rounded bg-[#f7b500]" />
-                            <Image
-                                src={s.image}
-                                alt={s.imageAlt}
-                                width={1536}
-                                height={1024}
-                                sizes="(min-width: 1320px) 590px, (min-width: 1024px) 45vw, (min-width: 768px) 584px, calc(100vw - 56px)"
-                                className="relative block aspect-[3/2] h-auto w-full rounded object-cover"
-                            />
+                            <span aria-hidden="true" className="absolute bottom-0 start-0 h-[52%] w-[46%] rounded-card bg-gold" />
+                            <div className="relative aspect-[3/2] overflow-hidden rounded-card">
+                                <Image
+                                    src={s.image}
+                                    alt={s.imageAlt}
+                                    fill
+                                    sizes="(min-width: 1320px) 590px, (min-width: 1024px) 45vw, (min-width: 768px) 584px, calc(100vw - 56px)"
+                                    className="object-cover"
+                                />
+                            </div>
                         </div>
                         <div className="mt-8 min-w-0 lg:mt-0">
-                            <p className={`m-0 flex items-center gap-3 text-[#002d72] ${ty.stage}`}>
-                                <span aria-hidden="true" className="block h-[2px] w-7 shrink-0 bg-[#f7b500]" />
-                                {s.label}
-                            </p>
-                            <h3 className={`mb-0 mt-4 ${ty.h3}`}>{s.title}</h3>
-                            <p className={`mb-0 text-[#4a5a75] ${ar ? 'mt-2.5' : 'mt-3'}`}>{s.text}</p>
-                            {s.extra ? <div className="mt-3">{s.extra}</div> : null}
+                            <Eyebrow tone="light">{s.label}</Eyebrow>
+                            <h3 className={`mb-0 mt-4 text-ink ${typography.h3}`}>{s.title}</h3>
+                            <p className={`mb-0 mt-3 text-ink-muted ${typography.body}`}>{s.text}</p>
+                            {s.extra ? <div className="mt-2">{s.extra}</div> : null}
                         </div>
                     </li>
                 );

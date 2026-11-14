@@ -8,6 +8,7 @@ import GFish from '@/components/g/home/GFish';
 import GChain from '@/components/g/home/GChain';
 import GQuality from '@/components/g/home/GQuality';
 import GMarkets from '@/components/g/home/GMarkets';
+import GNews from '@/components/g/home/GNews';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -33,6 +34,7 @@ export default async function HomePage({ params }: Props) {
             <GChain />
             <GQuality />
             <GMarkets />
+            <GNews />
         </div>
     );
 }

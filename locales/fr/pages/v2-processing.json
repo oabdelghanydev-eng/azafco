@@ -121,8 +121,7 @@
         "title": "Tell us what your market needs",
         "text": "Share the species, quantity, weight grade and destination. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
         "primary": "Start a partnership",
-        "secondary": "Send your requirements",
-        "whatsapp": "WhatsApp management"
+        "secondary": "Send your requirements"
     },
     "pending": {
         "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",

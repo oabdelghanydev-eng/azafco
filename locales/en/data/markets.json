@@ -2,32 +2,71 @@
     "kuwait": {
         "country": "Kuwait",
         "short": "Kuwait",
-        "sentence": "Kuwait"
+        "sentence": "Kuwait",
+        "note": "Our largest export market. We supply distributors, restaurant chains and hotels in Kuwait.",
+        "buyers": [
+            "Distributors",
+            "Restaurant chains",
+            "Hotels"
+        ]
     },
     "uae": {
         "country": "United Arab Emirates",
         "short": "UAE",
-        "sentence": "the United Arab Emirates"
+        "sentence": "the United Arab Emirates",
+        "note": "Our first export market, since 2008. We supply distributors, restaurants, supermarket chains and hotels in Dubai, Abu Dhabi and Sharjah.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Supermarket chains",
+            "Hotels"
+        ]
     },
     "qatar": {
         "country": "Qatar",
         "short": "Qatar",
-        "sentence": "Qatar"
+        "sentence": "Qatar",
+        "note": "A growing market. We work with distributors, hotel chains, restaurants and catering companies in Qatar.",
+        "buyers": [
+            "Distributors",
+            "Hotel chains",
+            "Restaurants",
+            "Catering companies"
+        ]
     },
     "iraq": {
         "country": "Iraq",
         "short": "Iraq",
-        "sentence": "Iraq"
+        "sentence": "Iraq",
+        "note": "A market with growing demand. We supply local distributors, wholesale markets and restaurants in Iraq.",
+        "buyers": [
+            "Local distributors",
+            "Wholesale markets",
+            "Restaurants"
+        ]
     },
     "bahrain": {
         "country": "Bahrain",
         "short": "Bahrain",
-        "sentence": "Bahrain"
+        "sentence": "Bahrain",
+        "note": "We supply distributors, restaurants, cooperative societies and hotels in Bahrain.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Cooperative societies",
+            "Hotels"
+        ]
     },
     "lebanon": {
         "country": "Lebanon",
         "short": "Lebanon",
-        "sentence": "Lebanon"
+        "sentence": "Lebanon",
+        "note": "A market that values quality and freshness. We supply restaurants, distributors and hotels in Lebanon.",
+        "buyers": [
+            "Restaurants",
+            "Distributors",
+            "Hotels"
+        ]
     },
     "spain": {
         "country": "Spain",
@@ -37,7 +76,13 @@
     "syria": {
         "country": "Syria",
         "short": "Syria",
-        "sentence": "Syria"
+        "sentence": "Syria",
+        "note": "Our newest market, opened in 2026. We supply distributors, restaurants and wholesale markets in Syria.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Wholesale markets"
+        ]
     },
     "russia": {
         "country": "Russia",

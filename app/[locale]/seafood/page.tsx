@@ -1,18 +1,27 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
+    BoxIcon,
     Breadcrumbs,
     Button,
+    CheckIcon,
+    ClipboardCheckIcon,
+    CrateIcon,
     Eyebrow,
-    FeatureGrid,
-    HeadingPhoto,
+    HarvestNetIcon,
+    MailIcon,
     PageHero,
-    Pending,
-    ProcessSteps,
     Section,
-    SectionHeader,
-} from '@/components/v2';
-import { BoxIcon, CheckIcon, ClipboardCheckIcon, CrateIcon, HarvestNetIcon, MailIcon, TruckIcon } from '@/components/v2/icons';
+    SectionHeading,
+    TextLink,
+    TruckIcon,
+    cn,
+    typography,
+} from '@/components/ui';
+import FeatureGrid from '@/components/v2/FeatureGrid';
+import HeadingPhoto from '@/components/v2/HeadingPhoto';
+import Pending from '@/components/v2/Pending';
+import ProcessSteps from '@/components/v2/ProcessSteps';
 import SpeciesIndex from '@/components/v2/seafood/SpeciesIndex';
 import { baseUrl, getCatalogue, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { routes } from '@/lib/v2/routes';
@@ -78,26 +87,34 @@ export default async function SeafoodPage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
-                primaryAction={{ label: t('hero.primary'), href: routes.products }}
-                secondaryAction={{ label: t('hero.secondary'), href: routes.processing }}
+                actions={
+                    <>
+                        <Button href={routes.products} size="lg" stretch="phone" arrow>
+                            {t('hero.primary')}
+                        </Button>
+                        <Button href={routes.processing} variant="outline" size="lg" stretch="phone">
+                            {t('hero.secondary')}
+                        </Button>
+                    </>
+                }
             />
 
             {/* Buyer-spec language in the first scroll */}
-            <Section variant="light" spacing="lg" labelledBy="seafood-chain">
-                <SectionHeader id="seafood-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
+            <Section variant="white" labelledBy="seafood-chain">
+                <SectionHeading id="seafood-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
                 <ProcessSteps
                     steps={chain.map((k) => ({ title: t(`chain.${k}_title`), description: t(`chain.${k}_text`), icon: chainIcons[k] }))}
                 />
             </Section>
 
-            <Section variant="offwhite" spacing="lg" labelledBy="seafood-species">
-                <SectionHeader
+            <Section variant="offwhite" labelledBy="seafood-species">
+                <SectionHeading
                     id="seafood-species"
                     eyebrow={t('species.eyebrow')}
                     title={t('species.title')}
                     intro={t('species.intro')}
                     action={
-                        <Button href={routes.products} variant="secondary" arrow>
+                        <Button href={routes.products} variant="outline" arrow>
                             {t('species.view_all')}
                         </Button>
                     }
@@ -107,58 +124,55 @@ export default async function SeafoodPage({ params }: Props) {
                     meta={Object.fromEntries(catalogue.map((p) => [p.slug, tc(`water.${p.category}`)]))}
                 />
                 {/* Owner, 13 Nov 2026: the 12 are the main species; others on request */}
-                <p className="mt-8 border-s-2 border-gold ps-4 text-body-lg font-medium text-fg">{t('species.more_species')}</p>
+                <p className={cn('m-0 mt-8 border-0 border-s-2 border-solid border-gold ps-4 font-medium text-fg', typography.lead)}>{t('species.more_species')}</p>
             </Section>
 
             {/* Farm / supply: no farm photos yet, so a typographic navy band */}
-            <Section variant="navy" spacing="lg" labelledBy="seafood-farm">
+            <Section variant="navy" labelledBy="seafood-farm">
                 <div className="relative grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                         <Eyebrow className="mb-5">{t('farm.eyebrow')}</Eyebrow>
-                        <h2 id="seafood-farm" className="v2-heading font-display text-display-lg">
+                        <h2 id="seafood-farm" className={cn('v2-heading m-0', typography.h2)}>
                             {t('farm.title')}
                         </h2>
                         <HeadingPhoto id="photo-harvest" />
                     </div>
-                    <div className="space-y-5 text-body-lg text-fg-muted lg:col-span-6 lg:col-start-7">
-                        <p>{t('farm.text_1')}</p>
+                    <div className={cn('space-y-5 text-fg-muted lg:col-span-6 lg:col-start-7', typography.lead)}>
+                        <p className="m-0">{t('farm.text_1')}</p>
                         <Pending block label={t('pending.farm')} />
                     </div>
                 </div>
             </Section>
 
             {/* Processing precision */}
-            <Section variant="light" spacing="lg" labelledBy="seafood-processing">
+            <Section variant="white" labelledBy="seafood-processing">
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                         <Eyebrow className="mb-5">{t('processing.eyebrow')}</Eyebrow>
-                        <h2 id="seafood-processing" className="v2-heading font-display text-display-lg">
+                        <h2 id="seafood-processing" className={cn('v2-heading m-0', typography.h2)}>
                             {t('processing.title')}
                         </h2>
-                        <span aria-hidden="true" className="mt-8 hidden h-1 w-16 rounded-full bg-gold lg:block" />
                         <HeadingPhoto id="photo-processing" />
                     </div>
                     <div className="lg:col-span-6 lg:col-start-7">
-                        <p className="text-body-lg text-fg-muted">{t('processing.text')}</p>
-                        <ul className="mt-6 space-y-3">
+                        <p className={cn('m-0 text-fg-muted', typography.lead)}>{t('processing.text')}</p>
+                        <ul className="m-0 mt-6 list-none space-y-3 p-0">
                             {(['point_1', 'point_2', 'point_3'] as const).map((k) => (
-                                <li key={k} className="flex gap-3 text-body text-fg">
-                                    <CheckIcon size={22} className="mt-0.5 shrink-0 text-eyebrow" />
+                                <li key={k} className={cn('flex gap-3 text-fg', typography.body)}>
+                                    <CheckIcon size={24} className="mt-0.5 shrink-0 text-eyebrow" />
                                     <span>{t(`processing.${k}`)}</span>
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-8">
-                            <Button href={routes.processing} variant="text">
-                                {t('processing.link')}
-                            </Button>
+                        <div className="mt-6">
+                            <TextLink href={routes.processing}>{t('processing.link')}</TextLink>
                         </div>
                     </div>
                 </div>
             </Section>
 
-            <Section variant="offwhite" spacing="lg" labelledBy="seafood-requirements">
-                <SectionHeader id="seafood-requirements" eyebrow={t('requirements.eyebrow')} title={t('requirements.title')} intro={t('requirements.intro')} />
+            <Section variant="offwhite" labelledBy="seafood-requirements">
+                <SectionHeading id="seafood-requirements" eyebrow={t('requirements.eyebrow')} title={t('requirements.title')} intro={t('requirements.intro')} />
                 <FeatureGrid
                     columns={3}
                     style="card"
@@ -176,29 +190,36 @@ export default async function SeafoodPage({ params }: Props) {
                 />
             </Section>
 
-            <Section variant="light" spacing="lg" labelledBy="seafood-quality">
+            <Section variant="white" labelledBy="seafood-quality">
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-6">
                         <Eyebrow className="mb-5">{t('quality.eyebrow')}</Eyebrow>
-                        <h2 id="seafood-quality" className="v2-heading font-display text-display-lg">
+                        <h2 id="seafood-quality" className={cn('v2-heading m-0', typography.h2)}>
                             {t('quality.title')}
                         </h2>
-                        <p className="mt-5 max-w-prose-v2 text-body-lg text-fg-muted">{t('quality.text')}</p>
-                        <div className="mt-8 flex flex-wrap items-center gap-4">
-                            <Button href={routes.quality} variant="secondary" arrow>
+                        <p className={cn('m-0 mt-5 max-w-prose-v2 text-fg-muted', typography.lead)}>{t('quality.text')}</p>
+                        <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:gap-3.5">
+                            <Button href={routes.quality} variant="outline" size="lg" stretch="phone" arrow>
                                 {t('quality.link')}
                             </Button>
-                            <Button href={docsHref} external variant="text" icon={<MailIcon size={18} />} dataAttrs={{ 'data-cta': 'seafood_documents_email' }}>
+                            <Button
+                                href={docsHref}
+                                variant="ghost"
+                                size="lg"
+                                stretch="phone"
+                                icon={<MailIcon size={20} />}
+                                dataAttrs={{ 'data-cta': 'seafood_documents_email' }}
+                            >
                                 {t('quality.docs_email')}
                             </Button>
                         </div>
                     </div>
                     <div className="lg:col-span-5 lg:col-start-8">
                         <Eyebrow className="mb-3">{t('audience.eyebrow')}</Eyebrow>
-                        <h3 className="text-heading-md text-fg">{t('audience.title')}</h3>
-                        <ul className="mt-4 divide-y divide-rule border-y border-rule">
+                        <h3 className={cn('m-0 text-fg', typography.h3)}>{t('audience.title')}</h3>
+                        <ul className="m-0 mt-4 list-none divide-y divide-rule border-0 border-y border-solid border-rule p-0">
                             {audience.map((k) => (
-                                <li key={k} className="flex items-center gap-3 py-3.5 text-body text-fg">
+                                <li key={k} className={cn('flex items-center gap-3 py-3.5 text-fg', typography.body)}>
                                     <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                                     {t(`audience.${k}`)}
                                 </li>

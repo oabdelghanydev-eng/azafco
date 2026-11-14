@@ -1,10 +1,11 @@
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { Eyebrow, cn, typography } from '@/components/ui';
 import styles from './GMarkets.module.css';
 import { FLAGS, MAP_COUNTRIES, PLANNED_FLAGS } from './gMarketsMap';
+import { GMarketsList, GMarketsState } from './GMarketsPicker';
 
 /** Static base map (world outline + Egypt highlight), viewBox 0 0 1000 620, drawn under the dynamic layers. */
 const BASE_MAP = '/images/g/markets-map.svg';
-import { GMarketsList, GMarketsState } from './GMarketsPicker';
 
 /** Egypt (Motobas) origin on the map, viewBox 0 0 1000 620. */
 const EG = { x: 267.3, y: 216.8 };
@@ -41,7 +42,7 @@ const M_CLASS = [styles.m0, styles.m1, styles.m2, styles.m3, styles.m4, styles.m
 /** Hidden <defs>: selectable country outlines, flag images and pin clip circles, shared by the desktop and phone maps. */
 function MapDefs() {
     return (
-        <svg width="0" height="0" aria-hidden="true" focusable="false" style={{ position: 'absolute', overflow: 'hidden' }}>
+        <svg width="0" height="0" aria-hidden="true" focusable="false" className="absolute overflow-hidden">
             <defs>
                 {MAP_COUNTRIES.map((d, k) => (
                     <path key={k} id={`gmk-c${k}`} d={d} />
@@ -113,12 +114,12 @@ function MarketsMap({ variant, label, origin, shortNames }: MapProps) {
                     </g>
                 );
             })}
-            <circle cx={EG.x} cy={EG.y} r={desk ? 34.2 : 27.4} fill="none" stroke="#f7b500" strokeWidth="1.5" opacity=".5" />
-            <circle cx={EG.x} cy={EG.y} r={desk ? 23 : 19.2} fill="#f7b500" />
+            <circle cx={EG.x} cy={EG.y} r={desk ? 34.2 : 27.4} strokeWidth="1.5" opacity=".5" className="fill-none stroke-gold" />
+            <circle cx={EG.x} cy={EG.y} r={desk ? 23 : 19.2} className="fill-gold" />
             <g clipPath={`url(#gmk-${desk ? 'cd' : 'cm'}-eg)`}>
                 <use href="#gmk-flag-eg" transform={desk ? 'translate(241.3 197.2)' : 'translate(246.5 201.1) scale(0.8)'} />
             </g>
-            <text x={EG.x} y={desk ? 276.8 : 260.8} textAnchor="middle" fontSize={desk ? 18 : 14} fontWeight="700" fill="#f7b500">
+            <text x={EG.x} y={desk ? 276.8 : 260.8} textAnchor="middle" fontSize={desk ? 18 : 14} fontWeight="700" className="fill-gold">
                 {origin}
             </text>
         </svg>
@@ -127,9 +128,7 @@ function MarketsMap({ variant, label, origin, shortNames }: MapProps) {
 
 /** Home "markets" section (design G): seven active markets with a route map, planned markets below. */
 export default async function GMarkets() {
-    const locale = await getLocale();
     const t = await getTranslations('g_markets_v2');
-    const isAr = locale === 'ar';
 
     const items = MARKETS.map((m) => ({
         code: m.code,
@@ -141,50 +140,48 @@ export default async function GMarkets() {
     const origin = t('origin');
 
     return (
-        <section id="markets" className={`${styles.section} ${isAr ? styles.ar : ''} g-font`}>
+        // Board navy (token `navy`), one step lighter than the fish band and the footer.
+        <section
+            id="markets"
+            data-surface="dark"
+            aria-labelledby="g-markets-title"
+            className="g-font relative scroll-mt-24 bg-navy text-body text-white"
+        >
             <MapDefs />
-            <GMarketsState className="mx-auto box-border max-w-[760px] px-5 py-16 lg:grid lg:max-w-[1360px] lg:grid-cols-[430px_minmax(0,1fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-[104px]">
+            <GMarketsState
+                className={cn(
+                    'mx-auto box-border w-full max-w-[760px] px-5 py-section-sm md:px-8 md:py-20 lg:grid lg:max-w-[1360px] lg:grid-cols-[430px_minmax(0,1fr)] lg:items-center lg:gap-12 lg:py-[104px]',
+                )}
+            >
                 <div className="min-w-0">
-                    <p
-                        className={`m-0 mb-2 text-[#f7b500] lg:mb-3 ${
-                            isAr ? 'text-[15px] font-bold lg:text-[17px]' : 'text-[14px] font-extrabold lg:text-[15px]'
-                        }`}
-                    >
-                        {t('eyebrow')}
-                    </p>
-                    <h2
-                        className={`m-0 text-[28px] ${
-                            isAr
-                                ? 'font-bold leading-[1.4] lg:text-[clamp(32px,3.4vw,50px)] lg:leading-[1.35]'
-                                : 'font-extrabold leading-[1.15] tracking-[-0.02em] lg:text-[clamp(32px,3.6vw,52px)] lg:leading-[1.12]'
-                        }`}
-                    >
+                    <Eyebrow className="mb-2.5 lg:mb-3.5">{t('eyebrow')}</Eyebrow>
+                    <h2 id="g-markets-title" className={cn('v2-heading m-0', typography.h2)}>
                         {t('title')}
                     </h2>
-                    <p className="m-0 mb-2 mt-[14px] text-white/90 lg:mb-0 lg:mt-5">{t('intro')}</p>
+                    <p className="m-0 mb-2 mt-3.5 text-fg-muted lg:mb-0 lg:mt-5">{t('intro')}</p>
 
                     {/* phone/tablet map sits between the intro and the list */}
                     <div dir="ltr" className="-mx-3 lg:hidden">
                         <MarketsMap variant="phone" label={mapLabel} origin={origin} shortNames={shortNames} />
                     </div>
 
-                    <GMarketsList items={items} className="m-0 mt-1 grid list-none gap-[2px] p-0 lg:mt-[26px] lg:gap-1" />
+                    <GMarketsList items={items} className="m-0 mt-1 grid list-none gap-0.5 p-0 lg:mt-[26px] lg:gap-1" />
 
-                    <div className="mt-[18px] border-t border-white/20 pt-[18px] lg:mt-[22px]">
-                        <p className="m-0 mb-3 text-[14px] font-bold text-[#f7b500]">{t('plannedTitle')}</p>
-                        <ul className="m-0 flex list-none flex-wrap gap-x-[26px] gap-y-[14px] p-0">
+                    <div className="mt-[18px] border-0 border-t border-solid border-white/20 pt-[18px] lg:mt-[22px]">
+                        <p className={cn('m-0 mb-3 font-bold text-gold', typography.caption)}>{t('plannedTitle')}</p>
+                        <ul className="m-0 flex list-none flex-wrap gap-x-[26px] gap-y-3.5 p-0">
                             {PLANNED.map((code) => (
-                                <li key={code} className="flex items-center gap-[10px]">
+                                <li key={code} className="flex items-center gap-2.5">
                                     <span
                                         aria-hidden="true"
-                                        className={styles.plannedFlag}
+                                        className="h-[30px] w-[30px] flex-none rounded-full bg-white bg-cover bg-center bg-no-repeat opacity-85 outline-dashed outline-[1.5px] outline-offset-[3px] outline-white/60"
                                         style={{ backgroundImage: `url("${PLANNED_FLAGS[code]}")` }}
                                     />
-                                    <span className="text-[16px] font-bold">{t(`planned.${code}`)}</span>
+                                    <span className="font-bold">{t(`planned.${code}`)}</span>
                                 </li>
                             ))}
                         </ul>
-                        <p className="m-0 mt-[14px] text-[14px] text-white/70">{t('paused')}</p>
+                        <p className={cn('m-0 mt-3.5 text-fg-muted', typography.caption)}>{t('paused')}</p>
                     </div>
                 </div>
 

@@ -1,14 +1,33 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { MailIcon, MapPinIcon, PhoneIcon, WhatsAppIcon } from '@/components/v2/icons';
+import { LuClock, LuDownload } from 'react-icons/lu';
+import {
+    ArrowIcon,
+    Button,
+    Card,
+    CheckIcon,
+    ContactRow,
+    ExternalLink,
+    Icon,
+    MailIcon,
+    MapPinIcon,
+    PageHead,
+    PhoneIcon,
+    Section,
+    SectionHeading,
+    WhatsAppIcon,
+    buttonClass,
+    cn,
+    focusRing,
+    phoneDisplay,
+    typography,
+} from '@/components/ui';
 import ContactRoutes from '@/components/v2/contact/ContactRoutes';
-import { FOCUS_DARK, FOCUS_LIGHT, GArrow, GEyebrow, GPageHead, GSectionHead, gBody, gCard, gH3, gSectionY, gSmall, gWrap, phoneDisplay } from '@/components/v2/contact/g';
 import { resolveRfqParams } from '@/components/v2/rfq/options';
 import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
 import { companyInfo } from '@/data/company';
-import { cn } from '@/lib/v2/cn';
 import { routes } from '@/lib/v2/routes';
 import { Link } from '@/navigation';
 
@@ -20,6 +39,9 @@ type Props = {
 /** Factory pin (old site's factory map; RELEASE-DECISIONS §4). Same as the G footer. */
 const FACTORY_PIN = '31.433264,30.475957';
 
+/** Contact card from the live site (public/azafco-contact.vcf): management number + export team email. */
+const VCARD_PATH = '/azafco-contact.vcf';
+
 /** "lat,lng" read from a Google Maps embed URL (!2d<lng>!3d<lat>), so the office link follows data/company.ts */
 function pinFromEmbed(url: string): string | undefined {
     const m = url.match(/!2d(-?\d+(?:\.\d+)?)!3d(-?\d+(?:\.\d+)?)/);
@@ -27,6 +49,12 @@ function pinFromEmbed(url: string): string | undefined {
 }
 
 const mapsSearch = (pin: string) => `https://www.google.com/maps/search/?api=1&query=${pin}`;
+
+/** Inline link on a light card (privacy, quality): navy, gold underline, 44px target. */
+const cardLink = cn(
+    'group inline-flex min-h-tap items-center gap-2 font-semibold text-link underline decoration-gold decoration-2 underline-offset-[6px] transition-colors hover:text-link-hover',
+    focusRing,
+);
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -38,7 +66,6 @@ export default async function ContactPage({ params, searchParams }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
     const { product, country } = resolveRfqParams(await searchParams);
-    const ar = locale === 'ar';
 
     const t = await getTranslations({ locale, namespace: 'contact_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
@@ -47,218 +74,226 @@ export default async function ContactPage({ params, searchParams }: Props) {
     const proof = t.raw('trust.proof') as string[];
     const newTab = t('channels.new_tab');
     const phone = phoneDisplay(c.whatsappNumber);
+    const mailto = `mailto:${c.email}`;
 
-    // Three channels, same roles as the G footer: WhatsApp = management (fast deals), email = export team.
+    // Same roles as the G footer: WhatsApp = management direct (fast deals), email = export team.
     const channels = [
-        { key: 'whatsapp', href: c.social.whatsapp, value: phone, icon: <WhatsAppIcon size={22} />, external: true },
-        { key: 'email', href: `mailto:${c.email}`, value: c.email, icon: <MailIcon size={22} />, external: false },
-        { key: 'phone', href: `tel:${c.phone}`, value: phone, icon: <PhoneIcon size={22} />, external: false },
+        { key: 'whatsapp', href: c.social.whatsapp, value: phone, icon: <WhatsAppIcon size={24} /> },
+        { key: 'email', href: mailto, value: c.email, icon: <MailIcon size={24} /> },
+        { key: 'phone', href: `tel:${c.phone}`, value: phone, icon: <PhoneIcon size={24} /> },
     ] as const;
 
+    // Addresses + embeds from data/company.ts (as on the live contact page): main office first, then the plant.
     const officeEmbed = companyInfo.addresses.main.mapEmbedUrl;
-    const factoryEmbed = companyInfo.addresses.factory.mapEmbedUrl;
     const officePin = pinFromEmbed(officeEmbed);
     const locations = [
-        { key: 'factory', title: t('locations.factory'), address: tc('addresses.factory.address'), embed: factoryEmbed, mapTitle: t('locations.map_title_factory'), link: mapsSearch(FACTORY_PIN) },
-        { key: 'office', title: t('locations.office'), address: tc('addresses.main.address'), embed: officeEmbed, mapTitle: t('locations.map_title_office'), link: officePin ? mapsSearch(officePin) : undefined },
+        {
+            key: 'office',
+            title: t('locations.office'),
+            address: tc('addresses.main.address'),
+            embed: officeEmbed,
+            mapTitle: t('locations.map_title_office'),
+            link: officePin ? mapsSearch(officePin) : undefined,
+        },
+        {
+            key: 'factory',
+            title: t('locations.factory'),
+            address: tc('addresses.factory.address'),
+            embed: companyInfo.addresses.factory.mapEmbedUrl,
+            mapTitle: t('locations.map_title_factory'),
+            link: mapsSearch(FACTORY_PIN),
+        },
     ];
 
     return (
-        <div className={cn('g-font bg-white text-[#0d1f3f]', gBody(ar))}>
+        <div className={typography.body}>
             <PageStructuredData locale={locale} pageType="contact" />
 
-            {/* 01 Opening */}
-            <GPageHead ar={ar} crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="contact-title" intro={t('hero.intro')} />
-
-            {/* 02 Direct channels (roles as in the G footer) */}
-            <section aria-labelledby="ct-channels" className={cn(gWrap, gSectionY)}>
-                <GSectionHead ar={ar} id="ct-channels" eyebrow={t('channels.eyebrow')} title={t('channels.title')} />
-                <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
-                    {channels.map((ch, i) => (
-                        <li key={ch.key} className="min-w-0">
-                            <a
-                                href={ch.href}
-                                data-cta={`contact_${ch.key}`}
-                                {...(ch.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                                className={cn(
-                                    gCard(i === 0),
-                                    'group flex h-full min-h-[44px] flex-col p-6 transition-colors hover:border-[#002d72] lg:p-8',
-                                    FOCUS_LIGHT,
-                                )}
-                            >
-                                <span className="grid h-12 w-12 place-items-center rounded-full bg-[#f2f5fa] text-[#002d72]">{ch.icon}</span>
-                                <span className={cn(gH3(ar), 'mt-5 block text-[#0d1f3f]')}>{t(`channels.${ch.key}.title`)}</span>
-                                <span className={cn('mb-5 mt-1 block text-[#4a5a75]', gSmall(ar))}>{t(`channels.${ch.key}.sub`)}</span>
-                                <span className="mt-auto flex items-center justify-between gap-3 border-t border-[#d5dde9] pt-4">
-                                    <span dir="ltr" className="min-w-0 text-[16px] font-bold text-[#002d72] [overflow-wrap:anywhere] lg:text-[17px]">
-                                        {ch.value}
-                                    </span>
-                                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[#d5dde9] text-[#002d72] transition-colors group-hover:border-[#f7b500] group-hover:bg-[#f7b500] group-hover:text-[#001b47]">
-                                        <GArrow ar={ar} />
-                                    </span>
-                                </span>
-                                {ch.external ? <span className="sr-only">{newTab}</span> : null}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-                <p className={cn('mb-0 mt-6 text-[#4a5a75]', gSmall(ar))}>
-                    <span className="font-bold text-[#0d1f3f]">{t('channels.hours')}: </span>
-                    {tc('workingHours')}
-                </p>
-            </section>
-
-            {/* 03 Enquiry routes → /rfq (prepared email / WhatsApp message; no web form) */}
-            {/* id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working */}
-            <section id="partnership" aria-labelledby="contact-routes-title" className="scroll-mt-28 bg-[#f2f5fa]">
-                <div className={cn(gWrap, gSectionY)}>
-                    <ContactRoutes prefillSpecies={product} prefillCountry={country} />
+            {/* 01 Opening: one gold action (WhatsApp, management) + email to the export team */}
+            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="contact-title" intro={t('hero.intro')}>
+                <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
+                    <Button
+                        href={c.social.whatsapp}
+                        size="lg"
+                        stretch="phone"
+                        icon={<WhatsAppIcon size={20} />}
+                        newTabLabel={newTab}
+                        dataAttrs={{ 'data-cta': 'contact_hero_whatsapp' }}
+                    >
+                        {t('hero.actions.whatsapp')}
+                    </Button>
+                    <Button href={mailto} variant="outline" size="lg" stretch="phone" icon={<MailIcon size={20} />} dataAttrs={{ 'data-cta': 'contact_hero_email' }}>
+                        {t('hero.actions.email')}
+                    </Button>
                 </div>
-            </section>
+            </PageHead>
 
-            {/* 04 Locations with map embeds (addresses + embeds from data/company.ts) */}
-            <section aria-labelledby="ct-locations" className={cn(gWrap, gSectionY)}>
-                <GSectionHead ar={ar} id="ct-locations" eyebrow={t('locations.eyebrow')} title={t('locations.title')} />
-                <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2 lg:gap-8">
-                    {locations.map((l) => (
-                        <li key={l.key} className={cn(gCard(), 'flex min-w-0 flex-col overflow-hidden')}>
-                            <div className="relative aspect-[4/3] w-full bg-[#f2f5fa] sm:aspect-[16/10]">
-                                <iframe
-                                    src={l.embed}
-                                    title={l.mapTitle}
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    allowFullScreen
-                                    className="absolute inset-0 h-full w-full border-0"
+            {/* 02 Direct channels: rows as in the G footer, office hours, vCard */}
+            <Section variant="white" labelledBy="ct-channels">
+                <SectionHeading id="ct-channels" layout="split" eyebrow={t('channels.eyebrow')} title={t('channels.title')} intro={t('channels.intro')} />
+                <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+                    <ul className="m-0 min-w-0 list-none border-0 border-t border-solid border-rule p-0 lg:col-span-7">
+                        {channels.map((ch) => (
+                            <li key={ch.key}>
+                                <ContactRow
+                                    href={ch.href}
+                                    external
+                                    newTabLabel={newTab}
+                                    icon={ch.icon}
+                                    title={t(`channels.${ch.key}.title`)}
+                                    sub={t(`channels.${ch.key}.sub`)}
+                                    value={ch.value}
+                                    valueDir="ltr"
+                                    dataAttrs={{ 'data-cta': `contact_${ch.key}` }}
                                 />
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="grid min-w-0 gap-4 md:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+                        <div className="flex gap-3.5 rounded-card bg-surface-offwhite p-5 lg:p-6">
+                            <Icon icon={LuClock} size={24} className="mt-0.5 text-navy" />
+                            <div className="min-w-0">
+                                <h3 className={cn('m-0 text-ink', typography.h4)}>{t('channels.hours')}</h3>
+                                <p className="mb-0 mt-1 text-ink">{tc('workingHours')}</p>
+                                <p className={cn('mb-0 mt-1 text-ink-muted', typography.small)}>{tc('workingHoursNote')}</p>
                             </div>
-                            <div className="flex flex-1 flex-col p-6 lg:p-8">
-                                <h3 className={cn(gH3(ar), 'flex items-center gap-2.5 text-[#0d1f3f]')}>
-                                    <MapPinIcon size={20} className="shrink-0 text-[#002d72]" />
-                                    {l.title}
-                                </h3>
-                                <p className="mb-0 mt-2 flex-1 text-[#4a5a75]">{l.address}</p>
-                                {l.link ? (
-                                    <a
-                                        href={l.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        data-cta={`contact_map_${l.key}`}
-                                        className={cn(
-                                            'mt-4 inline-flex min-h-[44px] items-center gap-2.5 self-start text-[#002d72] underline-offset-4 hover:underline',
-                                            ar ? 'font-bold' : 'font-extrabold',
-                                            FOCUS_LIGHT,
-                                        )}
-                                    >
-                                        {t('locations.map_open')}
-                                        <GArrow ar={ar} />
-                                        <span className="sr-only">{newTab}</span>
-                                    </a>
-                                ) : null}
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-                <p className={cn('mb-0 mt-4 text-[#4a5a75]', gSmall(ar))}>{t('locations.map_note')}</p>
-            </section>
-
-            {/* 05 After you write (no-obligation note), privacy note, registration + proof, official channels (anti-fraud) */}
-            <section aria-labelledby="ct-next" className="bg-[#002d72] text-white" data-surface="dark">
-                <div className={cn(gWrap, 'py-16 lg:py-24')}>
-                    <div className="grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-20">
-                        <div className="min-w-0">
-                            <h2
-                                id="ct-next"
-                                className={cn(
-                                    'm-0 text-white',
-                                    ar ? 'text-[26px] font-bold leading-[1.45] lg:text-[34px]' : 'text-[27px] font-extrabold leading-[1.2] tracking-[-0.02em] lg:text-[36px]',
-                                )}
+                        </div>
+                        <Card padding="sm" className="flex flex-col lg:p-6">
+                            <h3 className={cn('m-0 text-ink', typography.h4)}>{t('channels.vcard.title')}</h3>
+                            <p className={cn('mb-0 mt-1 flex-1 text-ink-muted', typography.small)}>{t('channels.vcard.text')}</p>
+                            <a
+                                href={VCARD_PATH}
+                                download="AZAFCO-International.vcf"
+                                type="text/vcard"
+                                data-cta="contact_vcard"
+                                className={buttonClass({ variant: 'outline', size: 'sm', className: 'mt-4 self-start' })}
                             >
-                                {t('next.title')}
-                            </h2>
-                            <ol className="m-0 mt-8 grid list-none gap-6 p-0 md:grid-cols-3 md:gap-5">
-                                {steps.map((s, i) => (
-                                    <li key={s} className="border-t-2 border-[#f7b500] pt-4">
-                                        <span aria-hidden="true" className="block text-[14px] font-bold text-[#f7b500]">
-                                            {String(i + 1).padStart(2, '0')}
-                                        </span>
-                                        <p className={cn('mb-0 mt-2 text-white/[.86]', gSmall(ar))}>{s}</p>
-                                    </li>
-                                ))}
-                            </ol>
-                            <p className={cn('mb-0 mt-8 max-w-[640px] border-s-2 border-[#f7b500] ps-4 text-white/[.86]', gSmall(ar))}>{t('next.no_promise')}</p>
-                        </div>
-                        <div className="flex min-w-0 flex-col gap-8">
-                            <div>
-                                <GEyebrow ar={ar} dark as="h2">
-                                    {t('privacy.title')}
-                                </GEyebrow>
-                                <p className={cn('mb-0 mt-3 text-white/[.82]', gSmall(ar))}>{t('privacy.text')}</p>
-                                <Link
-                                    href={routes.privacy}
-                                    className={cn(
-                                        'mt-2 inline-flex min-h-[44px] items-center text-white underline decoration-[#f7b500] decoration-2 underline-offset-4 hover:text-[#f7b500]',
-                                        ar ? 'font-bold' : 'font-extrabold',
-                                        'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f7b500]',
-                                    )}
-                                >
-                                    {t('privacy.link')}
-                                </Link>
-                            </div>
-                            <div className="border-t border-white/[.16] pt-6">
-                                <GEyebrow ar={ar} dark as="h2">
-                                    {t('trust.title')}
-                                </GEyebrow>
-                                <dl className={cn('m-0 mt-3 grid gap-1 text-white/[.82]', gSmall(ar))}>
-                                    <div>
-                                        <dt className="inline">{t('trust.register')}: </dt>
-                                        <dd className="m-0 inline">
-                                            <bdi dir="ltr" className="font-bold text-white">
-                                                {companyConfig.registration.commercialRegister}
-                                            </bdi>
-                                        </dd>
-                                    </div>
-                                    <div>
-                                        <dt className="inline">{t('trust.tax')}: </dt>
-                                        <dd className="m-0 inline">
-                                            <bdi dir="ltr" className="font-bold text-white">
-                                                {companyConfig.registration.taxCard}
-                                            </bdi>
-                                        </dd>
-                                    </div>
-                                </dl>
-                                <h3 className={cn('mb-0 mt-6 font-bold text-white', gSmall(ar))}>{t('trust.proof_title')}</h3>
-                                <ul className="m-0 mt-2 list-none space-y-2 p-0">
-                                    {proof.map((item) => (
-                                        <li key={item} className={cn('flex gap-3 text-white/[.86]', gSmall(ar))}>
-                                            <span aria-hidden="true" className="mt-[0.8em] h-0.5 w-4 shrink-0 bg-[#f7b500]" />
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Link
-                                    href={routes.quality}
-                                    className={cn(
-                                        'mt-2 inline-flex min-h-[44px] items-center gap-2.5 text-white underline decoration-[#f7b500] decoration-2 underline-offset-4 hover:text-[#f7b500]',
-                                        ar ? 'font-bold' : 'font-extrabold',
-                                        FOCUS_DARK,
-                                    )}
-                                >
-                                    {t('trust.proof_link')}
-                                    <GArrow ar={ar} />
-                                </Link>
-                            </div>
-                            {/* Anti-fraud notice (approved copy in data.company.officialChannels) */}
-                            <div className="rounded border-t-4 border-t-[#f7b500] bg-white/[.06] p-5 lg:p-6">
-                                <GEyebrow ar={ar} dark as="h2">
-                                    {tc('officialChannels.title')}
-                                </GEyebrow>
-                                <p className={cn('mb-0 mt-3 text-white/[.86]', gSmall(ar))}>{tc('officialChannels.text', { phone, email: c.email })}</p>
-                            </div>
-                        </div>
+                                <Icon icon={LuDownload} size={20} />
+                                <span>{t('channels.vcard.action')}</span>
+                            </a>
+                        </Card>
                     </div>
                 </div>
-            </section>
+            </Section>
+
+            {/* 03 Enquiry routes → /requirements (prepared email / WhatsApp message; no web form).
+                id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working. */}
+            <Section variant="offwhite" id="partnership" labelledBy="contact-routes-title">
+                <ContactRoutes prefillSpecies={product} prefillCountry={country} />
+            </Section>
+
+            {/* 04 After you write (no-obligation note) + registration, official channels (anti-fraud), privacy */}
+            <Section variant="white" labelledBy="ct-next">
+                <SectionHeading id="ct-next" eyebrow={t('next.eyebrow')} title={t('next.title')} />
+                <ol className="m-0 grid list-none gap-6 p-0 md:grid-cols-3 md:gap-5 lg:gap-8">
+                    {steps.map((s, i) => (
+                        <li key={s} className="border-0 border-t-2 border-solid border-gold pt-4">
+                            <span aria-hidden="true" className={cn('block text-navy', typography.overline)}>
+                                {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <p className="mb-0 mt-2 text-ink-muted">{s}</p>
+                        </li>
+                    ))}
+                </ol>
+                <p className="mb-0 mt-8 max-w-[720px] border-0 border-s-2 border-solid border-gold ps-4 text-ink">{t('next.no_promise')}</p>
+
+                <div className="mt-12 grid gap-4 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-5">
+                    <Card accent className="flex flex-col md:col-span-2 lg:col-span-1">
+                        <h3 className={cn('m-0 text-ink', typography.h3)}>{t('trust.title')}</h3>
+                        <dl className={cn('m-0 mt-3 grid gap-1 text-ink-muted', typography.small)}>
+                            <div>
+                                <dt className="inline">{t('trust.register')}: </dt>
+                                <dd className="m-0 inline">
+                                    <bdi dir="ltr" className="font-semibold text-ink">
+                                        {companyConfig.registration.commercialRegister}
+                                    </bdi>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt className="inline">{t('trust.tax')}: </dt>
+                                <dd className="m-0 inline">
+                                    <bdi dir="ltr" className="font-semibold text-ink">
+                                        {companyConfig.registration.taxCard}
+                                    </bdi>
+                                </dd>
+                            </div>
+                        </dl>
+                        <h4 className={cn('mb-0 mt-5 text-ink', typography.h4)}>{t('trust.proof_title')}</h4>
+                        <ul className="m-0 mt-2 flex-1 list-none space-y-2 p-0">
+                            {proof.map((item) => (
+                                <li key={item} className={cn('flex items-start gap-2.5 text-ink-muted', typography.small)}>
+                                    <CheckIcon size={20} className="mt-0.5 text-navy" />
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <Link href={routes.quality} className={cn(cardLink, 'mt-3 self-start')}>
+                            {t('trust.proof_link')}
+                            <ArrowIcon size={20} />
+                        </Link>
+                    </Card>
+
+                    {/* Anti-fraud notice (approved copy in data.company.officialChannels) */}
+                    <Card accent className="flex flex-col">
+                        <h3 className={cn('m-0 text-ink', typography.h3)}>{tc('officialChannels.title')}</h3>
+                        <p className={cn('mb-0 mt-3 text-ink-muted', typography.small)}>{tc('officialChannels.text', { phone, email: c.email })}</p>
+                    </Card>
+
+                    <Card accent className="flex flex-col">
+                        <h3 className={cn('m-0 text-ink', typography.h3)}>{t('privacy.title')}</h3>
+                        <p className={cn('mb-0 mt-3 flex-1 text-ink-muted', typography.small)}>{t('privacy.text')}</p>
+                        <Link href={routes.privacy} className={cn(cardLink, 'mt-3 self-start')}>
+                            {t('privacy.link')}
+                            <ArrowIcon size={20} />
+                        </Link>
+                    </Card>
+                </div>
+            </Section>
+
+            {/* 05 Locations with map embeds (addresses + embeds from data/company.ts, as on the live site) */}
+            <Section variant="offwhite" labelledBy="ct-locations">
+                <SectionHeading id="ct-locations" layout="split" eyebrow={t('locations.eyebrow')} title={t('locations.title')} intro={t('locations.intro')} />
+                <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2 lg:gap-8">
+                    {locations.map((l) => (
+                        <li key={l.key} className="flex min-w-0">
+                            <Card padding="none" className="flex w-full flex-col overflow-hidden">
+                                <div className="relative aspect-[4/3] w-full bg-navy-100 sm:aspect-[16/10]">
+                                    {/* Static placeholder behind the lazy iframe (iframes are transparent until the map paints),
+                                        so the card never shows an empty box on slow connections or with embeds blocked. */}
+                                    <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
+                                        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white text-navy shadow-sm">
+                                            <MapPinIcon size={28} />
+                                        </span>
+                                        <span className={cn('font-semibold text-navy', typography.h4)}>{l.title}</span>
+                                        <span className={cn('max-w-[34ch] text-ink-muted', typography.small)}>{l.address}</span>
+                                    </div>
+                                    <iframe
+                                        src={l.embed}
+                                        title={l.mapTitle}
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        allowFullScreen
+                                        className="absolute inset-0 h-full w-full border-0"
+                                    />
+                                </div>
+                                <div className="flex flex-1 flex-col p-5 lg:p-8">
+                                    <h3 className={cn('m-0 flex items-center gap-2.5 text-ink', typography.h3)}>
+                                        <MapPinIcon size={24} className="text-navy" />
+                                        {l.title}
+                                    </h3>
+                                    <address className="mb-0 mt-2 flex-1 not-italic text-ink-muted">{l.address}</address>
+                                    {l.link ? (
+                                        <ExternalLink href={l.link} newTabLabel={newTab} className="mt-3 self-start" dataAttrs={{ 'data-cta': `contact_map_${l.key}` }}>
+                                            {t('locations.map_open')}
+                                        </ExternalLink>
+                                    ) : null}
+                                </div>
+                            </Card>
+                        </li>
+                    ))}
+                </ul>
+                <p className={cn('mb-0 mt-4 text-ink-subtle', typography.caption)}>{t('locations.map_note')}</p>
+            </Section>
         </div>
     );
 }

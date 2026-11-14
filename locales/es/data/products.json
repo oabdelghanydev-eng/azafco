@@ -2,216 +2,176 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Tilapia del Nilo"
+            "Nile tilapia"
         ],
-        "description": "Tilapia del Nilo premium de granjas egipcias certificadas. Nuestro producto de exportación #1. Certificado HACCP con cadena de frío completa.",
+        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
         "sizes": [
-            "Pequeño (200-300g)",
-            "Mediano (300-500g)",
-            "Grande (500g+)",
-            "Tamaños personalizados disponibles"
+            "Small (200–300 g)",
+            "Medium (300–500 g)",
+            "Large (500 g and above)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "sea_bass": {
-        "name": "Lubina",
+        "name": "Sea bass",
         "alt_names": [
-            "Róbalo",
-            "Lubina europea",
-            "Llobarro"
+            "European sea bass",
+            "Branzino"
         ],
-        "description": "Lubina europea premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
+        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
         "sizes": [
-            "Mediano (400-600g)",
-            "Grande (600g+)",
-            "Tamaños personalizados disponibles"
+            "Medium (400–600 g)",
+            "Large (600 g and above)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Marino",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Marine",
+        "availability": "Confirmed per order"
     },
     "mullet": {
-        "name": "Mújol",
+        "name": "Grey mullet",
         "alt_names": [
-            "Pardete",
-            "Mugil",
-            "Lisa",
+            "Flathead grey mullet",
             "Bouri"
         ],
-        "description": "Mújol egipcio fresco, criado en aguas salobres. Excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
+        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
         "sizes": [
-            "Pequeño (150-250g)",
-            "Mediano (250-400g)",
-            "Tamaños personalizados disponibles"
+            "Small (150–250 g)",
+            "Medium (250–400 g)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua salobre",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Brackish water",
+        "availability": "Confirmed per order"
     },
     "grass_carp": {
-        "name": "Carpa herbívora",
+        "name": "Grass carp",
         "alt_names": [
-            "Amur blanco",
-            "Carpa china"
+            "White amur",
+            "Hashayesh"
         ],
-        "description": "Carpa herbívora fresca (Ctenopharyngodon idella), una carpa de agua dulce criada en Egipto.",
+        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
         "sizes": [
-            "Mediano (300-500g)",
-            "Grande (500g+)",
-            "Tamaños personalizados disponibles"
+            "Medium (300–500 g)",
+            "Large (500 g and above)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "mubarakah": {
-        "name": "Carpa común",
+        "name": "Common carp",
         "alt_names": [
-            "Carpa",
-            "Mabrouk"
+            "Scaled carp",
+            "Qishra"
         ],
-        "description": "Carpa común fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
+        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
         "sizes": [
-            "Grande (1-2kg)",
-            "Jumbo (2kg+)",
-            "Tamaños personalizados disponibles"
+            "Large (1–2 kg)",
+            "Jumbo (2 kg and above)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "catfish": {
-        "name": "Pez gato africano",
+        "name": "Catfish",
         "alt_names": [
-            "Clarias",
-            "Tinto",
-            "Siluro africano"
+            "African catfish",
+            "North African catfish",
+            "Karmout"
         ],
-        "description": "Pez gato africano fresco de granjas egipcias de agua dulce. Opción popular para restaurantes y distribuidores.",
+        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
         "sizes": [
-            "Mediano (500-800g)",
-            "Grande (800g+)",
-            "Tamaños personalizados disponibles"
+            "Medium (500–800 g)",
+            "Large (800 g and above)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "lout": {
-        "name": "Corvina",
+        "name": "Meagre",
         "alt_names": [
-            "Corvina real",
-            "Lout"
+            "Lout",
+            "Croaker",
+            "Corvina"
         ],
-        "description": "Corvina fresca de carne blanca y firme. Calidad premium para restaurantes y hoteles de alta gama.",
+        "description": "Meagre, known in Egypt as lout, is a marine fish.",
         "sizes": [
-            "Mediano (400-600g)",
-            "Grande (600g+)",
-            "Tamaños personalizados disponibles"
+            "Medium (400–600 g)",
+            "Large (600 g and above)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Marino",
-        "availability": "Disponible todo el año"
+        "packaging": "EPS foam box",
+        "category": "Marine",
+        "availability": "Confirmed per order"
     },
     "thinlip_mullet": {
-        "name": "Morragute",
+        "name": "Thinlip mullet",
         "alt_names": [
-            "Mújol de labio fino",
+            "Thinlip grey mullet",
             "Tobar"
         ],
-        "description": "Morragute fresco (Chelon ramada), un mújol criado en aguas salobres en Egipto. Producto distinto de nuestro mújol (Mugil cephalus).",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua salobre",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Brackish water",
+        "availability": "Confirmed per order"
     },
     "bayad_catfish": {
-        "name": "Bagre bayad",
+        "name": "Bayad catfish",
         "alt_names": [
-            "Bayad"
+            "Bayad",
+            "Nile bagrid catfish"
         ],
-        "description": "Bagre bayad fresco (Bagrus bajad), un pez gato de agua dulce originario del Nilo. Procede sobre todo de captura salvaje en el Nilo.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "silver_carp": {
-        "name": "Carpa plateada",
-        "alt_names": [
-            "Carpa china plateada"
-        ],
-        "description": "Carpa plateada fresca (Hypophthalmichthys molitrix), una carpa de agua dulce criada en Egipto.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "name": "Silver carp",
+        "alt_names": [],
+        "description": "Silver carp is a freshwater carp.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "mirror_carp": {
-        "name": "Carpa espejo",
+        "name": "Mirror carp",
         "alt_names": [
-            "Carpa común (espejo)"
+            "Common carp (mirror)",
+            "Mabrouka"
         ],
-        "description": "Carpa espejo fresca, la forma de escamas espejo de la carpa común (Cyprinus carpio), criada en Egipto.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Freshwater",
+        "availability": "Confirmed per order"
     },
     "sea_bream": {
-        "name": "Dorada",
+        "name": "Sea bream",
         "alt_names": [
-            "Dorada real"
+            "Gilthead sea bream",
+            "Dorade"
         ],
-        "description": "Dorada fresca (Sparus aurata), un pescado marino criado en Egipto.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Marino",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Marine",
+        "availability": "Confirmed per order"
     },
     "eels": {
-        "name": "Anguila europea",
+        "name": "European eel",
         "alt_names": [
-            "Anguila"
+            "Eel"
         ],
-        "description": "Anguila europea fresca de los lagos del delta del Nilo. Producto especializado para mercados seleccionados fuera de la UE.",
-        "sizes": [
-            "Mediano (300-500g)",
-            "Grande (500g+)",
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua salobre",
-        "availability": "Disponible todo el año"
-    },
-    "_note": {
-        "custom_sizes": "Ofrecemos gran flexibilidad en tamaños - todos los productos pueden personalizarse según pedido",
-        "more_products": "Productos adicionales disponibles bajo pedido. Contáctenos para requisitos específicos.",
-        "min_order": "Pedido mínimo: 1 cartón"
+        "description": "European eel is a brackish-water fish.",
+        "sizes": [],
+        "packaging": "EPS foam box",
+        "category": "Brackish water",
+        "availability": "Confirmed per order"
     }
 }

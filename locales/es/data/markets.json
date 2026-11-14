@@ -1,95 +1,102 @@
 {
     "kuwait": {
         "country": "Kuwait",
-        "description": "Nuestro mayor mercado de exportación. Socio de confianza para mayoristas, restaurantes y hoteles líderes en todo Kuwait.",
-        "features": [
-            "Mayor volumen de exportación",
-            "Mayoristas premium",
-            "Cadenas de restaurantes",
-            "Hoteles"
+        "short": "Kuwait",
+        "sentence": "Kuwait",
+        "note": "Our largest export market. We supply distributors, restaurant chains and hotels in Kuwait.",
+        "buyers": [
+            "Distributors",
+            "Restaurant chains",
+            "Hotels"
         ]
     },
     "uae": {
-        "country": "Emiratos Árabes Unidos",
-        "description": "Mercado clave del Golfo. Servicio a los principales mayoristas, restaurantes y supermercados en Dubái, Abu Dabi y Sharjah.",
-        "features": [
-            "Mayoristas certificados",
-            "Restaurantes de lujo",
-            "Cadenas de supermercados",
-            "Hoteles"
+        "country": "United Arab Emirates",
+        "short": "UAE",
+        "sentence": "the United Arab Emirates",
+        "note": "Our first export market, since 2008. We supply distributors, restaurants, supermarket chains and hotels in Dubai, Abu Dhabi and Sharjah.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Supermarket chains",
+            "Hotels"
         ]
     },
     "qatar": {
-        "country": "Catar",
-        "description": "Mercado en crecimiento con sólidas alianzas con mayoristas, hoteles y grupos gastronómicos cataríes.",
-        "features": [
-            "Mayoristas líderes",
-            "Cadenas hoteleras",
-            "Restaurantes",
-            "Empresas de catering"
+        "country": "Qatar",
+        "short": "Qatar",
+        "sentence": "Qatar",
+        "note": "A growing market. We work with distributors, hotel chains, restaurants and catering companies in Qatar.",
+        "buyers": [
+            "Distributors",
+            "Hotel chains",
+            "Restaurants",
+            "Catering companies"
         ]
     },
     "iraq": {
-        "country": "Irak",
-        "description": "Mercado en expansión con alta demanda y oportunidades comerciales prometedoras.",
-        "features": [
-            "Mayoristas locales",
-            "Mercados mayoristas",
-            "Restaurantes"
+        "country": "Iraq",
+        "short": "Iraq",
+        "sentence": "Iraq",
+        "note": "A market with growing demand. We supply local distributors, wholesale markets and restaurants in Iraq.",
+        "buyers": [
+            "Local distributors",
+            "Wholesale markets",
+            "Restaurants"
         ]
     },
     "bahrain": {
-        "country": "Bahréin",
-        "description": "Mercado activo con fuerte presencia entre mayoristas, restaurantes y cooperativas de consumo.",
-        "features": [
-            "Mayoristas",
-            "Restaurantes",
-            "Cooperativas",
-            "Hoteles"
+        "country": "Bahrain",
+        "short": "Bahrain",
+        "sentence": "Bahrain",
+        "note": "We supply distributors, restaurants, cooperative societies and hotels in Bahrain.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Cooperative societies",
+            "Hotels"
         ]
     },
     "lebanon": {
-        "country": "Líbano",
-        "description": "Mercado exigente conocido por su aprecio a la calidad y frescura. Servicio a establecimientos gastronómicos de alto nivel.",
-        "features": [
-            "Gastronomía de alta gama",
-            "Mayoristas premium",
-            "Hoteles"
+        "country": "Lebanon",
+        "short": "Lebanon",
+        "sentence": "Lebanon",
+        "note": "A market that values quality and freshness. We supply restaurants, distributors and hotels in Lebanon.",
+        "buyers": [
+            "Restaurants",
+            "Distributors",
+            "Hotels"
         ]
     },
     "spain": {
-        "country": "España",
-        "description": "Nuestra puerta de entrada a Europa – actualmente en pausa, con planes de reingreso. Aprobación UE vigente.",
-        "features": [
-            "Mayoristas europeos",
-            "Mercados de pescado"
-        ]
+        "country": "Spain",
+        "short": "Spain",
+        "sentence": "Spain"
     },
     "syria": {
-        "country": "Siria",
-        "description": "Uno de nuestros mercados más nuevos y fuertes. AZAFCO ha iniciado operaciones en Siria con una presencia poderosa, sirviendo a distribuidores y restaurantes en todo el país.",
-        "features": [
-            "Fuerte presencia en el mercado",
-            "Mayoristas locales",
-            "Restaurantes",
-            "Mercados mayoristas"
+        "country": "Syria",
+        "short": "Syria",
+        "sentence": "Syria",
+        "note": "Our newest market, opened in 2026. We supply distributors, restaurants and wholesale markets in Syria.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Wholesale markets"
         ]
     },
     "russia": {
-        "country": "Rusia",
-        "description": "Mercado prometedor de gran escala con significativo potencial de crecimiento – planificación activa de entrada.",
-        "features": [
-            "Mayoristas internacionales",
-            "Cadenas minoristas"
-        ]
+        "country": "Russia",
+        "short": "Russia",
+        "sentence": "Russia"
     },
     "usa": {
-        "country": "Estados Unidos de América",
-        "description": "Nuestra próxima puerta de entrada al mercado norteamericano. Los planes de expansión están en marcha para servir al mercado estadounidense en un futuro cercano.",
-        "features": [
-            "Mayoristas internacionales",
-            "Cadenas minoristas",
-            "Cadenas de restaurantes"
-        ]
+        "country": "United States",
+        "short": "USA",
+        "sentence": "the United States"
+    },
+    "europe": {
+        "country": "Europe",
+        "short": "Europe",
+        "sentence": "Europe"
     }
 }

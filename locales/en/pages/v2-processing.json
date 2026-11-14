@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Fish processing, packing and export from Egypt",
-        "description": "From the pond to the pallet: we farm and source fish, then wash, ice, grade, pack, inspect and export it with our own refrigerated trucks and cold stores."
+        "description": "Our plant in Motobas, Kafr El Sheikh washes, ices, grades, packs and inspects whole fresh fish. Our refrigerated trucks and cold stores keep it chilled."
     },
     "breadcrumbs": {
         "label": "Breadcrumb",
@@ -10,8 +10,8 @@
     },
     "hero": {
         "kicker": "Value chain",
-        "title": "From the pond to the pallet, every stage handled by AZAFCO",
-        "intro": "We farm and source the fish, then wash, ice, grade, pack, inspect and export it ourselves, with our own refrigerated trucks, logistics and cold stores.",
+        "title": "Fish processing and cold chain, from our plant in Motobas",
+        "intro": "At our plant in Motobas, Kafr El Sheikh, we wash, ice, grade, pack and inspect the fish we farm and source, then move it with our own refrigerated trucks, logistics and cold stores to air or road freight.",
         "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind",
         "primary": "Start a partnership",
         "secondary": "Our quality standards"
@@ -75,7 +75,7 @@
     "logistics": {
         "eyebrow": "Logistics",
         "title": "Our own trucks and cold stores",
-        "intro": "We run our own refrigerated trucks, logistics and cold stores. Every stage is handled by AZAFCO.",
+        "intro": "We run our own refrigerated trucks, logistics and cold stores to move the packed boxes from our plant to the shipment.",
         "items": {
             "trucks": {
                 "title": "Refrigerated trucks",
@@ -121,8 +121,7 @@
         "title": "Tell us what your market needs",
         "text": "Share the species, quantity, weight grade and destination. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
         "primary": "Start a partnership",
-        "secondary": "Send your requirements",
-        "whatsapp": "WhatsApp management"
+        "secondary": "Send your requirements"
     },
     "pending": {
         "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",

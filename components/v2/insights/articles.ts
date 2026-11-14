@@ -1,8 +1,10 @@
 /**
  * Insights registry for site v2. Today every entry is a guide from
  * data/guides.ts (text in locales/<l>/pages/guides.json → guides_page.<key>).
- * New article types (behind the operations, company news) get added here with
- * their own body component; categories without entries are not listed as cards.
+ * News and press (company news, milestones, industry context) is not an article
+ * type: it lives in data/news.ts and is listed on /insights/news. New article
+ * types get added here with their own body component; categories without
+ * entries are not listed as cards.
  */
 import { guides, type Guide } from '@/data/guides';
 
@@ -20,8 +22,13 @@ export interface InsightEntry {
     imageId?: string;
 }
 
-/** Guide slug -> lib/v2/media id. Empty: no photo meets the bar yet (owner rule 7 Nov 2026). */
-const GUIDE_IMAGE: Record<string, string> = {};
+/**
+ * Guide slug -> lib/v2/media id. Lead-approved illustrative photo (8 Nov 2026);
+ * its alt describes only what is visible, never "our plant".
+ */
+const GUIDE_IMAGE: Record<string, string> = {
+    'importing-fresh-fish-from-egypt': 'photo-cold-chain',
+};
 
 export const insights: InsightEntry[] = guides.map((g: Guide) => ({
     slug: g.slug,

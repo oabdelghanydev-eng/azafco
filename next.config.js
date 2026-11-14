@@ -28,6 +28,10 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
 
+  // Build output folder. Parallel agents set NEXT_DIST_DIR (e.g. .next-kit) so their
+  // dev servers never write into the shared .next used by `next start`.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
@@ -53,7 +57,7 @@ const nextConfig = {
       { source: '/:locale(ar|en|es|ru|de|fr)/faq', destination: '/:locale/for-importers#faq', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/certificates', destination: '/:locale/quality', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/eu-buyers', destination: '/:locale/markets', permanent: true },
-      { source: '/:locale(ar|en|es|ru|de|fr)/media', destination: '/:locale/insights', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/media', destination: '/:locale/insights/news', permanent: true },
       // Requirements page: was /rfq (no web form; buyers send by email/WhatsApp)
       { source: '/:locale(ar|en|es|ru|de|fr)/rfq/thank-you', destination: '/:locale/requirements', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/rfq', destination: '/:locale/requirements', permanent: true },

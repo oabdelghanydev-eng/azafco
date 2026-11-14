@@ -23,7 +23,8 @@
         "behind_operations": "Behind the operations",
         "behind_operations_text": "Grading, packing and dispatch at our plant, published after review.",
         "company_news": "Company news",
-        "company_news_text": "Company developments, events and visits, with dates and references."
+        "company_news_text": "Company developments, events and visits, with dates and references.",
+        "news_count": "{count, plural, one {# item} other {# items}}"
     },
     "grid": {
         "title": "All articles",

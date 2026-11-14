@@ -10,11 +10,11 @@
     },
     "importing": {
         "meta_title": "Import fish from Egypt: HS codes and documents",
-        "meta_description": "HS codes for key fish species, the documents for fresh fish exports and EU import (health certificate, TRACES, origin) and cold-chain basics.",
+        "meta_description": "HS codes for our 12 main fish species, the documents for fresh fish exports and EU import (health certificate, TRACES, origin) and cold-chain basics.",
         "breadcrumb": "Importing fresh fish from Egypt",
-        "card_summary": "HS codes for key species, the documents a fresh fish shipment needs, EU import steps and cold-chain basics.",
+        "card_summary": "HS codes for our 12 main species, the documents a fresh fish shipment needs, EU import steps and cold-chain basics.",
         "h1": "Importing fresh fish from Egypt: HS codes, documents and cold chain",
-        "intro": "This guide is for importers, wholesalers and distributors who are planning to buy fresh, chilled whole fish from Egypt. It covers the tariff codes for key species, the documents a shipment usually needs, the extra steps for the European Union and the basics of keeping fish cold on the way.",
+        "intro": "This guide is for importers, wholesalers and distributors who are planning to buy fresh, chilled whole fish from Egypt. It covers the tariff codes for our 12 main species, the documents a shipment usually needs, the extra steps for the European Union and the basics of keeping fish cold on the way.",
         "last_reviewed": "Last reviewed: {date}",
         "disclaimer": "This guide gives general information. It is not legal or customs advice. Rules change, so confirm the current requirements with your customs broker and the authorities of the importing country before you ship.",
         "toc_title": "In this guide",
@@ -30,10 +30,10 @@
             "col_cn": "EU CN code (8 digits)",
             "col_notes": "Notes",
             "notes": {
-                "other_fish": "Not named in a specific subheading, so it falls under 0302.89 \"Other\"."
+                "other_fish": "Not named in a specific subheading, so it falls under 0302.89 \"Other\"; in the EU, under CN 0302 89 90.",
+                "freshwater_other": "Its genus is not one of the catfish named in 0302.72, so it falls under 0302.89 \"Other\"; in the EU, as a freshwater fish, under CN 0302 89 10."
             },
-            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant is responsible for the final classification. Duty rates and preferences change, so check the importing country's tariff (for the EU, TARIC or Access2Markets) before you calculate a landed price.",
-            "more": "Codes for our other main species will be added after review; your customs declarant confirms the final classification."
+            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant is responsible for the final classification. Duty rates and preferences change, so check the importing country's tariff (for the EU, TARIC or Access2Markets) before you calculate a landed price."
         },
         "docs": {
             "title": "Documents for a fresh fish shipment",

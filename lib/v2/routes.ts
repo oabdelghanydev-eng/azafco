@@ -17,6 +17,7 @@ export const routes = {
     about: '/about',
     businesses: '/businesses',
     insights: '/insights',
+    news: '/insights/news',
     contact: '/contact',
     rfq: '/requirements',
     privacy: '/privacy-policy',

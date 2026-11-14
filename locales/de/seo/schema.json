@@ -1,69 +1,84 @@
 {
-    "companyName": "AZAFCO International for Investment and Development",
+    "companyName": "AZAFCO International",
+    "legalName": "AZAFCO International for Investment and Development S.A.E.",
     "alternateName": "AZAFCO International",
     "alternateNames": [
-        "AZAFCO International",
         "AZAFCO",
+        "ازافكو العالمية",
         "ازافكو",
-        "EZAFCO",
-        "Azafco Ägypten",
-        "AZAFCO Fisch"
+        "EZAFCO"
     ],
-    "description": "AZAFCO International for Investment and Development S.A.E. ist ein ägyptisches Unternehmen, das frischen Fisch für B2B-Käufer (Importeure, Großhändler und Distributoren) verarbeitet, verpackt und exportiert. Verarbeitungsbetrieb in Motobas, Kafr El Sheikh, Ägypten.",
-    "slogan": "Premium-Frischfisch aus Ägypten – weltweit",
+    "description": "AZAFCO International is an Egyptian company that farms and sources fresh fish, then grades, packs and exports it for importers, distributors and foodservice buyers in {countries}+ markets. Processing plant in Motobas, Kafr El Sheikh, Egypt.",
+    "slogan": "From Egyptian production to global partnerships",
     "foundingDate": "2008",
-    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
-    "factoryName": "AZAFCO Fischverarbeitungsanlage",
-    "factoryAlternateName": "AZAFCO Produktionsstätte",
-    "websiteName": "AZAFCO International – B2B-Fischexporteur aus Ägypten",
-    "websiteDescription": "Offizielle Website von AZAFCO International, einem ägyptischen Verarbeiter und Exporteur von Frischfisch mit Sitz in Kafr El Sheikh. Produktspezifikationen und B2B-Angebotsanfragen.",
-    "productGroupName": "AZAFCO Frischfischprodukte",
-    "productGroupDesc": "Premium-Frischfischprodukte aus Ägypten – Tilapia, Wolfsbarsch, Meeräsche, Wels & mehr. Individuelle Größen verfügbar.",
-    "catalogName": "AZAFCO Frischfischprodukte-Katalog",
-    "catalogDesc": "Umfassendes Sortiment an Premium-Frischfisch für Großhandelsexport aus Ägypten. 8+ Sorten, individuelle Größen, flexible Bestellungen.",
-    "offerDesc": "Kontaktieren Sie uns für wettbewerbsfähige B2B-Großhandelspreise. Bürozeiten: Sa–Do 8:00–17:00 Uhr (Kairoer Zeit).",
-    "priceRange": "Wettbewerbsfähige Großhandelspreise",
-    "freshFishCategory": "Frischfisch",
-    "freshwater": "Süßwasserfisch",
-    "freshwaterDesc": "Tilapia, Afrikanischer Wels, Bayad-Wels, Karpfen, Spiegelkarpfen, Graskarpfen, Silberkarpfen",
-    "saltwater": "Salzwasserfisch",
-    "saltwaterDesc": "Wolfsbarsch, Dorade, Adlerfisch, Meeräsche, Dünnlippige Meeräsche, Europäischer Aal",
-    "restaurantHotelSupply": "Belieferung von Restaurants & Hotels",
-    "home": "Startseite",
-    "products": "Produkte",
-    "about": "Über uns",
-    "contact": "Kontakt",
-    "markets": "Märkte",
-    "media": "Medien",
-    "certificates": "Zertifikate",
+    "commercialRegisterLabel": "Commercial register",
+    "factoryName": "AZAFCO International fish processing plant",
+    "factoryAlternateName": "AZAFCO fish plant, Motobas",
+    "factoryDescription": "Fish processing plant of AZAFCO International in Motobas, Kafr El Sheikh: grading, packing and dispatch of fresh fish for export.",
+    "websiteName": "AZAFCO International",
+    "websiteDescription": "Official website of AZAFCO International: fresh Egyptian fish for importers, distributors and foodservice buyers, with species specifications and partnership contacts.",
+    "productGroupName": "AZAFCO International fresh fish",
+    "productGroupDesc": "Fresh fish from Egypt: tilapia, sea bass, grey mullet, catfish and other species. Weight grade and packing confirmed per order.",
+    "catalogName": "AZAFCO International fresh fish catalogue",
+    "catalogDesc": "Fresh fish for wholesale export from Egypt: 12 main varieties. Weight grade and packing confirmed per order; other species supplied on request.",
+    "offerDesc": "Tell us the specification; we will review supply and commercial terms. Office hours Sat–Thu 8:00–17:00 (Cairo time).",
+    "priceRange": "Prices confirmed per order",
+    "freshFishCategory": "Fresh fish",
+    "freshwater": "Freshwater fish",
+    "freshwaterDesc": "Tilapia, catfish, bayad catfish, common carp, mirror carp, grass carp, silver carp",
+    "saltwater": "Marine and brackish-water fish",
+    "saltwaterDesc": "Sea bass, sea bream, meagre, grey mullet, thinlip mullet",
+    "restaurantHotelSupply": "Foodservice supply",
+    "home": "Home",
+    "products": "Products",
+    "about": "About us",
+    "contact": "Contact",
+    "markets": "Markets",
+    "media": "Media",
+    "certificates": "Certificates",
     "openingHours": "Sa-Th 08:00-17:00",
-    "paymentAccepted": "Banküberweisung, Akkreditiv, SWIFT-Überweisung",
-    "currenciesAccepted": "USD, EUR, EGP, AED, SAR",
-    "knowsAbout": [
-        "Frischfischexport",
-        "Fischverpackung",
-        "Tilapia-Großhandel",
-        "Wolfsbarsch-Export",
-        "Meeräsche",
-        "Fischverarbeitung",
-        "B2B-Fischversorgung",
-        "Ägyptischer Fisch",
-        "Nilfisch",
-        "Mittelmeerfisch"
+    "contactManagement": "Management, direct on WhatsApp (fast deals)",
+    "contactExport": "Export team (details and documents)",
+    "certificationBody": "TÜV AUSTRIA",
+    "credentialCategory": "ISO certification",
+    "credentials": [
+        {
+            "name": "ISO 9001:2015",
+            "description": "Quality management system"
+        },
+        {
+            "name": "ISO 14001:2015",
+            "description": "Environmental management system"
+        },
+        {
+            "name": "ISO 45001:2018",
+            "description": "Occupational health and safety management system"
+        }
     ],
-    "speakableName": "AZAFCO International – Frischfischexport",
+    "knowsAbout": [
+        "Fresh fish export",
+        "Fish farming",
+        "Fish grading and packing",
+        "Cold chain logistics",
+        "Wholesale fish supply",
+        "Tilapia",
+        "Sea bass",
+        "Grey mullet",
+        "Egyptian aquaculture"
+    ],
+    "speakableName": "AZAFCO International | Fresh fish export",
     "services": {
         "tilapia": {
-            "name": "Tilapia-Export",
-            "description": "Premium-Niltilapia für Großhandel und Export"
+            "name": "Fresh tilapia supply",
+            "description": "Fresh tilapia for wholesale and export"
         },
         "seaBass": {
-            "name": "Wolfsbarsch-Lieferung",
-            "description": "Frischer Mittelmeer-Wolfsbarsch für internationale Märkte"
+            "name": "Fresh sea bass supply",
+            "description": "Fresh sea bass for wholesale and export"
         },
         "mullet": {
-            "name": "Meeräsche-Export",
-            "description": "Frische Meeräsche für internationale Märkte"
+            "name": "Fresh grey mullet supply",
+            "description": "Fresh grey mullet for wholesale and export"
         }
     }
 }

@@ -21,6 +21,7 @@ const pages = [
     { path: 'businesses', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: 'requirements', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'insights', priority: 0.6, changeFrequency: 'weekly' as const },
+    { path: 'insights/news', priority: 0.5, changeFrequency: 'monthly' as const },
     ...productSlugs.map((slug) => ({ path: `products/${slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
     ...activeMarketSlugs.map((slug) => ({ path: `markets/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
     ...guideSlugs.map((slug) => ({ path: `insights/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),

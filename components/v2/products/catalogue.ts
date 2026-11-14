@@ -15,7 +15,7 @@ import { locales, ogLocaleMap, ogImageMap, type Locale, publishedLocales } from 
 import { products, type Product, type ProductCategory } from '@/data/products';
 import { mediaImage, productMediaId, type ImageProps } from '@/lib/v2/media';
 import { productHref } from '@/lib/v2/routes';
-import { formatGradeRange, getSpeciesSpec, type FormKind } from '@/lib/v2/specs';
+import { formatGradeRange, getSpeciesSpec, type FormKind, type Grade, type Units } from '@/lib/v2/specs';
 
 export const baseUrl = companyConfig.contact.baseUrl;
 
@@ -27,6 +27,19 @@ export const baseUrl = companyConfig.contact.baseUrl;
  * Add a slug here to hide its scientific name until it is confirmed.
  */
 const UNVERIFIED_SCIENTIFIC = new Set<string>();
+
+/**
+ * Extra search terms carried over from the live site's product list (origin/main,
+ * locales/{ar,en}/data/products.json alt names). Search only: they are not shown,
+ * so the visible names stay the short ones in data.products.<key>.
+ */
+const SEARCH_ALIASES: Record<string, string[]> = {
+    'sea-bass': ['European bass', 'Mediterranean sea bass', 'قاروص متوسطي'],
+    mullet: ['Striped mullet'],
+    'common-carp': ['Carp', 'Mabrouk'],
+    catfish: ['Sharptooth catfish', 'سمك القط الأفريقي'],
+    'sea-bream': ['Gilthead bream'],
+};
 
 export interface CatalogueProduct {
     slug: string;
@@ -63,9 +76,11 @@ export function toCatalogueProduct(t: RootT, locale: string, p: Product): Catalo
     const key = `data.products.${p.translationKey}`;
     const name = t.has(`${key}.name`) ? t(`${key}.name`) : p.slug;
     const mediaId = productMediaId(p.slug);
-    // Alt text from the locale files (every locale, same short species name as the page)
-    const alt = t.has('catalogue_v2.card.image_alt') ? t('catalogue_v2.card.image_alt', { name }) : name;
-    const image: ImageProps = mediaId ? { ...mediaImage(mediaId, locale), alt } : { src: p.image, alt, width: 960, height: 1280 };
+    // Alt text: the media manifest (AR/EN, short species names) or the locale template for other locales
+    const templated = t.has('catalogue_v2.card.image_alt') ? t('catalogue_v2.card.image_alt', { name }) : name;
+    const image: ImageProps = mediaId
+        ? { ...mediaImage(mediaId, locale), ...(locale === 'ar' || locale === 'en' ? {} : { alt: templated }) }
+        : { src: p.image, alt: templated, width: 960, height: 1280 };
     return {
         slug: p.slug,
         href: productHref(p.slug),
@@ -92,6 +107,7 @@ export async function getSearchNames(): Promise<Record<string, string[]>> {
         const key = `data.products.${p.translationKey}`;
         out[p.slug] = [ar, en].flatMap((t) => [t.has(`${key}.name`) ? t(`${key}.name`) : '', ...rawArray(t, `${key}.alt_names`)]);
         if (!UNVERIFIED_SCIENTIFIC.has(p.slug)) out[p.slug].push(p.scientificName);
+        out[p.slug].push(...(SEARCH_ALIASES[p.slug] ?? []));
         out[p.slug].push(p.slug.replace(/-/g, ' '));
     }
     return out;
@@ -107,6 +123,22 @@ export interface SpecView {
 }
 
 /**
+ * One weight grade as text. Open-ended grades read "500 g and above" / «500 جم فأكثر»
+ * (as in data.products.<key>.sizes), not "500+ g".
+ */
+function gradeText(t: RootT, g: Grade, units: Units): string | null {
+    if (g.minG !== undefined && g.maxG === undefined) {
+        const kg = g.minG >= 1000;
+        const num = String(kg ? Math.round(g.minG / 10) / 100 : g.minG);
+        const lri = String.fromCharCode(0x2066);
+        const pdi = String.fromCharCode(0x2069);
+        const value = `${units.isolate ? `${lri}${num}${pdi}` : num} ${kg ? units.kg : units.g}`;
+        return t('catalogue_v2.specs.and_above', { value });
+    }
+    return formatGradeRange(g, units);
+}
+
+/**
  * Published, indicative spec values for one species (data/specs.ts), labelled
  * from catalogue_v2.specs.*. Nothing is invented: missing data stays empty.
  */
@@ -118,7 +150,7 @@ export function getSpecView(t: RootT, locale: string, slug: string): SpecView {
     const grades: string[] = [];
     for (const f of spec.forms) {
         for (const g of f.grades) {
-            const range = formatGradeRange(g, units);
+            const range = gradeText(t, g, units);
             if (!range) continue;
             const label = g.label && t.has(`${ns}.grades.${g.label}`) ? t(`${ns}.grades.${g.label}`) : null;
             const text = label ? `${label} (${range})` : range;

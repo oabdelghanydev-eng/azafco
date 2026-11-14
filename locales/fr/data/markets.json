@@ -1,95 +1,102 @@
 {
     "kuwait": {
-        "country": "Koweït",
-        "description": "Notre plus grand marché d'exportation. Partenaire de confiance pour les grossistes, restaurants et hôtels de premier plan au Koweït.",
-        "features": [
-            "Plus grand volume d'export",
-            "Grossistes premium",
-            "Chaînes de restaurants",
-            "Hôtels"
+        "country": "Kuwait",
+        "short": "Kuwait",
+        "sentence": "Kuwait",
+        "note": "Our largest export market. We supply distributors, restaurant chains and hotels in Kuwait.",
+        "buyers": [
+            "Distributors",
+            "Restaurant chains",
+            "Hotels"
         ]
     },
     "uae": {
-        "country": "Émirats Arabes Unis",
-        "description": "Marché clé du Golfe. Service aux principaux grossistes, restaurants et supermarchés à Dubaï, Abu Dhabi et Sharjah.",
-        "features": [
-            "Grossistes certifiés",
-            "Restaurants de luxe",
-            "Chaînes de supermarchés",
-            "Hôtels"
+        "country": "United Arab Emirates",
+        "short": "UAE",
+        "sentence": "the United Arab Emirates",
+        "note": "Our first export market, since 2008. We supply distributors, restaurants, supermarket chains and hotels in Dubai, Abu Dhabi and Sharjah.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Supermarket chains",
+            "Hotels"
         ]
     },
     "qatar": {
         "country": "Qatar",
-        "description": "Marché en croissance avec de solides partenariats avec les grossistes, hôtels et groupes de restauration qataris.",
-        "features": [
-            "Grossistes majeurs",
-            "Chaînes hôtelières",
+        "short": "Qatar",
+        "sentence": "Qatar",
+        "note": "A growing market. We work with distributors, hotel chains, restaurants and catering companies in Qatar.",
+        "buyers": [
+            "Distributors",
+            "Hotel chains",
             "Restaurants",
-            "Sociétés de traiteur"
+            "Catering companies"
         ]
     },
     "iraq": {
-        "country": "Irak",
-        "description": "Marché en expansion avec une forte demande et des opportunités commerciales prometteuses.",
-        "features": [
-            "Grossistes locaux",
-            "Marchés de gros",
+        "country": "Iraq",
+        "short": "Iraq",
+        "sentence": "Iraq",
+        "note": "A market with growing demand. We supply local distributors, wholesale markets and restaurants in Iraq.",
+        "buyers": [
+            "Local distributors",
+            "Wholesale markets",
             "Restaurants"
         ]
     },
     "bahrain": {
-        "country": "Bahreïn",
-        "description": "Marché actif avec une forte présence auprès des grossistes, restaurants et coopératives.",
-        "features": [
-            "Grossistes",
+        "country": "Bahrain",
+        "short": "Bahrain",
+        "sentence": "Bahrain",
+        "note": "We supply distributors, restaurants, cooperative societies and hotels in Bahrain.",
+        "buyers": [
+            "Distributors",
             "Restaurants",
-            "Coopératives",
-            "Hôtels"
+            "Cooperative societies",
+            "Hotels"
         ]
     },
     "lebanon": {
-        "country": "Liban",
-        "description": "Marché exigeant réputé pour son appréciation de la qualité et de la fraîcheur. Service aux établissements gastronomiques haut de gamme.",
-        "features": [
-            "Gastronomie haut de gamme",
-            "Grossistes premium",
-            "Hôtels"
+        "country": "Lebanon",
+        "short": "Lebanon",
+        "sentence": "Lebanon",
+        "note": "A market that values quality and freshness. We supply restaurants, distributors and hotels in Lebanon.",
+        "buyers": [
+            "Restaurants",
+            "Distributors",
+            "Hotels"
         ]
     },
     "spain": {
-        "country": "Espagne",
-        "description": "Notre porte d'entrée vers l'Europe – actuellement en pause, avec projets de retour. Agrément UE en vigueur.",
-        "features": [
-            "Grossistes européens",
-            "Marchés aux poissons"
-        ]
+        "country": "Spain",
+        "short": "Spain",
+        "sentence": "Spain"
     },
     "syria": {
-        "country": "Syrie",
-        "description": "L'un de nos marchés les plus récents et les plus dynamiques. AZAFCO a lancé ses opérations en Syrie avec une présence forte, au service des distributeurs et restaurants à travers le pays.",
-        "features": [
-            "Présence forte sur le marché",
-            "Grossistes locaux",
+        "country": "Syria",
+        "short": "Syria",
+        "sentence": "Syria",
+        "note": "Our newest market, opened in 2026. We supply distributors, restaurants and wholesale markets in Syria.",
+        "buyers": [
+            "Distributors",
             "Restaurants",
-            "Marchés de gros"
+            "Wholesale markets"
         ]
     },
     "russia": {
-        "country": "Russie",
-        "description": "Marché prometteur à grande échelle avec un potentiel de croissance significatif – planification active d'entrée.",
-        "features": [
-            "Grossistes internationaux",
-            "Chaînes de distribution"
-        ]
+        "country": "Russia",
+        "short": "Russia",
+        "sentence": "Russia"
     },
     "usa": {
-        "country": "États-Unis d'Amérique",
-        "description": "Notre prochaine porte d'entrée vers le marché nord-américain. Des plans d'expansion sont en cours pour servir le marché américain dans un avenir proche.",
-        "features": [
-            "Grossistes internationaux",
-            "Chaînes de distribution",
-            "Chaînes de restaurants"
-        ]
+        "country": "United States",
+        "short": "USA",
+        "sentence": "the United States"
+    },
+    "europe": {
+        "country": "Europe",
+        "short": "Europe",
+        "sentence": "Europe"
     }
 }

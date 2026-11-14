@@ -1,20 +1,35 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Breadcrumbs, CTABand, FeatureGrid, PageHero, Section, SpeciesRow, SectionHeader } from '@/components/v2';
-import { CheckIcon, DocumentIcon } from '@/components/v2/icons';
+import {
+    Button,
+    Card,
+    CheckIcon,
+    DocumentIcon,
+    Eyebrow,
+    MailIcon,
+    PageHead,
+    Section,
+    SectionHeading,
+    StatStrip,
+    WhatsAppIcon,
+    cn,
+    typography,
+} from '@/components/ui';
+import FeatureGrid from '@/components/v2/FeatureGrid';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
+import { SpeciesRow } from '@/components/v2/products/SpeciesRow';
 import { baseUrl, getCatalogue, getRootT, getSearchNames, getSpecView, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { companyConfig } from '@/config/company.config';
 import { productCategories } from '@/data/products';
-import { routes } from '@/lib/v2/routes';
+import { rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
 
-/** id of the inline "custom requirements" band heading; the hero's partnership button points here */
+/** id of the closing "custom requirements" heading; the hero's partnership button points here */
 const CUSTOM_ID = 'catalogue-custom';
 
-/** Approved company facts (RELEASE-DECISIONS, 13 Nov 2026), in the G home key-figures style */
-const FACTS = ['species', 'markets', 'founded', 'iso', 'capacity'] as const;
+/** Approved company facts (RELEASE-DECISIONS, 13 Nov 2026). The species count is in the h1. */
+const FACTS = ['markets', 'founded', 'iso', 'capacity'] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -42,6 +57,7 @@ export default async function CataloguePage({ params }: Props) {
         const facts: { label: string; value: string | string[] }[] = [];
         if (spec.forms.length) facts.push({ label: t('browser.form_type'), value: spec.forms.map((f) => f.label) });
         if (spec.grades.length) facts.push({ label: t('card.grades'), value: spec.grades });
+        if (spec.pack) facts.push({ label: t('detail.packaging'), value: spec.pack });
         if (!facts.length) facts.push({ label: t('card.origin'), value: t('card.origin_value') });
         return {
             slug: p.slug,
@@ -90,8 +106,9 @@ export default async function CataloguePage({ params }: Props) {
 
     const specify = ['species', 'form', 'packing', 'volume', 'destination', 'timing'] as const;
     // Smallest first step for a cold buyer: WhatsApp to management, prefilled
-    const whatsappHref = `${companyConfig.contact.social.whatsapp}?text=${encodeURIComponent(t('hero.whatsapp_message'))}`;
-    const isAr = locale === 'ar';
+    const { email, social } = companyConfig.contact;
+    const whatsappHref = `${social.whatsapp}?text=${encodeURIComponent(t('hero.whatsapp_message'))}`;
+    const mailHref = `mailto:${email}?subject=${encodeURIComponent(t('custom.email_subject'))}`;
 
     return (
         <>
@@ -99,94 +116,73 @@ export default async function CataloguePage({ params }: Props) {
                 <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(s) }} />
             ))}
 
-            <PageHero
-                variant="split"
+            <PageHead
+                crumbs={[{ label: t('breadcrumb') }]}
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
+                titleId="catalogue-title"
                 intro={t('hero.intro')}
-                breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
-                primaryAction={{ label: t('hero.primary'), href: `#${CUSTOM_ID}`, external: true }}
-                secondaryAction={{ label: t('hero.secondary'), href: whatsappHref, external: true }}
-            />
+            >
+                <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
+                    <Button href={`#${CUSTOM_ID}`} external size="lg" stretch="phone" arrow>
+                        {t('hero.primary')}
+                    </Button>
+                    <Button
+                        href={whatsappHref}
+                        variant="outline"
+                        size="lg"
+                        stretch="phone"
+                        icon={<WhatsAppIcon size={20} />}
+                        newTabLabel={t('new_tab')}
+                        dataAttrs={{ 'data-cta': 'catalogue_hero_whatsapp' }}
+                    >
+                        {t('hero.secondary')}
+                    </Button>
+                </div>
+            </PageHead>
 
             {/* Supplier proof above the fold: the G home key-figures strip */}
-            <section aria-label={t('hero.facts.label')} className="bg-white text-[#0d1f3f]">
-                <div className="mx-auto box-border max-w-[1320px] lg:px-8">
-                    <dl className="m-0 grid grid-cols-2 border-0 border-b border-solid border-[#e3e8f0] px-5 lg:grid-cols-5 lg:px-0">
-                        {FACTS.map((k, i) => {
-                            const lastOdd = i === FACTS.length - 1 && FACTS.length % 2 === 1;
-                            const cell = [
-                                // phone: 2 columns with inner rules; the odd last fact spans the row
-                                'border-0 border-solid border-[#e3e8f0] py-[22px]',
-                                lastOdd ? 'col-span-2' : '',
-                                i < FACTS.length - (FACTS.length % 2 ? 1 : 2) ? 'border-b' : '',
-                                !lastOdd && i % 2 === 1 ? 'ps-4 border-s' : 'pe-3',
-                                // desktop: one row, no rules
-                                'lg:col-span-1 lg:border-0 lg:py-9 lg:ps-0',
-                                i === FACTS.length - 1 ? 'lg:pe-0' : 'lg:pe-6',
-                            ].join(' ');
-                            return (
-                                <div key={k} className={`flex flex-col-reverse ${cell}`}>
-                                    <dt
-                                        className={`font-semibold text-[#4a5a75] ${
-                                            isAr ? 'mt-2 text-[15px] leading-[1.6] lg:text-[17px] lg:leading-[1.8]' : 'mt-1.5 text-[14px] lg:mt-2 lg:text-[16px]'
-                                        }`}
-                                    >
-                                        {t(`hero.facts.${k}.label`)}
-                                    </dt>
-                                    <dd
-                                        className={`m-0 text-[40px] font-extrabold leading-none text-[#002d72] lg:text-[52px] ${
-                                            isAr ? '' : 'tracking-[-0.02em]'
-                                        }`}
-                                    >
-                                        {t(`hero.facts.${k}.value`)}
-                                    </dd>
-                                </div>
-                            );
-                        })}
-                    </dl>
-                </div>
-            </section>
+            <StatStrip
+                label={t('hero.facts.label')}
+                items={FACTS.map((k) => ({ value: t(`hero.facts.${k}.value`), label: t(`hero.facts.${k}.label`) }))}
+            />
 
             {/* The species register: the one list on this page */}
-            <Section variant="light" spacing="lg" labelledBy="catalogue-species">
-                <SectionHeader id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} size="md" />
+            <Section variant="white" labelledBy="catalogue-species">
+                <SectionHeading id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} />
                 <CatalogueBrowser items={items} categories={categories} />
 
                 {/* Owner, 13 Nov 2026: the 12 are the main species; others on request */}
-                <p className="mt-8 border-s-2 border-gold ps-4 text-body-lg font-medium text-fg">{t('grid.more_species')}</p>
+                <p className={cn('m-0 mt-8 border-0 border-s-2 border-solid border-gold ps-4 font-medium text-fg', typography.lead)}>
+                    {t('grid.more_species')}
+                </p>
 
-                {/* Quality reassurance: specifications confirmed per order */}
-                <aside
-                    aria-labelledby="catalogue-note"
-                    className="mt-12 flex flex-col gap-4 rounded-card border-s-4 border-gold bg-surface-offwhite p-6 sm:flex-row md:p-8"
-                >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-control bg-navy-50 text-navy">
-                        <DocumentIcon size={22} />
+                {/* Specifications and prices are confirmed per order */}
+                <Card as="aside" padding="md" className="mt-12 flex flex-col gap-4 border-s-4 border-s-gold bg-surface-offwhite sm:flex-row" >
+                    <span className="flex h-tap w-tap shrink-0 items-center justify-center rounded-control bg-white text-navy">
+                        <DocumentIcon size={24} />
                     </span>
-                    <div>
-                        <h3 id="catalogue-note" className="text-heading-md text-navy">
-                            {t('note.title')}
-                        </h3>
-                        <p className="mt-2 max-w-prose-v2 text-body text-ink-muted">{t('note.text')}</p>
+                    <div className="min-w-0">
+                        <h3 className={cn('m-0 text-navy', typography.h3)}>{t('note.title')}</h3>
+                        <p className={cn('m-0 mt-2 max-w-prose-v2 text-ink-muted', typography.body)}>{t('note.text')}</p>
                     </div>
-                </aside>
+                </Card>
             </Section>
 
-            <Section variant="offwhite" spacing="lg" labelledBy="catalogue-specify">
-                <SectionHeader id="catalogue-specify" eyebrow={t('specify.eyebrow')} title={t('specify.title')} intro={t('specify.intro')} size="md" />
+            <Section variant="offwhite" labelledBy="catalogue-specify">
+                <SectionHeading id="catalogue-specify" eyebrow={t('specify.eyebrow')} title={t('specify.title')} intro={t('specify.intro')} />
                 <FeatureGrid
                     columns={3}
                     items={specify.map((k) => ({
-                        icon: <CheckIcon size={22} />,
+                        icon: <CheckIcon size={24} />,
                         title: t(`specify.${k}_title`),
                         description: t(`specify.${k}_text`),
                     }))}
                 />
             </Section>
 
-            <Section variant="light" spacing="lg" labelledBy="catalogue-proof">
-                <SectionHeader id="catalogue-proof" eyebrow={t('proof.eyebrow')} title={t('proof.title')} size="md" />
+            <Section variant="white" labelledBy="catalogue-proof">
+                <SectionHeading id="catalogue-proof" eyebrow={t('proof.eyebrow')} title={t('proof.title')} />
                 <FeatureGrid
                     columns={3}
                     style="card"
@@ -198,16 +194,55 @@ export default async function CataloguePage({ params }: Props) {
                 />
             </Section>
 
-            {/* Custom requirements: inline contact band (WhatsApp, email, requirements form) */}
-            <CTABand
-                headingId={CUSTOM_ID}
-                className="scroll-mt-24"
-                eyebrow={t('custom.eyebrow')}
-                intro={t('custom.intro')}
-                prefill={{ type: 'specifications' }}
-                placement="inline"
-                reassurance={[t('custom.after_1'), t('custom.after_2'), t('custom.after_3')]}
-            />
+            {/* Closing: custom requirements (offwhite + accent card; the G footer carries the contact block) */}
+            <Section variant="offwhite" labelledBy={CUSTOM_ID}>
+                <Card accent padding="lg">
+                    <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+                        <div className="lg:col-span-7">
+                            <Eyebrow>{t('custom.eyebrow')}</Eyebrow>
+                            <h2 id={CUSTOM_ID} className={cn('v2-heading m-0 mt-3 scroll-mt-28', typography.h2Sm)}>
+                                {t('custom.title')}
+                            </h2>
+                            <p className={cn('m-0 mt-4 max-w-prose-v2 text-ink-muted', typography.lead)}>{t('custom.intro')}</p>
+                            <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5">
+                                <Button
+                                    href={rfqHref({ type: 'specifications' })}
+                                    size="lg"
+                                    stretch="phone"
+                                    arrow
+                                    dataAttrs={{ 'data-cta': 'catalogue_requirements' }}
+                                >
+                                    {t('custom.form')}
+                                </Button>
+                                {/* WhatsApp (management) is in the hero and in the G footer just below */}
+                                <Button
+                                    href={mailHref}
+                                    variant="outline"
+                                    size="lg"
+                                    stretch="phone"
+                                    icon={<MailIcon size={20} />}
+                                    dataAttrs={{ 'data-cta': 'catalogue_email' }}
+                                >
+                                    {t('custom.email')}
+                                </Button>
+                            </div>
+                        </div>
+                        <div className="lg:col-span-5">
+                            <h3 id="catalogue-next" className={cn('m-0 text-ink', typography.h4)}>
+                                {t('custom.after_title')}
+                            </h3>
+                            <ol aria-labelledby="catalogue-next" className="m-0 mt-4 list-none space-y-3 border-0 border-t border-solid border-line p-0 pt-4">
+                                {(['after_1', 'after_2', 'after_3'] as const).map((k) => (
+                                    <li key={k} className={cn('flex gap-3 text-ink-muted', typography.body)}>
+                                        <CheckIcon size={20} className="mt-1 shrink-0 text-navy" />
+                                        <span>{t(`custom.${k}`)}</span>
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
+                    </div>
+                </Card>
+            </Section>
         </>
     );
 }

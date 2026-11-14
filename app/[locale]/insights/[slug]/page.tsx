@@ -5,12 +5,11 @@ import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/serve
 import { Link } from '@/navigation';
 import { mediaImage } from '@/lib/v2/media';
 import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
-import { cn } from '@/lib/v2/cn';
 import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
 import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
-import { FOCUS_LIGHT, GArrow, GEyebrow, GLinkButton, GPageHead, gBody, gCard, gH3, gSmall, gWrap } from '@/components/v2/contact/g';
+import { ArrowIcon, Button, Container, PageHead, containerClass, Section, SectionHeading, cardClass, cn, focusRing, typography } from '@/components/ui';
 import { companyConfig } from '@/config/company.config';
 import { ogImageMap, type Locale } from '@/i18n';
 
@@ -43,7 +42,6 @@ export default async function InsightArticlePage({ params }: Props) {
     const entry = getInsight(slug);
     if (!entry) notFound();
     setRequestLocale(locale);
-    const ar = locale === 'ar';
 
     const t = await getTranslations({ locale, namespace: 'insights_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
@@ -92,7 +90,7 @@ export default async function InsightArticlePage({ params }: Props) {
     ];
 
     return (
-        <div className={cn('g-font bg-white text-[#0d1f3f]', gBody(ar))}>
+        <>
             <JsonLd data={article} />
             <JsonLd
                 data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [
@@ -102,42 +100,41 @@ export default async function InsightArticlePage({ params }: Props) {
             />
 
             {/* Article header */}
-            <GPageHead
-                ar={ar}
+            <PageHead
                 crumbs={[{ label: t('breadcrumb'), href: routes.insights }, { label: tg('breadcrumb') }]}
                 eyebrow={t(`categories.${entry.category}`)}
                 title={title}
                 titleId="article-title"
             >
-                <dl className="m-0 mt-8 flex flex-wrap gap-x-10 gap-y-4 border-t border-white/[.16] pt-6">
+                <dl className="m-0 mt-8 flex flex-wrap gap-x-10 gap-y-4 border-t border-solid border-rule pt-6">
                     {meta.map((m) => (
                         <div key={m.label}>
-                            <dt className={cn('text-white/[.66]', gSmall(ar))}>{m.label}</dt>
-                            <dd className="m-0 font-bold text-white">{m.value}</dd>
+                            <dt className={cn('text-fg-muted', typography.small)}>{m.label}</dt>
+                            <dd className="m-0 font-bold text-fg">{m.value}</dd>
                         </div>
                     ))}
                     <div>
                         <dt className="sr-only">{t('article.reading_time')}</dt>
-                        <dd className={cn('m-0 text-white/[.66] sm:pt-[1.6em]', gSmall(ar))}>{tv('insight.minutes', { count: minutes })}</dd>
+                        <dd className={cn('m-0 text-fg-muted sm:pt-[1.6em]', typography.small)}>{tv('insight.minutes', { count: minutes })}</dd>
                     </div>
                 </dl>
-            </GPageHead>
+            </PageHead>
 
             {image ? (
-                <div className={cn(gWrap, 'pt-10 lg:pt-14')}>
-                    <div className="relative aspect-[16/7] overflow-hidden rounded">
+                <Container className="pt-10 lg:pt-14">
+                    <div className="relative aspect-[16/7] overflow-hidden rounded-card">
                         <Image src={image.src} alt={image.alt} fill priority sizes="(min-width: 1320px) 1256px, 100vw" className="object-cover" />
                     </div>
-                </div>
+                </Container>
             ) : null}
 
             {/* Body + side rail */}
-            <article aria-labelledby="article-title" className={cn(gWrap, 'py-14 lg:py-24')}>
+            <article aria-labelledby="article-title" className={cn(containerClass, 'py-section-sm md:py-20 lg:py-24')}>
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-16">
                     <aside className="min-w-0 lg:order-2">
                         <div className="flex flex-col gap-6 lg:sticky lg:top-28">
-                            <nav aria-labelledby="toc-title" className="rounded border border-[#d5dde9] p-5 lg:p-6">
-                                <h2 id="toc-title" className={cn(gH3(ar), 'text-[#0d1f3f]')}>
+                            <nav aria-labelledby="toc-title" className={cardClass({ padding: 'sm' })}>
+                                <h2 id="toc-title" className={cn('m-0 text-ink', typography.h3)}>
                                     {t('article.toc')}
                                 </h2>
                                 <ol className="m-0 mt-3 flex list-none flex-col p-0">
@@ -145,9 +142,9 @@ export default async function InsightArticlePage({ params }: Props) {
                                         <li key={id}>
                                             <a
                                                 href={`#${id}`}
-                                                className={cn('flex min-h-[44px] items-center gap-3 text-[#0d1f3f] hover:text-[#002d72] hover:underline', gSmall(ar), FOCUS_LIGHT)}
+                                                className={cn('flex min-h-tap items-center gap-3 text-ink hover:text-navy hover:underline', typography.small, focusRing)}
                                             >
-                                                <span aria-hidden="true" className="w-6 shrink-0 font-bold text-[#002d72]">
+                                                <span aria-hidden="true" dir="ltr" className="w-6 shrink-0 font-bold text-navy">
                                                     {String(i + 1).padStart(2, '0')}
                                                 </span>
                                                 {sectionTitles[id]}
@@ -156,57 +153,47 @@ export default async function InsightArticlePage({ params }: Props) {
                                     ))}
                                 </ol>
                             </nav>
-                            <div className="rounded bg-[#f2f5fa] p-5 lg:p-6">
-                                <p className={cn(gH3(ar), 'text-[#0d1f3f]')}>{t('article.sources_side')}</p>
-                                <p className={cn('mb-0 mt-1 text-[#4a5a75]', gSmall(ar))}>{t('article.sources_side_text', { count: importingSourceCount })}</p>
+                            <div className="rounded-card bg-surface-offwhite p-5 lg:p-6">
+                                <p className={cn('m-0 text-ink', typography.h3)}>{t('article.sources_side')}</p>
+                                <p className={cn('mb-0 mt-1 text-ink-muted', typography.small)}>{t('article.sources_side_text', { count: importingSourceCount })}</p>
                             </div>
                         </div>
                     </aside>
                     <div className="min-w-0 lg:order-1">
                         <ImportingGuideBody locale={locale} reviewedLabel={reviewed} />
                         {/* The article's single requirements link (no inline offer box) */}
-                        <div className="mt-14 flex flex-col gap-3 border-t border-[#d5dde9] pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-                            <GLinkButton href={rfqHref()} ar={ar} variant="gold" arrow dataAttrs={{ 'data-cta': 'article_requirements' }}>
+                        <div className="mt-14 grid gap-2.5 border-t border-solid border-line pt-8 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-3.5">
+                            <Button href={rfqHref()} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'article_requirements' }}>
                                 {t('article.contact')}
-                            </GLinkButton>
-                            <GLinkButton href={routes.insights} ar={ar} variant="outline">
+                            </Button>
+                            <Button href={routes.insights} variant="outline" size="lg" stretch="phone">
                                 {t('article.back')}
-                            </GLinkButton>
+                            </Button>
                         </div>
                     </div>
                 </div>
             </article>
 
             {/* Related pages */}
-            <section aria-labelledby="article-related" className="bg-[#f2f5fa]">
-                <div className={cn(gWrap, 'py-16 lg:py-24')}>
-                    <GEyebrow ar={ar} className="mb-2 lg:mb-3">
-                        {t('article.related_eyebrow')}
-                    </GEyebrow>
-                    <h2
-                        id="article-related"
-                        className={cn('m-0 text-[#0d1f3f]', ar ? 'text-[26px] font-bold leading-[1.45] lg:text-[34px]' : 'text-[27px] font-extrabold leading-[1.2] tracking-[-0.02em] lg:text-[36px]')}
-                    >
-                        {t('article.related_title')}
-                    </h2>
-                    <ul className="m-0 mt-8 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
-                        {related.map((r) => (
-                            <li key={r.title} className="min-w-0">
-                                <Link href={r.href} className={cn(gCard(), 'group flex h-full flex-col p-6 transition-colors hover:border-[#002d72] lg:p-8', FOCUS_LIGHT)}>
-                                    <span className={cn(gH3(ar), 'block text-[#0d1f3f]')}>{r.title}</span>
-                                    <span className={cn('mb-5 mt-2 block flex-1 text-[#4a5a75]', gSmall(ar))}>{r.text}</span>
-                                    <span
-                                        aria-hidden="true"
-                                        className="grid h-11 w-11 place-items-center rounded-full border border-[#d5dde9] text-[#002d72] transition-colors group-hover:border-[#f7b500] group-hover:bg-[#f7b500] group-hover:text-[#001b47]"
-                                    >
-                                        <GArrow ar={ar} />
-                                    </span>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </section>
-        </div>
+            <Section variant="offwhite" labelledBy="article-related">
+                <SectionHeading id="article-related" eyebrow={t('article.related_eyebrow')} title={t('article.related_title')} />
+                <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
+                    {related.map((r) => (
+                        <li key={r.title} className="min-w-0">
+                            <Link href={r.href} className={cn(cardClass({ interactive: true, padding: 'md' }), 'group flex h-full flex-col', focusRing)}>
+                                <span className={cn('block text-ink', typography.h3)}>{r.title}</span>
+                                <span className={cn('mb-5 mt-2 block flex-1 text-ink-muted', typography.small)}>{r.text}</span>
+                                <span
+                                    aria-hidden="true"
+                                    className="grid h-tap w-tap place-items-center rounded-full border border-solid border-line text-navy transition-colors duration-base group-hover:border-gold group-hover:bg-gold group-hover:text-navy-900 motion-reduce:transition-none"
+                                >
+                                    <ArrowIcon size={20} />
+                                </span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </Section>
+        </>
     );
 }

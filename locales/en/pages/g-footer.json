@@ -14,7 +14,7 @@
     "form": {
         "title": "Send your requirements",
         "sub": "Species, weight grade, quantity and destination",
-        "value": "Online form"
+        "value": "Prepared email or WhatsApp message"
     },
     "factory": {
         "title": "Factory",
@@ -31,7 +31,7 @@
     "langs_label": "Languages",
     "back_to_top": "Back to top",
     "copyright": "© 2026 AZAFCO International for Investment and Development S.A.E.",
-    "float_label": "WhatsApp · Direct to management",
+    "float_label": "Message management on WhatsApp",
     "secondary_label": "More links",
     "secondary": {
         "for_importers": "For importers",

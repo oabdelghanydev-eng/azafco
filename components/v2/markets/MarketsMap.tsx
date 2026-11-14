@@ -66,8 +66,7 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                 <use
                     key={code}
                     href={`#${p}-c-${code}`}
-                    fill={highlight === code ? 'rgba(247,181,0,0.32)' : 'rgba(143,193,255,0.2)'}
-                    stroke="rgba(255,255,255,0.35)"
+                    className={highlight === code ? 'fill-gold/30 stroke-white/35' : 'fill-navy-200/20 stroke-white/35'}
                     strokeWidth="0.8"
                 />
             ))}
@@ -79,7 +78,7 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                         key={code}
                         d={`M${EG.x} ${EG.y} Q${g.q[0]} ${g.q[1]} ${g.pin[0]} ${g.pin[1]}`}
                         fill="none"
-                        stroke="#f7b500"
+                        className="stroke-gold"
                         strokeLinecap="round"
                         strokeWidth={strong ? 3 : 1.6}
                         strokeDasharray={strong ? undefined : '2 7'}
@@ -96,8 +95,7 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                             cx={g.pin[0]}
                             cy={g.pin[1]}
                             r={pinR}
-                            fill="#fff"
-                            stroke={highlight === code ? '#f7b500' : '#fff'}
+                            className={highlight === code ? 'fill-white stroke-gold' : 'fill-white stroke-white'}
                             strokeWidth="2.5"
                         />
                         <g clipPath={`url(#${p}-${desk ? 'cd' : 'cm'}-${code})`}>
@@ -110,8 +108,7 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                                 textAnchor={g.label[2]}
                                 fontSize="17"
                                 fontWeight="700"
-                                fill="#fff"
-                                stroke="#002d72"
+                                className="fill-white stroke-navy-900"
                                 strokeWidth="5"
                                 paintOrder="stroke"
                                 opacity={on(code) ? 1 : 0.7}
@@ -122,12 +119,12 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                     </g>
                 );
             })}
-            <circle cx={EG.x} cy={EG.y} r={desk ? 34.2 : 27.4} fill="none" stroke="#f7b500" strokeWidth="1.5" opacity=".5" />
-            <circle cx={EG.x} cy={EG.y} r={desk ? 23 : 19.2} fill="#f7b500" />
+            <circle cx={EG.x} cy={EG.y} r={desk ? 34.2 : 27.4} fill="none" className="stroke-gold" strokeWidth="1.5" opacity=".5" />
+            <circle cx={EG.x} cy={EG.y} r={desk ? 23 : 19.2} className="fill-gold" />
             <g clipPath={`url(#${p}-${desk ? 'cd' : 'cm'}-eg)`}>
                 <use href={`#${p}-flag-eg`} transform={desk ? 'translate(241.3 197.2)' : 'translate(246.5 201.1) scale(0.8)'} />
             </g>
-            <text x={EG.x} y={desk ? 276.8 : 260.8} textAnchor="middle" fontSize={desk ? 18 : 14} fontWeight="700" fill="#f7b500">
+            <text x={EG.x} y={desk ? 276.8 : 260.8} textAnchor="middle" fontSize={desk ? 18 : 14} fontWeight="700" className="fill-gold">
                 {origin}
             </text>
         </svg>
@@ -139,7 +136,7 @@ export default function MarketsMap(props: MarketsMapProps) {
     const p = props.idPrefix ?? 'mkm';
     return (
         <div dir="ltr" className={props.className}>
-            <svg width="0" height="0" aria-hidden="true" focusable="false" style={{ position: 'absolute', overflow: 'hidden' }}>
+            <svg width="0" height="0" aria-hidden="true" focusable="false" className="absolute overflow-hidden">
                 <defs>
                     {props.markets.map(({ code }) => (
                         <path key={code} id={`${p}-c-${code}`} d={MAP_COUNTRIES[MAP_GEO[code].outline]} />

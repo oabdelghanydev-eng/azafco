@@ -1,43 +1,12 @@
 {
+    "_note": "Only metadata.site is read (root layout, pageMetadata helpers, product pages). Page titles and descriptions live in each page's *_v2.meta (or privacy.meta). The legacy page-level keys were removed on 14 Nov 2026 so they are not translated and cannot drift from the live meta. Titles using title_template get ' | AZAFCO' appended: keep them <= 51 characters.",
     "site": {
-        "name": "AZAFCO - ازافكو العالمية",
-        "title_default": "Exportador de pescado fresco de Egipto | AZAFCO",
+        "name": "AZAFCO International",
+        "title_default": "AZAFCO International | Fresh Egyptian fish for importers",
         "title_template": "%s | AZAFCO",
         "author": "AZAFCO International",
         "creator": "AZAFCO International",
         "publisher": "AZAFCO International",
-        "og_alt": "AZAFCO International – Exportación de pescado fresco de Egipto – Envío a España, México, América Latina y el mundo"
-    },
-    "home": {
-        "title": "Exportador de pescado fresco de Egipto",
-        "description": "AZAFCO International, exportador egipcio de pescado B2B desde 2008. Más de 2.500 toneladas al mes, ISO y HACCP. Envío a España, México, LATAM y el mundo."
-    },
-    "products": {
-        "title": "Tilapia, lubina y lisa frescas de Egipto",
-        "description": "Pescado fresco de Egipto: tilapia, lubina, lisa y más de 8 variedades. Tamaños a medida, desde 1 caja, certificación ISO. Envío a España, LATAM y el mundo."
-    },
-    "about": {
-        "title": "Sobre nosotros: exportador de pescado desde 2008",
-        "description": "AZAFCO International: exportador B2B egipcio de pescado: 300+ empleados, 500+ clientes en más de {countries} países. Planta aprobada UE, ISO 22000 y HACCP."
-    },
-    "contact": {
-        "title": "Contacto: pedidos de pescado fresco al por mayor",
-        "description": "Solicite cotización a un exportador de pescado fresco de Egipto. Envío mundial a España, México, Chile y más. WhatsApp: +20-100-7736419. Respuesta en 24 horas."
-    },
-    "markets": {
-        "title": "Mercados de exportación: envío aéreo y terrestre",
-        "description": "AZAFCO exporta más de 2.500 toneladas de pescado fresco al mes a Europa, el Golfo y América Latina, por aire y tierra. 500+ mayoristas desde 2008."
-    },
-    "media": {
-        "title": "Noticias de exportación de pescado egipcio",
-        "description": "Últimas noticias de AZAFCO, expansión internacional, logros de la empresa e hitos de la industria. Apariciones en TV y reconocimiento gubernamental desde 2008."
-    },
-    "certificates": {
-        "title": "Exportador de pescado con ISO 22000 y HACCP",
-        "description": "AZAFCO posee {isoCount} certificaciones ISO más HACCP: ISO 22000, 9001, 14001 y 45001. Una de 6 plantas en Egipto autorizadas para exportar a la UE."
-    },
-    "privacy": {
-        "title": "Política de privacidad",
-        "description": "Política de privacidad de AZAFCO International – Cómo protegemos sus datos y manejamos consultas confidencialmente."
+        "og_alt": "AZAFCO International: fresh Egyptian fish for importers"
     }
 }

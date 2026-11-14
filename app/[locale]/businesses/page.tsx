@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import type { ImageProps } from '@/lib/v2/media';
 import { routes } from '@/lib/v2/routes';
-import { Breadcrumbs, Button, PageHero, Section, SectionHeader } from '@/components/v2';
+import { Breadcrumbs, Button, PageHero, Section, SectionHeading, cn, typography } from '@/components/ui';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import BusinessArchitecture from '@/components/v2/businesses/BusinessArchitecture';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
@@ -56,14 +56,22 @@ export default async function BusinessesPage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
-                primaryAction={{ label: t('hero.primary'), href: routes.contact }}
-                secondaryAction={{ label: t('hero.secondary'), href: routes.seafood }}
-                proof={<p className="text-body-sm text-fg-muted">{t('hero.reassure')}</p>}
+                actions={
+                    <>
+                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'businesses_partnership' }}>
+                            {t('hero.primary')}
+                        </Button>
+                        <Button href={routes.seafood} variant="outline" size="lg" stretch="phone">
+                            {t('hero.secondary')}
+                        </Button>
+                    </>
+                }
+                proof={<p className={cn('m-0 text-fg-muted', typography.small)}>{t('hero.reassure')}</p>}
             />
 
             {/* 02 · Structure: seafood dominant, the other activities alongside (with deep-link anchors) */}
-            <Section variant="offwhite" spacing="lg" labelledBy="biz-allocation">
-                <SectionHeader
+            <Section variant="offwhite" labelledBy="biz-allocation">
+                <SectionHeading
                     id="biz-allocation"
                     eyebrow={t('allocation.eyebrow')}
                     title={t('allocation.title')}
@@ -88,7 +96,7 @@ export default async function BusinessesPage({ params }: Props) {
             </Section>
 
             {/* 03 · Fish business deep link */}
-            <Section variant="light" spacing="lg" labelledBy="biz-seafood">
+            <Section variant="white" labelledBy="biz-seafood">
                 <EditorialMedia
                     id="biz-seafood"
                     eyebrow={t('seafood.eyebrow')}
@@ -102,7 +110,7 @@ export default async function BusinessesPage({ params }: Props) {
                         { label: t('seafood.link_importers'), href: routes.forImporters },
                     ]}
                 >
-                    <Button href={routes.seafood} arrow>
+                    <Button href={routes.seafood} variant="navy" size="lg" stretch="phone" arrow>
                         {t('seafood.cta_primary')}
                     </Button>
                 </EditorialMedia>

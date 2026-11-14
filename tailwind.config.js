@@ -43,6 +43,7 @@ module.exports = {
           700: '#002D72',
           800: '#00245C',
           900: '#001B47', // G section / hero navy
+          925: '#00143A', // G footer bottom bar
           950: '#00112E',
         },
         gold: {
@@ -51,7 +52,19 @@ module.exports = {
           100: '#FFF6DB',
           400: '#FFC633',
           500: '#F7B500',
+          600: '#E5AA00', // pressed gold button
           ink: '#7A5A00', // gold-family TEXT, only on white / gold-50/100
+        },
+        // Official WhatsApp brand green: ONLY behind/for the WhatsApp brand mark
+        whatsapp: {
+          DEFAULT: '#25D366',
+          hover: '#1EBE5D',
+        },
+        // Owner-gap chips (components/v2/Pending, dev/preview only)
+        pending: {
+          border: '#B45309',
+          bg: '#FFFBEB',
+          ink: '#7C2D12',
         },
         ink: {
           DEFAULT: '#0D1F3F', // G body/heading ink (16.6:1 on white)
@@ -67,6 +80,7 @@ module.exports = {
           DEFAULT: '#D5DDE9',  // G card / control borders (decorative)
           soft: '#E3E8F0',     // G hairline dividers
           strong: '#8794A8',   // form-control borders (3.07:1, meets 1.4.11)
+          track: '#C9D4E6',    // G timeline / connector line on light surfaces
         },
         // Surface-aware (set by <Section variant>, see globals.css)
         fg: 'var(--v2-fg)',
@@ -85,6 +99,8 @@ module.exports = {
         'link-hover': 'var(--v2-link-hover)',
         stat: 'var(--v2-stat)',
         connector: 'var(--v2-connector)',
+        // Focus ring colour: navy on light, gold on navy (data-surface="dark")
+        focus: 'var(--v2-focus)',
       },
       // ── v2 design tokens (site v2) ──────────────────────────────────────
       // Brand: navy #002D72, gold #F7B500. Gold is NEVER used for text on
@@ -105,6 +121,7 @@ module.exports = {
         // and no negative tracking. h1 (heroes) clamp(36px, 5vw, 72px); h2 29px → 50px.
         'display-2xl': ['var(--v2-fs-h1-lg)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
         'display-xl': ['var(--v2-fs-h1)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
+        'display-page': ['var(--v2-fs-h1-page)', { lineHeight: 'var(--v2-lh-display)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
         'display-lg': ['var(--v2-fs-h2)', { lineHeight: 'var(--v2-lh-h2)', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
         'heading-xl': ['var(--v2-fs-h2-sm)', { lineHeight: 'var(--v2-lh-h2)', letterSpacing: 'var(--v2-ls-heading)', fontWeight: 'var(--v2-fw-display)' }],
         'heading-lg': ['var(--v2-fs-h3-lg)', { lineHeight: 'var(--v2-lh-heading)', letterSpacing: 'var(--v2-ls-heading)', fontWeight: 'var(--v2-fw-h3)' }],
@@ -114,9 +131,16 @@ module.exports = {
         'body': ['var(--v2-fs-body)', { lineHeight: 'var(--v2-lh-body)' }],
         'body-sm': ['var(--v2-fs-body-sm)', { lineHeight: 'var(--v2-lh-body)' }],
         'caption': ['var(--v2-fs-caption)', { lineHeight: '1.5' }],
+        // Legal lines, language chips, row numbers: 13px (EN) / 14px (AR)
+        'micro': ['var(--v2-fs-micro)', { lineHeight: '1.6' }],
         'overline': ['var(--v2-fs-overline)', { lineHeight: '1.4', letterSpacing: 'var(--v2-ls-overline)', fontWeight: 'var(--v2-fw-overline)' }],
         // Big figures (G stats strip: 42px → 56px)
         'figure': ['clamp(2.625rem, 2rem + 1.6vw, 3.5rem)', { lineHeight: '1', letterSpacing: 'var(--v2-ls-display)', fontWeight: 'var(--v2-fw-display)' }],
+      },
+      spacing: {
+        'tap': '2.75rem',     // 44px minimum tap target (min-h-tap, h-tap, w-tap)
+        'section': '7rem',    // 112px section padding from lg (design G)
+        'section-sm': '4rem', // 64px section padding on phones
       },
       maxWidth: {
         'v2': '82.5rem',      // 1320px content container (design G)
@@ -129,6 +153,7 @@ module.exports = {
       boxShadow: {
         'card': '0 1px 2px rgba(0, 27, 71, 0.05), 0 4px 14px rgba(0, 27, 71, 0.05)',
         'raised': '0 18px 40px rgba(0, 27, 71, 0.16)', // G dropdown / hover lift
+        'float': '0 6px 16px rgba(0, 27, 71, 0.18), 0 2px 4px rgba(0, 27, 71, 0.10)', // floating action (WhatsApp)
         'header': '0 1px 0 rgba(0, 26, 68, 0.08), 0 4px 16px rgba(0, 26, 68, 0.06)',
       },
       transitionDuration: {
@@ -140,20 +165,6 @@ module.exports = {
         'header': '50',
         'drawer': '60',
         'bar': '40',
-      },
-      animation: {
-        'float': 'float 3s ease-in-out infinite',
-        'slide-up': 'slideUp 0.5s ease-out',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
       },
     },
   },

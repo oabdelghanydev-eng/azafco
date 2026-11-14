@@ -1,99 +1,9 @@
-/* G home: markets section. Base type per board (EN 16/1.6 phone, 17/1.65 desktop; AR 17/1.85 phone, 18/1.85 desktop). */
-.section {
-  background: #002d72;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 1.6;
-}
-.ar {
-  font-size: 17px;
-  line-height: 1.85;
-}
-@media (min-width: 1024px) {
-  .section {
-    font-size: 17px;
-    line-height: 1.65;
-  }
-  .ar {
-    font-size: 18px;
-    line-height: 1.85;
-  }
-}
-
-/* ---------- market picker buttons ---------- */
-.btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 14px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: #fff;
-  text-align: start;
-  cursor: pointer;
-  font: inherit;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.4;
-  transition: background-color 0.2s;
-}
-@media (min-width: 1024px) {
-  .btn {
-    padding: 12px 14px;
-    font-size: 18px;
-  }
-}
-.btn:hover {
-  background: rgba(255, 255, 255, 0.06);
-}
-.btn[aria-pressed='true'] {
-  background: rgba(255, 255, 255, 0.12);
-}
-.btn:focus-visible {
-  outline: 2px solid #f7b500;
-  outline-offset: 2px;
-}
-.btnFlag {
-  width: 32px;
-  height: 32px;
-  flex: none;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-  transition: box-shadow 0.2s;
-}
-.btnFlag svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.btn[aria-pressed='true'] .btnFlag {
-  box-shadow: 0 0 0 2px #f7b500;
-}
-.since {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
-  white-space: nowrap;
-}
-
-/* ---------- planned row ---------- */
-.plannedFlag {
-  width: 30px;
-  height: 30px;
-  flex: none;
-  border-radius: 50%;
-  background-color: #fff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.85;
-  outline: 1.5px dashed rgba(255, 255, 255, 0.6);
-  outline-offset: 3px;
-}
+/*
+ * G home markets map. The market picker (components/g/home/GMarketsPicker.tsx)
+ * sets data-sel on .state; the server-rendered SVG map restyles through these
+ * selectors only, so the map geometry never ships in the client bundle.
+ * Colours come from the Tailwind theme (tailwind.config.js), never inline hex.
+ */
 
 /* ---------- map ---------- */
 .map {
@@ -105,14 +15,14 @@
   font-family: inherit;
 }
 .country {
-  fill: rgba(143, 193, 255, 0.2);
-  stroke: rgba(255, 255, 255, 0.35);
+  fill: rgb(143 193 255 / 0.2);
+  stroke: theme('colors.white / 35%');
   stroke-width: 0.8px;
   transition: fill 0.25s;
 }
 .route {
   fill: none;
-  stroke: #f7b500;
+  stroke: theme('colors.gold.DEFAULT');
   stroke-linecap: round;
   stroke-width: 1.4px;
   stroke-dasharray: 2 7;
@@ -120,16 +30,16 @@
   transition: stroke-width 0.25s, opacity 0.25s;
 }
 .pin {
-  fill: #fff;
-  stroke: #ffffff;
+  fill: theme('colors.white');
+  stroke: theme('colors.white');
   stroke-width: 2.5px;
   transition: stroke 0.25s;
 }
 .label {
   paint-order: stroke;
-  stroke: #002d72;
+  stroke: theme('colors.navy.DEFAULT');
   stroke-width: 5px;
-  fill: #fff;
+  fill: theme('colors.white');
   font-weight: 700;
 }
 
@@ -141,7 +51,7 @@
 .state[data-sel='4'] .country.m4,
 .state[data-sel='5'] .country.m5,
 .state[data-sel='6'] .country.m6 {
-  fill: rgba(247, 181, 0, 0.32);
+  fill: theme('colors.gold.DEFAULT / 32%');
 }
 .state[data-sel='0'] .route.m0,
 .state[data-sel='1'] .route.m1,
@@ -161,12 +71,10 @@
 .state[data-sel='4'] .pin.m4,
 .state[data-sel='5'] .pin.m5,
 .state[data-sel='6'] .pin.m6 {
-  stroke: #f7b500;
+  stroke: theme('colors.gold.DEFAULT');
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn,
-  .btnFlag,
   .country,
   .route,
   .pin {

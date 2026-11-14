@@ -1,11 +1,29 @@
+import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Pending } from '@/components/v2';
-import { GButton, GClosing, GExternalLink, GEyebrow, GPageHero, GSection, GSectionHead, GTextLink, gType } from '@/components/v2/processing/GPage';
 import Workflow from '@/components/v2/processing/Workflow';
+import {
+    BoxIcon,
+    Breadcrumbs,
+    Button,
+    Card,
+    DocumentIcon,
+    Eyebrow,
+    ExternalLink,
+    FishIcon,
+    IceIcon,
+    PageHero,
+    PlaneIcon,
+    Section,
+    SectionHeading,
+    StatStrip,
+    TextLink,
+    TruckIcon,
+    typography,
+} from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { rfqHref, routes } from '@/lib/v2/routes';
-import { companyConfig } from '@/config/company.config';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -34,21 +52,30 @@ const STAGES = [
 /** Plant location, RELEASE-DECISIONS §4 (owner, 13 Nov 2026). */
 const PLANT_MAP_URL = 'https://www.google.com/maps/search/?api=1&query=31.433264,30.475957';
 
-const LOGISTICS = ['trucks', 'stores', 'freight'] as const;
-const AGREE = ['species', 'form', 'packing', 'labels'] as const;
+const LOGISTICS: { key: 'trucks' | 'stores' | 'freight'; icon: ReactNode }[] = [
+    { key: 'trucks', icon: <TruckIcon size={24} /> },
+    { key: 'stores', icon: <IceIcon size={24} /> },
+    { key: 'freight', icon: <PlaneIcon size={24} /> },
+];
+
+const AGREE: { key: 'species' | 'form' | 'packing' | 'labels'; icon: ReactNode }[] = [
+    { key: 'species', icon: <FishIcon size={24} /> },
+    { key: 'form', icon: <IceIcon size={24} /> },
+    { key: 'packing', icon: <BoxIcon size={24} /> },
+    { key: 'labels', icon: <DocumentIcon size={24} /> },
+];
 
 type Stat = { value: string; label: string };
 
 /**
- * /processing ("Value chain" in the G nav), design G. Copy: locales/<l>/pages/v2-processing.json.
+ * /processing ("Value chain" in the G nav), design G, built on the design-system
+ * primitives (components/ui). Copy: locales/<l>/pages/v2-processing.json.
  * No temperature figures (none approved); no certificate details (see /quality).
  */
 export default async function ProcessingPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'processing_v2' });
-    const ar = locale === 'ar';
-    const ty = gType(ar);
     const stats = (t.raw('stats.items') ?? []) as Stat[];
 
     const localeUrl = `${baseUrl}/${locale}`;
@@ -62,58 +89,43 @@ export default async function ProcessingPage({ params }: Props) {
     };
 
     return (
-        <div className={`g-scope text-[#0d1f3f] ${ty.base}`}>
+        <div className={`text-ink ${typography.body}`}>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
 
-            <GPageHero
-                ar={ar}
-                image="/images/g/sorting-packing.webp"
-                imageAlt={t('hero.imageAlt')}
-                crumbsLabel={t('breadcrumbs.label')}
-                crumbs={[{ label: t('breadcrumbs.home'), href: routes.home }, { label: t('breadcrumbs.current') }]}
-                kicker={t('hero.kicker')}
+            <PageHero
+                variant="split"
+                image={{ src: '/images/g/sorting-packing.webp', alt: t('hero.imageAlt'), width: 1536, height: 1024 }}
+                mirrorImage={locale === 'ar'}
+                headingId="processing-title"
+                breadcrumbs={
+                    <Breadcrumbs
+                        includeHome={false}
+                        label={t('breadcrumbs.label')}
+                        items={[{ label: t('breadcrumbs.home'), href: routes.home }, { label: t('breadcrumbs.current') }]}
+                    />
+                }
+                eyebrow={t('hero.kicker')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 actions={
                     <>
-                        <GButton ar={ar} href={routes.contact} variant="gold">
+                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'processing_hero_partner' }}>
                             {t('hero.primary')}
-                        </GButton>
-                        <GButton ar={ar} href={routes.quality} variant="outlineLight">
+                        </Button>
+                        <Button href={routes.quality} variant="outline" size="lg" stretch="phone">
                             {t('hero.secondary')}
-                        </GButton>
+                        </Button>
                     </>
                 }
             />
 
             {/* Key figures: same strip as the G home (approved facts only) */}
-            <section aria-label={t('stats.label')} className="bg-white">
-                <div className="mx-auto box-border max-w-[1320px] lg:px-8">
-                    <dl className="m-0 grid grid-cols-2 border-0 border-b border-solid border-[#e3e8f0] px-5 lg:grid-cols-4 lg:px-0">
-                        {stats.map((s, k) => (
-                            <div
-                                key={s.label}
-                                className={`flex flex-col-reverse py-6 lg:border-0 lg:py-9 ${k % 2 === 0 ? 'pe-3' : 'border-0 border-s border-solid border-[#e3e8f0] ps-4 lg:ps-0'} ${
-                                    k < 2 ? 'border-b border-solid border-[#e3e8f0] lg:border-b-0' : ''
-                                }`}
-                            >
-                                <dt className={`font-semibold text-[#4a5a75] ${ar ? 'mt-2 text-[15px] leading-[1.6] lg:text-[18px]' : 'mt-1.5 text-[14px] lg:mt-2 lg:text-[17px]'}`}>
-                                    {s.label}
-                                </dt>
-                                <dd className={`m-0 text-[42px] font-extrabold leading-none text-[#002d72] lg:text-[56px] ${ar ? '' : 'tracking-[-0.02em]'}`}>
-                                    {s.value}
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
-            </section>
+            <StatStrip label={t('stats.label')} items={stats} />
 
             {/* The five in-house stages */}
-            <GSection tone="white" labelledBy="processing-chain">
-                <GSectionHead ar={ar} id="processing-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
+            <Section variant="white" labelledBy="processing-chain" reveal={false}>
+                <SectionHeading id="processing-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} intro={t('chain.intro')} />
                 <Workflow
-                    ar={ar}
                     stages={STAGES.map((s, i) => ({
                         key: s.key,
                         label: t('chain.stageLabel', { n: i + 1 }),
@@ -123,83 +135,83 @@ export default async function ProcessingPage({ params }: Props) {
                         imageAlt: t(`chain.stages.${s.key}.alt`),
                         extra:
                             s.key === 'harvest' ? (
-                                <GExternalLink ar={ar} href={PLANT_MAP_URL} newTabHint={t('chain.newTab')} cta="processing_plant_map">
+                                <ExternalLink href={PLANT_MAP_URL} newTabLabel={t('chain.newTab')} dataAttrs={{ 'data-cta': 'processing_plant_map' }}>
                                     {t('chain.plantMap')}
-                                </GExternalLink>
+                                </ExternalLink>
                             ) : undefined,
                     }))}
                 />
-            </GSection>
+            </Section>
 
             {/* Own logistics: trucks, cold stores, freight. No temperature figures. */}
-            <GSection tone="navy" labelledBy="processing-logistics">
-                <GSectionHead ar={ar} id="processing-logistics" onDark eyebrow={t('logistics.eyebrow')} title={t('logistics.title')} intro={t('logistics.intro')} />
+            <Section variant="navy" labelledBy="processing-logistics" reveal={false}>
+                <SectionHeading id="processing-logistics" eyebrow={t('logistics.eyebrow')} title={t('logistics.title')} intro={t('logistics.intro')} />
                 <ul className="m-0 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4 lg:gap-5">
-                    {LOGISTICS.map((k) => (
-                        <li key={k} className="rounded border border-t-4 border-white/20 border-t-[#f7b500] bg-white/[.04] p-5 lg:p-7">
-                            <h3 className={`m-0 text-white ${ty.h3}`}>{t(`logistics.items.${k}.title`)}</h3>
-                            <p className={`mb-0 mt-2 text-white/[.86] ${ty.small}`}>{t(`logistics.items.${k}.text`)}</p>
-                        </li>
+                    {LOGISTICS.map(({ key, icon }) => (
+                        <Card key={key} as="li" tone="dark" accent padding="md">
+                            <span className="flex text-gold">{icon}</span>
+                            <h3 className={`mb-0 mt-4 text-white ${typography.h3}`}>{t(`logistics.items.${key}.title`)}</h3>
+                            <p className={`mb-0 mt-2 text-fg-muted ${typography.small}`}>{t(`logistics.items.${key}.text`)}</p>
+                        </Card>
                     ))}
                 </ul>
                 <div className="mt-6">
                     <Pending label={t('pending.temperature')} />
                 </div>
-            </GSection>
+            </Section>
 
             {/* What is agreed per order */}
-            <GSection tone="white" labelledBy="processing-agree">
-                <div className="lg:grid lg:grid-cols-12 lg:gap-x-16">
+            <Section variant="white" labelledBy="processing-agree" reveal={false}>
+                <div className="lg:grid lg:grid-cols-12 lg:gap-x-12 xl:gap-x-16">
                     <div className="lg:col-span-5">
-                        <GEyebrow ar={ar}>{t('agree.eyebrow')}</GEyebrow>
-                        <h2 id="processing-agree" className={`m-0 ${ty.h2}`}>
+                        <Eyebrow className="mb-3 lg:mb-4">{t('agree.eyebrow')}</Eyebrow>
+                        <h2 id="processing-agree" className={`v2-heading m-0 ${typography.h2}`}>
                             {t('agree.title')}
                         </h2>
-                        <p className={`mb-0 text-[#4a5a75] ${ar ? 'mt-3.5' : 'mt-4'}`}>{t('agree.intro')}</p>
-                        <p className="mb-0 mt-6 inline-flex items-center gap-3 font-bold text-[#002d72]">
-                            <span aria-hidden="true" className="block h-[2px] w-7 shrink-0 bg-[#f7b500]" />
+                        <p className={`mb-0 mt-4 text-ink-muted ${typography.lead}`}>{t('agree.intro')}</p>
+                        <p className="mb-0 mt-6 flex items-center gap-3 font-bold text-navy">
+                            <span aria-hidden="true" className="block h-0.5 w-7 shrink-0 bg-gold" />
                             {t('agree.prices')}
                         </p>
                     </div>
                     <ul className="m-0 mt-10 grid list-none gap-3 p-0 sm:grid-cols-2 md:gap-4 lg:col-span-7 lg:mt-0 lg:gap-5">
-                        {AGREE.map((k) => (
-                            <li key={k} className="rounded border border-t-4 border-[#d5dde9] border-t-[#f7b500] bg-white p-5 lg:p-7">
-                                <h3 className={`m-0 ${ty.h3}`}>{t(`agree.items.${k}.title`)}</h3>
-                                <p className={`mb-0 mt-2 text-[#4a5a75] ${ty.small}`}>{t(`agree.items.${k}.text`)}</p>
-                            </li>
+                        {AGREE.map(({ key, icon }) => (
+                            <Card key={key} as="li" accent padding="md">
+                                <span className="flex text-navy">{icon}</span>
+                                <h3 className={`mb-0 mt-4 ${typography.h3}`}>{t(`agree.items.${key}.title`)}</h3>
+                                <p className={`mb-0 mt-2 text-ink-muted ${typography.small}`}>{t(`agree.items.${key}.text`)}</p>
+                            </Card>
                         ))}
                     </ul>
                 </div>
                 <div className="mt-6 lg:mt-8">
-                    <GTextLink ar={ar} href={routes.products}>
-                        {t('agree.speciesLink')}
-                    </GTextLink>
+                    <TextLink href={routes.products}>{t('agree.speciesLink')}</TextLink>
                 </div>
                 <div className="mt-4">
                     <Pending label={t('pending.pack_formats')} />
                 </div>
-            </GSection>
+            </Section>
 
-            <GClosing
-                ar={ar}
-                id="processing-closing"
-                eyebrow={t('closing.eyebrow')}
-                title={t('closing.title')}
-                text={t('closing.text')}
-                actions={
-                    <>
-                        <GButton ar={ar} href={routes.contact} variant="gold">
+            {/* Closing action (DESIGN-SYSTEM §6.3: offwhite section + accent card) */}
+            <Section variant="offwhite" labelledBy="processing-closing" reveal={false}>
+                <Card accent padding="lg">
+                    <div className="max-w-[760px]">
+                        <Eyebrow className="mb-3 lg:mb-4">{t('closing.eyebrow')}</Eyebrow>
+                        <h2 id="processing-closing" className={`v2-heading m-0 ${typography.h2}`}>
+                            {t('closing.title')}
+                        </h2>
+                        <p className="mb-0 mt-4 text-ink-muted">{t('closing.text')}</p>
+                    </div>
+                    <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
+                        <Button href={routes.contact} size="lg" stretch="phone" dataAttrs={{ 'data-cta': 'processing_closing_partner' }}>
                             {t('closing.primary')}
-                        </GButton>
-                        <GButton ar={ar} href={rfqHref({ type: 'specifications' })} variant="outline">
+                        </Button>
+                        <Button href={rfqHref({ type: 'specifications' })} variant="outline" size="lg" stretch="phone">
                             {t('closing.secondary')}
-                        </GButton>
-                        <GButton ar={ar} href={companyConfig.contact.social.whatsapp} variant="outline" cta="processing_whatsapp">
-                            {t('closing.whatsapp')}
-                        </GButton>
-                    </>
-                }
-            />
+                        </Button>
+                    </div>
+                </Card>
+            </Section>
         </div>
     );
 }

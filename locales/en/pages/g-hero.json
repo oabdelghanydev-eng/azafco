@@ -1,5 +1,6 @@
 {
   "groupLabel": "Hero messages",
+  "statsLabel": "Key figures",
   "slides": [
     {
       "label": "From Egyptian production to global partnerships",
@@ -33,9 +34,21 @@
   "ctaPartner": "Start a partnership",
   "ctaFish": "See our fish",
   "stats": [
-    { "value": "12", "label": "main fish species" },
-    { "value": "7+", "label": "export markets" },
-    { "value": "3", "label": "ISO certificates" },
-    { "value": "2,500", "label": "t/month packing capacity" }
+    {
+      "value": "12",
+      "label": "main fish species"
+    },
+    {
+      "value": "7+",
+      "label": "export markets"
+    },
+    {
+      "value": "3",
+      "label": "ISO certificates"
+    },
+    {
+      "value": "2,500",
+      "label": "t/month packing capacity"
+    }
   ]
 }

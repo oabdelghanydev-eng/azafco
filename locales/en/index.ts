@@ -25,6 +25,7 @@ import importersV2Ns from './pages/v2-importers.json';
 import insightsV2Ns from './pages/v2-insights.json';
 import contactV2Ns from './pages/v2-contact.json';
 import rfqV2Ns from './pages/v2-rfq.json';
+import newsV2Ns from './pages/v2-news.json';
 import productData from './data/products.json';
 import marketData from './data/markets.json';
 import companyData from './data/company.json';
@@ -57,6 +58,7 @@ const messages = {
     insights_v2: insightsV2Ns,
     contact_v2: contactV2Ns,
     rfq_v2: rfqV2Ns,
+    news_v2: newsV2Ns,
     data: {
         products: productData,
         markets: marketData,

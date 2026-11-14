@@ -1,0 +1,89 @@
+{
+    "meta": {
+        "title": "News and press",
+        "description": "Company news, press coverage and milestones of AZAFCO International, plus Egyptian fish-sector news from named sources, each with its date."
+    },
+    "breadcrumb": "News and press",
+    "hero": {
+        "eyebrow": "News and press",
+        "title": "News, press and milestones",
+        "intro": "Visits, media coverage and milestones from AZAFCO International, with industry news from named sources. Every item shows its date and source."
+    },
+    "illustrative": "Illustrative photo",
+    "source": "Source: {name}",
+    "view_source": "View source",
+    "new_tab": "(opens in a new tab)",
+    "press": {
+        "eyebrow": "Company news",
+        "title": "Visits and media coverage",
+        "intro": "Official visits to our plant and press and TV coverage of AZAFCO International."
+    },
+    "milestones": {
+        "eyebrow": "Our milestones",
+        "title": "From 2008 to today",
+        "list_label": "Company milestones",
+        "items": {
+            "founding": {
+                "title": "AZAFCO International is founded",
+                "text": "We were founded in Kafr El Sheikh and began packing and exporting fresh fish."
+            },
+            "baltim": {
+                "title": "Our first plant, in Baltim",
+                "text": "We opened our first plant in the Baltim Industrial Zone, Kafr El Sheikh."
+            },
+            "motobas": {
+                "title": "Our new plant, in Motobas",
+                "text": "We opened our new plant in the Motobas Industrial Zone, Kafr El Sheikh."
+            }
+        },
+        "iso": {
+            "title": "ISO certified",
+            "text": "We hold ISO certificates for quality, environmental, and occupational health and safety management, certified by TÜV AUSTRIA.",
+            "link": "Quality and certificates"
+        }
+    },
+    "industry": {
+        "eyebrow": "Industry context",
+        "title": "Egypt's fish sector in the news",
+        "intro": "Reports on Egyptian fisheries and on Kafr El Sheikh, the governorate where our plant is located.",
+        "note": "Figures in this section come from the named sources, as of the date shown. They are not AZAFCO data."
+    },
+    "items": {
+        "governor_visit": {
+            "title": "Governor of Kafr El Sheikh visits our Motobas plant",
+            "summary": "Maj. Gen. Dr. Alaa Abdel Moaty, Governor of Kafr El Sheikh, toured our plant in the Motobas Industrial Zone as part of the governorate's work to support the fish industry and exports.",
+            "source": "Kafr El Sheikh Governorate"
+        },
+        "press_feature": {
+            "title": "Feature in Dar Al-Sharq Al-Awsat",
+            "summary": "The newspaper Dar Al-Sharq Al-Awsat published a profile of AZAFCO International and its chairman, covering the company's work in fresh fish exports.",
+            "source": "Dar Al-Sharq Al-Awsat newspaper"
+        },
+        "tv_program": {
+            "title": "“Helwa Ya Baladi” TV episode on AZAFCO International",
+            "summary": "The Misr Al Balad TV programme “Helwa Ya Baladi” aired a special episode on our fresh fish packing and export work.",
+            "source": "Misr Al Balad TV (YouTube)"
+        },
+        "egypt_ranking": {
+            "title": "Egypt ranks first in Africa in fisheries, says the Agriculture Minister",
+            "summary": "Meeting the Gambian Minister for Fisheries, Egypt's Minister of Agriculture, El-Sayed El-Quseir, said Egypt ranks first in Africa and sixth in the world in fisheries.",
+            "source": "State Information Service (SIS)"
+        },
+        "kafr_el_sheikh_production": {
+            "title": "Kafr El Sheikh produces about half of Egypt's fish",
+            "summary": "Al-Ahram Gate reported that Kafr El Sheikh produces about 50% of Egypt's fish, around 800,000 tonnes a year, and that aquaculture makes up 70% of the governorate's production.",
+            "source": "Al-Ahram Gate"
+        },
+        "ghalioun_project": {
+            "title": "Ghalioun fish farm opens in Kafr El Sheikh",
+            "summary": "President Abdel Fattah El-Sisi opened the Ghalioun fish industrial city in Kafr El Sheikh: a fish farm of about 4,000 feddans with 1,359 fish and shrimp ponds, hatcheries, and plants for fish processing, feed and ice.",
+            "source": "Youm7"
+        }
+    },
+    "teaser": {
+        "eyebrow": "News and press",
+        "title": "Latest news",
+        "intro": "Visits, media coverage and milestones, each with its date and source.",
+        "all": "All news and press"
+    }
+}

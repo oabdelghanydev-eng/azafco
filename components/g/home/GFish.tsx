@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
+import { Container, Section, SectionHeading, cn, focusRing, typography } from '@/components/ui';
 import { productHref } from '@/lib/v2/routes';
-import styles from './GFish.module.css';
 
 /**
  * "Our fish" section of the G landing (boards GroupAr / Group / *Mobile, section#fish).
@@ -27,64 +27,29 @@ const SPECIES = [
     { key: 'bayad_catfish', slug: 'bayad-catfish', latin: 'Bagrus bajad' },
 ] as const;
 
+/** Tile: hairline white frame on a translucent navy panel; gold frame and name on hover. */
+const tile = cn(
+    'group block h-full border border-solid border-white/45 bg-navy-900/[.45] px-3 pb-3.5 pt-2.5 text-white no-underline',
+    'transition-colors duration-base ease-out hover:border-gold hover:bg-navy-900/60 motion-reduce:transition-none',
+    'lg:px-[22px] lg:pb-5 lg:pt-4',
+    focusRing,
+);
+
 export default async function GFish() {
-    const locale = await getLocale();
     const t = await getTranslations('g_fish_v2');
-    const ar = locale === 'ar';
 
     return (
-        <section id="fish" className="relative overflow-hidden bg-[#001b47] text-white">
-            <Image
-                src="/images/g/fish-on-ice.webp"
-                alt=""
-                aria-hidden="true"
-                fill
-                sizes="(min-width: 1024px) 1200px, 100vw"
-                className="object-cover"
-            />
-            <div aria-hidden="true" className="absolute inset-0 bg-[rgba(0,27,71,.78)] lg:bg-[rgba(0,27,71,.74)]" />
+        <Section id="fish" variant="navy" labelledBy="g-fish-title" contained={false} className="g-font overflow-hidden text-body">
+            <Image src="/images/g/fish-on-ice.webp" alt="" aria-hidden="true" fill sizes="(min-width: 1024px) 1200px, 100vw" className="object-cover" />
+            <div aria-hidden="true" className="absolute inset-0 bg-navy-900/[.78] lg:bg-navy-900/[.74]" />
 
-            <div className="relative mx-auto box-border max-w-[1320px] px-5 py-16 lg:px-8 lg:py-[104px]">
-                <div className="lg:mb-12 lg:flex lg:flex-wrap lg:items-end lg:justify-between lg:gap-x-[72px] lg:gap-y-5">
-                    <div>
-                        <p
-                            className={
-                                ar
-                                    ? 'm-0 mb-2 text-[15px] font-bold text-[#f7b500] lg:mb-3 lg:text-[17px]'
-                                    : 'm-0 mb-[10px] text-[14px] font-extrabold text-[#f7b500] lg:mb-[14px] lg:text-[15px]'
-                            }
-                        >
-                            {t('eyebrow')}
-                        </p>
-                        <h2
-                            className={
-                                ar
-                                    ? 'm-0 text-[28px] font-bold leading-[1.4] lg:text-[clamp(32px,3.4vw,50px)] lg:leading-[1.35]'
-                                    : 'm-0 text-[29px] font-extrabold leading-[1.15] tracking-[-0.02em] lg:text-[clamp(32px,3.6vw,52px)] lg:leading-[1.12]'
-                            }
-                        >
-                            {t('title')}
-                        </h2>
-                    </div>
-                    <p
-                        className={
-                            ar
-                                ? 'mb-[26px] mt-[14px] text-[17px] leading-[1.85] text-white/[.88] lg:m-0 lg:max-w-[500px] lg:text-[18px]'
-                                : 'mb-7 mt-4 text-[16px] leading-[1.6] text-white/[.88] lg:m-0 lg:max-w-[480px] lg:text-[17px] lg:leading-[1.65] lg:text-white/[.86]'
-                        }
-                    >
-                        {t('intro')}
-                    </p>
-                </div>
+            <Container className="relative">
+                <SectionHeading id="g-fish-title" layout="split" eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
 
-                <ul className={`m-0 grid list-none grid-cols-2 gap-[10px] p-0 md:grid-cols-3 md:gap-3 lg:grid-cols-[repeat(auto-fill,minmax(260px,1fr))] lg:gap-4`}>
+                <ul className="m-0 grid list-none grid-cols-2 gap-2.5 p-0 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
                     {SPECIES.map((s) => (
                         <li key={s.slug} className="min-w-0">
-                            <Link
-                                href={productHref(s.slug)}
-                                prefetch={false}
-                                className={`${styles.tile} block h-full border border-white/45 bg-[rgba(0,27,71,.45)] px-3 pb-[14px] pt-[10px] text-white lg:px-[22px] lg:pb-5 lg:pt-4`}
-                            >
+                            <Link href={productHref(s.slug)} prefetch={false} className={tile}>
                                 <span className="relative block aspect-video w-full">
                                     <Image
                                         src={`/images/species/${s.slug}.webp`}
@@ -92,26 +57,22 @@ export default async function GFish() {
                                         aria-hidden="true"
                                         fill
                                         sizes="(min-width: 1024px) 300px, (min-width: 768px) 30vw, (min-width: 640px) 45vw, 170px"
-                                        className={`object-contain ${styles.fish} ${ar ? '-scale-x-100' : ''}`}
+                                        className="object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.45)] rtl:-scale-x-100 lg:drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]"
                                     />
                                 </span>
                                 <span
-                                    className={
-                                        ar
-                                            ? `${styles.name} mt-2 block text-[16px] font-bold leading-[1.45] lg:mt-[10px] lg:text-[21px] lg:leading-[1.4]`
-                                            : `${styles.name} mt-2 block text-[14px] font-extrabold uppercase leading-[1.2] lg:mt-[10px] lg:text-[19px] lg:tracking-[0.01em]`
-                                    }
+                                    className={cn(
+                                        'mt-2 block text-white transition-colors duration-base group-hover:text-gold motion-reduce:transition-none lg:mt-2.5',
+                                        typography.h4,
+                                        'lg:text-heading-md',
+                                    )}
                                 >
                                     {t(`species.${s.key}.name`)}
                                 </span>
                                 <span
                                     lang="la"
                                     dir="ltr"
-                                    className={
-                                        ar
-                                            ? 'mt-0.5 block break-words text-right text-[12px] italic leading-[1.35] text-white/[.84] [overflow-wrap:anywhere] lg:text-[14px] lg:leading-[1.4] lg:text-white/[.82]'
-                                            : 'mt-[3px] block text-left text-[12px] italic leading-[1.3] text-white/[.84] [overflow-wrap:anywhere] lg:mt-0.5 lg:text-[14px] lg:leading-[1.65] lg:text-white/[.82]'
-                                    }
+                                    className="mt-0.5 block text-left text-caption italic text-fg-muted [overflow-wrap:anywhere] rtl:text-right"
                                 >
                                     {s.latin}
                                 </span>
@@ -121,16 +82,8 @@ export default async function GFish() {
                 </ul>
 
                 {/* The 12 are the main species; others are supplied on request (owner, 13 Nov) */}
-                <p
-                    className={
-                        ar
-                            ? 'mb-0 mt-6 text-[17px] leading-[1.85] text-white/[.88] lg:mt-8 lg:text-[18px]'
-                            : 'mb-0 mt-6 text-[16px] leading-[1.6] text-white/[.88] lg:mt-8 lg:text-[17px] lg:leading-[1.65]'
-                    }
-                >
-                    {t('note')}
-                </p>
-            </div>
-        </section>
+                <p className="mb-0 mt-6 text-fg-muted lg:mt-8">{t('note')}</p>
+            </Container>
+        </Section>
     );
 }

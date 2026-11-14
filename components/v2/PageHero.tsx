@@ -2,8 +2,8 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/v2/cn';
 import type { ImageProps } from '@/lib/v2/media';
-import Button from './Button';
-import { Container, Eyebrow } from './Layout';
+import { Button } from '@/components/ui/Button';
+import { Container, Eyebrow } from '@/components/ui/Layout';
 import GeoArcs from './GeoArcs';
 
 export interface HeroAction {
@@ -32,8 +32,12 @@ export interface PageHeroProps {
     secondaryAction?: HeroAction;
     /** Slot above the eyebrow, e.g. <Breadcrumbs /> */
     breadcrumbs?: ReactNode;
+    /** Custom actions row (e.g. several <Button>s); rendered instead of primary/secondaryAction */
+    actions?: ReactNode;
     /** Minimal proof under the actions, e.g. <ProofStrip compact /> */
     proof?: ReactNode;
+    /** Mirror the photo in RTL so the subject stays on the end side */
+    mirrorImage?: boolean;
     /** CSS object-position for the photo, e.g. 'center 30%' */
     imagePosition?: string;
     /** Hero is usually the LCP: keep true on the first hero of a page */
@@ -61,25 +65,29 @@ export default function PageHero({
     primaryAction,
     secondaryAction,
     breadcrumbs,
+    actions: actionsSlot,
     proof,
+    mirrorImage = false,
     imagePosition = 'center',
     priority = true,
     size = 'xl',
     headingId,
     className,
 }: PageHeroProps) {
-    const h1 = cn('v2-heading m-0 font-display', size === '2xl' ? 'text-display-2xl' : 'text-display-xl');
+    // Inner pages share one h1 size (type.h1, 34px -> 62px); '2xl' is the landing size.
+    const h1 = cn('v2-heading m-0 font-display', size === '2xl' ? 'text-display-2xl' : 'text-display-page');
 
-    const actions =
-        primaryAction || secondaryAction ? (
+    const actions = actionsSlot ? (
+        <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">{actionsSlot}</div>
+    ) : primaryAction || secondaryAction ? (
             <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
                 {primaryAction ? (
-                    <Button href={primaryAction.href} external={primaryAction.external} size="lg" arrow>
+                    <Button href={primaryAction.href} external={primaryAction.external} size="lg" stretch="phone" arrow>
                         {primaryAction.label}
                     </Button>
                 ) : null}
                 {secondaryAction ? (
-                    <Button href={secondaryAction.href} external={secondaryAction.external} variant="outline" size="lg">
+                    <Button href={secondaryAction.href} external={secondaryAction.external} variant="outline" size="lg" stretch="phone">
                         {secondaryAction.label}
                     </Button>
                 ) : null}
@@ -161,7 +169,7 @@ export default function PageHero({
                 fill
                 priority={priority}
                 sizes="100vw"
-                className="-z-20 object-cover"
+                className={cn('-z-20 object-cover', mirrorImage && 'rtl:-scale-x-100')}
                 style={{ objectPosition: imagePosition }}
             />
             <div aria-hidden="true" className="v2-hero-overlay absolute inset-0 -z-10" />

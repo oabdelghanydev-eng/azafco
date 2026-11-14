@@ -60,6 +60,7 @@ export interface ImageProps {
 
 export const media: MediaItem[] = [
     // ── Species cut-outs (owner set, 7 Nov 2026; transparent, 4:3; tags = data/products.ts slugs) ──
+    // Alt text uses the short species names of locales/{ar,en}/data/products.json (same names on every page).
     {
         id: 'species-tilapia',
         src: '/images/species/tilapia.webp',
@@ -80,7 +81,7 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['sea-bass'],
         cutout: true,
-        alt: { en: 'Whole European sea bass, side view', ar: 'سمكة قاروص كاملة، منظر جانبي' },
+        alt: { en: 'Whole sea bass, side view', ar: 'سمكة قاروص كاملة، منظر جانبي' },
     },
     {
         id: 'species-mullet',
@@ -91,7 +92,7 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['mullet'],
         cutout: true,
-        alt: { en: 'Whole flathead grey mullet, side view', ar: 'سمكة بوري كاملة، منظر جانبي' },
+        alt: { en: 'Whole grey mullet, side view', ar: 'سمكة بوري كاملة، منظر جانبي' },
     },
     {
         id: 'species-grass-carp',
@@ -124,7 +125,7 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['catfish'],
         cutout: true,
-        alt: { en: 'Whole African catfish, side view', ar: 'سمكة قراميط كاملة، منظر جانبي' },
+        alt: { en: 'Whole catfish, side view', ar: 'سمكة قراميط كاملة، منظر جانبي' },
     },
     {
         id: 'species-meagre',
@@ -190,7 +191,7 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['sea-bream'],
         cutout: true,
-        alt: { en: 'Whole gilthead sea bream, side view', ar: 'سمكة دنيس كاملة، منظر جانبي' },
+        alt: { en: 'Whole sea bream, side view', ar: 'سمكة دنيس كاملة، منظر جانبي' },
     },
     // ── Illustrative photos (AI-generated, lead-approved 8 Nov 2026) ──
     // Sources + prompts: docs/images/ai-candidates (MANIFEST.md); built by `python scripts/ai-photos.py`

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link } from '@/navigation';
 import { cn } from '@/lib/v2/cn';
-import { ArrowIcon } from './icons';
+import { ArrowIcon } from '@/components/ui/icons';
 
 export interface Feature {
     title: ReactNode;

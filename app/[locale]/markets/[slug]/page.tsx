@@ -1,7 +1,23 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Breadcrumbs, Button, CTABand, DocumentIcon, FeatureGrid, PageHero, ProcessSteps, Section, SectionHeader } from '@/components/v2';
+import {
+    Badge,
+    Breadcrumbs,
+    Button,
+    Card,
+    DocumentIcon,
+    FactCards,
+    PageHero,
+    Section,
+    SectionHeading,
+    WhatsAppIcon,
+    buttonClass,
+    cn,
+    typography,
+} from '@/components/ui';
+import FeatureGrid from '@/components/v2/FeatureGrid';
+import ProcessSteps from '@/components/v2/ProcessSteps';
 import { insightHref, productHref, rfqHref, routes } from '@/lib/v2/routes';
 import { companyConfig } from '@/config/company.config';
 import { Link } from '@/navigation';
@@ -9,7 +25,7 @@ import { products } from '@/data/products';
 import { activeMarketSlugs } from '@/data/markets';
 import { activeMarketConfigs, getActiveMarketConfig, pausedMarkets, plannedMarkets, regionOf } from '@/components/v2/markets/marketData';
 import MarketsIndex from '@/components/v2/markets/MarketsIndex';
-import { GFactCards, GPageScope } from '@/components/v2/markets/GBits';
+import MarketsClosing from '@/components/v2/markets/MarketsClosing';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 import { marketStepIcons } from '@/components/v2/markets/stepIcons';
@@ -53,7 +69,6 @@ export default async function MarketDetailPage({ params }: Props) {
     const market = getActiveMarketConfig(slug);
     if (!market) notFound();
     setRequestLocale(locale);
-    const ar = locale === 'ar';
 
     const t = await getTranslations({ locale, namespace: 'markets_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
@@ -63,6 +78,9 @@ export default async function MarketDetailPage({ params }: Props) {
     const country = tm(`${market.key}.country`);
     const inCountry = sentenceName(tm, market.key);
     const year = String(market.since ?? '');
+    const note = tm.has(`${market.key}.note`) ? tm(`${market.key}.note`) : undefined;
+    const buyers = tm.has(`${market.key}.buyers`) ? (tm.raw(`${market.key}.buyers`) as string[]) : [];
+    const newTab = tv('cta.opens_new_tab');
 
     const discuss = (t.raw('detail.discuss') as Item[]).map((d) => ({
         title: d.title,
@@ -76,7 +94,7 @@ export default async function MarketDetailPage({ params }: Props) {
         {
             label: t('detail.facts.plant_label'),
             value: t('detail.facts.plant_value'),
-            link: { href: PLANT_MAP_URL, label: t('detail.facts.plant_link'), external: true, newTabLabel: tv('cta.opens_new_tab') },
+            link: { href: PLANT_MAP_URL, label: t('detail.facts.plant_link'), external: true, newTabLabel: newTab },
         },
         {
             label: t('detail.facts.quality_label'),
@@ -98,7 +116,7 @@ export default async function MarketDetailPage({ params }: Props) {
     const pausedNote = pausedMarkets.map((m) => t('index.paused', { country: tm(`${m.key}.country`) })).join(' · ') || undefined;
 
     return (
-        <GPageScope>
+        <>
             <JsonLd
                 data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [
                     { name: t('breadcrumb'), path: routes.markets },
@@ -113,32 +131,70 @@ export default async function MarketDetailPage({ params }: Props) {
                 title={t('detail.title', { country: inCountry })}
                 intro={t('detail.intro', { country: inCountry, year })}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.markets }, { label: country }]} />}
-                primaryAction={{ label: t('detail.primary'), href: rfqHref({ country: market.countryCode, type: 'market' }) }}
-                secondaryAction={{ label: t('detail.secondary'), href: companyConfig.contact.social.whatsapp, external: true }}
+                actions={
+                    <>
+                        <Button
+                            href={rfqHref({ country: market.countryCode, type: 'market' })}
+                            size="lg"
+                            stretch="phone"
+                            arrow
+                            dataAttrs={{ 'data-cta': 'market_hero_partnership' }}
+                        >
+                            {t('detail.primary')}
+                        </Button>
+                        <Button
+                            href={companyConfig.contact.social.whatsapp}
+                            variant="outline"
+                            size="lg"
+                            stretch="phone"
+                            icon={<WhatsAppIcon />}
+                            newTabLabel={newTab}
+                            dataAttrs={{ 'data-cta': 'market_hero_whatsapp' }}
+                        >
+                            {t('detail.secondary')}
+                        </Button>
+                    </>
+                }
             />
 
-            {/* At a glance + what we agree */}
-            <Section variant="offwhite" labelledBy="md-discuss">
-                <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-                    <div className="lg:col-span-4">
-                        <h2 id="md-facts" className="m-0 mb-5 font-display text-heading-md text-[#002d72]">
-                            {t('detail.facts_title', { country })}
-                        </h2>
-                        <GFactCards items={facts} ar={ar} className="sm:grid-cols-2 lg:grid-cols-1" />
-                    </div>
-                    <div className="lg:col-span-8">
-                        <SectionHeader id="md-discuss" size="md" eyebrow={t('detail.discuss_eyebrow')} title={t('detail.discuss_title', { country: inCountry })} />
-                        <FeatureGrid columns={2} style="card" items={discuss} />
-                        <div className="mt-6">
-                            <Button href={insightHref('importing-fresh-fish-from-egypt')} variant="text" icon={<DocumentIcon size={18} />}>
-                                {t('support.guide_link')}
-                            </Button>
-                        </div>
-                    </div>
+            {/* At a glance: who we supply in this market (live-site note) + key facts */}
+            <Section variant="offwhite" labelledBy="md-glance">
+                <SectionHeading id="md-glance" eyebrow={t('detail.glance_eyebrow')} title={t('detail.facts_title', { country })} />
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
+                    {note || buyers.length ? (
+                        <Card accent className="lg:col-span-5 lg:self-start">
+                            <h3 className={cn('m-0 text-ink', typography.h3)}>{t('detail.buyers_title', { country: inCountry })}</h3>
+                            {note ? <p className={cn('m-0 mt-3 text-ink-muted', typography.body)}>{note}</p> : null}
+                            {buyers.length ? (
+                                <div className="mt-5">
+                                    <p className={cn('m-0 mb-2 font-semibold text-ink', typography.caption)}>{t('notes.buyers_label')}</p>
+                                    <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+                                        {buyers.map((b) => (
+                                            <li key={b}>
+                                                <Badge tone="outline">{b}</Badge>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ) : null}
+                        </Card>
+                    ) : null}
+                    <FactCards items={facts} className={note || buyers.length ? 'lg:col-span-7' : 'lg:col-span-12 lg:grid-cols-3'} />
                 </div>
             </Section>
 
-            {/* This market on the route map, with links to the other markets */}
+            {/* What we agree */}
+            <Section variant="white" labelledBy="md-discuss">
+                <SectionHeading id="md-discuss" eyebrow={t('detail.discuss_eyebrow')} title={t('detail.discuss_title', { country: inCountry })} />
+                <FeatureGrid columns={2} style="card" items={discuss} className="xl:grid-cols-4" />
+                <div className="mt-6">
+                    <Button href={insightHref('importing-fresh-fish-from-egypt')} variant="text" icon={<DocumentIcon />}>
+                        {t('support.guide_link')}
+                    </Button>
+                </div>
+            </Section>
+
+            {/* This market on the route map, with links to the other markets (the page's one navy band) */}
             <MarketsIndex
                 headingId="md-markets"
                 eyebrow={t('detail.map_eyebrow')}
@@ -151,19 +207,15 @@ export default async function MarketDetailPage({ params }: Props) {
                 current={market.key}
                 mapLabel={t('index.map_label')}
                 origin={t('index.origin')}
-                ar={ar}
             />
 
             {/* Main species */}
-            <Section variant="light" labelledBy="md-products">
-                <SectionHeader id="md-products" size="md" eyebrow={t('detail.products_eyebrow')} title={t('detail.products_title')} intro={t('detail.products_note')} />
+            <Section variant="offwhite" labelledBy="md-products">
+                <SectionHeading id="md-products" size="md" eyebrow={t('detail.products_eyebrow')} title={t('detail.products_title')} intro={t('detail.products_note')} />
                 <ul className="m-0 flex list-none flex-wrap gap-3 p-0">
                     {products.map((p) => (
                         <li key={p.slug}>
-                            <Link
-                                href={productHref(p.slug)}
-                                className="inline-flex min-h-[44px] items-center rounded-full border border-[#d5dde9] bg-white px-5 text-body-sm font-semibold text-[#002d72] transition-colors duration-200 hover:border-[#002d72] hover:bg-[#f2f5fa] motion-reduce:transition-none"
-                            >
+                            <Link href={productHref(p.slug)} className={buttonClass({ variant: 'outline', size: 'sm', className: 'bg-white' })}>
                                 {tp(`${p.translationKey}.name`)}
                             </Link>
                         </li>
@@ -171,18 +223,26 @@ export default async function MarketDetailPage({ params }: Props) {
                 </ul>
             </Section>
 
-            {/* How to start (off-white: the contact band below is navy) */}
-            <Section variant="offwhite" labelledBy="md-process">
-                <SectionHeader id="md-process" size="md" eyebrow={t('process.eyebrow')} title={t('process.title')} />
+            {/* How to start */}
+            <Section variant="white" labelledBy="md-process">
+                <SectionHeading id="md-process" size="md" eyebrow={t('process.eyebrow')} title={t('process.title')} />
                 <ProcessSteps steps={steps.map((s, i) => ({ title: s.title, description: s.text, icon: marketStepIcons[i] }))} />
             </Section>
 
-            {/* One-tap next step: WhatsApp (management) and email (export team) + what happens next */}
-            <CTABand placement="inline" headingId="md-contact" prefill={{ country: market.countryCode, type: 'market' }} />
-
-            <Section variant="light" spacing="sm" reveal={false}>
-                <p className="m-0 text-body-sm text-[#4a5a75]">{t('disclaimer')}</p>
-            </Section>
-        </GPageScope>
+            {/* Closing: one accent card (WhatsApp = management, email = export team); the G footer follows */}
+            <MarketsClosing
+                headingId="md-contact"
+                eyebrow={t('closing.eyebrow')}
+                title={t('closing.title')}
+                text={t('closing.text')}
+                primary={{ label: t('closing.primary'), href: rfqHref({ country: market.countryCode, type: 'market' }) }}
+                whatsappLabel={tv('cta.whatsapp_management')}
+                emailLabel={tv('cta.email_export_team')}
+                emailSubject={tv('cta_band.email_subject', { topic: country })}
+                newTabLabel={newTab}
+                disclaimer={t('disclaimer')}
+                cta="market"
+            />
+        </>
     );
 }

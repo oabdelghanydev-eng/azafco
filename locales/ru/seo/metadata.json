@@ -1,43 +1,12 @@
 {
+    "_note": "Only metadata.site is read (root layout, pageMetadata helpers, product pages). Page titles and descriptions live in each page's *_v2.meta (or privacy.meta). The legacy page-level keys were removed on 14 Nov 2026 so they are not translated and cannot drift from the live meta. Titles using title_template get ' | AZAFCO' appended: keep them <= 51 characters.",
     "site": {
-        "name": "AZAFCO – ازافكو العالمية",
-        "title_default": "Экспортёр свежей рыбы из Египта | AZAFCO",
+        "name": "AZAFCO International",
+        "title_default": "AZAFCO International | Fresh Egyptian fish for importers",
         "title_template": "%s | AZAFCO",
         "author": "AZAFCO International",
         "creator": "AZAFCO International",
         "publisher": "AZAFCO International",
-        "og_alt": "AZAFCO International – Экспорт свежей рыбы из Египта в Россию, СНГ, Европу и по всему миру"
-    },
-    "home": {
-        "title": "Экспортёр свежей рыбы из Египта",
-        "description": "AZAFCO International – египетский B2B экспортёр рыбы с 2008 года. Более 2 500 тонн в месяц, ISO и HACCP. Доставка в Россию, СНГ и по всему миру."
-    },
-    "products": {
-        "title": "Свежая тилапия, сибас и кефаль из Египта",
-        "description": "Премиальная свежая рыба из Египта. Тилапия, сибас, кефаль и более 8 видов. Индивидуальные размеры, заказ от 1 коробки. Доставка в Россию, СНГ и по всему миру."
-    },
-    "about": {
-        "title": "О компании: экспортёр свежей рыбы с 2008 года",
-        "description": "AZAFCO International: египетский B2B экспортёр рыбы, 300+ сотрудников и 500+ клиентов в {countries}+ странах. Сертификация ЕС, ISO 22000, HACCP."
-    },
-    "contact": {
-        "title": "Контакты: оптовые поставки свежей рыбы",
-        "description": "Сотрудничество с экспортёром свежей рыбы из Египта. Доставка в Россию, СНГ и по всему миру. Ответ в течение 24 часов. WhatsApp: +20-100-7736419."
-    },
-    "markets": {
-        "title": "Рынки экспорта: доставка авиа и автотранспортом",
-        "description": "AZAFCO экспортирует более 2 500 тонн свежей рыбы в месяц в {countries}+ стран: Россия, СНГ, Европа, Ближний Восток. Более 500 оптовиков с 2008 года."
-    },
-    "media": {
-        "title": "Новости экспорта рыбы из Египта",
-        "description": "Последние новости AZAFCO, международная экспансия, достижения компании и отраслевые события. ТВ-выступления и государственное признание с 2008."
-    },
-    "certificates": {
-        "title": "Экспортёр рыбы с сертификатами ISO 22000 и HACCP",
-        "description": "AZAFCO имеет {isoCount} сертификата ISO и HACCP: ISO 22000, 9001, 14001, 45001. Один из 6 египетских комплексов с сертификацией ЕС."
-    },
-    "privacy": {
-        "title": "Политика конфиденциальности",
-        "description": "Политика конфиденциальности AZAFCO International – Как мы защищаем ваши данные и обрабатываем запросы конфиденциально."
+        "og_alt": "AZAFCO International: fresh Egyptian fish for importers"
     }
 }

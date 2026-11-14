@@ -2,18 +2,23 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
+    Badge,
     Breadcrumbs,
     Button,
-    FAQAccordion,
-    Pending,
+    Card,
+    DocumentIcon,
     PageHero,
-    SpeciesEntry,
     Section,
-    SectionHeader,
-    SpecTable,
-} from '@/components/v2';
-import { DocumentIcon } from '@/components/v2/icons';
+    SectionHeading,
+    TextLink,
+    cn,
+    typography,
+} from '@/components/ui';
+import FAQAccordion from '@/components/v2/FAQAccordion';
+import Pending from '@/components/v2/Pending';
+import SpecTable from '@/components/v2/SpecTable';
 import ProductContact from '@/components/v2/products/ProductContact';
+import { SpeciesEntry } from '@/components/v2/products/SpeciesRow';
 import {
     baseUrl,
     getCatalogue,
@@ -145,31 +150,51 @@ export default async function ProductDetailPage({ params }: Props) {
                 intro={
                     <>
                         {p.scientificName ? (
-                            <p className="mb-4 text-heading-sm italic text-ink-muted" lang="la" dir="ltr">
-                                {p.scientificName}
+                            <p className={cn('m-0 mb-4 italic text-fg-muted', typography.h4)}>
+                                <span lang="la" dir="ltr">
+                                    {p.scientificName}
+                                </span>
                             </p>
                         ) : null}
-                        {p.description ? <p className="mb-3 font-medium text-ink">{p.description}</p> : null}
-                        <p>{t('detail.intro')}</p>
+                        {p.description ? <p className="m-0 mb-3 font-medium text-fg">{p.description}</p> : null}
+                        <p className="m-0">{t('detail.intro')}</p>
                         {p.altNames.length > 0 ? (
-                            <p className="mt-4 text-body-sm">
-                                <span className="font-semibold text-ink">{t('detail.also_known_as')}: </span>
+                            <p className={cn('m-0 mt-4', typography.small)}>
+                                <span className="font-semibold text-fg">{t('detail.also_known_as')}: </span>
                                 {p.altNames.join(' · ')}
                             </p>
                         ) : null}
+                        <ul className="m-0 mt-5 flex list-none flex-wrap gap-2 p-0">
+                            <li>
+                                <Badge tone="outline">{water}</Badge>
+                            </li>
+                            {spec.forms.map((f) => (
+                                <li key={f.kind}>
+                                    <Badge tone="outline">{f.label}</Badge>
+                                </li>
+                            ))}
+                        </ul>
                     </>
                 }
                 image={p.image}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.products }, { label: name }]} />}
-                primaryAction={{ label: t('detail.primary'), href: `#${CONTACT_ID}`, external: true }}
-                secondaryAction={{ label: t('detail.secondary'), href: '#specifications', external: true }}
+                actions={
+                    <>
+                        <Button href={`#${CONTACT_ID}`} external size="lg" stretch="phone" arrow>
+                            {t('detail.primary')}
+                        </Button>
+                        <Button href="#specifications" external variant="outline" size="lg" stretch="phone">
+                            {t('detail.secondary')}
+                        </Button>
+                    </>
+                }
             />
 
             {/* Spec card + weight grades, with the partnership card beside it */}
-            <Section variant="offwhite" spacing="lg" labelledBy="specifications-title" id="specifications" className="scroll-mt-24">
+            <Section variant="offwhite" labelledBy="specifications-title" id="specifications">
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-7">
-                        <SectionHeader id="specifications-title" eyebrow={t('detail.spec_eyebrow')} title={t('detail.spec_title')} intro={t('detail.spec_intro')} size="md" />
+                        <SectionHeading id="specifications-title" eyebrow={t('detail.spec_eyebrow')} title={t('detail.spec_title')} intro={t('detail.spec_intro')} size="md" />
                         <SpecTable
                             caption={t('detail.spec_caption', { name })}
                             rows={[
@@ -190,7 +215,7 @@ export default async function ProductDetailPage({ params }: Props) {
                                 {
                                     label: t('detail.sizes'),
                                     value: spec.grades.length ? (
-                                        <ul className="space-y-1">
+                                        <ul className="m-0 list-none space-y-1 p-0">
                                             {spec.grades.map((g) => (
                                                 <li key={g}>
                                                     <bdi>{g}</bdi>
@@ -203,17 +228,17 @@ export default async function ProductDetailPage({ params }: Props) {
                             ]}
                         />
                         {/* Weight grades sit under the spec h2 (before the contact aside's h2) to keep the outline */}
-                        <div className="mt-6 rounded-card border border-line bg-white p-6">
-                            <h3 className="text-heading-md text-navy">{t('detail.grading_title')}</h3>
-                            <p className="mt-3 text-body-sm text-ink-muted">{t('detail.grading_text')}</p>
-                        </div>
+                        <Card padding="sm" className="mt-6">
+                            <h3 className={cn('m-0 text-navy', typography.h3)}>{t('detail.grading_title')}</h3>
+                            <p className={cn('m-0 mt-3 text-ink-muted', typography.small)}>{t('detail.grading_text')}</p>
+                        </Card>
                         {!p.scientificName ? (
                             <div className="mt-4">
                                 <Pending label={t('pending.species_id', { name })} />
                             </div>
                         ) : null}
                         {note ? (
-                            <p role="note" className="mt-6 rounded-card border-s-4 border-gold bg-white p-5 text-body-sm text-ink">
+                            <p role="note" className={cn('m-0 mt-6 rounded-card border-0 border-s-4 border-solid border-gold bg-white p-5 text-ink', typography.small)}>
                                 {note}
                             </p>
                         ) : null}
@@ -226,56 +251,50 @@ export default async function ProductDetailPage({ params }: Props) {
             </Section>
 
             {/* Quality documents: the export team handles details and documents */}
-            <Section variant="light" spacing="md" labelledBy="packing-docs">
-                <article className="flex flex-col gap-6 rounded-card border border-line p-6 md:flex-row md:items-start md:p-8">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-control bg-navy-50 text-navy">
-                        <DocumentIcon size={22} />
+            <Section variant="white" labelledBy="packing-docs">
+                <Card as="article" padding="md" className="flex flex-col gap-6 md:flex-row md:items-start">
+                    <span className="flex h-tap w-tap shrink-0 items-center justify-center rounded-control bg-navy-50 text-navy">
+                        <DocumentIcon size={24} />
                     </span>
                     <div className="min-w-0 flex-1">
-                        <h2 id="packing-docs" className="v2-heading font-display text-heading-xl">
+                        <h2 id="packing-docs" className={cn('v2-heading m-0', typography.h2Sm)}>
                             {t('detail.docs_title')}
                         </h2>
-                        <p className="mt-4 max-w-prose-v2 text-body text-fg-muted">{t('detail.docs_text')}</p>
-                        <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3">
-                            <Button href={docsHref} external variant="text" dataAttrs={{ 'data-cta': 'product_documents_email' }}>
+                        <p className={cn('m-0 mt-4 max-w-prose-v2 text-ink-muted', typography.body)}>{t('detail.docs_text')}</p>
+                        <div className="mt-4 flex flex-wrap items-center gap-x-8">
+                            <TextLink href={docsHref} dataAttrs={{ 'data-cta': 'product_documents_email' }}>
                                 {t('detail.docs_email')}
-                            </Button>
-                            <Button href={routes.quality} variant="text">
-                                {t('detail.docs_link')}
-                            </Button>
+                            </TextLink>
+                            <TextLink href={routes.quality}>{t('detail.docs_link')}</TextLink>
                         </div>
                     </div>
-                </article>
+                </Card>
             </Section>
 
             {/* Related products */}
             {related.length > 0 ? (
-                <Section variant="offwhite" spacing="lg" labelledBy="related-products">
-                    <SectionHeader
+                <Section variant="offwhite" labelledBy="related-products">
+                    <SectionHeading
                         id="related-products"
                         eyebrow={t('detail.related_eyebrow')}
                         title={t('detail.related_title')}
                         size="md"
-                        action={
-                            <Button href={routes.products} variant="text">
-                                {tv('cta.view_all')}
-                            </Button>
-                        }
+                        action={<TextLink href={routes.products}>{tv('cta.view_all')}</TextLink>}
                     />
-                    <ul className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <ul className="m-0 grid list-none gap-x-10 gap-y-12 p-0 sm:grid-cols-2 lg:grid-cols-3">
                         {related.map((r) => (
                             <li key={r.slug}>
                                 <SpeciesEntry name={r.name} scientificName={r.scientificName} href={r.href} image={r.image} />
                             </li>
                         ))}
                     </ul>
-                    <p className="mt-10 border-s-2 border-gold ps-4 text-body text-fg-muted">{t('grid.more_species')}</p>
+                    <p className={cn('m-0 mt-10 border-0 border-s-2 border-solid border-gold ps-4 text-fg-muted', typography.body)}>{t('grid.more_species')}</p>
                 </Section>
             ) : null}
 
-            <Section variant={related.length > 0 ? 'light' : 'offwhite'} spacing="lg" labelledBy="product-faq">
+            <Section variant={related.length > 0 ? 'white' : 'offwhite'} labelledBy="product-faq">
                 <div className="mx-auto max-w-3xl">
-                    <SectionHeader id="product-faq" title={t('detail.faq_title', { name })} size="md" />
+                    <SectionHeading id="product-faq" title={t('detail.faq_title', { name })} size="md" />
                     <FAQAccordion items={faq} exclusiveName={`faq-${slug}`} />
                 </div>
             </Section>

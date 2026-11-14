@@ -1,18 +1,35 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
+import {
+    ArrowIcon,
+    Button,
+    Card,
+    Eyebrow,
+    PageHead,
+    Section,
+    SectionHeading,
+    TextLink,
+    cardClass,
+    cn,
+    focusRing,
+    typography,
+} from '@/components/ui';
 import { InsightCard } from '@/components/v2';
-import { mediaImage } from '@/lib/v2/media';
+import NewsCard from '@/components/v2/insights/NewsCard';
+import { getMedia, mediaImage } from '@/lib/v2/media';
 import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
-import { cn } from '@/lib/v2/cn';
 import { Link } from '@/navigation';
-import { INSIGHT_CATEGORIES, insights, readingMinutes } from '@/components/v2/insights/articles';
+import { insights, readingMinutes } from '@/components/v2/insights/articles';
+import { industryItems, latestPress, pressItems } from '@/data/news';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
-import { FOCUS_LIGHT, GArrow, GEyebrow, GLinkButton, GPageHead, GSectionHead, gBody, gCard, gH2, gH3, gSectionY, gSmall, gWrap } from '@/components/v2/contact/g';
 import { companyConfig } from '@/config/company.config';
 
 type Props = { params: Promise<{ locale: string }> };
+
+/** /insights/news (lead: add routes.news to lib/v2/routes.ts) */
+const NEWS_PATH = routes.news;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -23,12 +40,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function InsightsPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    const ar = locale === 'ar';
     const t = await getTranslations({ locale, namespace: 'insights_v2' });
+    const tn = await getTranslations({ locale, namespace: 'news_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const tg = await getTranslations({ locale, namespace: 'guides_page' });
     const format = await getFormatter({ locale });
-    const fmt = (iso: string) => format.dateTime(new Date(`${iso}T00:00:00Z`), { dateStyle: 'medium', timeZone: 'UTC' });
+    const fmt = (iso: string, style: 'medium' | 'long' = 'medium') =>
+        format.dateTime(new Date(`${iso}T00:00:00Z`), { dateStyle: style, timeZone: 'UTC' });
 
     const entries = insights
         .slice()
@@ -42,147 +60,195 @@ export default async function InsightsPage({ params }: Props) {
             href: insightHref(e.slug),
         }));
     const [featured, ...rest] = entries;
-    const categories = INSIGHT_CATEGORIES.map((key) => ({ key, count: entries.filter((e) => e.category === key).length })).filter((c) => c.count > 0);
+
+    // Content types with published entries only (articles.ts rule). News lives on /insights/news.
+    const newsCount = pressItems.length + industryItems.length;
+    const categories = [
+        { key: 'importer_guide', count: t('grid.count', { count: entries.length }), href: featured?.href, show: entries.length > 0 },
+        { key: 'company_news', count: t('categories.news_count', { count: newsCount }), href: NEWS_PATH, show: newsCount > 0 },
+    ].filter((c): c is { key: string; count: string; href: string; show: boolean } => c.show && !!c.href);
+
+    const teaser = latestPress(3);
 
     const baseUrl = companyConfig.contact.baseUrl;
     const itemList = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        itemListElement: entries.map((e, i) => ({ '@type': 'ListItem', position: i + 1, url: `${baseUrl}/${locale}${e.href}`, name: e.title })),
+        itemListElement: [
+            ...entries.map((e) => ({ url: `${baseUrl}/${locale}${e.href}`, name: e.title })),
+            { url: `${baseUrl}/${locale}${NEWS_PATH}`, name: tn('hero.title') },
+        ].map((x, i) => ({ '@type': 'ListItem', position: i + 1, ...x })),
     };
 
     return (
-        <div className={cn('g-font bg-white text-[#0d1f3f]', gBody(ar))}>
+        <>
             <JsonLd data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [{ name: t('breadcrumb'), path: routes.insights }])} />
             <JsonLd data={itemList} />
 
             {/* 01 Opening */}
-            <GPageHead ar={ar} crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="insights-title" intro={t('hero.intro')}>
-                <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
+            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="insights-title" intro={t('hero.intro')}>
+                <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
                     {featured ? (
-                        <GLinkButton href={featured.href} ar={ar} variant="gold" arrow dark>
+                        <Button href={featured.href} size="lg" stretch="phone" arrow>
                             {t('hero.primary')}
-                        </GLinkButton>
+                        </Button>
                     ) : null}
-                    <GLinkButton href={routes.products} ar={ar} variant="outline-light">
+                    <Button href={NEWS_PATH} variant="outline" size="lg" stretch="phone">
                         {t('hero.secondary')}
-                    </GLinkButton>
+                    </Button>
                 </div>
-            </GPageHead>
+            </PageHead>
 
             {/* 02 Featured guide */}
             {featured ? (
-                <section aria-labelledby="in-featured" className="bg-[#f2f5fa]">
-                    <div className={cn(gWrap, gSectionY)}>
-                        <article className={cn(gCard(true), 'relative grid grid-cols-1 overflow-hidden lg:grid-cols-12')}>
-                            {featured.image ? (
-                                <div className="relative aspect-[16/10] lg:col-span-7 lg:aspect-auto lg:min-h-[420px]">
-                                    <Image src={featured.image.src} alt={featured.image.alt} fill sizes="(min-width: 1320px) 740px, (min-width: 1024px) 56vw, 100vw" className="object-cover" />
-                                </div>
-                            ) : null}
-                            <div className={cn('flex flex-col justify-center p-6 sm:p-10', featured.image ? 'lg:col-span-5' : 'lg:col-span-10 lg:p-14')}>
-                                <GEyebrow ar={ar}>{t('featured.eyebrow')}</GEyebrow>
-                                <p className={cn('mb-0 mt-4 text-[#4a5a75]', gSmall(ar))}>
-                                    {t(`categories.${featured.category}`)} · <time dateTime={featured.lastReviewed}>{fmt(featured.lastReviewed)}</time> ·{' '}
-                                    {tv('insight.minutes', { count: featured.minutes })}
-                                </p>
-                                <h2
-                                    id="in-featured"
-                                    className={cn(
-                                        'mb-0 mt-3 text-[#0d1f3f]',
-                                        ar ? 'text-[26px] font-bold leading-[1.45] lg:text-[34px]' : 'text-[26px] font-extrabold leading-[1.2] tracking-[-0.02em] lg:text-[36px]',
-                                    )}
-                                >
-                                    <Link href={featured.href} className={cn('after:absolute after:inset-0 after:content-[\'\'] hover:underline', FOCUS_LIGHT)}>
-                                        {featured.title}
-                                    </Link>
-                                </h2>
-                                <p className="mb-0 mt-4 max-w-[680px] text-[#4a5a75]">{featured.excerpt}</p>
-                                <span aria-hidden="true" className={cn('mt-6 inline-flex items-center gap-2.5 text-[#002d72]', ar ? 'font-bold' : 'font-extrabold')}>
-                                    {t('featured.read')} <GArrow ar={ar} />
-                                </span>
+                <Section variant="offwhite" labelledBy="in-featured">
+                    <article className={cn(cardClass({ accent: true, interactive: true }), 'group relative grid grid-cols-1 overflow-hidden lg:grid-cols-12')}>
+                        {featured.image ? (
+                            <div className="relative aspect-[16/10] lg:col-span-7 lg:aspect-auto lg:min-h-[420px]">
+                                <Image
+                                    src={featured.image.src}
+                                    alt={featured.image.alt}
+                                    fill
+                                    sizes="(min-width: 1320px) 740px, (min-width: 1024px) 56vw, 100vw"
+                                    className="object-cover"
+                                />
                             </div>
-                        </article>
-                    </div>
-                </section>
+                        ) : null}
+                        <div className={cn('flex flex-col justify-center p-6 sm:p-10', featured.image ? 'lg:col-span-5' : 'lg:col-span-10 lg:p-14')}>
+                            <Eyebrow>{t('featured.eyebrow')}</Eyebrow>
+                            <p className={cn('mb-0 mt-4 text-ink-muted', typography.small)}>
+                                {t(`categories.${featured.category}`)} · <time dateTime={featured.lastReviewed}>{fmt(featured.lastReviewed)}</time> ·{' '}
+                                {tv('insight.minutes', { count: featured.minutes })}
+                            </p>
+                            <h2 id="in-featured" className={cn('mb-0 mt-3 text-ink', typography.h2Sm)}>
+                                <Link
+                                    href={featured.href}
+                                    className={cn('underline-offset-4 after:absolute after:inset-0 after:content-[\'\'] group-hover:underline', focusRing)}
+                                >
+                                    {featured.title}
+                                </Link>
+                            </h2>
+                            <p className={cn('mb-0 mt-4 max-w-[680px] text-ink-muted', typography.body)}>{featured.excerpt}</p>
+                            <span aria-hidden="true" className="v2-btn mt-6 inline-flex items-center gap-2.5 text-link">
+                                {t('featured.read')} <ArrowIcon size={20} />
+                            </span>
+                        </div>
+                    </article>
+                </Section>
             ) : null}
 
-            {/* 03 Categories (what we publish): only categories with published entries (articles.ts rule) */}
+            {/* 03 Content types: each card opens its listing */}
             {categories.length > 1 ? (
-                <section aria-labelledby="in-categories" className={cn(gWrap, gSectionY)}>
-                    <GSectionHead ar={ar} id="in-categories" eyebrow={t('categories.eyebrow')} title={t('categories.title')} />
-                    <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
-                        {categories.map(({ key, count }) => (
-                            <li key={key} className={cn(gCard(true), 'p-6 lg:p-8')}>
-                                <h3 className={cn(gH3(ar), 'text-[#0d1f3f]')}>{t(`categories.${key}`)}</h3>
-                                <p className={cn('mb-0 mt-2 text-[#4a5a75]', gSmall(ar))}>{t(`categories.${key}_text`)}</p>
-                                <p className={cn('mb-0 mt-4 font-bold text-[#002d72]', gSmall(ar))}>{t('grid.count', { count })}</p>
+                <Section variant="white" labelledBy="in-categories">
+                    <SectionHeading id="in-categories" eyebrow={t('categories.eyebrow')} title={t('categories.title')} />
+                    <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:gap-6">
+                        {categories.map(({ key, count, href }) => (
+                            <li key={key} className="min-w-0">
+                                <Link
+                                    href={href}
+                                    className={cn(cardClass({ accent: true, interactive: true, padding: 'md' }), 'group flex h-full flex-col', focusRing)}
+                                >
+                                    <span className={cn('block text-ink', typography.h3)}>{t(`categories.${key}`)}</span>
+                                    <span className={cn('mt-2 block flex-1 text-ink-muted', typography.small)}>{t(`categories.${key}_text`)}</span>
+                                    <span className="mt-6 flex items-center justify-between gap-4">
+                                        <span className={cn('font-bold text-navy', typography.small)}>{count}</span>
+                                        <span
+                                            aria-hidden="true"
+                                            className="grid h-tap w-tap place-items-center rounded-full border border-solid border-line text-navy transition-colors duration-base group-hover:border-gold group-hover:bg-gold group-hover:text-navy-900 motion-reduce:transition-none"
+                                        >
+                                            <ArrowIcon size={20} />
+                                        </span>
+                                    </span>
+                                </Link>
                             </li>
                         ))}
                     </ul>
-                </section>
+                </Section>
             ) : null}
 
-            {/* 04 Content grid (only when there is more than the featured entry) */}
+            {/* 04 News and press teaser */}
+            {teaser.length > 0 ? (
+                <Section variant="offwhite" labelledBy="in-news">
+                    <SectionHeading
+                        id="in-news"
+                        eyebrow={tn('teaser.eyebrow')}
+                        title={tn('teaser.title')}
+                        intro={tn('teaser.intro')}
+                        action={<TextLink href={NEWS_PATH}>{tn('teaser.all')}</TextLink>}
+                    />
+                    <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                        {teaser.map((n) => (
+                            <li key={n.key} className="min-w-0">
+                                <NewsCard
+                                    title={tn(`items.${n.key}.title`)}
+                                    summary={tn(`items.${n.key}.summary`)}
+                                    date={n.date}
+                                    dateLabel={fmt(n.date, 'long')}
+                                    sourceLine={tn('source', { name: tn(`items.${n.key}.source`) })}
+                                    image={n.imageId ? mediaImage(n.imageId, locale) : undefined}
+                                    illustrativeLabel={n.imageId && getMedia(n.imageId).illustrative ? tn('illustrative') : undefined}
+                                    href={`${NEWS_PATH}#news-${n.key}`}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            ) : null}
+
+            {/* 05 More articles (only when there is more than the featured entry) */}
             {rest.length > 0 ? (
-                <section aria-labelledby="in-grid" className="bg-[#f2f5fa]">
-                    <div className={cn(gWrap, gSectionY)}>
-                        <GSectionHead ar={ar} id="in-grid" title={t('grid.title')} />
-                        <ul className="m-0 grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
-                            {rest.map((e) => (
-                                <li key={e.slug}>
-                                    <InsightCard
-                                        title={e.title}
-                                        href={e.href}
-                                        excerpt={e.excerpt}
-                                        image={e.image}
-                                        category={t(`categories.${e.category}`)}
-                                        date={e.lastReviewed}
-                                        readingMinutes={e.minutes}
-                                    />
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
+                <Section variant="white" labelledBy="in-grid">
+                    <SectionHeading id="in-grid" title={t('grid.title')} />
+                    <ul className="m-0 grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
+                        {rest.map((e) => (
+                            <li key={e.slug}>
+                                <InsightCard
+                                    title={e.title}
+                                    href={e.href}
+                                    excerpt={e.excerpt}
+                                    image={e.image}
+                                    category={t(`categories.${e.category}`)}
+                                    date={e.lastReviewed}
+                                    readingMinutes={e.minutes}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
             ) : null}
 
-            {/* 05 Editorial standards */}
-            <section aria-labelledby="in-standards" className="bg-[#002d72] text-white" data-surface="dark">
-                <div className={cn(gWrap, 'py-16 lg:py-20')}>
-                    <div className="max-w-[760px]">
-                        <GEyebrow ar={ar} dark as="h2" id="in-standards">
-                            {t('standards.title')}
-                        </GEyebrow>
-                        <p className={cn('mb-0 mt-4 text-white/[.86]', ar ? 'text-[19px] leading-[1.85] lg:text-[21px]' : 'text-[18px] leading-[1.6] lg:text-[20px]')}>
-                            {t('standards.text')}
-                        </p>
-                    </div>
+            {/* 06 Editorial standards (the one navy band) */}
+            <Section variant="navy" labelledBy="in-standards" spacing="lg">
+                <div className="max-w-[760px]">
+                    <Eyebrow as="h2" id="in-standards">
+                        {t('standards.title')}
+                    </Eyebrow>
+                    <p className={cn('mb-0 mt-4 text-fg-muted', typography.lead)}>{t('standards.text')}</p>
                 </div>
-            </section>
+            </Section>
 
-            {/* 06 Next step: requirements or the fish */}
-            <section aria-labelledby="in-cta" className={cn(gWrap, 'py-16 lg:py-24')}>
-                <div className="lg:flex lg:items-end lg:justify-between lg:gap-16">
-                    <div className="max-w-[720px]">
-                        <GEyebrow ar={ar} className="mb-2 lg:mb-3">
-                            {t('cta.eyebrow')}
-                        </GEyebrow>
-                        <h2 id="in-cta" className={cn(gH2(ar), 'text-[#0d1f3f]')}>
-                            {t('cta.title')}
-                        </h2>
-                        <p className="mb-0 mt-4 text-[#4a5a75]">{t('cta.text')}</p>
+            {/* 07 Closing: requirements or the fish */}
+            <Section variant="offwhite" labelledBy="in-cta">
+                <Card accent padding="lg">
+                    <div className="lg:flex lg:items-end lg:justify-between lg:gap-16">
+                        <div className="max-w-[680px]">
+                            <Eyebrow className="mb-3">{t('cta.eyebrow')}</Eyebrow>
+                            <h2 id="in-cta" className={cn('m-0 text-ink', typography.h2Sm)}>
+                                {t('cta.title')}
+                            </h2>
+                            <p className={cn('m-0 mt-4 text-ink-muted', typography.body)}>{t('cta.text')}</p>
+                        </div>
+                        <div className="mt-8 grid shrink-0 gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-0">
+                            <Button href={rfqHref()} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'insights_requirements' }}>
+                                {t('cta.primary')}
+                            </Button>
+                            <Button href={routes.products} variant="outline" size="lg" stretch="phone">
+                                {t('cta.secondary')}
+                            </Button>
+                        </div>
                     </div>
-                    <div className="mt-8 grid shrink-0 gap-3 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-0">
-                        <GLinkButton href={rfqHref()} ar={ar} variant="gold" arrow dataAttrs={{ 'data-cta': 'insights_requirements' }}>
-                            {t('cta.primary')}
-                        </GLinkButton>
-                        <GLinkButton href={routes.products} ar={ar} variant="outline">
-                            {t('cta.secondary')}
-                        </GLinkButton>
-                    </div>
-                </div>
-            </section>
-        </div>
+                </Card>
+            </Section>
+        </>
     );
 }

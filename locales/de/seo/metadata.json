@@ -1,43 +1,12 @@
 {
+    "_note": "Only metadata.site is read (root layout, pageMetadata helpers, product pages). Page titles and descriptions live in each page's *_v2.meta (or privacy.meta). The legacy page-level keys were removed on 14 Nov 2026 so they are not translated and cannot drift from the live meta. Titles using title_template get ' | AZAFCO' appended: keep them <= 51 characters.",
     "site": {
-        "name": "AZAFCO - ازافكو العالمية",
-        "title_default": "Frischfisch-Exporteur aus Ägypten | AZAFCO",
+        "name": "AZAFCO International",
+        "title_default": "AZAFCO International | Fresh Egyptian fish for importers",
         "title_template": "%s | AZAFCO",
         "author": "AZAFCO International",
         "creator": "AZAFCO International",
         "publisher": "AZAFCO International",
-        "og_alt": "AZAFCO International – Frischfisch-Export aus Ägypten – Lieferung nach Deutschland, Österreich, Schweiz & weltweit"
-    },
-    "home": {
-        "title": "Frischfisch-Exporteur aus Ägypten",
-        "description": "AZAFCO International – B2B-Fischexporteur aus Ägypten seit 2008. Über 2.500 Tonnen monatlich, ISO- & HACCP-zertifiziert. Lieferung nach DACH & weltweit."
-    },
-    "products": {
-        "title": "Tilapia, Wolfsbarsch & Meeräsche aus Ägypten",
-        "description": "Frischfisch aus Ägypten: Tilapia, Wolfsbarsch, Meeräsche & 8+ Sorten. Individuelle Größen, ab 1 Karton, ISO-zertifiziert. Versand weltweit."
-    },
-    "about": {
-        "title": "Über uns: Frischfisch-Exporteur seit 2008",
-        "description": "AZAFCO International: Ägyptens B2B-Fischexporteur: 300+ Mitarbeiter, 500+ Kunden in über {countries} Ländern. EU-zugelassene Fabrik, ISO 22000 & HACCP."
-    },
-    "contact": {
-        "title": "Kontakt: Frischfisch im Großhandel anfragen",
-        "description": "Angebot vom Frischfisch-Exporteur aus Ägypten. Versand nach Deutschland, Österreich, Schweiz & weltweit. WhatsApp: +20-100-7736419. Antwort in 24 h."
-    },
-    "markets": {
-        "title": "Exportmärkte: Versand per Luft- und Landweg",
-        "description": "AZAFCO exportiert monatlich über 2.500 Tonnen Frischfisch in über {countries} Länder: Europa, Golfstaaten, weltweit. 500+ Großhändler seit 2008."
-    },
-    "media": {
-        "title": "News zum ägyptischen Fischexport",
-        "description": "Aktuelle AZAFCO-Nachrichten, internationale Expansion, Unternehmensleistungen und Branchenmeilensteine. TV-Auftritte und staatliche Anerkennung seit 2008."
-    },
-    "certificates": {
-        "title": "ISO 22000 & HACCP zertifizierter Fischexporteur",
-        "description": "AZAFCO besitzt {isoCount} ISO-Zertifizierungen plus HACCP: ISO 22000, 9001, 14001, 45001. Eine von 6 ägyptischen Fabriken mit EU-Exportzulassung."
-    },
-    "privacy": {
-        "title": "Datenschutzerklärung",
-        "description": "Datenschutzerklärung von AZAFCO International – Wie wir Ihre Daten schützen und Anfragen vertraulich behandeln. DSGVO-konform."
+        "og_alt": "AZAFCO International: fresh Egyptian fish for importers"
     }
 }

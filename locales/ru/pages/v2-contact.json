@@ -7,11 +7,16 @@
     "hero": {
         "eyebrow": "Contact us",
         "title": "Start with a clear requirement",
-        "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents."
+        "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents.",
+        "actions": {
+            "whatsapp": "Message management on WhatsApp",
+            "email": "Email the export team"
+        }
     },
     "channels": {
         "eyebrow": "Direct channels",
         "title": "Choose the channel that fits your request",
+        "intro": "One number for management on WhatsApp and phone, one email for the export team.",
         "whatsapp": {
             "title": "WhatsApp",
             "sub": "Direct to management · for fast deals"
@@ -25,6 +30,11 @@
             "sub": "Call management on the same number"
         },
         "hours": "Office hours",
+        "vcard": {
+            "title": "Save our contact details",
+            "text": "A contact card (vCard) that adds the management number and the export team email to your phone.",
+            "action": "Download the contact card"
+        },
         "new_tab": "(opens in a new tab)"
     },
     "routes": {
@@ -44,6 +54,7 @@
     "locations": {
         "eyebrow": "Locations",
         "title": "Main office and factory",
+        "intro": "Our main office is in El-Borollos and our factory in Motobas, both in Kafr El Sheikh, Egypt.",
         "factory": "Factory",
         "office": "Main office",
         "map_open": "Open in Google Maps",
@@ -52,6 +63,7 @@
         "map_note": "Maps are loaded from Google Maps."
     },
     "next": {
+        "eyebrow": "After you write",
         "title": "What happens after you write to us",
         "steps": [
             "The export team reviews your requirements against the specification and current availability.",

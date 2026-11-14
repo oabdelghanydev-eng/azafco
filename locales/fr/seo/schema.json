@@ -1,69 +1,84 @@
 {
-    "companyName": "AZAFCO International for Investment and Development",
+    "companyName": "AZAFCO International",
+    "legalName": "AZAFCO International for Investment and Development S.A.E.",
     "alternateName": "AZAFCO International",
     "alternateNames": [
-        "AZAFCO International",
         "AZAFCO",
+        "ازافكو العالمية",
         "ازافكو",
-        "EZAFCO",
-        "Azafco Égypte",
-        "AZAFCO Fish"
+        "EZAFCO"
     ],
-    "description": "AZAFCO International for Investment and Development S.A.E. est une société égyptienne qui transforme, conditionne et exporte du poisson frais pour des acheteurs B2B (importateurs, grossistes et distributeurs). Site de transformation à Motobas, Kafr El Sheikh, Égypte.",
-    "slogan": "Poisson frais premium d'Égypte vers le monde",
+    "description": "AZAFCO International is an Egyptian company that farms and sources fresh fish, then grades, packs and exports it for importers, distributors and foodservice buyers in {countries}+ markets. Processing plant in Motobas, Kafr El Sheikh, Egypt.",
+    "slogan": "From Egyptian production to global partnerships",
     "foundingDate": "2008",
-    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
-    "factoryName": "Site de production de poisson AZAFCO",
-    "factoryAlternateName": "Site de production AZAFCO",
-    "websiteName": "AZAFCO International – Exportateur de poisson frais d'Égypte",
-    "websiteDescription": "Site officiel d'AZAFCO International, transformateur et exportateur égyptien de poisson frais basé à Kafr El Sheikh. Spécifications produits et demandes de devis B2B.",
-    "productGroupName": "Produits de poisson frais AZAFCO",
-    "productGroupDesc": "Produits de poisson frais premium d'Égypte – tilapia, bar, mulet, silure et plus. Tailles personnalisées disponibles.",
-    "catalogName": "Catalogue de poisson frais AZAFCO",
-    "catalogDesc": "Gamme complète de poisson frais premium pour exportation en gros depuis l'Égypte. Plus de 8 variétés, tailles personnalisées, commandes flexibles.",
-    "offerDesc": "Contactez-nous pour des prix de gros B2B compétitifs. Horaires : du samedi au jeudi, 8h00–17h00 (heure du Caire).",
-    "priceRange": "Prix de gros compétitifs",
-    "freshFishCategory": "Poisson frais",
-    "freshwater": "Eau douce",
-    "freshwaterDesc": "Tilapia, poisson-chat africain, bayad, carpe commune, carpe miroir, amour blanc, carpe argentée",
-    "saltwater": "Eau salée",
-    "saltwaterDesc": "Bar, daurade royale, maigre, mulet cabot, mulet porc, anguille européenne",
-    "restaurantHotelSupply": "Approvisionnement restaurants et hôtels",
-    "home": "Accueil",
-    "products": "Produits",
-    "about": "À propos",
+    "commercialRegisterLabel": "Commercial register",
+    "factoryName": "AZAFCO International fish processing plant",
+    "factoryAlternateName": "AZAFCO fish plant, Motobas",
+    "factoryDescription": "Fish processing plant of AZAFCO International in Motobas, Kafr El Sheikh: grading, packing and dispatch of fresh fish for export.",
+    "websiteName": "AZAFCO International",
+    "websiteDescription": "Official website of AZAFCO International: fresh Egyptian fish for importers, distributors and foodservice buyers, with species specifications and partnership contacts.",
+    "productGroupName": "AZAFCO International fresh fish",
+    "productGroupDesc": "Fresh fish from Egypt: tilapia, sea bass, grey mullet, catfish and other species. Weight grade and packing confirmed per order.",
+    "catalogName": "AZAFCO International fresh fish catalogue",
+    "catalogDesc": "Fresh fish for wholesale export from Egypt: 12 main varieties. Weight grade and packing confirmed per order; other species supplied on request.",
+    "offerDesc": "Tell us the specification; we will review supply and commercial terms. Office hours Sat–Thu 8:00–17:00 (Cairo time).",
+    "priceRange": "Prices confirmed per order",
+    "freshFishCategory": "Fresh fish",
+    "freshwater": "Freshwater fish",
+    "freshwaterDesc": "Tilapia, catfish, bayad catfish, common carp, mirror carp, grass carp, silver carp",
+    "saltwater": "Marine and brackish-water fish",
+    "saltwaterDesc": "Sea bass, sea bream, meagre, grey mullet, thinlip mullet",
+    "restaurantHotelSupply": "Foodservice supply",
+    "home": "Home",
+    "products": "Products",
+    "about": "About us",
     "contact": "Contact",
-    "markets": "Marchés",
-    "media": "Médias",
-    "certificates": "Certificats",
+    "markets": "Markets",
+    "media": "Media",
+    "certificates": "Certificates",
     "openingHours": "Sa-Th 08:00-17:00",
-    "paymentAccepted": "Virement bancaire, lettre de crédit (L/C), transfert SWIFT",
-    "currenciesAccepted": "USD, EGP, AED, SAR, EUR",
-    "knowsAbout": [
-        "Exportation de poisson frais",
-        "Conditionnement de poisson",
-        "Tilapia en gros",
-        "Exportation de bar",
-        "Mulet frais",
-        "Transformation de poisson",
-        "Approvisionnement B2B poisson",
-        "Poisson égyptien",
-        "Poisson du Nil",
-        "Poisson méditerranéen"
+    "contactManagement": "Management, direct on WhatsApp (fast deals)",
+    "contactExport": "Export team (details and documents)",
+    "certificationBody": "TÜV AUSTRIA",
+    "credentialCategory": "ISO certification",
+    "credentials": [
+        {
+            "name": "ISO 9001:2015",
+            "description": "Quality management system"
+        },
+        {
+            "name": "ISO 14001:2015",
+            "description": "Environmental management system"
+        },
+        {
+            "name": "ISO 45001:2018",
+            "description": "Occupational health and safety management system"
+        }
     ],
-    "speakableName": "AZAFCO International – Exportation de poisson frais",
+    "knowsAbout": [
+        "Fresh fish export",
+        "Fish farming",
+        "Fish grading and packing",
+        "Cold chain logistics",
+        "Wholesale fish supply",
+        "Tilapia",
+        "Sea bass",
+        "Grey mullet",
+        "Egyptian aquaculture"
+    ],
+    "speakableName": "AZAFCO International | Fresh fish export",
     "services": {
         "tilapia": {
-            "name": "Exportation de tilapia frais",
-            "description": "Tilapia du Nil premium pour grossistes et exportation internationale"
+            "name": "Fresh tilapia supply",
+            "description": "Fresh tilapia for wholesale and export"
         },
         "seaBass": {
-            "name": "Approvisionnement en bar",
-            "description": "Bar méditerranéen frais pour marchés internationaux"
+            "name": "Fresh sea bass supply",
+            "description": "Fresh sea bass for wholesale and export"
         },
         "mullet": {
-            "name": "Exportation de mulet",
-            "description": "Mulet frais pour grossistes et restaurants"
+            "name": "Fresh grey mullet supply",
+            "description": "Fresh grey mullet for wholesale and export"
         }
     }
 }

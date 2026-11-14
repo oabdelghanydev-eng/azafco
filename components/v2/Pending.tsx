@@ -27,7 +27,7 @@ export default function Pending({ label, block = false, className }: PendingProp
         <Tag
             data-pending=""
             className={cn(
-                'border border-dashed border-[#B45309] bg-[#FFFBEB] text-[#7C2D12] text-caption font-medium rounded-control',
+                'border border-dashed border-pending-border bg-pending-bg text-pending-ink text-caption font-medium rounded-control',
                 block ? 'flex w-full items-start gap-2 p-4' : 'inline-flex items-center gap-1.5 px-2 py-0.5 align-middle',
                 className,
             )}

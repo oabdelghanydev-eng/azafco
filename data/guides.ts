@@ -15,7 +15,7 @@ export const guides: Guide[] = [
         slug: 'importing-fresh-fish-from-egypt',
         translationKey: 'importing',
         datePublished: '2026-10-31',
-        lastReviewed: '2026-10-31',
+        lastReviewed: '2026-11-14',
     },
 ];
 
@@ -30,9 +30,16 @@ export const getGuideBySlug = (slug: string) => guides.find((guide) => guide.slu
 /**
  * Fresh or chilled whole fish, heading 0302 (fillets are 0304, frozen fish 0303).
  * HS = WCO Harmonized System 2022 (6 digits, same in every country).
- * CN = EU Combined Nomenclature (8 digits), checked in EU TARIC on 2026-10-31.
+ * CN = EU Combined Nomenclature (8 digits), checked in EU TARIC on 2026-11-14:
+ *   0302 71 00 tilapias (Oreochromis spp.) · 0302 72 00 catfish (Clarias spp. …)
+ *   0302 73 00 carp (Cyprinus spp., Ctenopharyngodon idellus, Hypophthalmichthys spp. …)
+ *   0302 84 10 European sea bass (Dicentrarchus labrax) · 0302 85 30 gilt-head sea bream (Sparus aurata)
+ *   0302 89 10 other freshwater fish · 0302 89 90 other fish.
+ * Bagrus bajad (Bagridae) is not one of the catfish genera named in 0302.72, and
+ * mullets and meagre are not named in any subheading, so they fall under 0302.89.
  * Species identities: docs/reports/species-identification.md.
  * productKey = Product.translationKey in data/products.ts (used to link the species page).
+ * One row per species shown on the site (the 12 main species, in catalogue order).
  */
 export interface TariffRow {
     productKey: string;
@@ -45,13 +52,17 @@ export interface TariffRow {
 
 export const importingTariffRows: TariffRow[] = [
     { productKey: 'tilapia', scientificName: 'Oreochromis niloticus', hs: '0302.71', cn: '0302 71 00' },
-    { productKey: 'sea_bass', scientificName: 'Dicentrarchus labrax', hs: '0302.84', cn: '0302 84 10' },
-    { productKey: 'mullet', scientificName: 'Mugil cephalus', hs: '0302.89', cn: '0302 89 90', note: 'other_fish' },
-    { productKey: 'buni', scientificName: 'Labeobarbus bynni', hs: '0302.89', cn: '0302 89 10', note: 'buni' },
-    { productKey: 'mubarakah', scientificName: 'Cyprinus carpio', hs: '0302.73', cn: '0302 73 00' },
     { productKey: 'catfish', scientificName: 'Clarias gariepinus', hs: '0302.72', cn: '0302 72 00' },
+    { productKey: 'bayad_catfish', scientificName: 'Bagrus bajad', hs: '0302.89', cn: '0302 89 10', note: 'freshwater_other' },
+    { productKey: 'mubarakah', scientificName: 'Cyprinus carpio', hs: '0302.73', cn: '0302 73 00' },
+    { productKey: 'mirror_carp', scientificName: 'Cyprinus carpio', hs: '0302.73', cn: '0302 73 00' },
+    { productKey: 'grass_carp', scientificName: 'Ctenopharyngodon idella', hs: '0302.73', cn: '0302 73 00' },
+    { productKey: 'silver_carp', scientificName: 'Hypophthalmichthys molitrix', hs: '0302.73', cn: '0302 73 00' },
+    { productKey: 'sea_bass', scientificName: 'Dicentrarchus labrax', hs: '0302.84', cn: '0302 84 10' },
+    { productKey: 'sea_bream', scientificName: 'Sparus aurata', hs: '0302.85', cn: '0302 85 30' },
+    { productKey: 'mullet', scientificName: 'Mugil cephalus', hs: '0302.89', cn: '0302 89 90', note: 'other_fish' },
+    { productKey: 'thinlip_mullet', scientificName: 'Chelon ramada', hs: '0302.89', cn: '0302 89 90', note: 'other_fish' },
     { productKey: 'lout', scientificName: 'Argyrosomus regius', hs: '0302.89', cn: '0302 89 90', note: 'other_fish' },
-    { productKey: 'eels', scientificName: 'Anguilla anguilla', hs: '0302.74', cn: '0302 74 00', note: 'eel' },
 ];
 
 /** Documents section: order on the page, with the sources that back each item. */
@@ -59,11 +70,10 @@ export const importingDocuments: { id: string; sources: string[] }[] = [
     { id: 'invoice', sources: [] },
     { id: 'packing_list', sources: [] },
     { id: 'health_certificate', sources: ['reg_2020_2235', 'reg_2021_405', 'reg_2026_2228', 'establishments', 'egypt_eu_access'] },
-    { id: 'origin', sources: ['a2m_egypt', 'a2m_eur1'] },
+    { id: 'origin', sources: ['a2m_egypt'] },
     { id: 'catch', sources: ['reg_1005_2008', 'catch_it'] },
     { id: 'ched', sources: ['reg_2017_625', 'traces'] },
     { id: 'labelling', sources: ['reg_1379_2013'] },
-    { id: 'cites', sources: ['cites_eel', 'eprs_eel'] },
 ];
 
 export interface GuideSource {
@@ -142,12 +152,6 @@ export const importingSources: GuideSource[] = [
         url: 'https://trade.ec.europa.eu/access-to-markets/en/content/eu-egypt-association-agreement',
     },
     {
-        id: 'a2m_eur1',
-        title: 'Movement Certificate EUR.1 or EUR-MED',
-        publisher: 'European Commission, Access2Markets',
-        url: 'https://trade.ec.europa.eu/access-to-markets/en/roo-explain-term/origin/ES/destination/EG/term/movementCertificate',
-    },
-    {
         id: 'reg_1379_2013',
         title: 'Regulation (EU) No 1379/2013, Article 35 (consumer information for fishery and aquaculture products)',
         publisher: 'EUR-Lex',
@@ -158,18 +162,6 @@ export const importingSources: GuideSource[] = [
         title: 'Regulation (EC) No 853/2004, Annex III, Section VIII, Chapters VII and VIII (storage and transport of fishery products)',
         publisher: 'EUR-Lex',
         url: 'https://eur-lex.europa.eu/eli/reg/2004/853/oj/eng',
-    },
-    {
-        id: 'cites_eel',
-        title: 'Eel (CITES Appendix II; trade of European eel outside the EU prohibited since 2010)',
-        publisher: 'European Commission, DG MARE',
-        url: 'https://oceans-and-fisheries.ec.europa.eu/ocean-health/eel_en',
-    },
-    {
-        id: 'eprs_eel',
-        title: 'Addressing the critical state of European eel stocks (EPRS briefing, 2024)',
-        publisher: 'European Parliamentary Research Service',
-        url: 'https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2024)762306',
     },
     {
         id: 'egypt_eu_access',

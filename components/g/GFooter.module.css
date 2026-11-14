@@ -1,20 +1,21 @@
-/* Design G footer ("ice letters"): effects that are awkward in utilities */
+/* Design G footer ("ice letters"): effects that are awkward in utilities.
+   Colours come from the Tailwind theme (gold, navy-900), never hex. */
 
 /* Contact rows: subtle wash, title turns gold, arrow fills gold and nudges toward the reading end */
 .row {
     transition: background-color 0.2s;
 }
 .row:hover {
-    background-color: rgba(255, 255, 255, 0.035);
+    background-color: rgb(255 255 255 / 0.035);
 }
 .go {
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
 .row:hover .go,
 .row:focus-visible .go {
-    background: #f7b500;
-    border-color: #f7b500;
-    color: #001b47;
+    background: theme('colors.gold.DEFAULT');
+    border-color: theme('colors.gold.DEFAULT');
+    color: theme('colors.navy.900');
     transform: translateX(4px);
 }
 :global([dir='rtl']) .row:hover .go,
@@ -23,7 +24,7 @@
 }
 .row:hover .title,
 .row:focus-visible .title {
-    color: #f7b500;
+    color: theme('colors.gold.DEFAULT');
 }
 .title {
     transition: color 0.2s;
@@ -31,27 +32,27 @@
 
 /* Photo fade: from navy at the bottom (phone), from navy on the text side (desktop) */
 .fade {
-    background: linear-gradient(180deg, rgba(0, 27, 71, 0) 0%, rgba(0, 27, 71, 0.45) 50%, #001b47 100%);
+    background: linear-gradient(180deg, theme('colors.navy.900 / 0%') 0%, theme('colors.navy.900 / 45%') 50%, theme('colors.navy.900') 100%);
 }
 @media (min-width: 1024px) {
     .fade {
         background: linear-gradient(
             to right,
-            #001b47 0%,
-            rgba(0, 27, 71, 0.88) 14%,
-            rgba(0, 27, 71, 0.5) 42%,
-            rgba(0, 27, 71, 0.12) 78%,
-            rgba(0, 27, 71, 0) 100%
+            theme('colors.navy.900') 0%,
+            theme('colors.navy.900 / 88%') 14%,
+            theme('colors.navy.900 / 50%') 42%,
+            theme('colors.navy.900 / 12%') 78%,
+            theme('colors.navy.900 / 0%') 100%
         );
     }
     :global([dir='rtl']) .fade {
         background: linear-gradient(
             to left,
-            #001b47 0%,
-            rgba(0, 27, 71, 0.88) 14%,
-            rgba(0, 27, 71, 0.5) 42%,
-            rgba(0, 27, 71, 0.12) 78%,
-            rgba(0, 27, 71, 0) 100%
+            theme('colors.navy.900') 0%,
+            theme('colors.navy.900 / 88%') 14%,
+            theme('colors.navy.900 / 50%') 42%,
+            theme('colors.navy.900 / 12%') 78%,
+            theme('colors.navy.900 / 0%') 100%
         );
     }
 }

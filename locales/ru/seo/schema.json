@@ -1,69 +1,84 @@
 {
-    "companyName": "AZAFCO International for Investment and Development",
+    "companyName": "AZAFCO International",
+    "legalName": "AZAFCO International for Investment and Development S.A.E.",
     "alternateName": "AZAFCO International",
     "alternateNames": [
-        "AZAFCO International",
         "AZAFCO",
+        "ازافكو العالمية",
         "ازافكو",
-        "EZAFCO",
-        "Azafco Египет",
-        "AZAFCO Fish"
+        "EZAFCO"
     ],
-    "description": "AZAFCO International for Investment and Development S.A.E. — египетская компания, которая перерабатывает, упаковывает и экспортирует свежую рыбу для B2B-покупателей (импортёров, оптовиков и дистрибьюторов). Перерабатывающее предприятие в Мотобасе, мухафаза Кафр-эш-Шейх, Египет.",
-    "slogan": "Премиальная свежая рыба из Египта по всему миру",
+    "description": "AZAFCO International is an Egyptian company that farms and sources fresh fish, then grades, packs and exports it for importers, distributors and foodservice buyers in {countries}+ markets. Processing plant in Motobas, Kafr El Sheikh, Egypt.",
+    "slogan": "From Egyptian production to global partnerships",
     "foundingDate": "2008",
-    "founder": "Хадж Мохамед Абдулла Аль-Кувейтихи",
-    "factoryName": "Производственный комплекс AZAFCO",
-    "factoryAlternateName": "Производство AZAFCO",
-    "websiteName": "AZAFCO International – экспортёр свежей рыбы из Египта",
-    "websiteDescription": "Официальный сайт AZAFCO International — египетского переработчика и экспортёра свежей рыбы из Кафр-эш-Шейха. Спецификации продукции и B2B-запросы коммерческих предложений.",
-    "productGroupName": "Свежая рыба AZAFCO",
-    "productGroupDesc": "Премиальные продукты свежей рыбы из Египта – тилапия, сибас, кефаль, сом и более. Индивидуальные размеры доступны.",
-    "catalogName": "Каталог свежей рыбы AZAFCO",
-    "catalogDesc": "Полный ассортимент премиальной свежей рыбы для оптового экспорта из Египта. Более 8 видов, индивидуальные размеры, гибкие заказы.",
-    "offerDesc": "Свяжитесь с нами для конкурентных оптовых B2B цен. Часы работы: сб–чт 8:00–17:00 (по Каиру).",
-    "priceRange": "Конкурентные оптовые цены",
-    "freshFishCategory": "Свежая рыба",
-    "freshwater": "Пресноводная",
-    "freshwaterDesc": "Тилапия, клариевый сом, баяд, карп, зеркальный карп, белый амур, толстолобик",
-    "saltwater": "Морская",
-    "saltwaterDesc": "Сибас, дорада, горбыль, кефаль-лобан, тонкогубая кефаль, европейский угорь",
-    "restaurantHotelSupply": "Поставки для ресторанов и гостиниц",
-    "home": "Главная",
-    "products": "Продукция",
-    "about": "О компании",
-    "contact": "Контакты",
-    "markets": "Рынки",
-    "media": "Медиа",
-    "certificates": "Сертификаты",
+    "commercialRegisterLabel": "Commercial register",
+    "factoryName": "AZAFCO International fish processing plant",
+    "factoryAlternateName": "AZAFCO fish plant, Motobas",
+    "factoryDescription": "Fish processing plant of AZAFCO International in Motobas, Kafr El Sheikh: grading, packing and dispatch of fresh fish for export.",
+    "websiteName": "AZAFCO International",
+    "websiteDescription": "Official website of AZAFCO International: fresh Egyptian fish for importers, distributors and foodservice buyers, with species specifications and partnership contacts.",
+    "productGroupName": "AZAFCO International fresh fish",
+    "productGroupDesc": "Fresh fish from Egypt: tilapia, sea bass, grey mullet, catfish and other species. Weight grade and packing confirmed per order.",
+    "catalogName": "AZAFCO International fresh fish catalogue",
+    "catalogDesc": "Fresh fish for wholesale export from Egypt: 12 main varieties. Weight grade and packing confirmed per order; other species supplied on request.",
+    "offerDesc": "Tell us the specification; we will review supply and commercial terms. Office hours Sat–Thu 8:00–17:00 (Cairo time).",
+    "priceRange": "Prices confirmed per order",
+    "freshFishCategory": "Fresh fish",
+    "freshwater": "Freshwater fish",
+    "freshwaterDesc": "Tilapia, catfish, bayad catfish, common carp, mirror carp, grass carp, silver carp",
+    "saltwater": "Marine and brackish-water fish",
+    "saltwaterDesc": "Sea bass, sea bream, meagre, grey mullet, thinlip mullet",
+    "restaurantHotelSupply": "Foodservice supply",
+    "home": "Home",
+    "products": "Products",
+    "about": "About us",
+    "contact": "Contact",
+    "markets": "Markets",
+    "media": "Media",
+    "certificates": "Certificates",
     "openingHours": "Sa-Th 08:00-17:00",
-    "paymentAccepted": "Банковский перевод, аккредитив (L/C), SWIFT-перевод",
-    "currenciesAccepted": "USD, EGP, AED, SAR, EUR",
-    "knowsAbout": [
-        "Экспорт свежей рыбы",
-        "Упаковка рыбы",
-        "Оптовая тилапия",
-        "Экспорт сибаса",
-        "Кефаль свежая",
-        "Переработка рыбы",
-        "B2B поставки рыбы",
-        "Египетская рыба",
-        "Нильская рыба",
-        "Средиземноморская рыба"
+    "contactManagement": "Management, direct on WhatsApp (fast deals)",
+    "contactExport": "Export team (details and documents)",
+    "certificationBody": "TÜV AUSTRIA",
+    "credentialCategory": "ISO certification",
+    "credentials": [
+        {
+            "name": "ISO 9001:2015",
+            "description": "Quality management system"
+        },
+        {
+            "name": "ISO 14001:2015",
+            "description": "Environmental management system"
+        },
+        {
+            "name": "ISO 45001:2018",
+            "description": "Occupational health and safety management system"
+        }
     ],
-    "speakableName": "AZAFCO International – Экспорт свежей рыбы",
+    "knowsAbout": [
+        "Fresh fish export",
+        "Fish farming",
+        "Fish grading and packing",
+        "Cold chain logistics",
+        "Wholesale fish supply",
+        "Tilapia",
+        "Sea bass",
+        "Grey mullet",
+        "Egyptian aquaculture"
+    ],
+    "speakableName": "AZAFCO International | Fresh fish export",
     "services": {
         "tilapia": {
-            "name": "Экспорт свежей тилапии",
-            "description": "Премиальная нильская тилапия для оптовиков и международного экспорта"
+            "name": "Fresh tilapia supply",
+            "description": "Fresh tilapia for wholesale and export"
         },
         "seaBass": {
-            "name": "Поставка сибаса",
-            "description": "Свежий средиземноморский сибас для международных рынков"
+            "name": "Fresh sea bass supply",
+            "description": "Fresh sea bass for wholesale and export"
         },
         "mullet": {
-            "name": "Экспорт кефали",
-            "description": "Свежая кефаль для оптовиков и ресторанов"
+            "name": "Fresh grey mullet supply",
+            "description": "Fresh grey mullet for wholesale and export"
         }
     }
 }

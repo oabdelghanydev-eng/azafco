@@ -1,10 +1,11 @@
 'use client';
 
-import { useId, useMemo, useState, type ReactNode } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
-import Button from '@/components/v2/Button';
-import { CloseIcon } from '@/components/v2/icons';
-import { cn } from '@/lib/v2/cn';
+// Client file: import the primitives from their files, not the '@/components/ui' barrel
+import { Button } from '@/components/ui/Button';
+import { CloseIcon } from '@/components/ui/icons';
+import { cn, focusRing, typography } from '@/components/ui/tokens';
 
 export interface BrowserItem {
     slug: string;
@@ -49,8 +50,10 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
     const [category, setCategory] = useState<string | null>(null);
     const [form, setForm] = useState<string | null>(null);
     const showForms = forms.length > 1;
-    const searchId = useId();
-    const hintId = useId();
+    // Fixed ids (one browser per page). useId() hydrated with different values on
+    // the server and the client (the ancestor tree differs), flagged by the dev overlay.
+    const searchId = 'catalogue-search';
+    const hintId = 'catalogue-search-hint';
 
     const indexed = useMemo(() => items.map((it) => ({ ...it, haystack: normalise(it.terms.join(' ')) })), [items]);
     const q = normalise(query);
@@ -79,7 +82,9 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                 aria-pressed={pressed}
                 onClick={() => set(value)}
                 className={cn(
-                    'inline-flex min-h-11 items-center rounded-full border px-4 text-body-sm font-medium transition-colors duration-fast',
+                    'inline-flex min-h-tap items-center rounded-full border border-solid px-4 font-medium transition-colors duration-fast motion-reduce:transition-none',
+                    typography.small,
+                    focusRing,
                     pressed
                         ? 'border-navy bg-navy text-white'
                         : 'border-line-strong bg-white text-ink hover:border-navy hover:bg-navy-50',
@@ -92,10 +97,10 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
 
     return (
         <div>
-            <div role="search" className="rounded-card border border-line bg-surface-offwhite p-4 md:p-6">
+            <div role="search" className="rounded-card border border-solid border-line bg-surface-offwhite p-4 md:p-6">
                 <div className="grid gap-5 lg:grid-cols-12 lg:items-end">
                     <div className="lg:col-span-5">
-                        <label htmlFor={searchId} className="mb-2 block text-body-sm font-semibold text-ink">
+                        <label htmlFor={searchId} className={cn('mb-2 block font-semibold text-ink', typography.small)}>
                             {t('search_label')}
                         </label>
                         <div className="relative">
@@ -108,25 +113,32 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                                 aria-describedby={hintId}
                                 autoComplete="off"
                                 enterKeyHint="search"
-                                className="min-h-12 w-full rounded-control border border-line-strong bg-white px-4 pe-12 text-body text-ink placeholder:text-ink-subtle"
+                                className={cn(
+                                    'min-h-12 w-full rounded-control border border-solid border-line-strong bg-white px-4 pe-12 text-ink placeholder:text-ink-subtle',
+                                    typography.body,
+                                    focusRing,
+                                )}
                             />
                             {query ? (
                                 <button
                                     type="button"
                                     onClick={() => setQuery('')}
-                                    className="absolute end-1 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-control text-ink-muted hover:bg-surface-mist"
+                                    aria-label={t('clear_search')}
+                                    className={cn(
+                                        'absolute end-0.5 top-1/2 inline-grid h-tap w-tap -translate-y-1/2 place-items-center rounded-control text-ink-muted hover:bg-surface-mist',
+                                        focusRing,
+                                    )}
                                 >
-                                    <CloseIcon size={18} />
-                                    <span className="sr-only">{t('clear_search')}</span>
+                                    <CloseIcon size={20} />
                                 </button>
                             ) : null}
                         </div>
-                        <p id={hintId} className="mt-2 text-caption text-ink-subtle">
+                        <p id={hintId} className={cn('m-0 mt-2 text-ink-subtle', typography.caption)}>
                             {t('search_hint')}
                         </p>
                     </div>
                     <fieldset className="lg:col-span-7">
-                        <legend className="mb-2 text-body-sm font-semibold text-ink">{t('water_type')}</legend>
+                        <legend className={cn('mb-2 font-semibold text-ink', typography.small)}>{t('water_type')}</legend>
                         <div className="flex flex-wrap gap-2">
                             {chip(null, t('all'))}
                             {categories.map((c) => chip(c.value, c.label))}
@@ -134,7 +146,7 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                     </fieldset>
                     {showForms ? (
                         <fieldset className="lg:col-span-12">
-                            <legend className="mb-2 text-body-sm font-semibold text-ink">{t('form_type')}</legend>
+                            <legend className={cn('mb-2 font-semibold text-ink', typography.small)}>{t('form_type')}</legend>
                             <div className="flex flex-wrap gap-2">
                                 {chip(null, t('all_forms'), form, setForm)}
                                 {forms.map((f) => chip(f.value, f.label, form, setForm))}
@@ -144,33 +156,28 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                 </div>
             </div>
 
-            <div className="mt-6 flex min-h-11 flex-wrap items-center justify-between gap-3">
-                <p aria-live="polite" aria-atomic="true" className="text-body-sm text-ink-muted">
+            <div className="mt-6 flex min-h-tap flex-wrap items-center justify-between gap-3">
+                <p aria-live="polite" aria-atomic="true" className={cn('m-0 text-ink-muted', typography.small)}>
                     {t('result_count', { count: results.length, total: items.length })}
                     {activeLabel ? <span className="sr-only">{`, ${activeLabel}`}</span> : null}
                 </p>
                 {active ? (
-                    <button
-                        type="button"
-                        onClick={reset}
-                        className="inline-flex min-h-11 items-center gap-2 rounded-control px-3 text-body-sm font-semibold text-navy underline decoration-gold decoration-2 underline-offset-[6px] hover:bg-navy-50"
-                    >
-                        <CloseIcon size={16} />
+                    <Button variant="ghost" size="sm" onClick={reset} icon={<CloseIcon size={16} />}>
                         {t('reset')}
-                    </button>
+                    </Button>
                 ) : null}
             </div>
 
             {results.length > 0 ? (
-                <ul className="mt-4 divide-y divide-line border-y border-line">
+                <ul className="m-0 mt-4 list-none divide-y divide-line border-0 border-y border-solid border-line p-0">
                     {results.map((it) => (
                         <li key={it.slug}>{it.card}</li>
                     ))}
                 </ul>
             ) : (
                 <div className="mt-4 rounded-card border border-dashed border-line-strong bg-white px-6 py-12 text-center md:px-12">
-                    <h3 className="text-heading-lg text-navy">{t('empty_title')}</h3>
-                    <p className="mx-auto mt-3 max-w-prose-v2 text-body text-ink-muted">
+                    <h3 className={cn('m-0 text-navy', typography.h3)}>{t('empty_title')}</h3>
+                    <p className={cn('mx-auto mb-0 mt-3 max-w-prose-v2 text-ink-muted', typography.body)}>
                         {t('empty_text', { query: query.trim() || '—' })}
                     </p>
                     <div className="mt-6 flex justify-center">

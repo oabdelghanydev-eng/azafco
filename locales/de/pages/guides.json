@@ -1,135 +1,120 @@
 {
     "index": {
-        "meta_title": "Leitfäden für Fischimporteure",
-        "meta_description": "Praxisleitfäden für Importeure von Frischfisch aus Ägypten: HS-Codes, Dokumente für Export und EU-Einfuhr sowie Grundlagen der Kühlkette.",
-        "h1": "Leitfäden für Fischimporteure",
-        "subtitle": "Praxisnahe Leitfäden mit Quellen für Käufer, die Frischfisch aus Ägypten importieren.",
-        "breadcrumb": "Leitfäden",
-        "read_guide": "Leitfaden lesen",
-        "last_reviewed": "Zuletzt geprüft: {date}"
+        "meta_title": "Fish Import Guides for Buyers",
+        "meta_description": "Practical guides for importers buying fresh fish from Egypt: HS codes, export and EU import documents, and cold-chain basics. Sourced and reviewed.",
+        "h1": "Guides for Fish Importers",
+        "subtitle": "Practical, sourced guides for buyers who import fresh fish from Egypt.",
+        "breadcrumb": "Guides",
+        "read_guide": "Read the guide",
+        "last_reviewed": "Last reviewed: {date}"
     },
     "importing": {
-        "meta_title": "Frischfisch aus Ägypten: HS-Codes & Dokumente",
-        "meta_description": "HS-Codes für 8 ägyptische Fischarten, Dokumente für Frischfisch-Export und EU-Einfuhr (Gesundheitsbescheinigung, TRACES, Ursprung) und Kühlkette.",
-        "breadcrumb": "Frischfisch aus Ägypten importieren",
-        "card_summary": "HS-Codes für acht Arten, die Dokumente einer Frischfischsendung, die Schritte der EU-Einfuhr und Grundlagen der Kühlkette.",
-        "h1": "Frischfisch aus Ägypten importieren: HS-Codes, Dokumente und Kühlkette",
-        "intro": "Dieser Leitfaden richtet sich an Importeure, Großhändler und Distributoren, die frischen oder gekühlten ganzen Fisch aus Ägypten beziehen wollen. Er erklärt die Zolltarifnummern der Arten, die wir liefern, die Dokumente, die eine Sendung üblicherweise braucht, die zusätzlichen Schritte für die Europäische Union und die Grundlagen, um Fisch unterwegs kalt zu halten.",
-        "last_reviewed": "Zuletzt geprüft: {date}",
-        "disclaimer": "Dieser Leitfaden enthält allgemeine Informationen und ist keine Rechts- oder Zollberatung. Regeln ändern sich: Klären Sie die aktuellen Anforderungen vor dem Versand mit Ihrem Zollagenten und den Behörden des Einfuhrlandes.",
-        "toc_title": "Inhalt",
-        "source_label": "Quellen",
+        "meta_title": "Import fish from Egypt: HS codes and documents",
+        "meta_description": "HS codes for key fish species, the documents for fresh fish exports and EU import (health certificate, TRACES, origin) and cold-chain basics.",
+        "breadcrumb": "Importing fresh fish from Egypt",
+        "card_summary": "HS codes for key species, the documents a fresh fish shipment needs, EU import steps and cold-chain basics.",
+        "h1": "Importing fresh fish from Egypt: HS codes, documents and cold chain",
+        "intro": "This guide is for importers, wholesalers and distributors who are planning to buy fresh, chilled whole fish from Egypt. It covers the tariff codes for key species, the documents a shipment usually needs, the extra steps for the European Union and the basics of keeping fish cold on the way.",
+        "last_reviewed": "Last reviewed: {date}",
+        "disclaimer": "This guide gives general information. It is not legal or customs advice. Rules change, so confirm the current requirements with your customs broker and the authorities of the importing country before you ship.",
+        "toc_title": "In this guide",
+        "source_label": "Sources",
         "hs": {
-            "title": "HS-Codes für frischen ganzen Fisch",
-            "intro_1": "Frischer oder gekühlter ganzer Fisch wird in Position 0302 des Harmonisierten Systems (HS) der Weltzollorganisation eingereiht. Die ersten sechs Stellen sind weltweit gleich. Filets (Position 0304) und gefrorener Fisch (Position 0303) haben andere Codes.",
-            "intro_2": "Die Europäische Union ergänzt zwei Stellen zur achtstelligen Kombinierten Nomenklatur (KN), und die TARIC-Datenbank fügt zwei weitere für EU-Maßnahmen hinzu. Andere Länder ergänzen nach den ersten sechs Stellen eigene nationale Stellen.",
-            "table_caption": "Ganzer Fisch, frisch oder gekühlt, Position 0302",
-            "col_species": "Art",
-            "col_scientific": "Wissenschaftlicher Name",
-            "col_hs": "HS-Code (6 Stellen)",
-            "col_cn": "EU-KN-Code (8 Stellen)",
-            "col_notes": "Hinweise",
-            "species": {
-                "tilapia": "Niltilapia",
-                "sea_bass": "Europäischer Wolfsbarsch",
-                "mullet": "Großkopfmeeräsche",
-                "buni": "Bunni (Nilbarbe)",
-                "mubarakah": "Karpfen",
-                "catfish": "Afrikanischer Raubwels",
-                "lout": "Adlerfisch",
-                "eels": "Europäischer Aal"
-            },
+            "title": "HS codes for fresh whole fish",
+            "intro_1": "Fresh or chilled whole fish is classified under heading 0302 of the Harmonized System (HS), the nomenclature maintained by the World Customs Organization. The first six digits are the same in every country. Fillets (heading 0304) and frozen fish (heading 0303) have different codes.",
+            "intro_2": "The European Union adds two digits to make the eight-digit Combined Nomenclature (CN) code, and the TARIC database adds two more for EU measures. Other countries add their own national digits after the first six.",
+            "table_caption": "Fresh or chilled whole fish, heading 0302",
+            "col_species": "Species",
+            "col_scientific": "Scientific name",
+            "col_hs": "HS code (6 digits)",
+            "col_cn": "EU CN code (8 digits)",
+            "col_notes": "Notes",
             "notes": {
-                "other_fish": "Nicht in einer eigenen Unterposition genannt, daher 0302.89 „andere“.",
-                "buni": "Labeobarbus gehört nicht zu den in 0302.73 genannten Karpfengattungen, daher fällt Bunni unter 0302.89; in der EU gilt er als Süßwasserfisch (0302 89 10). Graskarpfen (Ctenopharyngodon idellus) wäre 0302.73.",
-                "eel": "In Anhang II des CITES gelistet. Der Handel mit Europäischem Aal mit Ländern außerhalb der EU ist seit 2010 verboten, daher kann er nicht in die EU eingeführt werden."
+                "other_fish": "Not named in a specific subheading, so it falls under 0302.89 \"Other\".",
+                "freshwater_other": "Its genus is not one of the catfish named in 0302.72, so it falls under 0302.89 \"Other\"; in the EU, as a freshwater fish, under CN 0302 89 10."
             },
-            "after": "Codes geprüft anhand der HS-Nomenklatur 2022 der Weltzollorganisation und des EU-TARIC am {date}. Für die endgültige Einreihung ist der Zollanmelder des Importeurs verantwortlich. Zollsätze und Präferenzen ändern sich: Prüfen Sie den Tarif des Einfuhrlandes (in der EU TARIC oder Access2Markets), bevor Sie einen Preis frei Bestimmungsort kalkulieren."
+            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant is responsible for the final classification. Duty rates and preferences change, so check the importing country's tariff (for the EU, TARIC or Access2Markets) before you calculate a landed price."
         },
         "docs": {
-            "title": "Dokumente für eine Frischfischsendung",
-            "intro": "Die genaue Liste hängt vom Bestimmungsland ab. Dies sind die üblichen Dokumente einer Frischfischsendung aus Ägypten, mit den EU-Regeln als Hauptbeispiel.",
+            "title": "Documents for a fresh fish shipment",
+            "intro": "The exact list depends on the destination. These are the documents usually involved in a fresh fish shipment from Egypt, with EU rules as the main example.",
             "items": {
                 "invoice": {
-                    "title": "Handelsrechnung",
-                    "text": "Stellt der Exporteur aus. Sie nennt Verkäufer und Käufer, Art, HS-Code, Menge, Nettogewicht, Wert, Währung und Incoterm. Der Zoll im Bestimmungsland bemisst damit die Abgaben."
+                    "title": "Commercial invoice",
+                    "text": "Issued by the exporter. It names the seller and buyer and lists the species, HS code, quantity, net weight, value, currency and Incoterm. Customs at destination uses it to assess duty."
                 },
                 "packing_list": {
-                    "title": "Packliste",
-                    "text": "Angaben je Karton: Anzahl der Kartons, Netto- und Bruttogewicht, Art und Größensortierung, Markierungen. Damit prüfen Airline, Grenzkontrollstelle und Käufer die Sendung."
+                    "title": "Packing list",
+                    "text": "Box-by-box detail: number of boxes, net and gross weight, species and weight grade and box marks. It lets the airline, the border post and the buyer check the consignment."
                 },
                 "health_certificate": {
-                    "title": "Amtliche Gesundheitsbescheinigung",
-                    "text": "Wird von der zuständigen Behörde des Ausfuhrlandes unterzeichnet. Für die EU begleitet die Musterbescheinigung FISH-CRUST-HC frischen Fisch für den menschlichen Verzehr; sie wird über TRACES ausgestellt. Die EU akzeptiert sie nur, wenn das Land für das Erzeugnis gelistet ist. Im Oktober 2026 hat die EU Ägypten für Flossenfische und Krebstiere aus Aquakultur gelistet (Durchführungsverordnung (EU) 2026/2228); außerdem muss der Betrieb, der den Fisch bearbeitet, auf der EU-Liste zugelassener Betriebe stehen. Andere Märkte haben eigene Muster."
+                    "title": "Official health certificate",
+                    "text": "Signed by the competent authority of the exporting country. For the EU, fresh fish for human consumption travels with the model certificate FISH-CRUST-HC, issued through TRACES. The EU accepts it only when the country is listed for the product. In October 2026 the EU listed Egypt for farmed (aquaculture) finfish and crustaceans (Implementing Regulation (EU) 2026/2228), and the establishment that prepares the fish must also be on the EU list of approved establishments. Other markets have their own certificate models."
                 },
                 "origin": {
-                    "title": "Ursprungszeugnis",
-                    "text": "Die meisten Käufer und Zollbehörden verlangen einen Nachweis des ägyptischen Ursprungs. In der EU können ägyptische Waren nach dem Assoziierungsabkommen EU–Ägypten eine Zollpräferenz erhalten, mit einer Warenverkehrsbescheinigung EUR.1 oder EUR-MED oder einer Ursprungserklärung. Die Regeln für Ihr Erzeugnis finden Sie in Access2Markets."
+                    "title": "Certificate of origin",
+                    "text": "Most buyers and customs authorities ask for proof that the fish is of Egyptian origin. For the EU, Egyptian goods can qualify for preferential tariff treatment under the EU–Egypt Association Agreement, with a EUR.1 or EUR-MED movement certificate or an origin declaration. Check the rules for your product in Access2Markets."
                 },
                 "catch": {
-                    "title": "Fangbescheinigung oder Aquakulturnachweise",
-                    "text": "Die EU verlangt nach ihrer IUU-Verordnung eine validierte Fangbescheinigung für wild gefangenen Meeresfisch. Ausgenommen sind Aquakulturerzeugnisse aus Brut oder Larven sowie frische Tilapia, Welse und Karpfen (0302 71 bis 0302 73) und anderer Süßwasserfisch (0302 89 10). Seit dem 10. Januar 2026 reichen EU-Importeure Fangbescheinigungen über das System CATCH IT ein. Bei Zuchtfisch sollten Sie vom Lieferanten Farm- und Chargenangaben verlangen, die jeden Karton seiner Herkunft zuordnen."
+                    "title": "Catch certificate or aquaculture records",
+                    "text": "The EU requires a validated catch certificate for wild-caught sea fish under its IUU Regulation. Aquaculture products obtained from fry or larvae are excluded, and so are fresh tilapia, catfish and carp (0302 71 to 0302 73) and other freshwater fish (0302 89 10). Since 10 January 2026, EU importers submit catch certificates through the CATCH IT system. For farmed fish, ask your supplier for the farm and batch details that link each box to its source."
                 },
                 "ched": {
-                    "title": "GGED-P-Voranmeldung (CHED-P) in TRACES",
-                    "text": "Vor Ankunft des Fisches meldet der EU-Importeur oder sein Vertreter die Sendung bei der gewählten Grenzkontrollstelle mit einem Gemeinsamen Gesundheitseingangsdokument für Erzeugnisse (GGED-P / CHED-P) in TRACES an. Die Grenzkontrollstelle führt Dokumenten-, Nämlichkeits- und Warenuntersuchungen durch, bevor die Sendung freigegeben wird."
+                    "title": "CHED-P pre-notification in TRACES",
+                    "text": "Before the fish arrives, the EU importer or their agent pre-notifies the consignment to the chosen border control post with a Common Health Entry Document for products (CHED-P) in TRACES. The border control post makes documentary, identity and physical checks before the fish is released."
                 },
                 "labelling": {
-                    "title": "Kennzeichnung für EU-Käufer",
-                    "text": "Fisch, der in der EU Verbrauchern oder Gemeinschaftsverpflegern angeboten wird, muss die Handelsbezeichnung und den wissenschaftlichen Namen, die Produktionsmethode (gefangen oder gezüchtet), das Fang- oder Erzeugungsgebiet und die weiteren Angaben nach Artikel 35 der Verordnung (EU) Nr. 1379/2013 tragen. Stimmen Sie die Kartonetiketten vor der ersten Lieferung mit Ihrem Lieferanten ab."
-                },
-                "cites": {
-                    "title": "CITES-Genehmigung (nur Europäischer Aal)",
-                    "text": "Der Europäische Aal steht in Anhang II des CITES, daher braucht die Ausfuhr eine CITES-Ausfuhrgenehmigung des Ausfuhrlandes. Die EU verbietet seit 2010 den Handel mit Europäischem Aal mit Ländern außerhalb der EU, daher kann er nicht in die EU eingeführt werden."
+                    "title": "Labelling for EU buyers",
+                    "text": "Fish offered to consumers or mass caterers in the EU must show the commercial and scientific name, the production method (caught or farmed), the catch or production area and the other information listed in Article 35 of Regulation (EU) No 1379/2013. Agree the box labels with your supplier before the first shipment."
                 }
             }
         },
         "cold": {
-            "title": "Grundlagen der Kühlkette",
-            "intro": "Frischfisch ist leicht verderblich, daher zählt die Temperatur in jedem Schritt von der Farm bis zum Lager des Käufers. Die EU-Hygienevorschriften verlangen, frische Fischereierzeugnisse bei Lagerung und Transport nahe der Temperatur schmelzenden Eises zu halten.",
+            "title": "Cold-chain basics",
+            "intro": "Fresh fish is perishable, so temperature control matters at every step from the farm to the buyer's warehouse. EU hygiene rules require fresh fishery products to be kept at a temperature approaching that of melting ice during storage and transport.",
             "items": {
                 "temperature": {
-                    "title": "Nahe 0 °C",
-                    "text": "In der Praxis arbeiten Exporteure mit einem Bereich von 0–4 °C. Der Fisch sollte so schnell wie möglich nach der Ernte gekühlt werden und beim Sortieren, Verpacken, am Flughafen und auf der letzten Meile kalt bleiben."
+                    "title": "Keep it close to 0°C",
+                    "text": "In practice, exporters work to a 0–4°C range. Fish should be chilled as soon as possible after harvest and stay chilled through grading, packing, the airport and the last mile."
                 },
                 "ice": {
-                    "title": "Eis",
-                    "text": "Ganzer Fisch wird mit Eis verpackt, damit er auf der Temperatur schmelzenden Eises bleibt. Bei der Lagerung so oft wie nötig nachfüllen."
+                    "title": "Ice",
+                    "text": "Whole fish is packed with ice so it stays at melting-ice temperature. Re-ice as often as needed during storage."
                 },
                 "boxes": {
-                    "title": "Isolierte EPS-Boxen",
-                    "text": "Boxen aus expandiertem Polystyrol (EPS) isolieren den Fisch und sind in der Luftfracht weit verbreitet. Verschließen und etikettieren Sie jede Box und prüfen Sie die Regeln Ihrer Airline für verderbliche Fracht."
+                    "title": "Insulated EPS boxes",
+                    "text": "Expanded polystyrene (EPS) boxes insulate the fish and are widely used for air freight. Seal and label every box, and check your airline's rules for perishable cargo."
                 },
                 "handovers": {
-                    "title": "Übergaben",
-                    "text": "Unterbrechungen der Kühlkette entstehen meist bei Übergaben: Lkw, Luftfrachtterminals und Grenzkontrollstelle. Planen Sie Buchungen so, dass der Fisch möglichst kurz ungekühlt bleibt, und führen Sie Temperaturaufzeichnungen."
+                    "title": "Handovers",
+                    "text": "Temperature breaks usually happen at handovers: trucks, airport cargo terminals and the border control post. Plan bookings so the fish spends as little time as possible out of the cold, and keep temperature records."
                 },
                 "arrival": {
-                    "title": "Bei Ankunft",
-                    "text": "Prüfen Sie die Fischtemperatur, das Eis und den Zustand der Boxen und dokumentieren Sie Mängel mit Fotos, bevor Sie den Empfang quittieren."
+                    "title": "On arrival",
+                    "text": "Check the fish temperature, the ice and the condition of the boxes, and record any problem with photos before you sign for the delivery."
                 }
             },
-            "azafco": "So versendet AZAFCO: Unser Fisch wird in EPS-Boxen verpackt, bei 0–4 °C gehalten und gekühlt per Luftfracht versandt."
+            "azafco": "How AZAFCO ships: whole fish packed on ice in EPS boxes, moved in our own refrigerated trucks, then by air or road freight."
         },
         "enquiry": {
-            "title": "So starten Sie eine Anfrage",
-            "intro": "Senden Sie uns die folgenden Angaben. Unser Exportteam antwortet mit Verfügbarkeit, einem Angebot und den Dokumenten, die Ihre Sendung braucht.",
+            "title": "How to send your requirements",
+            "intro": "Send us the details below. The export team reviews availability, terms and the documents your shipment needs.",
             "checklist": [
-                "Arten und Größensortierungen",
-                "Ungefähre Menge und Bestellhäufigkeit",
-                "Bestimmungsland und Zielflughafen",
-                "Bevorzugter Incoterm",
-                "Dokumente oder Zertifizierungen, die Ihr Markt verlangt",
-                "Kennzeichnungsanforderungen, wenn Sie in der EU an den Einzelhandel verkaufen"
+                "Species and weight grades",
+                "Approximate volume and how often you want to order",
+                "Destination country and arrival airport",
+                "Preferred Incoterm",
+                "Documents or certifications your market requires",
+                "Label requirements, if you sell to retail in the EU"
             ],
-            "cta_contact": "Anfrage senden",
-            "cta_eu": "Informationen für EU-Käufer",
-            "species_title": "Artenseiten",
-            "species_text": "Größen, Verpackung und Verfügbarkeit jeder Art, die wir liefern."
+            "cta_contact": "Send your requirements",
+            "cta_eu": "Information for EU buyers",
+            "species_title": "Our main species",
+            "species_text": "These are our main, most-requested species; we supply other species on request."
         },
         "sources": {
-            "title": "Quellen",
-            "intro": "Amtliche Quellen dieses Leitfadens, geprüft am {date}."
+            "title": "Sources",
+            "intro": "Official sources used for this guide, checked on {date}."
         }
     }
 }

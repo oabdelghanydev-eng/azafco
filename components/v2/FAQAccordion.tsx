@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/v2/cn';
-import { PlusIcon } from './icons';
+import { PlusIcon } from '@/components/ui/icons';
 
 export interface FAQItem {
     question: string;
@@ -42,7 +42,7 @@ export default function FAQAccordion({ items, defaultOpen, exclusiveName, classN
                         <span>{item.question}</span>
                         <span
                             aria-hidden="true"
-                            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-solid border-edge text-fg transition-[transform,background-color,border-color] duration-base group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-[#001B47] motion-reduce:transition-none"
+                            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-solid border-edge text-fg transition-[transform,background-color,border-color] duration-base group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-navy-900 motion-reduce:transition-none"
                         >
                             <PlusIcon size={18} />
                         </span>
