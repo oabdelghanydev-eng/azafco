@@ -127,14 +127,13 @@ export default function GFooter() {
                     {t(`secondary.${l.key}`)}
                 </Link>
             ))}
-            {/* Re-opens the consent banner (components/v2/ConsentBanner.tsx listens for [data-consent-open]) */}
-            <button
-                type="button"
-                data-consent-open=""
-                className={`inline-flex min-h-11 cursor-pointer items-center border-0 bg-transparent p-0 text-inherit transition-colors hover:text-gold ${FOCUS_DARK}`}
+            {/* Cookie settings live on the privacy page (#cookies), no banner */}
+            <Link
+                href={`${routes.privacy}#cookies`}
+                className={`inline-flex min-h-11 items-center transition-colors hover:text-gold ${FOCUS_DARK}`}
             >
                 {t('secondary.cookies')}
-            </button>
+            </Link>
         </nav>
     );
 

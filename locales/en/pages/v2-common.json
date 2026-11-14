@@ -104,10 +104,10 @@
         "documents_text": "For document questions, contact the export team."
     },
     "consent": {
-        "title": "Cookies and analytics",
-        "text": "With your consent, we use cookies from Google Analytics and Microsoft Clarity to see how the site is used and to measure our marketing. If you reject, they stay off.",
-        "accept": "Accept",
-        "reject": "Reject",
-        "privacy": "Privacy policy"
+        "title": "Analytics on this browser",
+        "on": "Analytics are on for this browser.",
+        "off": "Analytics are off for this browser.",
+        "enable": "Turn analytics on",
+        "disable": "Turn analytics off"
     }
 }

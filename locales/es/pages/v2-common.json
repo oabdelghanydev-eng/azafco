@@ -104,10 +104,10 @@
         "documents_text": "Para consultas sobre documentos, contacte con el equipo de exportación."
     },
     "consent": {
-        "title": "Cookies y analítica",
-        "text": "Con su consentimiento, usamos cookies de Google Analytics y Microsoft Clarity para ver cómo se utiliza el sitio y medir nuestro marketing. Si las rechaza, permanecen desactivadas.",
-        "accept": "Aceptar",
-        "reject": "Rechazar",
-        "privacy": "Política de privacidad"
+        "title": "Analítica en este navegador",
+        "on": "La analítica está activada en este navegador.",
+        "off": "La analítica está desactivada en este navegador.",
+        "enable": "Activar la analítica",
+        "disable": "Desactivar la analítica"
     }
 }

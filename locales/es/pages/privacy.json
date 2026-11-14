@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "El sitio instala una sola cookie propia (NEXT_LOCALE) para recordar su idioma. Google Analytics y Microsoft Clarity solo se activan si usted los acepta en el aviso de cookies; puede cambiar su elección en cualquier momento desde «Configuración de cookies», al pie de cada página. Google Maps puede instalar sus propias cookies cuando se carga un mapa. También puede bloquear o eliminar las cookies en la configuración de su navegador; el sitio sigue funcionando sin ellas."
+            "text": "El sitio usa una sola cookie propia (NEXT_LOCALE) para recordar su idioma. Google Analytics y Microsoft Clarity nos ayudan a entender cómo se usa el sitio; puede desactivarlos para este navegador más abajo. En la UE, el EEE, el Reino Unido y Suiza, Google Analytics no instala cookies a menos que usted active la analítica. Google Maps puede instalar sus propias cookies al cargar un mapa. También puede bloquear o borrar las cookies en la configuración de su navegador; el sitio funciona igual sin ellas."
         },
         "sharing": {
             "title": "Comunicación de datos",

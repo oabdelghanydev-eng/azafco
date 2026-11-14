@@ -104,10 +104,10 @@
         "documents_text": "Pour toute question sur les documents, contactez l’équipe export."
     },
     "consent": {
-        "title": "Cookies et mesure d’audience",
-        "text": "Avec votre accord, nous utilisons les cookies de Google Analytics et de Microsoft Clarity pour comprendre comment le site est utilisé et mesurer nos actions marketing. Si vous refusez, ils restent désactivés.",
-        "accept": "Accepter",
-        "reject": "Refuser",
-        "privacy": "Politique de confidentialité"
+        "title": "Mesure d’audience sur ce navigateur",
+        "on": "La mesure d’audience est activée sur ce navigateur.",
+        "off": "La mesure d’audience est désactivée sur ce navigateur.",
+        "enable": "Activer la mesure d’audience",
+        "disable": "Désactiver la mesure d’audience"
     }
 }

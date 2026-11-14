@@ -5,6 +5,7 @@ import { companyConfig } from '@/config/company.config';
 import { Container, PageHead, cardClass, cn, focusRing, typography } from '@/components/ui';
 import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import { routes } from '@/lib/v2/routes';
+import AnalyticsChoice from '@/components/v2/AnalyticsChoice';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -27,6 +28,8 @@ export default async function PrivacyPolicyPage({ params }: Props) {
     setRequestLocale(locale);
 
     const t = await getTranslations({ locale, namespace: 'privacy' });
+
+    const tv = await getTranslations({ locale, namespace: 'v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
     const format = await getFormatter({ locale });
     const date = format.dateTime(new Date(`${LAST_UPDATED}T00:00:00Z`), { dateStyle: 'long', timeZone: 'UTC' });
@@ -111,6 +114,18 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                                             </li>
                                         ))}
                                     </ul>
+                                ) : null}
+
+                                {id === 'cookies' ? (
+                                    <AnalyticsChoice
+                                        copy={{
+                                            title: tv('consent.title'),
+                                            on: tv('consent.on'),
+                                            off: tv('consent.off'),
+                                            enable: tv('consent.enable'),
+                                            disable: tv('consent.disable'),
+                                        }}
+                                    />
                                 ) : null}
 
                                 {id === 'analytics' ? (

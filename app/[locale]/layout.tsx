@@ -13,8 +13,8 @@ import GHeader from '@/components/g/GHeader';
 import GFooter from '@/components/g/GFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
 import RevealSections from '@/components/v2/RevealSections';
-import ConsentBanner, { type ConsentBannerCopy } from '@/components/v2/ConsentBanner';
-import { CONSENT_STORAGE_KEY, CONSENT_TYPES } from '@/components/v2/consent';
+import ClarityLoader from '@/components/v2/ClarityLoader';
+import { CONSENT_DENIED_REGIONS, CONSENT_STORAGE_KEY, CONSENT_TYPES } from '@/components/v2/consent';
 import { routes } from '@/lib/v2/routes';
 import '../globals.css';
 
@@ -140,18 +140,10 @@ export default async function RootLayout({
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const skipLabel = tv('skip_to_main');
 
-    // Consent banner copy (v2.consent). es/ru/de/fr fall back to English until translated.
-    const tConsent = tv.has('consent.title') ? tv : await getTranslations({ locale: 'en', namespace: 'v2' });
-    const consentCopy: ConsentBannerCopy = {
-        title: tConsent('consent.title'),
-        text: tConsent('consent.text'),
-        accept: tConsent('consent.accept'),
-        reject: tConsent('consent.reject'),
-        privacy: tConsent('consent.privacy'),
-    };
     const gaId = companyConfig.analytics.googleAnalyticsId;
     const consentDenied = JSON.stringify(Object.fromEntries(CONSENT_TYPES.map((k) => [k, 'denied'])));
     const consentGranted = JSON.stringify(Object.fromEntries(CONSENT_TYPES.map((k) => [k, 'granted'])));
+    const deniedRegions = JSON.stringify(CONSENT_DENIED_REGIONS);
 
     return (
         <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
@@ -194,17 +186,16 @@ export default async function RootLayout({
                     </div>
                     <MobileQuoteBar />
                     <RevealSections />
-                    {/* Cookie consent: GA Consent Mode update + Microsoft Clarity only after Accept */}
-                    <ConsentBanner copy={consentCopy} clarityId={companyConfig.analytics.clarityId} privacyHref={routes.privacy} />
+                    {/* Microsoft Clarity, unless turned off on the privacy page (no banner) */}
+                    <ClarityLoader clarityId={companyConfig.analytics.clarityId} />
                 </NextIntlClientProvider>
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}
                 {process.env.NODE_ENV === 'production' && <Analytics />}
 
-                {/* Google Analytics 4 with Consent Mode v2: every consent type defaults to 'denied'
-                    before the config call (cookieless pings only). A visitor who accepted earlier
-                    (localStorage, see components/v2/ConsentBanner.tsx) is granted again before the
-                    first hit. Microsoft Clarity is not loaded here: ConsentBanner injects it after Accept. */}
+                {/* Google Analytics 4 with Consent Mode v2, no banner: granted by default, denied by
+                    default in the EEA, the UK and Switzerland (cookieless pings there). A choice made on
+                    the privacy page (localStorage, components/v2/consent.ts) overrides both. */}
                 <Script
                     id="ga4-gtag"
                     strategy="afterInteractive"
@@ -218,11 +209,12 @@ export default async function RootLayout({
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             window.gtag = gtag;
-                            gtag('consent', 'default', Object.assign(${consentDenied}, { wait_for_update: 500 }));
+                            gtag('consent', 'default', ${consentGranted});
+                            gtag('consent', 'default', Object.assign(${consentDenied}, { region: ${deniedRegions} }));
                             try {
-                                if (localStorage.getItem('${CONSENT_STORAGE_KEY}') === 'granted') {
-                                    gtag('consent', 'update', ${consentGranted});
-                                }
+                                var c = localStorage.getItem('${CONSENT_STORAGE_KEY}');
+                                if (c === 'granted') gtag('consent', 'update', ${consentGranted});
+                                if (c === 'denied') gtag('consent', 'update', ${consentDenied});
                             } catch (e) {}
                             gtag('js', new Date());
                             gtag('config', '${gaId}');
