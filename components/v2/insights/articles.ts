@@ -1,15 +1,13 @@
 /**
  * Insights registry for site v2. Today every entry is a guide from
  * data/guides.ts (text in locales/<l>/pages/guides.json → guides_page.<key>).
- * News and press (company news, milestones, industry context) is not an article
- * type: it lives in data/news.ts and is listed on /insights/news. New article
- * types get added here with their own body component; categories without
- * entries are not listed as cards.
+ * Company news is not an article type: it lives in data/news.ts and is listed
+ * on /insights itself (section id="news"). New article types get added here
+ * with their own body component and an insights_v2.categories.<type> label.
  */
 import { guides, type Guide } from '@/data/guides';
 
-export type InsightCategory = 'importer_guide' | 'behind_operations' | 'company_news';
-export const INSIGHT_CATEGORIES: InsightCategory[] = ['importer_guide', 'behind_operations', 'company_news'];
+export type InsightCategory = 'importer_guide';
 
 export interface InsightEntry {
     slug: string;

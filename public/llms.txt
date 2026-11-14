@@ -1,6 +1,6 @@
 # AZAFCO International - Fresh Fish Export (Egypt)
 
-> Egyptian B2B company, founded in 2008. We farm and source fresh fish in Egypt, then inspect, grade, pack and export it to importers, wholesalers and distributors in 7+ markets across the Middle East and beyond.
+> Egyptian B2B company, founded in 2008 in Kafr El Sheikh. We farm and source fresh fish, then wash, ice, grade, pack and inspect it at our plant in Motobas, and export it whole and fresh chilled to importers, wholesalers and distributors in 7+ markets across the Middle East and beyond.
 
 ## Company information
 - Name: AZAFCO International (ازافكو العالمية)
@@ -10,12 +10,16 @@
 - Commercial Register: No. 100776
 - Industry: Fresh fish farming, sourcing, packing and export (B2B)
 - Founded: 2008
-- Packing capacity: up to 2,500 t/month
+- Packing capacity: up to 2,500 t/month. A refrigerated truck carries 20 t, and on some days more than five leave our plant.
 - Location: Industrial Zone, Motobas, Kafr El Sheikh, Egypt
 - Website: https://azafco.com.eg (Arabic: /ar, English: /en; also /es, /ru, /de, /fr)
 
 ## What we do
-We farm and source fish, then inspect, wash, ice, grade, pack and export it fresh. Every stage is handled by AZAFCO, from the pond to the pallet, with our own refrigerated trucks, logistics and cold stores. B2B only (no retail). Specifications, packing, volumes, prices and shipping terms are confirmed per order.
+We farm and source fish, then wash, ice, grade, pack and inspect it at our plant in Motobas, and export it with our own refrigerated trucks, then air or road freight. Every stage is handled by AZAFCO, from the pond to the pallet, including logistics and our own cold stores. B2B only (no retail). We do not publish price lists: price, minimum quantity, delivery terms and transit time are confirmed in writing for each order.
+- Packing and shipping: https://azafco.com.eg/en/processing
+- Quality: https://azafco.com.eg/en/quality
+- How importers order (steps, FAQ): https://azafco.com.eg/en/for-importers
+- About the company (facts, milestones, the group's other businesses): https://azafco.com.eg/en/about
 
 ## Products (12 main species)
 All species: https://azafco.com.eg/en/products
@@ -31,20 +35,21 @@ All species: https://azafco.com.eg/en/products
 10. Silver carp (سلفر) - Hypophthalmichthys molitrix - https://azafco.com.eg/en/products/silver-carp
 11. Mirror carp (مبروكة) - Cyprinus carpio (mirror variety) - https://azafco.com.eg/en/products/mirror-carp
 12. Sea bream (دنيس) - Sparus aurata - https://azafco.com.eg/en/products/sea-bream
-These are our main, most-requested species; we supply other species on request. Weight grades and availability are confirmed per order with the export team.
+These are our main, most-requested species; we supply other species on request. All are sold whole and fresh chilled, packed on ice in EPS foam boxes. Indicative weight grades are published on the species pages that have them.
 
 ## Export markets (7+)
 Markets overview: https://azafco.com.eg/en/markets
-- Active, with the year we started: United Arab Emirates (2008), Kuwait (2009), Bahrain (2012), Lebanon (2015), Qatar (2024), Iraq (2025), Syria (2026)
+- Active, with the year we started: United Arab Emirates (2008), Kuwait (2009), Bahrain (2012), Lebanon (2015), Qatar (2024), Iraq (2025), Syria (2026). Kuwait is our largest export market.
 - Paused: Spain
 - Planned: Europe, Russia, United States
-We ship by air and road. Enquiries from other destinations are reviewed case by case.
+We ship by air and road.
 
 ## Quality
-We hold three ISO certificates, certified by TÜV AUSTRIA: ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018. Details: https://azafco.com.eg/en/quality
+We hold ISO certificates, certified by TÜV AUSTRIA: ISO 9001:2015 (quality management), ISO 14001:2015 (environmental management) and ISO 45001:2018 (occupational health and safety). These certify our management systems. The export team confirms the food-safety and health documents that travel with each shipment before the order. Every order is checked against the agreed specification before the boxes are closed. Details: https://azafco.com.eg/en/quality
 
 ## Guides for importers
-- Import fish from Egypt: HS codes and documents: https://azafco.com.eg/en/insights/importing-fresh-fish-from-egypt
+- Importer guide and company news: https://azafco.com.eg/en/insights
+- Importing fresh fish from Egypt: Gulf and Levant import rules, HS codes and documents: https://azafco.com.eg/en/insights/importing-fresh-fish-from-egypt
 
 ## Contact
 - Send your requirements: https://azafco.com.eg/en/requirements

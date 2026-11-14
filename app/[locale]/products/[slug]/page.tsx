@@ -2,47 +2,51 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
-    Badge,
     Breadcrumbs,
     Button,
-    Card,
-    DocumentIcon,
     PageHero,
     Section,
     SectionHeading,
     TextLink,
     cn,
-    isolateStandards,
     noBreakValue,
     typography,
 } from '@/components/ui';
-import FAQAccordion from '@/components/v2/FAQAccordion';
 import Pending from '@/components/v2/Pending';
-import SpecTable from '@/components/v2/SpecTable';
+import SpecTable, { type SpecRow } from '@/components/v2/SpecTable';
 import ProductContact from '@/components/v2/products/ProductContact';
 import { SpeciesEntry } from '@/components/v2/products/SpeciesRow';
 import {
+    bareName,
     baseUrl,
     getCatalogue,
     getRootT,
     getSpecView,
+    inlineName,
     jsonLd,
     pageMetadata,
     relatedProducts,
     toCatalogueProduct,
 } from '@/components/v2/products/catalogue';
-import { companyConfig } from '@/config/company.config';
 import { locales } from '@/i18n';
+import { importingTariffRows } from '@/data/guides';
+import { activeMarkets } from '@/data/markets';
 import { getProductBySlug, products } from '@/data/products';
-import { insightHref, productHref, routes } from '@/lib/v2/routes';
+import { insightHref, productHref, rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const TITLE_MAX = 60; // full <title> incl. the layout's " | AZAFCO" template
 const DESCRIPTION_MAX = 155;
-const CONTACT_ID = 'start-partnership';
-/** The importer guide with the HS codes (data/guides.ts) */
+const SPEC_ID = 'specifications';
+/** The importer guide with the HS / CN table (data/guides.ts) */
 const HS_GUIDE_SLUG = 'importing-fresh-fish-from-egypt';
+
+/** Bidi isolates / marks and the word joiner are for display only: strip them from JSON-LD strings. */
+const plain = (s: string) => s.replace(/[\u200e\u200f\u202a-\u202e\u2060\u2066-\u2069]/g, '');
+
+/** The seven active markets in the order every other page shows them: by first export year (UAE 2008 … Syria 2026). */
+const marketsByYear = [...activeMarkets].sort((a, b) => Number(a.since) - Number(b.since));
 
 // Only the 12 published slugs (data/products.ts `products`) are valid: eel is kept in
 // data but unpublished, so /products/eel 404s. Renamed slugs redirect in next.config.js.
@@ -59,14 +63,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const root = await getRootT(locale);
     const t = await getTranslations({ locale, namespace: 'catalogue_v2.detail' });
     const p = toCatalogueProduct(root, locale, product);
-    const values = { name: p.name, scientific: p.scientificName ?? '' };
 
     const template = (root.raw('metadata.site.title_template') ?? '%s') as string;
     const fits = (s: string) => template.replace('%s', s).length <= TITLE_MAX;
-    const long = t('meta_title', values);
-    const short = t('meta_title_short', values);
+    const titleValues = { name: inlineName(p.name, locale) };
+    const long = t('meta_title', titleValues);
+    const short = t('meta_title_short', titleValues);
     const title = fits(long) ? long : fits(short) ? short : p.name;
 
+    const values = { name: p.name, scientific: p.scientificName ?? '' };
     const descLong = p.scientificName ? t('meta_description', values) : '';
     const description = descLong && descLong.length <= DESCRIPTION_MAX ? descLong : t('meta_description_short', values);
 
@@ -88,18 +93,38 @@ export default async function ProductDetailPage({ params }: Props) {
 
     const t = await getTranslations({ locale, namespace: 'catalogue_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
+    const tm = await getTranslations({ locale, namespace: 'data.markets' });
     const root = await getRootT(locale);
     const catalogue = await getCatalogue(locale);
     const p = catalogue.find((c) => c.slug === slug)!;
     const related = relatedProducts(catalogue, slug, 3);
     const spec = getSpecView(root, locale, slug);
+    // HS / CN code from the guide's tariff table (data/guides.ts), so both pages show the same code;
+    // species that share the "Other" subheading 0302.89 also get the guide's note on why.
+    const tariff = importingTariffRows.find((r) => r.productKey === product.translationKey);
+    const tariffNoteKey = tariff?.note ? `guides_page.importing.hs.notes.${tariff.note}` : null;
+    const tariffNote = tariffNoteKey && root.has(tariffNoteKey) ? root(tariffNoteKey) : null;
     const name = p.name;
     const water = t(`water.${p.category}`);
     const note = t.has(`detail.notes.${slug}`) ? t(`detail.notes.${slug}`) : null;
 
+    // Arabic lists take the Arabic comma
+    const listSep = locale === 'ar' ? '، ' : ', ';
+    // The species line (data.products.<key>.description: Egyptian market name, water type) plus the grades if published.
+    // Origin, form and packing are in the H1 and the spec card, so they are not repeated here.
+    const descriptionKey = `data.products.${product.translationKey}.description`;
+    const summary = [
+        root.has(descriptionKey) ? root(descriptionKey) : null,
+        spec.grades.length ? t('detail.summary_grades', { grades: spec.grades.join(listSep) }) : null,
+    ]
+        .filter(Boolean)
+        .join(' ');
+    // "Also known as": only the names the species line does not already give
+    const summaryLower = summary.toLocaleLowerCase(locale);
+    const otherNames = p.altNames.filter((a) => !summaryLower.includes(a.toLocaleLowerCase(locale)));
+
     const localeUrl = `${baseUrl}/${locale}`;
     const pageUrl = `${localeUrl}${productHref(slug)}`;
-    const docsHref = `mailto:${companyConfig.contact.email}?subject=${encodeURIComponent(t('detail.docs_subject', { name }))}`;
 
     // No offers / price / rating / availability: AZAFCO publishes none.
     const productSchema = {
@@ -107,7 +132,7 @@ export default async function ProductDetailPage({ params }: Props) {
         '@type': 'Product',
         '@id': `${pageUrl}#product`,
         name,
-        description: [p.description, t('detail.meta_description_short', { name })].filter(Boolean).join(' '),
+        description: plain(summary),
         image: `${baseUrl}${p.image.src}`,
         url: pageUrl,
         category: t('schema.category'),
@@ -116,7 +141,14 @@ export default async function ProductDetailPage({ params }: Props) {
         additionalProperty: [
             ...(p.scientificName ? [{ '@type': 'PropertyValue', name: t('detail.scientific_name'), value: p.scientificName }] : []),
             { '@type': 'PropertyValue', name: t('detail.water_type'), value: water },
-            ...(spec.forms.length ? [{ '@type': 'PropertyValue', name: t('detail.form'), value: spec.forms.map((f) => f.label).join(', ') }] : []),
+            ...(spec.forms.length ? [{ '@type': 'PropertyValue', name: t('detail.form'), value: spec.forms.map((f) => f.label).join(listSep) }] : []),
+            ...(spec.grades.length ? [{ '@type': 'PropertyValue', name: t('detail.sizes'), value: plain(spec.grades.join(listSep)) }] : []),
+            ...(tariff
+                ? [
+                      { '@type': 'PropertyValue', propertyID: 'HS', name: 'HS', value: tariff.hs },
+                      { '@type': 'PropertyValue', propertyID: 'CN', name: 'CN', value: tariff.cn },
+                  ]
+                : []),
         ],
         brand: { '@type': 'Brand', name: 'AZAFCO International' },
         manufacturer: { '@id': `${baseUrl}/#organization` },
@@ -131,15 +163,55 @@ export default async function ProductDetailPage({ params }: Props) {
         ],
     };
 
-    const faq = [
+    const specRows: SpecRow[] = [
+        { label: t('detail.trade_name'), value: name },
         {
-            id: 'sizes',
-            question: t('detail.faq_sizes_q'),
-            answer: spec.grades.length ? t('detail.faq_sizes_a_listed') : t('detail.faq_sizes_a_none'),
+            label: t('detail.scientific_name'),
+            value: p.scientificName ? (
+                <i lang="la" dir="ltr">
+                    {p.scientificName}
+                </i>
+            ) : null,
         },
-        { id: 'packing', question: t('detail.faq_packing_q'), answer: t('detail.faq_packing_a') },
-        { id: 'price', question: t('detail.faq_price_q'), answer: t('detail.faq_price_a') },
+        { label: t('detail.origin'), value: t('detail.origin_value') },
+        { label: t('detail.packed_at'), value: t('detail.packed_at_value') },
+        { label: t('detail.transport'), value: t('detail.transport_value') },
+        { label: t('detail.water_type'), value: water },
+        { label: t('detail.form'), value: spec.forms.length ? spec.forms.map((f) => f.label).join(' · ') : null },
+        spec.grades.length
+            ? {
+                  label: t('detail.sizes'),
+                  value: (
+                      <ul className="m-0 list-none space-y-1 p-0">
+                          {spec.grades.map((g) => (
+                              <li key={g}>
+                                  <bdi>{noBreakValue(g)}</bdi>
+                              </li>
+                          ))}
+                      </ul>
+                  ),
+              }
+            : { label: t('card.grades_label'), value: t('card.grades_none') },
+        { label: t('detail.packaging'), value: spec.pack ?? null },
     ];
+    if (tariff) {
+        specRows.push({
+            label: t('detail.hs_code'),
+            value: (
+                <>
+                    <span className="block">
+                        <bdi dir="ltr">
+                            HS {tariff.hs} · CN {tariff.cn}
+                        </bdi>
+                    </span>
+                    {tariffNote ? <span className={cn('mt-1 block font-normal text-ink-muted', typography.small)}>{tariffNote}</span> : null}
+                    <TextLink href={insightHref(HS_GUIDE_SLUG)} dataAttrs={{ 'data-cta': 'product_hs_guide' }}>
+                        {t('detail.hs_guide')}
+                    </TextLink>
+                </>
+            ),
+        });
+    }
 
     return (
         <>
@@ -150,7 +222,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <PageHero
                 variant="split"
                 eyebrow={t('detail.eyebrow')}
-                title={name}
+                title={t('detail.h1', { name: bareName(name, locale) })}
                 intro={
                     <>
                         {p.scientificName ? (
@@ -160,82 +232,41 @@ export default async function ProductDetailPage({ params }: Props) {
                                 </span>
                             </p>
                         ) : null}
-                        {p.description ? <p className="m-0 mb-3 font-medium text-fg">{p.description}</p> : null}
-                        <p className="m-0">{t('detail.intro')}</p>
-                        {p.altNames.length > 0 ? (
+                        <p className="m-0 font-medium text-fg">{summary}</p>
+                        {otherNames.length > 0 ? (
                             <p className={cn('m-0 mt-4', typography.small)}>
                                 <span className="font-semibold text-fg">{t('detail.also_known_as')}: </span>
-                                {p.altNames.join(' · ')}
+                                {otherNames.join(' · ')}
                             </p>
                         ) : null}
-                        <ul className="m-0 mt-5 flex list-none flex-wrap gap-2 p-0">
-                            <li>
-                                <Badge tone="outline">{water}</Badge>
-                            </li>
-                            {spec.forms.map((f) => (
-                                <li key={f.kind}>
-                                    <Badge tone="outline">{f.label}</Badge>
-                                </li>
-                            ))}
-                        </ul>
                     </>
                 }
                 image={p.image}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.products }, { label: name }]} />}
                 actions={
                     <>
-                        <Button href={`#${CONTACT_ID}`} external size="lg" stretch="phone" arrow>
+                        <Button
+                            href={rfqHref({ product: slug, type: 'product' })}
+                            size="lg"
+                            stretch="phone"
+                            arrow
+                            dataAttrs={{ 'data-cta': 'product_hero_requirements' }}
+                        >
                             {t('detail.primary')}
                         </Button>
-                        <Button href="#specifications" external variant="outline" size="lg" stretch="phone">
+                        <Button href={`#${SPEC_ID}`} external variant="outline" size="lg" stretch="phone">
                             {t('detail.secondary')}
                         </Button>
                     </>
                 }
             />
 
-            {/* Spec card + weight grades, with the partnership card beside it */}
-            <Section variant="offwhite" labelledBy="specifications-title" id="specifications">
+            {/* Spec card, with the contact card beside it */}
+            <Section variant="offwhite" labelledBy="specifications-title" id={SPEC_ID}>
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-7">
-                        <SectionHeading id="specifications-title" eyebrow={t('detail.spec_eyebrow')} title={t('detail.spec_title')} intro={t('detail.spec_intro')} size="md" />
-                        <SpecTable
-                            caption={t('detail.spec_caption', { name })}
-                            rows={[
-                                { label: t('detail.trade_name'), value: name },
-                                {
-                                    label: t('detail.scientific_name'),
-                                    value: p.scientificName ? (
-                                        <i lang="la" dir="ltr">
-                                            {p.scientificName}
-                                        </i>
-                                    ) : null,
-                                },
-                                { label: t('detail.origin'), value: t('detail.origin_value') },
-                                { label: t('detail.packed_at'), value: t('detail.packed_at_value') },
-                                { label: t('detail.transport'), value: t('detail.transport_value') },
-                                { label: t('detail.water_type'), value: water },
-                                { label: t('detail.form'), value: spec.forms.length ? spec.forms.map((f) => f.label).join(' · ') : null },
-                                {
-                                    label: t('detail.sizes'),
-                                    value: spec.grades.length ? (
-                                        <ul className="m-0 list-none space-y-1 p-0">
-                                            {spec.grades.map((g) => (
-                                                <li key={g}>
-                                                    <bdi>{noBreakValue(g)}</bdi>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    ) : null,
-                                },
-                                { label: t('detail.packaging'), value: spec.pack ?? null },
-                            ]}
-                        />
-                        {/* Weight grades sit under the spec h2 (before the contact aside's h2) to keep the outline */}
-                        <Card padding="sm" className="mt-6">
-                            <h3 className={cn('m-0 text-navy', typography.h3)}>{t('detail.grading_title')}</h3>
-                            <p className={cn('m-0 mt-3 text-ink-muted', typography.small)}>{t('detail.grading_text')}</p>
-                        </Card>
+                        <SectionHeading id="specifications-title" eyebrow={t('detail.spec_eyebrow')} title={t('detail.spec_title')} size="md" />
+                        <SpecTable caption={t('detail.spec_caption', { name: bareName(name, locale) })} rows={specRows} />
                         {!p.scientificName ? (
                             <div className="mt-4">
                                 <Pending label={t('pending.species_id', { name })} />
@@ -249,33 +280,27 @@ export default async function ProductDetailPage({ params }: Props) {
                     </div>
 
                     <div className="lg:col-span-5">
-                        <ProductContact slug={slug} name={name} id={CONTACT_ID} />
+                        <ProductContact slug={slug} name={name} titleName={bareName(name, locale)} />
                     </div>
                 </div>
             </Section>
 
-            {/* Quality documents: the export team handles details and documents */}
-            <Section variant="white" labelledBy="packing-docs">
-                <Card as="article" padding="md" className="flex flex-col gap-6 md:flex-row md:items-start">
-                    <span className="flex h-tap w-tap shrink-0 items-center justify-center rounded-control bg-navy-50 text-navy">
-                        <DocumentIcon size={24} />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                        <h2 id="packing-docs" className={cn('v2-heading m-0', typography.h2Sm)}>
-                            {t('detail.docs_title')}
-                        </h2>
-                        <p className={cn('m-0 mt-4 max-w-prose-v2 text-ink-muted', typography.body)}>{isolateStandards(t('detail.docs_text'))}</p>
-                        <div className="mt-4 flex flex-wrap items-center gap-x-8">
-                            <TextLink href={docsHref} dataAttrs={{ 'data-cta': 'product_documents_email' }}>
-                                {t('detail.docs_email')}
-                            </TextLink>
-                            <TextLink href={routes.quality}>{t('detail.docs_link')}</TextLink>
-                            <TextLink href={insightHref(HS_GUIDE_SLUG)} dataAttrs={{ 'data-cta': 'product_hs_guide' }}>
-                                {t('detail.docs_guide')}
-                            </TextLink>
-                        </div>
-                    </div>
-                </Card>
+            {/* The seven active markets, each linking to its market page (same order as the home and /markets) */}
+            <Section variant="white" labelledBy="product-markets">
+                <SectionHeading
+                    id="product-markets"
+                    eyebrow={t('detail.markets_eyebrow')}
+                    title={t('detail.markets_title')}
+                    size="md"
+                    action={<TextLink href={routes.markets}>{t('detail.markets_link')}</TextLink>}
+                />
+                <ul className="m-0 flex list-none flex-wrap gap-x-8 gap-y-2 p-0">
+                    {marketsByYear.map((m) => (
+                        <li key={m.slug}>
+                            <TextLink href={`${routes.markets}/${m.slug}`}>{tm(`${m.translationKey}.country`)}</TextLink>
+                        </li>
+                    ))}
+                </ul>
             </Section>
 
             {/* Related products */}
@@ -295,16 +320,8 @@ export default async function ProductDetailPage({ params }: Props) {
                             </li>
                         ))}
                     </ul>
-                    <p className={cn('m-0 mt-10 border-0 border-s-2 border-solid border-gold ps-4 text-fg-muted', typography.body)}>{t('grid.more_species')}</p>
                 </Section>
             ) : null}
-
-            <Section variant={related.length > 0 ? 'white' : 'offwhite'} labelledBy="product-faq">
-                <div className="mx-auto max-w-3xl">
-                    <SectionHeading id="product-faq" title={t('detail.faq_title', { name })} size="md" />
-                    <FAQAccordion items={faq} exclusiveName={`faq-${slug}`} />
-                </div>
-            </Section>
             {/* The G footer closes the page with the WhatsApp (management) and email (export team) rows. */}
         </>
     );

@@ -1,7 +1,5 @@
 {
-    "name": "AZAFCO International",
     "fullName": "AZAFCO International for Investment and Development S.A.E.",
-    "description": "Entreprise égyptienne qui élève et achète du poisson frais, puis le calibre, le conditionne et l’exporte pour les importateurs, les distributeurs et les acheteurs de la restauration. Fondée en 2008.",
     "workingHours": "Du samedi au jeudi, de 8 h à 17 h (heure du Caire)",
     "workingHoursNote": "WhatsApp : ligne directe de la direction · pour conclure rapidement",
     "officialChannels": {
@@ -10,23 +8,10 @@
     },
     "addresses": {
         "main": {
-            "title": "Bureau principal",
             "address": "Mastora, à côté de l’Association caritative, El-Borollos, Kafr el-Cheikh, Égypte"
         },
         "factory": {
-            "title": "Usine",
             "address": "N° 120, secteur des aliments pour animaux, zone industrielle, Motobas, Kafr el-Cheikh, Égypte"
         }
-    },
-    "copyright": "AZAFCO International",
-    "privacyLink": "Politique de confidentialité",
-    "leadersSince": "Fondée en",
-    "tagline": "De la production en Égypte aux partenariats dans le monde",
-    "usps": {
-        "price": "Prix confirmés à chaque commande",
-        "quality": "Certifiés ISO 9001, 14001 et 45001 par TÜV AUSTRIA",
-        "flexibility": "Calibre et conditionnement convenus à chaque commande",
-        "availability": "Nos propres camions et entrepôts frigorifiques",
-        "service": "De l’étang à la palette, chaque étape assurée par AZAFCO"
     }
 }

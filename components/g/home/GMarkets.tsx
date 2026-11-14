@@ -135,7 +135,8 @@ function MarketsMap({ variant, label, origin, shortNames }: MapProps) {
     );
 }
 
-/** Home "markets" section (design G): seven active markets with a route map, planned markets below. */
+/** Home "markets" section (design G): seven active markets with a route map, planned markets below
+ * (Spain's paused status lives on /markets only). */
 export default async function GMarkets() {
     const t = await getTranslations('g_markets_v2');
 
@@ -198,7 +199,6 @@ export default async function GMarkets() {
                                 </li>
                             ))}
                         </ul>
-                        <p className={cn('m-0 mt-3.5 text-fg-muted', typography.caption)}>{t('paused')}</p>
                     </div>
                 </div>
 

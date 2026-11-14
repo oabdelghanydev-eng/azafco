@@ -1,7 +1,7 @@
 {
     "eyebrow": "Nos marchés",
     "title": "Le Moyen‑Orient et au‑delà",
-    "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan. Choisissez un marché pour voir son itinéraire.",
+    "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan. Choisissez un marché pour le voir sur la carte.",
     "since": "depuis {year}",
     "mapLabel": "Carte des itinéraires d’expédition de l’Égypte vers nos marchés",
     "origin": "Égypte · Motobas",
@@ -41,7 +41,6 @@
         "ru": "Russie",
         "us": "États-Unis"
     },
-    "paused": "Espagne : exportations suspendues",
     "pageLink": "Voir tous les marchés",
     "marketLink": "{name} : page du marché"
 }

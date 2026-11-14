@@ -5,9 +5,10 @@
     "nav": {
         "about": "Nosotros",
         "fish": "Pescado",
-        "chain": "Proceso",
+        "chain": "Envasado",
         "quality": "Calidad",
         "markets": "Mercados",
+        "importers": "Para importadores",
         "contact": "Contacto"
     },
     "lang_aria": "Idioma: {name}",

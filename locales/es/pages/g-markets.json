@@ -1,7 +1,7 @@
 {
     "eyebrow": "Nuestros mercados",
     "title": "Oriente Medio y más allá",
-    "intro": "Enviamos por aire y carretera a más de 7 mercados, con Europa como siguiente paso de nuestro plan. Elija un mercado para ver su ruta.",
+    "intro": "Enviamos por aire y carretera a más de 7 mercados, con Europa como siguiente paso de nuestros planes. Seleccione un mercado para verlo en el mapa.",
     "since": "desde {year}",
     "mapLabel": "Mapa de rutas de envío desde Egipto a nuestros mercados",
     "origin": "Egipto · Motobas",
@@ -41,7 +41,6 @@
         "ru": "Rusia",
         "us": "Estados Unidos"
     },
-    "paused": "España: exportaciones en pausa",
     "pageLink": "Ver todos los mercados",
     "marketLink": "{name}: página del mercado"
 }

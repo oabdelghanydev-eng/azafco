@@ -1,6 +1,5 @@
 // EN locale barrel: every namespace the site renders (one JSON file each).
-// Namespaces ending in _v2 (and common, v2) are also sent to the browser.
-import common from './common.json';
+// Only catalogue_v2.browser is sent to the browser (app/[locale]/layout.tsx); everything else is server-only.
 import privacyNs from './pages/privacy.json';
 import notFoundNs from './pages/not-found.json';
 import guidesPageNs from './pages/guides.json';
@@ -15,8 +14,6 @@ import gChainV2Ns from './pages/g-chain.json';
 import gQualityV2Ns from './pages/g-quality.json';
 import gMarketsV2Ns from './pages/g-markets.json';
 import aboutV2Ns from './pages/v2-about.json';
-import businessesV2Ns from './pages/v2-businesses.json';
-import seafoodV2Ns from './pages/v2-seafood.json';
 import catalogueV2Ns from './pages/v2-catalogue.json';
 import processingV2Ns from './pages/v2-processing.json';
 import qualityV2Ns from './pages/v2-quality.json';
@@ -33,7 +30,6 @@ import metadata from './seo/metadata.json';
 import schema from './seo/schema.json';
 
 const messages = {
-    common,
     privacy: privacyNs,
     not_found: notFoundNs,
     guides_page: guidesPageNs,
@@ -48,8 +44,6 @@ const messages = {
     g_quality_v2: gQualityV2Ns,
     g_markets_v2: gMarketsV2Ns,
     about_v2: aboutV2Ns,
-    businesses_v2: businessesV2Ns,
-    seafood_v2: seafoodV2Ns,
     catalogue_v2: catalogueV2Ns,
     processing_v2: processingV2Ns,
     quality_v2: qualityV2Ns,

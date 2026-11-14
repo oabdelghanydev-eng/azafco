@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Send your fresh fish requirements",
-        "description": "Send your fish requirements to AZAFCO International: species, weight grade, packing, quantity and destination. Prices are confirmed per order."
+        "description": "Send your fish requirements to AZAFCO International: species, weight grade, packing, quantity, destination and Incoterm, by email or WhatsApp."
     },
     "breadcrumb": "Send your requirements",
     "hero": {
@@ -13,16 +13,16 @@
         "corporate_title": "Corporate and partnership enquiries",
         "corporate_intro": "For partnerships, investment or other business topics. Write from your company email; no product details needed.",
         "documents_title": "Request documents",
-        "documents_intro": "Ask from your company email for product specifications or the company profile. We confirm what we can share for your request."
+        "documents_intro": "Ask from your company email for product specifications or the company profile."
     },
     "aside": {
         "title": "What happens after you write to us",
         "steps": [
             "The export team reviews your requirements against the specification and current availability.",
-            "We contact you to confirm the details and any open points.",
-            "Prices, quantity, packing and terms are confirmed in writing for each order."
+            "We confirm price, quantity, packing and terms with you in writing."
         ],
-        "no_promise": "Sending your requirements does not commit you or us to an order. Prices are confirmed per order.",
+        "hours": "Office hours: {hours}",
+        "no_promise": "Sending your requirements does not commit you or us to an order.",
         "prepare_title": "Helpful to have ready",
         "prepare": [
             "Species and weight grade",
@@ -31,12 +31,10 @@
             "Air or road freight, and arrival airport or border crossing",
             "Preferred Incoterm and payment terms",
             "Packing and labelling requirements"
-        ],
-        "attach_title": "Have a specification?",
-        "attach_text": "Attach your specification or packing sheet to the email if you have one."
+        ]
     },
     "switch": {
-        "to_corporate": "Not buying fish? <link>Send a corporate enquiry</link>",
+        "to_corporate": "For partnerships, investment or other topics: <link>Send a corporate enquiry</link>",
         "to_seafood": "Looking to buy fish? <link>Send your requirements instead</link>"
     },
     "request": {

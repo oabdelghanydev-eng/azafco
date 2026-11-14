@@ -5,31 +5,36 @@
     },
     "breadcrumb": "Quiénes somos",
     "hero": {
-        "eyebrow": "Sobre AZAFCO International",
-        "title": "Pescado egipcio que gestionamos nosotros, del estanque al palé",
-        "intro": "Desde nuestra fundación en 2008, criamos y compramos pescado en Egipto; después lo inspeccionamos, envasamos y exportamos fresco a importadores, distribuidores y compradores de hostelería y restauración de Oriente Medio y más allá.",
+        "eyebrow": "Sobre nosotros",
+        "title": "Sobre AZAFCO International: cría, compra, envasado y exportación de pescado en Egipto",
+        "intro": "Desde nuestra fundación en 2008, criamos y compramos pescado en Egipto; después lo lavamos, enhielamos, calibramos, envasamos e inspeccionamos, y lo exportamos fresco a importadores, distribuidores y compradores de hostelería y restauración de Oriente Medio y más allá.",
         "primary": "Iniciemos una colaboración",
         "secondary": "Escriba a la gerencia por WhatsApp",
-        "reassure": "Empiece con un mensaje: especie, cantidad y destino. Precios confirmados en cada pedido.",
         "image_alt": "Dos operarios tiran de una red de cerco llena de peces hacia la orilla de un estanque de tierra"
     },
-    "story": {
-        "eyebrow": "Nuestra historia",
-        "title": "Dedicados al pescado desde 2008",
-        "p1": "La empresa se fundó en 2008 en Kafr el-Sheikh, en el delta del Nilo (Egipto), y ese mismo año realizó sus primeras exportaciones de pescado fresco a Emiratos Árabes Unidos.",
-        "p2": "Hoy enviamos por aire y carretera a más de 7 mercados, con Europa como siguiente paso de nuestro plan. El pescado sigue siendo nuestra actividad principal; bajo la identidad de AZAFCO International, convive con nuestras actividades agrícolas, ganaderas y de inversión."
-    },
-    "facts": {
-        "founded_value": "2008",
-        "founded_label": "Año de fundación",
-        "capacity_value": "2500",
-        "capacity_label": "t/mes de capacidad de envasado",
-        "iso_value": "3",
-        "iso_label": "Certificados ISO, con certificación de TÜV AUSTRIA",
-        "iso_note": "ISO 9001:2015 · ISO 14001:2015 · ISO 45001:2018",
-        "iso_link": "Calidad y certificados",
-        "markets_value": "7+",
-        "markets_label": "mercados en Oriente Medio y más allá"
+    "glance": {
+        "eyebrow": "Datos de la empresa",
+        "title": "AZAFCO International en resumen",
+        "legal_label": "Razón social",
+        "founded_label": "Fundación",
+        "founded_value": "2008, en Kafr el-Sheikh (Egipto)",
+        "activity_label": "Actividad",
+        "activity_value": "Cría y compra pescado, y después lo envasa y lo exporta entero y fresco refrigerado.",
+        "species_label": "Especies",
+        "species_value": "12 especies principales: {species}. Otras especies bajo pedido.",
+        "capacity_label": "Capacidad de envasado",
+        "capacity_value": "Hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de la planta más de cinco.",
+        "plant_label": "Planta de envasado",
+        "office_label": "Oficina principal",
+        "markets_label": "Mercados activos (año de la primera exportación)",
+        "market_item": "{country} ({year})",
+        "market_largest": "{country} ({year}, mayor mercado de exportación)",
+        "certificates_label": "Certificados",
+        "certificates_value": "Certificados ISO expedidos por TÜV AUSTRIA.",
+        "contacts_label": "Contactos oficiales",
+        "email_label": "Equipo de exportación",
+        "whatsapp_label": "WhatsApp de la gerencia",
+        "quality_link": "Calidad y certificados"
     },
     "journey": {
         "eyebrow": "Nuestra trayectoria",
@@ -42,52 +47,26 @@
         "motobas": "Apertura de la nueva planta en la Zona Industrial de Motobas, Kafr el-Sheikh",
         "governor": "Visita del gobernador de Kafr el-Sheikh a nuestra planta de Motobas"
     },
-    "stages": {
-        "line": "Nos encargamos de cada etapa, del estanque al palé.",
-        "link": "Ver las cinco etapas"
-    },
     "businesses": {
         "eyebrow": "Nuestras áreas de negocio",
-        "title": "El pescado en el centro, junto a otras actividades",
-        "p1": "La cría, la compra, el envasado y la exportación de pescado fresco son nuestra actividad principal y el eje de este sitio web.",
-        "p2": "AZAFCO International también trabaja en agricultura, ganadería e inversión.",
+        "title": "El pescado es nuestra actividad principal",
+        "p2": "Además del pescado, AZAFCO International trabaja en otros tres ámbitos:",
+        "agri_title": "Agricultura",
+        "agri_text": "Tierras de cultivo con producción de frutas y hortalizas.",
+        "livestock_title": "Ganadería",
+        "livestock_text": "Explotaciones ganaderas en Egipto.",
+        "invest_title": "Inversiones",
         "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
-        "link_products": "Catálogo de productos",
-        "link_importers": "Para importadores",
-        "link_businesses": "Nuestras áreas de negocio",
-        "link_seafood": "Nuestro negocio de pescado"
+        "link_products": "Nuestro pescado"
     },
     "footprint": {
         "eyebrow": "Dónde trabajamos",
         "title": "Nuestra planta, camiones y cámaras frigoríficas",
-        "p1": "Nuestra planta de procesado y envasado de pescado está en la Zona Industrial de Motobas, Kafr el-Sheikh, en el delta del Nilo (Egipto). Aquí el pescado se recibe, se lava, se enhiela, se calibra y se envasa, y después se carga para su despacho.",
+        "p1": "Nuestra planta de procesado y envasado de pescado está en la Zona Industrial de Motobas, Kafr el-Sheikh, en el delta del Nilo (Egipto). Aquí recibimos el pescado y lo lavamos, enhielamos, calibramos, envasamos e inspeccionamos antes de cargarlo para su despacho.",
         "p2": "Gestionamos nuestros propios camiones frigoríficos, cámaras frigoríficas y logística, desde la planta hasta el transporte aéreo o por carretera.",
         "image_alt": "Pescado fresco entero sobre hielo picado en cajas isotérmicas blancas en una sala de envasado",
-        "addresses_title": "Direcciones",
         "map_link": "Ver la planta en Google Maps",
+        "stages_link": "Ver las cinco etapas",
         "opens_new_tab": "(se abre en una pestaña nueva)"
-    },
-    "values": {
-        "eyebrow": "Nuestros valores",
-        "title": "Empezamos por las especificaciones, no por los eslóganes",
-        "intro": "Los principios con los que trabajamos con los compradores.",
-        "i1_title": "Fiabilidad",
-        "i1_text": "Exportamos pescado fresco desde 2008, y nuestros primeros mercados, Emiratos Árabes Unidos y Kuwait, siguen activos hoy.",
-        "i2_title": "Primero, las especificaciones",
-        "i2_text": "Partimos de lo que usted necesita (especie, calibre, embalaje, cantidad y destino) y después confirmamos lo que podemos suministrar.",
-        "i3_title": "Condiciones claras",
-        "i3_text": "Las especificaciones, los documentos y las condiciones comerciales se fijan con claridad y se confirman en cada pedido.",
-        "i4_title": "Relaciones a largo plazo",
-        "i4_text": "Buscamos un suministro recurrente basado en la regularidad, no en operaciones puntuales."
-    },
-    "direction": {
-        "eyebrow": "Nuestra orientación",
-        "title": "Visión y misión",
-        "vision_title": "Visión",
-        "vision_text": "Ser un socio egipcio de confianza en producción y suministro para los mercados regionales e internacionales, con un negocio basado en la calidad, la claridad y las relaciones duraderas.",
-        "mission_title": "Misión",
-        "mission_text": "Suministrar productos y servicios que se ajusten a las necesidades de nuestros socios comerciales, conectando la producción y el procesado en Egipto con los requisitos de los mercados a los que servimos.",
-        "identity_title": "Nuestra identidad",
-        "identity_text": "AZAFCO International conserva el nombre AZAFCO y su trayectoria, en una forma acorde con nuestro trabajo con socios e importadores de Oriente Medio y más allá."
     }
 }

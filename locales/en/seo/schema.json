@@ -1,42 +1,29 @@
 {
     "companyName": "AZAFCO International",
     "legalName": "AZAFCO International for Investment and Development S.A.E.",
-    "alternateName": "AZAFCO International",
     "alternateNames": [
         "AZAFCO",
         "ازافكو العالمية",
         "ازافكو",
         "EZAFCO"
     ],
-    "description": "AZAFCO International is an Egyptian company that farms and sources fresh fish, then grades, packs and exports it for importers, distributors and foodservice buyers in {countries}+ markets. Processing plant in Motobas, Kafr El Sheikh, Egypt.",
+    "description": "AZAFCO International is an Egyptian company that farms and sources fresh fish, then washes, ices, grades, packs and inspects it at its plant in Motobas, Kafr El Sheikh, and exports it to importers and distributors in {countries}+ markets.",
     "slogan": "From Egyptian production to global partnerships",
-    "foundingDate": "2008",
+    "foundingLocation": "Kafr El Sheikh, Egypt",
     "commercialRegisterLabel": "Commercial register",
     "factoryName": "AZAFCO International fish processing plant",
     "factoryAlternateName": "AZAFCO fish plant, Motobas",
-    "factoryDescription": "Fish processing plant of AZAFCO International in Motobas, Kafr El Sheikh: grading, packing and dispatch of fresh fish for export.",
-    "websiteName": "AZAFCO International",
+    "factoryDescription": "Fish packing plant of AZAFCO International in Motobas, Kafr El Sheikh: washing, icing, grading, packing and inspection of fresh fish for export.",
+    "factoryAddress": {
+        "street": "No. 120, Feed Sector, Industrial Zone",
+        "locality": "Motobas",
+        "region": "Kafr El Sheikh"
+    },
     "websiteDescription": "Official website of AZAFCO International: fresh Egyptian fish for importers, distributors and foodservice buyers, with species specifications and partnership contacts.",
-    "productGroupName": "AZAFCO International fresh fish",
-    "productGroupDesc": "Fresh fish from Egypt: tilapia, sea bass, grey mullet, catfish and other species. Weight grade and packing confirmed per order.",
-    "catalogName": "AZAFCO International fresh fish catalogue",
-    "catalogDesc": "Fresh fish for wholesale export from Egypt: 12 main varieties. Weight grade and packing confirmed per order; other species supplied on request.",
-    "offerDesc": "Tell us the specification; we will review supply and commercial terms. Office hours Sat–Thu 8:00–17:00 (Cairo time).",
-    "priceRange": "Prices confirmed per order",
-    "freshFishCategory": "Fresh fish",
-    "freshwater": "Freshwater fish",
-    "freshwaterDesc": "Tilapia, catfish, bayad catfish, common carp, mirror carp, grass carp, silver carp",
-    "saltwater": "Marine and brackish-water fish",
-    "saltwaterDesc": "Sea bass, sea bream, meagre, grey mullet, thinlip mullet",
-    "restaurantHotelSupply": "Foodservice supply",
     "home": "Home",
-    "products": "Products",
     "about": "About us",
     "contact": "Contact",
     "markets": "Markets",
-    "media": "Media",
-    "certificates": "Certificates",
-    "openingHours": "Sa-Th 08:00-17:00",
     "contactManagement": "Direct to management · for fast deals",
     "contactExport": "Export team (details and documents)",
     "certificationBody": "TÜV AUSTRIA",
@@ -61,24 +48,6 @@
         "Fish grading and packing",
         "Cold chain logistics",
         "Wholesale fish supply",
-        "Tilapia",
-        "Sea bass",
-        "Grey mullet",
         "Egyptian aquaculture"
-    ],
-    "speakableName": "AZAFCO International | Fresh fish export",
-    "services": {
-        "tilapia": {
-            "name": "Fresh tilapia supply",
-            "description": "Fresh tilapia for wholesale and export"
-        },
-        "seaBass": {
-            "name": "Fresh sea bass supply",
-            "description": "Fresh sea bass for wholesale and export"
-        },
-        "mullet": {
-            "name": "Fresh grey mullet supply",
-            "description": "Fresh grey mullet for wholesale and export"
-        }
-    }
+    ]
 }

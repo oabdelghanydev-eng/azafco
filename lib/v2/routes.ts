@@ -8,16 +8,13 @@
  */
 export const routes = {
     home: '/',
-    seafood: '/seafood',
     products: '/products',
     processing: '/processing',
     quality: '/quality',
     markets: '/markets',
     forImporters: '/for-importers',
     about: '/about',
-    businesses: '/businesses',
     insights: '/insights',
-    news: '/insights/news',
     contact: '/contact',
     rfq: '/requirements',
     privacy: '/privacy-policy',

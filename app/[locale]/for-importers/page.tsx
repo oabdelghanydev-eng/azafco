@@ -1,29 +1,30 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import {
-    Breadcrumbs,
-    Button,
-    CheckIcon,
-    DocumentIcon,
-    PageHero,
-    Section,
-    SectionHeading,
-    WhatsAppIcon,
-    cn,
-    isolateStandards,
-    typography,
-} from '@/components/ui';
+import { Breadcrumbs, Button, DocumentIcon, PageHero, Section, SectionHeading, TextLink, WhatsAppIcon, cn, focusRing, typography } from '@/components/ui';
 import FAQAccordion from '@/components/v2/FAQAccordion';
-import FeatureGrid from '@/components/v2/FeatureGrid';
 import ProcessSteps from '@/components/v2/ProcessSteps';
 import { marketStepIcons } from '@/components/v2/markets/stepIcons';
+import { products } from '@/data/products';
+import { Link } from '@/navigation';
 import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
+import { getRootT, getSpecView } from '@/components/v2/products/catalogue';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 
 type Props = { params: Promise<{ locale: string }> };
-type Item = { title: string; text: string; link?: string };
+type Item = { title: string; text: string };
+/** A document card; the text line is optional (the company profile needs no descriptor). */
+type DocItem = { title: string; text?: string };
+
+/** FAQ order (keys of importers_v2.faq.items). Price and minimum order live in the "Prices and terms" paragraph. */
+const FAQ_KEYS = ['who', 'start', 'species', 'grades', 'packing', 'certificates', 'shipping', 'markets', 'eu', 'recurring', 'fraud'] as const;
+
+/** "A, B and C" in the page locale (en-GB style for English: no Oxford comma). */
+function joinList(locale: string, items: string[]): string {
+    return new Intl.ListFormat(locale === 'en' ? 'en-GB' : locale, { style: 'long', type: 'conjunction' }).format(items);
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -36,24 +37,53 @@ export default async function ForImportersPage({ params }: Props) {
     setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: 'importers_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
+    const tp = await getTranslations({ locale, namespace: 'data.products' });
     // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
     const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
 
-    const serve = t.raw('serve.items') as Item[];
     const steps = t.raw('process.steps') as Item[];
-    const prepare = t.raw('prepare.items') as string[];
-    const documents = t.raw('documents.items') as Item[];
-    const terms = t.raw('terms.items') as Item[];
-    const proof = t.raw('proof.items') as Item[];
-    const proofHrefs = [routes.products, routes.processing, routes.quality, routes.markets];
-    const faq = (t.raw('faq.items') as { q: string; a: string }[]).map((f, i) => ({ id: `faq-${i + 1}`, question: f.q, answer: f.a }));
-    // Rendered answers isolate ISO names (Arabic bidi); the JSON-LD keeps the plain text
-    const faqItems = faq.map((f) => ({ ...f, answer: isolateStandards(f.answer) }));
+    const documents = t.raw('documents.items') as DocItem[];
+
+    // FAQ facts from the product data (the 12 published species; indicative grades
+    // only for the species that have them). Grades come from getSpecView, the same
+    // source (data/specs.ts) and formatter (LTR isolates around ranges in Arabic) as
+    // the species pages, so the answers never drift from them.
+    const root = await getRootT(locale);
+    const species = joinList(locale, products.map((p) => tp(`${p.translationKey}.name`)));
+    const grades = products
+        .map((p) => ({ name: tp(`${p.translationKey}.name`), sizes: getSpecView(root, locale, p.slug).grades }))
+        .filter((g) => g.sizes.length > 0)
+        .map((g) => `${g.name}: ${joinList(locale, g.sizes)}`)
+        .join(locale === 'ar' ? '؛ ' : '; ');
+    const values = { species, grades };
+
+    // <req>/<quality> tags: links on the page, plain text in the FAQPage JSON-LD.
+    const inlineLink = cn('font-semibold text-navy underline underline-offset-4 hover:text-navy-900', focusRing);
+    const richTags = {
+        req: (c: ReactNode) => (
+            <Link href={rfqHref()} className={inlineLink} data-cta="importers_faq_requirements">
+                {c}
+            </Link>
+        ),
+        quality: (c: ReactNode) => (
+            <Link href={routes.quality} className={inlineLink} data-cta="importers_faq_quality">
+                {c}
+            </Link>
+        ),
+    };
+    const plainTags = { req: (c: string) => c, quality: (c: string) => c };
+    const faq = FAQ_KEYS.map((k) => ({
+        id: `faq-${k}`,
+        question: t(`faq.items.${k}.q`),
+        answer: t.rich(`faq.items.${k}.a`, { ...values, ...richTags }),
+        // JSON-LD text without the bidi isolates/marks used for RTL display
+        text: t.markup(`faq.items.${k}.a`, { ...values, ...plainTags }).replace(/[\u200e\u200f\u202a-\u202e\u2066-\u2069]/g, ''),
+    }));
 
     const faqJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+        mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.text } })),
     };
 
     return (
@@ -90,41 +120,29 @@ export default async function ForImportersPage({ params }: Props) {
                 }
             />
 
-            {/* 02 Who we work with */}
-            <Section variant="offwhite" labelledBy="fi-serve">
-                <SectionHeading id="fi-serve" eyebrow={t('serve.eyebrow')} title={t('serve.title')} intro={t('serve.intro')} />
-                <FeatureGrid columns={4} style="card" items={serve.map((s) => ({ title: s.title, description: s.text }))} />
-            </Section>
-
-            {/* 03 How to start */}
+            {/* 02 How to start (the only home of the four steps); what to send lives on /requirements */}
             <Section variant="navy" labelledBy="fi-process">
                 <SectionHeading id="fi-process" eyebrow={t('process.eyebrow')} title={t('process.title')} />
                 <ProcessSteps steps={steps.map((s, i) => ({ title: s.title, description: s.text, icon: marketStepIcons[i] }))} />
+                <TextLink href={rfqHref()} className="mt-8" dataAttrs={{ 'data-cta': 'importers_process_requirements' }}>
+                    {t('process.link')}
+                </TextLink>
             </Section>
 
-            {/* 04 What to prepare + documents the export team provides */}
-            <Section variant="offwhite" labelledBy="fi-prepare">
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+            {/* 03 Documents the export team provides */}
+            <Section variant="offwhite" labelledBy="fi-documents">
+                <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
                     <div className="lg:col-span-5">
-                        <SectionHeading id="fi-prepare" size="md" eyebrow={t('prepare.eyebrow')} title={t('prepare.title')} intro={t('prepare.intro')} />
-                        <ul className="m-0 grid list-none grid-cols-1 gap-x-6 p-0 sm:grid-cols-2 lg:grid-cols-1">
-                            {prepare.map((p) => (
-                                <li key={p} className={cn('flex min-h-tap items-center gap-3 border-b border-rule py-2 text-fg', typography.body)}>
-                                    <CheckIcon size={20} className="shrink-0 text-navy" />
-                                    <span>{p}</span>
-                                </li>
-                            ))}
-                        </ul>
+                        <SectionHeading id="fi-documents" size="md" eyebrow={t('documents.eyebrow')} title={t('documents.title')} intro={t('documents.intro')} />
                     </div>
                     <div className="lg:col-span-7">
-                        <SectionHeading id="fi-documents" size="md" eyebrow={t('documents.eyebrow')} title={t('documents.title')} intro={t('documents.intro')} />
                         <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0">
                             {documents.map((d) => (
                                 <li key={d.title} className="flex gap-4 rounded-card border border-s-4 border-solid border-line border-s-gold bg-white p-5">
                                     <DocumentIcon size={24} className="mt-0.5 shrink-0 text-navy" />
                                     <div>
                                         <h3 className={cn('m-0 text-navy', typography.h4)}>{d.title}</h3>
-                                        <p className={cn('m-0 mt-1 text-ink-muted', typography.small)}>{d.text}</p>
+                                        {d.text ? <p className={cn('m-0 mt-1 text-ink-muted', typography.small)}>{d.text}</p> : null}
                                     </div>
                                 </li>
                             ))}
@@ -138,41 +156,24 @@ export default async function ForImportersPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* 05 Trade details: confirmed per order */}
+            {/* 04 Prices and terms: one paragraph instead of five "agreed per order" rows */}
             <Section variant="white" labelledBy="fi-terms">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
                     <div className="lg:col-span-5">
-                        <SectionHeading id="fi-terms" size="md" eyebrow={t('terms.eyebrow')} title={t('terms.title')} intro={t('terms.intro')} />
+                        <SectionHeading id="fi-terms" size="md" eyebrow={t('terms.eyebrow')} title={t('terms.title')} className="mb-0 md:mb-0 lg:mb-0" />
                     </div>
-                    <dl className="m-0 divide-y divide-line-soft rounded-card border border-solid border-line bg-white lg:col-span-7">
-                        {terms.map((term) => (
-                            <div key={term.title} className="grid grid-cols-1 gap-1 p-5 sm:grid-cols-3 sm:gap-6">
-                                <dt className={cn('font-semibold text-navy', typography.body)}>{term.title}</dt>
-                                <dd className={cn('m-0 text-ink-muted sm:col-span-2', typography.small)}>{term.text}</dd>
-                            </div>
-                        ))}
-                    </dl>
+                    <p className={cn('m-0 text-ink lg:col-span-7', typography.lead)}>{t('terms.text')}</p>
                 </div>
             </Section>
 
-            {/* 06 Check before you ask */}
-            <Section variant="offwhite" labelledBy="fi-proof" spacing="sm">
-                <SectionHeading id="fi-proof" size="md" eyebrow={t('proof.eyebrow')} title={t('proof.title')} />
-                <FeatureGrid
-                    columns={4}
-                    style="card"
-                    items={proof.map((p, i) => ({ title: p.title, description: isolateStandards(p.text), href: proofHrefs[i], linkLabel: p.link }))}
-                />
-            </Section>
-
-            {/* 07 FAQ */}
-            <Section variant="white" labelledBy="fi-faq" id="faq">
+            {/* 05 FAQ */}
+            <Section variant="offwhite" labelledBy="fi-faq" id="faq">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-4">
                         <SectionHeading id="fi-faq" size="md" eyebrow={t('faq.eyebrow')} title={t('faq.title')} />
                     </div>
                     <div className="lg:col-span-8">
-                        <FAQAccordion items={faqItems} />
+                        <FAQAccordion items={faq.map(({ id, question, answer }) => ({ id, question, answer }))} />
                     </div>
                 </div>
             </Section>

@@ -1,7 +1,7 @@
 {
     "eyebrow": "Value chain",
-    "title": "We handle every stage, from the pond to the pallet",
-    "intro": "We work to one agreed specification at each step, and we run our own refrigerated trucks, logistics and cold stores.",
+    "title": "Five stages, from farm to export",
+    "intro": "We run our own refrigerated trucks, logistics and cold stores.",
     "stageLabel": "Stage {n}",
     "stages": {
         "farming": {
@@ -14,7 +14,7 @@
         },
         "packing": {
             "title": "Washing, icing and packing",
-            "text": "Washed, graded by weight and packed whole on ice."
+            "text": "Washed, iced, graded by weight and packed whole."
         },
         "inspection": {
             "title": "Inspection",

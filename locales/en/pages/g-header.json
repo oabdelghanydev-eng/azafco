@@ -5,9 +5,10 @@
     "nav": {
         "about": "About us",
         "fish": "Our fish",
-        "chain": "Value chain",
+        "chain": "Packing",
         "quality": "Quality",
         "markets": "Markets",
+        "importers": "For importers",
         "contact": "Contact"
     },
     "lang_aria": "Language: {name}",

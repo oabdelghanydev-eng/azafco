@@ -19,7 +19,7 @@
     "factory": {
         "title": "Werk",
         "sub": "Besuch · auf der Karte ansehen",
-        "address": "Nr. 120, Futtermittelsektor, Industriegebiet, Motobas, Kafr el-Sheikh"
+        "address": "Nr. 120, Futtermittelsektor, Industriegebiet, Motobas, Kafr El Sheikh"
     },
     "registration": "Handelsregister <n>{cr}</n> · Steuernummer <n>{tax}</n>",
     "new_tab": "(öffnet in neuem Tab)",
@@ -34,7 +34,6 @@
     "float_label": "Geschäftsleitung per WhatsApp schreiben",
     "secondary_label": "Weitere Links",
     "secondary": {
-        "for_importers": "Für Importeure",
         "contact": "Kontakt",
         "privacy": "Datenschutz",
         "cookies": "Cookie-Einstellungen"

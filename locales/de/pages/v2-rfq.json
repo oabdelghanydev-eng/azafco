@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Ihre Anforderungen für Frischfisch senden",
-        "description": "Senden Sie AZAFCO International Ihre Anforderungen: Fischart, Gewichtsklasse, Verpackung, Menge und Zielort. Preise werden pro Auftrag bestätigt."
+        "description": "Senden Sie AZAFCO International Ihre Anforderungen für Fisch: Fischart, Gewichtsklasse, Verpackung, Menge, Zielort und Incoterm, per E-Mail oder WhatsApp."
     },
     "breadcrumb": "Anforderungen senden",
     "hero": {
@@ -13,16 +13,16 @@
         "corporate_title": "Unternehmens- und Partnerschaftsanfragen",
         "corporate_intro": "Für Partnerschaften, Investitionen oder andere geschäftliche Themen. Schreiben Sie von Ihrer Firmen-E-Mail; Produktdetails sind nicht nötig.",
         "documents_title": "Dokumente anfordern",
-        "documents_intro": "Fragen Sie von Ihrer Firmen-E-Mail aus nach Produktspezifikationen oder dem Unternehmensprofil. Wir bestätigen, was wir für Ihre Anfrage bereitstellen können."
+        "documents_intro": "Fordern Sie Produktspezifikationen oder das Unternehmensprofil über Ihre Firmen-E-Mail-Adresse an."
     },
     "aside": {
         "title": "Was nach Ihrer Nachricht passiert",
         "steps": [
             "Das Exportteam prüft Ihre Anforderungen anhand der Spezifikation und der aktuellen Verfügbarkeit.",
-            "Wir melden uns, um die Details und offene Punkte zu bestätigen.",
-            "Preise, Menge, Verpackung und Bedingungen werden für jeden Auftrag schriftlich bestätigt."
+            "Wir bestätigen Ihnen Preis, Menge, Verpackung und Bedingungen schriftlich."
         ],
-        "no_promise": "Das Senden Ihrer Anforderungen verpflichtet weder Sie noch uns zu einem Auftrag. Preise werden pro Auftrag bestätigt.",
+        "hours": "Bürozeiten: {hours}",
+        "no_promise": "Das Senden Ihrer Anforderungen verpflichtet weder Sie noch uns zu einem Auftrag.",
         "prepare_title": "Was Sie bereithalten sollten",
         "prepare": [
             "Fischart und Gewichtsklasse",
@@ -31,12 +31,10 @@
             "Luft- oder Straßenfracht sowie Zielflughafen oder Grenzübergang",
             "Bevorzugter Incoterm und Zahlungsbedingungen",
             "Anforderungen an Verpackung und Etikettierung"
-        ],
-        "attach_title": "Sie haben eine Spezifikation?",
-        "attach_text": "Fügen Sie Ihre Spezifikation oder Verpackungsvorgabe der E-Mail bei, falls vorhanden."
+        ]
     },
     "switch": {
-        "to_corporate": "Sie kaufen keinen Fisch? <link>Unternehmensanfrage senden</link>",
+        "to_corporate": "Für Partnerschaften, Investitionen oder andere Themen: <link>Unternehmensanfrage senden</link>",
         "to_seafood": "Sie möchten Fisch kaufen? <link>Senden Sie stattdessen Ihre Anforderungen</link>"
     },
     "request": {

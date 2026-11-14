@@ -12,182 +12,210 @@
         "secondary": "View our species",
         "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
     },
-    "stats": [
-        {
-            "value": "7+",
-            "label": "export markets"
-        },
-        {
-            "value": "2008",
-            "label": "first export market: UAE"
-        },
-        {
-            "value": "12",
-            "label": "main species"
-        },
-        {
-            "value": "3",
-            "label": "ISO certificates, TÜV AUSTRIA"
-        }
-    ],
     "index": {
         "eyebrow": "Active markets",
         "title": "Where we ship today",
-        "intro": "Our seven active markets and the year we started serving each one. Select a market for details.",
+        "intro": "The markets listed on this site and the year we started serving each one. Select a market for details.",
         "since": "since {year}",
         "planned_title": "Planned",
         "paused": "{country}: exports paused",
-        "map_label": "Map of shipping routes from Egypt to our seven active markets",
+        "map_label": "Map of shipping routes from Egypt to the markets listed on this site",
         "origin": "Egypt · Motobas"
     },
     "notes": {
         "eyebrow": "Market by market",
         "title": "Who we supply in each market",
         "intro": "The buyers we supply in each of our active markets today. Select a market for details.",
-        "buyers_label": "We supply",
+        "buyers_label": "Buyers",
         "details": "Market details"
-    },
-    "approach": {
-        "eyebrow": "Market requirements",
-        "title": "Each market has its own specification",
-        "intro": "We agree the details with each importer before the first shipment.",
-        "points": [
-            {
-                "title": "Species and weight grade",
-                "text": "Species, weight grade and product form are agreed for each importer and each market."
-            },
-            {
-                "title": "Packing and labels",
-                "text": "Packing and box labels are set to what your market and your customers require."
-            },
-            {
-                "title": "Documents",
-                "text": "The export documents for each shipment are agreed for your destination."
-            }
-        ]
-    },
-    "process": {
-        "eyebrow": "How to start",
-        "title": "From your first message to the shipment",
-        "steps": [
-            {
-                "title": "Send your requirements",
-                "text": "Species, weight grade, quantity, packing and destination."
-            },
-            {
-                "title": "Review with our export team",
-                "text": "We check supply, the specification and the import requirements of your destination."
-            },
-            {
-                "title": "Agree the order",
-                "text": "Species, grade, packing, transport, schedule and price are confirmed in writing for each order."
-            },
-            {
-                "title": "Pack and ship",
-                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
-            }
-        ]
     },
     "transport": {
         "eyebrow": "Transport",
         "title": "By air and by road",
         "intro": "Fresh fish travels chilled and packed on ice. It leaves the plant in our own refrigerated trucks, then goes by air or road freight.",
-        "modes": [
-            {
-                "title": "Air freight",
-                "text": "Packed on ice in insulated boxes for air cargo, for destinations served by air."
-            },
-            {
-                "title": "Road freight",
-                "text": "Refrigerated road transport where the destination can be reached by land."
-            }
-        ],
         "note": "We do not publish fixed transit times: they depend on the route and the booking, and are confirmed for each shipment."
     },
     "support": {
         "eyebrow": "Working with us",
-        "title": "Clear terms for every order",
+        "title": "Before you order",
         "items": [
             {
-                "title": "Prices confirmed per order",
-                "text": "Prices depend on the species, weight grade, quantity, packing and delivery terms, so we confirm them for each order."
-            },
-            {
-                "title": "Clear responsibilities",
-                "text": "Who handles export documents, import clearance and delivery is agreed in writing for each order."
+                "title": "Import rules by market",
+                "text": "Each market page lists the documents and conditions published for importing food into that country, with a link to each source."
             },
             {
                 "title": "Two direct channels",
                 "text": "WhatsApp goes directly to our management, for fast deals. Email goes to the export team, for details and documents."
             }
         ],
-        "guide_link": "Read the guide to importing fresh fish from Egypt"
+        "guide_link": "Read the guide to importing fresh fish from Egypt",
+        "importers_link": "How importers order from us, in four steps"
     },
     "new_market": {
         "title": "Your country is planned or not listed?",
         "text": "Tell us your destination. Our export team reviews each new market case by case.",
         "action": "Contact the export team"
     },
-    "disclaimer": "Every shipment depends on the import rules of the destination, current supply and the order terms agreed in writing.",
-    "regions": {
-        "gulf": "Gulf",
-        "levant": "Levant",
-        "middle_east": "Middle East",
-        "europe": "Europe",
-        "americas": "Americas",
-        "other": "Other"
-    },
     "detail": {
-        "meta_title": "Fresh fish exports to {country}",
-        "meta_description": "Fresh Egyptian fish for importers in {country}, an active market since {year}. Shipped chilled by air or road; prices confirmed per order.",
+        "meta_title": "Import fresh fish from Egypt to {country}",
+        "meta_description": "Whole fresh chilled fish from Egypt for importers in {country} since {year}, by air or road, plus the import rules for fish with links to their sources.",
         "eyebrow": "Active market since {year}",
         "title": "Fresh Egyptian fish for importers in {country}",
-        "intro": "We have served importers in {country} since {year}. Species, weight grade, packing, transport and documents are agreed with each importer.",
-        "primary": "Start a partnership",
+        "intro": "We supply importers in {country} with whole fresh chilled fish from our plant in Motobas, Egypt.",
+        "primary": "Send your requirements",
         "secondary": "Message management on WhatsApp",
         "image_alt": "Whole fresh fish on crushed ice seen from above",
         "facts_title": "At a glance: {country}",
+        "map_eyebrow": "Our markets",
+        "map_title": "Our other markets",
+        "map_intro": "Select a market to see its page.",
+        "buyers_title": "Who we supply in {country}",
+        "glance_eyebrow": "Market profile",
         "facts": {
-            "since_label": "Active market since",
-            "region_label": "Region",
             "plant_label": "Ships from",
             "plant_value": "Motobas, Kafr El Sheikh, Egypt",
             "plant_link": "View the plant on the map",
-            "quality_label": "Quality",
-            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
-            "quality_link": "See quality",
             "transport_label": "Transport",
-            "transport_value": "By air or road, confirmed per order",
-            "prices_label": "Prices",
-            "prices_value": "Confirmed per order"
+            "transport_value": "By air or road"
         },
-        "discuss_eyebrow": "What we agree",
-        "discuss_title": "What we agree with importers in {country}",
-        "discuss": [
-            {
-                "title": "Species and weight grades",
-                "text": "The species and weight grades your customers buy, confirmed against current supply."
+        "products_link": "See our 12 species",
+        "whatsapp_message": "Hello AZAFCO International, this is … from … (company) in {country}. We are interested in:"
+    },
+    "import": {
+        "eyebrow": "Import rules",
+        "title": "Importing fresh fish into {country}",
+        "intro": "The documents and conditions published for food and fish imports into {country}, with a link to each source.",
+        "authority_label": "Competent authority",
+        "source_label": "Source:",
+        "reviewed": "Last reviewed: <time>{date}</time>",
+        "disclaimer": "Rules change. Confirm the current requirements with your clearing agent or the authority before you order.",
+        "fallback_guide": "The Egyptian export documents are described in our guide to importing fresh fish from Egypt.",
+        "fallback_confirm": "Confirm the import conditions with the authority in {country} before you order.",
+        "authorities": {
+            "kuwait": "Public Authority for Food and Nutrition (PAFN)",
+            "bahrain": "Ministry of Health, Public Health Directorate, Food Control Section",
+            "lebanon": "Ministry of Agriculture, Directorate of Animal Wealth (also called Directorate of Animal Resources)",
+            "qatar": "Ministry of Public Health (MOPH), Food Safety Department, Port Health and Food Control Section"
+        },
+        "doc_lang": {
+            "ar": "in Arabic",
+            "en": "in English",
+            "ar_en": "in Arabic and English"
+        },
+        "source_labels": {
+            "us_government_report": "US government report",
+            "copy_elsewhere": "copy, not on the authority’s website",
+            "fao_study": "FAO study"
+        },
+        "sources": {
+            "uae_portal": {
+                "title": "UAE Government portal (u.ae): food safety"
             },
-            {
-                "title": "Packing and labels",
-                "text": "Box format and label requirements for your sales channel."
+            "usda_uae": {
+                "title": "USDA: FAIRS country report, United Arab Emirates (TC2025-0008)",
+                "lead_in": "According to a 2025 report by the US Department of Agriculture (USDA):"
             },
-            {
-                "title": "Transport",
-                "text": "Chilled shipment by air or road, with the route confirmed for each order."
+            "kw_res_6_2023": {
+                "title": "PAFN Ministerial Resolution No. 6 of 2023 on imported food (English text, FAOLEX)"
             },
-            {
-                "title": "Documents",
-                "text": "The export documents needed to import into {country}, agreed for each order."
+            "kw_model_hc": {
+                "title": "PAFN model health certificate for marine and river animals and their products"
+            },
+            "kw_raqeb": {
+                "title": "PAFN Raqeb portal: customs clearance request, guide for companies"
+            },
+            "bh_guide": {
+                "title": "Ministry of Health, Bahrain: Food Importers Guide to the Kingdom of Bahrain"
+            },
+            "lb_fao_study": {
+                "title": "Assessment of the commercial seafood chain in Lebanon (FAO project, on the Ministry of Agriculture’s website)",
+                "lead_in": "As summarised in a 2018 FAO project study on the Ministry of Agriculture’s website:"
+            },
+            "lb_239": {
+                "title": "Ministry of Agriculture, Lebanon: Decision No. 239/1 on importing animal products (certified English copy, UNRWA website)",
+                "lead_in": "Under Decision 239/1 of 2009 on importing animal products:"
+            },
+            "qa_guide": {
+                "title": "Ministry of Public Health, Qatar: Food Importers Guide",
+                "lead_in": "The ministry’s Food Importers Guide (undated; its file dates from 2017) says:"
+            },
+            "qa_watheq": {
+                "title": "Ministry of Public Health, Qatar: general rules for registering food in the WATHEQ system"
+            },
+            "qa_third_party": {
+                "title": "Ministry of Public Health, Qatar: list of approved third-party inspection bodies"
+            },
+            "usda_iraq": {
+                "title": "USDA: FAIRS country report on Iraq’s food and agricultural import regulations (copy hosted by APEDA, India)",
+                "lead_in": "According to a 2011 report by the US Department of Agriculture (USDA):"
+            },
+            "sy_guide": {
+                "title": "Ministry of Agriculture, Syria: guide to importing animals, animal products and by-products",
+                "lead_in": "Under the Ministry of Agriculture’s July 2021 import guide:"
             }
-        ],
-        "products_eyebrow": "Species",
-        "products_title": "Our main species",
-        "products_note": "These are our main, most-requested species; we supply other species on request.",
-        "map_eyebrow": "Our markets",
-        "map_title": "Shipping routes to {country} and our other markets",
-        "map_intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
-        "buyers_title": "Who we supply in {country}",
-        "glance_eyebrow": "Market profile"
+        },
+        "items": {
+            "uae": {
+                "municipalities": "The municipalities of each emirate oversee inspection at the port, testing, label approval and the release of imported shipments.",
+                "aquatic": "Farmed fish must not be fed pork protein. Wild-caught fish must be identified as wild-caught on a health certificate issued by the competent authority of the exporting country.",
+                "labels": "Under UAE.S GSO 9:2019, food labels must be in Arabic, and any other language used must match the Arabic text. This applies to bulk and retail packaging.",
+                "dates": "Production and expiry dates must appear directly on the original label or primary packaging; dates printed only on stickers are not accepted.",
+                "zad": "Under Ministerial Decree No. 239 of 2018, imported food must be registered in the national ZAD system before it is handled in UAE markets."
+            },
+            "kuwait": {
+                "resolution": "Ministerial Resolution No. 6 of 2023 of the Public Authority for Food and Nutrition regulates imported food. It took effect on 1 September 2023 and cancelled the regulations issued under Resolution No. 19 of 2017.",
+                "high_risk": "The resolution classes fish as high-risk food, together with meat, poultry and dairy products.",
+                "documents": "Each food consignment must carry a customs declaration, a certificate of origin, a delivery permit, a trade licence or import permit, a health certificate and a packing list issued by the exporting facility.",
+                "certificate_issuer": "The health certificate must be issued and endorsed by the official regulatory authority of the country of origin or export.",
+                "certificate_content": "The health certificate must be in Arabic and/or English and state the number of packages, the total weight and the production batches.",
+                "inspection": "The Imported Food Department inspects consignments at the border port. Its inspectors may take samples for testing in the authority’s own or accredited laboratories.",
+                "model_certificate": "The authority publishes a bilingual model health certificate for fish exported to Kuwait, with fields for the temperature category (chilled, frozen or ambient), HS code, production date, expiry date and batch number.",
+                "raqeb": "In the authority’s Raqeb clearance guide, a fish import licence is a required attachment for fish, and a health certificate from the country of origin is required for all food."
+            },
+            "bahrain": {
+                "ports": "The Ministry of Health inspects imported food at the three ports of entry: the sea port, air cargo and the causeway.",
+                "importer": "Food importers need a commercial registration from the Ministry of Industry and Commerce and a public health certificate to practise commercial activities under health surveillance.",
+                "registration": "Regular foods need no prior registration before import but must comply with Gulf (GSO) standards; prior registration applies to functional foods such as baby food.",
+                "arrival": "On arrival, the importer’s representative fills in the imported food inspection form and attaches the customs declaration, the packing list, the delivery order or bill of lading, and the health certificates.",
+                "health_certificate": "Every consignment needs an original health certificate from the competent authority of the country of origin, attesting compliance with GCC requirements, stamped and signed by the issuing authority.",
+                "labels": "Labels must be in Arabic; any other language must appear alongside the Arabic and match it.",
+                "dates": "Under GSO 150-1, chilled perishable foods containing fish carry mandatory expiry dates; for prepackaged food, stickers for production and expiry dates are not permitted.",
+                "inspection": "Inspection checks the container, the labels and sensory quality and, for chilled food, signs of defrosting and the container temperature records. When samples are taken for testing on a risk basis, the shipment is held until the results are known."
+            },
+            "lebanon": {
+                "registration": "Ministry of Agriculture Decision 964 of 2011 requires every establishment that imports chilled or frozen fish to register with the Directorate of Animal Wealth, Department of Import and Export.",
+                "labels": "Decision 264/1 of 2013 requires the fish name on package labels to match its Arabic, English and scientific names and the names in all attached certificates; otherwise entry is refused.",
+                "inspection": "Decision 496/1 of 2010 makes imported fish and fish products subject to inspection and examination before entry into Lebanon is permitted.",
+                "commitment": "Decision 547/1 of 2012 lets fresh fish enter if the importer submits a commitment attested by a notary; a repeated violation within one year bars imports from the same source.",
+                "cold_chain_record": "Decision 573/1 of 2009 requires the cooling temperature of chilled and frozen food to be recorded throughout shipping.",
+                "veterinary_certificate": "Imported animal products must come with a veterinary health certificate issued by the authorities of the country of origin.",
+                "origin_certificate": "A certificate of origin must be authenticated by a chamber of commerce, industry or agriculture or another authenticating body.",
+                "seal": "The bill of lading must show Lebanon as the destination, and the container seal applied in the country of origin must be intact on arrival."
+            },
+            "qatar": {
+                "control": "The ministry’s Port Health and Food Control Section controls imported food, fish included, under Food Control Law No. 8 of 1990 as amended by Law No. 4 of 2014.",
+                "health_certificate": "Each consignment must carry a health certificate in Arabic, English or both; the guide includes a template for products of aquatic animal origin.",
+                "detention": "A consignment may be held (temporary release) if its health certificate was issued before the food’s production date or after its shipment date.",
+                "inspection": "Inspectors at the port check the vehicle, container and packs, check the labels and their language, and take samples from new items or according to the level of risk.",
+                "watheq": "Food establishments must register in the ministry’s WATHEQ system; only registered companies can file import or export declarations through the Al Nadeeb system.",
+                "third_party": "The ministry publishes a list of approved third-party bodies for pre-shipment inspection at origin; their certificates of conformity must be issued before export, not after."
+            },
+            "iraq": {
+                "cosqc": "The Central Organization for Standardization and Quality Control (COSQC), an agency of the Ministry of Planning, enforces standards for imported products.",
+                "licence": "Importers of food of animal origin request preliminary approval from the Ministry of Agriculture, and the Ministry of Trade then issues the import licence.",
+                "certificates": "Food of animal origin needs a certificate of origin certified by the Iraqi embassy and a health certificate from an accredited health department.",
+                "dates": "Under IQS/1847/1999, foods with a shelf life of three months or less need production and expiry dates printed permanently as day, month and year; stickers are not permitted.",
+                "testing": "COSQC and the ministries of agriculture and health test imports at the border, and the Ministry of Health tests samples in provincial laboratories or the Central Health Laboratory in Baghdad.",
+                "old_source": "This report dates from 2011. Confirm the current steps with the Iraqi authorities or your clearing agent."
+            },
+            "syria": {
+                "application": "The importer applies in writing to the Ministry’s Directorate of Animal Health on its form, with a valid commercial register, a copy of an ID and a proforma invoice.",
+                "disease_free": "Fish and fish products must come with a health certificate stating that they come from an area or establishment free of bacterial, viral and fungal infectious fish diseases.",
+                "laboratory": "Fish for human consumption must come with an analysis certificate from an accredited laboratory in the country of origin showing that they are free of pathogens.",
+                "labels": "Fish packages must carry a clear label with the scientific and common names, the country of origin, the size category, the packing and shipping date and the producer’s name and address.",
+                "shelf_life": "No more than half of the fish’s shelf life may have passed when it reaches Syria.",
+                "veterinary_certificate": "The veterinary certificate for animal products must be issued by authorised bodies in the country of origin and authenticated by Syria’s Ministry of Foreign Affairs; countries of the Greater Arab Free Trade Area are exempt from this authentication."
+            }
+        }
     }
 }

@@ -21,11 +21,17 @@ export interface MarketsIndexProps {
     /** Active markets in display order */
     active: { key: string; countryCode: string; name: string; short: string; since: string }[];
     planned: { key: string; countryCode: string; name: string }[];
-    plannedTitle: string;
+    /** Label above the planned flags (needed only when `planned` is not empty) */
+    plannedTitle?: string;
     /** e.g. "Spain: exports paused" */
     pausedNote?: string;
     /** Market key of the current detail page (aria-current + map highlight) */
     current?: string;
+    /**
+     * Market detail pages ("Our other markets"): leave the current market out of the list.
+     * The map still shows every active market, with the current one highlighted.
+     */
+    hideCurrentInList?: boolean;
     mapLabel: string;
     origin: string;
     /** Heading level of the block title */
@@ -47,6 +53,7 @@ export default function MarketsIndex({
     plannedTitle,
     pausedNote,
     current,
+    hideCurrentInList = false,
     mapLabel,
     origin,
     as: H = 'h2',
@@ -57,6 +64,7 @@ export default function MarketsIndex({
         .filter((m): m is { code: MapCode; short: string } => isMapCode(m.code));
     const currentCode = active.find((m) => m.key === current)?.countryCode.toLowerCase();
     const highlight = currentCode && isMapCode(currentCode) ? currentCode : undefined;
+    const listed = hideCurrentInList ? active.filter((m) => m.key !== current) : active;
 
     return (
         <Section variant="navy" labelledBy={headingId} contained={false}>
@@ -84,7 +92,7 @@ export default function MarketsIndex({
                     />
 
                     <ul className="m-0 mt-2 grid list-none gap-1 p-0 lg:mt-7">
-                        {active.map((m) => {
+                        {listed.map((m) => {
                             const isCurrent = m.key === current;
                             return (
                                 <li key={m.key}>
@@ -120,7 +128,7 @@ export default function MarketsIndex({
 
                     {planned.length || pausedNote ? (
                         <div className="mt-5 border-t border-rule pt-5 lg:mt-6">
-                            {planned.length ? (
+                            {planned.length && plannedTitle ? (
                                 <>
                                     <p className="m-0 mb-3 text-caption font-bold text-eyebrow">{plannedTitle}</p>
                                     <ul className="m-0 flex list-none flex-wrap gap-x-6 gap-y-3.5 p-0">

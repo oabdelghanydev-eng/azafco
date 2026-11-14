@@ -5,7 +5,6 @@ import {
     ArrowIcon,
     Button,
     Card,
-    CheckIcon,
     ContactRow,
     ExternalLink,
     Icon,
@@ -20,7 +19,6 @@ import {
     cn,
     focusRing,
     phoneDisplay,
-    isolateStandards,
     typography,
 } from '@/components/ui';
 import ContactRoutes from '@/components/v2/contact/ContactRoutes';
@@ -71,8 +69,6 @@ export default async function ContactPage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'contact_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
     const c = companyConfig.contact;
-    const steps = t.raw('next.steps') as string[];
-    const proof = t.raw('trust.proof') as string[];
     const newTab = t('channels.new_tab');
     const phone = phoneDisplay(c.whatsappNumber);
     const mailto = `mailto:${c.email}`;
@@ -158,7 +154,6 @@ export default async function ContactPage({ params }: Props) {
                             <div className="min-w-0">
                                 <h3 className={cn('m-0 text-ink', typography.h4)}>{t('channels.hours')}</h3>
                                 <p className="mb-0 mt-1 text-ink">{tc('workingHours')}</p>
-                                <p className={cn('mb-0 mt-1 text-ink-muted', typography.small)}>{tc('workingHoursNote')}</p>
                             </div>
                         </div>
                         <Card padding="sm" className="flex flex-col lg:p-6">
@@ -185,22 +180,11 @@ export default async function ContactPage({ params }: Props) {
                 <ContactRoutes />
             </Section>
 
-            {/* 04 After you write (no-obligation note) + registration, official channels (anti-fraud), privacy */}
-            <Section variant="white" labelledBy="ct-next">
-                <SectionHeading id="ct-next" eyebrow={t('next.eyebrow')} title={t('next.title')} />
-                <ol className="m-0 grid list-none gap-6 p-0 md:grid-cols-3 md:gap-5 lg:gap-8">
-                    {steps.map((s, i) => (
-                        <li key={s} className="border-0 border-t-2 border-solid border-gold pt-4">
-                            <span aria-hidden="true" className={cn('block text-navy', typography.overline)}>
-                                {String(i + 1).padStart(2, '0')}
-                            </span>
-                            <p className="mb-0 mt-2 text-ink-muted">{s}</p>
-                        </li>
-                    ))}
-                </ol>
-                <p className="mb-0 mt-8 max-w-[720px] border-0 border-s-2 border-solid border-gold ps-4 text-ink">{t('next.no_promise')}</p>
-
-                <div className="mt-12 grid gap-4 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-5">
+            {/* 04 Registration, official channels (anti-fraud), privacy. Round 1: "What happens after you write"
+                lives on /requirements only; "Track record" removed (stats live on the home, ISO on /quality). */}
+            <Section variant="white" labelledBy="ct-official">
+                <SectionHeading id="ct-official" eyebrow={t('official.eyebrow')} title={t('official.title')} />
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
                     <Card accent className="flex flex-col md:col-span-2 lg:col-span-1">
                         <h3 className={cn('m-0 text-ink', typography.h3)}>{t('trust.title')}</h3>
                         <dl className={cn('m-0 mt-3 grid gap-1 text-ink-muted', typography.small)}>
@@ -221,19 +205,6 @@ export default async function ContactPage({ params }: Props) {
                                 </dd>
                             </div>
                         </dl>
-                        <h4 className={cn('mb-0 mt-5 text-ink', typography.h4)}>{t('trust.proof_title')}</h4>
-                        <ul className="m-0 mt-2 flex-1 list-none space-y-2 p-0">
-                            {proof.map((item) => (
-                                <li key={item} className={cn('flex items-start gap-2.5 text-ink-muted', typography.small)}>
-                                    <CheckIcon size={20} className="mt-0.5 text-navy" />
-                                    <span>{isolateStandards(item)}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        <Link href={routes.quality} className={cn(cardLink, 'mt-3 self-start')}>
-                            {t('trust.proof_link')}
-                            <ArrowIcon size={20} />
-                        </Link>
                     </Card>
 
                     {/* Anti-fraud notice (approved copy in data.company.officialChannels) */}
@@ -255,20 +226,19 @@ export default async function ContactPage({ params }: Props) {
 
             {/* 05 Locations with map embeds (addresses + embeds from data/company.ts, as on the live site) */}
             <Section variant="offwhite" labelledBy="ct-locations">
-                <SectionHeading id="ct-locations" layout="split" eyebrow={t('locations.eyebrow')} title={t('locations.title')} intro={t('locations.intro')} />
+                <SectionHeading id="ct-locations" layout="split" eyebrow={t('locations.eyebrow')} title={t('locations.title')} />
                 <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2 lg:gap-8">
                     {locations.map((l) => (
                         <li key={l.key} className="flex min-w-0">
                             <Card padding="none" className="flex w-full flex-col overflow-hidden">
                                 <div className="relative aspect-[4/3] w-full bg-navy-100 sm:aspect-[16/10]">
                                     {/* Static placeholder behind the lazy iframe (iframes are transparent until the map paints),
-                                        so the card never shows an empty box on slow connections or with embeds blocked. */}
+                                        so the card never shows an empty box on slow connections or with embeds blocked.
+                                        Pin only: the title and address are the h3 block below (each address once per section). */}
                                     <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
                                         <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white text-navy shadow-sm">
                                             <MapPinIcon size={28} />
                                         </span>
-                                        <span className={cn('font-semibold text-navy', typography.h4)}>{l.title}</span>
-                                        <span className={cn('max-w-[34ch] text-ink-muted', typography.small)}>{l.address}</span>
                                     </div>
                                     <iframe
                                         src={l.embed}

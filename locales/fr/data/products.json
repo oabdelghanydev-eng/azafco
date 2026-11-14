@@ -11,8 +11,7 @@
             "Gros (500 g et plus)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "sea_bass": {
         "name": "Bar",
@@ -26,8 +25,7 @@
             "Gros (600 g et plus)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau de mer",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau de mer"
     },
     "mullet": {
         "name": "Mulet cabot",
@@ -41,8 +39,7 @@
             "Moyen (250–400 g)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau saumâtre",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau saumâtre"
     },
     "grass_carp": {
         "name": "Carpe amour",
@@ -56,8 +53,7 @@
             "Gros (500 g et plus)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "mubarakah": {
         "name": "Carpe commune",
@@ -65,14 +61,13 @@
             "Carpe écailleuse",
             "Qishra"
         ],
-        "description": "La carpe commune, appelée qishra en Égypte, est la forme entièrement écailleuse de la carpe ; c’est un poisson d’eau douce.",
+        "description": "La carpe commune, appelée qishra en Égypte, est une carpe d’eau douce au corps entièrement couvert d’écailles.",
         "sizes": [
             "Gros (1–2 kg)",
             "Jumbo (2 kg et plus)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "catfish": {
         "name": "Poisson-chat africain",
@@ -81,14 +76,13 @@
             "Poisson-chat nord-africain",
             "Karmout"
         ],
-        "description": "Le poisson-chat africain, aussi vendu sous les noms de silure africain ou karmout, est un poisson d’eau douce.",
+        "description": "Le poisson-chat africain, appelé karmout en Égypte, est un poisson d’eau douce.",
         "sizes": [
             "Moyen (500–800 g)",
             "Gros (800 g et plus)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "lout": {
         "name": "Maigre",
@@ -103,8 +97,7 @@
             "Gros (600 g et plus)"
         ],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau de mer",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau de mer"
     },
     "thinlip_mullet": {
         "name": "Mulet porc",
@@ -112,11 +105,10 @@
             "Muge porc",
             "Tobar"
         ],
-        "description": "Le mulet porc, appelé tobar en Égypte, est un mulet d’eau saumâtre. C’est un produit distinct de notre mulet cabot.",
+        "description": "Le mulet porc, appelé tobar en Égypte, est un mulet d’eau saumâtre.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau saumâtre",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau saumâtre"
     },
     "bayad_catfish": {
         "name": "Bagre bayad",
@@ -127,8 +119,7 @@
         "description": "Le bagre bayad est un poisson-chat d’eau douce originaire du Nil.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "silver_carp": {
         "name": "Carpe argentée",
@@ -136,8 +127,7 @@
         "description": "La carpe argentée est une carpe d’eau douce.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "mirror_carp": {
         "name": "Carpe miroir",
@@ -145,11 +135,10 @@
             "Carpe commune (miroir)",
             "Mabrouka"
         ],
-        "description": "La carpe miroir est la forme à écailles miroir de la carpe commune, avec seulement quelques grandes écailles. C’est un poisson d’eau douce.",
+        "description": "La carpe miroir, appelée mabrouka en Égypte, est une carpe d’eau douce qui ne porte que quelques grandes écailles.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau douce",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau douce"
     },
     "sea_bream": {
         "name": "Dorade royale",
@@ -160,8 +149,7 @@
         "description": "La dorade royale, aussi vendue sous les noms de daurade royale ou dorade, est un poisson marin.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau de mer",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau de mer"
     },
     "eels": {
         "name": "Anguille européenne",
@@ -171,7 +159,6 @@
         "description": "L’anguille européenne est un poisson d’eau saumâtre.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
-        "category": "Eau saumâtre",
-        "availability": "Confirmée à chaque commande"
+        "category": "Eau saumâtre"
     }
 }

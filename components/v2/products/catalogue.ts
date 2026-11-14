@@ -1,11 +1,11 @@
 /**
- * Server-side helpers shared by the v2 seafood pages (catalogue, product
- * detail, seafood overview, processing, quality).
+ * Server-side helpers shared by the v2 fish pages (catalogue, product detail;
+ * processing and quality use pageMetadata / jsonLd).
  *
  * Species facts come only from data/products.ts, data/specs.ts (indicative
- * grades / forms / pack type) and data.products.<key> (name, alt names and the
- * one-line description in locales/<locale>/data/products.json). Only the 12
- * published species are used (eel is kept in data but unpublished).
+ * grades / forms / pack type), data.products.<key> (name, alt names in
+ * locales/<locale>/data/products.json) and the HS / CN table in data/guides.ts.
+ * Only the 12 published species are used (eel is kept in data but unpublished).
  * No farmed / wild labels, no stock or availability claims.
  */
 import type { Metadata } from 'next';
@@ -13,6 +13,7 @@ import { getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { ogLocaleMap, ogImageMap, type Locale } from '@/i18n';
 import { hreflangAlternates } from '@/components/v2/businesses/pageMetadata';
+import { importingTariffRows } from '@/data/guides';
 import { products, type Product, type ProductCategory } from '@/data/products';
 import { mediaImage, productMediaId, type ImageProps } from '@/lib/v2/media';
 import { productHref } from '@/lib/v2/routes';
@@ -48,8 +49,6 @@ export interface CatalogueProduct {
     category: ProductCategory;
     name: string;
     altNames: string[];
-    /** One-line factual description (catalogue_v2.descriptions.<slug>) */
-    description?: string;
     /** Only set when the identification is verified */
     scientificName?: string;
     image: ImageProps;
@@ -92,8 +91,6 @@ export function toCatalogueProduct(t: RootT, locale: string, p: Product): Catalo
         category: p.category,
         name,
         altNames: rawArray(t, `${key}.alt_names`),
-        // In this namespace (not data.products.<key>.description) so every locale shows approved copy
-        description: t.has(`catalogue_v2.descriptions.${p.slug}`) ? t(`catalogue_v2.descriptions.${p.slug}`) : undefined,
         scientificName: UNVERIFIED_SCIENTIFIC.has(p.slug) ? undefined : p.scientificName,
         image,
     };
@@ -165,6 +162,30 @@ export function getSpecView(t: RootT, locale: string, slug: string): SpecView {
     const packType = spec.forms.find((f) => f.packType)?.packType ?? spec.logistics.boxType;
     const pack = packType && t.has(`${ns}.packs.${packType}`) ? t(`${ns}.packs.${packType}`) : undefined;
     return { forms, grades, pack };
+}
+
+/**
+ * HS (6-digit) and EU CN (8-digit) code of a species, from the importer guide's
+ * tariff table (data/guides.ts), so the species page and the guide show the same code.
+ * undefined when the guide has no row for the species.
+ */
+export function getTariffCodes(translationKey: string): { hs: string; cn: string } | undefined {
+    const row = importingTariffRows.find((r) => r.productKey === translationKey);
+    return row ? { hs: row.hs, cn: row.cn } : undefined;
+}
+
+/**
+ * Species name for headings and titles that already carry the word "fish":
+ * Arabic patterns read «سمك {name}», so a name that starts with «سمك» is not doubled.
+ */
+export function bareName(name: string, locale: string): string {
+    return locale === 'ar' ? name.replace(/^سمك\s+/, '') : name;
+}
+
+/** Species name inside a sentence ("Fresh sea bass from Egypt"): lower-case first letter where the language does that (not German). */
+export function inlineName(name: string, locale: string): string {
+    const bare = bareName(name, locale);
+    return ['en', 'es', 'fr', 'ru'].includes(locale) ? bare.charAt(0).toLocaleLowerCase(locale) + bare.slice(1) : bare;
 }
 
 /** Related products: same water type first, then the rest, in catalogue order. */

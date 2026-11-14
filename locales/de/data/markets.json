@@ -3,7 +3,7 @@
         "country": "Kuwait",
         "short": "Kuwait",
         "sentence": "Kuwait",
-        "note": "Unser größter Exportmarkt. Wir beliefern Distributoren, Restaurantketten und Hotels in Kuwait.",
+        "note": "Unser größter Exportmarkt.",
         "buyers": [
             "Distributoren",
             "Restaurantketten",
@@ -14,19 +14,19 @@
         "country": "Vereinigte Arabische Emirate",
         "short": "VAE",
         "sentence": "den VAE",
-        "note": "Unser erster Exportmarkt, seit 2008. Wir beliefern Distributoren, Restaurants, Supermarktketten und Hotels in Dubai, Abu Dhabi und Schardscha.",
+        "note": "Unser erster Exportmarkt, mit Kunden in Dubai, Abu Dhabi und Schardscha.",
         "buyers": [
             "Distributoren",
             "Restaurants",
             "Supermarktketten",
             "Hotels"
-        ]
+        ],
+        "title_name": "den VAE"
     },
     "qatar": {
         "country": "Katar",
         "short": "Katar",
         "sentence": "Katar",
-        "note": "Ein wachsender Markt. Wir arbeiten mit Distributoren, Hotelketten, Restaurants und Cateringunternehmen in Katar.",
         "buyers": [
             "Distributoren",
             "Hotelketten",
@@ -38,7 +38,6 @@
         "country": "Irak",
         "short": "Irak",
         "sentence": "dem Irak",
-        "note": "Ein Markt mit wachsender Nachfrage. Wir beliefern lokale Distributoren, Großmärkte und Restaurants im Irak.",
         "buyers": [
             "Lokale Distributoren",
             "Großmärkte",
@@ -49,7 +48,6 @@
         "country": "Bahrain",
         "short": "Bahrain",
         "sentence": "Bahrain",
-        "note": "Wir beliefern Distributoren, Restaurants, Genossenschaften und Hotels in Bahrain.",
         "buyers": [
             "Distributoren",
             "Restaurants",
@@ -61,7 +59,6 @@
         "country": "Libanon",
         "short": "Libanon",
         "sentence": "dem Libanon",
-        "note": "Ein Markt, der Qualität und Frische schätzt. Wir beliefern Restaurants, Distributoren und Hotels im Libanon.",
         "buyers": [
             "Restaurants",
             "Distributoren",
@@ -77,7 +74,7 @@
         "country": "Syrien",
         "short": "Syrien",
         "sentence": "Syrien",
-        "note": "Unser jüngster Markt, eröffnet 2026. Wir beliefern Distributoren, Restaurants und Großmärkte in Syrien.",
+        "note": "Unser jüngster Markt.",
         "buyers": [
             "Distributoren",
             "Restaurants",

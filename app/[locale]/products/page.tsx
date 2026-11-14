@@ -1,20 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import {
-    Button,
-    Card,
-    CheckIcon,
-    DocumentIcon,
-    Eyebrow,
-    MailIcon,
-    PageHead,
-    Section,
-    SectionHeading,
-    StatStrip,
-    WhatsAppIcon,
-    cn,
-    typography,
-} from '@/components/ui';
+import { Button, Card, Eyebrow, MailIcon, PageHead, Section, SectionHeading, WhatsAppIcon, cn, typography } from '@/components/ui';
 import FeatureGrid from '@/components/v2/FeatureGrid';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
 import { SpeciesRow } from '@/components/v2/products/SpeciesRow';
@@ -26,11 +12,8 @@ import { whatsappLink } from '@/lib/v2/whatsapp';
 
 type Props = { params: Promise<{ locale: string }> };
 
-/** id of the closing "custom requirements" heading; the hero's partnership button points here */
+/** id of the closing "custom requirements" heading */
 const CUSTOM_ID = 'catalogue-custom';
-
-/** Approved company facts (RELEASE-DECISIONS, 13 Nov 2026). The species count is in the h1. */
-const FACTS = ['markets', 'founded', 'iso', 'capacity'] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -53,15 +36,12 @@ export default async function CataloguePage({ params }: Props) {
         .map((c) => ({ value: c, label: t(`water.${c}`) }));
 
     const items = catalogue.map((p, i) => {
-        // Published, indicative values from data/specs.ts: product form and weight grades
+        // Origin, form and packing are the same for all 12 and said once above the grid (grid.intro);
+        // each card keeps only what differs: the indicative weight grades from data/specs.ts.
         const spec = getSpecView(root, locale, p.slug);
-        const facts: { label: string; value: string | string[] }[] = [];
-        if (spec.forms.length) facts.push({ label: t('browser.form_type'), value: spec.forms.map((f) => f.label) });
-        // Species without published grades (the five newer ones) say so instead of leaving a gap
-        if (spec.grades.length) facts.push({ label: t('card.grades'), value: spec.grades });
-        else facts.push({ label: t('card.grades_label'), value: t('card.grades_per_order') });
-        if (spec.pack) facts.push({ label: t('detail.packaging'), value: spec.pack });
-        if (!facts.length) facts.push({ label: t('card.origin'), value: t('card.origin_value') });
+        const facts: { label: string; value: string | string[] }[] = spec.grades.length
+            ? [{ label: t('card.grades'), value: spec.grades }]
+            : [{ label: t('card.grades_label'), value: t('card.grades_none') }];
         return {
             slug: p.slug,
             category: p.category,
@@ -75,7 +55,7 @@ export default async function CataloguePage({ params }: Props) {
                     altNames={p.altNames}
                     href={p.href}
                     image={p.image}
-                    chips={[t(`water.${p.category}`), t('card.origin_value')]}
+                    chips={[t(`water.${p.category}`)]}
                     facts={facts}
                 />
             ),
@@ -107,7 +87,6 @@ export default async function CataloguePage({ params }: Props) {
         },
     ];
 
-    const specify = ['species', 'form', 'packing', 'volume', 'destination', 'timing'] as const;
     // Smallest first step for a cold buyer: WhatsApp to management, prefilled
     const { email } = companyConfig.contact;
     const whatsappHref = whatsappLink(t('hero.whatsapp_message'));
@@ -127,7 +106,7 @@ export default async function CataloguePage({ params }: Props) {
                 intro={t('hero.intro')}
             >
                 <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                    <Button href={`#${CUSTOM_ID}`} external size="lg" stretch="phone" arrow>
+                    <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'catalogue_hero_partnership' }}>
                         {t('hero.primary')}
                     </Button>
                     <Button
@@ -144,12 +123,6 @@ export default async function CataloguePage({ params }: Props) {
                 </div>
             </PageHead>
 
-            {/* Supplier proof above the fold: the G home key-figures strip */}
-            <StatStrip
-                label={t('hero.facts.label')}
-                items={FACTS.map((k) => ({ value: t(`hero.facts.${k}.value`), label: t(`hero.facts.${k}.label`) }))}
-            />
-
             {/* The species register: the one list on this page */}
             <Section variant="white" labelledBy="catalogue-species">
                 <SectionHeading id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} />
@@ -159,32 +132,9 @@ export default async function CataloguePage({ params }: Props) {
                 <p className={cn('m-0 mt-8 border-0 border-s-2 border-solid border-gold ps-4 font-medium text-fg', typography.lead)}>
                     {t('grid.more_species')}
                 </p>
-
-                {/* Specifications and prices are confirmed per order */}
-                <Card as="aside" padding="md" className="mt-12 flex flex-col gap-4 border-s-4 border-s-gold bg-surface-offwhite sm:flex-row" >
-                    <span className="flex h-tap w-tap shrink-0 items-center justify-center rounded-control bg-white text-navy">
-                        <DocumentIcon size={24} />
-                    </span>
-                    <div className="min-w-0">
-                        <h3 className={cn('m-0 text-navy', typography.h3)}>{t('note.title')}</h3>
-                        <p className={cn('m-0 mt-2 max-w-prose-v2 text-ink-muted', typography.body)}>{t('note.text')}</p>
-                    </div>
-                </Card>
             </Section>
 
-            <Section variant="offwhite" labelledBy="catalogue-specify">
-                <SectionHeading id="catalogue-specify" eyebrow={t('specify.eyebrow')} title={t('specify.title')} intro={t('specify.intro')} />
-                <FeatureGrid
-                    columns={3}
-                    items={specify.map((k) => ({
-                        icon: <CheckIcon size={24} />,
-                        title: t(`specify.${k}_title`),
-                        description: t(`specify.${k}_text`),
-                    }))}
-                />
-            </Section>
-
-            <Section variant="white" labelledBy="catalogue-proof">
+            <Section variant="offwhite" labelledBy="catalogue-proof">
                 <SectionHeading id="catalogue-proof" eyebrow={t('proof.eyebrow')} title={t('proof.title')} />
                 <FeatureGrid
                     columns={3}
@@ -197,11 +147,12 @@ export default async function CataloguePage({ params }: Props) {
                 />
             </Section>
 
-            {/* Closing: custom requirements (offwhite + accent card; the G footer carries the contact block) */}
-            <Section variant="offwhite" labelledBy={CUSTOM_ID}>
+            {/* Closing: custom requirements (accent card; the G footer carries the contact block).
+                The steps after the buyer writes live on /requirements only. */}
+            <Section variant="white" labelledBy={CUSTOM_ID}>
                 <Card accent padding="lg">
                     <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-                        <div className="lg:col-span-7">
+                        <div className="lg:col-span-8">
                             <Eyebrow>{t('custom.eyebrow')}</Eyebrow>
                             <h2 id={CUSTOM_ID} className={cn('v2-heading m-0 mt-3 scroll-mt-28', typography.h2Sm)}>
                                 {t('custom.title')}
@@ -229,19 +180,6 @@ export default async function CataloguePage({ params }: Props) {
                                     {t('custom.email')}
                                 </Button>
                             </div>
-                        </div>
-                        <div className="lg:col-span-5">
-                            <h3 id="catalogue-next" className={cn('m-0 text-ink', typography.h4)}>
-                                {t('custom.after_title')}
-                            </h3>
-                            <ol aria-labelledby="catalogue-next" className="m-0 mt-4 list-none space-y-3 border-0 border-t border-solid border-line p-0 pt-4">
-                                {(['after_1', 'after_2', 'after_3'] as const).map((k) => (
-                                    <li key={k} className={cn('flex gap-3 text-ink-muted', typography.body)}>
-                                        <CheckIcon size={20} className="mt-1 shrink-0 text-navy" />
-                                        <span>{t(`custom.${k}`)}</span>
-                                    </li>
-                                ))}
-                            </ol>
                         </div>
                     </div>
                 </Card>

@@ -3,7 +3,7 @@
         "country": "Kuwait",
         "short": "Kuwait",
         "sentence": "Kuwait",
-        "note": "Nuestro mayor mercado de exportación. Abastecemos a distribuidores, cadenas de restaurantes y hoteles en Kuwait.",
+        "note": "Nuestro mayor mercado de exportación.",
         "buyers": [
             "Distribuidores",
             "Cadenas de restaurantes",
@@ -14,19 +14,19 @@
         "country": "Emiratos Árabes Unidos",
         "short": "EAU",
         "sentence": "los Emiratos Árabes Unidos",
-        "note": "Nuestro primer mercado de exportación, desde 2008. Abastecemos a distribuidores, restaurantes, cadenas de supermercados y hoteles en Dubái, Abu Dabi y Sharjah.",
+        "note": "Nuestro primer mercado de exportación, con compradores en Dubái, Abu Dabi y Sharjah.",
         "buyers": [
             "Distribuidores",
             "Restaurantes",
             "Cadenas de supermercados",
             "Hoteles"
-        ]
+        ],
+        "title_name": "los EAU"
     },
     "qatar": {
         "country": "Catar",
         "short": "Catar",
         "sentence": "Catar",
-        "note": "Un mercado en crecimiento. Trabajamos con distribuidores, cadenas hoteleras, restaurantes y empresas de catering en Catar.",
         "buyers": [
             "Distribuidores",
             "Cadenas hoteleras",
@@ -38,7 +38,6 @@
         "country": "Irak",
         "short": "Irak",
         "sentence": "Irak",
-        "note": "Un mercado con una demanda creciente. Abastecemos a distribuidores locales, mercados mayoristas y restaurantes en Irak.",
         "buyers": [
             "Distribuidores locales",
             "Mercados mayoristas",
@@ -49,7 +48,6 @@
         "country": "Baréin",
         "short": "Baréin",
         "sentence": "Baréin",
-        "note": "Abastecemos a distribuidores, restaurantes, cooperativas y hoteles en Baréin.",
         "buyers": [
             "Distribuidores",
             "Restaurantes",
@@ -61,7 +59,6 @@
         "country": "Líbano",
         "short": "Líbano",
         "sentence": "Líbano",
-        "note": "Un mercado que valora la calidad y la frescura. Abastecemos a restaurantes, distribuidores y hoteles en el Líbano.",
         "buyers": [
             "Restaurantes",
             "Distribuidores",
@@ -77,7 +74,7 @@
         "country": "Siria",
         "short": "Siria",
         "sentence": "Siria",
-        "note": "Nuestro mercado más reciente, abierto en 2026. Abastecemos a distribuidores, restaurantes y mercados mayoristas en Siria.",
+        "note": "Nuestro mercado más reciente.",
         "buyers": [
             "Distribuidores",
             "Restaurantes",

@@ -11,20 +11,26 @@
  *
  * All text content is sourced from translations (schema.*, no hardcoded strings).
  * Approved facts only (docs/team/web/g/RELEASE-DECISIONS.md):
- * - 12 main species = data/products.ts `products` (eel is excluded there)
- * - certificates = the three ISO standards; TÜV AUSTRIA named once (recognizedBy), no numbers
+ * - 12 main species = data/products.ts `products` (eel is excluded there), named as on the site
+ *   (data.products.<key>.name) in knowsAbout
+ * - certificates = the three ISO standards; TÜV AUSTRIA named once (recognizedBy), no numbers.
+ *   The JSON-LD is one of the two places the three names may appear (round 1 spec §1.1)
+ * - address = the Motobas plant, in the page language where schema.factoryAddress exists
+ * - foundingLocation = Kafr El Sheikh, Egypt (founded 2008)
  * - identity = legal name, commercial register and tax card (the same numbers shown on /contact and in the footer)
  * - founder is emitted only when schema.founder exists (removed until the owner confirms the spelling)
  * - markets = active markets from companyConfig (7), no price, no MOQ, no reply time
  * - no offers or prices: no hasOfferCatalog, makesOffer or priceRange (prices are confirmed per order)
  * - Organization and WebSite `name` = companyConfig.identity.tradeName (English) in every locale,
- *   so the shared @id nodes agree; the localized name goes into alternateName
+ *   so the shared @id nodes agree; the localized name goes into alternateName.
+ *   WebSite.inLanguage lists every published locale (one multilingual site, same on every page)
  */
 
 import { getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
-import { ogImageMap, Locale } from '@/i18n';
+import { ogImageMap, Locale, locales, isPublishedLocale } from '@/i18n';
 import { routes } from '@/lib/v2/routes';
+import { products } from '@/data/products';
 
 type PageType = 'home' | 'about' | 'contact' | 'markets';
 
@@ -81,15 +87,6 @@ function JsonLd({ schemas }: { schemas: object[] }) {
     );
 }
 
-const factoryAddress = {
-    '@type': 'PostalAddress',
-    streetAddress: companyConfig.addresses.factory.street,
-    addressLocality: companyConfig.addresses.factory.city,
-    addressRegion: companyConfig.addresses.factory.region,
-    postalCode: companyConfig.addresses.factory.postalCode,
-    addressCountry: 'EG'
-};
-
 const activeMarkets = companyConfig.markets.filter(m => m.status === 'active');
 
 /** Untyped root translator (keys below are built at runtime). */
@@ -123,6 +120,28 @@ function rawStrings(t: RootT, key: string): string[] {
     if (!t.has(key)) return [];
     const v = t.raw(key);
     return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && x.trim() !== '') : [];
+}
+
+/**
+ * Motobas plant address in the page language (schema.factoryAddress: street,
+ * locality, region); English config values where a locale has no translation yet.
+ */
+function factoryAddress(t: RootT) {
+    const a = rawOr<{ street?: string; locality?: string; region?: string }>(t, 'schema.factoryAddress', {});
+    const f = companyConfig.addresses.factory;
+    return {
+        '@type': 'PostalAddress',
+        streetAddress: a.street || f.street,
+        addressLocality: a.locality || f.city,
+        addressRegion: a.region || f.region,
+        postalCode: f.postalCode,
+        addressCountry: 'EG'
+    };
+}
+
+/** The 12 main species, named as on the site (eel excluded: not published). */
+function speciesNames(t: RootT): string[] {
+    return products.map(p => opt(t, `data.products.${p.translationKey}.name`)).filter((n): n is string => !!n);
 }
 
 /**
@@ -177,6 +196,9 @@ export default async function StructuredData({ locale }: { locale: string }) {
         description: opt(t, 'schema.description'),
         slogan: opt(t, 'schema.slogan'),
         foundingDate: String(companyConfig.identity.foundingYear),
+        foundingLocation: opt(t, 'schema.foundingLocation')
+            ? { '@type': 'Place', name: opt(t, 'schema.foundingLocation'), address: { '@type': 'PostalAddress', addressRegion: companyConfig.addresses.factory.region, addressCountry: 'EG' } }
+            : undefined,
         founder: founderName ? { '@type': 'Person', name: founderName } : undefined,
         taxID: companyConfig.registration.taxCard,
         // Commercial register: the most checkable identity fact, also shown on /contact and in the footer
@@ -185,7 +207,7 @@ export default async function StructuredData({ locale }: { locale: string }) {
             : undefined,
         email: companyConfig.contact.email,
         telephone: companyConfig.contact.phone,
-        address: factoryAddress,
+        address: factoryAddress(t),
         // WhatsApp = management direct (fast deals); email = export team (details and documents)
         contactPoint: [
             {
@@ -210,7 +232,8 @@ export default async function StructuredData({ locale }: { locale: string }) {
         areaServed: areaServedCountries(t),
         // Only real, owned profiles (companyConfig.contact.social). WhatsApp is a contact channel, not a profile.
         sameAs: [companyConfig.contact.social.facebook],
-        knowsAbout: rawStrings(t, 'schema.knowsAbout'),
+        // Trade topics, then the 12 main species
+        knowsAbout: Array.from(new Set([...rawStrings(t, 'schema.knowsAbout'), ...speciesNames(t)])),
         // ISO 9001 / 14001 / 45001; the certification body appears once per credential as recognizedBy,
         // not in the descriptions. No certificate numbers, dates, site or scope.
         hasCredential: credentials.map(c => ({
@@ -230,7 +253,7 @@ export default async function StructuredData({ locale }: { locale: string }) {
         alternateName: alternateNames,
         url: baseUrl,
         description: opt(t, 'schema.websiteDescription'),
-        inLanguage: locale,
+        inLanguage: locales.filter(l => isPublishedLocale(l)),
         publisher: {
             '@id': `${baseUrl}/#organization`
         }
@@ -261,7 +284,7 @@ export async function PageStructuredData({ locale, pageType }: { locale: string;
             telephone: companyConfig.contact.whatsapp,
             email: companyConfig.contact.email,
             parentOrganization: { '@id': `${baseUrl}/#organization` },
-            address: factoryAddress,
+            address: factoryAddress(t),
             geo: {
                 '@type': 'GeoCoordinates',
                 latitude: FACTORY_GEO.latitude,

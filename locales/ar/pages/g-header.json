@@ -5,9 +5,10 @@
     "nav": {
         "about": "من نحن",
         "fish": "أسماكنا",
-        "chain": "سلسلة القيمة",
+        "chain": "التعبئة",
         "quality": "الجودة",
         "markets": "الأسواق",
+        "importers": "للمستوردين",
         "contact": "تواصل معنا"
     },
     "lang_aria": "اللغة: {name}",

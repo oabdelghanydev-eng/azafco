@@ -6,13 +6,17 @@
  *   npm run seo:check -- --url http://localhost:3000   # check an already running server
  *
  * For every URL in /sitemap.xml (every route x every locale) it verifies:
- *   - <title> present, <= 65 chars, unique within its locale
- *   - meta description present, 50-160 chars, unique within its locale
+ *   - the sitemap entry has a <lastmod>
+ *   - <title> present, <= 60 chars, unique within its locale
+ *   - meta description present, 120-155 chars, unique within its locale
  *   - exactly one <h1>
  *   - <link rel="canonical"> equals the page's own (sitemap) URL
- *   - hreflang alternates for the published locales (ar/en) + x-default, none for es/ru/de/fr; own-locale alternate = own URL
+ *   - hreflang alternates for the published locales + x-default (none for UNPUBLISHED_LOCALES); own-locale alternate = own URL
  *   - at least one JSON-LD block, and every JSON-LD block parses
  *   - every <img> has a non-empty alt (alt="" only with aria-hidden="true" or role="presentation"/"none")
+ *
+ * And for every page removed on 14 Nov 2026 (REMOVED below), in every locale: it is not
+ * in the sitemap and answers 308 to its new home.
  *
  * Prints a table of failures and exits 1 if there are any. No dependencies beyond Node >= 18.
  */
@@ -26,9 +30,19 @@ const path = require('path');
 // UNPUBLISHED_LOCALES must NOT appear as an hreflang alternate.
 const LOCALES = ['ar', 'en', 'es', 'ru', 'de', 'fr'];
 const UNPUBLISHED_LOCALES = [];
-const TITLE_MAX = 65;
-const DESC_MIN = 50;
-const DESC_MAX = 160;
+const TITLE_MAX = 60;
+const DESC_MIN = 120;
+const DESC_MAX = 155;
+/** Removed pages (locale-less) and where next.config.js redirects them (308). */
+const REMOVED = [
+    ['/seafood', '/products'],
+    ['/businesses', '/about#businesses'],
+    ['/agriculture', '/about#businesses'],
+    ['/livestock', '/about#businesses'],
+    ['/investments', '/about#businesses'],
+    ['/insights/news', '/insights#news'],
+    ['/media', '/insights#news'],
+];
 const CONCURRENCY = 6;
 // Fetch as a crawler so Next.js renders metadata in <head> (no streamed metadata).
 const UA = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html) azafco-seo-check';
@@ -230,6 +244,34 @@ async function main() {
         if (urls.length === 0) throw new Error('sitemap.xml has no <loc> entries');
 
         const results = [];
+        const early = [];
+        // every sitemap entry carries a content date
+        for (const block of sm.match(/<url>[\s\S]*?<\/url>/g) || []) {
+            if (/<lastmod>/.test(block)) continue;
+            const loc = (block.match(/<loc>([^<]+)<\/loc>/) || [])[1] || base;
+            early.push({ url: decode(loc.trim()), locale: '', check: 'sitemap-lastmod', detail: 'no <lastmod>' });
+        }
+        // removed pages: out of the sitemap, 308 to their new home
+        for (const locale of LOCALES) {
+            for (const [from, to] of REMOVED) {
+                const url = `${base}/${locale}${from}`;
+                const want = `/${locale}${to}`;
+                if (urls.some((u) => normUrl(new URL(u).pathname) === `/${locale}${from}`)) {
+                    early.push({ url, locale, check: 'removed-in-sitemap', detail: 'listed in sitemap.xml' });
+                }
+                try {
+                    const r = await fetch(url, { headers: { 'user-agent': UA }, redirect: 'manual' });
+                    const loc = r.headers.get('location') || '';
+                    const got = loc ? new URL(loc, base) : null;
+                    const gotPath = got ? `${got.pathname}${got.hash}` : '';
+                    if (r.status !== 308 || gotPath !== want) {
+                        early.push({ url, locale, check: 'removed-redirect', detail: `status ${r.status} -> ${loc || '(none)'} (want 308 -> ${want})` });
+                    }
+                } catch (e) {
+                    early.push({ url, locale, check: 'removed-redirect', detail: e.message });
+                }
+            }
+        }
         let next = 0;
         async function worker() {
             while (next < urls.length) {
@@ -254,7 +296,7 @@ async function main() {
         await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 
         // uniqueness within a locale
-        const fails = results.flatMap((r) => r.fails);
+        const fails = [...early, ...results.flatMap((r) => r.fails)];
         for (const [field, label] of [['title', 'title'], ['desc', 'description']]) {
             const byKey = new Map();
             for (const r of results) {

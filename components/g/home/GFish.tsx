@@ -53,8 +53,7 @@ export default async function GFish() {
                                 <span className="relative block aspect-video w-full">
                                     <Image
                                         src={`/images/species/${s.slug}.webp`}
-                                        alt=""
-                                        aria-hidden="true"
+                                        alt={t(`species.${s.key}.alt`)}
                                         fill
                                         sizes="(min-width: 1024px) 300px, (min-width: 768px) 30vw, (min-width: 640px) 45vw, 170px"
                                         className="object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.45)] rtl:-scale-x-100 lg:drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]"

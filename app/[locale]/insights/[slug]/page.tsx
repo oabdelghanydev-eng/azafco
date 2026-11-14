@@ -6,11 +6,12 @@ import { Link } from '@/navigation';
 import { mediaImage } from '@/lib/v2/media';
 import { insightHref, routes } from '@/lib/v2/routes';
 import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
-import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount } from '@/components/v2/insights/ImportingGuideBody';
+import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount, importingSourceList } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 import { ArrowIcon, Container, PageHead, containerClass, Section, SectionHeading, cardClass, cn, focusRing, typography } from '@/components/ui';
 import { companyConfig } from '@/config/company.config';
+import { REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
 import { ogImageMap, type Locale } from '@/i18n';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -47,7 +48,7 @@ export default async function InsightArticlePage({ params }: Props) {
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const tg = await getTranslations({ locale, namespace: `guides_page.${entry.translationKey}` });
     const format = await getFormatter({ locale });
-    const fmt = (iso: string) => format.dateTime(new Date(`${iso}T00:00:00Z`), { dateStyle: 'long', timeZone: 'UTC' });
+    const fmt = (iso: string) => format.dateTime(isoDate(iso), REVIEW_DATE_FORMAT);
 
     const title = tg('h1');
     const tgAll = await getTranslations({ locale, namespace: 'guides_page' });
@@ -55,6 +56,7 @@ export default async function InsightArticlePage({ params }: Props) {
     const image = entry.imageId ? mediaImage(entry.imageId, locale) : undefined;
     const reviewed = fmt(entry.lastReviewed);
     const sectionTitles = await importingSectionTitles(locale);
+    const sources = await importingSourceList(locale);
 
     const baseUrl = companyConfig.contact.baseUrl;
     const pageUrl = `${baseUrl}/${locale}${insightHref(slug)}`;
@@ -78,6 +80,15 @@ export default async function InsightArticlePage({ params }: Props) {
         dateModified: entry.lastReviewed,
         author: org,
         publisher: org,
+        // The sources listed at the end of the guide (data/market-import.ts, then data/guides.ts)
+        citation: sources.map((s) => ({
+            '@type': 'CreativeWork',
+            name: s.title,
+            url: s.url,
+            inLanguage: s.docLang.length === 1 ? s.docLang[0] : s.docLang,
+            ...(s.year ? { datePublished: s.year } : {}),
+            ...(s.publisher ? { publisher: { '@type': 'Organization', name: s.publisher } } : {}),
+        })),
     };
 
     const relatedHrefs = [routes.forImporters, routes.markets, routes.products];

@@ -23,7 +23,6 @@ const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=31.433264,30.4
 
 /** Quiet secondary links under the bottom bar (not on the boards; kept small and muted) */
 const SECONDARY = [
-    { key: 'for_importers', href: routes.forImporters },
     { key: 'contact', href: routes.contact },
     { key: 'privacy', href: routes.privacy },
 ] as const;
@@ -103,7 +102,7 @@ export default function GFooter() {
     const rtl = locale === 'ar';
     const { email, whatsappNumber } = companyConfig.contact;
     const langs = publishedLangs();
-    // Header labels for the five board items; the site-wide labels for Seafood and Insights
+    // Header labels for the site sections; the site-wide label for Insights
     const navLabels = Object.fromEntries([
         ...G_NAV_KEYS.map((k) => [k, tNav(`nav.${k}`)]),
         ...G_FOOTER_EXTRA_KEYS.map((k) => [k, tSite(k)]),
@@ -237,63 +236,56 @@ export default function GFooter() {
             </div>
             </GFooterContactGate>
 
-            {/* Bottom bar */}
+            {/* Bottom bar: one responsive markup (crawlers read the links once). Phone / tablet:
+                a grid (logo + back-to-top, tagline, links, languages, legal); from lg the same
+                elements as one row (logo and tagline, links, languages and back-to-top).
+                Back-to-top sits where it is seen, so the focus and reading order match the
+                screen: right after the logo below lg, after the languages from lg. Only one
+                of the two is displayed at a time (the other is display: none). */}
             <div className="bg-navy-925">
-                {/* Phone / tablet */}
-                <div className="px-5 pb-6 pt-8 md:px-8 lg:hidden">
-                    <div className="flex items-center justify-between gap-4">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/images/g/logo-reversed.svg" alt={t('logo_alt')} width={81} height={54} loading="lazy" decoding="async" className="block h-[54px] w-auto" />
-                        {backToTop}
-                    </div>
-                    <p className={cn('mb-0 mt-3.5 text-white/70', typography.caption)}>
-                        {t('tagline_1')} {t('tagline_2')}.
-                    </p>
-                    <GFooterNav
-                        label={t('links_label')}
-                        labels={navLabels}
-                        className={cn('mt-[18px] flex flex-wrap gap-x-[18px]', typography.small)}
-                        linkClassName={`py-2 transition-colors hover:text-gold aria-[current=page]:text-gold ${FOCUS_DARK}`}
-                    />
-                    <div className="mt-4">
-                        <GFooterLangs label={t('langs_label')} locale={locale} langs={langs} />
-                    </div>
-                    <div className={cn('mt-6 border-t border-white/[.14] pt-2 text-white/60', typography.micro)}>
-                        {secondary('-mb-1 flex flex-wrap gap-x-5')}
-                        <p className="m-0 pt-1">{t('copyright')}</p>
-                        <p className="m-0">{registration}</p>
-                    </div>
-                </div>
-
-                {/* Desktop */}
-                <div className="mx-auto box-border hidden max-w-v2 px-8 pb-7 pt-9 lg:block">
-                    <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-5">
-                        <div className="flex items-center gap-5">
+                <div className="mx-auto box-border max-w-v2 px-5 pb-6 pt-8 md:px-8 lg:pb-7 lg:pt-9">
+                    <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 lg:flex lg:flex-wrap lg:justify-between lg:gap-x-10 lg:gap-y-5">
+                        <div className="contents lg:flex lg:items-center lg:gap-5">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/g/logo-reversed.svg" alt={t('logo_alt')} width={95} height={64} loading="lazy" decoding="async" className="block h-16 w-auto" />
-                            <p className={cn('m-0 text-white/70', typography.caption)}>
+                            <img
+                                src="/images/g/logo-reversed.svg"
+                                alt={t('logo_alt')}
+                                width={95}
+                                height={64}
+                                loading="lazy"
+                                decoding="async"
+                                className="col-start-1 row-start-1 block h-[54px] w-auto lg:h-16"
+                            />
+                            <div className="col-start-2 row-start-1 flex lg:hidden">{backToTop}</div>
+                            <p className={cn('col-span-2 mb-0 mt-3.5 text-white/70 lg:m-0', typography.caption)}>
                                 {t('tagline_1')}
-                                <br />
-                                {t('tagline_2')}
+                                <br className="hidden lg:inline" /> {t('tagline_2')}
                             </p>
                         </div>
                         <GFooterNav
                             label={t('links_label')}
                             labels={navLabels}
-                            className={cn('flex flex-wrap gap-x-7', typography.body)}
+                            className="col-span-2 mt-[18px] flex flex-wrap gap-x-[18px] text-body-sm lg:mt-0 lg:gap-x-7 lg:text-body"
                             linkClassName={`py-2 transition-colors hover:text-gold aria-[current=page]:text-gold ${FOCUS_DARK}`}
                         />
-                        <div className="flex items-center gap-4">
-                            <GFooterLangs label={t('langs_label')} locale={locale} langs={langs} />
-                            {backToTop}
+                        <div className="contents lg:flex lg:items-center lg:gap-4">
+                            <div className="col-span-2 mt-4 lg:mt-0">
+                                <GFooterLangs label={t('langs_label')} locale={locale} langs={langs} />
+                            </div>
+                            <div className="hidden lg:flex">{backToTop}</div>
                         </div>
                     </div>
-                    <div className={cn('mt-[26px] flex flex-wrap items-center justify-between gap-x-8 border-t border-white/[.12] pt-[7px] text-white/60', typography.micro)}>
-                        <p className="m-0 flex flex-wrap gap-x-6 py-[11px]">
-                            <span>{t('copyright')}</span>
-                            <span>{registration}</span>
+                    <div
+                        className={cn(
+                            'mt-6 flex flex-col border-t border-white/[.14] pt-2 text-white/60 lg:mt-[26px] lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-x-8 lg:border-white/[.12] lg:pt-[7px]',
+                            typography.micro,
+                        )}
+                    >
+                        <p className="order-2 m-0 pt-1 lg:order-1 lg:flex lg:flex-wrap lg:gap-x-6 lg:py-[11px]">
+                            <span className="block lg:inline">{t('copyright')}</span>
+                            <span className="block lg:inline">{registration}</span>
                         </p>
-                        {secondary('flex flex-wrap gap-x-6')}
+                        {secondary('order-1 -mb-1 flex flex-wrap gap-x-5 lg:order-2 lg:mb-0 lg:gap-x-6')}
                     </div>
                 </div>
             </div>

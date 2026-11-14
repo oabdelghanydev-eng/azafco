@@ -4,12 +4,12 @@ import { cn } from '@/lib/v2/cn';
 
 export interface SpecRow {
     label: ReactNode;
-    /** null / undefined / '' → "Confirmed with sales" empty state */
+    /** null / undefined / '' → neutral empty state (v2.spec.confirmed_with_sales) */
     value?: ReactNode | null;
 }
 
 export interface SpecTableProps {
-    /** Visible caption / table name, e.g. "Tilapia: specifications" */
+    /** Visible caption / table name, e.g. "Tilapia: specification" */
     caption: ReactNode;
     rows: SpecRow[];
     /** Override the empty-state text */
@@ -20,9 +20,10 @@ export interface SpecTableProps {
 }
 
 /**
- * Product specification. Desktop (md+): accessible <table> with row headers.
- * Mobile: label–value list (no horizontal scroll). Unknown fields render a
- * neutral "Confirmed with sales" state instead of an invented value.
+ * Product specification: one accessible <table> with row headers at every width
+ * (rendered once in the HTML). Two columns fit a 390px phone: the label column is
+ * narrower and padding tighter on small screens, values wrap. Unknown fields render
+ * a neutral empty state instead of an invented value.
  */
 export default function SpecTable({ caption, rows, emptyLabel, hideCaption = false, className }: SpecTableProps) {
     const t = useTranslations('v2.spec');
@@ -37,16 +38,8 @@ export default function SpecTable({ caption, rows, emptyLabel, hideCaption = fal
 
     return (
         <div data-surface="light" className={cn('rounded-card border border-t-4 border-line border-t-gold bg-white text-ink', className)}>
-            {/* Desktop table */}
-            <table className="hidden w-full border-collapse text-start text-body-sm md:table">
-                <caption
-                    className={cn(
-                        'px-6 pb-3 pt-5 text-start text-heading-md text-ink',
-                        hideCaption && 'sr-only',
-                    )}
-                >
-                    {caption}
-                </caption>
+            <table className="w-full table-fixed border-collapse text-start text-body-sm">
+                <caption className={cn('px-4 pb-3 pt-5 text-start text-heading-md text-ink md:px-6', hideCaption && 'sr-only')}>{caption}</caption>
                 <thead className="sr-only">
                     <tr>
                         <th scope="col">{t('attribute')}</th>
@@ -56,27 +49,16 @@ export default function SpecTable({ caption, rows, emptyLabel, hideCaption = fal
                 <tbody>
                     {rows.map((r, i) => (
                         <tr key={i} className="border-t border-line-soft">
-                            <th scope="row" className="w-2/5 px-6 py-3.5 text-start align-top font-medium text-ink-muted">
+                            <th scope="row" className="w-[42%] px-4 py-3 text-start align-top font-medium text-ink-muted md:w-2/5 md:px-6 md:py-3.5">
                                 {r.label}
                             </th>
-                            <td className="px-6 py-3.5 align-top font-medium text-ink">{isEmpty(r.value) ? <Empty /> : r.value}</td>
+                            <td className="px-4 py-3 align-top font-medium text-ink [overflow-wrap:anywhere] md:px-6 md:py-3.5">
+                                {isEmpty(r.value) ? <Empty /> : r.value}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
-
-            {/* Mobile list */}
-            <div className="md:hidden">
-                <p className={cn('m-0 px-4 pb-2 pt-4 text-heading-md text-ink', hideCaption && 'sr-only')}>{caption}</p>
-                <dl className="m-0">
-                    {rows.map((r, i) => (
-                        <div key={i} className="border-t border-line-soft px-4 py-3">
-                            <dt className="text-caption text-ink-subtle">{r.label}</dt>
-                            <dd className="mt-0.5 text-body-sm font-medium text-ink">{isEmpty(r.value) ? <Empty /> : r.value}</dd>
-                        </div>
-                    ))}
-                </dl>
-            </div>
         </div>
     );
 }

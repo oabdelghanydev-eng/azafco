@@ -6,7 +6,7 @@
     "breadcrumb": "Contact us",
     "hero": {
         "eyebrow": "Contact us",
-        "title": "Start a partnership with one message",
+        "title": "Contact AZAFCO International",
         "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents.",
         "actions": {
             "whatsapp": "Message management on WhatsApp",
@@ -19,7 +19,7 @@
         "intro": "One number for management on WhatsApp and phone, one email for the export team.",
         "whatsapp": {
             "title": "WhatsApp",
-            "sub": "Direct to management · for fast deals"
+            "sub": "Direct to management"
         },
         "email": {
             "title": "Email",
@@ -47,30 +47,21 @@
         "documents_title": "Documents",
         "documents_text": "Product specifications or the company profile. A short request: no species or quantity needed.",
         "documents_action": "Request documents",
-        "corporate_title": "Corporate partnership or other topics",
-        "corporate_text": "Partnerships, investment or other topics: a short introduction to your company and the cooperation you propose.",
-        "corporate_action": "Send a corporate enquiry"
+        "corporate_link": "Partnerships, investment or other topics? <link>Send a corporate enquiry</link>"
     },
     "locations": {
         "eyebrow": "Locations",
         "title": "Main office and factory",
-        "intro": "Our main office is in El-Borollos and our factory in Motobas, both in Kafr El Sheikh, Egypt.",
-        "factory": "Factory",
+                "factory": "Factory",
         "office": "Main office",
         "map_open": "Open in Google Maps",
         "map_title_factory": "Map of the AZAFCO International factory in Motobas",
         "map_title_office": "Map of the AZAFCO International main office",
         "map_note": "Maps are loaded from Google Maps."
     },
-    "next": {
-        "eyebrow": "After you write",
-        "title": "What happens after you write to us",
-        "steps": [
-            "The export team reviews your requirements against the specification and current availability.",
-            "We contact you to confirm the details and any open points.",
-            "Prices, quantity, packing and terms are confirmed in writing for each order."
-        ],
-        "no_promise": "Sending your requirements does not commit you or us to an order. Prices are confirmed per order."
+    "official": {
+        "eyebrow": "Official details",
+        "title": "Our registration and official channels"
     },
     "privacy": {
         "title": "How we use your details",
@@ -80,13 +71,6 @@
     "trust": {
         "title": "Registered company",
         "register": "Commercial register",
-        "tax": "Tax card",
-        "proof_title": "Track record",
-        "proof": [
-            "Founded in 2008",
-            "7+ markets in the Middle East and beyond",
-            "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA"
-        ],
-        "proof_link": "See quality and certificates"
+        "tax": "Tax card"
     }
 }

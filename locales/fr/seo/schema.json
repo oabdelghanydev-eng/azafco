@@ -1,42 +1,29 @@
 {
     "companyName": "AZAFCO International",
     "legalName": "AZAFCO International for Investment and Development S.A.E.",
-    "alternateName": "AZAFCO International",
     "alternateNames": [
         "AZAFCO",
         "ازافكو العالمية",
         "ازافكو",
         "EZAFCO"
     ],
-    "description": "AZAFCO International est une entreprise égyptienne qui élève et achète du poisson frais, puis le calibre, le conditionne et l’exporte pour des importateurs, des distributeurs et des acheteurs de la restauration hors domicile sur plus de {countries} marchés. Usine de transformation à Motobas, Kafr el-Cheikh, Égypte.",
+    "description": "AZAFCO International est une entreprise égyptienne qui élève et achète du poisson frais, puis le lave, le met sous glace, le calibre, le conditionne et le contrôle dans son usine de Motobas, à Kafr el-Cheikh, et l’exporte vers des importateurs et des distributeurs dans plus de {countries} marchés.",
     "slogan": "De la production en Égypte aux partenariats dans le monde",
-    "foundingDate": "2008",
+    "foundingLocation": "Kafr el-Cheikh, Égypte",
     "commercialRegisterLabel": "Registre du commerce",
     "factoryName": "Usine de transformation du poisson d’AZAFCO International",
     "factoryAlternateName": "Usine de poisson AZAFCO, Motobas",
-    "factoryDescription": "Usine de transformation du poisson d’AZAFCO International à Motobas, Kafr el-Cheikh : calibrage, conditionnement et expédition de poisson frais pour l’export.",
-    "websiteName": "AZAFCO International",
+    "factoryDescription": "Usine de conditionnement du poisson d’AZAFCO International à Motobas, Kafr el-Cheikh : lavage, glaçage, calibrage, conditionnement et contrôle de poisson frais pour l’export.",
+    "factoryAddress": {
+        "street": "N° 120, secteur des aliments pour animaux, zone industrielle",
+        "locality": "Motobas",
+        "region": "Kafr el-Cheikh"
+    },
     "websiteDescription": "Site officiel d’AZAFCO International : poisson frais d’Égypte pour les importateurs, les distributeurs et la restauration hors domicile, avec les spécifications des espèces et les contacts pour démarrer un partenariat.",
-    "productGroupName": "Poisson frais AZAFCO International",
-    "productGroupDesc": "Poisson frais d’Égypte : tilapia, bar, mulet cabot, poisson-chat africain et autres espèces. Calibre et conditionnement confirmés à chaque commande.",
-    "catalogName": "Catalogue de poisson frais AZAFCO International",
-    "catalogDesc": "Poisson frais pour l’export en gros depuis l’Égypte : 12 espèces principales. Calibre et conditionnement confirmés à chaque commande ; autres espèces fournies sur demande.",
-    "offerDesc": "Indiquez-nous votre spécification ; nous étudierons les disponibilités et les conditions commerciales. Horaires du bureau : du samedi au jeudi, de 8 h à 17 h (heure du Caire).",
-    "priceRange": "Prix confirmés à chaque commande",
-    "freshFishCategory": "Poisson frais",
-    "freshwater": "Poissons d’eau douce",
-    "freshwaterDesc": "Tilapia, poisson-chat africain, bagre bayad, carpe commune, carpe miroir, carpe amour, carpe argentée",
-    "saltwater": "Poissons marins et d’eaux saumâtres",
-    "saltwaterDesc": "Bar, dorade royale, maigre, mulet cabot, mulet porc",
-    "restaurantHotelSupply": "Approvisionnement de la restauration hors domicile",
     "home": "Accueil",
-    "products": "Produits",
     "about": "À propos",
     "contact": "Contact",
     "markets": "Marchés",
-    "media": "Médias",
-    "certificates": "Certificats",
-    "openingHours": "Sa-Th 08:00-17:00",
     "contactManagement": "Ligne directe de la direction · pour conclure rapidement",
     "contactExport": "Équipe export (informations et documents)",
     "certificationBody": "TÜV AUSTRIA",
@@ -61,24 +48,6 @@
         "Calibrage et conditionnement du poisson",
         "Logistique de la chaîne du froid",
         "Approvisionnement en poisson en gros",
-        "Tilapia",
-        "Bar",
-        "Mulet cabot",
         "Aquaculture égyptienne"
-    ],
-    "speakableName": "AZAFCO International | Exportation de poisson frais",
-    "services": {
-        "tilapia": {
-            "name": "Approvisionnement en tilapia frais",
-            "description": "Tilapia frais pour le commerce de gros et l’export"
-        },
-        "seaBass": {
-            "name": "Approvisionnement en bar frais",
-            "description": "Bar frais pour le commerce de gros et l’export"
-        },
-        "mullet": {
-            "name": "Approvisionnement en mulet cabot frais",
-            "description": "Mulet cabot frais pour le commerce de gros et l’export"
-        }
-    }
+    ]
 }

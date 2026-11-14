@@ -34,7 +34,6 @@
     "float_label": "Message management on WhatsApp",
     "secondary_label": "More links",
     "secondary": {
-        "for_importers": "For importers",
         "contact": "Contact",
         "privacy": "Privacy policy",
         "cookies": "Cookie settings"

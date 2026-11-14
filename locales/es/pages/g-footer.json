@@ -34,7 +34,6 @@
     "float_label": "Escriba a la gerencia por WhatsApp",
     "secondary_label": "Más enlaces",
     "secondary": {
-        "for_importers": "Para importadores",
         "contact": "Contacto",
         "privacy": "Política de privacidad",
         "cookies": "Configuración de cookies"

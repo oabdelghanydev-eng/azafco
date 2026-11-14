@@ -1,7 +1,7 @@
 // Media Center guides - locale-agnostic data. Text lives in locales/[locale]/pages/guides.json.
 
 export interface Guide {
-    /** URL segment: /[locale]/guides/[slug] */
+    /** URL segment: /[locale]/insights/[slug] */
     slug: string;
     /** Key under guides_page.<translationKey> */
     translationKey: string;
@@ -24,7 +24,7 @@ export const guideSlugs = guides.map((guide) => guide.slug);
 export const getGuideBySlug = (slug: string) => guides.find((guide) => guide.slug === slug);
 
 // ─────────────────────────────────────────────────────────────────────────────
-// "Importing fresh fish from Egypt" - tariff table and sources
+// "Importing fresh fish from Egypt" - market rules, tariff table, documents, sources
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
@@ -65,10 +65,24 @@ export const importingTariffRows: TariffRow[] = [
     { productKey: 'lout', scientificName: 'Argyrosomus regius', hs: '0302.89', cn: '0302 89 90', note: 'other_fish' },
 ];
 
-/** Documents section: order on the page, with the sources that back each item. */
+/**
+ * Documents a fresh fish shipment usually involves, whatever the destination.
+ * Text: guides_page.importing.docs.items.<id>. Sources back the item where it
+ * states a rule (ids from data/market-import.ts importSources or importingSources below).
+ */
 export const importingDocuments: { id: string; sources: string[] }[] = [
     { id: 'invoice', sources: [] },
-    { id: 'packing_list', sources: [] },
+    { id: 'packing_list', sources: ['kw_res_6_2023', 'bh_guide'] },
+    { id: 'health_certificate', sources: ['kw_res_6_2023', 'bh_guide', 'lb_239', 'qa_guide', 'sy_guide', 'usda_iraq', 'usda_uae'] },
+    { id: 'origin', sources: ['kw_res_6_2023', 'lb_239'] },
+];
+
+/**
+ * Europe section. Europe is a planned market for AZAFCO, not an active one:
+ * nothing here may say or imply that AZAFCO ships to the EU or that its plant
+ * is EU-listed. Text: guides_page.importing.eu.items.<id>.
+ */
+export const importingEuItems: { id: string; sources: string[] }[] = [
     { id: 'health_certificate', sources: ['reg_2020_2235', 'reg_2021_405', 'reg_2026_2228', 'establishments', 'egypt_eu_access'] },
     { id: 'origin', sources: ['a2m_egypt'] },
     { id: 'catch', sources: ['reg_1005_2008', 'catch_it'] },
@@ -76,15 +90,26 @@ export const importingDocuments: { id: string; sources: string[] }[] = [
     { id: 'labelling', sources: ['reg_1379_2013'] },
 ];
 
+/*
+ * "Importing into the Gulf and the Levant" is not stored here: data/market-import.ts is
+ * the one data set for the market pages and the guide (ROUND1-SPEC §6 R4). Its sources
+ * (ids such as kw_res_6_2023, bh_guide, qa_guide, lb_239) open the guide's source list,
+ * followed by importingSources below.
+ */
+
+/** HS, EU and cold-chain sources of the guide (the Gulf and Levant sources are in data/market-import.ts). */
 export interface GuideSource {
     id: string;
     /** Official title, kept in its original language */
     title: string;
     publisher: string;
     url: string;
+    /** Set when the title and publisher are in Arabic */
+    lang?: 'ar';
 }
 
 export const importingSources: GuideSource[] = [
+    // ── HS codes, EU rules and cold chain ──
     {
         id: 'wco_hs',
         title: 'Harmonized System Nomenclature 2022, Chapter 3 (heading 03.02)',

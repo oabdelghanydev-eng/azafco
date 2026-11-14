@@ -1,7 +1,7 @@
 {
     "eyebrow": "Our markets",
     "title": "The Middle East and beyond",
-    "intro": "We ship by air and road to 7+ markets, with Europe next in our plan. Pick a market to see its route.",
+    "intro": "We ship by air and road to 7+ markets, with Europe next in our plan. Pick a market to see it on the map.",
     "since": "since {year}",
     "mapLabel": "Map of shipping routes from Egypt to our markets",
     "origin": "Egypt · Motobas",
@@ -41,7 +41,6 @@
         "ru": "Russia",
         "us": "United States"
     },
-    "paused": "Spain: exports paused",
     "pageLink": "See all markets",
     "marketLink": "{name}: market page"
 }

@@ -47,8 +47,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const baseUrl = companyConfig.contact.baseUrl;
     const t = await getTranslations({ locale, namespace: 'metadata' });
-    // Default description from the v2 home copy (the legacy metadata.home.description
-    // carries unapproved figures)
+    // Default description: the home page's own (home_v2.meta). The metadata namespace
+    // holds only site-wide fields (metadata.site: names, title template, share-image alt).
     const tHome = await getTranslations({ locale, namespace: 'home_v2.meta' });
     // Per-locale share image (i18n.ts ogImageMap; es/ru/de/fr use the English image until their own exists)
     const ogImage = ogImageMap[locale as Locale] ?? ogImageMap.en;
@@ -148,9 +148,10 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={`${manrope.variable} ${plexArabic.variable}`} suppressHydrationWarning>
             <head>
-                {/* Favicon: new identity (public/brand, from branding/group-identity). SVG first, ICO/PNG fallbacks */}
+                {/* Favicon: new identity (public/brand, from branding/group-identity). SVG first, ICO/PNG fallbacks.
+                    The ICO (16 + 32 px) is at the site root, where crawlers and old browsers ask for /favicon.ico */}
                 <link rel="icon" href="/brand/favicon-32.svg" type="image/svg+xml" />
-                <link rel="icon" href="/brand/favicon.ico" sizes="16x16 32x32" />
+                <link rel="icon" href="/favicon.ico" sizes="16x16 32x32" />
                 <link rel="icon" type="image/png" sizes="512x512" href="/brand/app-icon-512.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/brand/app-icon-180.png" />
                 <link rel="manifest" href="/favicons/manifest.webmanifest" />

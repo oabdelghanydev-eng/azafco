@@ -1,7 +1,7 @@
 {
     "eyebrow": "Chaîne de valeur",
-    "title": "Nous assurons chaque étape, de l’étang à la palette",
-    "intro": "Nous travaillons selon une seule spécification convenue à chaque étape, avec nos propres camions frigorifiques, notre logistique et nos entrepôts frigorifiques.",
+    "title": "Cinq étapes, de l’élevage à l’export",
+    "intro": "Nous disposons de nos propres camions frigorifiques, de notre logistique et de nos entrepôts frigorifiques.",
     "stageLabel": "Étape {n}",
     "stages": {
         "farming": {
@@ -14,7 +14,7 @@
         },
         "packing": {
             "title": "Lavage, glaçage et conditionnement",
-            "text": "Lavé, calibré au poids et conditionné entier sous glace."
+            "text": "Lavé, mis sous glace, calibré au poids et conditionné entier."
         },
         "inspection": {
             "title": "Contrôle",

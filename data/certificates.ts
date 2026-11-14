@@ -19,17 +19,18 @@ export interface Certificate {
     site?: string
     /** Owner approved public display. false = never shown */
     publishable?: boolean
-    /** Stable key for public copy (locales/<l>/pages/v2-quality.json · certs.items.<key>) */
+    /** Stable key per standard (internal; /quality shows one generic ISO statement, ROUND1-SPEC §1.1) */
     key?: CertificateKey
 }
 
-/** Standards AZAFCO holds today; the key picks the localized name and one-line summary. */
+/** Standards AZAFCO holds today. */
 export type CertificateKey = 'iso9001' | 'iso14001' | 'iso45001'
 
 /**
  * Public display policy (owner decision 13 Nov 2026, docs/team/web/g/RELEASE-DECISIONS.md §3).
- * Site copy says "we hold ISO certificates": the standard name, what it covers in one
- * line, and "certified by TÜV AUSTRIA" once. Numbers, expiry dates, the plant/site,
+ * Updated 14 Nov 2026 (ROUND1-SPEC §1.1): site copy says only "We hold ISO certificates,
+ * certified by TÜV AUSTRIA"; the three standard names appear in one /quality FAQ answer
+ * and the Organization JSON-LD. Numbers, expiry dates, the plant/site,
  * the holder name, the scope and certificate images are kept here for internal use
  * (and the /v/[token] verification pages) but are NEVER rendered on public pages.
  * No "copies on request" promise either.

@@ -16,19 +16,21 @@ import {
 } from '@/components/ui';
 import { InsightCard } from '@/components/v2';
 import NewsCard from '@/components/v2/insights/NewsCard';
-import { getMedia, mediaImage } from '@/lib/v2/media';
+import { mediaImage } from '@/lib/v2/media';
 import { insightHref, routes } from '@/lib/v2/routes';
 import { Link } from '@/navigation';
 import { insights, readingMinutes } from '@/components/v2/insights/articles';
-import { industryItems, latestPress, pressItems } from '@/data/news';
+import { newsItems } from '@/data/news';
+import { REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 import { companyConfig } from '@/config/company.config';
 
 type Props = { params: Promise<{ locale: string }> };
 
-/** /insights/news (lead: add routes.news to lib/v2/routes.ts) */
-const NEWS_PATH = routes.news;
+/** Company news lives on this page (the old /insights/news 308s here). */
+const NEWS_ID = 'news';
+const NEWS_HREF = `${routes.insights}#${NEWS_ID}`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -44,8 +46,8 @@ export default async function InsightsPage({ params }: Props) {
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const tg = await getTranslations({ locale, namespace: 'guides_page' });
     const format = await getFormatter({ locale });
-    const fmt = (iso: string, style: 'medium' | 'long' = 'medium') =>
-        format.dateTime(new Date(`${iso}T00:00:00Z`), { dateStyle: style, timeZone: 'UTC' });
+    // One date format everywhere ("14 November 2026" / «14 نوفمبر 2026»)
+    const fmt = (iso: string) => format.dateTime(isoDate(iso), REVIEW_DATE_FORMAT);
 
     const entries = insights
         .slice()
@@ -60,22 +62,15 @@ export default async function InsightsPage({ params }: Props) {
         }));
     const [featured, ...rest] = entries;
 
-    // Content types with published entries only (articles.ts rule). News lives on /insights/news.
-    const newsCount = pressItems.length + industryItems.length;
-    const categories = [
-        { key: 'importer_guide', count: t('grid.count', { count: entries.length }), href: featured?.href, show: entries.length > 0 },
-        { key: 'company_news', count: t('categories.news_count', { count: newsCount }), href: NEWS_PATH, show: newsCount > 0 },
-    ].filter((c): c is { key: string; count: string; href: string; show: boolean } => c.show && !!c.href);
-
-    const teaser = latestPress(3);
-
     const baseUrl = companyConfig.contact.baseUrl;
+    const pageUrl = `${baseUrl}/${locale}${routes.insights}`;
     const itemList = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
+        name: t('hero.title'),
         itemListElement: [
             ...entries.map((e) => ({ url: `${baseUrl}/${locale}${e.href}`, name: e.title })),
-            { url: `${baseUrl}/${locale}${NEWS_PATH}`, name: tn('hero.title') },
+            ...newsItems.map((n) => ({ url: `${pageUrl}#news-${n.key}`, name: tn(`items.${n.key}.title`) })),
         ].map((x, i) => ({ '@type': 'ListItem', position: i + 1, ...x })),
     };
 
@@ -92,13 +87,15 @@ export default async function InsightsPage({ params }: Props) {
                             {t('hero.primary')}
                         </Button>
                     ) : null}
-                    <Button href={NEWS_PATH} variant="outline" size="lg" stretch="phone">
-                        {t('hero.secondary')}
-                    </Button>
+                    {newsItems.length > 0 ? (
+                        <Button href={NEWS_HREF} variant="outline" size="lg" stretch="phone">
+                            {t('hero.secondary')}
+                        </Button>
+                    ) : null}
                 </div>
             </PageHead>
 
-            {/* 02 Featured guide */}
+            {/* 02 The importer guide */}
             {featured ? (
                 <Section variant="offwhite" labelledBy="in-featured">
                     <article className={cn(cardClass({ accent: true, interactive: true }), 'group relative grid grid-cols-1 overflow-hidden lg:grid-cols-12')}>
@@ -136,75 +133,7 @@ export default async function InsightsPage({ params }: Props) {
                 </Section>
             ) : null}
 
-            {/* 03 Content types: each card opens its listing */}
-            {categories.length > 1 ? (
-                <Section variant="white" labelledBy="in-categories">
-                    <SectionHeading id="in-categories" eyebrow={t('categories.eyebrow')} title={t('categories.title')} />
-                    <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:gap-6">
-                        {categories.map(({ key, count, href }) => (
-                            <li key={key} className="min-w-0">
-                                <Link
-                                    href={href}
-                                    className={cn(cardClass({ accent: true, interactive: true, padding: 'md' }), 'group flex h-full flex-col', focusRing)}
-                                >
-                                    <span className={cn('block text-ink', typography.h3)}>{t(`categories.${key}`)}</span>
-                                    <span className={cn('mt-2 block flex-1 text-ink-muted', typography.small)}>{t(`categories.${key}_text`)}</span>
-                                    <span className="mt-6 flex items-center justify-between gap-4">
-                                        <span className={cn('font-bold text-navy', typography.small)}>{count}</span>
-                                        <span
-                                            aria-hidden="true"
-                                            className="grid h-tap w-tap place-items-center rounded-full border border-solid border-line text-navy transition-colors duration-base group-hover:border-gold group-hover:bg-gold group-hover:text-navy-900 motion-reduce:transition-none"
-                                        >
-                                            <ArrowIcon size={20} />
-                                        </span>
-                                    </span>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </Section>
-            ) : null}
-
-            {/* Editorial standards (the one navy band; mid-page, so it never sits on the navy footer) */}
-            <Section variant="navy" labelledBy="in-standards" spacing="lg">
-                <div className="max-w-[760px]">
-                    <Eyebrow as="h2" id="in-standards">
-                        {t('standards.title')}
-                    </Eyebrow>
-                    <p className={cn('mb-0 mt-4 text-fg-muted', typography.lead)}>{t('standards.text')}</p>
-                </div>
-            </Section>
-
-            {/* 04 News and press teaser */}
-            {teaser.length > 0 ? (
-                <Section variant="offwhite" labelledBy="in-news">
-                    <SectionHeading
-                        id="in-news"
-                        eyebrow={tn('teaser.eyebrow')}
-                        title={tn('teaser.title')}
-                        intro={tn('teaser.intro')}
-                        action={<TextLink href={NEWS_PATH}>{tn('teaser.all')}</TextLink>}
-                    />
-                    <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-                        {teaser.map((n) => (
-                            <li key={n.key} className="min-w-0">
-                                <NewsCard
-                                    title={tn(`items.${n.key}.title`)}
-                                    summary={tn(`items.${n.key}.summary`)}
-                                    date={n.date}
-                                    dateLabel={fmt(n.date, 'long')}
-                                    sourceLine={tn('source', { name: tn(`items.${n.key}.source`) })}
-                                    image={n.imageId ? mediaImage(n.imageId, locale) : undefined}
-                                    illustrativeLabel={n.imageId && getMedia(n.imageId).illustrative ? tn('illustrative') : undefined}
-                                    href={`${NEWS_PATH}#news-${n.key}`}
-                                />
-                            </li>
-                        ))}
-                    </ul>
-                </Section>
-            ) : null}
-
-            {/* 05 More articles (only when there is more than the featured entry) */}
+            {/* 03 More guides (only when there is more than the featured entry) */}
             {rest.length > 0 ? (
                 <Section variant="white" labelledBy="in-grid">
                     <SectionHeading id="in-grid" title={t('grid.title')} />
@@ -219,6 +148,36 @@ export default async function InsightsPage({ params }: Props) {
                                     category={t(`categories.${e.category}`)}
                                     date={e.lastReviewed}
                                     readingMinutes={e.minutes}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            ) : null}
+
+            {/* 04 Company news (target of /insights#news and the old /insights/news) */}
+            {newsItems.length > 0 ? (
+                <Section id={NEWS_ID} variant={rest.length > 0 ? 'offwhite' : 'white'} labelledBy="in-news" className="scroll-mt-28">
+                    <SectionHeading
+                        id="in-news"
+                        eyebrow={tn('press.eyebrow')}
+                        title={tn('press.title')}
+                        intro={tn('press.intro')}
+                        action={<TextLink href={`${routes.about}#about-journey`}>{tn('milestones_link')}</TextLink>}
+                    />
+                    <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                        {newsItems.map((n) => (
+                            <li key={n.key} className="min-w-0">
+                                <NewsCard
+                                    id={`news-${n.key}`}
+                                    title={tn(`items.${n.key}.title`)}
+                                    summary={tn(`items.${n.key}.summary`)}
+                                    date={n.date}
+                                    dateLabel={fmt(n.date)}
+                                    sourceLine={tn('source', { name: tn(`items.${n.key}.source`) })}
+                                    sourceUrl={n.sourceUrl}
+                                    viewSourceLabel={tn('view_source')}
+                                    newTabLabel={tn('new_tab')}
                                 />
                             </li>
                         ))}

@@ -1,42 +1,29 @@
 {
     "companyName": "AZAFCO International",
     "legalName": "AZAFCO International for Investment and Development S.A.E.",
-    "alternateName": "AZAFCO International",
     "alternateNames": [
         "AZAFCO",
         "ازافكو العالمية",
         "ازافكو",
         "EZAFCO"
     ],
-    "description": "AZAFCO International es una empresa egipcia que cría y compra pescado fresco y después lo calibra, envasa y exporta para importadores, distribuidores y compradores de hostelería en más de {countries} mercados. Planta de procesado en Motobas, Kafr el-Sheikh (Egipto).",
+    "description": "AZAFCO International es una empresa egipcia que cría y compra pescado fresco, y después lo lava, enhiela, calibra, envasa e inspecciona en su planta de Motobas, Kafr el-Sheikh, y lo exporta a importadores y distribuidores de más de {countries} mercados.",
     "slogan": "De la producción en Egipto a alianzas en todo el mundo",
-    "foundingDate": "2008",
+    "foundingLocation": "Kafr el-Sheikh, Egipto",
     "commercialRegisterLabel": "Registro mercantil",
     "factoryName": "Planta de procesado de pescado de AZAFCO International",
     "factoryAlternateName": "Planta de pescado de AZAFCO, Motobas",
-    "factoryDescription": "Planta de procesado de pescado de AZAFCO International en Motobas, Kafr el-Sheikh: calibrado, envasado y despacho de pescado fresco para la exportación.",
-    "websiteName": "AZAFCO International",
+    "factoryDescription": "Planta de envasado de pescado de AZAFCO International en Motobas, Kafr el-Sheikh: lavado, enhielado, calibrado, envasado e inspección de pescado fresco para la exportación.",
+    "factoryAddress": {
+        "street": "N.º 120, sector de piensos, Zona Industrial",
+        "locality": "Motobas",
+        "region": "Kafr el-Sheikh"
+    },
     "websiteDescription": "Sitio web oficial de AZAFCO International: pescado fresco egipcio para importadores, distribuidores y compradores de hostelería, con especificaciones de especies y contactos para colaborar.",
-    "productGroupName": "Pescado fresco de AZAFCO International",
-    "productGroupDesc": "Pescado fresco de Egipto: tilapia, lubina, mújol, pez gato africano y otras especies. Calibre y embalaje confirmados en cada pedido.",
-    "catalogName": "Catálogo de pescado fresco de AZAFCO International",
-    "catalogDesc": "Pescado fresco para exportación al por mayor desde Egipto: 12 especies principales. Calibre y embalaje confirmados en cada pedido; otras especies bajo pedido.",
-    "offerDesc": "Indíquenos la especificación y revisaremos la disponibilidad y las condiciones comerciales. Horario de oficina: de sábado a jueves, de 8:00 a 17:00 (hora de El Cairo).",
-    "priceRange": "Precios confirmados en cada pedido",
-    "freshFishCategory": "Pescado fresco",
-    "freshwater": "Pescado de agua dulce",
-    "freshwaterDesc": "Tilapia, pez gato africano, bagre bayad, carpa común, carpa espejo, carpa herbívora, carpa plateada",
-    "saltwater": "Pescado marino y de aguas salobres",
-    "saltwaterDesc": "Lubina, dorada, corvina, mújol, morragute",
-    "restaurantHotelSupply": "Suministro para hostelería",
     "home": "Inicio",
-    "products": "Productos",
     "about": "Quiénes somos",
     "contact": "Contacto",
     "markets": "Mercados",
-    "media": "Medios",
-    "certificates": "Certificados",
-    "openingHours": "Sa-Th 08:00-17:00",
     "contactManagement": "Directo a la gerencia · para operaciones rápidas",
     "contactExport": "Equipo de exportación (detalles y documentos)",
     "certificationBody": "TÜV AUSTRIA",
@@ -61,24 +48,6 @@
         "Calibrado y envasado de pescado",
         "Logística de cadena de frío",
         "Suministro mayorista de pescado",
-        "Tilapia",
-        "Lubina",
-        "Mújol",
         "Acuicultura egipcia"
-    ],
-    "speakableName": "AZAFCO International | Exportación de pescado fresco",
-    "services": {
-        "tilapia": {
-            "name": "Suministro de tilapia fresca",
-            "description": "Tilapia fresca para venta al por mayor y exportación"
-        },
-        "seaBass": {
-            "name": "Suministro de lubina fresca",
-            "description": "Lubina fresca para venta al por mayor y exportación"
-        },
-        "mullet": {
-            "name": "Suministro de mújol fresco",
-            "description": "Mújol fresco para venta al por mayor y exportación"
-        }
-    }
+    ]
 }

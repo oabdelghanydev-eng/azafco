@@ -7,7 +7,7 @@ import { routes } from '@/lib/v2/routes';
 import { ChevronDownIcon, CloseIcon, GlobeIcon, MenuIcon, WhatsAppIcon } from '@/components/ui/icons';
 import { cn, focusRingLight as FOCUS, typography } from '@/components/ui/tokens';
 import { GNavLink, useGNav } from './GFooterNav';
-import type { GNavKey } from './nav';
+import { G_NAV_KEYS_BAR, G_NAV_KEYS_MENU, type GNavKey } from './nav';
 import { orderLangs, rememberChoice, type LangOption } from './langs';
 
 export interface GHeaderCopy {
@@ -32,7 +32,7 @@ export interface GHeaderClientProps {
     /** Native name of the current locale (button label) */
     langName: string;
     whatsappHref: string;
-    /** "+20 100 773 6419" */
+    /** "+20 100 773 6419", shown in the WhatsApp pill from 1440px */
     phone: string;
 }
 
@@ -41,9 +41,14 @@ export interface GHeaderClientProps {
  * language list come in as props from the server wrapper (GHeader), so this file
  * ships no translation messages and no company config to the browser.
  *
- * Desktop (lg+): logo, five nav items + Contact, WhatsApp, language pill with a
- * dropdown. Phone: logo, language button and a Menu/Close toggle. There is one
- * language list: a full-width panel under the header on phones, a dropdown from lg.
+ * Desktop (xl+): logo, one line of nav (seven items, Contact last),
+ * WhatsApp, language pill with a dropdown. Below xl: logo, (from lg) the WhatsApp
+ * circle and language pill, and a Menu/Close toggle whose panel lists every
+ * section including "About us". The seven labels cannot share one line at 1024px
+ * in de/fr/ru without smaller type, so the bar starts at xl (lead ruling R2 in
+ * docs/team/web/g/ROUND1-SPEC.md: short "Packing" label, About us stays).
+ * There is one language list: a full-width panel under the header on phones,
+ * a dropdown from lg.
  */
 export default function GHeaderClient({ locale, copy, langs, langName, whatsappHref, phone }: GHeaderClientProps) {
     const pathname = usePathname();
@@ -51,7 +56,8 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
     const [menu, setMenu] = useState(false);
     const rootRef = useRef<HTMLElement>(null);
     // Real routes (with aria-current) on every page; Contact last
-    const nav = useGNav(true);
+    const bar = useGNav(G_NAV_KEYS_BAR);
+    const menuNav = useGNav(G_NAV_KEYS_MENU);
 
     // Close everything on navigation
     useEffect(() => {
@@ -98,9 +104,9 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                     />
                 </Link>
 
-                {/* Desktop nav */}
-                <nav aria-label={copy.navLabel} className={cn('hidden flex-wrap gap-x-[34px] gap-y-1 font-semibold lg:flex', typography.body)}>
-                    {nav.map((n) => (
+                {/* Desktop nav (xl+): tighter gap until 1440 so the seven labels stay on one line */}
+                <nav aria-label={copy.navLabel} className={cn('hidden flex-wrap gap-x-6 gap-y-1 font-semibold xl:flex', typography.body)}>
+                    {bar.map((n) => (
                         <GNavLink key={n.key} item={n} className={`py-3 text-ink ${navLinkBase}`}>
                             {copy.nav[n.key]}
                         </GNavLink>
@@ -108,7 +114,8 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                 </nav>
 
                 <div className="flex shrink-0 items-center lg:relative lg:gap-2.5">
-                    {/* WhatsApp to management (lg+): icon-only circle at lg, label from xl, number from 1360px so the row never wraps */}
+                    {/* WhatsApp to management (lg+): icon-only circle at lg, label from xl, and from 1440px the
+                        number instead of the label (label plus number wraps the row in de and es) */}
                     <a
                         href={whatsappHref}
                         target="_blank"
@@ -122,8 +129,8 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                         )}
                     >
                         <WhatsAppIcon size={20} />
-                        <span className="hidden xl:inline">{copy.whatsappCta}</span>
-                        <span dir="ltr" className={cn('hidden font-semibold min-[1360px]:inline', typography.caption)}>
+                        <span className="hidden xl:inline min-[1440px]:hidden">{copy.whatsappCta}</span>
+                        <span dir="ltr" className={cn('hidden font-semibold min-[1440px]:inline', typography.caption)}>
                             {phone}
                         </span>
                     </a>
@@ -158,7 +165,7 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                             setLang(false);
                         }}
                         className={cn(
-                            'inline-flex h-12 cursor-pointer items-center gap-2.5 rounded-control border-0 bg-transparent px-3 font-bold leading-none text-navy lg:hidden',
+                            'inline-flex h-12 cursor-pointer items-center gap-2.5 rounded-control border-0 bg-transparent px-3 font-bold leading-none text-navy xl:hidden',
                             typography.small,
                             FOCUS,
                         )}
@@ -213,14 +220,14 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                 <nav
                     id="g-nav-m"
                     aria-label={copy.navLabel}
-                    className={cn('border-t border-line-soft px-5 pb-5 pt-1 lg:hidden', typography.h4)}
+                    className={cn('border-t border-line-soft px-5 pb-5 pt-1 lg:px-8 xl:hidden', typography.h4)}
                 >
-                    {nav.map((n, i) => (
+                    {menuNav.map((n, i) => (
                         <GNavLink
                             key={n.key}
                             item={n}
                             onClick={() => setMenu(false)}
-                            className={`block py-3 text-ink transition-colors hover:text-navy aria-[current=page]:text-navy ${i < nav.length - 1 ? 'border-b border-line-soft' : ''} ${FOCUS}`}
+                            className={`block py-3 text-ink transition-colors hover:text-navy aria-[current=page]:text-navy ${i < menuNav.length - 1 ? 'border-b border-line-soft' : ''} ${FOCUS}`}
                         >
                             {copy.nav[n.key]}
                         </GNavLink>

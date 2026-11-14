@@ -1,38 +1,25 @@
 {
     "meta": {
-        "title": "Insights for fish importers",
-        "description": "Guides for fish importers on HS codes, documents and the cold chain, plus AZAFCO news and press, with the date and source of every fact."
+        "title": "Fish import guide and company news",
+        "description": "Our guide for fish importers covers import rules in the Gulf and the Levant, HS codes, documents and the cold chain, plus AZAFCO International news."
     },
     "breadcrumb": "Insights",
     "hero": {
         "eyebrow": "Insights",
-        "title": "Knowledge for better buying decisions",
-        "intro": "Practical guides on documents and the cold chain, plus company news and press, with the date and source of every fact.",
+        "title": "Importer guide and company news",
+        "intro": "One guide for importers, covering import rules, HS codes, documents and the cold chain, plus company news with the date of each item and a source link where one exists.",
         "primary": "Read the importer guide",
-        "secondary": "News and press"
+        "secondary": "Company news"
     },
     "featured": {
-        "eyebrow": "Featured guide",
+        "eyebrow": "Guide for importers",
         "read": "Read the guide"
     },
     "categories": {
-        "eyebrow": "What we publish",
-        "title": "Content by type, clearly labelled",
-        "importer_guide": "Importer guides",
-        "importer_guide_text": "HS codes, export documents and cold-chain basics for importing fresh fish from Egypt.",
-        "behind_operations": "Behind the operations",
-        "behind_operations_text": "Grading, packing and dispatch at our plant, published after review.",
-        "company_news": "News and press",
-        "company_news_text": "Visits, media coverage, milestones and industry news, each with its date and a named source.",
-        "news_count": "{count, plural, one {# item} other {# items}}"
+        "importer_guide": "Importer guide"
     },
     "grid": {
-        "title": "All articles",
-        "count": "{count, plural, one {# article} other {# articles}}"
-    },
-    "standards": {
-        "title": "Editorial standards",
-        "text": "We state the date and source of every fact. Industry data is never presented as AZAFCO data, and we do not publish production figures or certificates without valid evidence."
+        "title": "More guides"
     },
     "article": {
         "by": "Published by",
@@ -41,12 +28,12 @@
         "reviewed": "Last reviewed",
         "toc": "In this article",
         "sources_side": "Sources",
-        "sources_side_text": "{count, plural, one {# official source, listed at the end and linked in the text.} other {# official sources, listed at the end and linked in the text.}}",
+        "sources_side_text": "{count, plural, one {# source, listed at the end and linked in the text.} other {# sources, listed at the end and linked in the text.}}",
         "related_title": "Continue with",
         "related": [
             {
                 "title": "For importers",
-                "text": "The procurement path and what to prepare."
+                "text": "How ordering works, step by step."
             },
             {
                 "title": "Our markets",
@@ -57,7 +44,6 @@
                 "text": "A page for each of our main species."
             }
         ],
-        "table_mobile_note": "Codes per species",
         "related_eyebrow": "Read next",
         "reading_time": "Reading time"
     }

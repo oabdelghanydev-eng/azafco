@@ -1,42 +1,29 @@
 {
     "companyName": "AZAFCO International",
     "legalName": "AZAFCO International for Investment and Development S.A.E.",
-    "alternateName": "AZAFCO International",
     "alternateNames": [
         "AZAFCO",
         "ازافكو العالمية",
         "ازافكو",
         "EZAFCO"
     ],
-    "description": "AZAFCO International ist ein ägyptisches Unternehmen, das frischen Fisch züchtet und bezieht, ihn sortiert, verpackt und für Importeure, Distributoren und Gastronomiekunden in {countries}+ Märkte exportiert. Verarbeitungswerk in Motobas, Kafr el-Sheikh, Ägypten.",
+    "description": "AZAFCO International ist ein ägyptisches Unternehmen, das frischen Fisch züchtet und bezieht, ihn in seinem Werk in Motobas, Kafr El Sheikh, wäscht, beeist, sortiert, verpackt und prüft und an Importeure und Distributoren in {countries}+ Märkten exportiert.",
     "slogan": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
-    "foundingDate": "2008",
+    "foundingLocation": "Kafr El Sheikh, Ägypten",
     "commercialRegisterLabel": "Handelsregister",
     "factoryName": "Fischverarbeitungswerk von AZAFCO International",
     "factoryAlternateName": "AZAFCO-Fischwerk Motobas",
-    "factoryDescription": "Fischverarbeitungswerk von AZAFCO International in Motobas, Kafr el-Sheikh: Sortierung, Verpackung und Versand von Frischfisch für den Export.",
-    "websiteName": "AZAFCO International",
+    "factoryDescription": "Fischverpackungswerk von AZAFCO International in Motobas, Kafr El Sheikh: Waschen, Beeisen, Sortieren, Verpacken und Prüfen von Frischfisch für den Export.",
+    "factoryAddress": {
+        "street": "Nr. 120, Futtermittelsektor, Industriegebiet",
+        "locality": "Motobas",
+        "region": "Kafr El Sheikh"
+    },
     "websiteDescription": "Offizielle Website von AZAFCO International: frischer Fisch aus Ägypten für Importeure, Distributoren und Gastronomiekunden, mit Spezifikationen der Fischarten und Kontakten für Partnerschaften.",
-    "productGroupName": "Frischfisch von AZAFCO International",
-    "productGroupDesc": "Frischfisch aus Ägypten: Tilapia, Wolfsbarsch, Großkopfmeeräsche, Afrikanischer Raubwels und weitere Arten. Gewichtsklasse und Verpackung werden pro Auftrag bestätigt.",
-    "catalogName": "Frischfischkatalog von AZAFCO International",
-    "catalogDesc": "Frischfisch für den Großhandelsexport aus Ägypten: 12 Hauptarten. Gewichtsklasse und Verpackung werden pro Auftrag bestätigt; weitere Arten liefern wir auf Anfrage.",
-    "offerDesc": "Nennen Sie uns die Spezifikation; wir prüfen Verfügbarkeit und Handelsbedingungen. Bürozeiten Sa–Do 8:00–17:00 (Kairoer Zeit).",
-    "priceRange": "Preise werden pro Auftrag bestätigt",
-    "freshFishCategory": "Frischfisch",
-    "freshwater": "Süßwasserfische",
-    "freshwaterDesc": "Tilapia, Afrikanischer Raubwels, Bagrus-Wels, Karpfen, Spiegelkarpfen, Graskarpfen, Silberkarpfen",
-    "saltwater": "Meeres- und Brackwasserfische",
-    "saltwaterDesc": "Wolfsbarsch, Dorade, Adlerfisch, Großkopfmeeräsche, Dünnlippige Meeräsche",
-    "restaurantHotelSupply": "Belieferung der Gastronomie",
     "home": "Startseite",
-    "products": "Produkte",
     "about": "Über uns",
     "contact": "Kontakt",
     "markets": "Märkte",
-    "media": "Medien",
-    "certificates": "Zertifikate",
-    "openingHours": "Sa-Th 08:00-17:00",
     "contactManagement": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",
     "contactExport": "Exportteam (Details und Dokumente)",
     "certificationBody": "TÜV AUSTRIA",
@@ -61,24 +48,6 @@
         "Sortierung und Verpackung von Fisch",
         "Kühlkettenlogistik",
         "Fischgroßhandel",
-        "Tilapia",
-        "Wolfsbarsch",
-        "Großkopfmeeräsche",
         "Aquakultur in Ägypten"
-    ],
-    "speakableName": "AZAFCO International | Frischfischexport",
-    "services": {
-        "tilapia": {
-            "name": "Lieferung frischer Tilapia",
-            "description": "Frische Tilapia für Großhandel und Export"
-        },
-        "seaBass": {
-            "name": "Lieferung von frischem Wolfsbarsch",
-            "description": "Frischer Wolfsbarsch für Großhandel und Export"
-        },
-        "mullet": {
-            "name": "Lieferung frischer Großkopfmeeräsche",
-            "description": "Frische Großkopfmeeräsche für Großhandel und Export"
-        }
-    }
+    ]
 }

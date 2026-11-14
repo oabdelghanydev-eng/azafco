@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from '@/navigation';
 import { isActivePath } from '@/lib/v2/routes';
-import { G_FOOTER_NAV_KEYS, G_NAV_KEYS, G_NAV_KEYS_WITH_CONTACT, G_NAV_ROUTE, type GFooterNavKey, type GNavKey } from './nav';
+import { G_FOOTER_NAV_KEYS, G_NAV_ROUTE, type GFooterNavKey, type GNavKey } from './nav';
 
 export type { GFooterNavKey, GNavKey } from './nav';
 
@@ -20,13 +20,12 @@ export interface GNavItem<K extends string = GNavKey> {
  * one-pager), with aria-current="page" on the matching route. Home sections
  * keep their ids for the hero buttons and in-page links only.
  */
-export function useGNav(withContact: boolean): GNavItem[] {
+export function useGNav(keys: readonly GNavKey[]): GNavItem[] {
     const pathname = usePathname();
-    const keys = withContact ? G_NAV_KEYS_WITH_CONTACT : G_NAV_KEYS;
     return keys.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));
 }
 
-/** Footer list: the header items (without Contact) plus Seafood and Insights. */
+/** Footer list: the header sections (without Contact) plus Insights. */
 function useGFooterNav(): GNavItem<GFooterNavKey>[] {
     const pathname = usePathname();
     return G_FOOTER_NAV_KEYS.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));

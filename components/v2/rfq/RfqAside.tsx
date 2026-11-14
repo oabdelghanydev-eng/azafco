@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { useTranslations } from 'next-intl';
 import { cardClass } from '@/components/ui/Card';
 import { Eyebrow } from '@/components/ui/Layout';
-import { CheckIcon, DocumentIcon } from '@/components/ui/icons';
+import { CheckIcon } from '@/components/ui/icons';
 import { cn, typography } from '@/components/ui/tokens';
 import { phoneDisplay } from '@/components/ui/format';
 import { companyConfig } from '@/config/company.config';
@@ -10,9 +10,10 @@ import { RfqShowWhen } from './RfqQuery';
 
 /**
  * Buyer reassurance column next to the requirements panel (design G): what
- * happens after the buyer writes to us (no response-time or price promise),
- * what to have ready, a note to attach a specification and the official
- * channels (anti-fraud notice). Direct channels live in RfqRequestPanel.
+ * happens after the buyer writes to us, with the office hours /contact shows
+ * (no response-time or price promise),
+ * what to have ready and the official channels (anti-fraud notice). Direct
+ * channels and the "attach your specification" note live in RfqRequestPanel.
  * Light surfaces only (white / off-white sections).
  *
  * `short`: true hides "Helpful to have ready" (corporate / documents); 'query'
@@ -63,6 +64,8 @@ export default function RfqAside({
                         </li>
                     ))}
                 </ol>
+                {/* Office hours from the same source as /contact (ROUND1-SPEC §6 R7); no reply-time promise */}
+                <p className={cn('mb-0 mt-5 text-ink-muted', typography.small)}>{t('hours', { hours: tc('workingHours') })}</p>
                 <p className={cn('mb-0 mt-5 border-0 border-s-2 border-solid border-gold ps-4 text-ink', typography.small)}>{t('no_promise')}</p>
             </section>
 
@@ -73,15 +76,6 @@ export default function RfqAside({
             ) : !short ? (
                 prepareSection
             ) : null}
-
-            {/* Hairline box, no fill: reads on both the white /requirements page and the off-white /for-importers band */}
-            <section className="flex gap-3.5 rounded-card border border-solid border-line p-5 lg:p-6">
-                <DocumentIcon size={24} className="mt-0.5 text-navy" />
-                <div className="min-w-0">
-                    <H className={cn('m-0 text-ink', typography.h4)}>{t('attach_title')}</H>
-                    <p className={cn('mb-0 mt-1 text-ink-muted', typography.small)}>{t('attach_text')}</p>
-                </div>
-            </section>
 
             {/* Anti-fraud notice (approved copy in data.company.officialChannels) */}
             <section className={cardClass({ accent: true, padding: 'sm', className: 'lg:p-6' })}>

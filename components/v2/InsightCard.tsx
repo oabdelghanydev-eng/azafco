@@ -3,6 +3,7 @@ import { useFormatter, useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { cn } from '@/lib/v2/cn';
 import type { ImageProps } from '@/lib/v2/media';
+import { REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
 
 export interface InsightCardProps {
     title: string;
@@ -37,7 +38,7 @@ export default function InsightCard({ title, href, excerpt, image, category, dat
             ) : null}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-muted">
                 {category ? <span className="font-bold text-navy">{category}</span> : null}
-                {date ? <time dateTime={date}>{format.dateTime(new Date(date), { dateStyle: 'medium' })}</time> : null}
+                {date ? <time dateTime={date}>{format.dateTime(isoDate(date), REVIEW_DATE_FORMAT)}</time> : null}
                 {readingMinutes ? <span>{t('minutes', { count: readingMinutes })}</span> : null}
             </div>
             <H className="m-0 mt-2 text-heading-md text-ink">

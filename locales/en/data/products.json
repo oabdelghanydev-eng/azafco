@@ -11,8 +11,7 @@
             "Large (500 g and above)"
         ],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "sea_bass": {
         "name": "Sea bass",
@@ -26,8 +25,7 @@
             "Large (600 g and above)"
         ],
         "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "category": "Marine"
     },
     "mullet": {
         "name": "Grey mullet",
@@ -41,8 +39,7 @@
             "Medium (250–400 g)"
         ],
         "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "category": "Brackish water"
     },
     "grass_carp": {
         "name": "Grass carp",
@@ -56,8 +53,7 @@
             "Large (500 g and above)"
         ],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "mubarakah": {
         "name": "Common carp",
@@ -65,14 +61,13 @@
             "Scaled carp",
             "Qishra"
         ],
-        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
+        "description": "Common carp, known in Egypt as qishra, is a fully scaled freshwater carp.",
         "sizes": [
             "Large (1–2 kg)",
             "Jumbo (2 kg and above)"
         ],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "catfish": {
         "name": "Catfish",
@@ -81,14 +76,13 @@
             "North African catfish",
             "Karmout"
         ],
-        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
+        "description": "Catfish, known in Egypt as karmout, is the African catfish, a freshwater fish.",
         "sizes": [
             "Medium (500–800 g)",
             "Large (800 g and above)"
         ],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "lout": {
         "name": "Meagre",
@@ -103,8 +97,7 @@
             "Large (600 g and above)"
         ],
         "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "category": "Marine"
     },
     "thinlip_mullet": {
         "name": "Thinlip mullet",
@@ -112,11 +105,10 @@
             "Thinlip grey mullet",
             "Tobar"
         ],
-        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet.",
         "sizes": [],
         "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "category": "Brackish water"
     },
     "bayad_catfish": {
         "name": "Bayad catfish",
@@ -127,8 +119,7 @@
         "description": "Bayad catfish is a freshwater catfish native to the Nile.",
         "sizes": [],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "silver_carp": {
         "name": "Silver carp",
@@ -136,8 +127,7 @@
         "description": "Silver carp is a freshwater carp.",
         "sizes": [],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "mirror_carp": {
         "name": "Mirror carp",
@@ -145,11 +135,10 @@
             "Common carp (mirror)",
             "Mabrouka"
         ],
-        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "description": "Mirror carp, known in Egypt as mabrouka, is a freshwater carp with only a few large scales.",
         "sizes": [],
         "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "category": "Freshwater"
     },
     "sea_bream": {
         "name": "Sea bream",
@@ -160,8 +149,7 @@
         "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
         "sizes": [],
         "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "category": "Marine"
     },
     "eels": {
         "name": "European eel",
@@ -171,7 +159,6 @@
         "description": "European eel is a brackish-water fish.",
         "sizes": [],
         "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "category": "Brackish water"
     }
 }

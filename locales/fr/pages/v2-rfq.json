@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Envoyer vos besoins en poisson frais",
-        "description": "Envoyez vos besoins en poisson à AZAFCO International : espèce, calibre, conditionnement, quantité et destination. Les prix sont confirmés à chaque commande."
+        "description": "Envoyez vos besoins en poisson à AZAFCO International : espèce, calibre, conditionnement, quantité, destination et Incoterm, par e-mail ou WhatsApp."
     },
     "breadcrumb": "Envoyer vos besoins",
     "hero": {
@@ -13,16 +13,16 @@
         "corporate_title": "Demandes institutionnelles et de partenariat",
         "corporate_intro": "Pour les partenariats, l’investissement ou d’autres sujets professionnels. Écrivez depuis l’e-mail de votre entreprise ; aucun détail produit n’est nécessaire.",
         "documents_title": "Demander des documents",
-        "documents_intro": "Demandez, depuis l’e-mail de votre entreprise, les fiches techniques produit ou la présentation de l’entreprise. Nous confirmons ce que nous pouvons partager selon votre demande."
+        "documents_intro": "Demandez, depuis l’e-mail de votre entreprise, les fiches techniques produit ou la présentation de l’entreprise."
     },
     "aside": {
         "title": "Ce qui se passe après votre message",
         "steps": [
             "L’équipe export examine vos besoins au regard de la spécification et des disponibilités du moment.",
-            "Nous vous contactons pour confirmer les détails et les points en suspens.",
-            "Prix, quantité, conditionnement et conditions sont confirmés par écrit pour chaque commande."
+            "Nous confirmons avec vous par écrit le prix, la quantité, le conditionnement et les conditions."
         ],
-        "no_promise": "L’envoi de vos besoins n’engage ni vous ni nous à passer commande. Les prix sont confirmés à chaque commande.",
+        "hours": "Horaires du bureau : {hours}",
+        "no_promise": "L’envoi de vos besoins n’engage ni vous ni nous à passer commande.",
         "prepare_title": "Utile à préparer",
         "prepare": [
             "Espèce et calibre",
@@ -31,12 +31,10 @@
             "Fret aérien ou routier, et aéroport d’arrivée ou poste frontière",
             "Incoterm et conditions de paiement souhaités",
             "Exigences de conditionnement et d’étiquetage"
-        ],
-        "attach_title": "Vous avez une spécification ?",
-        "attach_text": "Si vous en avez une, joignez votre spécification ou votre fiche de conditionnement à l’e-mail."
+        ]
     },
     "switch": {
-        "to_corporate": "Vous n’achetez pas de poisson ? <link>Envoyer une demande institutionnelle</link>",
+        "to_corporate": "Pour les partenariats, l’investissement ou d’autres sujets : <link>Envoyer une demande institutionnelle</link>",
         "to_seafood": "Vous souhaitez acheter du poisson ? <link>Envoyez plutôt vos besoins</link>"
     },
     "request": {

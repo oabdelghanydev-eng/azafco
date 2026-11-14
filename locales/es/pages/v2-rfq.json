@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Envíe sus requisitos de pescado fresco",
-        "description": "Envíe a AZAFCO International sus requisitos de pescado: especie, calibre, embalaje, cantidad y destino. Los precios se confirman en cada pedido."
+        "description": "Envíe a AZAFCO International sus requisitos de pescado: especie, calibre, embalaje, cantidad, destino e Incoterm, por correo electrónico o por WhatsApp."
     },
     "breadcrumb": "Envíe sus requisitos",
     "hero": {
@@ -13,16 +13,16 @@
         "corporate_title": "Consultas corporativas y de colaboración",
         "corporate_intro": "Para colaboraciones, inversión u otros temas empresariales. Escriba desde el correo de su empresa; no hace falta indicar detalles de producto.",
         "documents_title": "Solicitar documentos",
-        "documents_intro": "Pida desde el correo de su empresa especificaciones de producto o el perfil de la empresa. Le confirmamos qué podemos compartir según su solicitud."
+        "documents_intro": "Pida desde el correo de su empresa especificaciones de producto o el perfil de la empresa."
     },
     "aside": {
         "title": "Qué ocurre después de escribirnos",
         "steps": [
-            "El equipo de exportación revisa sus requisitos frente a la especificación y la disponibilidad actual.",
-            "Nos ponemos en contacto con usted para confirmar los detalles y cualquier punto pendiente.",
-            "Los precios, la cantidad, el embalaje y las condiciones se confirman por escrito en cada pedido."
+            "El equipo de exportación contrasta sus requisitos con la especificación y la disponibilidad actual.",
+            "Confirmamos con usted por escrito el precio, la cantidad, el embalaje y las condiciones."
         ],
-        "no_promise": "Enviar sus requisitos no le compromete ni nos compromete a un pedido. Los precios se confirman en cada pedido.",
+        "hours": "Horario de oficina: {hours}",
+        "no_promise": "Enviar sus requisitos no le compromete ni nos compromete a un pedido.",
         "prepare_title": "Conviene tener a mano",
         "prepare": [
             "Especie y calibre",
@@ -31,12 +31,10 @@
             "Transporte aéreo o por carretera, y aeropuerto o paso fronterizo de llegada",
             "Incoterm preferido y condiciones de pago",
             "Requisitos de embalaje y etiquetado"
-        ],
-        "attach_title": "¿Tiene una especificación?",
-        "attach_text": "Si la tiene, adjunte su especificación o ficha de embalaje al correo."
+        ]
     },
     "switch": {
-        "to_corporate": "¿No compra pescado? <link>Envíe una consulta corporativa</link>",
+        "to_corporate": "Para colaboraciones, inversión u otros temas: <link>Envíe una consulta corporativa</link>",
         "to_seafood": "¿Quiere comprar pescado? <link>Envíe sus requisitos de suministro</link>"
     },
     "request": {

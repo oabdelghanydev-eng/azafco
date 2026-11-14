@@ -11,8 +11,7 @@
             "Grande (500 g o más)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "sea_bass": {
         "name": "Lubina",
@@ -26,8 +25,7 @@
             "Grande (600 g o más)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua de mar",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua de mar"
     },
     "mullet": {
         "name": "Mújol",
@@ -41,8 +39,7 @@
             "Mediano (250–400 g)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua salobre",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua salobre"
     },
     "grass_carp": {
         "name": "Carpa herbívora",
@@ -56,8 +53,7 @@
             "Grande (500 g o más)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "mubarakah": {
         "name": "Carpa común",
@@ -65,14 +61,13 @@
             "Carpa con escamas",
             "Qishra"
         ],
-        "description": "La carpa común, conocida en Egipto como qishra, es la forma de la carpa con el cuerpo totalmente cubierto de escamas; es un pez de agua dulce.",
+        "description": "La carpa común, conocida en Egipto como qishra, es una carpa de agua dulce con el cuerpo totalmente cubierto de escamas.",
         "sizes": [
             "Grande (1–2 kg)",
             "Jumbo (2 kg o más)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "catfish": {
         "name": "Pez gato africano",
@@ -81,14 +76,13 @@
             "Pez gato norteafricano",
             "Karmout"
         ],
-        "description": "El pez gato africano, también comercializado como siluro africano o karmout, es un pez de agua dulce.",
+        "description": "El pez gato africano, conocido en Egipto como karmout, es un pez de agua dulce.",
         "sizes": [
             "Mediano (500–800 g)",
             "Grande (800 g o más)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "lout": {
         "name": "Corvina",
@@ -103,8 +97,7 @@
             "Grande (600 g o más)"
         ],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua de mar",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua de mar"
     },
     "thinlip_mullet": {
         "name": "Morragute",
@@ -112,11 +105,10 @@
             "Mújol de labio fino",
             "Tobar"
         ],
-        "description": "El morragute, conocido en Egipto como tobar, es un mújol de aguas salobres. Es un producto distinto de nuestro mújol.",
+        "description": "El morragute, conocido en Egipto como tobar, es un mújol de aguas salobres.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua salobre",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua salobre"
     },
     "bayad_catfish": {
         "name": "Bagre bayad",
@@ -127,8 +119,7 @@
         "description": "El bagre bayad es un bagre de agua dulce originario del Nilo.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "silver_carp": {
         "name": "Carpa plateada",
@@ -136,8 +127,7 @@
         "description": "La carpa plateada es una carpa de agua dulce.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "mirror_carp": {
         "name": "Carpa espejo",
@@ -145,11 +135,10 @@
             "Carpa común (espejo)",
             "Mabrouka"
         ],
-        "description": "La carpa espejo es la forma de la carpa común con escamas en espejo: solo tiene unas pocas escamas grandes. Es un pez de agua dulce.",
+        "description": "La carpa espejo, conocida en Egipto como mabrouka, es una carpa de agua dulce con solo unas pocas escamas grandes.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua dulce",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua dulce"
     },
     "sea_bream": {
         "name": "Dorada",
@@ -160,8 +149,7 @@
         "description": "La dorada, conocida en el comercio internacional como gilthead sea bream o dorade, es un pez marino.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua de mar",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua de mar"
     },
     "eels": {
         "name": "Anguila europea",
@@ -171,7 +159,6 @@
         "description": "La anguila europea es un pez de aguas salobres.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
-        "category": "Agua salobre",
-        "availability": "Confirmada en cada pedido"
+        "category": "Agua salobre"
     }
 }

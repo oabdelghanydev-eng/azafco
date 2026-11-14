@@ -5,17 +5,12 @@ import {
     Breadcrumbs,
     DocumentIcon,
     PageHero,
-    PlaneIcon,
     Section,
     SectionHeading,
-    StatStrip,
-    TruckIcon,
+    TextLink,
     cn,
     typography,
 } from '@/components/ui';
-import FeatureGrid from '@/components/v2/FeatureGrid';
-import ProcessSteps from '@/components/v2/ProcessSteps';
-import { marketStepIcons } from '@/components/v2/markets/stepIcons';
 import { insightHref, routes } from '@/lib/v2/routes';
 import { activeMarketConfigs, pausedMarkets, plannedMarkets } from '@/components/v2/markets/marketData';
 import MarketsIndex from '@/components/v2/markets/MarketsIndex';
@@ -38,10 +33,6 @@ export default async function MarketsPage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'markets_v2' });
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
 
-    const stats = t.raw('stats') as { value: string; label: string }[];
-    const points = t.raw('approach.points') as Item[];
-    const steps = t.raw('process.steps') as Item[];
-    const modes = t.raw('transport.modes') as Item[];
     const support = t.raw('support.items') as Item[];
 
     const since = (year: number | null) => (year ? t('index.since', { year: String(year) }) : '');
@@ -62,7 +53,6 @@ export default async function MarketsPage({ params }: Props) {
     }));
     const planned = plannedMarkets.map((m) => ({ key: m.key, countryCode: m.countryCode, name: tm(`${m.key}.country`) }));
     const pausedNote = pausedMarkets.map((m) => t('index.paused', { country: tm(`${m.key}.country`) })).join(' · ') || undefined;
-    const modeIcons = [<PlaneIcon key="air" size={24} />, <TruckIcon key="road" size={24} />];
 
     return (
         <>
@@ -87,8 +77,6 @@ export default async function MarketsPage({ params }: Props) {
                     </>
                 }
             />
-
-            <StatStrip items={stats} label={t('hero.eyebrow')} />
 
             {/* Active markets (flags, start year, route map), planned and paused: the page's one navy band */}
             <MarketsIndex
@@ -115,29 +103,12 @@ export default async function MarketsPage({ params }: Props) {
                 />
             </Section>
 
-            {/* Market requirements */}
-            <Section variant="white" labelledBy="mk-approach">
-                <SectionHeading id="mk-approach" eyebrow={t('approach.eyebrow')} title={t('approach.title')} intro={t('approach.intro')} />
-                <FeatureGrid columns={3} style="card" items={points.map((p) => ({ title: p.title, description: p.text }))} />
-            </Section>
-
-            {/* How to start */}
-            <Section variant="offwhite" labelledBy="mk-process">
-                <SectionHeading id="mk-process" eyebrow={t('process.eyebrow')} title={t('process.title')} />
-                <ProcessSteps steps={steps.map((s, i) => ({ title: s.title, description: s.text, icon: marketStepIcons[i] }))} />
-            </Section>
-
             {/* Transport + working terms */}
             <Section variant="white" labelledBy="mk-transport">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
                     <div>
                         <SectionHeading id="mk-transport" size="md" eyebrow={t('transport.eyebrow')} title={t('transport.title')} intro={t('transport.intro')} />
-                        <FeatureGrid
-                            columns={2}
-                            style="card"
-                            items={modes.map((m, i) => ({ title: m.title, description: m.text, icon: modeIcons[i] }))}
-                        />
-                        <p className={cn('m-0 mt-6 text-fg-muted', typography.small)}>{t('transport.note')}</p>
+                        <p className={cn('m-0 text-fg-muted', typography.small)}>{t('transport.note')}</p>
                     </div>
                     <div>
                         <SectionHeading id="mk-support" size="md" eyebrow={t('support.eyebrow')} title={t('support.title')} />
@@ -149,15 +120,14 @@ export default async function MarketsPage({ params }: Props) {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-6">
+                        <div className="mt-6 flex flex-col items-start gap-1">
                             <Button href={insightHref('importing-fresh-fish-from-egypt')} variant="text" icon={<DocumentIcon />}>
                                 {t('support.guide_link')}
                             </Button>
+                            <TextLink href={routes.forImporters}>{t('support.importers_link')}</TextLink>
                         </div>
                     </div>
                 </div>
-                {/* Kept from the removed closing card (the G footer carries the contact block) */}
-                <p className={cn('m-0 mt-12 border-0 border-t border-solid border-rule pt-5 text-fg-muted', typography.caption)}>{t('disclaimer')}</p>
             </Section>
         </>
     );

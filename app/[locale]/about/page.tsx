@@ -1,26 +1,26 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
+import { products } from '@/data/products';
 import { routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 import type { ImageProps } from '@/lib/v2/media';
 import {
     Breadcrumbs,
     Button,
-    Card,
     ExternalLink,
-    MapPinIcon,
     PageHero,
     Section,
     SectionHeading,
-    Stat,
     TextLink,
     WhatsAppIcon,
     cn,
+    focusRing,
+    phoneDisplay,
     typography,
 } from '@/components/ui';
-import HeadingPhoto from '@/components/v2/HeadingPhoto';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import Milestones, { type MilestoneYear } from '@/components/v2/businesses/Milestones';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
@@ -59,22 +59,9 @@ const COMPANY_MILESTONES: { year: number; key: 'founded' | 'baltim' | 'motobas' 
     { year: 2025, key: 'governor' },
 ];
 
-/**
- * The ISO standard names ("A · B · C" in the JSON) as unbreakable chunks, so a narrow
- * figure cell never splits "ISO" from its number or starts a line with the separator.
- */
-function IsoStandards({ text }: { text: string }) {
-    const items = text.split('·').map((s) => s.trim()).filter(Boolean);
-    return (
-        <span dir="ltr" className="mt-1 flex flex-wrap gap-x-1.5 text-caption font-normal rtl:justify-end">
-            {items.map((s, i) => (
-                <span key={s} className="whitespace-nowrap">
-                    {s}
-                    {i < items.length - 1 ? <span aria-hidden="true"> ·</span> : null}
-                </span>
-            ))}
-        </span>
-    );
+/** "A, B and C" in the page locale (en-GB style for English: no Oxford comma). */
+function joinList(locale: string, items: string[]): string {
+    return new Intl.ListFormat(locale === 'en' ? 'en-GB' : locale, { style: 'long', type: 'conjunction' }).format(items);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -84,11 +71,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 /**
- * About: who we are (founded 2008, farm and source, in-house operations), the
- * figures the owner approved (founded, capacity, ISO, markets), the milestones
- * since 2008, how the businesses fit, where we work, our values and direction.
- * The global G footer closes the page with the partnership contacts
- * (WhatsApp = management, email = export team).
+ * About: who we are (hero), the company fact table ("at a glance": legal name,
+ * founding, activity, the 12 species, capacity with the truck sentence, plant,
+ * office, active markets, certificates, official contacts), the milestones
+ * since 2008 (#about-journey, linked from /insights), our businesses
+ * (#businesses: fish at the core, agriculture, livestock, investments; the old
+ * /businesses page redirects here) and the plant with its map link (the
+ * addresses are in the fact table only). The global G footer closes the page
+ * with the partnership contacts.
  */
 export default async function AboutPage({ params }: Props) {
     const { locale } = await params;
@@ -96,16 +86,20 @@ export default async function AboutPage({ params }: Props) {
     const t = await getTranslations({ locale, namespace: 'about_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
+    const tp = await getTranslations({ locale, namespace: 'data.products' });
     // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
     const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
+    const { email, whatsappNumber } = companyConfig.contact;
+
+    const activeMarkets = companyConfig.markets
+        .filter((m) => m.status === 'active' && typeof m.since === 'number')
+        .sort((a, b) => (a.since as number) - (b.since as number));
 
     // Timeline: company milestones + the first export year of each active market,
     // grouped by year (within a year: company item, market openings, then the visit).
     const events = [
         ...COMPANY_MILESTONES.map((m) => ({ year: m.year, order: m.key === 'governor' ? 2 : 0, text: t(`journey.${m.key}`) })),
-        ...companyConfig.markets
-            .filter((m) => m.status === 'active' && typeof m.since === 'number')
-            .map((m) => ({ year: m.since as number, order: 1, text: t('journey.market', { country: tm(`${m.key}.sentence`) }) })),
+        ...activeMarkets.map((m) => ({ year: m.since as number, order: 1, text: t('journey.market', { country: tm(`${m.key}.sentence`) }) })),
     ].sort((a, b) => a.year - b.year || a.order - b.order);
     const milestones: MilestoneYear[] = [];
     for (const e of events) {
@@ -115,6 +109,55 @@ export default async function AboutPage({ params }: Props) {
     }
 
     const newTab = t('footprint.opens_new_tab');
+    const inlineLink = cn('font-semibold text-navy underline underline-offset-4 hover:text-navy-900', focusRing);
+
+    // Fact table: species names from data.products (the 12 published species), markets
+    // from companyConfig (year of first export; rank 1 = largest export market).
+    const speciesNames = joinList(locale, products.map((p) => tp(`${p.translationKey}.name`)));
+    const marketList = joinList(
+        locale,
+        activeMarkets.map((m) =>
+            t(m.rank === 1 ? 'glance.market_largest' : 'glance.market_item', { country: tm(`${m.key}.country`), year: String(m.since) }),
+        ),
+    );
+    const facts: { label: string; value: ReactNode }[] = [
+        { label: t('glance.legal_label'), value: tc('fullName') },
+        { label: t('glance.founded_label'), value: t('glance.founded_value') },
+        { label: t('glance.activity_label'), value: t('glance.activity_value') },
+        { label: t('glance.species_label'), value: t('glance.species_value', { species: speciesNames }) },
+        { label: t('glance.capacity_label'), value: t('glance.capacity_value') },
+        { label: t('glance.plant_label'), value: <address className="not-italic">{tc('addresses.factory.address')}</address> },
+        { label: t('glance.office_label'), value: <address className="not-italic">{tc('addresses.main.address')}</address> },
+        { label: t('glance.markets_label'), value: marketList },
+        { label: t('glance.certificates_label'), value: t('glance.certificates_value') },
+        {
+            label: t('glance.contacts_label'),
+            value: (
+                <ul className="m-0 list-none space-y-1 p-0">
+                    <li>
+                        {t('glance.email_label')}:{' '}
+                        <a href={`mailto:${email}`} className={inlineLink} data-cta="about_facts_email">
+                            <bdi dir="ltr">{email}</bdi>
+                        </a>
+                    </li>
+                    <li>
+                        {t('glance.whatsapp_label')}:{' '}
+                        <a href={waHref} target="_blank" rel="noopener noreferrer" className={inlineLink} data-cta="about_facts_whatsapp">
+                            <bdi dir="ltr">{phoneDisplay(whatsappNumber)}</bdi>
+                            <span className="sr-only"> {newTab}</span>
+                        </a>
+                    </li>
+                </ul>
+            ),
+        },
+    ];
+
+    // Investments has no descriptor (nothing to say beyond the field name)
+    const otherBusinesses: { title: string; text?: string }[] = [
+        { title: t('businesses.agri_title'), text: t('businesses.agri_text') },
+        { title: t('businesses.livestock_title'), text: t('businesses.livestock_text') },
+        { title: t('businesses.invest_title') },
+    ];
 
     return (
         <>
@@ -146,50 +189,30 @@ export default async function AboutPage({ params }: Props) {
                         </Button>
                     </>
                 }
-                proof={<p className={cn('m-0 text-fg-muted', typography.small)}>{t('hero.reassure')}</p>}
             />
 
-            {/* 02 · Story + approved figures */}
-            <Section variant="offwhite" labelledBy="about-story">
-                <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
-                    <div className="lg:col-span-5">
-                        <SectionHeading id="about-story" eyebrow={t('story.eyebrow')} title={t('story.title')} className="mb-0 md:mb-0 lg:mb-0" />
-                        <HeadingPhoto id="photo-delta-landscape" />
-                    </div>
-                    <div className="lg:col-span-6 lg:col-start-7">
-                        <p className={cn('m-0 text-ink', typography.lead)}>{t('story.p1')}</p>
-                        <p className={cn('m-0 mt-5 text-ink-muted', typography.body)}>{t('story.p2')}</p>
-                        <dl className="m-0 mt-10 grid grid-cols-2 gap-x-5 gap-y-8 lg:gap-x-8">
-                            {[
-                                { value: t('facts.founded_value'), label: t('facts.founded_label') },
-                                { value: t('facts.capacity_value'), label: t('facts.capacity_label') },
-                                {
-                                    value: t('facts.iso_value'),
-                                    label: (
-                                        <>
-                                            {t('facts.iso_label')}
-                                            <IsoStandards text={t('facts.iso_note')} />
-                                        </>
-                                    ),
-                                },
-                                { value: t('facts.markets_value'), label: t('facts.markets_label') },
-                            ].map((s, i) => (
-                                <Stat
-                                    key={i}
-                                    value={s.value}
-                                    label={s.label}
-                                    className="relative justify-end border-0 border-t border-solid border-line pt-5 before:absolute before:-top-px before:start-0 before:h-[3px] before:w-11 before:bg-gold before:content-[''] lg:pt-7"
-                                />
-                            ))}
-                        </dl>
-                        <TextLink href={routes.quality} className="mt-6" dataAttrs={{ 'data-cta': 'about_quality' }}>
-                            {t('facts.iso_link')}
+            {/* 02 · At a glance: the company fact table (third person, quotable) */}
+            <Section variant="offwhite" labelledBy="about-glance">
+                <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+                    <div className="lg:col-span-4">
+                        <SectionHeading id="about-glance" size="md" eyebrow={t('glance.eyebrow')} title={t('glance.title')} />
+                        <TextLink href={routes.quality} dataAttrs={{ 'data-cta': 'about_quality' }}>
+                            {t('glance.quality_link')}
                         </TextLink>
                     </div>
+                    <dl className="m-0 divide-y divide-line-soft rounded-card border border-solid border-line bg-white lg:col-span-8">
+                        {facts.map((f) => (
+                            <div key={f.label} className="grid grid-cols-1 gap-1 p-5 sm:grid-cols-3 sm:gap-6">
+                                <dt className={cn('font-semibold text-navy', typography.body)}>{f.label}</dt>
+                                <dd className={cn('m-0 text-ink sm:col-span-2', typography.body)}>{f.value}</dd>
+                            </div>
+                        ))}
+                    </dl>
                 </div>
             </Section>
 
-            {/* 03 · Milestones since 2008 (live-site achievements + market openings) */}
+            {/* 03 · Milestones since 2008 (live-site achievements + market openings).
+                Keep id="about-journey": /insights links to it. */}
             <Section variant="white" labelledBy="about-journey">
                 <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
                     <div className="lg:col-span-5">
@@ -209,35 +232,32 @@ export default async function AboutPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* 04 · One line instead of the five-stage chain (the stages live on /processing) */}
-            <Section as="div" variant="offwhite" spacing="sm">
-                <div className="flex flex-col items-start gap-1 border-0 border-s-2 border-solid border-gold ps-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-                    <p className={cn('m-0 font-semibold text-fg', typography.lead)}>{t('stages.line')}</p>
-                    <TextLink href={routes.processing} className="shrink-0" dataAttrs={{ 'data-cta': 'about_stages' }}>
-                        {t('stages.link')}
-                    </TextLink>
-                </div>
-            </Section>
-
-            {/* 05 · Our businesses (detail on /businesses) */}
-            <Section variant="white" labelledBy="about-businesses">
+            {/* 04 · Our businesses. #businesses is the target of the /businesses,
+                /agriculture, /livestock and /investments redirects. */}
+            <Section id="businesses" variant="offwhite" labelledBy="about-businesses">
                 <EditorialMedia
                     id="about-businesses"
                     eyebrow={t('businesses.eyebrow')}
                     title={t('businesses.title')}
-                    body={[t('businesses.p1'), t('businesses.p2')]}
+                    body={[t('businesses.p2')]}
                     image={gImage('fish-on-ice', t('businesses.image_alt'))}
-                    links={[
-                        { label: t('businesses.link_businesses'), href: routes.businesses },
-                        { label: t('businesses.link_seafood'), href: routes.seafood },
-                        { label: t('businesses.link_products'), href: routes.products },
-                        { label: t('businesses.link_importers'), href: routes.forImporters },
-                    ]}
-                />
+                >
+                    <ul className="m-0 list-none space-y-4 p-0">
+                        {otherBusinesses.map((b) => (
+                            <li key={b.title} className="border-0 border-s-2 border-solid border-gold ps-4">
+                                <p className={cn('m-0 font-semibold text-ink', typography.body)}>{b.title}</p>
+                                {b.text ? <p className={cn('m-0 mt-1 text-ink-muted', typography.small)}>{b.text}</p> : null}
+                            </li>
+                        ))}
+                    </ul>
+                    <TextLink href={routes.products} className="mt-4" dataAttrs={{ 'data-cta': 'about_products' }}>
+                        {t('businesses.link_products')}
+                    </TextLink>
+                </EditorialMedia>
             </Section>
 
-            {/* 06 · Plant, trucks and cold stores */}
-            <Section variant="offwhite" labelledBy="about-footprint">
+            {/* 05 · Plant, trucks and cold stores: the map link and the five stages (addresses live in the fact table) */}
+            <Section variant="white" labelledBy="about-footprint">
                 <EditorialMedia
                     id="about-footprint"
                     eyebrow={t('footprint.eyebrow')}
@@ -246,50 +266,15 @@ export default async function AboutPage({ params }: Props) {
                     image={gImage('sorting-packing', t('footprint.image_alt'))}
                     imageSide="start"
                 >
-                    <h3 className={cn('m-0 text-ink', typography.h4)}>{t('footprint.addresses_title')}</h3>
-                    <ul className="m-0 mt-4 list-none space-y-4 p-0">
-                        {(['factory', 'main'] as const).map((k) => (
-                            <li key={k} className="flex items-start gap-3">
-                                <MapPinIcon size={24} className="mt-0.5 shrink-0 text-navy" />
-                                <div>
-                                    <p className={cn('m-0 font-semibold text-ink', typography.small)}>{tc(`addresses.${k}.title`)}</p>
-                                    <address className={cn('not-italic text-ink-muted', typography.small)}>{tc(`addresses.${k}.address`)}</address>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                    <ExternalLink href={PLANT_MAP_URL} newTabLabel={newTab} className="mt-4" dataAttrs={{ 'data-cta': 'about_plant_map' }}>
-                        {t('footprint.map_link')}
-                    </ExternalLink>
+                    <div className="flex flex-col items-start gap-1">
+                        <ExternalLink href={PLANT_MAP_URL} newTabLabel={newTab} dataAttrs={{ 'data-cta': 'about_plant_map' }}>
+                            {t('footprint.map_link')}
+                        </ExternalLink>
+                        <TextLink href={routes.processing} dataAttrs={{ 'data-cta': 'about_stages' }}>
+                            {t('footprint.stages_link')}
+                        </TextLink>
+                    </div>
                 </EditorialMedia>
-            </Section>
-
-            {/* 07 · Values (factual, how we deal with buyers) */}
-            <Section variant="white" labelledBy="about-values">
-                <SectionHeading id="about-values" eyebrow={t('values.eyebrow')} title={t('values.title')} intro={t('values.intro')} />
-                <ul className="m-0 grid list-none gap-4 p-0 sm:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6">
-                    {[1, 2, 3, 4].map((n) => (
-                        <li key={n}>
-                            <Card accent className="h-full">
-                                <h3 className={cn('m-0 text-ink', typography.h3)}>{t(`values.i${n}_title`)}</h3>
-                                <p className={cn('m-0 mt-2 text-ink-muted', typography.body)}>{t(`values.i${n}_text`)}</p>
-                            </Card>
-                        </li>
-                    ))}
-                </ul>
-            </Section>
-
-            {/* 08 · Vision, mission, identity (the global G footer follows with the partnership contacts) */}
-            <Section variant="offwhite" labelledBy="about-direction">
-                <SectionHeading id="about-direction" eyebrow={t('direction.eyebrow')} title={t('direction.title')} />
-                <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-                    {(['vision', 'mission', 'identity'] as const).map((k) => (
-                        <div key={k} className="border-0 border-t-2 border-solid border-gold pt-6">
-                            <h3 className={cn('m-0 text-ink', typography.h3)}>{t(`direction.${k}_title`)}</h3>
-                            <p className={cn('m-0 mt-3 text-ink-muted', typography.body)}>{t(`direction.${k}_text`)}</p>
-                        </div>
-                    ))}
-                </div>
             </Section>
         </>
     );

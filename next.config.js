@@ -52,12 +52,17 @@ const nextConfig = {
       { source: '/:locale(ar|en|es|ru|de|fr)/faq', destination: '/:locale/for-importers#faq', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/certificates', destination: '/:locale/quality', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/eu-buyers', destination: '/:locale/markets', permanent: true },
-      { source: '/:locale(ar|en|es|ru|de|fr)/media', destination: '/:locale/insights/news', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/media', destination: '/:locale/insights#news', permanent: true },
       // Requirements page: was /rfq (no web form; buyers send by email/WhatsApp)
       { source: '/:locale(ar|en|es|ru|de|fr)/rfq/thank-you', destination: '/:locale/requirements', permanent: true },
       { source: '/:locale(ar|en|es|ru|de|fr)/rfq', destination: '/:locale/requirements', permanent: true },
-      // Corporate sectors live as sections of /businesses
-      { source: '/:locale(ar|en|es|ru|de|fr)/:sector(agriculture|livestock|investments)', destination: '/:locale/businesses#:sector', permanent: true },
+      // Round 1 (14 Nov 2026): pages folded into others. The group's other businesses
+      // (agriculture, livestock, investments) are one section of /about; news is a
+      // section of /insights; /seafood repeated /products.
+      { source: '/:locale(ar|en|es|ru|de|fr)/seafood', destination: '/:locale/products', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/businesses', destination: '/:locale/about#businesses', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/:sector(agriculture|livestock|investments)', destination: '/:locale/about#businesses', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/insights/news', destination: '/:locale/insights#news', permanent: true },
     ]
   },
 

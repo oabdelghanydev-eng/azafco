@@ -1,12 +1,12 @@
 {
     "meta": {
         "title": "Nous contacter : WhatsApp, e-mail, bureau et usine",
-        "description": "WhatsApp : la direction d’AZAFCO International, pour conclure vite. E-mail : l’équipe export, pour les détails et documents. Bureau et usine à Kafr el-Cheikh."
+        "description": "WhatsApp : la direction d’AZAFCO International, pour conclure vite. E-mail : l’équipe export, pour détails et documents. Bureau et usine à Kafr el-Cheikh."
     },
     "breadcrumb": "Contact",
     "hero": {
         "eyebrow": "Contact",
-        "title": "Démarrer un partenariat en un seul message",
+        "title": "Contacter AZAFCO International",
         "intro": "Écrivez à la direction sur WhatsApp pour conclure rapidement, ou envoyez un e-mail à l’équipe export pour les détails et les documents.",
         "actions": {
             "whatsapp": "Écrire à la direction sur WhatsApp",
@@ -19,7 +19,7 @@
         "intro": "Un numéro pour joindre la direction sur WhatsApp et par téléphone, une adresse e-mail pour l’équipe export.",
         "whatsapp": {
             "title": "WhatsApp",
-            "sub": "Ligne directe de la direction · pour conclure rapidement"
+            "sub": "En direct avec la direction"
         },
         "email": {
             "title": "E-mail",
@@ -47,14 +47,11 @@
         "documents_title": "Documents",
         "documents_text": "Fiches techniques produit ou présentation de l’entreprise. Une demande courte : ni espèce ni quantité à indiquer.",
         "documents_action": "Demander des documents",
-        "corporate_title": "Partenariat d’entreprise ou autres sujets",
-        "corporate_text": "Partenariats, investissement ou autres sujets : une courte présentation de votre entreprise et de la coopération que vous proposez.",
-        "corporate_action": "Envoyer une demande institutionnelle"
+        "corporate_link": "Partenariats, investissement ou autres sujets ? <link>Envoyer une demande institutionnelle</link>"
     },
     "locations": {
         "eyebrow": "Nos sites",
         "title": "Bureau principal et usine",
-        "intro": "Notre bureau principal se trouve à El-Borollos et notre usine à Motobas, tous deux à Kafr el-Cheikh, en Égypte.",
         "factory": "Usine",
         "office": "Bureau principal",
         "map_open": "Ouvrir dans Google Maps",
@@ -62,15 +59,9 @@
         "map_title_office": "Carte du bureau principal d’AZAFCO International",
         "map_note": "Les cartes sont chargées depuis Google Maps."
     },
-    "next": {
-        "eyebrow": "Après votre message",
-        "title": "Ce qui se passe après votre message",
-        "steps": [
-            "L’équipe export examine vos besoins au regard de la spécification et des disponibilités du moment.",
-            "Nous vous contactons pour confirmer les détails et les points en suspens.",
-            "Prix, quantité, conditionnement et conditions sont confirmés par écrit pour chaque commande."
-        ],
-        "no_promise": "L’envoi de vos besoins n’engage ni vous ni nous à passer commande. Les prix sont confirmés à chaque commande."
+    "official": {
+        "eyebrow": "Informations officielles",
+        "title": "Notre immatriculation et nos canaux officiels"
     },
     "privacy": {
         "title": "Utilisation de vos données",
@@ -80,13 +71,6 @@
     "trust": {
         "title": "Société enregistrée",
         "register": "Registre du commerce",
-        "tax": "Carte fiscale",
-        "proof_title": "Parcours",
-        "proof": [
-            "Fondée en 2008",
-            "Plus de 7 marchés au Moyen-Orient et au-delà",
-            "ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018, certifiés par TÜV AUSTRIA"
-        ],
-        "proof_link": "Voir la qualité et les certificats"
+        "tax": "Carte fiscale"
     }
 }
