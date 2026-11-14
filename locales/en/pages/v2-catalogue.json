@@ -159,7 +159,7 @@
         "docs_link": "Quality and certificates",
         "related_eyebrow": "Other species",
         "related_title": "Related species",
-        "faq_title": "Questions about ordering {name}",
+        "faq_title": "{name}: ordering questions",
         "faq_sizes_q": "Which weight grades can you supply?",
         "faq_sizes_a_listed": "The specification card lists indicative grades. Send us your target weight range and we confirm what we can supply for your order.",
         "faq_sizes_a_none": "Weight grades for this species are confirmed per order. Send us your target weight range and we confirm what we can supply.",
@@ -173,7 +173,7 @@
         },
         "contact": {
             "eyebrow": "Start a partnership",
-            "title": "Talk to us about {name}",
+            "title": "{name}: talk to us",
             "intro": "Message management on WhatsApp for fast deals, or email the export team for specifications and documents.",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Direct to management · for fast deals",

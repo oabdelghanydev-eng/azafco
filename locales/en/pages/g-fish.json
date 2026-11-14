@@ -9,11 +9,11 @@
             "alt": "Whole tilapia, side view"
         },
         "sea_bass": {
-            "name": "Sea Bass",
+            "name": "Sea bass",
             "alt": "Whole sea bass, side view"
         },
         "sea_bream": {
-            "name": "Sea Bream",
+            "name": "Sea bream",
             "alt": "Whole sea bream, side view"
         },
         "meagre": {
@@ -21,27 +21,27 @@
             "alt": "Whole meagre, side view"
         },
         "mullet": {
-            "name": "Grey Mullet",
+            "name": "Grey mullet",
             "alt": "Whole grey mullet, side view"
         },
         "thinlip_mullet": {
-            "name": "Thinlip Mullet",
+            "name": "Thinlip mullet",
             "alt": "Whole thinlip mullet, side view"
         },
         "common_carp": {
-            "name": "Common Carp",
+            "name": "Common carp",
             "alt": "Whole common carp, side view"
         },
         "mirror_carp": {
-            "name": "Mirror Carp",
+            "name": "Mirror carp",
             "alt": "Whole mirror carp, side view"
         },
         "grass_carp": {
-            "name": "Grass Carp",
+            "name": "Grass carp",
             "alt": "Whole grass carp, side view"
         },
         "silver_carp": {
-            "name": "Silver Carp",
+            "name": "Silver carp",
             "alt": "Whole silver carp, side view"
         },
         "catfish": {
@@ -49,7 +49,7 @@
             "alt": "Whole catfish, side view"
         },
         "bayad_catfish": {
-            "name": "Bayad Catfish",
+            "name": "Bayad catfish",
             "alt": "Whole bayad catfish, side view"
         }
     },

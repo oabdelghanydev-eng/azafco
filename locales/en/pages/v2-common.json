@@ -37,7 +37,7 @@
         "contact_export_team": "Contact our export team",
         "send_requirements": "Send your requirements",
         "start_partnership": "Start a partnership",
-        "whatsapp_management": "WhatsApp · Direct to management",
+        "whatsapp_management": "WhatsApp · direct to management",
         "email_export_team": "Email the export team",
         "request_document_pack": "Ask the export team about documents"
     },
@@ -104,7 +104,7 @@
         "label": "Photo gallery"
     },
     "whatsapp_float": {
-        "label": "WhatsApp · Direct to management"
+        "label": "WhatsApp · direct to management"
     },
     "facts": {
         "title": "Facts at a glance",
