@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Eyebrow, Section, TextLink, cn, typography } from '@/components/ui';
+import { routes } from '@/lib/v2/routes';
 
 /** Design G: "Who we are" section (#about). Photo with the gold offset block, copy on the end side from lg. */
 export default function GAbout() {
@@ -28,8 +29,8 @@ export default function GAbout() {
                     </h2>
                     <p className="mb-0 mt-4 text-fg-muted lg:mt-6">{t('p1')}</p>
                     <p className="mb-0 mt-3.5 text-fg-muted lg:mt-4">{t('p2')}</p>
-                    <TextLink href="#chain" className="mt-4 lg:mt-7" dataAttrs={{ 'data-cta': 'home_about_chain' }}>
-                        {t('link')}
+                    <TextLink href={routes.about} className="mt-4 lg:mt-7" dataAttrs={{ 'data-cta': 'home_about_page' }}>
+                        {t('pageLink')}
                     </TextLink>
                 </div>
             </div>

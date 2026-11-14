@@ -1,5 +1,6 @@
 'use client';
 
+import { routes } from '@/lib/v2/routes';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
@@ -113,7 +114,7 @@ export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish }:
                         <p className={cn('mb-0 mt-4 text-fg-muted lg:mt-6 lg:max-w-[580px]', typography.lead)}>{slide.text}</p>
                     </div>
                     <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                        <Button href="#contact" external size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'home_hero_partner' }}>
+                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'home_hero_partner' }}>
                             {ctaPartner}
                         </Button>
                         <Button href="#fish" external variant="outline" size="lg" stretch="phone" dataAttrs={{ 'data-cta': 'home_hero_fish' }}>

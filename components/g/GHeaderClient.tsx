@@ -50,7 +50,7 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
     const [lang, setLang] = useState(false);
     const [menu, setMenu] = useState(false);
     const rootRef = useRef<HTMLElement>(null);
-    // Board anchors on home, real routes (with aria-current) elsewhere; Contact last
+    // Real routes (with aria-current) on every page; Contact last
     const nav = useGNav(true);
 
     // Close everything on navigation

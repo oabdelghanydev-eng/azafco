@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
-import { Container, Section, SectionHeading, cn, focusRing, typography } from '@/components/ui';
-import { productHref } from '@/lib/v2/routes';
+import { Container, Section, SectionHeading, TextLink, cn, focusRing, typography } from '@/components/ui';
+import { productHref, routes } from '@/lib/v2/routes';
 
 /**
  * "Our fish" section of the G landing (boards GroupAr / Group / *Mobile, section#fish).
@@ -83,6 +83,9 @@ export default async function GFish() {
 
                 {/* The 12 are the main species; others are supplied on request (owner, 13 Nov) */}
                 <p className="mb-0 mt-6 text-fg-muted lg:mt-8">{t('note')}</p>
+                <TextLink href={routes.products} className="mt-4 lg:mt-5" dataAttrs={{ 'data-cta': 'home_fish_page' }}>
+                    {t('pageLink')}
+                </TextLink>
             </Container>
         </Section>
     );

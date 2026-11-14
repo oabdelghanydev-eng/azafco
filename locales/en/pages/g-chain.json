@@ -4,10 +4,26 @@
     "intro": "We work to one agreed specification at each step, and we run our own refrigerated trucks, logistics and cold stores.",
     "stageLabel": "Stage {n}",
     "stages": {
-        "farming": { "title": "Farming and sourcing", "text": "Our own farms, plus fish we buy from suppliers." },
-        "harvest": { "title": "Harvest", "text": "Netted and taken to our plant in Motobas." },
-        "packing": { "title": "Washing, icing and packing", "text": "Washed, graded by weight and packed whole on ice." },
-        "inspection": { "title": "Inspection", "text": "Checked against the agreed specification before the boxes are closed." },
-        "export": { "title": "Export", "text": "Our own refrigerated trucks, then air or road freight." }
-    }
+        "farming": {
+            "title": "Farming and sourcing",
+            "text": "Our own farms, plus fish we buy from suppliers."
+        },
+        "harvest": {
+            "title": "Harvest",
+            "text": "Netted and taken to our plant in Motobas."
+        },
+        "packing": {
+            "title": "Washing, icing and packing",
+            "text": "Washed, graded by weight and packed whole on ice."
+        },
+        "inspection": {
+            "title": "Inspection",
+            "text": "Checked against the agreed specification before the boxes are closed."
+        },
+        "export": {
+            "title": "Export",
+            "text": "Our own refrigerated trucks, then air or road freight."
+        }
+    },
+    "pageLink": "See how we process and ship"
 }

@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, cn, typography } from '@/components/ui';
+import { routes } from '@/lib/v2/routes';
+import { Eyebrow, cn, typography, TextLink } from '@/components/ui';
 import styles from './GMarkets.module.css';
 import { FLAGS, MAP_COUNTRIES, PLANNED_FLAGS } from './gMarketsMap';
 import { GMarketsList, GMarketsState } from './GMarketsPicker';
@@ -159,6 +160,9 @@ export default async function GMarkets() {
                         {t('title')}
                     </h2>
                     <p className="m-0 mb-2 mt-3.5 text-fg-muted lg:mb-0 lg:mt-5">{t('intro')}</p>
+                    <TextLink href={routes.markets} className="mb-2 mt-3 lg:mb-0 lg:mt-4" dataAttrs={{ 'data-cta': 'home_markets_page' }}>
+                        {t('pageLink')}
+                    </TextLink>
 
                     {/* phone/tablet map sits between the intro and the list */}
                     <div dir="ltr" className="-mx-3 lg:hidden">

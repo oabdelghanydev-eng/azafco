@@ -8,27 +8,22 @@ export type { GNavKey } from './nav';
 
 export interface GNavItem {
     key: GNavKey;
-    /** On home: in-page '#anchor'; elsewhere: the locale-less route for the next-intl Link */
+    /** Locale-less route for the next-intl Link */
     href: string;
-    /** true on home (plain <a href="#...">), false elsewhere (next-intl Link) */
+    /** Kept for the GNavLink API; always false now (every item is a route) */
     anchor: boolean;
     current: boolean;
 }
 
 /**
- * Design G nav (lead decision): on the home page the items keep the board
- * anchors (#about #fish #chain #quality #markets #contact); on every other page
- * they link to the real routes, with aria-current="page" on the matching one.
+ * Design G nav: every item links to its own page (a multi-page site, not a
+ * one-pager), with aria-current="page" on the matching route. Home sections
+ * keep their ids for the hero buttons and in-page links only.
  */
 export function useGNav(withContact: boolean): GNavItem[] {
     const pathname = usePathname();
-    const home = pathname === '/' || pathname === '';
     const keys = withContact ? G_NAV_KEYS_WITH_CONTACT : G_NAV_KEYS;
-    return keys.map((key) =>
-        home
-            ? { key, href: `#${key}`, anchor: true, current: false }
-            : { key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) },
-    );
+    return keys.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));
 }
 
 /** Renders one nav item as an in-page anchor (home) or a localized route link. */

@@ -4,17 +4,54 @@
     "intro": "Sold whole and fresh chilled, graded by weight per piece and packed on ice. We agree the weight grade and packing with you before every shipment.",
     "note": "These are our main, most-requested species; we supply other species on request.",
     "species": {
-        "tilapia": { "name": "Tilapia", "alt": "Whole tilapia, side view" },
-        "sea_bass": { "name": "Sea Bass", "alt": "Whole sea bass, side view" },
-        "sea_bream": { "name": "Sea Bream", "alt": "Whole sea bream, side view" },
-        "meagre": { "name": "Meagre", "alt": "Whole meagre, side view" },
-        "mullet": { "name": "Grey Mullet", "alt": "Whole grey mullet, side view" },
-        "thinlip_mullet": { "name": "Thinlip Mullet", "alt": "Whole thinlip mullet, side view" },
-        "common_carp": { "name": "Common Carp", "alt": "Whole common carp, side view" },
-        "mirror_carp": { "name": "Mirror Carp", "alt": "Whole mirror carp, side view" },
-        "grass_carp": { "name": "Grass Carp", "alt": "Whole grass carp, side view" },
-        "silver_carp": { "name": "Silver Carp", "alt": "Whole silver carp, side view" },
-        "catfish": { "name": "Catfish", "alt": "Whole catfish, side view" },
-        "bayad_catfish": { "name": "Bayad Catfish", "alt": "Whole bayad catfish, side view" }
-    }
+        "tilapia": {
+            "name": "Tilapia",
+            "alt": "Whole tilapia, side view"
+        },
+        "sea_bass": {
+            "name": "Sea Bass",
+            "alt": "Whole sea bass, side view"
+        },
+        "sea_bream": {
+            "name": "Sea Bream",
+            "alt": "Whole sea bream, side view"
+        },
+        "meagre": {
+            "name": "Meagre",
+            "alt": "Whole meagre, side view"
+        },
+        "mullet": {
+            "name": "Grey Mullet",
+            "alt": "Whole grey mullet, side view"
+        },
+        "thinlip_mullet": {
+            "name": "Thinlip Mullet",
+            "alt": "Whole thinlip mullet, side view"
+        },
+        "common_carp": {
+            "name": "Common Carp",
+            "alt": "Whole common carp, side view"
+        },
+        "mirror_carp": {
+            "name": "Mirror Carp",
+            "alt": "Whole mirror carp, side view"
+        },
+        "grass_carp": {
+            "name": "Grass Carp",
+            "alt": "Whole grass carp, side view"
+        },
+        "silver_carp": {
+            "name": "Silver Carp",
+            "alt": "Whole silver carp, side view"
+        },
+        "catfish": {
+            "name": "Catfish",
+            "alt": "Whole catfish, side view"
+        },
+        "bayad_catfish": {
+            "name": "Bayad Catfish",
+            "alt": "Whole bayad catfish, side view"
+        }
+    },
+    "pageLink": "Browse all species"
 }

@@ -1,6 +1,6 @@
 /**
  * Design G nav items (plain module: safe to import from server and client files).
- * On the home page the items are the board anchors; elsewhere they link to ROUTE.
+ * Every item links to its own page (G_NAV_ROUTE), on home as everywhere else.
  */
 import { routes } from '@/lib/v2/routes';
 

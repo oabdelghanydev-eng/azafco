@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { Eyebrow, Section, cn, typography } from '@/components/ui';
+import { Eyebrow, Section, TextLink, cn, typography } from '@/components/ui';
+import { routes } from '@/lib/v2/routes';
 
 /**
  * Value chain section of design G (boards: Group*.dc.html, section#chain).
@@ -50,6 +51,11 @@ export default async function GChain() {
                     </li>
                 ))}
             </ol>
+            <div className="mt-8 lg:mt-12 lg:text-center">
+                <TextLink href={routes.processing} dataAttrs={{ 'data-cta': 'home_chain_page' }}>
+                    {t('pageLink')}
+                </TextLink>
+            </div>
         </Section>
     );
 }
