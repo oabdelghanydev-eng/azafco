@@ -19,7 +19,7 @@
     "certs": {
         "eyebrow": "ISO-Zertifikate",
         "title": "Wir verfügen über drei ISO-Zertifikate",
-        "intro": "Unsere Managementsysteme sind durch TÜV AUSTRIA zertifiziert.",
+        "intro": "Unsere Managementsysteme sind durch TÜV AUSTRIA zertifiziert. Welche Lebensmittelsicherheits- und Gesundheitsdokumente Ihr Markt verlangt, klärt unser Exportteam vor Ihrer Bestellung: Es bestätigt, welche Unterlagen jede Lieferung begleiten.",
         "items": {
             "iso9001": {
                 "name": "Qualitätsmanagement",
@@ -75,13 +75,6 @@
         "a5": "Teilen Sie uns mit, was Ihr Markt oder Ihr Kunde verlangt. Wir bestätigen vor Ihrer Bestellung, welche Los- und Sendungsdaten wir bereitstellen können.",
         "q6": "Wie fangen wir an?",
         "a6": "Für schnelle Abschlüsse schreiben Sie unserer Geschäftsleitung direkt per WhatsApp unter <wa>+20 100 773 6419</wa>. Für Details und Dokumente senden Sie unserem Exportteam eine E-Mail an <mail>business@azafco.com.eg</mail>."
-    },
-    "closing": {
-        "eyebrow": "Nächster Schritt",
-        "title": "Teilen Sie uns Ihre Spezifikation mit",
-        "text": "Nennen Sie uns Fischart, Gewichtsklasse, Verpackung und Zielort sowie etwaige Anforderungen Ihres Marktes. Unser Exportteam prüft Liefermöglichkeiten und Handelskonditionen. Das Senden Ihrer Anforderungen ist unverbindlich.",
-        "primary": "Partnerschaft starten",
-        "secondary": "Anforderungen senden"
     },
     "pending": {
         "traceability": "Los- und Chargendaten, die mit jeder Sendung geliefert werden können",

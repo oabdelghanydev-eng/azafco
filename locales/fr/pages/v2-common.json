@@ -86,7 +86,7 @@
         "label": "Galerie photos"
     },
     "whatsapp_float": {
-        "label": "WhatsApp · Ligne directe de la direction"
+        "label": "WhatsApp · ligne directe de la direction"
     },
     "facts": {
         "title": "L’essentiel en chiffres",
@@ -102,5 +102,12 @@
         "spec_title": "Vous avez une spécification complète ?",
         "spec_text": "Envoyez-la à l’équipe export, et nous l’étudierons avec vous.",
         "documents_text": "Pour toute question sur les documents, contactez l’équipe export."
+    },
+    "consent": {
+        "title": "Cookies et mesure d’audience",
+        "text": "Avec votre accord, nous utilisons les cookies de Google Analytics et de Microsoft Clarity pour comprendre comment le site est utilisé et mesurer nos actions marketing. Si vous refusez, ils restent désactivés.",
+        "accept": "Accepter",
+        "reject": "Refuser",
+        "privacy": "Politique de confidentialité"
     }
 }

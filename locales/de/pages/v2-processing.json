@@ -116,13 +116,6 @@
         "prices": "Preise werden pro Auftrag bestätigt.",
         "speciesLink": "Unsere Hauptarten ansehen"
     },
-    "closing": {
-        "eyebrow": "Nächster Schritt",
-        "title": "Sagen Sie uns, was Ihr Markt braucht",
-        "text": "Nennen Sie uns Fischart, Menge, Gewichtsklasse und Zielort. Unser Exportteam prüft Liefermöglichkeiten und Handelskonditionen. Das Senden Ihrer Anforderungen ist unverbindlich.",
-        "primary": "Partnerschaft starten",
-        "secondary": "Anforderungen senden"
-    },
     "pending": {
         "temperature": "Lager- und Transporttemperatur je Produkt, mit Kontrollpunkten und Aufzeichnungen (vom Inhaber zu bestätigen, bevor eine Zahl veröffentlicht wird)",
         "pack_formats": "Freigegebene Verpackungsformate (Boxtypen, Nettogewichte) und Etikettenoptionen"

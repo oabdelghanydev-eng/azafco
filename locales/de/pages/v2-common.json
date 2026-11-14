@@ -102,5 +102,12 @@
         "spec_title": "Sie haben eine vollständige Spezifikation?",
         "spec_text": "Senden Sie sie an das Exportteam, und wir prüfen sie gemeinsam mit Ihnen.",
         "documents_text": "Bei Fragen zu Dokumenten wenden Sie sich an das Exportteam."
+    },
+    "consent": {
+        "title": "Cookies und Analyse",
+        "text": "Mit Ihrer Einwilligung verwenden wir Cookies von Google Analytics und Microsoft Clarity, um zu sehen, wie die Website genutzt wird, und um unser Marketing zu messen. Wenn Sie ablehnen, bleiben sie deaktiviert.",
+        "accept": "Akzeptieren",
+        "reject": "Ablehnen",
+        "privacy": "Datenschutzerklärung"
     }
 }

@@ -39,23 +39,12 @@
         "founded": "Gründung von AZAFCO International in Kafr el-Sheikh, Ägypten",
         "market": "Erste Lieferungen an Kunden aus {country}",
         "baltim": "Erstes Werk im Industriegebiet Baltim, Kafr el-Sheikh, eröffnet",
-        "motobas": "Zweites Werk im Industriegebiet Motobas, Kafr el-Sheikh, eröffnet",
+        "motobas": "Neues Werk im Industriegebiet Motobas, Kafr el-Sheikh, eröffnet",
         "governor": "Besuch des Gouverneurs von Kafr el-Sheikh in unserem Werk in Motobas"
     },
-    "operations": {
-        "eyebrow": "Was wir tun",
-        "title": "Jede Stufe in der Hand von AZAFCO",
-        "intro": "Wir züchten und beziehen den Fisch, bereiten ihn in unserem eigenen Werk vor und transportieren ihn mit eigenen Kühl-Lkw. So arbeiten Sie vom Teich bis zur Palette mit nur einem Unternehmen.",
-        "s1_title": "Zucht und Zukauf",
-        "s1_text": "Wir züchten eigenen Fisch und kaufen zusätzlich bei anderen Erzeugern. Der gesamte Fisch wird in unserem eigenen Werk gewaschen, sortiert und geprüft.",
-        "s2_title": "Abfischen",
-        "s2_text": "Der Fisch wird abgefischt und in unser Werk in Motobas, Kafr el-Sheikh, gebracht.",
-        "s3_title": "Waschen, Beeisen und Verpacken",
-        "s3_text": "Gewaschen, beeist, nach Gewicht sortiert und ganz auf Eis verpackt.",
-        "s4_title": "Kontrolle",
-        "s4_text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft.",
-        "s5_title": "Export",
-        "s5_text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht."
+    "stages": {
+        "line": "Wir übernehmen jede Stufe, vom Teich bis zur Palette.",
+        "link": "Die fünf Stufen ansehen"
     },
     "businesses": {
         "eyebrow": "Unsere Geschäftsbereiche",

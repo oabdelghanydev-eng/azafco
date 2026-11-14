@@ -116,13 +116,6 @@
         "prices": "Prix confirmés à chaque commande.",
         "speciesLink": "Voir nos espèces principales"
     },
-    "closing": {
-        "eyebrow": "Prochaine étape",
-        "title": "Dites-nous ce dont votre marché a besoin",
-        "text": "Indiquez l’espèce, la quantité, le calibre et la destination. Notre équipe export étudiera l’approvisionnement et les conditions commerciales. L’envoi de vos besoins ne vous engage à aucune commande.",
-        "primary": "Démarrer un partenariat",
-        "secondary": "Envoyer vos besoins"
-    },
     "pending": {
         "temperature": "Température de stockage et de transport par produit, avec points de contrôle et enregistrements (à confirmer par la direction avant toute publication de chiffre)",
         "pack_formats": "Formats d’emballage validés (types de caisse, poids nets) et options d’étiquetage"

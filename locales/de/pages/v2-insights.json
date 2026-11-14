@@ -19,7 +19,7 @@
         "eyebrow": "Was wir veröffentlichen",
         "title": "Inhalte nach Art, klar gekennzeichnet",
         "importer_guide": "Leitfäden für Importeure",
-        "importer_guide_text": "Wie Sie eine präzise Lieferanfrage formulieren, Spezifikationen lesen und Lieferanten vergleichen.",
+        "importer_guide_text": "HS-Codes, Exportdokumente und Grundlagen der Kühlkette für den Import von frischem Fisch aus Ägypten.",
         "behind_operations": "Einblick in den Betrieb",
         "behind_operations_text": "Sortierung, Verpackung und Versand in unserem Werk, veröffentlicht nach Prüfung.",
         "company_news": "Aktuelles und Presse",
@@ -42,7 +42,6 @@
         "toc": "In diesem Artikel",
         "sources_side": "Quellen",
         "sources_side_text": "{count, plural, one {# offizielle Quelle, am Ende aufgeführt und im Text verlinkt.} other {# offizielle Quellen, am Ende aufgeführt und im Text verlinkt.}}",
-        "back": "Alle Beiträge",
         "related_title": "Weiterlesen",
         "related": [
             {
@@ -59,15 +58,7 @@
             }
         ],
         "table_mobile_note": "Codes je Fischart",
-        "contact": "Anforderungen senden",
         "related_eyebrow": "Als Nächstes lesen",
         "reading_time": "Lesezeit"
-    },
-    "cta": {
-        "eyebrow": "Partnerschaft starten",
-        "title": "Bereit, über Lieferungen zu sprechen?",
-        "text": "Nennen Sie uns Fischart, Gewichtsklasse, Menge und Zielort. Das Exportteam prüft Ihre Anforderungen und meldet sich, um die Details zu bestätigen.",
-        "primary": "Anforderungen senden",
-        "secondary": "Fischarten ansehen"
     }
 }

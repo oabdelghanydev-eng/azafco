@@ -62,7 +62,9 @@
         "origin": "Origen",
         "origin_value": "Egipto",
         "water": "Agua",
-        "grades": "Calibres por peso (orientativos)"
+        "grades": "Calibres por peso (orientativos)",
+        "grades_label": "Calibres por peso",
+        "grades_per_order": "Confirmados en cada pedido"
     },
     "browser": {
         "search_label": "Buscar especies",
@@ -157,9 +159,10 @@
         "docs_email": "Correo al equipo de exportación",
         "docs_subject": "{name}: documentos para nuestro mercado",
         "docs_link": "Calidad y certificados",
+        "docs_guide": "Guía de códigos SA y documentos de exportación",
         "related_eyebrow": "Otras especies",
         "related_title": "Especies relacionadas",
-        "faq_title": "Preguntas sobre pedidos de {name}",
+        "faq_title": "{name}: preguntas sobre pedidos",
         "faq_sizes_q": "¿Qué calibres por peso pueden suministrar?",
         "faq_sizes_a_listed": "La ficha de especificaciones recoge calibres orientativos. Envíenos su rango de peso objetivo y le confirmaremos lo que podemos suministrar para su pedido.",
         "faq_sizes_a_none": "Los calibres por peso de esta especie se confirman en cada pedido. Envíenos su rango de peso objetivo y le confirmaremos lo que podemos suministrar.",
@@ -173,7 +176,7 @@
         },
         "contact": {
             "eyebrow": "Iniciemos una colaboración",
-            "title": "Hable con nosotros sobre {name}",
+            "title": "{name}: hable con nosotros",
             "intro": "Escriba a la dirección por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para especificaciones y documentos.",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Directo a la dirección · para operaciones rápidas",

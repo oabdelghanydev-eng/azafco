@@ -103,7 +103,7 @@
             },
             {
                 "title": "Commande minimale",
-                "text": "Dépend de l’espèce et des conditions de la commande."
+                "text": "Dépend de l’espèce, du mode de transport et des conditions de la commande. Indiquez-nous la quantité avec laquelle vous souhaitez commencer, et nous vous confirmons par écrit ce que nous pouvons expédier."
             },
             {
                 "title": "Disponibilité",
@@ -198,10 +198,5 @@
                 "a": "Nos canaux officiels sont l’e-mail de l’équipe export, business@azafco.com.eg, et le WhatsApp de la direction, +20 100 773 6419. Les conditions de commande sont confirmées par écrit pour chaque commande. Si un message concernant votre commande provient d’une autre adresse ou d’un autre numéro, vérifiez-le auprès de nous sur ces canaux avant d’y donner suite."
             }
         ]
-    },
-    "rfq": {
-        "eyebrow": "Démarrer un partenariat",
-        "title": "Envoyer vos besoins",
-        "intro": "Choisissez l’e-mail ou WhatsApp ; chacun ouvre un message préparé. Rien n’est contractuel tant que les conditions de la commande ne sont pas convenues par écrit."
     }
 }

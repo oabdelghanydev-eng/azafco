@@ -62,7 +62,9 @@
         "origin": "Origine",
         "origin_value": "Égypte",
         "water": "Eau",
-        "grades": "Calibres (indicatifs)"
+        "grades": "Calibres (indicatifs)",
+        "grades_label": "Calibres",
+        "grades_per_order": "Confirmés à chaque commande"
     },
     "browser": {
         "search_label": "Rechercher une espèce",
@@ -157,9 +159,10 @@
         "docs_email": "Écrire à l’équipe export",
         "docs_subject": "{name} : documents pour notre marché",
         "docs_link": "Qualité et certificats",
+        "docs_guide": "Guide des codes SH et des documents d’export",
         "related_eyebrow": "Autres espèces",
         "related_title": "Espèces associées",
-        "faq_title": "Questions sur la commande : {name}",
+        "faq_title": "{name} : questions sur la commande",
         "faq_sizes_q": "Quels calibres pouvez-vous fournir ?",
         "faq_sizes_a_listed": "La fiche de spécification indique des calibres indicatifs. Envoyez-nous votre fourchette de poids cible et nous confirmons ce que nous pouvons fournir pour votre commande.",
         "faq_sizes_a_none": "Les calibres de cette espèce sont confirmés à chaque commande. Envoyez-nous votre fourchette de poids cible et nous confirmons ce que nous pouvons fournir.",
@@ -173,7 +176,7 @@
         },
         "contact": {
             "eyebrow": "Démarrer un partenariat",
-            "title": "Parlons de votre besoin : {name}",
+            "title": "{name} : parlons-en",
             "intro": "Écrivez à la direction sur WhatsApp pour conclure rapidement, ou à l’équipe export par e-mail pour les spécifications et les documents.",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Ligne directe de la direction · pour conclure rapidement",

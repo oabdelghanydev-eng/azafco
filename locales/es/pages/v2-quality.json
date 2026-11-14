@@ -19,7 +19,7 @@
     "certs": {
         "eyebrow": "Certificados ISO",
         "title": "Contamos con tres certificados ISO",
-        "intro": "TÜV AUSTRIA certifica nuestros sistemas de gestión.",
+        "intro": "TÜV AUSTRIA certifica nuestros sistemas de gestión. En cuanto a los documentos sanitarios y de seguridad alimentaria que exige su mercado, nuestro equipo de exportación le confirma, antes de que haga su pedido, cuáles acompañan cada envío.",
         "items": {
             "iso9001": {
                 "name": "Gestión de la calidad",
@@ -75,13 +75,6 @@
         "a5": "Indíquenos lo que exige su mercado o su cliente. Confirmamos qué datos de lote y de envío podemos facilitar antes de que haga su pedido.",
         "q6": "¿Cómo empezamos?",
         "a6": "Para operaciones rápidas, escriba directamente a nuestra dirección por WhatsApp al <wa>+20 100 773 6419</wa>. Para detalles y documentos, escriba a nuestro equipo de exportación a <mail>business@azafco.com.eg</mail>."
-    },
-    "closing": {
-        "eyebrow": "Próximo paso",
-        "title": "Comparta su especificación",
-        "text": "Indíquenos la especie, el calibre, el embalaje y el destino, así como cualquier requisito de su mercado. Nuestro equipo de exportación revisará el suministro y las condiciones comerciales. Enviar sus requisitos no le compromete a realizar un pedido.",
-        "primary": "Iniciemos una colaboración",
-        "secondary": "Envíe sus requisitos"
     },
     "pending": {
         "traceability": "Datos de lote y partida que pueden facilitarse con cada envío",

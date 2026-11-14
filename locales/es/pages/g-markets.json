@@ -42,5 +42,6 @@
         "us": "Estados Unidos"
     },
     "paused": "España: exportaciones en pausa",
-    "pageLink": "Ver todos los mercados"
+    "pageLink": "Ver todos los mercados",
+    "marketLink": "{name}: página del mercado"
 }

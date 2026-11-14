@@ -39,23 +39,12 @@
         "founded": "Création d’AZAFCO International à Kafr el-Cheikh, en Égypte",
         "market": "Premières exportations vers {country}",
         "baltim": "Ouverture de la première usine, dans la zone industrielle de Baltim, à Kafr el-Cheikh",
-        "motobas": "Ouverture de la deuxième usine, dans la zone industrielle de Motobas, à Kafr el-Cheikh",
+        "motobas": "Ouverture d’une nouvelle usine dans la zone industrielle de Motobas, à Kafr el-Cheikh",
         "governor": "Visite du gouverneur de Kafr el-Cheikh dans notre usine de Motobas"
     },
-    "operations": {
-        "eyebrow": "Ce que nous faisons",
-        "title": "Chaque étape est assurée par AZAFCO",
-        "intro": "Nous élevons et achetons le poisson, le préparons dans notre propre usine et le transportons dans nos propres camions frigorifiques : vous traitez avec une seule entreprise, de l’étang à la palette.",
-        "s1_title": "Élevage et approvisionnement",
-        "s1_text": "Nous élevons notre propre poisson et en achetons aussi auprès d’autres producteurs. Tout est lavé, calibré et contrôlé dans notre propre usine.",
-        "s2_title": "Récolte",
-        "s2_text": "Le poisson est récolté puis acheminé vers notre usine de Motobas, à Kafr el-Cheikh.",
-        "s3_title": "Lavage, glaçage et conditionnement",
-        "s3_text": "Lavé, glacé, calibré au poids et conditionné entier sous glace.",
-        "s4_title": "Contrôle",
-        "s4_text": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses.",
-        "s5_title": "Export",
-        "s5_text": "Nos propres camions frigorifiques, puis fret aérien ou routier."
+    "stages": {
+        "line": "Nous prenons en charge chaque étape, de l’étang à la palette.",
+        "link": "Voir les cinq étapes"
     },
     "businesses": {
         "eyebrow": "Nos activités",

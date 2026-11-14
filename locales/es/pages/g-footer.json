@@ -36,6 +36,7 @@
     "secondary": {
         "for_importers": "Para importadores",
         "contact": "Contacto",
-        "privacy": "Política de privacidad"
+        "privacy": "Política de privacidad",
+        "cookies": "Configuración de cookies"
     }
 }

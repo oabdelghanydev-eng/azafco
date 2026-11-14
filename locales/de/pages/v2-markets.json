@@ -128,12 +128,6 @@
         "text": "Nennen Sie uns Ihr Bestimmungsland. Unser Exportteam prüft jeden neuen Markt einzeln.",
         "action": "Exportteam kontaktieren"
     },
-    "closing": {
-        "eyebrow": "Nächster Schritt",
-        "title": "Nennen Sie uns Ihren Markt und Ihren Bedarf",
-        "text": "Schreiben Sie unserer Geschäftsleitung per WhatsApp für schnelle Abschlüsse oder senden Sie dem Exportteam eine E-Mail für Details und Dokumente.",
-        "primary": "Partnerschaft starten"
-    },
     "disclaimer": "Jede Lieferung hängt von den Einfuhrvorschriften des Bestimmungslandes, der aktuellen Verfügbarkeit und den schriftlich vereinbarten Auftragsbedingungen ab.",
     "regions": {
         "gulf": "Golfregion",
@@ -160,7 +154,7 @@
             "plant_value": "Motobas, Kafr el-Sheikh, Ägypten",
             "plant_link": "Werk auf der Karte ansehen",
             "quality_label": "Qualität",
-            "quality_value": "ISO 9001, ISO 14001, ISO 45001",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
             "quality_link": "Zur Qualität",
             "transport_label": "Transport",
             "transport_value": "Per Luft oder Straße, pro Auftrag bestätigt",

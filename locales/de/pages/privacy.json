@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "Die Website setzt ein eigenes Cookie (NEXT_LOCALE), um sich Ihre Sprache zu merken. Google Analytics, Microsoft Clarity und Google Maps können eigene Cookies setzen. Sie können Cookies in Ihren Browsereinstellungen blockieren oder löschen; die Website funktioniert auch ohne sie."
+            "text": "Die Website setzt ein eigenes Cookie (NEXT_LOCALE), um sich Ihre Sprache zu merken. Google Analytics und Microsoft Clarity werden nur ausgeführt, wenn Sie sie im Cookie-Banner akzeptieren; Ihre Auswahl können Sie jederzeit über „Cookie-Einstellungen“ unten auf jeder Seite ändern. Google Maps kann eigene Cookies setzen, wenn eine Karte geladen wird. Sie können Cookies außerdem in Ihren Browsereinstellungen blockieren oder löschen; die Website funktioniert auch ohne sie."
         },
         "sharing": {
             "title": "Weitergabe",

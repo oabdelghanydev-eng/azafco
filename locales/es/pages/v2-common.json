@@ -86,7 +86,7 @@
         "label": "Galería de fotos"
     },
     "whatsapp_float": {
-        "label": "WhatsApp · Directo a la dirección"
+        "label": "WhatsApp · directo a la dirección"
     },
     "facts": {
         "title": "Datos clave",
@@ -102,5 +102,12 @@
         "spec_title": "¿Tiene una especificación completa?",
         "spec_text": "Envíela al equipo de exportación y la revisaremos con usted.",
         "documents_text": "Para consultas sobre documentos, contacte con el equipo de exportación."
+    },
+    "consent": {
+        "title": "Cookies y analítica",
+        "text": "Con su consentimiento, usamos cookies de Google Analytics y Microsoft Clarity para ver cómo se utiliza el sitio y medir nuestro marketing. Si las rechaza, permanecen desactivadas.",
+        "accept": "Aceptar",
+        "reject": "Rechazar",
+        "privacy": "Política de privacidad"
     }
 }

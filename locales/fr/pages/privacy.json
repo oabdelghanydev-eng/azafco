@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "Le site dépose un seul cookie qui lui est propre (NEXT_LOCALE) pour mémoriser votre langue. Google Analytics, Microsoft Clarity et Google Maps peuvent déposer leurs propres cookies. Vous pouvez bloquer ou supprimer les cookies dans les paramètres de votre navigateur ; le site fonctionne aussi sans eux."
+            "text": "Le site dépose un seul cookie qui lui est propre (NEXT_LOCALE) pour mémoriser votre langue. Google Analytics et Microsoft Clarity ne fonctionnent que si vous les acceptez dans le bandeau cookies ; vous pouvez modifier votre choix à tout moment via « Paramètres des cookies », en bas de chaque page. Google Maps peut déposer ses propres cookies lorsqu’une carte se charge. Vous pouvez aussi bloquer ou supprimer les cookies dans les paramètres de votre navigateur ; le site fonctionne aussi sans eux."
         },
         "sharing": {
             "title": "Partage",

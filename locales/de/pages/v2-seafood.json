@@ -11,20 +11,9 @@
         "primary": "Unsere Fischarten ansehen",
         "secondary": "Verarbeitung und Verpackung"
     },
-    "chain": {
-        "eyebrow": "Wertschöpfungskette",
-        "title": "Eigene Zucht und Zukauf, ein Weg",
-        "intro": "Fisch aus eigener Zucht und Fisch, den wir von anderen Erzeugern kaufen, durchlaufen denselben Weg, und die mit Ihnen vereinbarte Spezifikation bestimmt jede Stufe.",
-        "farm_title": "Zucht und Zukauf",
-        "farm_text": "Wir züchten Fisch und kaufen bei anderen Erzeugern zu, abgestimmt auf die Fischarten, Mengen und Termine, die Sie benötigen.",
-        "harvest_title": "Abfischen",
-        "harvest_text": "Der Fisch wird abgefischt und in unser Werk in Motobas, Kafr el-Sheikh, gebracht.",
-        "pack_title": "Waschen, Beeisen und Verpacken",
-        "pack_text": "Der Fisch wird gewaschen, beeist, nach Stückgewicht sortiert und auf Eis verpackt.",
-        "inspect_title": "Kontrolle",
-        "inspect_text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft.",
-        "export_title": "Export",
-        "export_text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht."
+    "stages": {
+        "line": "Wir übernehmen jede Stufe, vom Teich bis zur Palette.",
+        "link": "Die fünf Stufen ansehen"
     },
     "species": {
         "eyebrow": "Unser Fisch",

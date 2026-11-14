@@ -1,4 +1,7 @@
 {
+    "meta": {
+        "title": "Page introuvable"
+    },
     "eyebrow": "Erreur 404",
     "title": "Nous n’avons pas trouvé cette page",
     "intro": "Le lien est peut-être ancien, ou la page a peut-être été déplacée. Ces pages vous remettront sur la bonne voie.",

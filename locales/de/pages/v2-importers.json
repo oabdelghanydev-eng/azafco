@@ -103,7 +103,7 @@
             },
             {
                 "title": "Mindestbestellmenge",
-                "text": "Hängt von der Fischart und den Auftragsbedingungen ab."
+                "text": "Hängt von der Fischart, der Versandart und den Auftragsbedingungen ab. Nennen Sie uns die Menge, mit der Sie beginnen möchten, und wir bestätigen schriftlich, was wir verschicken können."
             },
             {
                 "title": "Verfügbarkeit",
@@ -198,10 +198,5 @@
                 "a": "Unsere offiziellen Kanäle sind die E-Mail-Adresse des Exportteams business@azafco.com.eg und die WhatsApp-Nummer der Geschäftsleitung +20 100 773 6419. Die Auftragsbedingungen werden für jeden Auftrag schriftlich bestätigt. Kommt eine Nachricht zu Ihrem Auftrag von einer anderen Adresse oder Nummer, prüfen Sie sie über diese Kanäle mit uns, bevor Sie handeln."
             }
         ]
-    },
-    "rfq": {
-        "eyebrow": "Partnerschaft starten",
-        "title": "Anforderungen senden",
-        "intro": "Wählen Sie E-Mail oder WhatsApp; beides öffnet eine vorbereitete Nachricht. Nichts ist verbindlich, bis die Auftragsbedingungen schriftlich vereinbart sind."
     }
 }

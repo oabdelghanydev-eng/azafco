@@ -19,7 +19,7 @@
         "eyebrow": "Qué publicamos",
         "title": "Contenido por tipo, claramente identificado",
         "importer_guide": "Guías para importadores",
-        "importer_guide_text": "Cómo redactar una solicitud de suministro precisa, leer especificaciones y comparar proveedores.",
+        "importer_guide_text": "Códigos SA, documentos de exportación y nociones básicas de cadena de frío para importar pescado fresco de Egipto.",
         "behind_operations": "Detrás de nuestras operaciones",
         "behind_operations_text": "Calibrado, envasado y despacho en nuestra planta, publicados tras su revisión.",
         "company_news": "Noticias y prensa",
@@ -42,7 +42,6 @@
         "toc": "En este artículo",
         "sources_side": "Fuentes",
         "sources_side_text": "{count, plural, one {# fuente oficial, citada al final y enlazada en el texto.} other {# fuentes oficiales, citadas al final y enlazadas en el texto.}}",
-        "back": "Todos los recursos",
         "related_title": "Siga leyendo",
         "related": [
             {
@@ -59,15 +58,7 @@
             }
         ],
         "table_mobile_note": "Códigos por especie",
-        "contact": "Envíe sus requisitos",
         "related_eyebrow": "Siguiente lectura",
         "reading_time": "Tiempo de lectura"
-    },
-    "cta": {
-        "eyebrow": "Iniciemos una colaboración",
-        "title": "¿Hablamos de suministro?",
-        "text": "Envíenos la especie, el calibre, la cantidad y el destino. El equipo de exportación revisa sus requisitos y se pone en contacto con usted para confirmar los detalles.",
-        "primary": "Envíe sus requisitos",
-        "secondary": "Ver nuestro pescado"
     }
 }

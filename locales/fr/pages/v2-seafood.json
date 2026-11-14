@@ -11,20 +11,9 @@
         "primary": "Voir nos poissons",
         "secondary": "Transformation et conditionnement"
     },
-    "chain": {
-        "eyebrow": "Chaîne de valeur",
-        "title": "Poisson d’élevage et poisson acheté, un seul parcours",
-        "intro": "Le poisson que nous élevons et celui que nous achetons auprès d’autres producteurs suivent le même parcours, et la spécification convenue avec vous guide chaque étape.",
-        "farm_title": "Élevage et approvisionnement",
-        "farm_text": "Nous élevons du poisson et en achetons auprès d’autres producteurs, selon les espèces, les quantités et le calendrier dont vous avez besoin.",
-        "harvest_title": "Récolte",
-        "harvest_text": "Le poisson est récolté et acheminé vers notre usine de Motobas, à Kafr el-Cheikh.",
-        "pack_title": "Lavage, glaçage et conditionnement",
-        "pack_text": "Le poisson est lavé, glacé, calibré selon le poids unitaire et conditionné sous glace.",
-        "inspect_title": "Contrôle",
-        "inspect_text": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses.",
-        "export_title": "Export",
-        "export_text": "Nos propres camions frigorifiques, puis fret aérien ou routier."
+    "stages": {
+        "line": "Nous prenons en charge chaque étape, de l’étang à la palette.",
+        "link": "Voir les cinq étapes"
     },
     "species": {
         "eyebrow": "Nos poissons",

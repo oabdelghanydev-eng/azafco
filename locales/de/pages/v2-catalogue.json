@@ -62,7 +62,9 @@
         "origin": "Herkunft",
         "origin_value": "Ägypten",
         "water": "Wasser",
-        "grades": "Gewichtsklassen (ca.)"
+        "grades": "Gewichtsklassen (ca.)",
+        "grades_label": "Gewichtsklassen",
+        "grades_per_order": "Pro Auftrag bestätigt"
     },
     "browser": {
         "search_label": "Fischarten suchen",
@@ -157,9 +159,10 @@
         "docs_email": "E-Mail an das Exportteam",
         "docs_subject": "{name}: Dokumente für unseren Markt",
         "docs_link": "Qualität und Zertifikate",
+        "docs_guide": "Leitfaden zu HS-Codes und Exportdokumenten",
         "related_eyebrow": "Weitere Fischarten",
         "related_title": "Ähnliche Fischarten",
-        "faq_title": "Fragen zur Bestellung: {name}",
+        "faq_title": "{name}: Fragen zur Bestellung",
         "faq_sizes_q": "Welche Gewichtsklassen können Sie liefern?",
         "faq_sizes_a_listed": "Die Spezifikationskarte nennt Richtwerte für die Gewichtsklassen. Senden Sie uns Ihren Zielgewichtsbereich, und wir bestätigen, was wir für Ihren Auftrag liefern können.",
         "faq_sizes_a_none": "Die Gewichtsklassen für diese Fischart werden pro Auftrag bestätigt. Senden Sie uns Ihren Zielgewichtsbereich, und wir bestätigen, was wir liefern können.",
@@ -173,7 +176,7 @@
         },
         "contact": {
             "eyebrow": "Partnerschaft starten",
-            "title": "Sprechen Sie mit uns über {name}",
+            "title": "{name}: Sprechen Sie mit uns",
             "intro": "Schreiben Sie der Geschäftsleitung per WhatsApp für schnelle Abschlüsse, oder senden Sie dem Exportteam eine E-Mail für Spezifikationen und Dokumente.",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",

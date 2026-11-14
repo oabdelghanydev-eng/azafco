@@ -21,5 +21,6 @@
         "us": "Vereinigte Staaten"
     },
     "paused": "Spanien: Exporte pausiert",
-    "pageLink": "Alle Märkte ansehen"
+    "pageLink": "Alle Märkte ansehen",
+    "marketLink": "{name}: Marktseite"
 }

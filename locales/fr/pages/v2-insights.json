@@ -19,7 +19,7 @@
         "eyebrow": "Ce que nous publions",
         "title": "Des contenus classés par type, clairement signalés",
         "importer_guide": "Guides pour importateurs",
-        "importer_guide_text": "Comment rédiger une demande d’approvisionnement précise, lire une spécification et comparer des fournisseurs.",
+        "importer_guide_text": "Codes SH, documents d’export et bases de la chaîne du froid pour importer du poisson frais d’Égypte.",
         "behind_operations": "Dans les coulisses",
         "behind_operations_text": "Calibrage, conditionnement et expédition dans notre usine, publiés après vérification.",
         "company_news": "Actualités et presse",
@@ -42,7 +42,6 @@
         "toc": "Dans cet article",
         "sources_side": "Sources",
         "sources_side_text": "{count, plural, one {# source officielle, citée à la fin et liée dans le texte.} other {# sources officielles, citées à la fin et liées dans le texte.}}",
-        "back": "Toutes les analyses",
         "related_title": "Pour aller plus loin",
         "related": [
             {
@@ -59,15 +58,7 @@
             }
         ],
         "table_mobile_note": "Codes par espèce",
-        "contact": "Envoyer vos besoins",
         "related_eyebrow": "À lire ensuite",
         "reading_time": "Temps de lecture"
-    },
-    "cta": {
-        "eyebrow": "Démarrer un partenariat",
-        "title": "Vous souhaitez parler approvisionnement ?",
-        "text": "Indiquez-nous l’espèce, le calibre, la quantité et la destination. L’équipe export examine vos besoins et vous contacte pour confirmer les détails.",
-        "primary": "Envoyer vos besoins",
-        "secondary": "Voir nos poissons"
     }
 }

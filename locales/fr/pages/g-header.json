@@ -10,10 +10,11 @@
         "markets": "Marchés",
         "contact": "Contact"
     },
-    "lang_aria": "Langue : {name}",
+    "lang_aria": "Langue : {name}",
     "lang_list_label": "Choisir une langue",
     "menu_open": "Menu",
     "menu_close": "Fermer le menu",
     "whatsapp_cta": "WhatsApp",
-    "whatsapp_aria": "Écrire à la direction sur WhatsApp (s’ouvre dans un nouvel onglet)"
+    "whatsapp_aria": "Écrire à la direction sur WhatsApp (s’ouvre dans un nouvel onglet)",
+    "whatsapp_message": "Bonjour AZAFCO International, ici … de la société … (pays). Nous sommes intéressés par :"
 }

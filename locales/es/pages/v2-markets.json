@@ -128,12 +128,6 @@
         "text": "Indíquenos su destino. Nuestro equipo de exportación estudia cada nuevo mercado caso por caso.",
         "action": "Escriba al equipo de exportación"
     },
-    "closing": {
-        "eyebrow": "Próximo paso",
-        "title": "Cuéntenos su mercado y lo que necesita",
-        "text": "Escriba a la dirección por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para detalles y documentos.",
-        "primary": "Iniciemos una colaboración"
-    },
     "disclaimer": "Cada envío depende de las normas de importación del destino, de la disponibilidad del momento y de las condiciones del pedido acordadas por escrito.",
     "regions": {
         "gulf": "Golfo",
@@ -160,7 +154,7 @@
             "plant_value": "Motobas, Kafr el-Sheikh, Egipto",
             "plant_link": "Ver la planta en el mapa",
             "quality_label": "Calidad",
-            "quality_value": "ISO 9001, ISO 14001, ISO 45001",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
             "quality_link": "Ver calidad",
             "transport_label": "Transporte",
             "transport_value": "Por aire o carretera, confirmado en cada pedido",

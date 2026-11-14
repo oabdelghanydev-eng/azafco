@@ -128,12 +128,6 @@
         "text": "Indiquez-nous votre destination. Notre équipe export étudie chaque nouveau marché au cas par cas.",
         "action": "Contacter l’équipe export"
     },
-    "closing": {
-        "eyebrow": "Prochaine étape",
-        "title": "Indiquez-nous votre marché et vos besoins",
-        "text": "Écrivez à notre direction sur WhatsApp pour conclure rapidement, ou envoyez un e-mail à l’équipe export pour les détails et les documents.",
-        "primary": "Démarrer un partenariat"
-    },
     "disclaimer": "Chaque expédition dépend des règles d’importation de la destination, des disponibilités du moment et des conditions de commande convenues par écrit.",
     "regions": {
         "gulf": "Golfe",
@@ -160,7 +154,7 @@
             "plant_value": "Motobas, Kafr el-Cheikh, Égypte",
             "plant_link": "Voir l’usine sur la carte",
             "quality_label": "Qualité",
-            "quality_value": "ISO 9001, ISO 14001, ISO 45001",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
             "quality_link": "Voir la page qualité",
             "transport_label": "Transport",
             "transport_value": "Par avion ou par route, confirmé à chaque commande",

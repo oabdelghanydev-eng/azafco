@@ -39,23 +39,12 @@
         "founded": "Fundación de AZAFCO International en Kafr el-Sheikh (Egipto)",
         "market": "Primeras exportaciones a {country}",
         "baltim": "Apertura de la primera fábrica en la Zona Industrial de Baltim, Kafr el-Sheikh",
-        "motobas": "Apertura de la segunda fábrica en la Zona Industrial de Motobas, Kafr el-Sheikh",
+        "motobas": "Apertura de la nueva planta en la Zona Industrial de Motobas, Kafr el-Sheikh",
         "governor": "Visita del gobernador de Kafr el-Sheikh a nuestra planta de Motobas"
     },
-    "operations": {
-        "eyebrow": "Lo que hacemos",
-        "title": "AZAFCO se encarga de cada etapa",
-        "intro": "Criamos y compramos el pescado, lo preparamos en nuestra propia planta y lo transportamos en nuestros propios camiones frigoríficos, de modo que usted trata con una sola empresa del estanque al palé.",
-        "s1_title": "Cría y abastecimiento",
-        "s1_text": "Criamos nuestro propio pescado y también compramos a otros productores. Todo se lava, se calibra y se inspecciona en nuestra propia planta.",
-        "s2_title": "Cosecha",
-        "s2_text": "El pescado se cosecha y se lleva a nuestra planta de Motobas, Kafr el-Sheikh.",
-        "s3_title": "Lavado, enhielado y envasado",
-        "s3_text": "Lavado, enhielado, calibrado por peso y envasado entero en hielo.",
-        "s4_title": "Inspección",
-        "s4_text": "Se comprueba según la especificación acordada antes de cerrar las cajas.",
-        "s5_title": "Exportación",
-        "s5_text": "Nuestros propios camiones frigoríficos y, después, transporte aéreo o por carretera."
+    "stages": {
+        "line": "Nos encargamos de cada etapa, del estanque al palé.",
+        "link": "Ver las cinco etapas"
     },
     "businesses": {
         "eyebrow": "Nuestras áreas de negocio",

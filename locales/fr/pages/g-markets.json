@@ -41,6 +41,7 @@
         "ru": "Russie",
         "us": "États-Unis"
     },
-    "paused": "Espagne : exportations suspendues",
-    "pageLink": "Voir tous les marchés"
+    "paused": "Espagne : exportations suspendues",
+    "pageLink": "Voir tous les marchés",
+    "marketLink": "{name} : page du marché"
 }

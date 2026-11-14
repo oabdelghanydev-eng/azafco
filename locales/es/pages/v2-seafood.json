@@ -11,20 +11,9 @@
         "primary": "Ver nuestro pescado",
         "secondary": "Procesado y envasado"
     },
-    "chain": {
-        "eyebrow": "Cadena de valor",
-        "title": "Pescado criado y comprado, un mismo recorrido",
-        "intro": "El pescado que criamos y el que compramos a otros productores siguen el mismo recorrido, y la especificación acordada con usted guía cada etapa.",
-        "farm_title": "Cría y abastecimiento",
-        "farm_text": "Criamos pescado y compramos a otros productores, según las especies, las cantidades y los plazos que usted necesita.",
-        "harvest_title": "Cosecha",
-        "harvest_text": "El pescado se cosecha y se lleva a nuestra planta de Motobas, Kafr el-Sheikh.",
-        "pack_title": "Lavado, enhielado y envasado",
-        "pack_text": "El pescado se lava, se enhiela, se calibra según el peso de cada pieza y se envasa en hielo.",
-        "inspect_title": "Inspección",
-        "inspect_text": "Se comprueba según la especificación acordada antes de cerrar las cajas.",
-        "export_title": "Exportación",
-        "export_text": "Nuestros propios camiones frigoríficos y, después, transporte aéreo o por carretera."
+    "stages": {
+        "line": "Nos encargamos de cada etapa, del estanque al palé.",
+        "link": "Ver las cinco etapas"
     },
     "species": {
         "eyebrow": "Nuestro pescado",
