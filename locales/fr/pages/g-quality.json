@@ -1,11 +1,11 @@
 {
-    "eyebrow": "Quality",
-    "title": "We hold 3 ISO certificates",
-    "intro": "Our management systems are certified by TÜV AUSTRIA to these standards.",
-    "link": "How we work on quality",
+    "eyebrow": "Qualité",
+    "title": "Nous détenons 3 certificats ISO",
+    "intro": "Nos systèmes de management sont certifiés conformes à ces normes par TÜV AUSTRIA.",
+    "link": "Notre approche de la qualité",
     "certs": {
-        "iso9001": { "code": "ISO 9001:2015", "name": "Quality management" },
-        "iso14001": { "code": "ISO 14001:2015", "name": "Environmental management" },
-        "iso45001": { "code": "ISO 45001:2018", "name": "Occupational health and safety" }
+        "iso9001": { "code": "ISO 9001:2015", "name": "Management de la qualité" },
+        "iso14001": { "code": "ISO 14001:2015", "name": "Management environnemental" },
+        "iso45001": { "code": "ISO 45001:2018", "name": "Santé et sécurité au travail" }
     }
 }

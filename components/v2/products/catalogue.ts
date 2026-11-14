@@ -76,11 +76,15 @@ export function toCatalogueProduct(t: RootT, locale: string, p: Product): Catalo
     const key = `data.products.${p.translationKey}`;
     const name = t.has(`${key}.name`) ? t(`${key}.name`) : p.slug;
     const mediaId = productMediaId(p.slug);
-    // Alt text: the media manifest (AR/EN, short species names) or the locale template for other locales
-    const templated = t.has('catalogue_v2.card.image_alt') ? t('catalogue_v2.card.image_alt', { name }) : name;
+    // Alt text: the media manifest (every locale, short species names); the locale template only when a species has no manifest photo
     const image: ImageProps = mediaId
-        ? { ...mediaImage(mediaId, locale), ...(locale === 'ar' || locale === 'en' ? {} : { alt: templated }) }
-        : { src: p.image, alt: templated, width: 960, height: 1280 };
+        ? mediaImage(mediaId, locale)
+        : {
+              src: p.image,
+              alt: t.has('catalogue_v2.card.image_alt') ? t('catalogue_v2.card.image_alt', { name }) : name,
+              width: 960,
+              height: 1280,
+          };
     return {
         slug: p.slug,
         href: productHref(p.slug),

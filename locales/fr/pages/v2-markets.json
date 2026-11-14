@@ -1,199 +1,199 @@
 {
     "meta": {
-        "title": "Fish export markets: the Middle East and beyond",
-        "description": "Fresh Egyptian fish for importers in 7+ markets: UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria, by air and road. Europe is next in our plan."
+        "title": "Export de poisson frais : le Moyen-Orient et au-delà",
+        "description": "Poisson frais d’Égypte pour les importateurs de plus de 7 marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak et Syrie, par avion et par route. L’Europe suivra."
     },
-    "breadcrumb": "Markets",
+    "breadcrumb": "Marchés",
     "hero": {
-        "eyebrow": "Our markets",
-        "title": "Fresh fish exports to the Middle East and beyond",
-        "intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
-        "primary": "Start a partnership",
-        "secondary": "View our species",
-        "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
+        "eyebrow": "Nos marchés",
+        "title": "Exportation de poisson frais vers le Moyen-Orient et au-delà",
+        "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Voir nos espèces",
+        "image_alt": "Vue aérienne d’étangs piscicoles en terre avec aérateurs et palmiers"
     },
     "stats": [
         {
             "value": "7+",
-            "label": "export markets"
+            "label": "marchés à l’export"
         },
         {
             "value": "2008",
-            "label": "first export market: UAE"
+            "label": "premier marché à l’export : EAU"
         },
         {
             "value": "12",
-            "label": "main species"
+            "label": "espèces principales"
         },
         {
             "value": "3",
-            "label": "ISO certificates, TÜV AUSTRIA"
+            "label": "certificats ISO, TÜV AUSTRIA"
         }
     ],
     "index": {
-        "eyebrow": "Active markets",
-        "title": "Where we ship today",
-        "intro": "Our seven active markets and the year we started serving each one. Select a market for details.",
-        "since": "since {year}",
-        "planned_title": "Planned",
-        "paused": "{country}: exports paused",
-        "map_label": "Map of shipping routes from Egypt to our seven active markets",
-        "origin": "Egypt · Motobas"
+        "eyebrow": "Marchés actifs",
+        "title": "Où nous expédions aujourd’hui",
+        "intro": "Nos sept marchés actifs et l’année où nous avons commencé à servir chacun d’eux. Sélectionnez un marché pour en savoir plus.",
+        "since": "depuis {year}",
+        "planned_title": "Prévus",
+        "paused": "{country} : exportations suspendues",
+        "map_label": "Carte des routes d’expédition de l’Égypte vers nos sept marchés actifs",
+        "origin": "Égypte · Motobas"
     },
     "notes": {
-        "eyebrow": "Market by market",
-        "title": "Who we supply in each market",
-        "intro": "The buyers we supply in each of our active markets today. Select a market for details.",
-        "buyers_label": "We supply",
-        "details": "Market details"
+        "eyebrow": "Marché par marché",
+        "title": "Qui nous approvisionnons sur chaque marché",
+        "intro": "Les acheteurs que nous approvisionnons aujourd’hui sur chacun de nos marchés actifs. Sélectionnez un marché pour en savoir plus.",
+        "buyers_label": "Nous approvisionnons",
+        "details": "Détails du marché"
     },
     "approach": {
-        "eyebrow": "Market requirements",
-        "title": "Each market has its own specification",
-        "intro": "We agree the details with each importer before the first shipment.",
+        "eyebrow": "Exigences des marchés",
+        "title": "Chaque marché a sa propre spécification",
+        "intro": "Nous convenons des détails avec chaque importateur avant la première expédition.",
         "points": [
             {
-                "title": "Species and weight grade",
-                "text": "Species, weight grade and product form are agreed for each importer and each market."
+                "title": "Espèce et calibre",
+                "text": "L’espèce, le calibre et la présentation du produit sont convenus pour chaque importateur et chaque marché."
             },
             {
-                "title": "Packing and labels",
-                "text": "Packing and box labels are set to what your market and your customers require."
+                "title": "Conditionnement et étiquetage",
+                "text": "Le conditionnement et l’étiquetage des caisses sont adaptés aux exigences de votre marché et de vos clients."
             },
             {
                 "title": "Documents",
-                "text": "The export documents for each shipment are agreed for your destination."
+                "text": "Les documents d’export de chaque expédition sont convenus en fonction de votre destination."
             }
         ]
     },
     "process": {
-        "eyebrow": "How to start",
-        "title": "From your first message to the shipment",
+        "eyebrow": "Pour commencer",
+        "title": "De votre premier message à l’expédition",
         "steps": [
             {
-                "title": "Send your requirements",
-                "text": "Species, weight grade, quantity, packing and destination."
+                "title": "Envoyer vos besoins",
+                "text": "Espèce, calibre, quantité, conditionnement et destination."
             },
             {
-                "title": "Review with our export team",
-                "text": "We check supply, the specification and the import requirements of your destination."
+                "title": "Examen avec notre équipe export",
+                "text": "Nous vérifions les disponibilités, la spécification et les exigences d’importation de votre destination."
             },
             {
-                "title": "Agree the order",
-                "text": "Species, grade, packing, transport, schedule and price are confirmed in writing for each order."
+                "title": "Convenir de la commande",
+                "text": "Espèce, calibre, conditionnement, transport, calendrier et prix sont confirmés par écrit pour chaque commande."
             },
             {
-                "title": "Pack and ship",
-                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
+                "title": "Conditionner et expédier",
+                "text": "Nous conditionnons sous glace et expédions par avion ou par route, avec les documents d’export convenus pour votre destination."
             }
         ]
     },
     "transport": {
         "eyebrow": "Transport",
-        "title": "By air and by road",
-        "intro": "Fresh fish travels chilled and packed on ice. It leaves the plant in our own refrigerated trucks, then goes by air or road freight.",
+        "title": "Par avion et par route",
+        "intro": "Le poisson frais voyage réfrigéré, conditionné sous glace. Il quitte l’usine dans nos propres camions frigorifiques, puis part en fret aérien ou routier.",
         "modes": [
             {
-                "title": "Air freight",
-                "text": "Packed on ice in insulated boxes for air cargo, for destinations served by air."
+                "title": "Fret aérien",
+                "text": "Conditionné sous glace dans des caisses isothermes adaptées au fret aérien, pour les destinations desservies par avion."
             },
             {
-                "title": "Road freight",
-                "text": "Refrigerated road transport where the destination can be reached by land."
+                "title": "Fret routier",
+                "text": "Transport routier frigorifique lorsque la destination est accessible par voie terrestre."
             }
         ],
-        "note": "We do not publish fixed transit times: they depend on the route and the booking, and are confirmed for each shipment."
+        "note": "Nous ne publions pas de délais de transit fixes : ils dépendent de l’itinéraire et de la réservation, et sont confirmés pour chaque expédition."
     },
     "support": {
-        "eyebrow": "Working with us",
-        "title": "Clear terms for every order",
+        "eyebrow": "Travailler avec nous",
+        "title": "Des conditions claires pour chaque commande",
         "items": [
             {
-                "title": "Prices confirmed per order",
-                "text": "Prices depend on the species, weight grade, quantity, packing and delivery terms, so we confirm them for each order."
+                "title": "Prix confirmés à chaque commande",
+                "text": "Les prix dépendent de l’espèce, du calibre, de la quantité, du conditionnement et des conditions de livraison : nous les confirmons donc pour chaque commande."
             },
             {
-                "title": "Clear responsibilities",
-                "text": "Who handles export documents, import clearance and delivery is agreed in writing for each order."
+                "title": "Des responsabilités claires",
+                "text": "La répartition des tâches (documents d’export, dédouanement à l’import et livraison) est convenue par écrit pour chaque commande."
             },
             {
-                "title": "Two direct channels",
-                "text": "WhatsApp goes directly to our management, for fast deals. Email goes to the export team, for details and documents."
+                "title": "Deux canaux directs",
+                "text": "WhatsApp vous met en relation directe avec notre direction, pour conclure rapidement. L’e-mail va à l’équipe export, pour les détails et les documents."
             }
         ],
-        "guide_link": "Read the guide to importing fresh fish from Egypt"
+        "guide_link": "Lire le guide pour importer du poisson frais d’Égypte"
     },
     "new_market": {
-        "title": "Your country is planned or not listed?",
-        "text": "Tell us your destination. Our export team reviews each new market case by case.",
-        "action": "Contact the export team"
+        "title": "Votre pays est prévu ou ne figure pas dans la liste ?",
+        "text": "Indiquez-nous votre destination. Notre équipe export étudie chaque nouveau marché au cas par cas.",
+        "action": "Contacter l’équipe export"
     },
     "closing": {
-        "eyebrow": "Next step",
-        "title": "Tell us your market and what you need",
-        "text": "Message our management on WhatsApp for fast deals, or email the export team for details and documents.",
-        "primary": "Start a partnership"
+        "eyebrow": "Prochaine étape",
+        "title": "Indiquez-nous votre marché et vos besoins",
+        "text": "Écrivez à notre direction sur WhatsApp pour conclure rapidement, ou envoyez un e-mail à l’équipe export pour les détails et les documents.",
+        "primary": "Démarrer un partenariat"
     },
-    "disclaimer": "Every shipment depends on the import rules of the destination, current supply and the order terms agreed in writing.",
+    "disclaimer": "Chaque expédition dépend des règles d’importation de la destination, des disponibilités du moment et des conditions de commande convenues par écrit.",
     "regions": {
-        "gulf": "Gulf",
+        "gulf": "Golfe",
         "levant": "Levant",
-        "middle_east": "Middle East",
+        "middle_east": "Moyen-Orient",
         "europe": "Europe",
-        "americas": "Americas",
-        "other": "Other"
+        "americas": "Amériques",
+        "other": "Autres"
     },
     "detail": {
-        "meta_title": "Fresh fish exports to {country}",
-        "meta_description": "Fresh Egyptian fish for importers in {country}, an active market since {year}. Shipped chilled by air or road; prices confirmed per order.",
-        "eyebrow": "Active market since {year}",
-        "title": "Fresh Egyptian fish for importers in {country}",
-        "intro": "We have served importers in {country} since {year}. Species, weight grade, packing, transport and documents are agreed with each importer.",
-        "primary": "Start a partnership",
-        "secondary": "Message management on WhatsApp",
-        "image_alt": "Whole fresh fish on crushed ice seen from above",
-        "facts_title": "At a glance: {country}",
+        "meta_title": "Exportation de poisson frais {country}",
+        "meta_description": "Poisson frais d’Égypte pour les importateurs {country}, marché actif depuis {year}. Réfrigéré, par avion ou route. Prix confirmés à chaque commande.",
+        "eyebrow": "Marché actif depuis {year}",
+        "title": "Poisson frais d’Égypte pour les importateurs basés {country}",
+        "intro": "Nous travaillons avec des importateurs {country} depuis {year}. L’espèce, le calibre, le conditionnement, le transport et les documents sont convenus avec chaque importateur.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Écrire à la direction sur WhatsApp",
+        "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
+        "facts_title": "En bref : {country}",
         "facts": {
-            "since_label": "Active market since",
-            "region_label": "Region",
-            "plant_label": "Ships from",
-            "plant_value": "Motobas, Kafr El Sheikh, Egypt",
-            "plant_link": "View the plant on the map",
-            "quality_label": "Quality",
+            "since_label": "Marché actif depuis",
+            "region_label": "Région",
+            "plant_label": "Expédié depuis",
+            "plant_value": "Motobas, Kafr el-Cheikh, Égypte",
+            "plant_link": "Voir l’usine sur la carte",
+            "quality_label": "Qualité",
             "quality_value": "ISO 9001, ISO 14001, ISO 45001",
-            "quality_link": "See quality",
+            "quality_link": "Voir la page qualité",
             "transport_label": "Transport",
-            "transport_value": "By air or road, confirmed per order",
-            "prices_label": "Prices",
-            "prices_value": "Confirmed per order"
+            "transport_value": "Par avion ou par route, confirmé à chaque commande",
+            "prices_label": "Prix",
+            "prices_value": "Confirmés à chaque commande"
         },
-        "discuss_eyebrow": "What we agree",
-        "discuss_title": "What we agree with importers in {country}",
+        "discuss_eyebrow": "Points à convenir",
+        "discuss_title": "Les points que nous fixons avec les importateurs {country}",
         "discuss": [
             {
-                "title": "Species and weight grades",
-                "text": "The species and weight grades your customers buy, confirmed against current supply."
+                "title": "Espèces et calibres",
+                "text": "Les espèces et les calibres que vos clients achètent, confirmés selon les disponibilités du moment."
             },
             {
-                "title": "Packing and labels",
-                "text": "Box format and label requirements for your sales channel."
+                "title": "Conditionnement et étiquetage",
+                "text": "Format des caisses et exigences d’étiquetage pour votre canal de vente."
             },
             {
                 "title": "Transport",
-                "text": "Chilled shipment by air or road, with the route confirmed for each order."
+                "text": "Expédition réfrigérée par avion ou par route, avec l’itinéraire confirmé pour chaque commande."
             },
             {
                 "title": "Documents",
-                "text": "The export documents needed to import into {country}, agreed for each order."
+                "text": "Les documents d’export nécessaires pour importer {country}, convenus pour chaque commande."
             }
         ],
-        "products_eyebrow": "Species",
-        "products_title": "Our main species",
-        "products_note": "These are our main, most-requested species; we supply other species on request.",
-        "map_eyebrow": "Our markets",
-        "map_title": "Shipping routes to {country} and our other markets",
-        "map_intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
-        "buyers_title": "Who we supply in {country}",
-        "glance_eyebrow": "Market profile"
+        "products_eyebrow": "Espèces",
+        "products_title": "Nos espèces principales",
+        "products_note": "Ce sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande.",
+        "map_eyebrow": "Nos marchés",
+        "map_title": "Expéditions {country} et vers nos autres marchés",
+        "map_intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan.",
+        "buyers_title": "Qui nous approvisionnons {country}",
+        "glance_eyebrow": "Profil du marché"
     }
 }

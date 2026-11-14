@@ -1,124 +1,124 @@
 {
-    "skip_to_main": "Skip to main content",
+    "skip_to_main": "Перейти к основному содержанию",
     "nav": {
-        "main_label": "Main navigation",
-        "footer_label": "Footer navigation",
-        "home": "Home",
-        "seafood": "Seafood and aquaculture",
-        "seafood_overview": "Overview",
-        "products": "Products",
-        "processing": "Processing and packing",
-        "quality": "Quality",
-        "export": "Export solutions",
-        "markets": "Markets",
-        "for_importers": "For importers",
-        "company": "Our company",
-        "about": "About us",
-        "businesses": "Our businesses",
-        "insights": "Insights",
-        "contact": "Contact",
-        "menu": "Menu",
-        "open_menu": "Open menu",
-        "close_menu": "Close menu",
-        "home_link_label": "AZAFCO International home page"
+        "main_label": "Основная навигация",
+        "footer_label": "Навигация в подвале сайта",
+        "home": "Главная",
+        "seafood": "Рыба и аквакультура",
+        "seafood_overview": "Обзор",
+        "products": "Продукция",
+        "processing": "Переработка и упаковка",
+        "quality": "Качество",
+        "export": "Экспортные решения",
+        "markets": "Рынки",
+        "for_importers": "Импортёрам",
+        "company": "Компания",
+        "about": "О нас",
+        "businesses": "Направления бизнеса",
+        "insights": "Материалы",
+        "contact": "Контакты",
+        "menu": "Меню",
+        "open_menu": "Открыть меню",
+        "close_menu": "Закрыть меню",
+        "home_link_label": "Главная страница AZAFCO International"
     },
     "cta": {
-        "view_specifications": "View specifications",
-        "contact": "Contact",
-        "talk_to_export_team": "Talk to the export team",
-        "learn_more": "Learn more",
-        "read_more": "Read more",
-        "view_all": "View all",
+        "view_specifications": "Смотреть спецификации",
+        "contact": "Связаться",
+        "talk_to_export_team": "Связаться с отделом экспорта",
+        "learn_more": "Подробнее",
+        "read_more": "Читать далее",
+        "view_all": "Смотреть все",
         "whatsapp": "WhatsApp",
-        "call": "Call",
-        "email": "Email",
-        "loading": "Loading…",
-        "opens_new_tab": "(opens in a new tab)",
-        "contact_export_team": "Contact our export team",
-        "send_requirements": "Send your requirements",
-        "start_partnership": "Start a partnership",
-        "whatsapp_management": "WhatsApp · Direct to management",
-        "email_export_team": "Email the export team",
-        "request_document_pack": "Ask the export team about documents"
+        "call": "Позвонить",
+        "email": "Написать письмо",
+        "loading": "Загрузка…",
+        "opens_new_tab": "(откроется в новой вкладке)",
+        "contact_export_team": "Связаться с отделом экспорта",
+        "send_requirements": "Отправить требования",
+        "start_partnership": "Начать партнёрство",
+        "whatsapp_management": "WhatsApp · напрямую руководству",
+        "email_export_team": "Написать в отдел экспорта",
+        "request_document_pack": "Спросить отдел экспорта о документах"
     },
     "breadcrumbs": {
-        "label": "Breadcrumb",
-        "home": "Home"
+        "label": "Навигационная цепочка",
+        "home": "Главная"
     },
     "pending": {
-        "prefix": "Pending owner confirmation:",
-        "certificate_card": "{name}: owner approval to publish"
+        "prefix": "Ожидает подтверждения владельца:",
+        "certificate_card": "{name}: публикация после одобрения владельца"
     },
     "spec": {
-        "attribute": "Attribute",
-        "value": "Value",
-        "confirmed_with_sales": "Confirmed per order",
+        "attribute": "Параметр",
+        "value": "Значение",
+        "confirmed_with_sales": "Подтверждается для каждого заказа",
         "attribute_label": "{label}:"
     },
     "market": {
-        "status_active": "Active market",
-        "status_planned": "Planned",
-        "status_paused": "Exports paused",
-        "fact_species": "Species",
-        "fact_species_value": "{count} main species",
-        "fact_transport": "Transport",
-        "fact_transport_value": "Chilled, by air or road; confirmed per order",
-        "fact_documents": "Documents",
-        "fact_documents_value": "The export team confirms the documents required for your market"
+        "status_active": "Действующий рынок",
+        "status_planned": "В планах",
+        "status_paused": "Экспорт приостановлен",
+        "fact_species": "Виды рыбы",
+        "fact_species_value": "Основных видов: {count}",
+        "fact_transport": "Транспорт",
+        "fact_transport_value": "В охлаждённом виде, авиа- или автотранспортом; подтверждается для каждого заказа",
+        "fact_documents": "Документы",
+        "fact_documents_value": "Отдел экспорта подтвердит, какие документы нужны для Вашего рынка"
     },
     "certificate": {
-        "issuer": "Issuer",
-        "view": "View certificate",
-        "request_copy": "Ask about this certificate",
+        "issuer": "Кем выдан",
+        "view": "Смотреть сертификат",
+        "request_copy": "Спросить об этом сертификате",
         "request_copy_for": ": {name}",
         "groups": {
-            "food_safety": "Food safety",
-            "export_approval": "Export approvals",
-            "management_system": "Management systems"
+            "food_safety": "Безопасность пищевой продукции",
+            "export_approval": "Экспортные разрешения",
+            "management_system": "Системы менеджмента"
         }
     },
     "insight": {
-        "read_article": "Read article",
-        "minutes": "{count} min read"
+        "read_article": "Читать статью",
+        "minutes": "{count} мин чтения"
     },
     "cta_band": {
-        "eyebrow": "Start a partnership",
-        "title": "Every shipment starts with a message",
-        "intro": "Tell us the species, quantity and destination. Our export team will review supply and commercial terms.",
+        "eyebrow": "Начать партнёрство",
+        "title": "Каждая поставка начинается с сообщения",
+        "intro": "Сообщите нам вид рыбы, объём и пункт назначения. Отдел экспорта рассмотрит возможности поставки и коммерческие условия.",
         "whatsapp_title": "WhatsApp",
-        "whatsapp_sub": "Direct to management · for fast deals",
-        "email_title": "Email",
-        "email_sub": "Export team · details and documents",
-        "after_title": "What happens next",
-        "after_free": "Sending your requirements does not commit you to an order",
-        "after_1": "The export team reviews your requirements",
-        "after_2": "We contact you to confirm the details",
-        "after_3": "Prices confirmed per order, subject to availability and the agreed specification",
-        "email_subject": "Enquiry from azafco.com.eg: {topic}",
-        "email_topic_general": "general"
+        "whatsapp_sub": "Напрямую руководству · для быстрых сделок",
+        "email_title": "Электронная почта",
+        "email_sub": "Отдел экспорта · детали и документы",
+        "after_title": "Что дальше",
+        "after_free": "Отправка требований не обязывает Вас размещать заказ",
+        "after_1": "Отдел экспорта изучает Ваши требования",
+        "after_2": "Мы связываемся с Вами, чтобы уточнить детали",
+        "after_3": "Цены подтверждаются для каждого заказа с учётом наличия и согласованной спецификации",
+        "email_subject": "Обращение с сайта azafco.com.eg: {topic}",
+        "email_topic_general": "общий вопрос"
     },
     "faq": {
-        "toggle_hint": "Show answer"
+        "toggle_hint": "Показать ответ"
     },
     "gallery": {
-        "label": "Photo gallery"
+        "label": "Фотогалерея"
     },
     "whatsapp_float": {
-        "label": "WhatsApp · Direct to management"
+        "label": "WhatsApp · напрямую руководству"
     },
     "facts": {
-        "title": "Facts at a glance",
-        "species": "Main species",
-        "markets": "Export markets",
+        "title": "Ключевые факты",
+        "species": "Основные виды",
+        "markets": "Экспортные рынки",
         "markets_value": "{count}+",
-        "iso": "ISO certificates",
-        "iso_note": "Certified by TÜV AUSTRIA",
-        "plant": "Processing plant",
-        "plant_value": "Motobas, Kafr El Sheikh"
+        "iso": "Сертификаты ISO",
+        "iso_note": "Сертификация TÜV AUSTRIA",
+        "plant": "Перерабатывающий завод",
+        "plant_value": "Мутубас, Кафр-эш-Шейх"
     },
     "fill": {
-        "spec_title": "Have a full specification?",
-        "spec_text": "Send it to the export team and we will review it with you.",
-        "documents_text": "For document questions, contact the export team."
+        "spec_title": "У Вас есть полная спецификация?",
+        "spec_text": "Отправьте её в отдел экспорта, и мы рассмотрим её вместе с Вами.",
+        "documents_text": "По вопросам документов обращайтесь в отдел экспорта."
     }
 }

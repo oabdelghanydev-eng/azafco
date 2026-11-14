@@ -1,72 +1,72 @@
 {
     "meta": {
-        "title": "Privacy policy",
-        "description": "How AZAFCO International uses the details you send us and the data from Google Analytics, Vercel Web Analytics, Microsoft Clarity and Google Maps."
+        "title": "Политика конфиденциальности",
+        "description": "Как AZAFCO International использует данные, которые Вы нам присылаете, и данные из Google Analytics, Vercel Web Analytics, Microsoft Clarity и Google Maps."
     },
-    "breadcrumb": "Privacy policy",
-    "eyebrow": "Legal",
-    "title": "Privacy policy",
-    "intro": "What information we receive when you visit this website or contact us, why we use it and what you can ask us to do.",
-    "last_updated": "Last updated: {date}",
-    "toc": "On this page",
+    "breadcrumb": "Политика конфиденциальности",
+    "eyebrow": "Правовая информация",
+    "title": "Политика конфиденциальности",
+    "intro": "Какую информацию мы получаем, когда Вы посещаете этот сайт или связываетесь с нами, зачем мы её используем и о чём Вы можете нас попросить.",
+    "last_updated": "Последнее обновление: {date}",
+    "toc": "На этой странице",
     "sections": {
         "who": {
-            "title": "Who we are",
-            "text": "This website is run by {legalName} (AZAFCO International), an Egyptian company, commercial register no. {register}. Main office: {address}."
+            "title": "Кто мы",
+            "text": "Оператор этого сайта — {legalName} (AZAFCO International), египетская компания, номер в коммерческом реестре: {register}. Главный офис: {address}."
         },
         "contact": {
-            "title": "When you contact us",
-            "text": "If you email us, message us on WhatsApp or call us, we receive the details you choose to share: usually your name, company, job title, email address, phone number, country and your requirements.",
+            "title": "Когда Вы связываетесь с нами",
+            "text": "Если Вы пишете нам по электронной почте или в WhatsApp либо звоните нам, мы получаем данные, которыми Вы решили поделиться: обычно это имя, компания, должность, адрес электронной почты, номер телефона, страна и Ваши требования.",
             "items": [
-                "This website has no enquiry form. It can prepare an email or WhatsApp message for you, and nothing is sent until you send it yourself from your own email app or WhatsApp.",
-                "We use these details to answer your enquiry, to handle any order that follows and to keep a record of our business correspondence.",
-                "WhatsApp messages are handled by WhatsApp (Meta) under its own terms and privacy policy."
+                "На этом сайте нет формы для обращений. Он может подготовить для Вас письмо или сообщение в WhatsApp, но ничего не отправляется, пока Вы сами не отправите его из своего почтового приложения или WhatsApp.",
+                "Мы используем эти данные, чтобы ответить на Ваше обращение, выполнить последующий заказ и вести учёт деловой переписки.",
+                "Сообщения в WhatsApp обрабатываются WhatsApp (Meta) в соответствии с её собственными условиями и политикой конфиденциальности."
             ]
         },
         "analytics": {
-            "title": "Analytics",
-            "text": "We use these tools to understand how the site is used, for example which pages are visited and which contact buttons are clicked, and to improve the site.",
+            "title": "Аналитика",
+            "text": "Мы используем эти инструменты, чтобы понимать, как используется сайт (например, какие страницы посещают и на какие кнопки связи нажимают), и чтобы совершенствовать его.",
             "items": [
                 {
                     "name": "Google Analytics 4 (Google)",
-                    "text": "Sets cookies to recognise a returning browser. Records the pages you view, clicks on the email, WhatsApp and phone buttons, your approximate location, device and browser and the site that referred you."
+                    "text": "Устанавливает файлы cookie, чтобы распознавать повторные посещения с того же браузера. Фиксирует просмотренные страницы, нажатия на кнопки электронной почты, WhatsApp и телефона, Ваше примерное местоположение, устройство и браузер, а также сайт, с которого Вы перешли."
                 },
                 {
                     "name": "Vercel Web Analytics (Vercel)",
-                    "text": "Counts page views and visits without using cookies."
+                    "text": "Считает просмотры страниц и посещения без использования файлов cookie."
                 },
                 {
                     "name": "Microsoft Clarity (Microsoft)",
-                    "text": "Records how pages are used, such as clicks, scrolling and mouse movement, and shows them to us as heatmaps and session replays. It uses cookies."
+                    "text": "Фиксирует, как используются страницы (нажатия, прокрутка, движения мыши), и показывает нам это в виде тепловых карт и записей сеансов. Использует файлы cookie."
                 }
             ],
-            "note": "These providers may process data on servers outside your country."
+            "note": "Эти поставщики могут обрабатывать данные на серверах за пределами Вашей страны."
         },
         "hosting": {
-            "title": "Hosting",
-            "text": "The website is hosted by Vercel. Like any web server, it processes your IP address and basic request data to deliver the pages."
+            "title": "Хостинг",
+            "text": "Сайт размещён на платформе Vercel. Как и любой веб-сервер, он обрабатывает Ваш IP-адрес и базовые данные запроса, чтобы отображать страницы."
         },
         "maps": {
-            "title": "Maps and links to other services",
-            "text": "The contact page shows maps from Google Maps. When a map loads, Google receives your IP address and may set cookies under its own policy. Links to WhatsApp and Google Maps open those services, and their own privacy policies apply."
+            "title": "Карты и ссылки на другие сервисы",
+            "text": "На странице контактов показаны карты Google Maps. Когда карта загружается, Google получает Ваш IP-адрес и может устанавливать файлы cookie в соответствии со своей политикой. Ссылки на WhatsApp и Google Maps открывают эти сервисы, и к ним применяются их собственные политики конфиденциальности."
         },
         "cookies": {
-            "title": "Cookies",
-            "text": "The site sets one cookie of its own (NEXT_LOCALE) to remember your language. Google Analytics, Microsoft Clarity and Google Maps may set their own cookies. You can block or delete cookies in your browser settings; the site still works without them."
+            "title": "Файлы cookie",
+            "text": "Сайт устанавливает один собственный файл cookie (NEXT_LOCALE), чтобы запомнить Ваш язык. Google Analytics, Microsoft Clarity и Google Maps могут устанавливать свои файлы cookie. Вы можете заблокировать или удалить файлы cookie в настройках браузера; сайт работает и без них."
         },
         "sharing": {
-            "title": "Sharing",
-            "text": "We do not sell your personal data or share it with third parties for their marketing. The providers named on this page process data to run the services described here."
+            "title": "Передача данных",
+            "text": "Мы не продаём Ваши персональные данные и не передаём их третьим лицам для их маркетинга. Поставщики, указанные на этой странице, обрабатывают данные, чтобы обеспечивать работу описанных здесь сервисов."
         },
         "rights": {
-            "title": "Your choices",
-            "text": "You can ask us what personal details we hold about you, and ask us to correct or delete them. Write to <mail>{email}</mail>."
+            "title": "Ваши возможности",
+            "text": "Вы можете узнать, какие Ваши персональные данные у нас хранятся, и попросить исправить или удалить их. Пишите на <mail>{email}</mail>."
         },
         "changes": {
-            "title": "Changes to this policy",
-            "text": "We update this page when the way we use data changes. The date at the top shows the last update."
+            "title": "Изменения политики",
+            "text": "Мы обновляем эту страницу, когда меняется порядок использования данных. Дата вверху страницы показывает последнее обновление."
         }
     },
-    "contact_title": "Questions about this policy",
-    "contact_text": "Email us at <mail>{email}</mail>."
+    "contact_title": "Вопросы об этой политике",
+    "contact_text": "Напишите нам на <mail>{email}</mail>."
 }

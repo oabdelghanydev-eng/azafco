@@ -1,20 +1,21 @@
 {
-    "eyebrow": "Our fish",
-    "title": "12 main fresh fish species",
-    "intro": "Sold whole and fresh chilled, graded by weight per piece and packed on ice. We agree the weight grade and packing with you before every shipment.",
-    "note": "These are our main, most-requested species; we supply other species on request.",
+    "eyebrow": "Unser Fisch",
+    "title": "Unsere 12 wichtigsten Frischfischarten",
+    "intro": "Ganz und frisch gekühlt, nach Stückgewicht sortiert und auf Eis verpackt. Gewichtsklasse und Verpackung stimmen wir vor jeder Lieferung mit Ihnen ab.",
+    "note": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage.",
     "species": {
-        "tilapia": { "name": "Tilapia", "alt": "Whole tilapia, side view" },
-        "sea_bass": { "name": "Sea Bass", "alt": "Whole sea bass, side view" },
-        "sea_bream": { "name": "Sea Bream", "alt": "Whole sea bream, side view" },
-        "meagre": { "name": "Meagre", "alt": "Whole meagre, side view" },
-        "mullet": { "name": "Grey Mullet", "alt": "Whole grey mullet, side view" },
-        "thinlip_mullet": { "name": "Thinlip Mullet", "alt": "Whole thinlip mullet, side view" },
-        "common_carp": { "name": "Common Carp", "alt": "Whole common carp, side view" },
-        "mirror_carp": { "name": "Mirror Carp", "alt": "Whole mirror carp, side view" },
-        "grass_carp": { "name": "Grass Carp", "alt": "Whole grass carp, side view" },
-        "silver_carp": { "name": "Silver Carp", "alt": "Whole silver carp, side view" },
-        "catfish": { "name": "Catfish", "alt": "Whole catfish, side view" },
-        "bayad_catfish": { "name": "Bayad Catfish", "alt": "Whole bayad catfish, side view" }
-    }
+        "tilapia": { "name": "Tilapia", "alt": "Ganze Tilapia, Seitenansicht" },
+        "sea_bass": { "name": "Wolfsbarsch", "alt": "Ganzer Wolfsbarsch, Seitenansicht" },
+        "sea_bream": { "name": "Dorade", "alt": "Ganze Dorade, Seitenansicht" },
+        "meagre": { "name": "Adlerfisch", "alt": "Ganzer Adlerfisch, Seitenansicht" },
+        "mullet": { "name": "Großkopf­meeräsche", "alt": "Ganze Großkopfmeeräsche, Seitenansicht" },
+        "thinlip_mullet": { "name": "Dünnlippige Meeräsche", "alt": "Ganze Dünnlippige Meeräsche, Seitenansicht" },
+        "common_carp": { "name": "Karpfen", "alt": "Ganzer Karpfen, Seitenansicht" },
+        "mirror_carp": { "name": "Spiegelkarpfen", "alt": "Ganzer Spiegelkarpfen, Seitenansicht" },
+        "grass_carp": { "name": "Graskarpfen", "alt": "Ganzer Graskarpfen, Seitenansicht" },
+        "silver_carp": { "name": "Silberkarpfen", "alt": "Ganzer Silberkarpfen, Seitenansicht" },
+        "catfish": { "name": "Afrikanischer Raubwels", "alt": "Ganzer Afrikanischer Raubwels, Seitenansicht" },
+        "bayad_catfish": { "name": "Bagrus-Wels (Bagrus bajad)", "alt": "Ganzer Bagrus-Wels, Seitenansicht" }
+    },
+    "pageLink": "Alle Fischarten ansehen"
 }

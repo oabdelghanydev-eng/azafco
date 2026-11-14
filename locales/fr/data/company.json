@@ -1,32 +1,32 @@
 {
     "name": "AZAFCO International",
     "fullName": "AZAFCO International for Investment and Development S.A.E.",
-    "description": "Egyptian company that farms and sources, grades, packs and exports fresh fish for importers, distributors and foodservice buyers. Founded in 2008.",
-    "workingHours": "Sat–Thu 8:00–17:00 (Cairo time)",
-    "workingHoursNote": "WhatsApp: direct to management, for fast deals",
+    "description": "Entreprise égyptienne qui élève et achète, calibre, conditionne et exporte du poisson frais pour les importateurs, les distributeurs et les acheteurs de la restauration. Fondée en 2008.",
+    "workingHours": "Du samedi au jeudi, de 8 h à 17 h (heure du Caire)",
+    "workingHoursNote": "WhatsApp : ligne directe de la direction · pour conclure rapidement",
     "officialChannels": {
-        "title": "Official channels",
-        "text": "Our official channels are WhatsApp {phone} (management) and email from the azafco.com.eg domain (export team: {email}). If you receive bank details or payment instructions from any other number or address, confirm them with us on one of these channels before paying."
+        "title": "Canaux officiels",
+        "text": "Nos canaux officiels sont WhatsApp {phone} (direction) et les e-mails du domaine azafco.com.eg (équipe export : {email}). Si vous recevez des coordonnées bancaires ou des instructions de paiement depuis un autre numéro ou une autre adresse, vérifiez-les auprès de nous sur l’un de ces canaux avant tout paiement."
     },
     "addresses": {
         "main": {
-            "title": "Main office",
-            "address": "Mastora, next to the Charity Association, El-Borollos, Kafr El Sheikh, Egypt"
+            "title": "Bureau principal",
+            "address": "Mastora, à côté de l’Association caritative, El-Borollos, Kafr el-Cheikh, Égypte"
         },
         "factory": {
-            "title": "Factory",
-            "address": "No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El Sheikh, Egypt"
+            "title": "Usine",
+            "address": "N° 120, secteur des aliments pour animaux, zone industrielle, Motobas, Kafr el-Cheikh, Égypte"
         }
     },
     "copyright": "AZAFCO International",
-    "privacyLink": "Privacy policy",
-    "leadersSince": "Founded in",
-    "tagline": "From Egyptian production to global partnerships",
+    "privacyLink": "Politique de confidentialité",
+    "leadersSince": "Fondée en",
+    "tagline": "De la production en Égypte aux partenariats dans le monde",
     "usps": {
-        "price": "Prices confirmed per order",
-        "quality": "ISO 9001, 14001 and 45001, certified by TÜV AUSTRIA",
-        "flexibility": "Weight grade and packing agreed per order",
-        "availability": "Our own refrigerated trucks and cold stores",
-        "service": "From the pond to the pallet, every stage handled by AZAFCO"
+        "price": "Prix confirmés à chaque commande",
+        "quality": "Certifiés ISO 9001, 14001 et 45001 par TÜV AUSTRIA",
+        "flexibility": "Calibre et conditionnement convenus à chaque commande",
+        "availability": "Nos propres camions et entrepôts frigorifiques",
+        "service": "De l’étang à la palette, chaque étape assurée par AZAFCO"
     }
 }

@@ -1,13 +1,29 @@
 {
-    "eyebrow": "Value chain",
-    "title": "We handle every stage, from the pond to the pallet",
-    "intro": "We work to one agreed specification at each step, and we run our own refrigerated trucks, logistics and cold stores.",
-    "stageLabel": "Stage {n}",
+    "eyebrow": "Chaîne de valeur",
+    "title": "Nous assurons chaque étape, de l’étang à la palette",
+    "intro": "Nous travaillons selon une seule spécification convenue à chaque étape, avec nos propres camions frigorifiques, notre logistique et nos entrepôts frigorifiques.",
+    "stageLabel": "Étape {n}",
     "stages": {
-        "farming": { "title": "Farming and sourcing", "text": "Our own farms, plus fish we buy from suppliers." },
-        "harvest": { "title": "Harvest", "text": "Netted and taken to our plant in Motobas." },
-        "packing": { "title": "Washing, icing and packing", "text": "Washed, graded by weight and packed whole on ice." },
-        "inspection": { "title": "Inspection", "text": "Checked against the agreed specification before the boxes are closed." },
-        "export": { "title": "Export", "text": "Our own refrigerated trucks, then air or road freight." }
-    }
+        "farming": {
+            "title": "Élevage et approvisionnement",
+            "text": "Nos propres élevages, ainsi que du poisson acheté auprès de fournisseurs."
+        },
+        "harvest": {
+            "title": "Récolte",
+            "text": "Pêché au filet et acheminé vers notre usine de Motobas."
+        },
+        "packing": {
+            "title": "Lavage, glaçage et conditionnement",
+            "text": "Lavé, calibré au poids et conditionné entier sous glace."
+        },
+        "inspection": {
+            "title": "Contrôle",
+            "text": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses."
+        },
+        "export": {
+            "title": "Export",
+            "text": "Nos propres camions frigorifiques, puis fret aérien ou routier."
+        }
+    },
+    "pageLink": "Notre transformation et nos expéditions"
 }

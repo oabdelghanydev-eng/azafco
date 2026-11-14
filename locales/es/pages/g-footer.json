@@ -1,41 +1,41 @@
 {
-    "kicker": "Start a partnership",
-    "title_1": "Every shipment",
-    "title_2": "starts with a message",
-    "lead": "Tell us the species, quantity and destination. Our export team will review supply and commercial terms. Prices confirmed per order.",
+    "kicker": "Iniciemos una colaboración",
+    "title_1": "Cada envío",
+    "title_2": "empieza con un mensaje",
+    "lead": "Indíquenos la especie, la cantidad y el destino. Nuestro equipo de exportación revisará el suministro y las condiciones comerciales. Precios confirmados en cada pedido.",
     "whatsapp": {
         "title": "WhatsApp",
-        "sub": "Direct to management · for fast deals"
+        "sub": "Directo a la dirección · para operaciones rápidas"
     },
     "email": {
-        "title": "Email",
-        "sub": "Export team · details and documents"
+        "title": "Correo electrónico",
+        "sub": "Equipo de exportación · detalles y documentos"
     },
     "form": {
-        "title": "Send your requirements",
-        "sub": "Species, weight grade, quantity and destination",
-        "value": "Online form"
+        "title": "Envíe sus requisitos",
+        "sub": "Especie, calibre, cantidad y destino",
+        "value": "Correo o mensaje de WhatsApp ya redactado"
     },
     "factory": {
-        "title": "Factory",
-        "sub": "Visit · see it on the map",
-        "address": "No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El Sheikh"
+        "title": "Fábrica",
+        "sub": "Visítenos · véala en el mapa",
+        "address": "N.º 120, Sector de Piensos, Zona Industrial, Motobas, Kafr el-Sheikh"
     },
-    "registration": "Commercial register <n>{cr}</n> · Tax card <n>{tax}</n>",
-    "new_tab": "(opens in a new tab)",
-    "photo_alt": "Refrigerated truck loading insulated boxes at dawn",
+    "registration": "Registro mercantil <n>{cr}</n> · Tarjeta fiscal <n>{tax}</n>",
+    "new_tab": "(se abre en una pestaña nueva)",
+    "photo_alt": "Camión frigorífico cargando cajas isotérmicas al amanecer",
     "logo_alt": "AZAFCO International",
-    "tagline_1": "Fresh fish exporter",
-    "tagline_2": "from Egypt since 2008",
-    "links_label": "Site links",
-    "langs_label": "Languages",
-    "back_to_top": "Back to top",
+    "tagline_1": "Exportador de pescado fresco",
+    "tagline_2": "de Egipto desde 2008",
+    "links_label": "Enlaces del sitio",
+    "langs_label": "Idiomas",
+    "back_to_top": "Volver arriba",
     "copyright": "© 2026 AZAFCO International for Investment and Development S.A.E.",
-    "float_label": "WhatsApp · Direct to management",
-    "secondary_label": "More links",
+    "float_label": "Escriba a la dirección por WhatsApp",
+    "secondary_label": "Más enlaces",
     "secondary": {
-        "for_importers": "For importers",
-        "contact": "Contact",
-        "privacy": "Privacy policy"
+        "for_importers": "Para importadores",
+        "contact": "Contacto",
+        "privacy": "Política de privacidad"
     }
 }

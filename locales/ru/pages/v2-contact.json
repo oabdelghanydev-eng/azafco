@@ -1,92 +1,92 @@
 {
     "meta": {
-        "title": "Contact us: WhatsApp, email, office and factory",
-        "description": "WhatsApp AZAFCO International management for fast deals, or email the export team for details and documents. Office and factory in Kafr El Sheikh."
+        "title": "Контакты: WhatsApp, почта, офис и завод",
+        "description": "Напишите руководству AZAFCO International в WhatsApp для быстрых сделок или в отдел экспорта по почте — детали и документы. Офис и завод в Кафр-эш-Шейхе."
     },
-    "breadcrumb": "Contact us",
+    "breadcrumb": "Контакты",
     "hero": {
-        "eyebrow": "Contact us",
-        "title": "Start with a clear requirement",
-        "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents.",
+        "eyebrow": "Контакты",
+        "title": "Начните с чётких требований",
+        "intro": "Напишите руководству в WhatsApp для быстрых сделок или отправьте письмо в отдел экспорта за деталями и документами.",
         "actions": {
-            "whatsapp": "Message management on WhatsApp",
-            "email": "Email the export team"
+            "whatsapp": "Написать руководству в WhatsApp",
+            "email": "Написать в отдел экспорта"
         }
     },
     "channels": {
-        "eyebrow": "Direct channels",
-        "title": "Choose the channel that fits your request",
-        "intro": "One number for management on WhatsApp and phone, one email for the export team.",
+        "eyebrow": "Прямые каналы",
+        "title": "Выберите канал для Вашего вопроса",
+        "intro": "Один номер руководства для WhatsApp и звонков, один адрес электронной почты отдела экспорта.",
         "whatsapp": {
             "title": "WhatsApp",
-            "sub": "Direct to management · for fast deals"
+            "sub": "Напрямую руководству · для быстрых сделок"
         },
         "email": {
-            "title": "Email",
-            "sub": "Export team · details and documents"
+            "title": "Электронная почта",
+            "sub": "Отдел экспорта · детали и документы"
         },
         "phone": {
-            "title": "Phone",
-            "sub": "Call management on the same number"
+            "title": "Телефон",
+            "sub": "Звоните руководству по тому же номеру"
         },
-        "hours": "Office hours",
+        "hours": "Часы работы офиса",
         "vcard": {
-            "title": "Save our contact details",
-            "text": "A contact card (vCard) that adds the management number and the export team email to your phone.",
-            "action": "Download the contact card"
+            "title": "Сохраните наши контакты",
+            "text": "Карточка контакта (vCard), которая добавит в Ваш телефон номер руководства и адрес электронной почты отдела экспорта.",
+            "action": "Скачать карточку контакта"
         },
-        "new_tab": "(opens in a new tab)"
+        "new_tab": "(откроется в новой вкладке)"
     },
     "routes": {
-        "eyebrow": "Send your requirements",
-        "legend": "What is your enquiry about?",
-        "intro": "Each option prepares a message for you to send from your company email or WhatsApp, so we know who the request comes from.",
-        "seafood_title": "Fish supply",
-        "seafood_text": "For importers and procurement teams: species, weight grade, packing, quantity, destination and timing.",
-        "seafood_action": "Send your requirements",
-        "documents_title": "Documents",
-        "documents_text": "Product specifications or the company profile. A short request: no species or quantity needed.",
-        "documents_action": "Request documents",
-        "corporate_title": "Corporate partnership or other topics",
-        "corporate_text": "Partnerships, investment or other topics: a short introduction to your company and the cooperation you propose.",
-        "corporate_action": "Send a corporate enquiry"
+        "eyebrow": "Отправить требования",
+        "legend": "Чего касается Ваше обращение?",
+        "intro": "Каждый вариант открывает готовое сообщение, которое Вы отправите со своей корпоративной почты или из WhatsApp, — так мы будем знать, от кого пришло обращение.",
+        "seafood_title": "Поставки рыбы",
+        "seafood_text": "Для импортёров и отделов закупок: вид рыбы, весовая категория, упаковка, объём, пункт назначения и сроки.",
+        "seafood_action": "Отправить требования",
+        "documents_title": "Документы",
+        "documents_text": "Спецификации продукции или профиль компании. Короткий запрос: вид рыбы и объём указывать не нужно.",
+        "documents_action": "Запросить документы",
+        "corporate_title": "Корпоративное партнёрство и другие темы",
+        "corporate_text": "Партнёрство, инвестиции или другие темы: кратко представьте Вашу компанию и предлагаемое сотрудничество.",
+        "corporate_action": "Отправить обращение"
     },
     "locations": {
-        "eyebrow": "Locations",
-        "title": "Main office and factory",
-        "intro": "Our main office is in El-Borollos and our factory in Motobas, both in Kafr El Sheikh, Egypt.",
-        "factory": "Factory",
-        "office": "Main office",
-        "map_open": "Open in Google Maps",
-        "map_title_factory": "Map of the AZAFCO International factory in Motobas",
-        "map_title_office": "Map of the AZAFCO International main office",
-        "map_note": "Maps are loaded from Google Maps."
+        "eyebrow": "Адреса",
+        "title": "Главный офис и завод",
+        "intro": "Наш главный офис находится в Эль-Буруллусе, а завод — в Мутубасе; оба в мухафазе Кафр-эш-Шейх, Египет.",
+        "factory": "Завод",
+        "office": "Главный офис",
+        "map_open": "Открыть в Google Maps",
+        "map_title_factory": "Карта: завод AZAFCO International в Мутубасе",
+        "map_title_office": "Карта: главный офис AZAFCO International",
+        "map_note": "Карты загружаются из Google Maps."
     },
     "next": {
-        "eyebrow": "After you write",
-        "title": "What happens after you write to us",
+        "eyebrow": "После Вашего письма",
+        "title": "Что происходит после того, как Вы нам напишете",
         "steps": [
-            "The export team reviews your requirements against the specification and current availability.",
-            "We contact you to confirm the details and any open points.",
-            "Prices, quantity, packing and terms are confirmed in writing for each order."
+            "Отдел экспорта сверяет Ваши требования со спецификацией и текущим наличием.",
+            "Мы связываемся с Вами, чтобы согласовать детали и оставшиеся вопросы.",
+            "Цены, объём, упаковка и условия подтверждаются письменно для каждого заказа."
         ],
-        "no_promise": "Sending your requirements does not commit you or us to an order. Prices are confirmed per order."
+        "no_promise": "Отправка требований не обязывает ни Вас, ни нас к заказу. Цены подтверждаются для каждого заказа."
     },
     "privacy": {
-        "title": "How we use your details",
-        "text": "We use the contact details and requirements you send only to answer your enquiry and to handle any business that follows, as set out in our privacy policy.",
-        "link": "Read the privacy policy"
+        "title": "Как мы используем Ваши данные",
+        "text": "Мы используем присланные Вами контактные данные и требования только для ответа на Ваше обращение и ведения последующих деловых отношений, как описано в нашей политике конфиденциальности.",
+        "link": "Политика конфиденциальности"
     },
     "trust": {
-        "title": "Registered company",
-        "register": "Commercial register",
-        "tax": "Tax card",
-        "proof_title": "Track record",
+        "title": "Зарегистрированная компания",
+        "register": "Коммерческий реестр",
+        "tax": "Налоговая карточка",
+        "proof_title": "Опыт работы",
         "proof": [
-            "Founded in 2008",
-            "7+ markets across the Middle East",
-            "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA"
+            "Основана в 2008 году",
+            "7+ рынков: Ближний Восток и не только",
+            "ISO 9001:2015, ISO 14001:2015 и ISO 45001:2018, сертификация TÜV AUSTRIA"
         ],
-        "proof_link": "See quality and certificates"
+        "proof_link": "Качество и сертификаты"
     }
 }

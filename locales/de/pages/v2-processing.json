@@ -1,130 +1,130 @@
 {
     "meta": {
-        "title": "Fish processing, packing and export from Egypt",
-        "description": "From the pond to the pallet: we farm and source fish, then wash, ice, grade, pack, inspect and export it with our own refrigerated trucks and cold stores."
+        "title": "Fischverarbeitung, Verpackung und Export aus Ägypten",
+        "description": "Unser Werk in Motobas, Kafr el-Sheikh, wäscht, beeist, sortiert, verpackt und prüft ganzen frischen Fisch. Unsere Kühl-Lkw und Kühlhäuser halten ihn gekühlt."
     },
     "breadcrumbs": {
-        "label": "Breadcrumb",
-        "home": "Home",
-        "current": "Value chain"
+        "label": "Pfadnavigation",
+        "home": "Startseite",
+        "current": "Wertschöpfungskette"
     },
     "hero": {
-        "kicker": "Value chain",
-        "title": "From the pond to the pallet, every stage handled by AZAFCO",
-        "intro": "We farm and source the fish, then wash, ice, grade, pack, inspect and export it ourselves, with our own refrigerated trucks, logistics and cold stores.",
-        "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind",
-        "primary": "Start a partnership",
-        "secondary": "Our quality standards"
+        "kicker": "Wertschöpfungskette",
+        "title": "Fischverarbeitung und Kühlkette aus unserem Werk in Motobas",
+        "intro": "In unserem Werk in Motobas, Kafr el-Sheikh, waschen, beeisen, sortieren, verpacken und prüfen wir den Fisch aus eigener Zucht und Zukauf. Mit eigenen Kühl-Lkw, eigener Logistik und eigenen Kühlhäusern bringen wir ihn dann zur Luft- oder Straßenfracht.",
+        "imageAlt": "Ganzer frischer Fisch auf Scherbeneis in weißen Boxen, dahinter Personal in Hygienekleidung bei der Arbeit",
+        "primary": "Partnerschaft starten",
+        "secondary": "Unsere Qualitätsstandards"
     },
     "stats": {
-        "label": "Key figures",
+        "label": "Kennzahlen",
         "items": [
             {
                 "value": "12",
-                "label": "main fish species"
+                "label": "Hauptfischarten"
             },
             {
                 "value": "7+",
-                "label": "export markets"
+                "label": "Exportmärkte"
             },
             {
                 "value": "3",
-                "label": "ISO certificates"
+                "label": "ISO-Zertifikate"
             },
             {
-                "value": "2,500",
-                "label": "t/month packing capacity"
+                "value": "2.500",
+                "label": "t/Monat Packkapazität"
             }
         ]
     },
     "chain": {
-        "eyebrow": "How we work",
-        "title": "Five stages, one agreed specification",
-        "intro": "Every order follows the same path, and each stage works to the specification we agree with you.",
-        "stageLabel": "Stage {n}",
+        "eyebrow": "So arbeiten wir",
+        "title": "Fünf Stufen, eine vereinbarte Spezifikation",
+        "intro": "Jeder Auftrag durchläuft denselben Weg, und jede Stufe richtet sich nach der Spezifikation, die wir mit Ihnen vereinbaren.",
+        "stageLabel": "Stufe {n}",
         "stages": {
             "farming": {
-                "title": "Farming and sourcing",
-                "text": "We farm fish ourselves and also buy fish from other producers.",
-                "alt": "Aerial view of earthen fish ponds with aerators and palm trees"
+                "title": "Zucht und Zukauf",
+                "text": "Wir züchten Fisch selbst und kaufen zusätzlich Fisch von anderen Erzeugern.",
+                "alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
             },
             "harvest": {
-                "title": "Harvest",
-                "text": "The fish are netted and taken to our plant in Motobas, Kafr El Sheikh.",
-                "alt": "Two workers pulling a net full of tilapia to the bank of an earthen pond"
+                "title": "Abfischen",
+                "text": "Der Fisch wird abgefischt und in unser Werk in Motobas, Kafr el-Sheikh, gebracht.",
+                "alt": "Zwei Arbeiter ziehen ein Netz voller Tilapia ans Ufer eines Erdteichs"
             },
             "packing": {
-                "title": "Washing, icing and packing",
-                "text": "The fish are washed, iced, graded by weight and packed whole on ice, to the packing agreed for your order.",
-                "alt": "Gloved hands placing a whole tilapia into a crate of crushed ice on a steel table"
+                "title": "Waschen, Beeisen und Verpacken",
+                "text": "Der Fisch wird gewaschen, beeist, nach Gewicht sortiert und ganz auf Eis verpackt, in der für Ihren Auftrag vereinbarten Verpackung.",
+                "alt": "Hände in Handschuhen legen eine ganze Tilapia in eine Kiste mit Scherbeneis auf einem Stahltisch"
             },
             "inspection": {
-                "title": "Inspection",
-                "text": "Checked against the agreed specification before the boxes are closed.",
-                "alt": "A gloved hand holding a probe in iced water beside two whole tilapia"
+                "title": "Kontrolle",
+                "text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft.",
+                "alt": "Eine Hand im Handschuh hält einen Messfühler in Eiswasser neben zwei ganzen Tilapia"
             },
             "export": {
                 "title": "Export",
-                "text": "Our own refrigerated trucks, then air or road freight.",
-                "alt": "A worker moving a pallet of white boxes into a refrigerated truck at a loading dock"
+                "text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht.",
+                "alt": "Ein Arbeiter schiebt an einer Laderampe eine Palette mit weißen Boxen in einen Kühl-Lkw"
             }
         },
-        "plantMap": "See our plant on Google Maps",
-        "newTab": "(opens in a new tab)"
+        "plantMap": "Unser Werk auf Google Maps ansehen",
+        "newTab": "(öffnet in neuem Tab)"
     },
     "logistics": {
-        "eyebrow": "Logistics",
-        "title": "Our own trucks and cold stores",
-        "intro": "We run our own refrigerated trucks, logistics and cold stores. Every stage is handled by AZAFCO.",
+        "eyebrow": "Logistik",
+        "title": "Eigene Lkw und Kühlhäuser",
+        "intro": "Wir betreiben eigene Kühl-Lkw, Logistik und Kühlhäuser, um die verpackten Boxen von unserem Werk bis zur Verladung zu bringen.",
         "items": {
             "trucks": {
-                "title": "Refrigerated trucks",
-                "text": "Our own refrigerated trucks move the packed boxes from the plant."
+                "title": "Kühl-Lkw",
+                "text": "Unsere eigenen Kühl-Lkw bringen die verpackten Boxen aus dem Werk."
             },
             "stores": {
-                "title": "Cold stores",
-                "text": "We run our own cold stores as part of our logistics."
+                "title": "Kühlhäuser",
+                "text": "Wir betreiben eigene Kühlhäuser als Teil unserer Logistik."
             },
             "freight": {
-                "title": "Air or road freight",
-                "text": "We ship by air and road to the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe is next in our plan."
+                "title": "Luft- oder Straßenfracht",
+                "text": "Wir liefern per Luft- und Straßenfracht in diese Märkte: VAE, Kuwait, Bahrain, Libanon, Katar, Irak und Syrien. Als Nächstes ist Europa geplant."
             }
         }
     },
     "agree": {
-        "eyebrow": "Your specification",
-        "title": "What we agree with you before each order",
-        "intro": "Tell us what your market needs. We confirm each detail with you before the order.",
+        "eyebrow": "Ihre Spezifikation",
+        "title": "Was wir vor jedem Auftrag mit Ihnen vereinbaren",
+        "intro": "Sagen Sie uns, was Ihr Markt braucht. Wir bestätigen jedes Detail vor dem Auftrag mit Ihnen.",
         "items": {
             "species": {
-                "title": "Species and weight grade",
-                "text": "The species and the weight grade per fish. We supply other species on request."
+                "title": "Fischart und Gewichtsklasse",
+                "text": "Die Fischart und die Gewichtsklasse pro Fisch. Weitere Arten liefern wir auf Anfrage."
             },
             "form": {
-                "title": "Product form",
-                "text": "Whole, fresh chilled and packed on ice."
+                "title": "Produktform",
+                "text": "Ganz, frisch gekühlt und auf Eis verpackt."
             },
             "packing": {
-                "title": "Packing and net weight",
-                "text": "The packing and the net weight per box, to suit your sales channel."
+                "title": "Verpackung und Nettogewicht",
+                "text": "Die Verpackung und das Nettogewicht pro Box, passend zu Ihrem Vertriebskanal."
             },
             "labels": {
-                "title": "Labels and destination",
-                "text": "Label content and language, and the requirements of the destination country."
+                "title": "Etiketten und Zielort",
+                "text": "Inhalt und Sprache der Etiketten sowie die Anforderungen des Ziellandes."
             }
         },
-        "prices": "Prices confirmed per order.",
-        "speciesLink": "See our main species"
+        "prices": "Preise werden pro Auftrag bestätigt.",
+        "speciesLink": "Unsere Hauptarten ansehen"
     },
     "closing": {
-        "eyebrow": "Next step",
-        "title": "Tell us what your market needs",
-        "text": "Share the species, quantity, weight grade and destination. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
-        "primary": "Start a partnership",
-        "secondary": "Send your requirements"
+        "eyebrow": "Nächster Schritt",
+        "title": "Sagen Sie uns, was Ihr Markt braucht",
+        "text": "Nennen Sie uns Fischart, Menge, Gewichtsklasse und Zielort. Unser Exportteam prüft Liefermöglichkeiten und Handelskonditionen. Das Senden Ihrer Anforderungen ist unverbindlich.",
+        "primary": "Partnerschaft starten",
+        "secondary": "Anforderungen senden"
     },
     "pending": {
-        "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",
-        "pack_formats": "Validated pack formats (box types, net weights) and label options"
+        "temperature": "Lager- und Transporttemperatur je Produkt, mit Kontrollpunkten und Aufzeichnungen (vom Inhaber zu bestätigen, bevor eine Zahl veröffentlicht wird)",
+        "pack_formats": "Freigegebene Verpackungsformate (Boxtypen, Nettogewichte) und Etikettenoptionen"
     }
 }

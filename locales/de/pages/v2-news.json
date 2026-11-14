@@ -1,89 +1,89 @@
 {
     "meta": {
-        "title": "News and press",
-        "description": "Company news, press coverage and milestones of AZAFCO International, plus Egyptian fish-sector news from named sources, each with its date."
+        "title": "Aktuelles und Presse",
+        "description": "Nachrichten, Presseberichte und Meilensteine von AZAFCO International sowie Meldungen zum ägyptischen Fischsektor aus genannten Quellen, jeweils mit Datum."
     },
-    "breadcrumb": "News and press",
+    "breadcrumb": "Aktuelles und Presse",
     "hero": {
-        "eyebrow": "News and press",
-        "title": "News, press and milestones",
-        "intro": "Visits, media coverage and milestones from AZAFCO International, with industry news from named sources. Every item shows its date and source."
+        "eyebrow": "Aktuelles und Presse",
+        "title": "Aktuelles, Presse und Meilensteine",
+        "intro": "Besuche, Medienberichte und Meilensteine von AZAFCO International sowie Branchennachrichten aus genannten Quellen. Jeder Beitrag zeigt Datum und Quelle."
     },
-    "illustrative": "Illustrative photo",
-    "source": "Source: {name}",
-    "view_source": "View source",
-    "new_tab": "(opens in a new tab)",
+    "illustrative": "Symbolbild",
+    "source": "Quelle: {name}",
+    "view_source": "Quelle ansehen",
+    "new_tab": "(öffnet in neuem Tab)",
     "press": {
-        "eyebrow": "Company news",
-        "title": "Visits and media coverage",
-        "intro": "Official visits to our plant and press and TV coverage of AZAFCO International."
+        "eyebrow": "Unternehmensnachrichten",
+        "title": "Besuche und Medienberichte",
+        "intro": "Offizielle Besuche in unserem Werk sowie Presse- und TV-Berichte über AZAFCO International."
     },
     "milestones": {
-        "eyebrow": "Our milestones",
-        "title": "From 2008 to today",
-        "list_label": "Company milestones",
+        "eyebrow": "Unsere Meilensteine",
+        "title": "Von 2008 bis heute",
+        "list_label": "Meilensteine des Unternehmens",
         "items": {
             "founding": {
-                "title": "AZAFCO International is founded",
-                "text": "We were founded in Kafr El Sheikh and began packing and exporting fresh fish."
+                "title": "AZAFCO International wird gegründet",
+                "text": "Wir wurden in Kafr el-Sheikh gegründet und begannen, frischen Fisch zu verpacken und zu exportieren."
             },
             "baltim": {
-                "title": "Our first plant, in Baltim",
-                "text": "We opened our first plant in the Baltim Industrial Zone, Kafr El Sheikh."
+                "title": "Unser erstes Werk, in Baltim",
+                "text": "Wir eröffneten unser erstes Werk im Industriegebiet Baltim, Kafr el-Sheikh."
             },
             "motobas": {
-                "title": "Our new plant, in Motobas",
-                "text": "We opened our new plant in the Motobas Industrial Zone, Kafr El Sheikh."
+                "title": "Unser neues Werk, in Motobas",
+                "text": "Wir eröffneten unser neues Werk im Industriegebiet Motobas, Kafr el-Sheikh."
             }
         },
         "iso": {
-            "title": "ISO certified",
-            "text": "We hold ISO certificates for quality, environmental, and occupational health and safety management, certified by TÜV AUSTRIA.",
-            "link": "Quality and certificates"
+            "title": "ISO-zertifiziert",
+            "text": "Wir verfügen über ISO-Zertifikate für Qualitäts-, Umwelt- sowie Arbeits- und Gesundheitsschutzmanagement, zertifiziert durch TÜV AUSTRIA.",
+            "link": "Qualität und Zertifikate"
         }
     },
     "industry": {
-        "eyebrow": "Industry context",
-        "title": "Egypt's fish sector in the news",
-        "intro": "Reports on Egyptian fisheries and on Kafr El Sheikh, the governorate where our plant is located.",
-        "note": "Figures in this section come from the named sources, as of the date shown. They are not AZAFCO data."
+        "eyebrow": "Branchenumfeld",
+        "title": "Ägyptens Fischsektor in den Nachrichten",
+        "intro": "Berichte über die ägyptische Fischerei und über Kafr el-Sheikh, das Gouvernement, in dem unser Werk liegt.",
+        "note": "Die Zahlen in diesem Abschnitt stammen aus den genannten Quellen und geben den Stand zum angegebenen Datum wieder. Es sind keine AZAFCO-Daten."
     },
     "items": {
         "governor_visit": {
-            "title": "Governor of Kafr El Sheikh visits our Motobas plant",
-            "summary": "Maj. Gen. Dr. Alaa Abdel Moaty, Governor of Kafr El Sheikh, toured our plant in the Motobas Industrial Zone as part of the governorate's work to support the fish industry and exports.",
-            "source": "Kafr El Sheikh Governorate"
+            "title": "Gouverneur von Kafr el-Sheikh besucht unser Werk in Motobas",
+            "summary": "Generalmajor Dr. Alaa Abdel Moaty, Gouverneur von Kafr el-Sheikh, besichtigte unser Werk im Industriegebiet Motobas im Rahmen der Arbeit des Gouvernements zur Förderung der Fischindustrie und der Exporte.",
+            "source": "Gouvernement Kafr el-Sheikh"
         },
         "press_feature": {
-            "title": "Feature in Dar Al-Sharq Al-Awsat",
-            "summary": "The newspaper Dar Al-Sharq Al-Awsat published a profile of AZAFCO International and its chairman, covering the company's work in fresh fish exports.",
-            "source": "Dar Al-Sharq Al-Awsat newspaper"
+            "title": "Porträt in Dar Al-Sharq Al-Awsat",
+            "summary": "Die Zeitung Dar Al-Sharq Al-Awsat veröffentlichte ein Porträt von AZAFCO International und seinem Vorsitzenden über die Arbeit des Unternehmens im Export von Frischfisch.",
+            "source": "Zeitung Dar Al-Sharq Al-Awsat"
         },
         "tv_program": {
-            "title": "“Helwa Ya Baladi” TV episode on AZAFCO International",
-            "summary": "The Misr Al Balad TV programme “Helwa Ya Baladi” aired a special episode on our fresh fish packing and export work.",
+            "title": "TV-Folge „Helwa Ya Baladi“ über AZAFCO International",
+            "summary": "Die Sendung „Helwa Ya Baladi“ des Senders Misr Al Balad TV strahlte eine Sonderfolge über unsere Verpackung und unseren Export von Frischfisch aus.",
             "source": "Misr Al Balad TV (YouTube)"
         },
         "egypt_ranking": {
-            "title": "Egypt ranks first in Africa in fisheries, says the Agriculture Minister",
-            "summary": "Meeting the Gambian Minister for Fisheries, Egypt's Minister of Agriculture, El-Sayed El-Quseir, said Egypt ranks first in Africa and sixth in the world in fisheries.",
-            "source": "State Information Service (SIS)"
+            "title": "Ägypten laut Landwirtschaftsminister auf Platz eins in Afrika bei der Fischerei",
+            "summary": "Bei einem Treffen mit dem gambischen Fischereiminister sagte Ägyptens Landwirtschaftsminister El-Sayed El-Quseir, Ägypten liege in der Fischerei auf Platz eins in Afrika und auf Platz sechs weltweit.",
+            "source": "Staatlicher Informationsdienst Ägyptens (SIS)"
         },
         "kafr_el_sheikh_production": {
-            "title": "Kafr El Sheikh produces about half of Egypt's fish",
-            "summary": "Al-Ahram Gate reported that Kafr El Sheikh produces about 50% of Egypt's fish, around 800,000 tonnes a year, and that aquaculture makes up 70% of the governorate's production.",
+            "title": "Kafr el-Sheikh produziert rund die Hälfte des ägyptischen Fischs",
+            "summary": "Al-Ahram Gate berichtete, dass Kafr el-Sheikh rund 50 % des ägyptischen Fischs produziert, etwa 800.000 Tonnen pro Jahr, und dass die Aquakultur 70 % der Produktion des Gouvernements ausmacht.",
             "source": "Al-Ahram Gate"
         },
         "ghalioun_project": {
-            "title": "Ghalioun fish farm opens in Kafr El Sheikh",
-            "summary": "President Abdel Fattah El-Sisi opened the Ghalioun fish industrial city in Kafr El Sheikh: a fish farm of about 4,000 feddans with 1,359 fish and shrimp ponds, hatcheries, and plants for fish processing, feed and ice.",
+            "title": "Fischfarm Ghalioun in Kafr el-Sheikh eröffnet",
+            "summary": "Präsident Abdel Fattah El-Sisi eröffnete die Fischindustriestadt Ghalioun in Kafr el-Sheikh: eine Fischfarm von rund 4.000 Feddan mit 1.359 Fisch- und Garnelenteichen, Brutanlagen sowie Werken für Fischverarbeitung, Futter und Eis.",
             "source": "Youm7"
         }
     },
     "teaser": {
-        "eyebrow": "News and press",
-        "title": "Latest news",
-        "intro": "Visits, media coverage and milestones, each with its date and source.",
-        "all": "All news and press"
+        "eyebrow": "Aktuelles und Presse",
+        "title": "Neueste Meldungen",
+        "intro": "Besuche, Medienberichte und Meilensteine, jeweils mit Datum und Quelle.",
+        "all": "Alle Meldungen und Presseberichte"
     }
 }

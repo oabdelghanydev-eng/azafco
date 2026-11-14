@@ -1,207 +1,207 @@
 {
     "meta": {
-        "title": "Start a fish supply partnership: for importers",
-        "description": "How to start with AZAFCO International: send your requirements, review supply with our export team and agree each order. Prices confirmed per order."
+        "title": "Начать партнёрство по поставкам рыбы: импортёрам",
+        "description": "Как начать работу с AZAFCO International: отправьте требования, обсудите наличие с отделом экспорта, согласуйте заказ. Цены подтверждаются для каждого заказа."
     },
-    "breadcrumb": "For importers",
+    "breadcrumb": "Импортёрам",
     "hero": {
-        "eyebrow": "For importers and distributors",
-        "title": "Start a fresh fish supply partnership",
-        "intro": "Tell us the species, quantity and destination. Our export team reviews supply and commercial terms with you; prices are confirmed per order.",
-        "primary": "Send your requirements",
-        "secondary": "Message management on WhatsApp",
-        "image_alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+        "eyebrow": "Импортёрам и дистрибьюторам",
+        "title": "Начните партнёрство по поставкам свежей рыбы",
+        "intro": "Сообщите нам вид рыбы, объём и пункт назначения. Отдел экспорта обсудит с Вами наличие и коммерческие условия; цены подтверждаются для каждого заказа.",
+        "primary": "Отправить требования",
+        "secondary": "Написать руководству в WhatsApp",
+        "image_alt": "Целые свежие дорада, лаврак (сибас) и тилапия на колотом льду в холодном свете"
     },
     "serve": {
-        "eyebrow": "Who we work with",
-        "title": "Importers, distributors and foodservice",
-        "intro": "We supply businesses, not consumers. Each type of buyer has its own questions, and we answer them when we agree the order.",
+        "eyebrow": "С кем мы работаем",
+        "title": "Импортёры, дистрибьюторы и HoReCa",
+        "intro": "Мы работаем с бизнесом, а не с розничными покупателями. У каждого типа покупателей свои вопросы, и мы отвечаем на них при согласовании заказа.",
         "items": [
             {
-                "title": "Fish importers",
-                "text": "Species, weight grades, packing and quantities for your market."
+                "title": "Импортёры рыбы",
+                "text": "Виды, весовые категории, упаковка и объёмы для Вашего рынка."
             },
             {
-                "title": "Wholesalers and distributors",
-                "text": "Clear grading, net weights, packing and delivery terms for each order."
+                "title": "Оптовики и дистрибьюторы",
+                "text": "Чёткая калибровка, вес нетто, упаковка и условия поставки для каждого заказа."
             },
             {
-                "title": "Hotels, restaurants and catering",
-                "text": "An agreed specification and one export team to talk to."
+                "title": "Отели, рестораны и кейтеринг",
+                "text": "Согласованная спецификация и один отдел экспорта для связи."
             },
             {
-                "title": "Foodservice suppliers",
-                "text": "Recurring supply planned against our packing capacity and your programme."
+                "title": "Поставщики для общепита",
+                "text": "Регулярные поставки, спланированные с учётом наших упаковочных мощностей и Вашей программы."
             }
         ]
     },
     "process": {
-        "eyebrow": "How to start",
-        "title": "Four steps to your first shipment",
+        "eyebrow": "С чего начать",
+        "title": "Четыре шага до первой отгрузки",
         "steps": [
             {
-                "title": "Send your requirements",
-                "text": "Company, country, species, weight grade, product form, quantity, packing and delivery date."
+                "title": "Отправить требования",
+                "text": "Компания, страна, вид рыбы, весовая категория, вид разделки, объём, упаковка и дата поставки."
             },
             {
-                "title": "Review with our export team",
-                "text": "We check supply, the specification, your market's requirements and the export documents it needs."
+                "title": "Обсудить с отделом экспорта",
+                "text": "Мы проверяем наличие, спецификацию, требования Вашего рынка и необходимые для него экспортные документы."
             },
             {
-                "title": "Agree the order",
-                "text": "Species, grade, quantity, packing, transport, schedule and price are confirmed in writing for each order."
+                "title": "Согласовать заказ",
+                "text": "Вид, категория, объём, упаковка, транспорт, график и цена подтверждаются письменно для каждого заказа."
             },
             {
-                "title": "Pack and ship",
-                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
+                "title": "Упаковать и отгрузить",
+                "text": "Мы упаковываем рыбу со льдом и отправляем её авиа- или автотранспортом с экспортными документами, согласованными для Вашей страны назначения."
             }
         ]
     },
     "prepare": {
-        "eyebrow": "Before you send",
-        "title": "What to prepare",
-        "intro": "The more complete your requirements, the more useful our first reply.",
+        "eyebrow": "Перед отправкой",
+        "title": "Что подготовить",
+        "intro": "Чем полнее Ваши требования, тем полезнее будет наш первый ответ.",
         "items": [
-            "Species",
-            "Weight grade",
-            "Product form",
-            "Quantity per shipment and frequency",
-            "Destination country",
-            "Delivery date",
-            "Packing and label requirements",
-            "Documents your market requires"
+            "Вид рыбы",
+            "Весовая категория",
+            "Вид разделки",
+            "Объём одной отгрузки и периодичность",
+            "Страна назначения",
+            "Дата поставки",
+            "Требования к упаковке и маркировке",
+            "Документы, которые требует Ваш рынок"
         ]
     },
     "documents": {
-        "eyebrow": "Documents",
-        "title": "What the export team provides",
-        "intro": "Email the export team for details and documents. These are the documents we work with:",
+        "eyebrow": "Документы",
+        "title": "Что предоставляет отдел экспорта",
+        "intro": "За деталями и документами пишите в отдел экспорта по электронной почте. Вот документы, с которыми мы работаем:",
         "items": [
             {
-                "title": "Product specification",
-                "text": "Species, weight grade, product form and packing for your order."
+                "title": "Спецификация продукции",
+                "text": "Вид рыбы, весовая категория, вид разделки и упаковка для Вашего заказа."
             },
             {
-                "title": "Company profile",
-                "text": "An overview of AZAFCO International and how we work."
+                "title": "Профиль компании",
+                "text": "Обзор AZAFCO International и того, как мы работаем."
             },
             {
-                "title": "Shipment documents",
-                "text": "The export documents agreed for your destination, prepared with each shipment."
+                "title": "Отгрузочные документы",
+                "text": "Экспортные документы, согласованные для Вашей страны назначения, оформляются для каждой отгрузки."
             }
         ],
-        "guide_link": "Which documents a fresh fish shipment usually needs"
+        "guide_link": "Какие документы обычно нужны для отгрузки свежей рыбы"
     },
     "terms": {
-        "eyebrow": "Trade details",
-        "title": "Confirmed per order",
-        "intro": "We do not publish price lists or general terms. These points are agreed in writing for each order:",
+        "eyebrow": "Условия сделки",
+        "title": "Подтверждается для каждого заказа",
+        "intro": "Мы не публикуем прайс-листы и общие условия. Эти пункты согласуются письменно для каждого заказа:",
         "items": [
             {
-                "title": "Price",
-                "text": "Confirmed per order: it depends on the species, weight grade, quantity, packing and delivery terms."
+                "title": "Цена",
+                "text": "Подтверждается для каждого заказа: зависит от вида рыбы, весовой категории, объёма, упаковки и условий поставки."
             },
             {
-                "title": "Minimum order",
-                "text": "Depends on the species and the order terms."
+                "title": "Минимальный заказ",
+                "text": "Зависит от вида рыбы и условий заказа."
             },
             {
-                "title": "Availability",
-                "text": "Confirmed against current supply when we review your requirements."
+                "title": "Наличие",
+                "text": "Подтверждается с учётом текущих объёмов, когда мы рассматриваем Ваши требования."
             },
             {
-                "title": "Transport",
-                "text": "Chilled, by air or road; the route is confirmed for each order."
+                "title": "Транспорт",
+                "text": "В охлаждённом виде, авиа- или автотранспортом; маршрут подтверждается для каждого заказа."
             },
             {
                 "title": "Incoterms",
-                "text": "Agreed for each order."
+                "text": "Согласуются для каждого заказа."
             }
         ]
     },
     "proof": {
-        "eyebrow": "Check before you ask",
-        "title": "Species, process, quality and markets",
+        "eyebrow": "Проверьте до обращения",
+        "title": "Виды рыбы, процесс, качество и рынки",
         "items": [
             {
-                "title": "Species",
-                "text": "12 main species, whole and fresh chilled.",
-                "link": "View species"
+                "title": "Виды рыбы",
+                "text": "12 основных видов: целая свежая охлаждённая рыба.",
+                "link": "Смотреть виды"
             },
             {
-                "title": "Processing and packing",
-                "text": "How fish is graded, packed on ice and dispatched.",
-                "link": "See processing"
+                "title": "Переработка и упаковка",
+                "text": "Как рыбу калибруют, упаковывают со льдом и отгружают.",
+                "link": "Смотреть процесс"
             },
             {
-                "title": "Quality",
-                "text": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA.",
-                "link": "See quality"
+                "title": "Качество",
+                "text": "ISO 9001:2015, ISO 14001:2015 и ISO 45001:2018, сертификация TÜV AUSTRIA.",
+                "link": "О качестве"
             },
             {
-                "title": "Markets",
-                "text": "7+ markets across the Middle East and beyond.",
-                "link": "See markets"
+                "title": "Рынки",
+                "text": "7+ рынков: Ближний Восток и не только.",
+                "link": "Смотреть рынки"
             }
         ]
     },
     "faq": {
-        "eyebrow": "Importer FAQ",
-        "title": "Questions importers ask before they start",
+        "eyebrow": "Вопросы импортёров",
+        "title": "Что спрашивают импортёры перед началом работы",
         "items": [
             {
-                "q": "How do we start working together?",
-                "a": "Email your requirements to the export team at business@azafco.com.eg, or use the prepared message on this page. For fast deals, message our management directly on WhatsApp. We then review supply and the order terms with you."
+                "q": "Как начать сотрудничество?",
+                "a": "Отправьте свои требования в отдел экспорта на business@azafco.com.eg или воспользуйтесь готовым сообщением на этой странице. Для быстрых сделок напишите напрямую руководству в WhatsApp. Затем мы обсудим с Вами наличие и письменно подтвердим коммерческие условия."
             },
             {
-                "q": "How are prices set?",
-                "a": "Prices are confirmed per order. They depend on the species, weight grade, quantity, packing and delivery terms. We do not publish price lists."
+                "q": "Как формируются цены?",
+                "a": "Цены подтверждаются для каждого заказа. Они зависят от вида рыбы, весовой категории, объёма, упаковки и условий поставки. Мы не публикуем прайс-листы."
             },
             {
-                "q": "What is the minimum order quantity?",
-                "a": "It depends on the species and the order terms. Send your expected quantity and we confirm what is possible for your order."
+                "q": "Каков минимальный объём заказа?",
+                "a": "Он зависит от вида рыбы и условий заказа. Сообщите ожидаемый объём, и мы подтвердим, что возможно для Вашего заказа."
             },
             {
-                "q": "Which sizes and weight grades can you supply?",
-                "a": "Weight grades depend on the species and current supply. Tell us the grade you need and we confirm what we can meet."
+                "q": "Какие размеры и весовые категории вы можете поставить?",
+                "a": "Весовые категории зависят от вида рыбы и текущего наличия. Укажите нужную категорию, и мы подтвердим, что можем обеспечить."
             },
             {
-                "q": "Which species do you supply?",
-                "a": "The 12 species on our site are our main, most-requested species; we supply other species on request."
+                "q": "Какие виды рыбы вы поставляете?",
+                "a": "12 видов на нашем сайте — это наши основные и самые востребованные виды; другие виды мы поставляем по запросу."
             },
             {
-                "q": "How is the fish packed?",
-                "a": "Whole and fresh chilled, packed on ice in insulated EPS boxes. Other packing or your own specification is reviewed for each product."
+                "q": "Как упакована рыба?",
+                "a": "Целая свежая охлаждённая рыба упаковывается со льдом в изотермические ящики из пенополистирола (EPS). Другую упаковку или Вашу собственную спецификацию мы рассматриваем для каждого продукта."
             },
             {
-                "q": "Can you pack under our label?",
-                "a": "This is reviewed for each product and requirement. Add your label requirements to the notes of your request."
+                "q": "Можете ли вы упаковать продукцию под нашей торговой маркой?",
+                "a": "Это рассматривается для каждого продукта и каждого требования. Укажите требования к маркировке в примечаниях к Вашей заявке."
             },
             {
-                "q": "Which certificates do you hold?",
-                "a": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates. The export documents for each shipment are agreed for your destination."
+                "q": "Какие сертификаты у вас есть?",
+                "a": "У нас есть сертификаты ISO 9001:2015, ISO 14001:2015 и ISO 45001:2018. Экспортные документы для каждой отгрузки согласуются с учётом страны назначения."
             },
             {
-                "q": "How is the fish shipped?",
-                "a": "Chilled, in our own refrigerated trucks from the plant, then by air or road freight depending on the destination. We do not publish fixed transit times; they are confirmed for each shipment."
+                "q": "Как доставляется рыба?",
+                "a": "В охлаждённом виде: от завода — на наших собственных авторефрижераторах, затем авиа- или автотранспортом в зависимости от пункта назначения. Мы не публикуем фиксированные сроки доставки; они подтверждаются для каждой отгрузки."
             },
             {
-                "q": "Which markets do you ship to?",
-                "a": "We ship to 7+ markets, including the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe, Russia and the USA are in our plan. If your country is not listed, contact the export team."
+                "q": "На какие рынки вы поставляете рыбу?",
+                "a": "Мы поставляем рыбу на 7+ рынков, в том числе в ОАЭ, Кувейт, Бахрейн, Ливан, Катар, Ирак и Сирию. Европа, Россия и США — в наших планах. Если Вашей страны нет в списке, свяжитесь с отделом экспорта."
             },
             {
-                "q": "Do you take recurring supply programmes?",
-                "a": "Yes. Our packing capacity is up to 2,500 t/month, and recurring supply is planned against it and your needs. Tell us the frequency you expect."
+                "q": "Работаете ли вы по программам регулярных поставок?",
+                "a": "Да. Наши упаковочные мощности — до 2 500 т/мес., и регулярные поставки планируются с учётом этих мощностей и Ваших потребностей. Сообщите, с какой периодичностью Вы планируете заказы."
             },
             {
-                "q": "How do we know a message is really from AZAFCO International?",
-                "a": "Our official channels are the export team email business@azafco.com.eg and the management WhatsApp +20 100 773 6419. Order terms are confirmed in writing for each order. If a message about your order comes from any other address or number, check it with us on these channels before you act on it."
+                "q": "Как убедиться, что сообщение действительно от AZAFCO International?",
+                "a": "Наши официальные каналы — электронная почта отдела экспорта business@azafco.com.eg и WhatsApp руководства +20 100 773 6419. Условия каждого заказа подтверждаются письменно. Если сообщение о Вашем заказе пришло с другого адреса или номера, проверьте его у нас по этим каналам, прежде чем что-либо предпринимать."
             }
         ]
     },
     "rfq": {
-        "eyebrow": "Start a partnership",
-        "title": "Send your requirements",
-        "intro": "Choose email or WhatsApp; each opens a prepared message. Nothing is binding until the order terms are agreed in writing."
+        "eyebrow": "Начать партнёрство",
+        "title": "Отправить требования",
+        "intro": "Выберите электронную почту или WhatsApp: каждый вариант открывает готовое сообщение. Никаких обязательств до письменного согласования условий заказа."
     }
 }

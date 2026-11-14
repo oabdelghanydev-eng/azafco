@@ -2,176 +2,176 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Nile tilapia"
+            "Nil-Tilapia"
         ],
-        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
+        "description": "Tilapia, auch als Nil-Tilapia gehandelt, ist ein Süßwasserfisch.",
         "sizes": [
-            "Small (200–300 g)",
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Klein (200–300 g)",
+            "Mittel (300–500 g)",
+            "Groß (ab 500 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "sea_bass": {
-        "name": "Sea bass",
+        "name": "Wolfsbarsch",
         "alt_names": [
-            "European sea bass",
+            "Europäischer Wolfsbarsch",
             "Branzino"
         ],
-        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
+        "description": "Der Wolfsbarsch, auch als Europäischer Wolfsbarsch oder Branzino gehandelt, ist ein Meeresfisch.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Mittel (400–600 g)",
+            "Groß (ab 600 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Meerwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "mullet": {
-        "name": "Grey mullet",
+        "name": "Großkopfmeeräsche",
         "alt_names": [
-            "Flathead grey mullet",
+            "Gestreifte Meeräsche",
             "Bouri"
         ],
-        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
+        "description": "Die Großkopfmeeräsche, in Ägypten als Bouri bekannt, ist ein Brackwasserfisch.",
         "sizes": [
-            "Small (150–250 g)",
-            "Medium (250–400 g)"
+            "Klein (150–250 g)",
+            "Mittel (250–400 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Brackwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "grass_carp": {
-        "name": "Grass carp",
+        "name": "Graskarpfen",
         "alt_names": [
-            "White amur",
+            "Weißer Amur",
             "Hashayesh"
         ],
-        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
+        "description": "Der Graskarpfen, in Ägypten als Hashayesh bekannt, ist ein Süßwasserkarpfen.",
         "sizes": [
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Mittel (300–500 g)",
+            "Groß (ab 500 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "mubarakah": {
-        "name": "Common carp",
+        "name": "Karpfen",
         "alt_names": [
-            "Scaled carp",
+            "Schuppenkarpfen",
             "Qishra"
         ],
-        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
+        "description": "Der Karpfen, in Ägypten als Qishra bekannt, ist die vollständig beschuppte Form (Schuppenkarpfen) und ein Süßwasserfisch.",
         "sizes": [
-            "Large (1–2 kg)",
-            "Jumbo (2 kg and above)"
+            "Groß (1–2 kg)",
+            "Jumbo (ab 2 kg)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "catfish": {
-        "name": "Catfish",
+        "name": "Afrikanischer Raubwels",
         "alt_names": [
-            "African catfish",
-            "North African catfish",
+            "Afrikanischer Wels",
+            "Nordafrikanischer Raubwels",
             "Karmout"
         ],
-        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
+        "description": "Der Afrikanische Raubwels, auch als Afrikanischer Wels oder Karmout gehandelt, ist ein Süßwasserfisch.",
         "sizes": [
-            "Medium (500–800 g)",
-            "Large (800 g and above)"
+            "Mittel (500–800 g)",
+            "Groß (ab 800 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "lout": {
-        "name": "Meagre",
+        "name": "Adlerfisch",
         "alt_names": [
             "Lout",
-            "Croaker",
+            "Umberfisch",
             "Corvina"
         ],
-        "description": "Meagre, known in Egypt as lout, is a marine fish.",
+        "description": "Der Adlerfisch, in Ägypten als Lout bekannt, ist ein Meeresfisch.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Mittel (400–600 g)",
+            "Groß (ab 600 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Meerwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "thinlip_mullet": {
-        "name": "Thinlip mullet",
+        "name": "Dünnlippige Meeräsche",
         "alt_names": [
-            "Thinlip grey mullet",
+            "Dünnlippen-Meeräsche",
             "Tobar"
         ],
-        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "description": "Die Dünnlippige Meeräsche, in Ägypten als Tobar bekannt, ist eine Meeräsche aus dem Brackwasser. Sie ist ein eigenes Produkt, getrennt von unserer Großkopfmeeräsche.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Brackwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "bayad_catfish": {
-        "name": "Bayad catfish",
+        "name": "Bagrus-Wels (Bagrus bajad)",
         "alt_names": [
             "Bayad",
-            "Nile bagrid catfish"
+            "Nil-Stachelwels"
         ],
-        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "description": "Der Bagrus-Wels ist ein im Nil heimischer Süßwasserwels.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "silver_carp": {
-        "name": "Silver carp",
+        "name": "Silberkarpfen",
         "alt_names": [],
-        "description": "Silver carp is a freshwater carp.",
+        "description": "Der Silberkarpfen ist ein Süßwasserkarpfen.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "mirror_carp": {
-        "name": "Mirror carp",
+        "name": "Spiegelkarpfen",
         "alt_names": [
-            "Common carp (mirror)",
+            "Karpfen (Spiegelform)",
             "Mabrouka"
         ],
-        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "description": "Der Spiegelkarpfen ist die spiegelbeschuppte Form des Karpfens mit nur wenigen großen Schuppen. Er ist ein Süßwasserfisch.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Süßwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "sea_bream": {
-        "name": "Sea bream",
+        "name": "Dorade",
         "alt_names": [
-            "Gilthead sea bream",
-            "Dorade"
+            "Goldbrasse",
+            "Dorade Royale"
         ],
-        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "description": "Die Dorade, auch als Goldbrasse oder Dorade Royale gehandelt, ist ein Meeresfisch.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Meerwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "eels": {
-        "name": "European eel",
+        "name": "Europäischer Aal",
         "alt_names": [
-            "Eel"
+            "Aal"
         ],
-        "description": "European eel is a brackish-water fish.",
+        "description": "Der Europäische Aal ist ein Brackwasserfisch.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "EPS-Styroporbox",
+        "category": "Brackwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     }
 }

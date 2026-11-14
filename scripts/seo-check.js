@@ -22,10 +22,10 @@ const { spawn } = require('child_process');
 const net = require('net');
 const path = require('path');
 
-// Published locales (i18n.ts publishedLocales). es/ru/de/fr redirect to English
-// until translated and must NOT appear as hreflang alternates.
-const LOCALES = ['ar', 'en'];
-const UNPUBLISHED_LOCALES = ['es', 'ru', 'de', 'fr'];
+// Published locales (i18n-config.ts publishedLocales). Any locale listed in
+// UNPUBLISHED_LOCALES must NOT appear as an hreflang alternate.
+const LOCALES = ['ar', 'en', 'es', 'ru', 'de', 'fr'];
+const UNPUBLISHED_LOCALES = [];
 const TITLE_MAX = 65;
 const DESC_MIN = 50;
 const DESC_MAX = 160;

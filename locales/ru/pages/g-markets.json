@@ -1,24 +1,46 @@
 {
-  "eyebrow": "Our markets",
-  "title": "The Middle East and beyond",
-  "intro": "We ship by air and road to 7+ markets, with Europe next in our plan. Pick a market to see its route.",
-  "since": "since {year}",
-  "mapLabel": "Map of shipping routes from Egypt to our markets",
-  "origin": "Egypt · Motobas",
-  "markets": {
-    "ae": { "name": "United Arab Emirates", "short": "UAE" },
-    "kw": { "name": "Kuwait", "short": "Kuwait" },
-    "bh": { "name": "Bahrain", "short": "Bahrain" },
-    "lb": { "name": "Lebanon", "short": "Lebanon" },
-    "qa": { "name": "Qatar", "short": "Qatar" },
-    "iq": { "name": "Iraq", "short": "Iraq" },
-    "sy": { "name": "Syria", "short": "Syria" }
-  },
-  "plannedTitle": "Planned",
-  "planned": {
-    "eu": "Europe",
-    "ru": "Russia",
-    "us": "United States"
-  },
-  "paused": "Spain: exports paused"
+    "eyebrow": "Наши рынки",
+    "title": "Ближний Восток и не только",
+    "intro": "Мы доставляем рыбу авиа- и автотранспортом на 7+ рынков, а следующая в наших планах — Европа. Выберите рынок, чтобы увидеть маршрут.",
+    "since": "с {year} года",
+    "mapLabel": "Карта маршрутов доставки из Египта на наши рынки",
+    "origin": "Египет · Мутубас",
+    "markets": {
+        "ae": {
+            "name": "Объединённые Арабские Эмираты",
+            "short": "ОАЭ"
+        },
+        "kw": {
+            "name": "Кувейт",
+            "short": "Кувейт"
+        },
+        "bh": {
+            "name": "Бахрейн",
+            "short": "Бахрейн"
+        },
+        "lb": {
+            "name": "Ливан",
+            "short": "Ливан"
+        },
+        "qa": {
+            "name": "Катар",
+            "short": "Катар"
+        },
+        "iq": {
+            "name": "Ирак",
+            "short": "Ирак"
+        },
+        "sy": {
+            "name": "Сирия",
+            "short": "Сирия"
+        }
+    },
+    "plannedTitle": "В планах",
+    "planned": {
+        "eu": "Европа",
+        "ru": "Россия",
+        "us": "США"
+    },
+    "paused": "Испания: экспорт приостановлен",
+    "pageLink": "Все рынки"
 }

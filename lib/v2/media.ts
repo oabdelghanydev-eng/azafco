@@ -9,6 +9,7 @@
  *   import { media, mediaImage, mediaBySubject } from '@/lib/v2/media';
  *   <ProductCard image={mediaImage('species-tilapia', locale)} … />
  */
+import type { Locale } from '@/i18n-config';
 
 export type MediaSubject =
     | 'facility' // factory buildings, exterior
@@ -27,7 +28,8 @@ export interface MediaItem {
     srcSmall?: string;
     width: number;
     height: number;
-    alt: { en: string; ar: string };
+    /** Alt text in every site locale (describe only what is visible) */
+    alt: Record<Locale, string>;
     subject: MediaSubject;
     /** Extra tags for picking (visible content only) */
     tags?: string[];
@@ -60,7 +62,7 @@ export interface ImageProps {
 
 export const media: MediaItem[] = [
     // ── Species cut-outs (owner set, 7 Nov 2026; transparent, 4:3; tags = data/products.ts slugs) ──
-    // Alt text uses the short species names of locales/{ar,en}/data/products.json (same names on every page).
+    // Alt text uses the short species names of locales/<locale>/data/products.json (same names on every page).
     {
         id: 'species-tilapia',
         src: '/images/species/tilapia.webp',
@@ -70,7 +72,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['tilapia'],
         cutout: true,
-        alt: { en: 'Whole tilapia, side view', ar: 'سمكة بلطي كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole tilapia, side view',
+            ar: 'سمكة بلطي كاملة، منظر جانبي',
+            es: 'Tilapia entera, vista lateral',
+            ru: 'Тилапия целиком, вид сбоку',
+            de: 'Ganze Tilapia, Seitenansicht',
+            fr: 'Tilapia entier, vue de profil',
+        },
     },
     {
         id: 'species-sea-bass',
@@ -81,7 +90,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['sea-bass'],
         cutout: true,
-        alt: { en: 'Whole sea bass, side view', ar: 'سمكة قاروص كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole sea bass, side view',
+            ar: 'سمكة قاروص كاملة، منظر جانبي',
+            es: 'Lubina entera, vista lateral',
+            ru: 'Лаврак (сибас) целиком, вид сбоку',
+            de: 'Ganzer Wolfsbarsch, Seitenansicht',
+            fr: 'Bar entier, vue de profil',
+        },
     },
     {
         id: 'species-mullet',
@@ -92,7 +108,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['mullet'],
         cutout: true,
-        alt: { en: 'Whole grey mullet, side view', ar: 'سمكة بوري كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole grey mullet, side view',
+            ar: 'سمكة بوري كاملة، منظر جانبي',
+            es: 'Mújol entero, vista lateral',
+            ru: 'Кефаль-лобан целиком, вид сбоку',
+            de: 'Ganze Großkopfmeeräsche, Seitenansicht',
+            fr: 'Mulet cabot entier, vue de profil',
+        },
     },
     {
         id: 'species-grass-carp',
@@ -103,7 +126,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['grass-carp'],
         cutout: true,
-        alt: { en: 'Whole grass carp, side view', ar: 'سمكة حشايش كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole grass carp, side view',
+            ar: 'سمكة حشايش كاملة، منظر جانبي',
+            es: 'Carpa herbívora entera, vista lateral',
+            ru: 'Белый амур целиком, вид сбоку',
+            de: 'Ganzer Graskarpfen, Seitenansicht',
+            fr: 'Carpe amour entière, vue de profil',
+        },
     },
     {
         id: 'species-common-carp',
@@ -114,7 +144,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['common-carp'],
         cutout: true,
-        alt: { en: 'Whole common carp, side view', ar: 'سمكة قشرة كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole common carp, side view',
+            ar: 'سمكة قشرة كاملة، منظر جانبي',
+            es: 'Carpa común entera, vista lateral',
+            ru: 'Карп целиком, вид сбоку',
+            de: 'Ganzer Karpfen, Seitenansicht',
+            fr: 'Carpe commune entière, vue de profil',
+        },
     },
     {
         id: 'species-catfish',
@@ -125,7 +162,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['catfish'],
         cutout: true,
-        alt: { en: 'Whole catfish, side view', ar: 'سمكة قراميط كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole catfish, side view',
+            ar: 'سمكة قراميط كاملة، منظر جانبي',
+            es: 'Pez gato africano entero, vista lateral',
+            ru: 'Африканский клариевый сом целиком, вид сбоку',
+            de: 'Ganzer Afrikanischer Raubwels, Seitenansicht',
+            fr: 'Poisson-chat africain entier, vue de profil',
+        },
     },
     {
         id: 'species-meagre',
@@ -136,7 +180,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['meagre'],
         cutout: true,
-        alt: { en: 'Whole meagre, side view', ar: 'سمكة لوت كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole meagre, side view',
+            ar: 'سمكة لوت كاملة، منظر جانبي',
+            es: 'Corvina entera, vista lateral',
+            ru: 'Горбыль целиком, вид сбоку',
+            de: 'Ganzer Adlerfisch, Seitenansicht',
+            fr: 'Maigre entier, vue de profil',
+        },
     },
     {
         id: 'species-thinlip-mullet',
@@ -147,7 +198,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['thinlip-mullet'],
         cutout: true,
-        alt: { en: 'Whole thinlip mullet, side view', ar: 'سمكة طوبار كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole thinlip mullet, side view',
+            ar: 'سمكة طوبار كاملة، منظر جانبي',
+            es: 'Morragute entero, vista lateral',
+            ru: 'Тонкогубая кефаль целиком, вид сбоку',
+            de: 'Ganze Dünnlippige Meeräsche, Seitenansicht',
+            fr: 'Mulet porc entier, vue de profil',
+        },
     },
     {
         id: 'species-bayad-catfish',
@@ -158,7 +216,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['bayad-catfish'],
         cutout: true,
-        alt: { en: 'Whole bayad catfish, side view', ar: 'سمكة بياض كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole bayad catfish, side view',
+            ar: 'سمكة بياض كاملة، منظر جانبي',
+            es: 'Bagre bayad entero, vista lateral',
+            ru: 'Багрус (Bagrus bajad) целиком, вид сбоку',
+            de: 'Ganzer Bagrus-Wels (Bagrus bajad), Seitenansicht',
+            fr: 'Bagre bayad entier, vue de profil',
+        },
     },
     {
         id: 'species-silver-carp',
@@ -169,7 +234,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['silver-carp'],
         cutout: true,
-        alt: { en: 'Whole silver carp, side view', ar: 'سمكة سلفر كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole silver carp, side view',
+            ar: 'سمكة سلفر كاملة، منظر جانبي',
+            es: 'Carpa plateada entera, vista lateral',
+            ru: 'Белый толстолобик целиком, вид сбоку',
+            de: 'Ganzer Silberkarpfen, Seitenansicht',
+            fr: 'Carpe argentée entière, vue de profil',
+        },
     },
     {
         id: 'species-mirror-carp',
@@ -180,7 +252,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['mirror-carp'],
         cutout: true,
-        alt: { en: 'Whole mirror carp, side view', ar: 'سمكة مبروكة كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole mirror carp, side view',
+            ar: 'سمكة مبروكة كاملة، منظر جانبي',
+            es: 'Carpa espejo entera, vista lateral',
+            ru: 'Зеркальный карп целиком, вид сбоку',
+            de: 'Ganzer Spiegelkarpfen, Seitenansicht',
+            fr: 'Carpe miroir entière, vue de profil',
+        },
     },
     {
         id: 'species-sea-bream',
@@ -191,7 +270,14 @@ export const media: MediaItem[] = [
         subject: 'product',
         tags: ['sea-bream'],
         cutout: true,
-        alt: { en: 'Whole sea bream, side view', ar: 'سمكة دنيس كاملة، منظر جانبي' },
+        alt: {
+            en: 'Whole sea bream, side view',
+            ar: 'سمكة دنيس كاملة، منظر جانبي',
+            es: 'Dorada entera, vista lateral',
+            ru: 'Дорада целиком, вид сбоку',
+            de: 'Ganze Dorade, Seitenansicht',
+            fr: 'Dorade royale entière, vue de profil',
+        },
     },
     // ── Illustrative photos (AI-generated, lead-approved 8 Nov 2026) ──
     // Sources + prompts: docs/images/ai-candidates (MANIFEST.md); built by `python scripts/ai-photos.py`
@@ -208,6 +294,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'Earthen fish ponds with a paddlewheel aerator at sunrise in the Nile Delta',
             ar: 'أحواض سمكية ترابية تعمل فيها بدّالة تهوية عند شروق الشمس في دلتا النيل',
+            es: 'Estanques de tierra para peces con un aireador de paletas al amanecer en el delta del Nilo',
+            ru: 'Земляные рыбоводные пруды с лопастным аэратором на рассвете в дельте Нила',
+            de: 'Fischteiche aus Erde mit einem Schaufelradbelüfter bei Sonnenaufgang im Nildelta',
+            fr: 'Bassins piscicoles en terre avec un aérateur à palettes au lever du soleil dans le delta du Nil',
         },
     },
     {
@@ -221,6 +311,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'Two whole fresh tilapia on crushed ice in a white insulated box',
             ar: 'سمكتا بلطي طازجتان كاملتان على ثلج مجروش داخل صندوق أبيض معزول',
+            es: 'Dos tilapias frescas enteras sobre hielo picado en una caja isotérmica blanca',
+            ru: 'Две целые свежие тилапии на колотом льду в белом изотермическом ящике',
+            de: 'Zwei ganze frische Tilapia auf zerstoßenem Eis in einer weißen Isolierbox',
+            fr: 'Deux tilapias frais entiers sur de la glace pilée dans une caisse isotherme blanche',
         },
     },
     {
@@ -234,6 +328,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'Gloved hands placing a whole tilapia into a crate of crushed ice on a stainless steel table',
             ar: 'يدان بقفازين تضعان سمكة بلطي كاملة في صندوق به ثلج مجروش فوق طاولة من الستانلس ستيل',
+            es: 'Manos con guantes colocan una tilapia entera en una caja con hielo picado sobre una mesa de acero inoxidable',
+            ru: 'Руки в перчатках кладут целую тилапию в ящик с колотым льдом на столе из нержавеющей стали',
+            de: 'Hände in Handschuhen legen eine ganze Tilapia in eine Kiste mit zerstoßenem Eis auf einem Edelstahltisch',
+            fr: 'Des mains gantées placent un tilapia entier dans une caisse de glace pilée sur une table en inox',
         },
     },
     {
@@ -247,6 +345,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'A gloved hand checking the temperature of the ice-water slurry around whole fresh tilapia',
             ar: 'قياس حرارة مياه التبريد المثلّجة حول أسماك بلطي كاملة طازجة',
+            es: 'Una mano con guante comprueba la temperatura de la mezcla de agua y hielo alrededor de tilapias frescas enteras',
+            ru: 'Рука в перчатке проверяет температуру водно-ледяной смеси вокруг целых свежих тилапий',
+            de: 'Eine Hand im Handschuh prüft die Temperatur des Eiswassers rund um ganze frische Tilapia',
+            fr: 'Une main gantée contrôle la température du mélange d\'eau et de glace autour de tilapias frais entiers',
         },
     },
     {
@@ -260,6 +362,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'A pallet of white insulated boxes being loaded into a refrigerated truck at a loading dock at dawn',
             ar: 'منصة عليها صناديق بيضاء معزولة تُحمَّل في شاحنة مبرّدة على رصيف التحميل عند الفجر',
+            es: 'Un palé de cajas isotérmicas blancas se carga en un camión frigorífico en un muelle de carga al amanecer',
+            ru: 'Поддон с белыми изотермическими ящиками загружают в рефрижератор у погрузочной рампы на рассвете',
+            de: 'Eine Palette mit weißen Isolierboxen wird im Morgengrauen an einer Laderampe in einen Kühl-Lkw geladen',
+            fr: 'Une palette de caisses isothermes blanches chargée dans un camion frigorifique à un quai de chargement à l\'aube',
         },
     },
     {
@@ -273,6 +379,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'Two workers pulling a seine net with tilapia to the bank of an earthen pond',
             ar: 'عاملان يسحبان شبكة جرّ فيها أسماك بلطي إلى ضفة حوض ترابي',
+            es: 'Dos trabajadores arrastran una red de cerco con tilapias hacia la orilla de un estanque de tierra',
+            ru: 'Двое рабочих тянут невод с тилапией к берегу земляного пруда',
+            de: 'Zwei Arbeiter ziehen ein Zugnetz mit Tilapia an das Ufer eines Erdteichs',
+            fr: 'Deux ouvriers tirent une senne avec des tilapias vers la berge d\'un bassin en terre',
         },
     },
     {
@@ -286,6 +396,10 @@ export const media: MediaItem[] = [
         alt: {
             en: 'Aerial view of earthen fish ponds with paddlewheel aerators in the Nile Delta',
             ar: 'منظر جوي لأحواض سمكية ترابية تعمل فيها بدّالات تهوية في دلتا النيل',
+            es: 'Vista aérea de estanques de tierra para peces con aireadores de paletas en el delta del Nilo',
+            ru: 'Вид сверху на земляные рыбоводные пруды с лопастными аэраторами в дельте Нила',
+            de: 'Luftaufnahme von Fischteichen aus Erde mit Schaufelradbelüftern im Nildelta',
+            fr: 'Vue aérienne de bassins piscicoles en terre avec des aérateurs à palettes dans le delta du Nil',
         },
     },
     {
@@ -296,7 +410,14 @@ export const media: MediaItem[] = [
         height: 941,
         subject: 'texture',
         illustrative: true,
-        alt: { en: 'Close-up of crushed flake ice', ar: 'لقطة قريبة لثلج مجروش' },
+        alt: {
+            en: 'Close-up of crushed flake ice',
+            ar: 'لقطة قريبة لثلج مجروش',
+            es: 'Primer plano de hielo en escamas',
+            ru: 'Крупный план чешуйчатого льда',
+            de: 'Nahaufnahme von Scherbeneis',
+            fr: 'Gros plan sur de la glace en paillettes',
+        },
     },
 ];
 
@@ -309,10 +430,11 @@ export function getMedia(id: string): MediaItem {
     return item;
 }
 
-/** Component-ready image props with alt in the right language (ar → Arabic, others → English). */
+/** Component-ready image props with alt in the page locale (English for an unknown locale). */
 export function mediaImage(id: string, locale: string): ImageProps {
     const m = getMedia(id);
-    return { src: m.src, width: m.width, height: m.height, alt: locale === 'ar' ? m.alt.ar : m.alt.en, cutout: m.cutout };
+    const alt = m.alt[locale as Locale] ?? m.alt.en;
+    return { src: m.src, width: m.width, height: m.height, alt, cutout: m.cutout };
 }
 
 export function mediaBySubject(subject: MediaSubject): MediaItem[] {

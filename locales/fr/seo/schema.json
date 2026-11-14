@@ -8,77 +8,77 @@
         "ازافكو",
         "EZAFCO"
     ],
-    "description": "AZAFCO International is an Egyptian company that farms and sources fresh fish, then grades, packs and exports it for importers, distributors and foodservice buyers in {countries}+ markets. Processing plant in Motobas, Kafr El Sheikh, Egypt.",
-    "slogan": "From Egyptian production to global partnerships",
+    "description": "AZAFCO International est une entreprise égyptienne qui élève et achète du poisson frais, puis le calibre, le conditionne et l’exporte pour des importateurs, des distributeurs et des acheteurs de la restauration hors foyer sur plus de {countries} marchés. Usine de traitement à Motobas, Kafr el-Cheikh, Égypte.",
+    "slogan": "De la production en Égypte aux partenariats dans le monde",
     "foundingDate": "2008",
-    "commercialRegisterLabel": "Commercial register",
-    "factoryName": "AZAFCO International fish processing plant",
-    "factoryAlternateName": "AZAFCO fish plant, Motobas",
-    "factoryDescription": "Fish processing plant of AZAFCO International in Motobas, Kafr El Sheikh: grading, packing and dispatch of fresh fish for export.",
+    "commercialRegisterLabel": "Registre du commerce",
+    "factoryName": "Usine de traitement du poisson d’AZAFCO International",
+    "factoryAlternateName": "Usine de poisson AZAFCO, Motobas",
+    "factoryDescription": "Usine de traitement du poisson d’AZAFCO International à Motobas, Kafr el-Cheikh : calibrage, conditionnement et expédition de poisson frais pour l’export.",
     "websiteName": "AZAFCO International",
-    "websiteDescription": "Official website of AZAFCO International: fresh Egyptian fish for importers, distributors and foodservice buyers, with species specifications and partnership contacts.",
-    "productGroupName": "AZAFCO International fresh fish",
-    "productGroupDesc": "Fresh fish from Egypt: tilapia, sea bass, grey mullet, catfish and other species. Weight grade and packing confirmed per order.",
-    "catalogName": "AZAFCO International fresh fish catalogue",
-    "catalogDesc": "Fresh fish for wholesale export from Egypt: 12 main varieties. Weight grade and packing confirmed per order; other species supplied on request.",
-    "offerDesc": "Tell us the specification; we will review supply and commercial terms. Office hours Sat–Thu 8:00–17:00 (Cairo time).",
-    "priceRange": "Prices confirmed per order",
-    "freshFishCategory": "Fresh fish",
-    "freshwater": "Freshwater fish",
-    "freshwaterDesc": "Tilapia, catfish, bayad catfish, common carp, mirror carp, grass carp, silver carp",
-    "saltwater": "Marine and brackish-water fish",
-    "saltwaterDesc": "Sea bass, sea bream, meagre, grey mullet, thinlip mullet",
-    "restaurantHotelSupply": "Foodservice supply",
-    "home": "Home",
-    "products": "Products",
-    "about": "About us",
+    "websiteDescription": "Site officiel d’AZAFCO International : poisson frais d’Égypte pour les importateurs, les distributeurs et la restauration hors foyer, avec les spécifications des espèces et les contacts pour démarrer un partenariat.",
+    "productGroupName": "Poisson frais AZAFCO International",
+    "productGroupDesc": "Poisson frais d’Égypte : tilapia, bar, mulet cabot, poisson-chat africain et autres espèces. Calibre et conditionnement confirmés à chaque commande.",
+    "catalogName": "Catalogue de poisson frais AZAFCO International",
+    "catalogDesc": "Poisson frais pour l’export en gros depuis l’Égypte : 12 espèces principales. Calibre et conditionnement confirmés à chaque commande ; autres espèces fournies sur demande.",
+    "offerDesc": "Indiquez-nous votre spécification ; nous étudierons les disponibilités et les conditions commerciales. Horaires du bureau : du samedi au jeudi, de 8 h à 17 h (heure du Caire).",
+    "priceRange": "Prix confirmés à chaque commande",
+    "freshFishCategory": "Poisson frais",
+    "freshwater": "Poissons d’eau douce",
+    "freshwaterDesc": "Tilapia, poisson-chat africain, bagre bayad, carpe commune, carpe miroir, carpe amour, carpe argentée",
+    "saltwater": "Poissons marins et d’eaux saumâtres",
+    "saltwaterDesc": "Bar, dorade royale, maigre, mulet cabot, mulet porc",
+    "restaurantHotelSupply": "Approvisionnement de la restauration hors foyer",
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
     "contact": "Contact",
-    "markets": "Markets",
-    "media": "Media",
-    "certificates": "Certificates",
+    "markets": "Marchés",
+    "media": "Médias",
+    "certificates": "Certificats",
     "openingHours": "Sa-Th 08:00-17:00",
-    "contactManagement": "Management, direct on WhatsApp (fast deals)",
-    "contactExport": "Export team (details and documents)",
+    "contactManagement": "Ligne directe de la direction · pour conclure rapidement",
+    "contactExport": "Équipe export (informations et documents)",
     "certificationBody": "TÜV AUSTRIA",
-    "credentialCategory": "ISO certification",
+    "credentialCategory": "Certification ISO",
     "credentials": [
         {
             "name": "ISO 9001:2015",
-            "description": "Quality management system"
+            "description": "Système de management de la qualité"
         },
         {
             "name": "ISO 14001:2015",
-            "description": "Environmental management system"
+            "description": "Système de management environnemental"
         },
         {
             "name": "ISO 45001:2018",
-            "description": "Occupational health and safety management system"
+            "description": "Système de management de la santé et de la sécurité au travail"
         }
     ],
     "knowsAbout": [
-        "Fresh fish export",
-        "Fish farming",
-        "Fish grading and packing",
-        "Cold chain logistics",
-        "Wholesale fish supply",
+        "Exportation de poisson frais",
+        "Pisciculture",
+        "Calibrage et conditionnement du poisson",
+        "Logistique de la chaîne du froid",
+        "Approvisionnement en poisson en gros",
         "Tilapia",
-        "Sea bass",
-        "Grey mullet",
-        "Egyptian aquaculture"
+        "Bar",
+        "Mulet cabot",
+        "Aquaculture égyptienne"
     ],
-    "speakableName": "AZAFCO International | Fresh fish export",
+    "speakableName": "AZAFCO International | Exportation de poisson frais",
     "services": {
         "tilapia": {
-            "name": "Fresh tilapia supply",
-            "description": "Fresh tilapia for wholesale and export"
+            "name": "Approvisionnement en tilapia frais",
+            "description": "Tilapia frais pour le commerce de gros et l’export"
         },
         "seaBass": {
-            "name": "Fresh sea bass supply",
-            "description": "Fresh sea bass for wholesale and export"
+            "name": "Approvisionnement en bar frais",
+            "description": "Bar frais pour le commerce de gros et l’export"
         },
         "mullet": {
-            "name": "Fresh grey mullet supply",
-            "description": "Fresh grey mullet for wholesale and export"
+            "name": "Approvisionnement en mulet cabot frais",
+            "description": "Mulet cabot frais pour le commerce de gros et l’export"
         }
     }
 }

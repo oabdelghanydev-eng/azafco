@@ -1,89 +1,89 @@
 {
     "meta": {
-        "title": "News and press",
-        "description": "Company news, press coverage and milestones of AZAFCO International, plus Egyptian fish-sector news from named sources, each with its date."
+        "title": "Новости и пресса",
+        "description": "Новости компании AZAFCO International, публикации в СМИ и вехи, а также новости рыбной отрасли Египта из указанных источников, с датой каждой публикации."
     },
-    "breadcrumb": "News and press",
+    "breadcrumb": "Новости и пресса",
     "hero": {
-        "eyebrow": "News and press",
-        "title": "News, press and milestones",
-        "intro": "Visits, media coverage and milestones from AZAFCO International, with industry news from named sources. Every item shows its date and source."
+        "eyebrow": "Новости и пресса",
+        "title": "Новости, пресса и вехи",
+        "intro": "Визиты, публикации в СМИ и вехи AZAFCO International, а также отраслевые новости из указанных источников. У каждого материала указаны дата и источник."
     },
-    "illustrative": "Illustrative photo",
-    "source": "Source: {name}",
-    "view_source": "View source",
-    "new_tab": "(opens in a new tab)",
+    "illustrative": "Иллюстративное фото",
+    "source": "Источник: {name}",
+    "view_source": "Открыть источник",
+    "new_tab": "(откроется в новой вкладке)",
     "press": {
-        "eyebrow": "Company news",
-        "title": "Visits and media coverage",
-        "intro": "Official visits to our plant and press and TV coverage of AZAFCO International."
+        "eyebrow": "Новости компании",
+        "title": "Визиты и публикации в СМИ",
+        "intro": "Официальные визиты на наш завод, публикации в прессе и телесюжеты об AZAFCO International."
     },
     "milestones": {
-        "eyebrow": "Our milestones",
-        "title": "From 2008 to today",
-        "list_label": "Company milestones",
+        "eyebrow": "Наши вехи",
+        "title": "С 2008 года до сегодняшнего дня",
+        "list_label": "Вехи компании",
         "items": {
             "founding": {
-                "title": "AZAFCO International is founded",
-                "text": "We were founded in Kafr El Sheikh and began packing and exporting fresh fish."
+                "title": "Основание AZAFCO International",
+                "text": "Мы основали компанию в Кафр-эш-Шейхе и начали упаковывать и экспортировать свежую рыбу."
             },
             "baltim": {
-                "title": "Our first plant, in Baltim",
-                "text": "We opened our first plant in the Baltim Industrial Zone, Kafr El Sheikh."
+                "title": "Первый завод — в Бальтиме",
+                "text": "Мы открыли первый завод в промышленной зоне Бальтим, Кафр-эш-Шейх."
             },
             "motobas": {
-                "title": "Our new plant, in Motobas",
-                "text": "We opened our new plant in the Motobas Industrial Zone, Kafr El Sheikh."
+                "title": "Новый завод — в Мутубасе",
+                "text": "Мы открыли новый завод в промышленной зоне Мутубас, Кафр-эш-Шейх."
             }
         },
         "iso": {
-            "title": "ISO certified",
-            "text": "We hold ISO certificates for quality, environmental, and occupational health and safety management, certified by TÜV AUSTRIA.",
-            "link": "Quality and certificates"
+            "title": "Сертификация ISO",
+            "text": "У нас есть сертификаты ISO в области менеджмента качества, экологического менеджмента, а также охраны труда и здоровья; сертификация TÜV AUSTRIA.",
+            "link": "Качество и сертификаты"
         }
     },
     "industry": {
-        "eyebrow": "Industry context",
-        "title": "Egypt's fish sector in the news",
-        "intro": "Reports on Egyptian fisheries and on Kafr El Sheikh, the governorate where our plant is located.",
-        "note": "Figures in this section come from the named sources, as of the date shown. They are not AZAFCO data."
+        "eyebrow": "Отраслевой контекст",
+        "title": "Рыбная отрасль Египта в новостях",
+        "intro": "Материалы о рыбном хозяйстве Египта и о Кафр-эш-Шейхе — мухафазе, где расположен наш завод.",
+        "note": "Цифры в этом разделе взяты из указанных источников и актуальны на указанную дату. Это не данные AZAFCO."
     },
     "items": {
         "governor_visit": {
-            "title": "Governor of Kafr El Sheikh visits our Motobas plant",
-            "summary": "Maj. Gen. Dr. Alaa Abdel Moaty, Governor of Kafr El Sheikh, toured our plant in the Motobas Industrial Zone as part of the governorate's work to support the fish industry and exports.",
-            "source": "Kafr El Sheikh Governorate"
+            "title": "Губернатор Кафр-эш-Шейха посетил наш завод в Мутубасе",
+            "summary": "Губернатор мухафазы Кафр-эш-Шейх генерал-майор д-р Алаа Абдель Моати осмотрел наш завод в промышленной зоне Мутубас в рамках работы мухафазы по поддержке рыбной отрасли и экспорта.",
+            "source": "Администрация мухафазы Кафр-эш-Шейх"
         },
         "press_feature": {
-            "title": "Feature in Dar Al-Sharq Al-Awsat",
-            "summary": "The newspaper Dar Al-Sharq Al-Awsat published a profile of AZAFCO International and its chairman, covering the company's work in fresh fish exports.",
-            "source": "Dar Al-Sharq Al-Awsat newspaper"
+            "title": "Материал в газете «Дар аш-Шарк аль-Аусат»",
+            "summary": "Газета «Дар аш-Шарк аль-Аусат» опубликовала материал об AZAFCO International и её председателе, посвящённый работе компании в сфере экспорта свежей рыбы.",
+            "source": "Газета «Дар аш-Шарк аль-Аусат»"
         },
         "tv_program": {
-            "title": "“Helwa Ya Baladi” TV episode on AZAFCO International",
-            "summary": "The Misr Al Balad TV programme “Helwa Ya Baladi” aired a special episode on our fresh fish packing and export work.",
-            "source": "Misr Al Balad TV (YouTube)"
+            "title": "Выпуск телепрограммы «Хелва я балади» об AZAFCO International",
+            "summary": "Программа «Хелва я балади» телеканала «Миср аль-Балад» показала специальный выпуск о нашей работе по упаковке и экспорту свежей рыбы.",
+            "source": "Телеканал «Миср аль-Балад» (YouTube)"
         },
         "egypt_ranking": {
-            "title": "Egypt ranks first in Africa in fisheries, says the Agriculture Minister",
-            "summary": "Meeting the Gambian Minister for Fisheries, Egypt's Minister of Agriculture, El-Sayed El-Quseir, said Egypt ranks first in Africa and sixth in the world in fisheries.",
-            "source": "State Information Service (SIS)"
+            "title": "Министр сельского хозяйства: Египет — первый в Африке по рыбному хозяйству",
+            "summary": "На встрече с министром рыболовства Гамбии министр сельского хозяйства Египта Ас-Сайед аль-Кусейр заявил, что Египет занимает первое место в Африке и шестое в мире по рыбному хозяйству.",
+            "source": "Государственная информационная служба (SIS)"
         },
         "kafr_el_sheikh_production": {
-            "title": "Kafr El Sheikh produces about half of Egypt's fish",
-            "summary": "Al-Ahram Gate reported that Kafr El Sheikh produces about 50% of Egypt's fish, around 800,000 tonnes a year, and that aquaculture makes up 70% of the governorate's production.",
-            "source": "Al-Ahram Gate"
+            "title": "Кафр-эш-Шейх производит около половины рыбы Египта",
+            "summary": "Портал Al-Ahram Gate сообщил, что Кафр-эш-Шейх производит около 50% рыбы Египта — порядка 800 000 тонн в год, а на аквакультуру приходится 70% производства мухафазы.",
+            "source": "Портал Al-Ahram Gate"
         },
         "ghalioun_project": {
-            "title": "Ghalioun fish farm opens in Kafr El Sheikh",
-            "summary": "President Abdel Fattah El-Sisi opened the Ghalioun fish industrial city in Kafr El Sheikh: a fish farm of about 4,000 feddans with 1,359 fish and shrimp ponds, hatcheries, and plants for fish processing, feed and ice.",
+            "title": "В Кафр-эш-Шейхе открыто рыбоводное хозяйство «Гальюн»",
+            "summary": "Президент Абдель Фаттах ас-Сиси открыл рыбопромышленный город «Гальюн» в Кафр-эш-Шейхе: рыбоводное хозяйство площадью около 4 000 федданов с 1 359 прудами для рыбы и креветок, рыбопитомниками и предприятиями по переработке рыбы, производству кормов и льда.",
             "source": "Youm7"
         }
     },
     "teaser": {
-        "eyebrow": "News and press",
-        "title": "Latest news",
-        "intro": "Visits, media coverage and milestones, each with its date and source.",
-        "all": "All news and press"
+        "eyebrow": "Новости и пресса",
+        "title": "Последние новости",
+        "intro": "Визиты, публикации в СМИ и вехи — с датой и источником.",
+        "all": "Все новости и публикации"
     }
 }

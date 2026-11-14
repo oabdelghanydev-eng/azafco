@@ -1,24 +1,46 @@
 {
-  "eyebrow": "Our markets",
-  "title": "The Middle East and beyond",
-  "intro": "We ship by air and road to 7+ markets, with Europe next in our plan. Pick a market to see its route.",
-  "since": "since {year}",
-  "mapLabel": "Map of shipping routes from Egypt to our markets",
-  "origin": "Egypt · Motobas",
-  "markets": {
-    "ae": { "name": "United Arab Emirates", "short": "UAE" },
-    "kw": { "name": "Kuwait", "short": "Kuwait" },
-    "bh": { "name": "Bahrain", "short": "Bahrain" },
-    "lb": { "name": "Lebanon", "short": "Lebanon" },
-    "qa": { "name": "Qatar", "short": "Qatar" },
-    "iq": { "name": "Iraq", "short": "Iraq" },
-    "sy": { "name": "Syria", "short": "Syria" }
-  },
-  "plannedTitle": "Planned",
-  "planned": {
-    "eu": "Europe",
-    "ru": "Russia",
-    "us": "United States"
-  },
-  "paused": "Spain: exports paused"
+    "eyebrow": "Nuestros mercados",
+    "title": "Oriente Medio y más allá",
+    "intro": "Enviamos por aire y carretera a más de 7 mercados, con Europa como siguiente paso de nuestro plan. Elija un mercado para ver su ruta.",
+    "since": "desde {year}",
+    "mapLabel": "Mapa de rutas de envío desde Egipto a nuestros mercados",
+    "origin": "Egipto · Motobas",
+    "markets": {
+        "ae": {
+            "name": "Emiratos Árabes Unidos",
+            "short": "EAU"
+        },
+        "kw": {
+            "name": "Kuwait",
+            "short": "Kuwait"
+        },
+        "bh": {
+            "name": "Baréin",
+            "short": "Baréin"
+        },
+        "lb": {
+            "name": "Líbano",
+            "short": "Líbano"
+        },
+        "qa": {
+            "name": "Catar",
+            "short": "Catar"
+        },
+        "iq": {
+            "name": "Irak",
+            "short": "Irak"
+        },
+        "sy": {
+            "name": "Siria",
+            "short": "Siria"
+        }
+    },
+    "plannedTitle": "Previstos",
+    "planned": {
+        "eu": "Europa",
+        "ru": "Rusia",
+        "us": "Estados Unidos"
+    },
+    "paused": "España: exportaciones en pausa",
+    "pageLink": "Ver todos los mercados"
 }

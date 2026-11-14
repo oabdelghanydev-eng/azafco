@@ -1,17 +1,17 @@
 {
     "meta": {
-        "title": "AZAFCO International | Egyptian Fish Production & Export",
-        "description": "AZAFCO International farms, sources, packs and exports fresh Egyptian fish for importers and distributors across the Middle East and beyond."
+        "title": "AZAFCO International | Pescado egipcio para exportación",
+        "description": "AZAFCO International cría, compra, envasa y exporta pescado fresco egipcio para importadores y distribuidores de Oriente Medio y más allá."
     },
     "news": {
-        "eyebrow": "News",
-        "title": "In the news",
-        "intro": "The Governor of Kafr El Sheikh at our Motobas plant, and a TV episode on our fresh fish packing and export work.",
+        "eyebrow": "Noticias",
+        "title": "En los medios",
+        "intro": "El gobernador de Kafr el-Sheikh en nuestra planta de Motobas y un programa de televisión sobre nuestro trabajo de envasado y exportación de pescado fresco.",
         "links": {
-            "governor_visit": "Watch on Facebook",
-            "tv_program": "Watch on YouTube"
+            "governor_visit": "Ver en Facebook",
+            "tv_program": "Ver en YouTube"
         },
-        "all": "All news and press",
-        "new_tab": "(opens in a new tab)"
+        "all": "Todas las noticias y la prensa",
+        "new_tab": "(se abre en una pestaña nueva)"
     }
 }

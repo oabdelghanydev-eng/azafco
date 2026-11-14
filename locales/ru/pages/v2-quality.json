@@ -1,91 +1,91 @@
 {
     "meta": {
-        "title": "Quality control and ISO certificates",
-        "description": "Our management systems hold ISO 9001, ISO 14001 and ISO 45001 certificates from TÜV AUSTRIA, and each order is checked against the agreed specification."
+        "title": "Контроль качества и сертификаты ISO",
+        "description": "Наши системы менеджмента сертифицированы TÜV AUSTRIA по ISO 9001, ISO 14001 и ISO 45001, а каждый заказ проверяется по согласованной спецификации."
     },
     "breadcrumbs": {
-        "label": "Breadcrumb",
-        "home": "Home",
-        "current": "Quality"
+        "label": "Навигационная цепочка",
+        "home": "Главная",
+        "current": "Качество"
     },
     "hero": {
-        "kicker": "Quality",
-        "title": "Quality checked against your specification",
-        "intro": "We hold three ISO certificates for our management systems. Every order is checked against the specification agreed with you before the boxes are closed.",
-        "imageAlt": "Whole fresh fish on crushed ice seen from above",
-        "primary": "Start a partnership",
-        "secondary": "See our value chain"
+        "kicker": "Качество",
+        "title": "Качество, проверенное по Вашей спецификации",
+        "intro": "У нас три сертификата ISO на системы менеджмента. Каждый заказ проверяется на соответствие согласованной с Вами спецификации до закрытия ящиков.",
+        "imageAlt": "Целая свежая рыба на колотом льду, вид сверху",
+        "primary": "Начать партнёрство",
+        "secondary": "Наша производственная цепочка"
     },
     "certs": {
-        "eyebrow": "ISO certificates",
-        "title": "We hold three ISO certificates",
-        "intro": "Our management systems are certified by TÜV AUSTRIA.",
+        "eyebrow": "Сертификаты ISO",
+        "title": "У нас три сертификата ISO",
+        "intro": "Наши системы менеджмента сертифицированы TÜV AUSTRIA.",
         "items": {
             "iso9001": {
-                "name": "Quality management",
-                "covers": "How we plan, run and review our work to meet customer requirements."
+                "name": "Менеджмент качества",
+                "covers": "Как мы планируем, выполняем и анализируем работу, чтобы соответствовать требованиям клиентов."
             },
             "iso14001": {
-                "name": "Environmental management",
-                "covers": "How we manage the environmental impact of our operations."
+                "name": "Экологический менеджмент",
+                "covers": "Как мы управляем воздействием нашей деятельности на окружающую среду."
             },
             "iso45001": {
-                "name": "Occupational health and safety",
-                "covers": "How we protect the health and safety of the people who work with us."
+                "name": "Охрана труда и здоровья",
+                "covers": "Как мы защищаем здоровье и безопасность людей, которые работают с нами."
             }
         }
     },
     "practice": {
-        "eyebrow": "In practice",
-        "title": "How we check quality on every order",
-        "intro": "These are our working steps for each order. They follow the value chain that AZAFCO runs from the pond to the pallet.",
-        "stepLabel": "Step {n}",
+        "eyebrow": "На практике",
+        "title": "Как мы проверяем качество каждого заказа",
+        "intro": "Это наши рабочие шаги для каждого заказа. Они повторяют производственную цепочку, которую AZAFCO ведёт от пруда до паллеты.",
+        "stepLabel": "Шаг {n}",
         "steps": {
             "spec": {
-                "title": "Agreed specification",
-                "text": "We agree the species, weight grade, packing and labels with you before the order."
+                "title": "Согласованная спецификация",
+                "text": "Мы согласуем с Вами вид рыбы, весовую категорию, упаковку и маркировку до заказа."
             },
             "packing": {
-                "title": "Washing, grading and packing",
-                "text": "Washed, iced, graded by weight and packed whole on ice."
+                "title": "Мойка, калибровка и упаковка",
+                "text": "Мойка, пересыпка льдом, калибровка по весу и упаковка целой рыбы на льду."
             },
             "final": {
-                "title": "Final check",
-                "text": "Checked against the agreed specification before the boxes are closed."
+                "title": "Финальная проверка",
+                "text": "Проверка на соответствие согласованной спецификации до закрытия ящиков."
             },
             "cold": {
-                "title": "Cold chain",
-                "text": "Our own cold stores and refrigerated trucks, then air or road freight."
+                "title": "Холодовая цепь",
+                "text": "Собственные холодильные склады и авторефрижераторы, затем авиа- или автоперевозка."
             }
         },
-        "link": "See the full value chain"
+        "link": "Вся производственная цепочка"
     },
     "faq": {
-        "eyebrow": "Questions from buyers",
-        "title": "Questions from procurement and quality teams",
-        "q1": "Which ISO certificates do you hold?",
-        "a1": "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management and ISO 45001:2018 for occupational health and safety.",
-        "q2": "How do you check that an order matches our specification?",
-        "a2": "We agree the species, weight grade, packing and labels with you before the order. The fish are washed, iced, graded by weight and packed whole on ice, then checked against the agreed specification before the boxes are closed.",
-        "q3": "How do you keep the fish cold until shipment?",
-        "a3": "The fish are washed, iced and packed whole on ice. We run our own cold stores and refrigerated trucks, then ship by air or road freight. We confirm the temperature requirements for your product when we agree the order.",
-        "q4": "Can you meet our market's labelling or import requirements?",
-        "a4": "Requirements differ by country. Tell us yours, and we review them for each product and market before we confirm supply.",
-        "q5": "What traceability information comes with an order?",
-        "a5": "Tell us what your market or customer requires. We confirm which lot and shipment details we can provide before you order.",
-        "q6": "How do we start?",
-        "a6": "For fast deals, message our management directly on WhatsApp at <wa>+20 100 773 6419</wa>. For details and documents, email our export team at <mail>business@azafco.com.eg</mail>."
+        "eyebrow": "Вопросы покупателей",
+        "title": "Вопросы отделов закупок и контроля качества",
+        "q1": "Какие сертификаты ISO у вас есть?",
+        "a1": "У нас есть ISO 9001:2015 (менеджмент качества), ISO 14001:2015 (экологический менеджмент) и ISO 45001:2018 (охрана труда и здоровья).",
+        "q2": "Как вы проверяете, что заказ соответствует нашей спецификации?",
+        "a2": "Мы согласуем с Вами вид рыбы, весовую категорию, упаковку и маркировку до заказа. Рыбу моют, пересыпают льдом, калибруют по весу и упаковывают целой на льду, а затем проверяют на соответствие согласованной спецификации до закрытия ящиков.",
+        "q3": "Как вы сохраняете рыбу охлаждённой до отгрузки?",
+        "a3": "Рыбу моют, пересыпают льдом и упаковывают целой на льду. У нас собственные холодильные склады и авторефрижераторы, после чего рыба отправляется авиа- или автотранспортом. Температурные требования к Вашему продукту мы подтверждаем при согласовании заказа.",
+        "q4": "Можете ли вы выполнить требования нашего рынка к маркировке или импорту?",
+        "a4": "Требования отличаются в разных странах. Сообщите нам свои, и мы рассмотрим их для каждого продукта и рынка, прежде чем подтвердить поставку.",
+        "q5": "Какая информация о прослеживаемости прилагается к заказу?",
+        "a5": "Сообщите нам, что требует Ваш рынок или клиент. Какие данные о партии и отгрузке мы можем предоставить, мы подтвердим до оформления заказа.",
+        "q6": "С чего начать?",
+        "a6": "Для быстрых сделок пишите напрямую руководству в WhatsApp: <wa>+20 100 773 6419</wa>. По вопросам деталей и документов пишите в отдел экспорта: <mail>business@azafco.com.eg</mail>."
     },
     "closing": {
-        "eyebrow": "Next step",
-        "title": "Share your specification",
-        "text": "Tell us the species, weight grade, packing and destination, and any requirements of your market. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
-        "primary": "Start a partnership",
-        "secondary": "Send your requirements"
+        "eyebrow": "Следующий шаг",
+        "title": "Пришлите Вашу спецификацию",
+        "text": "Укажите вид рыбы, весовую категорию, упаковку и пункт назначения, а также требования Вашего рынка. Отдел экспорта рассмотрит возможности поставки и коммерческие условия. Отправка требований не обязывает Вас размещать заказ.",
+        "primary": "Начать партнёрство",
+        "secondary": "Отправить требования"
     },
     "pending": {
-        "traceability": "Lot and batch data that can be supplied with each shipment",
-        "market_approvals": "Market approvals (e.g. EU listing) once granted"
+        "traceability": "Данные о лоте и партии, которые можно предоставлять с каждой отгрузкой",
+        "market_approvals": "Допуски рынков (например, включение в список ЕС) — после их получения"
     },
-    "newTab": "(opens in a new tab)"
+    "newTab": "(откроется в новой вкладке)"
 }

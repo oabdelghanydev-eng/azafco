@@ -1,85 +1,85 @@
 {
     "meta": {
-        "title": "Fish farming, sourcing and export from Egypt",
-        "description": "We farm and source fresh fish in Egypt, then grade, pack and export it for importers, distributors and foodservice buyers in the Middle East and beyond."
+        "title": "Fischzucht, Zukauf und Export aus Ägypten",
+        "description": "Frischfisch aus Ägypten, selbst gezüchtet und zugekauft, sortiert, verpackt und exportiert für Importeure, Händler und Gastronomie in Nahost und darüber hinaus."
     },
-    "breadcrumb": "Seafood and aquaculture",
+    "breadcrumb": "Fisch und Aquakultur",
     "hero": {
-        "eyebrow": "Seafood and aquaculture",
-        "title": "From the pond to the pallet",
-        "intro": "We farm and source fish, then inspect, wash, ice, grade, pack and export it, with our own refrigerated trucks, logistics and cold stores.",
-        "primary": "View our fish",
-        "secondary": "Processing and packing"
+        "eyebrow": "Fisch und Aquakultur",
+        "title": "Ägyptischer Fisch aus eigener Zucht und Zukauf für Importeure",
+        "intro": "Wir züchten und beziehen Fisch und prüfen, waschen, beeisen, sortieren, verpacken und exportieren ihn, mit eigenen Kühl-Lkw, eigener Logistik und eigenen Kühlhäusern.",
+        "primary": "Unsere Fischarten ansehen",
+        "secondary": "Verarbeitung und Verpackung"
     },
     "chain": {
-        "eyebrow": "Value chain",
-        "title": "Every stage is handled by AZAFCO",
-        "intro": "Fish we farm and fish we buy from other producers follow the same path, and the specification agreed with you guides every stage.",
-        "farm_title": "Farming and sourcing",
-        "farm_text": "We farm fish and buy from other producers, matched to the species, quantities and timing you need.",
-        "harvest_title": "Harvest",
-        "harvest_text": "Fish are harvested and brought to our plant in Motobas, Kafr El Sheikh.",
-        "pack_title": "Washing, icing and packing",
-        "pack_text": "Fish are washed, iced, graded by weight per piece and packed on ice.",
-        "inspect_title": "Inspection",
-        "inspect_text": "Checked against the agreed specification before the boxes are closed.",
+        "eyebrow": "Wertschöpfungskette",
+        "title": "Eigene Zucht und Zukauf, ein Weg",
+        "intro": "Fisch aus eigener Zucht und Fisch, den wir von anderen Erzeugern kaufen, durchlaufen denselben Weg, und die mit Ihnen vereinbarte Spezifikation bestimmt jede Stufe.",
+        "farm_title": "Zucht und Zukauf",
+        "farm_text": "Wir züchten Fisch und kaufen bei anderen Erzeugern zu, abgestimmt auf die Fischarten, Mengen und Termine, die Sie benötigen.",
+        "harvest_title": "Abfischen",
+        "harvest_text": "Der Fisch wird abgefischt und in unser Werk in Motobas, Kafr el-Sheikh, gebracht.",
+        "pack_title": "Waschen, Beeisen und Verpacken",
+        "pack_text": "Der Fisch wird gewaschen, beeist, nach Stückgewicht sortiert und auf Eis verpackt.",
+        "inspect_title": "Kontrolle",
+        "inspect_text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft.",
         "export_title": "Export",
-        "export_text": "Our own refrigerated trucks, then air or road freight."
+        "export_text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht."
     },
     "species": {
-        "eyebrow": "Our fish",
-        "title": "12 main species",
-        "intro": "Open a species for its specification card, or search the full list.",
-        "more_species": "These are our main, most-requested species; we supply other species on request.",
-        "view_all": "View all species"
+        "eyebrow": "Unser Fisch",
+        "title": "12 Hauptarten",
+        "intro": "Öffnen Sie eine Fischart, um ihre Spezifikationskarte zu sehen, oder durchsuchen Sie die vollständige Liste.",
+        "more_species": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage.",
+        "view_all": "Alle Fischarten ansehen"
     },
     "farm": {
-        "eyebrow": "Farming and sourcing",
-        "title": "Supply that starts at the source",
-        "text_1": "We farm fish and buy from other producers, so we can match each buyer's species, quantities and timing. Tell us your volume and delivery window, and we plan supply with you."
+        "eyebrow": "Zucht und Zukauf",
+        "title": "Versorgung, die an der Quelle beginnt",
+        "text_1": "Wir züchten Fisch und kaufen bei anderen Erzeugern zu, damit wir Fischarten, Mengen und Termine jedes Einkäufers abdecken können. Nennen Sie uns Ihr Volumen und Ihr Lieferfenster, und wir planen die Versorgung gemeinsam mit Ihnen."
     },
     "processing": {
-        "eyebrow": "Processing",
-        "title": "Prepared to the agreed specification",
-        "text": "We inspect, wash, ice, grade and pack every order to the specification agreed with you.",
-        "point_1": "Graded by weight per piece, to the range in your order",
-        "point_2": "Packing, net weight and labels as confirmed in writing",
-        "point_3": "Checked against the agreed specification before the boxes are closed",
-        "link": "See processing and packing"
+        "eyebrow": "Verarbeitung",
+        "title": "Nach vereinbarter Spezifikation vorbereitet",
+        "text": "Wir prüfen, waschen, beeisen, sortieren und verpacken jeden Auftrag nach der mit Ihnen vereinbarten Spezifikation.",
+        "point_1": "Nach Stückgewicht sortiert, im Gewichtsbereich Ihres Auftrags",
+        "point_2": "Verpackung, Nettogewicht und Etiketten wie schriftlich bestätigt",
+        "point_3": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft",
+        "link": "Verarbeitung und Verpackung ansehen"
     },
     "requirements": {
-        "eyebrow": "Your requirements",
-        "title": "Start with the specification",
-        "intro": "Tell us the species, weight grade, product form, packing, volume and destination. The export team reviews what we can supply and contacts you.",
-        "format_title": "Product form",
-        "format_text": "Our fish are sold whole and fresh chilled. Ask the export team about any other form you need.",
-        "grade_title": "Weight grade",
-        "grade_text": "The weight range per piece your market needs.",
-        "weight_title": "Net weight",
-        "weight_text": "Net weight per box.",
-        "packing_title": "Packing",
-        "packing_text": "Box type, labels and label language.",
-        "destination_title": "Destination",
-        "destination_text": "Country, city, delivery terms and required documents."
+        "eyebrow": "Ihre Anforderungen",
+        "title": "Beginnen Sie mit der Spezifikation",
+        "intro": "Nennen Sie uns Fischart, Gewichtsklasse, Produktform, Verpackung, Menge und Zielort. Das Exportteam prüft, was wir liefern können, und meldet sich bei Ihnen.",
+        "format_title": "Produktform",
+        "format_text": "Unser Fisch wird ganz und frisch gekühlt verkauft. Fragen Sie das Exportteam nach jeder anderen Form, die Sie benötigen.",
+        "grade_title": "Gewichtsklasse",
+        "grade_text": "Der Gewichtsbereich pro Stück, den Ihr Markt braucht.",
+        "weight_title": "Nettogewicht",
+        "weight_text": "Nettogewicht pro Box.",
+        "packing_title": "Verpackung",
+        "packing_text": "Boxtyp, Etiketten und Etikettensprache.",
+        "destination_title": "Zielort",
+        "destination_text": "Land, Stadt, Lieferbedingungen und erforderliche Dokumente."
     },
     "quality": {
-        "eyebrow": "Quality",
-        "title": "Certified, and checked on every order",
-        "text": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates, certified by TÜV AUSTRIA. Every order is checked against the agreed specification before the boxes are closed.",
-        "link": "Quality and certificates",
-        "docs_email": "Email the export team about documents",
-        "docs_subject": "Quality documents for our market"
+        "eyebrow": "Qualität",
+        "title": "Zertifiziert und bei jedem Auftrag geprüft",
+        "text": "Wir verfügen über die Zertifikate ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018, zertifiziert durch TÜV AUSTRIA. Jeder Auftrag wird vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft.",
+        "link": "Qualität und Zertifikate",
+        "docs_email": "E-Mail an das Exportteam zu Dokumenten",
+        "docs_subject": "Qualitätsdokumente für unseren Markt"
     },
     "audience": {
-        "eyebrow": "Who this is for",
-        "title": "Built for commercial buyers",
-        "importers": "Fish importers",
-        "distributors": "Wholesale and distribution companies",
-        "foodservice": "Foodservice and catering suppliers",
-        "horeca": "Hotel and restaurant groups",
-        "partners": "Companies looking for a long-term supply partner"
+        "eyebrow": "Für wen",
+        "title": "Für gewerbliche Einkäufer",
+        "importers": "Fischimporteure",
+        "distributors": "Großhandels- und Vertriebsunternehmen",
+        "foodservice": "Zulieferer für Gastronomie und Catering",
+        "horeca": "Hotel- und Restaurantgruppen",
+        "partners": "Unternehmen, die einen langfristigen Lieferpartner suchen"
     },
     "pending": {
-        "farm": "Fish farm photos + verified farm areas, species and production figures"
+        "farm": "Fotos der Fischfarmen + geprüfte Farmflächen, Arten und Produktionszahlen"
     }
 }

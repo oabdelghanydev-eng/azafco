@@ -40,11 +40,6 @@ const nextConfig = {
   // (owner species list, 7 Nov 2026); see docs/reports/species-identification.md
   async redirects() {
     return [
-      // Site v2: es/ru/de/fr have no translated v2 copy yet. Send them to the English
-      // page (temporary, 307) so 4 copies of the English site are never indexed.
-      // Remove once a locale is translated (and add it to publishedLocales in i18n.ts).
-      { source: '/:locale(es|ru|de|fr)', destination: '/en', permanent: false },
-      { source: '/:locale(es|ru|de|fr)/:path*', destination: '/en/:path*', permanent: false },
       {
         source: '/:locale(ar|en|es|ru|de|fr)/products/buni',
         destination: '/:locale/products/grass-carp',

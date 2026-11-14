@@ -1,54 +1,54 @@
 {
-    "groupLabel": "Hero messages",
-    "statsLabel": "Key figures",
+    "groupLabel": "Kernaussagen",
+    "statsLabel": "Kennzahlen",
     "slides": [
         {
-            "label": "From Egyptian production to global partnerships",
-            "kicker": "Fresh fish exporter since 2008",
-            "title": "Fresh Egyptian fish for importers across the Middle East and beyond",
-            "text": "We farm and source 12 main fish species, then grade, pack and export them whole and fresh chilled on ice.",
-            "alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+            "label": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
+            "kicker": "Exporteur von frischem Fisch seit 2008",
+            "title": "Frischer Fisch aus Ägypten für Importeure im Nahen Osten und darüber hinaus",
+            "text": "Wir züchten und beziehen 12 Hauptfischarten und exportieren sie sortiert und verpackt, ganz und frisch gekühlt auf Eis.",
+            "alt": "Ganze frische Doraden, Wolfsbarsche und Tilapia auf Scherbeneis in kühlem Licht"
         },
         {
-            "label": "From the pond to the pallet",
-            "kicker": "Value chain",
-            "title": "We handle every stage, from the pond to the pallet",
-            "text": "We grade, pack and dispatch from our plant in Motobas, Kafr El Sheikh, with our own refrigerated trucks and cold stores.",
-            "alt": "Aerial view of earthen fish ponds with aerators and palms"
+            "label": "Vom Teich bis zur Palette",
+            "kicker": "Wertschöpfungskette",
+            "title": "Wir übernehmen jede Stufe, vom Teich bis zur Palette",
+            "text": "Wir sortieren, verpacken und versenden aus unserem Werk in Motobas, Kafr el-Sheikh, mit eigenen Kühl-Lkw und Kühlhäusern.",
+            "alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
         },
         {
-            "label": "12 main species, graded by weight",
-            "kicker": "Our fish",
-            "title": "12 main fish species, graded by weight",
-            "text": "From tilapia to sea bass and sea bream, sold whole and fresh chilled.",
-            "alt": "Whole fresh fish on crushed ice seen from above"
+            "label": "12 Hauptarten, nach Gewicht sortiert",
+            "kicker": "Unser Fisch",
+            "title": "12 Hauptfischarten, nach Gewicht sortiert",
+            "text": "Von Tilapia bis Wolfsbarsch und Dorade, ganz und frisch gekühlt.",
+            "alt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen"
         },
         {
-            "label": "7+ markets by air and road",
-            "kicker": "Our markets",
-            "title": "The Middle East and beyond, by air and road",
-            "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon, with Europe next in our plan.",
-            "alt": "Refrigerated truck loading insulated boxes at a dock at dawn"
+            "label": "7+ Märkte per Luft und Straße",
+            "kicker": "Unsere Märkte",
+            "title": "Der Nahe Osten und darüber hinaus, per Luft und Straße",
+            "text": "Kuwait, die VAE, Katar, der Irak, Syrien, Bahrain und der Libanon; als Nächstes ist Europa geplant.",
+            "alt": "Kühl-Lkw wird im Morgengrauen an einer Laderampe mit Isolierboxen beladen"
         }
     ],
-    "ctaPartner": "Start a partnership",
-    "ctaFish": "See our fish",
+    "ctaPartner": "Partnerschaft starten",
+    "ctaFish": "Fischarten ansehen",
     "stats": [
         {
             "value": "12",
-            "label": "main fish species"
+            "label": "Hauptfischarten"
         },
         {
             "value": "7+",
-            "label": "export markets"
+            "label": "Exportmärkte"
         },
         {
             "value": "3",
-            "label": "ISO certificates"
+            "label": "ISO-Zertifikate"
         },
         {
-            "value": "2,500",
-            "label": "t/month packing capacity"
+            "value": "2.500",
+            "label": "t/Monat Packkapazität"
         }
     ]
 }

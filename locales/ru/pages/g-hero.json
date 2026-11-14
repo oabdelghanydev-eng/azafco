@@ -1,54 +1,54 @@
 {
-    "groupLabel": "Hero messages",
-    "statsLabel": "Key figures",
+    "groupLabel": "Главные сообщения",
+    "statsLabel": "Ключевые показатели",
     "slides": [
         {
-            "label": "From Egyptian production to global partnerships",
-            "kicker": "Fresh fish exporter since 2008",
-            "title": "Fresh Egyptian fish for importers across the Middle East and beyond",
-            "text": "We farm and source 12 main fish species, then grade, pack and export them whole and fresh chilled on ice.",
-            "alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+            "label": "От производства в Египте до партнёрства по всему миру",
+            "kicker": "Экспортёр свежей рыбы с 2008 года",
+            "title": "Свежая египетская рыба для импортёров на Ближнем Востоке и не только",
+            "text": "Мы выращиваем и закупаем 12 основных видов рыбы, а затем сортируем, упаковываем и экспортируем их целыми, в свежем охлаждённом виде на льду.",
+            "alt": "Целые свежие дорада, лаврак и тилапия на колотом льду в холодном свете"
         },
         {
-            "label": "From the pond to the pallet",
-            "kicker": "Value chain",
-            "title": "We handle every stage, from the pond to the pallet",
-            "text": "We grade, pack and dispatch from our plant in Motobas, Kafr El Sheikh, with our own refrigerated trucks and cold stores.",
-            "alt": "Aerial view of earthen fish ponds with aerators and palms"
+            "label": "От пруда до паллеты",
+            "kicker": "Производственная цепочка",
+            "title": "Мы отвечаем за каждый этап — от пруда до паллеты",
+            "text": "Мы сортируем, упаковываем и отгружаем рыбу с нашего завода в Мутубасе (Кафр-эш-Шейх), используя собственные авторефрижераторы и холодильные склады.",
+            "alt": "Вид сверху на земляные рыбоводные пруды с аэраторами и пальмами"
         },
         {
-            "label": "12 main species, graded by weight",
-            "kicker": "Our fish",
-            "title": "12 main fish species, graded by weight",
-            "text": "From tilapia to sea bass and sea bream, sold whole and fresh chilled.",
-            "alt": "Whole fresh fish on crushed ice seen from above"
+            "label": "12 основных видов, калибровка по весу",
+            "kicker": "Наша рыба",
+            "title": "12 основных видов рыбы с калибровкой по весу",
+            "text": "От тилапии до лаврака и дорады — целая рыба в свежем охлаждённом виде.",
+            "alt": "Целая свежая рыба на колотом льду, вид сверху"
         },
         {
-            "label": "7+ markets by air and road",
-            "kicker": "Our markets",
-            "title": "The Middle East and beyond, by air and road",
-            "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon, with Europe next in our plan.",
-            "alt": "Refrigerated truck loading insulated boxes at a dock at dawn"
+            "label": "7+ рынков, авиа- и автодоставка",
+            "kicker": "Наши рынки",
+            "title": "Ближний Восток и не только — авиа- и автодоставка",
+            "text": "Кувейт, ОАЭ, Катар, Ирак, Сирия, Бахрейн и Ливан, а следующая в наших планах — Европа.",
+            "alt": "Погрузка изотермических ящиков в авторефрижератор у рампы на рассвете"
         }
     ],
-    "ctaPartner": "Start a partnership",
-    "ctaFish": "See our fish",
+    "ctaPartner": "Начать партнёрство",
+    "ctaFish": "Смотреть ассортимент",
     "stats": [
         {
             "value": "12",
-            "label": "main fish species"
+            "label": "основных видов рыбы"
         },
         {
             "value": "7+",
-            "label": "export markets"
+            "label": "экспортных рынков"
         },
         {
             "value": "3",
-            "label": "ISO certificates"
+            "label": "сертификата ISO"
         },
         {
-            "value": "2,500",
-            "label": "t/month packing capacity"
+            "value": "2 500",
+            "label": "т/мес. упаковочной мощности"
         }
     ]
 }

@@ -8,11 +8,11 @@ export const locales = ['ar', 'en', 'es', 'ru', 'de', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 
 /**
- * Locales with real (translated) site v2 copy. Only these appear in the language
- * switcher, hreflang alternates and the sitemap. es/ru/de/fr still route, but
- * next.config.js redirects them (307) to the English page until translated.
+ * Locales that are live: language switcher, hreflang alternates, sitemap and
+ * middleware detection. A new language is added to `locales` with its
+ * locales/<code>/ folder first, and listed here once its translation is complete.
  */
-export const publishedLocales = ['ar', 'en'] as const satisfies readonly Locale[];
+export const publishedLocales = ['ar', 'en', 'es', 'ru', 'de', 'fr'] as const satisfies readonly Locale[];
 export type PublishedLocale = (typeof publishedLocales)[number];
 export const isPublishedLocale = (l: string): l is PublishedLocale =>
     (publishedLocales as readonly string[]).includes(l);

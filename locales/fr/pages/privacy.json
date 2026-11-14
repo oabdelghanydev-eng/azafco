@@ -1,72 +1,72 @@
 {
     "meta": {
-        "title": "Privacy policy",
-        "description": "How AZAFCO International uses the details you send us and the data from Google Analytics, Vercel Web Analytics, Microsoft Clarity and Google Maps."
+        "title": "Politique de confidentialité",
+        "description": "Comment AZAFCO International utilise les données que vous nous envoyez et celles de Google Analytics, Vercel Web Analytics, Microsoft Clarity et Google Maps."
     },
-    "breadcrumb": "Privacy policy",
-    "eyebrow": "Legal",
-    "title": "Privacy policy",
-    "intro": "What information we receive when you visit this website or contact us, why we use it and what you can ask us to do.",
-    "last_updated": "Last updated: {date}",
-    "toc": "On this page",
+    "breadcrumb": "Politique de confidentialité",
+    "eyebrow": "Informations légales",
+    "title": "Politique de confidentialité",
+    "intro": "Les informations que nous recevons lorsque vous visitez ce site ou nous contactez, la raison pour laquelle nous les utilisons et ce que vous pouvez nous demander de faire.",
+    "last_updated": "Dernière mise à jour : {date}",
+    "toc": "Sur cette page",
     "sections": {
         "who": {
-            "title": "Who we are",
-            "text": "This website is run by {legalName} (AZAFCO International), an Egyptian company, commercial register no. {register}. Main office: {address}."
+            "title": "Qui sommes-nous",
+            "text": "Ce site est exploité par {legalName} (AZAFCO International), société égyptienne immatriculée au registre du commerce sous le n° {register}. Bureau principal : {address}."
         },
         "contact": {
-            "title": "When you contact us",
-            "text": "If you email us, message us on WhatsApp or call us, we receive the details you choose to share: usually your name, company, job title, email address, phone number, country and your requirements.",
+            "title": "Lorsque vous nous contactez",
+            "text": "Si vous nous écrivez par e-mail, nous envoyez un message WhatsApp ou nous appelez, nous recevons les informations que vous choisissez de communiquer : généralement votre nom, votre société, votre fonction, votre adresse e-mail, votre numéro de téléphone, votre pays et vos besoins.",
             "items": [
-                "This website has no enquiry form. It can prepare an email or WhatsApp message for you, and nothing is sent until you send it yourself from your own email app or WhatsApp.",
-                "We use these details to answer your enquiry, to handle any order that follows and to keep a record of our business correspondence.",
-                "WhatsApp messages are handled by WhatsApp (Meta) under its own terms and privacy policy."
+                "Ce site ne comporte pas de formulaire de demande. Il peut préparer pour vous un e-mail ou un message WhatsApp, et rien n’est envoyé tant que vous ne l’envoyez pas vous-même depuis votre messagerie ou WhatsApp.",
+                "Nous utilisons ces informations pour répondre à votre demande, traiter toute commande qui en découle et conserver une trace de notre correspondance commerciale.",
+                "Les messages WhatsApp sont traités par WhatsApp (Meta) selon ses propres conditions et sa propre politique de confidentialité."
             ]
         },
         "analytics": {
-            "title": "Analytics",
-            "text": "We use these tools to understand how the site is used, for example which pages are visited and which contact buttons are clicked, and to improve the site.",
+            "title": "Mesure d’audience",
+            "text": "Nous utilisons ces outils pour comprendre comment le site est utilisé, par exemple quelles pages sont consultées et sur quels boutons de contact les visiteurs cliquent, et pour améliorer le site.",
             "items": [
                 {
                     "name": "Google Analytics 4 (Google)",
-                    "text": "Sets cookies to recognise a returning browser. Records the pages you view, clicks on the email, WhatsApp and phone buttons, your approximate location, device and browser and the site that referred you."
+                    "text": "Dépose des cookies pour reconnaître un navigateur qui revient sur le site. Enregistre les pages que vous consultez, les clics sur les boutons e-mail, WhatsApp et téléphone, votre localisation approximative, votre appareil et votre navigateur, ainsi que le site qui vous a dirigé vers nous."
                 },
                 {
                     "name": "Vercel Web Analytics (Vercel)",
-                    "text": "Counts page views and visits without using cookies."
+                    "text": "Compte les pages vues et les visites sans utiliser de cookies."
                 },
                 {
                     "name": "Microsoft Clarity (Microsoft)",
-                    "text": "Records how pages are used, such as clicks, scrolling and mouse movement, and shows them to us as heatmaps and session replays. It uses cookies."
+                    "text": "Enregistre la façon dont les pages sont utilisées (clics, défilement, mouvements de la souris) et nous la présente sous forme de cartes de chaleur et de rediffusions de sessions. Utilise des cookies."
                 }
             ],
-            "note": "These providers may process data on servers outside your country."
+            "note": "Ces prestataires peuvent traiter des données sur des serveurs situés hors de votre pays."
         },
         "hosting": {
-            "title": "Hosting",
-            "text": "The website is hosted by Vercel. Like any web server, it processes your IP address and basic request data to deliver the pages."
+            "title": "Hébergement",
+            "text": "Le site est hébergé par Vercel. Comme tout serveur web, il traite votre adresse IP et les données de base de la requête pour afficher les pages."
         },
         "maps": {
-            "title": "Maps and links to other services",
-            "text": "The contact page shows maps from Google Maps. When a map loads, Google receives your IP address and may set cookies under its own policy. Links to WhatsApp and Google Maps open those services, and their own privacy policies apply."
+            "title": "Cartes et liens vers d’autres services",
+            "text": "La page de contact affiche des cartes Google Maps. Lorsqu’une carte se charge, Google reçoit votre adresse IP et peut déposer des cookies selon sa propre politique. Les liens vers WhatsApp et Google Maps ouvrent ces services, et leurs propres politiques de confidentialité s’appliquent."
         },
         "cookies": {
             "title": "Cookies",
-            "text": "The site sets one cookie of its own (NEXT_LOCALE) to remember your language. Google Analytics, Microsoft Clarity and Google Maps may set their own cookies. You can block or delete cookies in your browser settings; the site still works without them."
+            "text": "Le site dépose un seul cookie qui lui est propre (NEXT_LOCALE) pour mémoriser votre langue. Google Analytics, Microsoft Clarity et Google Maps peuvent déposer leurs propres cookies. Vous pouvez bloquer ou supprimer les cookies dans les paramètres de votre navigateur ; le site fonctionne aussi sans eux."
         },
         "sharing": {
-            "title": "Sharing",
-            "text": "We do not sell your personal data or share it with third parties for their marketing. The providers named on this page process data to run the services described here."
+            "title": "Partage",
+            "text": "Nous ne vendons pas vos données personnelles et ne les partageons pas avec des tiers pour leur propre marketing. Les prestataires cités sur cette page traitent des données pour faire fonctionner les services décrits ici."
         },
         "rights": {
-            "title": "Your choices",
-            "text": "You can ask us what personal details we hold about you, and ask us to correct or delete them. Write to <mail>{email}</mail>."
+            "title": "Vos choix",
+            "text": "Vous pouvez nous demander quelles données personnelles nous détenons à votre sujet, et nous demander de les corriger ou de les supprimer. Écrivez à <mail>{email}</mail>."
         },
         "changes": {
-            "title": "Changes to this policy",
-            "text": "We update this page when the way we use data changes. The date at the top shows the last update."
+            "title": "Modifications de cette politique",
+            "text": "Nous mettons à jour cette page lorsque notre utilisation des données change. La date indiquée en haut correspond à la dernière mise à jour."
         }
     },
-    "contact_title": "Questions about this policy",
-    "contact_text": "Email us at <mail>{email}</mail>."
+    "contact_title": "Questions sur cette politique",
+    "contact_text": "Écrivez-nous à <mail>{email}</mail>."
 }

@@ -1,19 +1,19 @@
 {
     "logo_alt": "AZAFCO International",
-    "home_label": "AZAFCO International home page",
-    "nav_label": "Main",
+    "home_label": "Главная страница AZAFCO International",
+    "nav_label": "Основная навигация",
     "nav": {
-        "about": "About us",
-        "fish": "Our fish",
-        "chain": "Value chain",
-        "quality": "Quality",
-        "markets": "Markets",
-        "contact": "Contact"
+        "about": "О нас",
+        "fish": "Наша рыба",
+        "chain": "Производственная цепочка",
+        "quality": "Качество",
+        "markets": "Рынки",
+        "contact": "Контакты"
     },
-    "lang_aria": "Language: {name}",
-    "lang_list_label": "Choose a language",
-    "menu_open": "Menu",
-    "menu_close": "Close menu",
+    "lang_aria": "Язык: {name}",
+    "lang_list_label": "Выберите язык",
+    "menu_open": "Меню",
+    "menu_close": "Закрыть меню",
     "whatsapp_cta": "WhatsApp",
-    "whatsapp_aria": "WhatsApp · Direct to management (opens in a new tab)"
+    "whatsapp_aria": "Написать руководству в WhatsApp (откроется в новой вкладке)"
 }

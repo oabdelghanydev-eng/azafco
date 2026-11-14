@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { IBM_Plex_Sans_Arabic, Manrope } from 'next/font/google';
-import { locales, localeConfig, ogLocaleMap, Locale } from '@/i18n';
+import { locales, localeConfig, ogImageMap, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
 import StructuredData from '@/components/StructuredData';
 import { hreflangAlternates, ogAlternateLocales } from '@/components/v2/businesses/pageMetadata';
@@ -47,6 +47,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     // Default description from the v2 home copy (the legacy metadata.home.description
     // carries unapproved figures)
     const tHome = await getTranslations({ locale, namespace: 'home_v2.meta' });
+    // Per-locale share image (i18n.ts ogImageMap; es/ru/de/fr use the English image until their own exists)
+    const ogImage = ogImageMap[locale as Locale] ?? ogImageMap.en;
 
     return {
         metadataBase: new URL(baseUrl),
@@ -71,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             siteName: t('site.name'),
             images: [
                 {
-                    url: `/images/og-image-${locale === 'ar' || locale === 'en' ? locale : 'en'}.jpg`,
+                    url: ogImage,
                     width: 1200,
                     height: 630,
                     alt: t('site.og_alt'),
@@ -80,7 +82,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
         twitter: {
             card: 'summary_large_image',
-            images: [`/images/og-image-${locale === 'ar' || locale === 'en' ? locale : 'en'}.jpg`],
+            images: [ogImage],
         },
         robots: {
             index: true,

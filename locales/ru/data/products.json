@@ -1,177 +1,177 @@
 {
     "tilapia": {
-        "name": "Tilapia",
+        "name": "Тилапия",
         "alt_names": [
-            "Nile tilapia"
+            "Нильская тилапия"
         ],
-        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
+        "description": "Тилапия (её также продают как нильскую тилапию) — пресноводная рыба.",
         "sizes": [
-            "Small (200–300 g)",
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Мелкий (200–300 г)",
+            "Средний (300–500 г)",
+            "Крупный (500 г и более)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "sea_bass": {
-        "name": "Sea bass",
+        "name": "Лаврак (сибас)",
         "alt_names": [
-            "European sea bass",
-            "Branzino"
+            "Европейский лаврак",
+            "Бранзино"
         ],
-        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
+        "description": "Лаврак (сибас) — морская рыба; его также продают как европейского лаврака или бранзино.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Средний (400–600 г)",
+            "Крупный (600 г и более)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Морская вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "mullet": {
-        "name": "Grey mullet",
+        "name": "Кефаль-лобан",
         "alt_names": [
-            "Flathead grey mullet",
-            "Bouri"
+            "Лобан",
+            "Бури"
         ],
-        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
+        "description": "Кефаль-лобан (в Египте — бури) — рыба солоноватых вод.",
         "sizes": [
-            "Small (150–250 g)",
-            "Medium (250–400 g)"
+            "Мелкий (150–250 г)",
+            "Средний (250–400 г)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Солоноватая вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "grass_carp": {
-        "name": "Grass carp",
+        "name": "Белый амур",
         "alt_names": [
-            "White amur",
-            "Hashayesh"
+            "Амур",
+            "Хашайеш"
         ],
-        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
+        "description": "Белый амур (в Египте — хашайеш) — пресноводная рыба семейства карповых.",
         "sizes": [
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Средний (300–500 г)",
+            "Крупный (500 г и более)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "mubarakah": {
-        "name": "Common carp",
+        "name": "Карп",
         "alt_names": [
-            "Scaled carp",
-            "Qishra"
+            "Чешуйчатый карп",
+            "Кишра"
         ],
-        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
+        "description": "Карп (в Египте — кишра) — форма карпа, полностью покрытая чешуёй; пресноводная рыба.",
         "sizes": [
-            "Large (1–2 kg)",
-            "Jumbo (2 kg and above)"
+            "Крупный (1–2 кг)",
+            "Джамбо (2 кг и более)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "catfish": {
-        "name": "Catfish",
+        "name": "Африканский клариевый сом",
         "alt_names": [
-            "African catfish",
-            "North African catfish",
-            "Karmout"
+            "Африканский сом",
+            "Североафриканский сом",
+            "Кармут"
         ],
-        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
+        "description": "Африканский клариевый сом (его также продают как африканского сома или кармут) — пресноводная рыба.",
         "sizes": [
-            "Medium (500–800 g)",
-            "Large (800 g and above)"
+            "Средний (500–800 г)",
+            "Крупный (800 г и более)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "lout": {
-        "name": "Meagre",
+        "name": "Горбыль",
         "alt_names": [
-            "Lout",
-            "Croaker",
-            "Corvina"
+            "Лут",
+            "Серебристый горбыль",
+            "Корвина"
         ],
-        "description": "Meagre, known in Egypt as lout, is a marine fish.",
+        "description": "Горбыль (в Египте — лут) — морская рыба.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Средний (400–600 г)",
+            "Крупный (600 г и более)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Морская вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "thinlip_mullet": {
-        "name": "Thinlip mullet",
+        "name": "Тонкогубая кефаль",
         "alt_names": [
-            "Thinlip grey mullet",
-            "Tobar"
+            "Тонкогубая серая кефаль",
+            "Тобар"
         ],
-        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "description": "Тонкогубая кефаль (в Египте — тобар) — кефаль солоноватых вод. Это отдельный продукт, не то же самое, что наша кефаль-лобан.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Солоноватая вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "bayad_catfish": {
-        "name": "Bayad catfish",
+        "name": "Багрус (Bagrus bajad)",
         "alt_names": [
-            "Bayad",
-            "Nile bagrid catfish"
+            "Баяд",
+            "Нильский багрус"
         ],
-        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "description": "Багрус (Bagrus bajad) — пресноводный сом, исконно обитающий в Ниле.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "silver_carp": {
-        "name": "Silver carp",
+        "name": "Белый толстолобик",
         "alt_names": [],
-        "description": "Silver carp is a freshwater carp.",
+        "description": "Белый толстолобик — пресноводная рыба семейства карповых.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "mirror_carp": {
-        "name": "Mirror carp",
+        "name": "Зеркальный карп",
         "alt_names": [
-            "Common carp (mirror)",
-            "Mabrouka"
+            "Карп (зеркальный)",
+            "Мабрука"
         ],
-        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "description": "Зеркальный карп — форма карпа с зеркальной чешуёй: на теле лишь несколько крупных чешуек. Пресноводная рыба.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Пресная вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "sea_bream": {
-        "name": "Sea bream",
+        "name": "Дорада",
         "alt_names": [
-            "Gilthead sea bream",
-            "Dorade"
+            "Золотистый спар",
+            "Аурата"
         ],
-        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "description": "Дорада (её также продают как золотистого спара или аурату) — морская рыба.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Морская вода",
+        "availability": "Подтверждается для каждого заказа"
     },
     "eels": {
-        "name": "European eel",
+        "name": "Европейский угорь",
         "alt_names": [
-            "Eel"
+            "Угорь"
         ],
-        "description": "European eel is a brackish-water fish.",
+        "description": "Европейский угорь — рыба солоноватых вод.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Ящик из пенополистирола (EPS)",
+        "category": "Солоноватая вода",
+        "availability": "Подтверждается для каждого заказа"
     }
 }

@@ -2,176 +2,176 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Nile tilapia"
+            "Tilapia du Nil"
         ],
-        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
+        "description": "Le tilapia, aussi vendu sous le nom de tilapia du Nil, est un poisson d’eau douce.",
         "sizes": [
-            "Small (200–300 g)",
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Petit (200–300 g)",
+            "Moyen (300–500 g)",
+            "Gros (500 g et plus)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "sea_bass": {
-        "name": "Sea bass",
+        "name": "Bar",
         "alt_names": [
-            "European sea bass",
-            "Branzino"
+            "Bar européen",
+            "Loup de mer"
         ],
-        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
+        "description": "Le bar, aussi vendu sous les noms de bar européen ou loup de mer, est un poisson marin.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Moyen (400–600 g)",
+            "Gros (600 g et plus)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau de mer",
+        "availability": "Confirmée à chaque commande"
     },
     "mullet": {
-        "name": "Grey mullet",
+        "name": "Mulet cabot",
         "alt_names": [
-            "Flathead grey mullet",
+            "Mulet à grosse tête",
             "Bouri"
         ],
-        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
+        "description": "Le mulet cabot, appelé bouri en Égypte, est un poisson d’eau saumâtre.",
         "sizes": [
-            "Small (150–250 g)",
-            "Medium (250–400 g)"
+            "Petit (150–250 g)",
+            "Moyen (250–400 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau saumâtre",
+        "availability": "Confirmée à chaque commande"
     },
     "grass_carp": {
-        "name": "Grass carp",
+        "name": "Carpe amour",
         "alt_names": [
-            "White amur",
+            "Amour blanc",
             "Hashayesh"
         ],
-        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
+        "description": "La carpe amour, appelée hashayesh en Égypte, est une carpe d’eau douce.",
         "sizes": [
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Moyen (300–500 g)",
+            "Gros (500 g et plus)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "mubarakah": {
-        "name": "Common carp",
+        "name": "Carpe commune",
         "alt_names": [
-            "Scaled carp",
+            "Carpe écailleuse",
             "Qishra"
         ],
-        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
+        "description": "La carpe commune, appelée qishra en Égypte, est la forme entièrement écailleuse de la carpe ; c’est un poisson d’eau douce.",
         "sizes": [
-            "Large (1–2 kg)",
-            "Jumbo (2 kg and above)"
+            "Gros (1–2 kg)",
+            "Jumbo (2 kg et plus)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "catfish": {
-        "name": "Catfish",
+        "name": "Poisson-chat africain",
         "alt_names": [
-            "African catfish",
-            "North African catfish",
+            "Silure africain",
+            "Poisson-chat nord-africain",
             "Karmout"
         ],
-        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
+        "description": "Le poisson-chat africain, aussi vendu sous les noms de silure africain ou karmout, est un poisson d’eau douce.",
         "sizes": [
-            "Medium (500–800 g)",
-            "Large (800 g and above)"
+            "Moyen (500–800 g)",
+            "Gros (800 g et plus)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "lout": {
-        "name": "Meagre",
+        "name": "Maigre",
         "alt_names": [
             "Lout",
-            "Croaker",
+            "Courbine",
             "Corvina"
         ],
-        "description": "Meagre, known in Egypt as lout, is a marine fish.",
+        "description": "Le maigre, appelé lout en Égypte, est un poisson marin.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Moyen (400–600 g)",
+            "Gros (600 g et plus)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau de mer",
+        "availability": "Confirmée à chaque commande"
     },
     "thinlip_mullet": {
-        "name": "Thinlip mullet",
+        "name": "Mulet porc",
         "alt_names": [
-            "Thinlip grey mullet",
+            "Muge porc",
             "Tobar"
         ],
-        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "description": "Le mulet porc, appelé tobar en Égypte, est un mulet d’eau saumâtre. C’est un produit distinct de notre mulet cabot.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau saumâtre",
+        "availability": "Confirmée à chaque commande"
     },
     "bayad_catfish": {
-        "name": "Bayad catfish",
+        "name": "Bagre bayad",
         "alt_names": [
             "Bayad",
-            "Nile bagrid catfish"
+            "Bagre du Nil"
         ],
-        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "description": "Le bagre bayad est un poisson-chat d’eau douce originaire du Nil.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "silver_carp": {
-        "name": "Silver carp",
+        "name": "Carpe argentée",
         "alt_names": [],
-        "description": "Silver carp is a freshwater carp.",
+        "description": "La carpe argentée est une carpe d’eau douce.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "mirror_carp": {
-        "name": "Mirror carp",
+        "name": "Carpe miroir",
         "alt_names": [
-            "Common carp (mirror)",
+            "Carpe commune (miroir)",
             "Mabrouka"
         ],
-        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "description": "La carpe miroir est la forme à écailles miroir de la carpe commune, avec seulement quelques grandes écailles. C’est un poisson d’eau douce.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce",
+        "availability": "Confirmée à chaque commande"
     },
     "sea_bream": {
-        "name": "Sea bream",
+        "name": "Dorade royale",
         "alt_names": [
-            "Gilthead sea bream",
+            "Daurade royale",
             "Dorade"
         ],
-        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "description": "La dorade royale, aussi vendue sous les noms de daurade royale ou dorade, est un poisson marin.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau de mer",
+        "availability": "Confirmée à chaque commande"
     },
     "eels": {
-        "name": "European eel",
+        "name": "Anguille européenne",
         "alt_names": [
-            "Eel"
+            "Anguille"
         ],
-        "description": "European eel is a brackish-water fish.",
+        "description": "L’anguille européenne est un poisson d’eau saumâtre.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau saumâtre",
+        "availability": "Confirmée à chaque commande"
     }
 }

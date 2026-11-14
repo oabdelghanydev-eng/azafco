@@ -2,11 +2,11 @@
     "_note": "Only metadata.site is read (root layout, pageMetadata helpers, product pages). Page titles and descriptions live in each page's *_v2.meta (or privacy.meta). The legacy page-level keys were removed on 14 Nov 2026 so they are not translated and cannot drift from the live meta. Titles using title_template get ' | AZAFCO' appended: keep them <= 51 characters.",
     "site": {
         "name": "AZAFCO International",
-        "title_default": "AZAFCO International | Fresh Egyptian fish for importers",
+        "title_default": "AZAFCO International | Poisson frais d’Égypte à l’export",
         "title_template": "%s | AZAFCO",
         "author": "AZAFCO International",
         "creator": "AZAFCO International",
         "publisher": "AZAFCO International",
-        "og_alt": "AZAFCO International: fresh Egyptian fish for importers"
+        "og_alt": "AZAFCO International : poisson égyptien frais pour les importateurs"
     }
 }

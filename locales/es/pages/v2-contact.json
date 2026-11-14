@@ -1,92 +1,92 @@
 {
     "meta": {
-        "title": "Contact us: WhatsApp, email, office and factory",
-        "description": "WhatsApp AZAFCO International management for fast deals, or email the export team for details and documents. Office and factory in Kafr El Sheikh."
+        "title": "Contacto: WhatsApp, correo, oficina y fábrica",
+        "description": "WhatsApp con la dirección de AZAFCO para operaciones rápidas; correo al equipo de exportación para detalles y documentos. Oficina y fábrica en Kafr el-Sheikh."
     },
-    "breadcrumb": "Contact us",
+    "breadcrumb": "Contacto",
     "hero": {
-        "eyebrow": "Contact us",
-        "title": "Start with a clear requirement",
-        "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents.",
+        "eyebrow": "Contacto",
+        "title": "Empiece con unos requisitos claros",
+        "intro": "Escriba a la dirección por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para detalles y documentos.",
         "actions": {
-            "whatsapp": "Message management on WhatsApp",
-            "email": "Email the export team"
+            "whatsapp": "Escriba a la dirección por WhatsApp",
+            "email": "Correo al equipo de exportación"
         }
     },
     "channels": {
-        "eyebrow": "Direct channels",
-        "title": "Choose the channel that fits your request",
-        "intro": "One number for management on WhatsApp and phone, one email for the export team.",
+        "eyebrow": "Canales directos",
+        "title": "Elija el canal que mejor se adapte a su consulta",
+        "intro": "Un número para la dirección por WhatsApp y por teléfono, y un correo para el equipo de exportación.",
         "whatsapp": {
             "title": "WhatsApp",
-            "sub": "Direct to management · for fast deals"
+            "sub": "Directo a la dirección · para operaciones rápidas"
         },
         "email": {
-            "title": "Email",
-            "sub": "Export team · details and documents"
+            "title": "Correo electrónico",
+            "sub": "Equipo de exportación · detalles y documentos"
         },
         "phone": {
-            "title": "Phone",
-            "sub": "Call management on the same number"
+            "title": "Teléfono",
+            "sub": "Llame a la dirección al mismo número"
         },
-        "hours": "Office hours",
+        "hours": "Horario de oficina",
         "vcard": {
-            "title": "Save our contact details",
-            "text": "A contact card (vCard) that adds the management number and the export team email to your phone.",
-            "action": "Download the contact card"
+            "title": "Guarde nuestros datos de contacto",
+            "text": "Una tarjeta de contacto (vCard) que añade a su teléfono el número de la dirección y el correo del equipo de exportación.",
+            "action": "Descargar la tarjeta de contacto"
         },
-        "new_tab": "(opens in a new tab)"
+        "new_tab": "(se abre en una pestaña nueva)"
     },
     "routes": {
-        "eyebrow": "Send your requirements",
-        "legend": "What is your enquiry about?",
-        "intro": "Each option prepares a message for you to send from your company email or WhatsApp, so we know who the request comes from.",
-        "seafood_title": "Fish supply",
-        "seafood_text": "For importers and procurement teams: species, weight grade, packing, quantity, destination and timing.",
-        "seafood_action": "Send your requirements",
-        "documents_title": "Documents",
-        "documents_text": "Product specifications or the company profile. A short request: no species or quantity needed.",
-        "documents_action": "Request documents",
-        "corporate_title": "Corporate partnership or other topics",
-        "corporate_text": "Partnerships, investment or other topics: a short introduction to your company and the cooperation you propose.",
-        "corporate_action": "Send a corporate enquiry"
+        "eyebrow": "Envíe sus requisitos",
+        "legend": "¿Sobre qué trata su consulta?",
+        "intro": "Cada opción le prepara un mensaje para que lo envíe desde el correo de su empresa o desde WhatsApp; así sabemos de quién procede la solicitud.",
+        "seafood_title": "Suministro de pescado",
+        "seafood_text": "Para importadores y equipos de compras: especie, calibre, embalaje, cantidad, destino y plazos.",
+        "seafood_action": "Envíe sus requisitos",
+        "documents_title": "Documentos",
+        "documents_text": "Especificaciones de producto o el perfil de la empresa. Una solicitud breve: no hace falta indicar especie ni cantidad.",
+        "documents_action": "Solicitar documentos",
+        "corporate_title": "Colaboración corporativa u otros temas",
+        "corporate_text": "Colaboraciones, inversión u otros temas: una breve presentación de su empresa y de la cooperación que propone.",
+        "corporate_action": "Enviar una consulta corporativa"
     },
     "locations": {
-        "eyebrow": "Locations",
-        "title": "Main office and factory",
-        "intro": "Our main office is in El-Borollos and our factory in Motobas, both in Kafr El Sheikh, Egypt.",
-        "factory": "Factory",
-        "office": "Main office",
-        "map_open": "Open in Google Maps",
-        "map_title_factory": "Map of the AZAFCO International factory in Motobas",
-        "map_title_office": "Map of the AZAFCO International main office",
-        "map_note": "Maps are loaded from Google Maps."
+        "eyebrow": "Ubicaciones",
+        "title": "Oficina principal y fábrica",
+        "intro": "Nuestra oficina principal está en El-Borollos y nuestra fábrica en Motobas, ambas en Kafr el-Sheikh (Egipto).",
+        "factory": "Fábrica",
+        "office": "Oficina principal",
+        "map_open": "Abrir en Google Maps",
+        "map_title_factory": "Mapa de la fábrica de AZAFCO International en Motobas",
+        "map_title_office": "Mapa de la oficina principal de AZAFCO International",
+        "map_note": "Los mapas se cargan desde Google Maps."
     },
     "next": {
-        "eyebrow": "After you write",
-        "title": "What happens after you write to us",
+        "eyebrow": "Después de escribirnos",
+        "title": "Qué ocurre después de escribirnos",
         "steps": [
-            "The export team reviews your requirements against the specification and current availability.",
-            "We contact you to confirm the details and any open points.",
-            "Prices, quantity, packing and terms are confirmed in writing for each order."
+            "El equipo de exportación revisa sus requisitos frente a la especificación y la disponibilidad actual.",
+            "Nos ponemos en contacto con usted para confirmar los detalles y cualquier punto pendiente.",
+            "Los precios, la cantidad, el embalaje y las condiciones se confirman por escrito en cada pedido."
         ],
-        "no_promise": "Sending your requirements does not commit you or us to an order. Prices are confirmed per order."
+        "no_promise": "Enviar sus requisitos no le compromete ni nos compromete a un pedido. Los precios se confirman en cada pedido."
     },
     "privacy": {
-        "title": "How we use your details",
-        "text": "We use the contact details and requirements you send only to answer your enquiry and to handle any business that follows, as set out in our privacy policy.",
-        "link": "Read the privacy policy"
+        "title": "Cómo usamos sus datos",
+        "text": "Usamos los datos de contacto y los requisitos que nos envía solo para responder a su consulta y gestionar la relación comercial que pueda derivarse, según se indica en nuestra política de privacidad.",
+        "link": "Leer la política de privacidad"
     },
     "trust": {
-        "title": "Registered company",
-        "register": "Commercial register",
-        "tax": "Tax card",
-        "proof_title": "Track record",
+        "title": "Empresa registrada",
+        "register": "Registro mercantil",
+        "tax": "Tarjeta fiscal",
+        "proof_title": "Trayectoria",
         "proof": [
-            "Founded in 2008",
-            "7+ markets across the Middle East",
-            "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA"
+            "Fundada en 2008",
+            "Más de 7 mercados en Oriente Medio y más allá",
+            "ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018, certificados por TÜV AUSTRIA"
         ],
-        "proof_link": "See quality and certificates"
+        "proof_link": "Ver calidad y certificados"
     }
 }

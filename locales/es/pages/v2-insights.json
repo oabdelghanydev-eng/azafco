@@ -1,73 +1,73 @@
 {
     "meta": {
-        "title": "Insights for fish importers",
-        "description": "Practical guides for fish importers and distributors on HS codes, documents, packing and the cold chain, with the date and source of every fact."
+        "title": "Recursos para importadores de pescado",
+        "description": "Guías para importadores de pescado sobre códigos SA, documentos y cadena de frío, además de noticias y prensa de AZAFCO, con fecha y fuente de cada dato."
     },
-    "breadcrumb": "Insights",
+    "breadcrumb": "Recursos",
     "hero": {
-        "eyebrow": "Insights",
-        "title": "Knowledge for better buying decisions",
-        "intro": "Practical guides on specifications, packing, documents and the cold chain, with the date and source of every fact.",
-        "primary": "Read the importer guide",
-        "secondary": "See our fish"
+        "eyebrow": "Recursos",
+        "title": "Conocimiento para tomar mejores decisiones de compra",
+        "intro": "Guías prácticas sobre documentos y cadena de frío, además de noticias y prensa de la empresa, con la fecha y la fuente de cada dato.",
+        "primary": "Leer la guía del importador",
+        "secondary": "Noticias y prensa"
     },
     "featured": {
-        "eyebrow": "Featured guide",
-        "read": "Read the guide"
+        "eyebrow": "Guía destacada",
+        "read": "Leer la guía"
     },
     "categories": {
-        "eyebrow": "What we publish",
-        "title": "Content by type, clearly labelled",
-        "importer_guide": "Importer guides",
-        "importer_guide_text": "How to write a precise supply request, read specifications and compare suppliers.",
-        "behind_operations": "Behind the operations",
-        "behind_operations_text": "Grading, packing and dispatch at our plant, published after review.",
-        "company_news": "Company news",
-        "company_news_text": "Company developments, events and visits, with dates and references.",
-        "news_count": "{count, plural, one {# item} other {# items}}"
+        "eyebrow": "Qué publicamos",
+        "title": "Contenido por tipo, claramente identificado",
+        "importer_guide": "Guías para importadores",
+        "importer_guide_text": "Cómo redactar una solicitud de suministro precisa, leer especificaciones y comparar proveedores.",
+        "behind_operations": "Detrás de nuestras operaciones",
+        "behind_operations_text": "Calibrado, envasado y despacho en nuestra planta, publicados tras su revisión.",
+        "company_news": "Noticias y prensa",
+        "company_news_text": "Visitas, cobertura en medios, hitos y noticias del sector, cada una con su fecha y una fuente identificada.",
+        "news_count": "{count, plural, one {# publicación} other {# publicaciones}}"
     },
     "grid": {
-        "title": "All articles",
-        "count": "{count, plural, one {# article} other {# articles}}"
+        "title": "Todos los artículos",
+        "count": "{count, plural, one {# artículo} other {# artículos}}"
     },
     "standards": {
-        "title": "Editorial standards",
-        "text": "We state the date and source of every fact. Industry data is never presented as AZAFCO data, and we do not publish production figures or certificates without valid evidence."
+        "title": "Criterios editoriales",
+        "text": "Indicamos la fecha y la fuente de cada dato. Nunca presentamos datos del sector como datos de AZAFCO, y no publicamos cifras de producción ni certificados sin una prueba válida."
     },
     "article": {
-        "by": "Published by",
+        "by": "Publicado por",
         "author": "AZAFCO International",
-        "published": "Published",
-        "reviewed": "Last reviewed",
-        "toc": "In this article",
-        "sources_side": "Sources",
-        "sources_side_text": "{count, plural, one {# official source, listed at the end and linked in the text.} other {# official sources, listed at the end and linked in the text.}}",
-        "back": "All insights",
-        "related_title": "Continue with",
+        "published": "Publicado",
+        "reviewed": "Última revisión",
+        "toc": "En este artículo",
+        "sources_side": "Fuentes",
+        "sources_side_text": "{count, plural, one {# fuente oficial, citada al final y enlazada en el texto.} other {# fuentes oficiales, citadas al final y enlazadas en el texto.}}",
+        "back": "Todos los recursos",
+        "related_title": "Siga leyendo",
         "related": [
             {
-                "title": "For importers",
-                "text": "The procurement path and what to prepare."
+                "title": "Para importadores",
+                "text": "El proceso de compra y qué preparar."
             },
             {
-                "title": "Our markets",
-                "text": "Where we ship today and what is planned."
+                "title": "Nuestros mercados",
+                "text": "Adónde enviamos hoy y qué está previsto."
             },
             {
-                "title": "Our fish",
-                "text": "A page for each of our main species."
+                "title": "Nuestro pescado",
+                "text": "Una página para cada una de nuestras especies principales."
             }
         ],
-        "table_mobile_note": "Codes per species",
-        "contact": "Send your requirements",
-        "related_eyebrow": "Read next",
-        "reading_time": "Reading time"
+        "table_mobile_note": "Códigos por especie",
+        "contact": "Envíe sus requisitos",
+        "related_eyebrow": "Siguiente lectura",
+        "reading_time": "Tiempo de lectura"
     },
     "cta": {
-        "eyebrow": "Start a partnership",
-        "title": "Ready to talk about supply?",
-        "text": "Send us your species, weight grade, quantity and destination. The export team reviews your requirements and contacts you to confirm the details.",
-        "primary": "Send your requirements",
-        "secondary": "See our fish"
+        "eyebrow": "Iniciemos una colaboración",
+        "title": "¿Hablamos de suministro?",
+        "text": "Envíenos la especie, el calibre, la cantidad y el destino. El equipo de exportación revisa sus requisitos y se pone en contacto con usted para confirmar los detalles.",
+        "primary": "Envíe sus requisitos",
+        "secondary": "Ver nuestro pescado"
     }
 }

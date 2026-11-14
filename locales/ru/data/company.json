@@ -1,32 +1,32 @@
 {
     "name": "AZAFCO International",
     "fullName": "AZAFCO International for Investment and Development S.A.E.",
-    "description": "Egyptian company that farms and sources, grades, packs and exports fresh fish for importers, distributors and foodservice buyers. Founded in 2008.",
-    "workingHours": "Sat–Thu 8:00–17:00 (Cairo time)",
-    "workingHoursNote": "WhatsApp: direct to management, for fast deals",
+    "description": "Египетская компания, которая выращивает и закупает, сортирует, упаковывает и экспортирует свежую рыбу для импортёров, дистрибьюторов и предприятий общественного питания. Основана в 2008 году.",
+    "workingHours": "Сб–Чт, 8:00–17:00 (по каирскому времени)",
+    "workingHoursNote": "WhatsApp: напрямую руководству · для быстрых сделок",
     "officialChannels": {
-        "title": "Official channels",
-        "text": "Our official channels are WhatsApp {phone} (management) and email from the azafco.com.eg domain (export team: {email}). If you receive bank details or payment instructions from any other number or address, confirm them with us on one of these channels before paying."
+        "title": "Официальные каналы связи",
+        "text": "Наши официальные каналы — WhatsApp {phone} (руководство) и электронная почта на домене azafco.com.eg (отдел экспорта: {email}). Если Вы получили банковские реквизиты или платёжные инструкции с другого номера или адреса, перед оплатой подтвердите их у нас по одному из этих каналов."
     },
     "addresses": {
         "main": {
-            "title": "Main office",
-            "address": "Mastora, next to the Charity Association, El-Borollos, Kafr El Sheikh, Egypt"
+            "title": "Главный офис",
+            "address": "Мастура, рядом с Благотворительной ассоциацией, Эль-Буруллус, Кафр-эш-Шейх, Египет"
         },
         "factory": {
-            "title": "Factory",
-            "address": "No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El Sheikh, Egypt"
+            "title": "Завод",
+            "address": "№ 120, кормовой сектор, промышленная зона, Мутубас, Кафр-эш-Шейх, Египет"
         }
     },
     "copyright": "AZAFCO International",
-    "privacyLink": "Privacy policy",
-    "leadersSince": "Founded in",
-    "tagline": "From Egyptian production to global partnerships",
+    "privacyLink": "Политика конфиденциальности",
+    "leadersSince": "Основана в",
+    "tagline": "От производства в Египте до партнёрства по всему миру",
     "usps": {
-        "price": "Prices confirmed per order",
-        "quality": "ISO 9001, 14001 and 45001, certified by TÜV AUSTRIA",
-        "flexibility": "Weight grade and packing agreed per order",
-        "availability": "Our own refrigerated trucks and cold stores",
-        "service": "From the pond to the pallet, every stage handled by AZAFCO"
+        "price": "Цены подтверждаются для каждого заказа",
+        "quality": "ISO 9001, 14001 и 45001, сертификация TÜV AUSTRIA",
+        "flexibility": "Весовая категория и упаковка согласуются для каждого заказа",
+        "availability": "Собственные авторефрижераторы и холодильные склады",
+        "service": "От пруда до паллеты: каждый этап — в руках AZAFCO"
     }
 }

@@ -2,176 +2,176 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Nile tilapia"
+            "Tilapia del Nilo"
         ],
-        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
+        "description": "La tilapia, también comercializada como tilapia del Nilo, es un pez de agua dulce.",
         "sizes": [
-            "Small (200–300 g)",
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Pequeño (200–300 g)",
+            "Mediano (300–500 g)",
+            "Grande (500 g o más)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "sea_bass": {
-        "name": "Sea bass",
+        "name": "Lubina",
         "alt_names": [
-            "European sea bass",
+            "Lubina europea",
             "Branzino"
         ],
-        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
+        "description": "La lubina, también comercializada como lubina europea o branzino, es un pez marino.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Mediano (400–600 g)",
+            "Grande (600 g o más)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua de mar",
+        "availability": "Confirmada en cada pedido"
     },
     "mullet": {
-        "name": "Grey mullet",
+        "name": "Mújol",
         "alt_names": [
-            "Flathead grey mullet",
+            "Pardete",
             "Bouri"
         ],
-        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
+        "description": "El mújol, conocido en Egipto como bouri, es un pez de aguas salobres.",
         "sizes": [
-            "Small (150–250 g)",
-            "Medium (250–400 g)"
+            "Pequeño (150–250 g)",
+            "Mediano (250–400 g)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua salobre",
+        "availability": "Confirmada en cada pedido"
     },
     "grass_carp": {
-        "name": "Grass carp",
+        "name": "Carpa herbívora",
         "alt_names": [
-            "White amur",
+            "Amur blanco",
             "Hashayesh"
         ],
-        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
+        "description": "La carpa herbívora, conocida en Egipto como hashayesh, es una carpa de agua dulce.",
         "sizes": [
-            "Medium (300–500 g)",
-            "Large (500 g and above)"
+            "Mediano (300–500 g)",
+            "Grande (500 g o más)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "mubarakah": {
-        "name": "Common carp",
+        "name": "Carpa común",
         "alt_names": [
-            "Scaled carp",
+            "Carpa con escamas",
             "Qishra"
         ],
-        "description": "Common carp, known in Egypt as qishra, is the fully scaled form of carp and a freshwater fish.",
+        "description": "La carpa común, conocida en Egipto como qishra, es la forma de la carpa con el cuerpo totalmente cubierto de escamas; es un pez de agua dulce.",
         "sizes": [
-            "Large (1–2 kg)",
-            "Jumbo (2 kg and above)"
+            "Grande (1–2 kg)",
+            "Jumbo (2 kg o más)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "catfish": {
-        "name": "Catfish",
+        "name": "Pez gato africano",
         "alt_names": [
-            "African catfish",
-            "North African catfish",
+            "Siluro africano",
+            "Pez gato norteafricano",
             "Karmout"
         ],
-        "description": "Catfish, also sold as African catfish or karmout, is a freshwater fish.",
+        "description": "El pez gato africano, también comercializado como siluro africano o karmout, es un pez de agua dulce.",
         "sizes": [
-            "Medium (500–800 g)",
-            "Large (800 g and above)"
+            "Mediano (500–800 g)",
+            "Grande (800 g o más)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "lout": {
-        "name": "Meagre",
+        "name": "Corvina",
         "alt_names": [
             "Lout",
-            "Croaker",
-            "Corvina"
+            "Meagre",
+            "Croaker"
         ],
-        "description": "Meagre, known in Egypt as lout, is a marine fish.",
+        "description": "La corvina, conocida en Egipto como lout, es un pez marino.",
         "sizes": [
-            "Medium (400–600 g)",
-            "Large (600 g and above)"
+            "Mediano (400–600 g)",
+            "Grande (600 g o más)"
         ],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua de mar",
+        "availability": "Confirmada en cada pedido"
     },
     "thinlip_mullet": {
-        "name": "Thinlip mullet",
+        "name": "Morragute",
         "alt_names": [
-            "Thinlip grey mullet",
+            "Mújol de labio fino",
             "Tobar"
         ],
-        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet. It is a separate product from our grey mullet.",
+        "description": "El morragute, conocido en Egipto como tobar, es un mújol de aguas salobres. Es un producto distinto de nuestro mújol.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua salobre",
+        "availability": "Confirmada en cada pedido"
     },
     "bayad_catfish": {
-        "name": "Bayad catfish",
+        "name": "Bagre bayad",
         "alt_names": [
             "Bayad",
-            "Nile bagrid catfish"
+            "Bágrido del Nilo"
         ],
-        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "description": "El bagre bayad es un bagre de agua dulce originario del Nilo.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "silver_carp": {
-        "name": "Silver carp",
+        "name": "Carpa plateada",
         "alt_names": [],
-        "description": "Silver carp is a freshwater carp.",
+        "description": "La carpa plateada es una carpa de agua dulce.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "mirror_carp": {
-        "name": "Mirror carp",
+        "name": "Carpa espejo",
         "alt_names": [
-            "Common carp (mirror)",
+            "Carpa común (espejo)",
             "Mabrouka"
         ],
-        "description": "Mirror carp is the mirror-scaled form of common carp, with only a few large scales. It is a freshwater fish.",
+        "description": "La carpa espejo es la forma de la carpa común con escamas en espejo: solo tiene unas pocas escamas grandes. Es un pez de agua dulce.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Freshwater",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua dulce",
+        "availability": "Confirmada en cada pedido"
     },
     "sea_bream": {
-        "name": "Sea bream",
+        "name": "Dorada",
         "alt_names": [
             "Gilthead sea bream",
             "Dorade"
         ],
-        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "description": "La dorada, conocida en el comercio internacional como gilthead sea bream o dorade, es un pez marino.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Marine",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua de mar",
+        "availability": "Confirmada en cada pedido"
     },
     "eels": {
-        "name": "European eel",
+        "name": "Anguila europea",
         "alt_names": [
-            "Eel"
+            "Anguila"
         ],
-        "description": "European eel is a brackish-water fish.",
+        "description": "La anguila europea es un pez de aguas salobres.",
         "sizes": [],
-        "packaging": "EPS foam box",
-        "category": "Brackish water",
-        "availability": "Confirmed per order"
+        "packaging": "Caja de poliestireno expandido (EPS)",
+        "category": "Agua salobre",
+        "availability": "Confirmada en cada pedido"
     }
 }

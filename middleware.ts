@@ -2,8 +2,8 @@ import createMiddleware from 'next-intl/middleware';
 import { publishedLocales, defaultLocale, type PublishedLocale } from './i18n';
 
 export default createMiddleware({
-    // Published locales only (ar/en): Accept-Language / cookie detection must never
-    // pick es/ru/de/fr, which next.config.js redirects to English until translated.
+    // Published locales only: Accept-Language / cookie detection never picks a
+    // language whose translation is not live yet.
     locales: publishedLocales,
 
     // Used when no locale matches

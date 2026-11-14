@@ -1,13 +1,14 @@
 {
-    "eyebrow": "Value chain",
-    "title": "We handle every stage, from the pond to the pallet",
-    "intro": "We work to one agreed specification at each step, and we run our own refrigerated trucks, logistics and cold stores.",
-    "stageLabel": "Stage {n}",
+    "eyebrow": "Wertschöpfungskette",
+    "title": "Wir übernehmen jede Stufe, vom Teich bis zur Palette",
+    "intro": "Bei jedem Schritt gilt dieselbe vereinbarte Spezifikation, und wir betreiben eigene Kühl-Lkw, Logistik und Kühlhäuser.",
+    "stageLabel": "Stufe {n}",
     "stages": {
-        "farming": { "title": "Farming and sourcing", "text": "Our own farms, plus fish we buy from suppliers." },
-        "harvest": { "title": "Harvest", "text": "Netted and taken to our plant in Motobas." },
-        "packing": { "title": "Washing, icing and packing", "text": "Washed, graded by weight and packed whole on ice." },
-        "inspection": { "title": "Inspection", "text": "Checked against the agreed specification before the boxes are closed." },
-        "export": { "title": "Export", "text": "Our own refrigerated trucks, then air or road freight." }
-    }
+        "farming": { "title": "Zucht und Zukauf", "text": "Eigene Fischfarmen, dazu Fisch, den wir von Lieferanten zukaufen." },
+        "harvest": { "title": "Abfischen", "text": "Abgefischt und in unser Werk in Motobas gebracht." },
+        "packing": { "title": "Waschen, Beeisen und Verpacken", "text": "Gewaschen, nach Gewicht sortiert und ganz auf Eis verpackt." },
+        "inspection": { "title": "Kontrolle", "text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft." },
+        "export": { "title": "Export", "text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht." }
+    },
+    "pageLink": "Verarbeitung und Versand ansehen"
 }

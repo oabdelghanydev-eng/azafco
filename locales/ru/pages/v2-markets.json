@@ -1,199 +1,199 @@
 {
     "meta": {
-        "title": "Fish export markets: the Middle East and beyond",
-        "description": "Fresh Egyptian fish for importers in 7+ markets: UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria, by air and road. Europe is next in our plan."
+        "title": "Рынки экспорта рыбы: Ближний Восток и не только",
+        "description": "Свежая рыба из Египта для импортёров на 7+ рынках: ОАЭ, Кувейт, Бахрейн, Ливан, Катар, Ирак и Сирия. Доставка по воздуху и по суше. Далее в планах — Европа."
     },
-    "breadcrumb": "Markets",
+    "breadcrumb": "Рынки",
     "hero": {
-        "eyebrow": "Our markets",
-        "title": "Fresh fish exports to the Middle East and beyond",
-        "intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
-        "primary": "Start a partnership",
-        "secondary": "View our species",
-        "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
+        "eyebrow": "Наши рынки",
+        "title": "Экспорт свежей рыбы на Ближний Восток и не только",
+        "intro": "Мы поставляем рыбу авиа- и автотранспортом на 7+ рынков; следующая в наших планах — Европа.",
+        "primary": "Начать партнёрство",
+        "secondary": "Смотреть виды рыбы",
+        "image_alt": "Земляные рыбоводные пруды с аэраторами и пальмами, вид сверху"
     },
     "stats": [
         {
             "value": "7+",
-            "label": "export markets"
+            "label": "экспортных рынков"
         },
         {
             "value": "2008",
-            "label": "first export market: UAE"
+            "label": "первый экспортный рынок: ОАЭ"
         },
         {
             "value": "12",
-            "label": "main species"
+            "label": "основных видов"
         },
         {
             "value": "3",
-            "label": "ISO certificates, TÜV AUSTRIA"
+            "label": "сертификата ISO, TÜV AUSTRIA"
         }
     ],
     "index": {
-        "eyebrow": "Active markets",
-        "title": "Where we ship today",
-        "intro": "Our seven active markets and the year we started serving each one. Select a market for details.",
-        "since": "since {year}",
-        "planned_title": "Planned",
-        "paused": "{country}: exports paused",
-        "map_label": "Map of shipping routes from Egypt to our seven active markets",
-        "origin": "Egypt · Motobas"
+        "eyebrow": "Активные рынки",
+        "title": "Куда мы поставляем сегодня",
+        "intro": "Наши семь активных рынков и год, с которого мы работаем на каждом из них. Выберите рынок, чтобы узнать подробности.",
+        "since": "с {year} г.",
+        "planned_title": "В планах",
+        "paused": "{country}: экспорт приостановлен",
+        "map_label": "Карта маршрутов поставок из Египта на наши семь активных рынков",
+        "origin": "Египет · Мутубас"
     },
     "notes": {
-        "eyebrow": "Market by market",
-        "title": "Who we supply in each market",
-        "intro": "The buyers we supply in each of our active markets today. Select a market for details.",
-        "buyers_label": "We supply",
-        "details": "Market details"
+        "eyebrow": "По рынкам",
+        "title": "Кому мы поставляем на каждом рынке",
+        "intro": "Покупатели, которым мы сегодня поставляем рыбу на каждом из наших активных рынков. Выберите рынок, чтобы узнать подробности.",
+        "buyers_label": "Наши покупатели",
+        "details": "Подробнее о рынке"
     },
     "approach": {
-        "eyebrow": "Market requirements",
-        "title": "Each market has its own specification",
-        "intro": "We agree the details with each importer before the first shipment.",
+        "eyebrow": "Требования рынков",
+        "title": "У каждого рынка своя спецификация",
+        "intro": "Мы согласуем детали с каждым импортёром до первой отгрузки.",
         "points": [
             {
-                "title": "Species and weight grade",
-                "text": "Species, weight grade and product form are agreed for each importer and each market."
+                "title": "Вид и весовая категория",
+                "text": "Вид рыбы, весовая категория и вид разделки согласуются для каждого импортёра и каждого рынка."
             },
             {
-                "title": "Packing and labels",
-                "text": "Packing and box labels are set to what your market and your customers require."
+                "title": "Упаковка и маркировка",
+                "text": "Упаковка и маркировка ящиков соответствуют требованиям Вашего рынка и Ваших покупателей."
             },
             {
-                "title": "Documents",
-                "text": "The export documents for each shipment are agreed for your destination."
+                "title": "Документы",
+                "text": "Экспортные документы для каждой отгрузки согласуются с учётом страны назначения."
             }
         ]
     },
     "process": {
-        "eyebrow": "How to start",
-        "title": "From your first message to the shipment",
+        "eyebrow": "С чего начать",
+        "title": "От первого сообщения до отгрузки",
         "steps": [
             {
-                "title": "Send your requirements",
-                "text": "Species, weight grade, quantity, packing and destination."
+                "title": "Отправить требования",
+                "text": "Вид рыбы, весовая категория, объём, упаковка и пункт назначения."
             },
             {
-                "title": "Review with our export team",
-                "text": "We check supply, the specification and the import requirements of your destination."
+                "title": "Обсудить с отделом экспорта",
+                "text": "Мы проверяем наличие рыбы, спецификацию и импортные требования страны назначения."
             },
             {
-                "title": "Agree the order",
-                "text": "Species, grade, packing, transport, schedule and price are confirmed in writing for each order."
+                "title": "Согласовать заказ",
+                "text": "Вид, категория, упаковка, транспорт, график и цена подтверждаются письменно для каждого заказа."
             },
             {
-                "title": "Pack and ship",
-                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
+                "title": "Упаковать и отгрузить",
+                "text": "Мы упаковываем рыбу со льдом и отправляем её авиа- или автотранспортом с экспортными документами, согласованными для Вашей страны назначения."
             }
         ]
     },
     "transport": {
-        "eyebrow": "Transport",
-        "title": "By air and by road",
-        "intro": "Fresh fish travels chilled and packed on ice. It leaves the plant in our own refrigerated trucks, then goes by air or road freight.",
+        "eyebrow": "Транспорт",
+        "title": "Авиа- и автоперевозки",
+        "intro": "Свежая рыба перевозится охлаждённой и упакованной со льдом. С завода она уезжает на наших собственных авторефрижераторах, а затем отправляется авиа- или автотранспортом.",
         "modes": [
             {
-                "title": "Air freight",
-                "text": "Packed on ice in insulated boxes for air cargo, for destinations served by air."
+                "title": "Авиаперевозка",
+                "text": "Упаковка со льдом в изотермические ящики для авиагруза — для направлений с авиасообщением."
             },
             {
-                "title": "Road freight",
-                "text": "Refrigerated road transport where the destination can be reached by land."
+                "title": "Автоперевозка",
+                "text": "Рефрижераторная автоперевозка туда, куда можно добраться по суше."
             }
         ],
-        "note": "We do not publish fixed transit times: they depend on the route and the booking, and are confirmed for each shipment."
+        "note": "Мы не публикуем фиксированные сроки доставки: они зависят от маршрута и бронирования и подтверждаются для каждой отгрузки."
     },
     "support": {
-        "eyebrow": "Working with us",
-        "title": "Clear terms for every order",
+        "eyebrow": "Работа с нами",
+        "title": "Понятные условия для каждого заказа",
         "items": [
             {
-                "title": "Prices confirmed per order",
-                "text": "Prices depend on the species, weight grade, quantity, packing and delivery terms, so we confirm them for each order."
+                "title": "Цены подтверждаются для каждого заказа",
+                "text": "Цена зависит от вида рыбы, весовой категории, объёма, упаковки и условий поставки, поэтому мы подтверждаем её для каждого заказа."
             },
             {
-                "title": "Clear responsibilities",
-                "text": "Who handles export documents, import clearance and delivery is agreed in writing for each order."
+                "title": "Чёткое распределение обязанностей",
+                "text": "Кто отвечает за экспортные документы, импортное таможенное оформление и доставку, письменно согласуется для каждого заказа."
             },
             {
-                "title": "Two direct channels",
-                "text": "WhatsApp goes directly to our management, for fast deals. Email goes to the export team, for details and documents."
+                "title": "Два прямых канала",
+                "text": "WhatsApp — напрямую руководству компании, для быстрых сделок. Электронная почта — в отдел экспорта, для деталей и документов."
             }
         ],
-        "guide_link": "Read the guide to importing fresh fish from Egypt"
+        "guide_link": "Руководство по импорту свежей рыбы из Египта"
     },
     "new_market": {
-        "title": "Your country is planned or not listed?",
-        "text": "Tell us your destination. Our export team reviews each new market case by case.",
-        "action": "Contact the export team"
+        "title": "Вашей страны нет в списке или она в планах?",
+        "text": "Сообщите нам пункт назначения. Отдел экспорта рассматривает каждый новый рынок индивидуально.",
+        "action": "Связаться с отделом экспорта"
     },
     "closing": {
-        "eyebrow": "Next step",
-        "title": "Tell us your market and what you need",
-        "text": "Message our management on WhatsApp for fast deals, or email the export team for details and documents.",
-        "primary": "Start a partnership"
+        "eyebrow": "Следующий шаг",
+        "title": "Расскажите нам о Вашем рынке и потребностях",
+        "text": "Напишите руководству в WhatsApp для быстрых сделок или отправьте письмо в отдел экспорта за деталями и документами.",
+        "primary": "Начать партнёрство"
     },
-    "disclaimer": "Every shipment depends on the import rules of the destination, current supply and the order terms agreed in writing.",
+    "disclaimer": "Каждая отгрузка зависит от импортных правил страны назначения, текущего наличия рыбы и условий заказа, согласованных письменно.",
     "regions": {
-        "gulf": "Gulf",
-        "levant": "Levant",
-        "middle_east": "Middle East",
-        "europe": "Europe",
-        "americas": "Americas",
-        "other": "Other"
+        "gulf": "Страны Залива",
+        "levant": "Левант",
+        "middle_east": "Ближний Восток",
+        "europe": "Европа",
+        "americas": "Америка",
+        "other": "Другие"
     },
     "detail": {
-        "meta_title": "Fresh fish exports to {country}",
-        "meta_description": "Fresh Egyptian fish for importers in {country}, an active market since {year}. Shipped chilled by air or road; prices confirmed per order.",
-        "eyebrow": "Active market since {year}",
-        "title": "Fresh Egyptian fish for importers in {country}",
-        "intro": "We have served importers in {country} since {year}. Species, weight grade, packing, transport and documents are agreed with each importer.",
-        "primary": "Start a partnership",
-        "secondary": "Message management on WhatsApp",
-        "image_alt": "Whole fresh fish on crushed ice seen from above",
-        "facts_title": "At a glance: {country}",
+        "meta_title": "Свежая рыба из Египта для импортёров в {country}",
+        "meta_description": "Свежая рыба из Египта для импортёров в {country}: активный рынок с {year} г. Охлаждённая доставка по воздуху или по суше. Цены подтверждаются для каждого заказа.",
+        "eyebrow": "Активный рынок с {year} г.",
+        "title": "Свежая рыба из Египта для импортёров в {country}",
+        "intro": "Мы работаем с импортёрами в {country} с {year} года. Вид рыбы, весовая категория, упаковка, транспорт и документы согласуются с каждым импортёром.",
+        "primary": "Начать партнёрство",
+        "secondary": "Написать руководству в WhatsApp",
+        "image_alt": "Целая свежая рыба на колотом льду, вид сверху",
+        "facts_title": "Коротко: {country}",
         "facts": {
-            "since_label": "Active market since",
-            "region_label": "Region",
-            "plant_label": "Ships from",
-            "plant_value": "Motobas, Kafr El Sheikh, Egypt",
-            "plant_link": "View the plant on the map",
-            "quality_label": "Quality",
+            "since_label": "Активный рынок с",
+            "region_label": "Регион",
+            "plant_label": "Отгрузка из",
+            "plant_value": "Мутубас, Кафр-эш-Шейх, Египет",
+            "plant_link": "Завод на карте",
+            "quality_label": "Качество",
             "quality_value": "ISO 9001, ISO 14001, ISO 45001",
-            "quality_link": "See quality",
-            "transport_label": "Transport",
-            "transport_value": "By air or road, confirmed per order",
-            "prices_label": "Prices",
-            "prices_value": "Confirmed per order"
+            "quality_link": "О качестве",
+            "transport_label": "Транспорт",
+            "transport_value": "Авиа- или автотранспортом, подтверждается для каждого заказа",
+            "prices_label": "Цены",
+            "prices_value": "Подтверждаются для каждого заказа"
         },
-        "discuss_eyebrow": "What we agree",
-        "discuss_title": "What we agree with importers in {country}",
+        "discuss_eyebrow": "Что мы согласуем",
+        "discuss_title": "Что мы согласуем с импортёрами в {country}",
         "discuss": [
             {
-                "title": "Species and weight grades",
-                "text": "The species and weight grades your customers buy, confirmed against current supply."
+                "title": "Виды и весовые категории",
+                "text": "Виды рыбы и весовые категории, которые покупают Ваши клиенты, с учётом текущего наличия."
             },
             {
-                "title": "Packing and labels",
-                "text": "Box format and label requirements for your sales channel."
+                "title": "Упаковка и маркировка",
+                "text": "Формат ящиков и требования к маркировке для Вашего канала продаж."
             },
             {
-                "title": "Transport",
-                "text": "Chilled shipment by air or road, with the route confirmed for each order."
+                "title": "Транспорт",
+                "text": "Охлаждённая отгрузка авиа- или автотранспортом; маршрут подтверждается для каждого заказа."
             },
             {
-                "title": "Documents",
-                "text": "The export documents needed to import into {country}, agreed for each order."
+                "title": "Документы",
+                "text": "Экспортные документы, необходимые по правилам импорта в {country}, согласуются для каждого заказа."
             }
         ],
-        "products_eyebrow": "Species",
-        "products_title": "Our main species",
-        "products_note": "These are our main, most-requested species; we supply other species on request.",
-        "map_eyebrow": "Our markets",
-        "map_title": "Shipping routes to {country} and our other markets",
-        "map_intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
-        "buyers_title": "Who we supply in {country}",
-        "glance_eyebrow": "Market profile"
+        "products_eyebrow": "Виды рыбы",
+        "products_title": "Наши основные виды",
+        "products_note": "Это наши основные и самые востребованные виды; другие виды мы поставляем по запросу.",
+        "map_eyebrow": "Наши рынки",
+        "map_title": "Маршруты поставок к импортёрам в {country} и на другие рынки",
+        "map_intro": "Мы поставляем рыбу авиа- и автотранспортом на 7+ рынков; следующая в наших планах — Европа.",
+        "buyers_title": "Наши покупатели в {country}",
+        "glance_eyebrow": "Профиль рынка"
     }
 }

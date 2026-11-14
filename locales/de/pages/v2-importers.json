@@ -1,207 +1,207 @@
 {
     "meta": {
-        "title": "Start a fish supply partnership: for importers",
-        "description": "How to start with AZAFCO International: send your requirements, review supply with our export team and agree each order. Prices confirmed per order."
+        "title": "Für Importeure: Partnerschaft für Fischlieferungen",
+        "description": "Der Start mit AZAFCO International: Anforderungen senden, Verfügbarkeit mit dem Exportteam prüfen, Auftrag vereinbaren. Preise werden pro Auftrag bestätigt."
     },
-    "breadcrumb": "For importers",
+    "breadcrumb": "Für Importeure",
     "hero": {
-        "eyebrow": "For importers and distributors",
-        "title": "Start a fresh fish supply partnership",
-        "intro": "Tell us the species, quantity and destination. Our export team reviews supply and commercial terms with you; prices are confirmed per order.",
-        "primary": "Send your requirements",
-        "secondary": "Message management on WhatsApp",
-        "image_alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+        "eyebrow": "Für Importeure und Distributoren",
+        "title": "Starten Sie eine Lieferpartnerschaft für Frischfisch",
+        "intro": "Nennen Sie uns Fischart, Menge und Zielort. Unser Exportteam prüft mit Ihnen Verfügbarkeit und Handelsbedingungen; Preise werden pro Auftrag bestätigt.",
+        "primary": "Anforderungen senden",
+        "secondary": "Geschäftsleitung per WhatsApp schreiben",
+        "image_alt": "Ganze frische Doraden, Wolfsbarsche und Tilapia auf Scherbeneis in kühlem Licht"
     },
     "serve": {
-        "eyebrow": "Who we work with",
-        "title": "Importers, distributors and foodservice",
-        "intro": "We supply businesses, not consumers. Each type of buyer has its own questions, and we answer them when we agree the order.",
+        "eyebrow": "Mit wem wir arbeiten",
+        "title": "Importeure, Distributoren und Gastronomie",
+        "intro": "Wir beliefern Unternehmen, keine Endverbraucher. Jede Art von Abnehmer hat eigene Fragen, und wir beantworten sie, wenn wir den Auftrag vereinbaren.",
         "items": [
             {
-                "title": "Fish importers",
-                "text": "Species, weight grades, packing and quantities for your market."
+                "title": "Fischimporteure",
+                "text": "Fischarten, Gewichtsklassen, Verpackung und Mengen für Ihren Markt."
             },
             {
-                "title": "Wholesalers and distributors",
-                "text": "Clear grading, net weights, packing and delivery terms for each order."
+                "title": "Großhändler und Distributoren",
+                "text": "Klare Sortierung, Nettogewichte, Verpackung und Lieferbedingungen für jeden Auftrag."
             },
             {
-                "title": "Hotels, restaurants and catering",
-                "text": "An agreed specification and one export team to talk to."
+                "title": "Hotels, Restaurants und Catering",
+                "text": "Eine vereinbarte Spezifikation und ein Exportteam als Ansprechpartner."
             },
             {
-                "title": "Foodservice suppliers",
-                "text": "Recurring supply planned against our packing capacity and your programme."
+                "title": "Zulieferer der Gastronomie",
+                "text": "Regelmäßige Lieferungen, geplant nach unserer Packkapazität und Ihrem Programm."
             }
         ]
     },
     "process": {
-        "eyebrow": "How to start",
-        "title": "Four steps to your first shipment",
+        "eyebrow": "So starten Sie",
+        "title": "Vier Schritte zu Ihrer ersten Lieferung",
         "steps": [
             {
-                "title": "Send your requirements",
-                "text": "Company, country, species, weight grade, product form, quantity, packing and delivery date."
+                "title": "Anforderungen senden",
+                "text": "Unternehmen, Land, Fischart, Gewichtsklasse, Produktform, Menge, Verpackung und Liefertermin."
             },
             {
-                "title": "Review with our export team",
-                "text": "We check supply, the specification, your market's requirements and the export documents it needs."
+                "title": "Prüfung mit dem Exportteam",
+                "text": "Wir prüfen Verfügbarkeit, Spezifikation, die Anforderungen Ihres Marktes und die dafür nötigen Exportdokumente."
             },
             {
-                "title": "Agree the order",
-                "text": "Species, grade, quantity, packing, transport, schedule and price are confirmed in writing for each order."
+                "title": "Auftrag vereinbaren",
+                "text": "Fischart, Gewichtsklasse, Menge, Verpackung, Transport, Termin und Preis werden für jeden Auftrag schriftlich bestätigt."
             },
             {
-                "title": "Pack and ship",
-                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
+                "title": "Verpacken und versenden",
+                "text": "Wir verpacken auf Eis und versenden per Luft- oder Straßenfracht, mit den für Ihr Bestimmungsland vereinbarten Exportdokumenten."
             }
         ]
     },
     "prepare": {
-        "eyebrow": "Before you send",
-        "title": "What to prepare",
-        "intro": "The more complete your requirements, the more useful our first reply.",
+        "eyebrow": "Vor dem Senden",
+        "title": "Was Sie vorbereiten sollten",
+        "intro": "Je vollständiger Ihre Anforderungen, desto nützlicher unsere erste Antwort.",
         "items": [
-            "Species",
-            "Weight grade",
-            "Product form",
-            "Quantity per shipment and frequency",
-            "Destination country",
-            "Delivery date",
-            "Packing and label requirements",
-            "Documents your market requires"
+            "Fischart",
+            "Gewichtsklasse",
+            "Produktform",
+            "Menge pro Lieferung und Häufigkeit",
+            "Bestimmungsland",
+            "Liefertermin",
+            "Anforderungen an Verpackung und Etiketten",
+            "Dokumente, die Ihr Markt verlangt"
         ]
     },
     "documents": {
-        "eyebrow": "Documents",
-        "title": "What the export team provides",
-        "intro": "Email the export team for details and documents. These are the documents we work with:",
+        "eyebrow": "Dokumente",
+        "title": "Was das Exportteam bereitstellt",
+        "intro": "Schreiben Sie dem Exportteam eine E-Mail für Details und Dokumente. Mit diesen Dokumenten arbeiten wir:",
         "items": [
             {
-                "title": "Product specification",
-                "text": "Species, weight grade, product form and packing for your order."
+                "title": "Produktspezifikation",
+                "text": "Fischart, Gewichtsklasse, Produktform und Verpackung für Ihren Auftrag."
             },
             {
-                "title": "Company profile",
-                "text": "An overview of AZAFCO International and how we work."
+                "title": "Unternehmensprofil",
+                "text": "Ein Überblick über AZAFCO International und unsere Arbeitsweise."
             },
             {
-                "title": "Shipment documents",
-                "text": "The export documents agreed for your destination, prepared with each shipment."
+                "title": "Versanddokumente",
+                "text": "Die für Ihr Bestimmungsland vereinbarten Exportdokumente, erstellt mit jeder Lieferung."
             }
         ],
-        "guide_link": "Which documents a fresh fish shipment usually needs"
+        "guide_link": "Welche Dokumente eine Frischfischlieferung meist benötigt"
     },
     "terms": {
-        "eyebrow": "Trade details",
-        "title": "Confirmed per order",
-        "intro": "We do not publish price lists or general terms. These points are agreed in writing for each order:",
+        "eyebrow": "Handelsdetails",
+        "title": "Pro Auftrag bestätigt",
+        "intro": "Wir veröffentlichen keine Preislisten oder allgemeinen Konditionen. Diese Punkte werden für jeden Auftrag schriftlich vereinbart:",
         "items": [
             {
-                "title": "Price",
-                "text": "Confirmed per order: it depends on the species, weight grade, quantity, packing and delivery terms."
+                "title": "Preis",
+                "text": "Pro Auftrag bestätigt: Er hängt von Fischart, Gewichtsklasse, Menge, Verpackung und Lieferbedingungen ab."
             },
             {
-                "title": "Minimum order",
-                "text": "Depends on the species and the order terms."
+                "title": "Mindestbestellmenge",
+                "text": "Hängt von der Fischart und den Auftragsbedingungen ab."
             },
             {
-                "title": "Availability",
-                "text": "Confirmed against current supply when we review your requirements."
+                "title": "Verfügbarkeit",
+                "text": "Wird bei der Prüfung Ihrer Anforderungen anhand der aktuellen Liefersituation bestätigt."
             },
             {
                 "title": "Transport",
-                "text": "Chilled, by air or road; the route is confirmed for each order."
+                "text": "Gekühlt, per Luft oder Straße; die Route wird für jeden Auftrag bestätigt."
             },
             {
                 "title": "Incoterms",
-                "text": "Agreed for each order."
+                "text": "Werden für jeden Auftrag vereinbart."
             }
         ]
     },
     "proof": {
-        "eyebrow": "Check before you ask",
-        "title": "Species, process, quality and markets",
+        "eyebrow": "Vorab prüfen",
+        "title": "Fischarten, Verarbeitung, Qualität und Märkte",
         "items": [
             {
-                "title": "Species",
-                "text": "12 main species, whole and fresh chilled.",
-                "link": "View species"
+                "title": "Fischarten",
+                "text": "12 Hauptarten, ganz und frisch gekühlt.",
+                "link": "Fischarten ansehen"
             },
             {
-                "title": "Processing and packing",
-                "text": "How fish is graded, packed on ice and dispatched.",
-                "link": "See processing"
+                "title": "Verarbeitung und Verpackung",
+                "text": "Wie Fisch sortiert, auf Eis verpackt und versandt wird.",
+                "link": "Zur Verarbeitung"
             },
             {
-                "title": "Quality",
-                "text": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA.",
-                "link": "See quality"
+                "title": "Qualität",
+                "text": "ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018, zertifiziert durch TÜV AUSTRIA.",
+                "link": "Zur Qualität"
             },
             {
-                "title": "Markets",
-                "text": "7+ markets across the Middle East and beyond.",
-                "link": "See markets"
+                "title": "Märkte",
+                "text": "7+ Märkte im Nahen Osten und darüber hinaus.",
+                "link": "Zu den Märkten"
             }
         ]
     },
     "faq": {
-        "eyebrow": "Importer FAQ",
-        "title": "Questions importers ask before they start",
+        "eyebrow": "FAQ für Importeure",
+        "title": "Was Importeure vor dem Start fragen",
         "items": [
             {
-                "q": "How do we start working together?",
-                "a": "Email your requirements to the export team at business@azafco.com.eg, or use the prepared message on this page. For fast deals, message our management directly on WhatsApp. We then review supply and the order terms with you."
+                "q": "Wie beginnen wir die Zusammenarbeit?",
+                "a": "Senden Sie Ihre Anforderungen per E-Mail an das Exportteam unter business@azafco.com.eg oder nutzen Sie die vorbereitete Nachricht auf dieser Seite. Für schnelle Abschlüsse schreiben Sie unserer Geschäftsleitung direkt per WhatsApp. Danach prüfen wir mit Ihnen die Verfügbarkeit und bestätigen die Handelsbedingungen schriftlich."
             },
             {
-                "q": "How are prices set?",
-                "a": "Prices are confirmed per order. They depend on the species, weight grade, quantity, packing and delivery terms. We do not publish price lists."
+                "q": "Wie werden die Preise festgelegt?",
+                "a": "Preise werden pro Auftrag bestätigt. Sie hängen von Fischart, Gewichtsklasse, Menge, Verpackung und Lieferbedingungen ab. Wir veröffentlichen keine Preislisten."
             },
             {
-                "q": "What is the minimum order quantity?",
-                "a": "It depends on the species and the order terms. Send your expected quantity and we confirm what is possible for your order."
+                "q": "Wie hoch ist die Mindestbestellmenge?",
+                "a": "Sie hängt von der Fischart und den Auftragsbedingungen ab. Nennen Sie uns Ihre geplante Menge, und wir bestätigen, was für Ihren Auftrag möglich ist."
             },
             {
-                "q": "Which sizes and weight grades can you supply?",
-                "a": "Weight grades depend on the species and current supply. Tell us the grade you need and we confirm what we can meet."
+                "q": "Welche Größen und Gewichtsklassen können Sie liefern?",
+                "a": "Die Gewichtsklassen hängen von der Fischart und der aktuellen Verfügbarkeit ab. Nennen Sie uns die benötigte Klasse, und wir bestätigen, was wir liefern können."
             },
             {
-                "q": "Which species do you supply?",
-                "a": "The 12 species on our site are our main, most-requested species; we supply other species on request."
+                "q": "Welche Fischarten liefern Sie?",
+                "a": "Die 12 Arten auf unserer Website sind unsere wichtigsten, meistgefragten Fischarten; weitere Arten liefern wir auf Anfrage."
             },
             {
-                "q": "How is the fish packed?",
-                "a": "Whole and fresh chilled, packed on ice in insulated EPS boxes. Other packing or your own specification is reviewed for each product."
+                "q": "Wie wird der Fisch verpackt?",
+                "a": "Ganz und frisch gekühlt, auf Eis in isolierten EPS-Boxen. Andere Verpackungen oder Ihre eigene Spezifikation prüfen wir für jedes Produkt."
             },
             {
-                "q": "Can you pack under our label?",
-                "a": "This is reviewed for each product and requirement. Add your label requirements to the notes of your request."
+                "q": "Können Sie unter unserem Etikett verpacken?",
+                "a": "Das prüfen wir für jedes Produkt und jede Anforderung. Nennen Sie Ihre Etikettanforderungen in den Anmerkungen Ihrer Anfrage."
             },
             {
-                "q": "Which certificates do you hold?",
-                "a": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates. The export documents for each shipment are agreed for your destination."
+                "q": "Welche Zertifikate haben Sie?",
+                "a": "Wir verfügen über Zertifikate nach ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018. Die Exportdokumente für jede Lieferung werden auf Ihr Bestimmungsland abgestimmt."
             },
             {
-                "q": "How is the fish shipped?",
-                "a": "Chilled, in our own refrigerated trucks from the plant, then by air or road freight depending on the destination. We do not publish fixed transit times; they are confirmed for each shipment."
+                "q": "Wie wird der Fisch versandt?",
+                "a": "Gekühlt, ab dem Werk in unseren eigenen Kühl-Lkw, dann je nach Zielort per Luft- oder Straßenfracht. Feste Transitzeiten veröffentlichen wir nicht; sie werden für jede Lieferung bestätigt."
             },
             {
-                "q": "Which markets do you ship to?",
-                "a": "We ship to 7+ markets, including the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe, Russia and the USA are in our plan. If your country is not listed, contact the export team."
+                "q": "In welche Märkte liefern Sie?",
+                "a": "Wir liefern in 7+ Märkte, darunter die VAE, Kuwait, Bahrain, den Libanon, Katar, den Irak und Syrien. Europa, Russland und die USA sind in Planung. Wenn Ihr Land nicht aufgeführt ist, wenden Sie sich an das Exportteam."
             },
             {
-                "q": "Do you take recurring supply programmes?",
-                "a": "Yes. Our packing capacity is up to 2,500 t/month, and recurring supply is planned against it and your needs. Tell us the frequency you expect."
+                "q": "Übernehmen Sie regelmäßige Lieferprogramme?",
+                "a": "Ja. Unsere Packkapazität beträgt bis zu 2.500 t/Monat; regelmäßige Lieferungen planen wir danach und nach Ihrem Bedarf. Nennen Sie uns die erwartete Häufigkeit."
             },
             {
-                "q": "How do we know a message is really from AZAFCO International?",
-                "a": "Our official channels are the export team email business@azafco.com.eg and the management WhatsApp +20 100 773 6419. Order terms are confirmed in writing for each order. If a message about your order comes from any other address or number, check it with us on these channels before you act on it."
+                "q": "Woran erkennen wir, dass eine Nachricht wirklich von AZAFCO International stammt?",
+                "a": "Unsere offiziellen Kanäle sind die E-Mail-Adresse des Exportteams business@azafco.com.eg und die WhatsApp-Nummer der Geschäftsleitung +20 100 773 6419. Die Auftragsbedingungen werden für jeden Auftrag schriftlich bestätigt. Kommt eine Nachricht zu Ihrem Auftrag von einer anderen Adresse oder Nummer, prüfen Sie sie über diese Kanäle mit uns, bevor Sie handeln."
             }
         ]
     },
     "rfq": {
-        "eyebrow": "Start a partnership",
-        "title": "Send your requirements",
-        "intro": "Choose email or WhatsApp; each opens a prepared message. Nothing is binding until the order terms are agreed in writing."
+        "eyebrow": "Partnerschaft starten",
+        "title": "Anforderungen senden",
+        "intro": "Wählen Sie E-Mail oder WhatsApp; beides öffnet eine vorbereitete Nachricht. Nichts ist verbindlich, bis die Auftragsbedingungen schriftlich vereinbart sind."
     }
 }

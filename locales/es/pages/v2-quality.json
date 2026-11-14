@@ -1,91 +1,91 @@
 {
     "meta": {
-        "title": "Quality control and ISO certificates",
-        "description": "Our management systems hold ISO 9001, ISO 14001 and ISO 45001 certificates from TÜV AUSTRIA, and each order is checked against the agreed specification."
+        "title": "Control de calidad y certificados ISO",
+        "description": "Nuestros sistemas de gestión tienen certificados ISO 9001, ISO 14001 e ISO 45001 de TÜV AUSTRIA, y cada pedido se comprueba según la especificación acordada."
     },
     "breadcrumbs": {
-        "label": "Breadcrumb",
-        "home": "Home",
-        "current": "Quality"
+        "label": "Ruta de navegación",
+        "home": "Inicio",
+        "current": "Calidad"
     },
     "hero": {
-        "kicker": "Quality",
-        "title": "Quality checked against your specification",
-        "intro": "We hold three ISO certificates for our management systems. Every order is checked against the specification agreed with you before the boxes are closed.",
-        "imageAlt": "Whole fresh fish on crushed ice seen from above",
-        "primary": "Start a partnership",
-        "secondary": "See our value chain"
+        "kicker": "Calidad",
+        "title": "Calidad comprobada según su especificación",
+        "intro": "Contamos con tres certificados ISO para nuestros sistemas de gestión. Cada pedido se comprueba según la especificación acordada con usted antes de cerrar las cajas.",
+        "imageAlt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Ver nuestra cadena de valor"
     },
     "certs": {
-        "eyebrow": "ISO certificates",
-        "title": "We hold three ISO certificates",
-        "intro": "Our management systems are certified by TÜV AUSTRIA.",
+        "eyebrow": "Certificados ISO",
+        "title": "Contamos con tres certificados ISO",
+        "intro": "TÜV AUSTRIA certifica nuestros sistemas de gestión.",
         "items": {
             "iso9001": {
-                "name": "Quality management",
-                "covers": "How we plan, run and review our work to meet customer requirements."
+                "name": "Gestión de la calidad",
+                "covers": "Cómo planificamos, ejecutamos y revisamos nuestro trabajo para cumplir los requisitos del cliente."
             },
             "iso14001": {
-                "name": "Environmental management",
-                "covers": "How we manage the environmental impact of our operations."
+                "name": "Gestión ambiental",
+                "covers": "Cómo gestionamos el impacto ambiental de nuestras operaciones."
             },
             "iso45001": {
-                "name": "Occupational health and safety",
-                "covers": "How we protect the health and safety of the people who work with us."
+                "name": "Seguridad y salud en el trabajo",
+                "covers": "Cómo protegemos la salud y la seguridad de las personas que trabajan con nosotros."
             }
         }
     },
     "practice": {
-        "eyebrow": "In practice",
-        "title": "How we check quality on every order",
-        "intro": "These are our working steps for each order. They follow the value chain that AZAFCO runs from the pond to the pallet.",
-        "stepLabel": "Step {n}",
+        "eyebrow": "En la práctica",
+        "title": "Cómo comprobamos la calidad en cada pedido",
+        "intro": "Estos son nuestros pasos de trabajo para cada pedido. Siguen la cadena de valor que AZAFCO gestiona del estanque al palé.",
+        "stepLabel": "Paso {n}",
         "steps": {
             "spec": {
-                "title": "Agreed specification",
-                "text": "We agree the species, weight grade, packing and labels with you before the order."
+                "title": "Especificación acordada",
+                "text": "Acordamos con usted la especie, el calibre, el embalaje y las etiquetas antes del pedido."
             },
             "packing": {
-                "title": "Washing, grading and packing",
-                "text": "Washed, iced, graded by weight and packed whole on ice."
+                "title": "Lavado, calibrado y envasado",
+                "text": "Lavado, enhielado, calibrado por peso y envasado entero en hielo."
             },
             "final": {
-                "title": "Final check",
-                "text": "Checked against the agreed specification before the boxes are closed."
+                "title": "Control final",
+                "text": "Se comprueba según la especificación acordada antes de cerrar las cajas."
             },
             "cold": {
-                "title": "Cold chain",
-                "text": "Our own cold stores and refrigerated trucks, then air or road freight."
+                "title": "Cadena de frío",
+                "text": "Nuestras propias cámaras frigoríficas y camiones frigoríficos y, después, transporte aéreo o por carretera."
             }
         },
-        "link": "See the full value chain"
+        "link": "Ver la cadena de valor completa"
     },
     "faq": {
-        "eyebrow": "Questions from buyers",
-        "title": "Questions from procurement and quality teams",
-        "q1": "Which ISO certificates do you hold?",
-        "a1": "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management and ISO 45001:2018 for occupational health and safety.",
-        "q2": "How do you check that an order matches our specification?",
-        "a2": "We agree the species, weight grade, packing and labels with you before the order. The fish are washed, iced, graded by weight and packed whole on ice, then checked against the agreed specification before the boxes are closed.",
-        "q3": "How do you keep the fish cold until shipment?",
-        "a3": "The fish are washed, iced and packed whole on ice. We run our own cold stores and refrigerated trucks, then ship by air or road freight. We confirm the temperature requirements for your product when we agree the order.",
-        "q4": "Can you meet our market's labelling or import requirements?",
-        "a4": "Requirements differ by country. Tell us yours, and we review them for each product and market before we confirm supply.",
-        "q5": "What traceability information comes with an order?",
-        "a5": "Tell us what your market or customer requires. We confirm which lot and shipment details we can provide before you order.",
-        "q6": "How do we start?",
-        "a6": "For fast deals, message our management directly on WhatsApp at <wa>+20 100 773 6419</wa>. For details and documents, email our export team at <mail>business@azafco.com.eg</mail>."
+        "eyebrow": "Preguntas de compradores",
+        "title": "Preguntas de los equipos de compras y calidad",
+        "q1": "¿Qué certificados ISO tienen?",
+        "a1": "Contamos con ISO 9001:2015 de gestión de la calidad, ISO 14001:2015 de gestión ambiental e ISO 45001:2018 de seguridad y salud en el trabajo.",
+        "q2": "¿Cómo comprueban que un pedido se ajusta a nuestra especificación?",
+        "a2": "Acordamos con usted la especie, el calibre, el embalaje y las etiquetas antes del pedido. El pescado se lava, se enhiela, se calibra por peso y se envasa entero en hielo, y después se comprueba según la especificación acordada antes de cerrar las cajas.",
+        "q3": "¿Cómo mantienen el pescado en frío hasta el envío?",
+        "a3": "El pescado se lava, se enhiela y se envasa entero en hielo. Gestionamos nuestras propias cámaras frigoríficas y camiones frigoríficos, y después enviamos por transporte aéreo o por carretera. Confirmamos los requisitos de temperatura de su producto al acordar el pedido.",
+        "q4": "¿Pueden cumplir los requisitos de etiquetado o importación de nuestro mercado?",
+        "a4": "Los requisitos varían según el país. Indíquenos los suyos y los revisaremos para cada producto y mercado antes de confirmar el suministro.",
+        "q5": "¿Qué información de trazabilidad acompaña a un pedido?",
+        "a5": "Indíquenos lo que exige su mercado o su cliente. Confirmamos qué datos de lote y de envío podemos facilitar antes de que haga su pedido.",
+        "q6": "¿Cómo empezamos?",
+        "a6": "Para operaciones rápidas, escriba directamente a nuestra dirección por WhatsApp al <wa>+20 100 773 6419</wa>. Para detalles y documentos, escriba a nuestro equipo de exportación a <mail>business@azafco.com.eg</mail>."
     },
     "closing": {
-        "eyebrow": "Next step",
-        "title": "Share your specification",
-        "text": "Tell us the species, weight grade, packing and destination, and any requirements of your market. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
-        "primary": "Start a partnership",
-        "secondary": "Send your requirements"
+        "eyebrow": "Próximo paso",
+        "title": "Comparta su especificación",
+        "text": "Indíquenos la especie, el calibre, el embalaje y el destino, así como cualquier requisito de su mercado. Nuestro equipo de exportación revisará el suministro y las condiciones comerciales. Enviar sus requisitos no le compromete a realizar un pedido.",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Envíe sus requisitos"
     },
     "pending": {
-        "traceability": "Lot and batch data that can be supplied with each shipment",
-        "market_approvals": "Market approvals (e.g. EU listing) once granted"
+        "traceability": "Datos de lote y partida que pueden facilitarse con cada envío",
+        "market_approvals": "Autorizaciones de mercado (p. ej., inclusión en la lista de la UE) una vez concedidas"
     },
-    "newTab": "(opens in a new tab)"
+    "newTab": "(se abre en una pestaña nueva)"
 }

@@ -1,102 +1,102 @@
 {
     "kuwait": {
-        "country": "Kuwait",
-        "short": "Kuwait",
-        "sentence": "Kuwait",
-        "note": "Our largest export market. We supply distributors, restaurant chains and hotels in Kuwait.",
+        "country": "Koweït",
+        "short": "Koweït",
+        "sentence": "au Koweït",
+        "note": "Notre plus grand marché à l’export. Nous approvisionnons des distributeurs, des chaînes de restaurants et des hôtels au Koweït.",
         "buyers": [
-            "Distributors",
-            "Restaurant chains",
-            "Hotels"
+            "Distributeurs",
+            "Chaînes de restaurants",
+            "Hôtels"
         ]
     },
     "uae": {
-        "country": "United Arab Emirates",
-        "short": "UAE",
-        "sentence": "the United Arab Emirates",
-        "note": "Our first export market, since 2008. We supply distributors, restaurants, supermarket chains and hotels in Dubai, Abu Dhabi and Sharjah.",
+        "country": "Émirats arabes unis",
+        "short": "EAU",
+        "sentence": "aux Émirats arabes unis",
+        "note": "Notre premier marché à l’export, depuis 2008. Nous approvisionnons des distributeurs, des restaurants, des chaînes de supermarchés et des hôtels à Dubaï, Abou Dabi et Charjah.",
         "buyers": [
-            "Distributors",
+            "Distributeurs",
             "Restaurants",
-            "Supermarket chains",
-            "Hotels"
+            "Chaînes de supermarchés",
+            "Hôtels"
         ]
     },
     "qatar": {
         "country": "Qatar",
         "short": "Qatar",
-        "sentence": "Qatar",
-        "note": "A growing market. We work with distributors, hotel chains, restaurants and catering companies in Qatar.",
+        "sentence": "au Qatar",
+        "note": "Un marché en croissance. Nous travaillons avec des distributeurs, des chaînes hôtelières, des restaurants et des sociétés de restauration collective au Qatar.",
         "buyers": [
-            "Distributors",
-            "Hotel chains",
+            "Distributeurs",
+            "Chaînes hôtelières",
             "Restaurants",
-            "Catering companies"
+            "Sociétés de restauration collective"
         ]
     },
     "iraq": {
-        "country": "Iraq",
-        "short": "Iraq",
-        "sentence": "Iraq",
-        "note": "A market with growing demand. We supply local distributors, wholesale markets and restaurants in Iraq.",
+        "country": "Irak",
+        "short": "Irak",
+        "sentence": "en Irak",
+        "note": "Un marché où la demande progresse. Nous approvisionnons des distributeurs locaux, des marchés de gros et des restaurants en Irak.",
         "buyers": [
-            "Local distributors",
-            "Wholesale markets",
+            "Distributeurs locaux",
+            "Marchés de gros",
             "Restaurants"
         ]
     },
     "bahrain": {
-        "country": "Bahrain",
-        "short": "Bahrain",
-        "sentence": "Bahrain",
-        "note": "We supply distributors, restaurants, cooperative societies and hotels in Bahrain.",
+        "country": "Bahreïn",
+        "short": "Bahreïn",
+        "sentence": "à Bahreïn",
+        "note": "Nous approvisionnons des distributeurs, des restaurants, des coopératives et des hôtels à Bahreïn.",
         "buyers": [
-            "Distributors",
+            "Distributeurs",
             "Restaurants",
-            "Cooperative societies",
-            "Hotels"
+            "Coopératives",
+            "Hôtels"
         ]
     },
     "lebanon": {
-        "country": "Lebanon",
-        "short": "Lebanon",
-        "sentence": "Lebanon",
-        "note": "A market that values quality and freshness. We supply restaurants, distributors and hotels in Lebanon.",
+        "country": "Liban",
+        "short": "Liban",
+        "sentence": "au Liban",
+        "note": "Un marché attaché à la qualité et à la fraîcheur. Nous approvisionnons des restaurants, des distributeurs et des hôtels au Liban.",
         "buyers": [
             "Restaurants",
-            "Distributors",
-            "Hotels"
+            "Distributeurs",
+            "Hôtels"
         ]
     },
     "spain": {
-        "country": "Spain",
-        "short": "Spain",
-        "sentence": "Spain"
+        "country": "Espagne",
+        "short": "Espagne",
+        "sentence": "en Espagne"
     },
     "syria": {
-        "country": "Syria",
-        "short": "Syria",
-        "sentence": "Syria",
-        "note": "Our newest market, opened in 2026. We supply distributors, restaurants and wholesale markets in Syria.",
+        "country": "Syrie",
+        "short": "Syrie",
+        "sentence": "en Syrie",
+        "note": "Notre marché le plus récent, ouvert en 2026. Nous approvisionnons des distributeurs, des restaurants et des marchés de gros en Syrie.",
         "buyers": [
-            "Distributors",
+            "Distributeurs",
             "Restaurants",
-            "Wholesale markets"
+            "Marchés de gros"
         ]
     },
     "russia": {
-        "country": "Russia",
-        "short": "Russia",
-        "sentence": "Russia"
+        "country": "Russie",
+        "short": "Russie",
+        "sentence": "en Russie"
     },
     "usa": {
-        "country": "United States",
-        "short": "USA",
-        "sentence": "the United States"
+        "country": "États-Unis",
+        "short": "États-Unis",
+        "sentence": "aux États-Unis"
     },
     "europe": {
         "country": "Europe",
         "short": "Europe",
-        "sentence": "Europe"
+        "sentence": "en Europe"
     }
 }

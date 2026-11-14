@@ -1,54 +1,54 @@
 {
-    "groupLabel": "Hero messages",
-    "statsLabel": "Key figures",
+    "groupLabel": "Mensajes principales",
+    "statsLabel": "Cifras clave",
     "slides": [
         {
-            "label": "From Egyptian production to global partnerships",
-            "kicker": "Fresh fish exporter since 2008",
-            "title": "Fresh Egyptian fish for importers across the Middle East and beyond",
-            "text": "We farm and source 12 main fish species, then grade, pack and export them whole and fresh chilled on ice.",
-            "alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+            "label": "De la producción en Egipto a alianzas en todo el mundo",
+            "kicker": "Exportador de pescado fresco desde 2008",
+            "title": "Pescado fresco egipcio para importadores de Oriente Medio y más allá",
+            "text": "Criamos y compramos 12 especies principales de pescado, y después las calibramos, envasamos y exportamos enteras y frescas, refrigeradas en hielo.",
+            "alt": "Dorada, lubina y tilapia enteras y frescas sobre hielo picado bajo una luz fría"
         },
         {
-            "label": "From the pond to the pallet",
-            "kicker": "Value chain",
-            "title": "We handle every stage, from the pond to the pallet",
-            "text": "We grade, pack and dispatch from our plant in Motobas, Kafr El Sheikh, with our own refrigerated trucks and cold stores.",
-            "alt": "Aerial view of earthen fish ponds with aerators and palms"
+            "label": "Del estanque al palé",
+            "kicker": "Cadena de valor",
+            "title": "Nos encargamos de cada etapa, del estanque al palé",
+            "text": "Calibramos, envasamos y despachamos desde nuestra planta de Motobas, Kafr el-Sheikh, con camiones frigoríficos y cámaras frigoríficas propios.",
+            "alt": "Vista aérea de estanques de tierra con aireadores y palmeras"
         },
         {
-            "label": "12 main species, graded by weight",
-            "kicker": "Our fish",
-            "title": "12 main fish species, graded by weight",
-            "text": "From tilapia to sea bass and sea bream, sold whole and fresh chilled.",
-            "alt": "Whole fresh fish on crushed ice seen from above"
+            "label": "12 especies principales, calibradas por peso",
+            "kicker": "Nuestro pescado",
+            "title": "12 especies principales de pescado, calibradas por peso",
+            "text": "Desde la tilapia hasta la lubina y la dorada, a la venta enteras y frescas refrigeradas.",
+            "alt": "Pescado fresco entero sobre hielo picado, visto desde arriba"
         },
         {
-            "label": "7+ markets by air and road",
-            "kicker": "Our markets",
-            "title": "The Middle East and beyond, by air and road",
-            "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon, with Europe next in our plan.",
-            "alt": "Refrigerated truck loading insulated boxes at a dock at dawn"
+            "label": "Más de 7 mercados por aire y carretera",
+            "kicker": "Nuestros mercados",
+            "title": "Oriente Medio y más allá, por aire y carretera",
+            "text": "Kuwait, Emiratos Árabes Unidos, Catar, Irak, Siria, Baréin y Líbano, con Europa como siguiente paso de nuestro plan.",
+            "alt": "Camión frigorífico cargando cajas isotérmicas en un muelle al amanecer"
         }
     ],
-    "ctaPartner": "Start a partnership",
-    "ctaFish": "See our fish",
+    "ctaPartner": "Iniciemos una colaboración",
+    "ctaFish": "Ver nuestro pescado",
     "stats": [
         {
             "value": "12",
-            "label": "main fish species"
+            "label": "especies principales de pescado"
         },
         {
             "value": "7+",
-            "label": "export markets"
+            "label": "mercados de exportación"
         },
         {
             "value": "3",
-            "label": "ISO certificates"
+            "label": "certificados ISO"
         },
         {
-            "value": "2,500",
-            "label": "t/month packing capacity"
+            "value": "2500",
+            "label": "t/mes de capacidad de envasado"
         }
     ]
 }

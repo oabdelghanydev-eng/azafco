@@ -1,130 +1,130 @@
 {
     "meta": {
-        "title": "Fish processing, packing and export from Egypt",
-        "description": "From the pond to the pallet: we farm and source fish, then wash, ice, grade, pack, inspect and export it with our own refrigerated trucks and cold stores."
+        "title": "Переработка, упаковка и экспорт рыбы из Египта",
+        "description": "Завод в Мутубасе (Кафр-эш-Шейх): мойка, охлаждение льдом, калибровка, упаковка и контроль целой свежей рыбы. Холод сохраняют наши авторефрижераторы и склады."
     },
     "breadcrumbs": {
-        "label": "Breadcrumb",
-        "home": "Home",
-        "current": "Value chain"
+        "label": "Навигационная цепочка",
+        "home": "Главная",
+        "current": "Производственная цепочка"
     },
     "hero": {
-        "kicker": "Value chain",
-        "title": "From the pond to the pallet, every stage handled by AZAFCO",
-        "intro": "We farm and source the fish, then wash, ice, grade, pack, inspect and export it ourselves, with our own refrigerated trucks, logistics and cold stores.",
-        "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind",
-        "primary": "Start a partnership",
-        "secondary": "Our quality standards"
+        "kicker": "Производственная цепочка",
+        "title": "Переработка рыбы и холодовая цепь — с нашего завода в Мутубасе",
+        "intro": "На нашем заводе в Мутубасе (Кафр-эш-Шейх) мы моем, пересыпаем льдом, калибруем, упаковываем и проверяем рыбу, которую выращиваем и закупаем. Затем собственные авторефрижераторы, логистика и холодильные склады доводят её до отправки авиа- или автотранспортом.",
+        "imageAlt": "Целая свежая рыба на колотом льду в белых ящиках, за ними работают сотрудники в санитарной одежде",
+        "primary": "Начать партнёрство",
+        "secondary": "Наши стандарты качества"
     },
     "stats": {
-        "label": "Key figures",
+        "label": "Ключевые показатели",
         "items": [
             {
                 "value": "12",
-                "label": "main fish species"
+                "label": "основных видов рыбы"
             },
             {
                 "value": "7+",
-                "label": "export markets"
+                "label": "экспортных рынков"
             },
             {
                 "value": "3",
-                "label": "ISO certificates"
+                "label": "сертификата ISO"
             },
             {
-                "value": "2,500",
-                "label": "t/month packing capacity"
+                "value": "2 500",
+                "label": "т/мес. упаковочной мощности"
             }
         ]
     },
     "chain": {
-        "eyebrow": "How we work",
-        "title": "Five stages, one agreed specification",
-        "intro": "Every order follows the same path, and each stage works to the specification we agree with you.",
-        "stageLabel": "Stage {n}",
+        "eyebrow": "Как мы работаем",
+        "title": "Пять этапов, одна согласованная спецификация",
+        "intro": "Каждый заказ проходит один и тот же путь, и на каждом этапе мы работаем по спецификации, согласованной с Вами.",
+        "stageLabel": "Этап {n}",
         "stages": {
             "farming": {
-                "title": "Farming and sourcing",
-                "text": "We farm fish ourselves and also buy fish from other producers.",
-                "alt": "Aerial view of earthen fish ponds with aerators and palm trees"
+                "title": "Выращивание и закупка",
+                "text": "Мы выращиваем рыбу сами и закупаем её у других производителей.",
+                "alt": "Вид сверху на земляные рыбоводные пруды с аэраторами и пальмами"
             },
             "harvest": {
-                "title": "Harvest",
-                "text": "The fish are netted and taken to our plant in Motobas, Kafr El Sheikh.",
-                "alt": "Two workers pulling a net full of tilapia to the bank of an earthen pond"
+                "title": "Облов",
+                "text": "Рыбу вылавливают сетями и доставляют на наш завод в Мутубасе (Кафр-эш-Шейх).",
+                "alt": "Двое рабочих вытягивают к берегу земляного пруда сеть, полную тилапии"
             },
             "packing": {
-                "title": "Washing, icing and packing",
-                "text": "The fish are washed, iced, graded by weight and packed whole on ice, to the packing agreed for your order.",
-                "alt": "Gloved hands placing a whole tilapia into a crate of crushed ice on a steel table"
+                "title": "Мойка, охлаждение льдом и упаковка",
+                "text": "Рыбу моют, пересыпают льдом, калибруют по весу и упаковывают целой на льду — так, как согласовано для Вашего заказа.",
+                "alt": "Руки в перчатках кладут целую тилапию в ящик с колотым льдом на стальном столе"
             },
             "inspection": {
-                "title": "Inspection",
-                "text": "Checked against the agreed specification before the boxes are closed.",
-                "alt": "A gloved hand holding a probe in iced water beside two whole tilapia"
+                "title": "Контроль",
+                "text": "Проверка на соответствие согласованной спецификации до закрытия ящиков.",
+                "alt": "Рука в перчатке держит щуп в воде со льдом рядом с двумя целыми тилапиями"
             },
             "export": {
-                "title": "Export",
-                "text": "Our own refrigerated trucks, then air or road freight.",
-                "alt": "A worker moving a pallet of white boxes into a refrigerated truck at a loading dock"
+                "title": "Экспорт",
+                "text": "Собственные авторефрижераторы, затем авиа- или автоперевозка.",
+                "alt": "Рабочий завозит паллету с белыми ящиками в авторефрижератор у погрузочной рампы"
             }
         },
-        "plantMap": "See our plant on Google Maps",
-        "newTab": "(opens in a new tab)"
+        "plantMap": "Наш завод на Google Maps",
+        "newTab": "(откроется в новой вкладке)"
     },
     "logistics": {
-        "eyebrow": "Logistics",
-        "title": "Our own trucks and cold stores",
-        "intro": "We run our own refrigerated trucks, logistics and cold stores. Every stage is handled by AZAFCO.",
+        "eyebrow": "Логистика",
+        "title": "Собственные авторефрижераторы и холодильные склады",
+        "intro": "Мы используем собственные авторефрижераторы, логистику и холодильные склады, чтобы доставлять упакованные ящики от завода до отправки.",
         "items": {
             "trucks": {
-                "title": "Refrigerated trucks",
-                "text": "Our own refrigerated trucks move the packed boxes from the plant."
+                "title": "Авторефрижераторы",
+                "text": "Собственные авторефрижераторы вывозят упакованные ящики с завода."
             },
             "stores": {
-                "title": "Cold stores",
-                "text": "We run our own cold stores as part of our logistics."
+                "title": "Холодильные склады",
+                "text": "Собственные холодильные склады — часть нашей логистики."
             },
             "freight": {
-                "title": "Air or road freight",
-                "text": "We ship by air and road to the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe is next in our plan."
+                "title": "Авиа- или автоперевозка",
+                "text": "Мы доставляем рыбу авиа- и автотранспортом в ОАЭ, Кувейт, Бахрейн, Ливан, Катар, Ирак и Сирию. Следующая в наших планах — Европа."
             }
         }
     },
     "agree": {
-        "eyebrow": "Your specification",
-        "title": "What we agree with you before each order",
-        "intro": "Tell us what your market needs. We confirm each detail with you before the order.",
+        "eyebrow": "Ваша спецификация",
+        "title": "Что мы согласуем с Вами перед каждым заказом",
+        "intro": "Сообщите нам, что нужно Вашему рынку. Каждую деталь мы подтверждаем с Вами до заказа.",
         "items": {
             "species": {
-                "title": "Species and weight grade",
-                "text": "The species and the weight grade per fish. We supply other species on request."
+                "title": "Вид и весовая категория",
+                "text": "Вид рыбы и весовая категория (вес одной рыбы). Другие виды поставляем по запросу."
             },
             "form": {
-                "title": "Product form",
-                "text": "Whole, fresh chilled and packed on ice."
+                "title": "Вид разделки",
+                "text": "Целая рыба в свежем охлаждённом виде, упакованная на льду."
             },
             "packing": {
-                "title": "Packing and net weight",
-                "text": "The packing and the net weight per box, to suit your sales channel."
+                "title": "Упаковка и вес нетто",
+                "text": "Упаковка и вес нетто одного ящика — под Ваш канал сбыта."
             },
             "labels": {
-                "title": "Labels and destination",
-                "text": "Label content and language, and the requirements of the destination country."
+                "title": "Маркировка и пункт назначения",
+                "text": "Содержание и язык маркировки, а также требования страны назначения."
             }
         },
-        "prices": "Prices confirmed per order.",
-        "speciesLink": "See our main species"
+        "prices": "Цены подтверждаются для каждого заказа.",
+        "speciesLink": "Смотреть основные виды"
     },
     "closing": {
-        "eyebrow": "Next step",
-        "title": "Tell us what your market needs",
-        "text": "Share the species, quantity, weight grade and destination. Our export team will review supply and commercial terms. Sending your requirements does not commit you to an order.",
-        "primary": "Start a partnership",
-        "secondary": "Send your requirements"
+        "eyebrow": "Следующий шаг",
+        "title": "Расскажите, что нужно Вашему рынку",
+        "text": "Укажите вид рыбы, объём, весовую категорию и пункт назначения. Отдел экспорта рассмотрит возможности поставки и коммерческие условия. Отправка требований не обязывает Вас размещать заказ.",
+        "primary": "Начать партнёрство",
+        "secondary": "Отправить требования"
     },
     "pending": {
-        "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",
-        "pack_formats": "Validated pack formats (box types, net weights) and label options"
+        "temperature": "Температура хранения и транспортировки для каждого продукта, с контрольными точками и записями (владелец подтверждает до публикации любых цифр)",
+        "pack_formats": "Утверждённые форматы упаковки (типы ящиков, вес нетто) и варианты маркировки"
     }
 }

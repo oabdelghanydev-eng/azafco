@@ -1,85 +1,85 @@
 {
     "meta": {
-        "title": "Fish farming, sourcing and export from Egypt",
-        "description": "We farm and source fresh fish in Egypt, then grade, pack and export it for importers, distributors and foodservice buyers in the Middle East and beyond."
+        "title": "Выращивание, закупка и экспорт рыбы из Египта",
+        "description": "Мы выращиваем и закупаем свежую рыбу в Египте, калибруем, упаковываем и экспортируем для импортёров, дистрибьюторов и HoReCa на Ближнем Востоке и не только."
     },
-    "breadcrumb": "Seafood and aquaculture",
+    "breadcrumb": "Рыба и аквакультура",
     "hero": {
-        "eyebrow": "Seafood and aquaculture",
-        "title": "From the pond to the pallet",
-        "intro": "We farm and source fish, then inspect, wash, ice, grade, pack and export it, with our own refrigerated trucks, logistics and cold stores.",
-        "primary": "View our fish",
-        "secondary": "Processing and packing"
+        "eyebrow": "Рыба и аквакультура",
+        "title": "Египетская рыба, которую мы выращиваем и закупаем для импортёров",
+        "intro": "Мы выращиваем и закупаем рыбу, затем проверяем, моем, пересыпаем льдом, калибруем, упаковываем и экспортируем её, используя собственные авторефрижераторы, логистику и холодильные склады.",
+        "primary": "Смотреть ассортимент",
+        "secondary": "Переработка и упаковка"
     },
     "chain": {
-        "eyebrow": "Value chain",
-        "title": "Every stage is handled by AZAFCO",
-        "intro": "Fish we farm and fish we buy from other producers follow the same path, and the specification agreed with you guides every stage.",
-        "farm_title": "Farming and sourcing",
-        "farm_text": "We farm fish and buy from other producers, matched to the species, quantities and timing you need.",
-        "harvest_title": "Harvest",
-        "harvest_text": "Fish are harvested and brought to our plant in Motobas, Kafr El Sheikh.",
-        "pack_title": "Washing, icing and packing",
-        "pack_text": "Fish are washed, iced, graded by weight per piece and packed on ice.",
-        "inspect_title": "Inspection",
-        "inspect_text": "Checked against the agreed specification before the boxes are closed.",
-        "export_title": "Export",
-        "export_text": "Our own refrigerated trucks, then air or road freight."
+        "eyebrow": "Производственная цепочка",
+        "title": "Своя и закупленная рыба — один путь",
+        "intro": "Рыба, которую мы выращиваем, и рыба, которую закупаем у других производителей, проходит один и тот же путь, а согласованная с Вами спецификация определяет каждый этап.",
+        "farm_title": "Выращивание и закупка",
+        "farm_text": "Мы выращиваем рыбу и закупаем её у других производителей с учётом нужных Вам видов, объёмов и сроков.",
+        "harvest_title": "Облов",
+        "harvest_text": "Рыбу вылавливают и доставляют на наш завод в Мутубасе (Кафр-эш-Шейх).",
+        "pack_title": "Мойка, охлаждение льдом и упаковка",
+        "pack_text": "Рыбу моют, пересыпают льдом, калибруют по весу одной штуки и упаковывают на льду.",
+        "inspect_title": "Контроль",
+        "inspect_text": "Проверка на соответствие согласованной спецификации до закрытия ящиков.",
+        "export_title": "Экспорт",
+        "export_text": "Собственные авторефрижераторы, затем авиа- или автоперевозка."
     },
     "species": {
-        "eyebrow": "Our fish",
-        "title": "12 main species",
-        "intro": "Open a species for its specification card, or search the full list.",
-        "more_species": "These are our main, most-requested species; we supply other species on request.",
-        "view_all": "View all species"
+        "eyebrow": "Наша рыба",
+        "title": "12 основных видов",
+        "intro": "Откройте карточку вида, чтобы увидеть спецификацию, или воспользуйтесь поиском по полному списку.",
+        "more_species": "Это наши основные и самые востребованные виды; другие виды поставляем по запросу.",
+        "view_all": "Смотреть все виды"
     },
     "farm": {
-        "eyebrow": "Farming and sourcing",
-        "title": "Supply that starts at the source",
-        "text_1": "We farm fish and buy from other producers, so we can match each buyer's species, quantities and timing. Tell us your volume and delivery window, and we plan supply with you."
+        "eyebrow": "Выращивание и закупка",
+        "title": "Поставки начинаются у источника",
+        "text_1": "Мы выращиваем рыбу и закупаем её у других производителей, поэтому можем подобрать виды, объёмы и сроки под каждого покупателя. Сообщите нам объём и окно поставки, и мы спланируем поставки вместе с Вами."
     },
     "processing": {
-        "eyebrow": "Processing",
-        "title": "Prepared to the agreed specification",
-        "text": "We inspect, wash, ice, grade and pack every order to the specification agreed with you.",
-        "point_1": "Graded by weight per piece, to the range in your order",
-        "point_2": "Packing, net weight and labels as confirmed in writing",
-        "point_3": "Checked against the agreed specification before the boxes are closed",
-        "link": "See processing and packing"
+        "eyebrow": "Переработка",
+        "title": "Подготовка по согласованной спецификации",
+        "text": "Каждый заказ мы проверяем, моем, пересыпаем льдом, калибруем и упаковываем по спецификации, согласованной с Вами.",
+        "point_1": "Калибровка по весу одной штуки в диапазоне, указанном в заказе",
+        "point_2": "Упаковка, вес нетто и маркировка — как подтверждено письменно",
+        "point_3": "Проверка на соответствие согласованной спецификации до закрытия ящиков",
+        "link": "Подробнее о переработке и упаковке"
     },
     "requirements": {
-        "eyebrow": "Your requirements",
-        "title": "Start with the specification",
-        "intro": "Tell us the species, weight grade, product form, packing, volume and destination. The export team reviews what we can supply and contacts you.",
-        "format_title": "Product form",
-        "format_text": "Our fish are sold whole and fresh chilled. Ask the export team about any other form you need.",
-        "grade_title": "Weight grade",
-        "grade_text": "The weight range per piece your market needs.",
-        "weight_title": "Net weight",
-        "weight_text": "Net weight per box.",
-        "packing_title": "Packing",
-        "packing_text": "Box type, labels and label language.",
-        "destination_title": "Destination",
-        "destination_text": "Country, city, delivery terms and required documents."
+        "eyebrow": "Ваши требования",
+        "title": "Начните со спецификации",
+        "intro": "Укажите вид рыбы, весовую категорию, вид разделки, упаковку, объём и пункт назначения. Отдел экспорта оценит, что мы можем поставить, и свяжется с Вами.",
+        "format_title": "Вид разделки",
+        "format_text": "Мы продаём рыбу целой, в свежем охлаждённом виде. Если Вам нужен другой вид разделки, уточните у отдела экспорта.",
+        "grade_title": "Весовая категория",
+        "grade_text": "Диапазон веса одной штуки, который нужен Вашему рынку.",
+        "weight_title": "Вес нетто",
+        "weight_text": "Вес нетто одного ящика.",
+        "packing_title": "Упаковка",
+        "packing_text": "Тип ящика, маркировка и язык маркировки.",
+        "destination_title": "Пункт назначения",
+        "destination_text": "Страна, город, условия поставки и необходимые документы."
     },
     "quality": {
-        "eyebrow": "Quality",
-        "title": "Certified, and checked on every order",
-        "text": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates, certified by TÜV AUSTRIA. Every order is checked against the agreed specification before the boxes are closed.",
-        "link": "Quality and certificates",
-        "docs_email": "Email the export team about documents",
-        "docs_subject": "Quality documents for our market"
+        "eyebrow": "Качество",
+        "title": "Сертификация и проверка каждого заказа",
+        "text": "У нас есть сертификаты ISO 9001:2015, ISO 14001:2015 и ISO 45001:2018, сертификация TÜV AUSTRIA. Каждый заказ проверяется на соответствие согласованной спецификации до закрытия ящиков.",
+        "link": "Качество и сертификаты",
+        "docs_email": "Написать в отдел экспорта о документах",
+        "docs_subject": "Документы о качестве для нашего рынка"
     },
     "audience": {
-        "eyebrow": "Who this is for",
-        "title": "Built for commercial buyers",
-        "importers": "Fish importers",
-        "distributors": "Wholesale and distribution companies",
-        "foodservice": "Foodservice and catering suppliers",
-        "horeca": "Hotel and restaurant groups",
-        "partners": "Companies looking for a long-term supply partner"
+        "eyebrow": "Для кого",
+        "title": "Для профессиональных покупателей",
+        "importers": "Импортёры рыбы",
+        "distributors": "Оптовые и дистрибьюторские компании",
+        "foodservice": "Поставщики для общепита и кейтеринга",
+        "horeca": "Гостиничные и ресторанные группы",
+        "partners": "Компании, которым нужен долгосрочный партнёр по поставкам"
     },
     "pending": {
-        "farm": "Fish farm photos + verified farm areas, species and production figures"
+        "farm": "Фото рыбных хозяйств + проверенные данные о площадях хозяйств, видах и объёмах производства"
     }
 }

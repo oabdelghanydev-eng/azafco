@@ -1,124 +1,124 @@
 {
-    "skip_to_main": "Skip to main content",
+    "skip_to_main": "Zum Hauptinhalt springen",
     "nav": {
-        "main_label": "Main navigation",
-        "footer_label": "Footer navigation",
-        "home": "Home",
-        "seafood": "Seafood and aquaculture",
-        "seafood_overview": "Overview",
-        "products": "Products",
-        "processing": "Processing and packing",
-        "quality": "Quality",
-        "export": "Export solutions",
-        "markets": "Markets",
-        "for_importers": "For importers",
-        "company": "Our company",
-        "about": "About us",
-        "businesses": "Our businesses",
-        "insights": "Insights",
-        "contact": "Contact",
-        "menu": "Menu",
-        "open_menu": "Open menu",
-        "close_menu": "Close menu",
-        "home_link_label": "AZAFCO International home page"
+        "main_label": "Hauptnavigation",
+        "footer_label": "Navigation im Fußbereich",
+        "home": "Startseite",
+        "seafood": "Fisch und Aquakultur",
+        "seafood_overview": "Überblick",
+        "products": "Produkte",
+        "processing": "Verarbeitung und Verpackung",
+        "quality": "Qualität",
+        "export": "Exportlösungen",
+        "markets": "Märkte",
+        "for_importers": "Für Importeure",
+        "company": "Unser Unternehmen",
+        "about": "Über uns",
+        "businesses": "Geschäftsbereiche",
+        "insights": "Wissen",
+        "contact": "Kontakt",
+        "menu": "Menü",
+        "open_menu": "Menü öffnen",
+        "close_menu": "Menü schließen",
+        "home_link_label": "Startseite von AZAFCO International"
     },
     "cta": {
-        "view_specifications": "View specifications",
-        "contact": "Contact",
-        "talk_to_export_team": "Talk to the export team",
-        "learn_more": "Learn more",
-        "read_more": "Read more",
-        "view_all": "View all",
+        "view_specifications": "Spezifikationen ansehen",
+        "contact": "Kontakt",
+        "talk_to_export_team": "Mit dem Exportteam sprechen",
+        "learn_more": "Mehr erfahren",
+        "read_more": "Weiterlesen",
+        "view_all": "Alle ansehen",
         "whatsapp": "WhatsApp",
-        "call": "Call",
-        "email": "Email",
-        "loading": "Loading…",
-        "opens_new_tab": "(opens in a new tab)",
-        "contact_export_team": "Contact our export team",
-        "send_requirements": "Send your requirements",
-        "start_partnership": "Start a partnership",
-        "whatsapp_management": "WhatsApp · Direct to management",
-        "email_export_team": "Email the export team",
-        "request_document_pack": "Ask the export team about documents"
+        "call": "Anrufen",
+        "email": "E-Mail",
+        "loading": "Wird geladen …",
+        "opens_new_tab": "(öffnet in neuem Tab)",
+        "contact_export_team": "Exportteam kontaktieren",
+        "send_requirements": "Anforderungen senden",
+        "start_partnership": "Partnerschaft starten",
+        "whatsapp_management": "WhatsApp · Geschäftsleitung",
+        "email_export_team": "E-Mail an das Exportteam",
+        "request_document_pack": "Exportteam zu Dokumenten fragen"
     },
     "breadcrumbs": {
-        "label": "Breadcrumb",
-        "home": "Home"
+        "label": "Pfadnavigation",
+        "home": "Startseite"
     },
     "pending": {
-        "prefix": "Pending owner confirmation:",
-        "certificate_card": "{name}: owner approval to publish"
+        "prefix": "Bestätigung durch den Inhaber ausstehend:",
+        "certificate_card": "{name}: Freigabe zur Veröffentlichung durch den Inhaber"
     },
     "spec": {
-        "attribute": "Attribute",
-        "value": "Value",
-        "confirmed_with_sales": "Confirmed per order",
+        "attribute": "Merkmal",
+        "value": "Wert",
+        "confirmed_with_sales": "Wird pro Auftrag bestätigt",
         "attribute_label": "{label}:"
     },
     "market": {
-        "status_active": "Active market",
-        "status_planned": "Planned",
-        "status_paused": "Exports paused",
-        "fact_species": "Species",
-        "fact_species_value": "{count} main species",
+        "status_active": "Aktiver Markt",
+        "status_planned": "Geplant",
+        "status_paused": "Exporte pausiert",
+        "fact_species": "Fischarten",
+        "fact_species_value": "{count} Hauptarten",
         "fact_transport": "Transport",
-        "fact_transport_value": "Chilled, by air or road; confirmed per order",
-        "fact_documents": "Documents",
-        "fact_documents_value": "The export team confirms the documents required for your market"
+        "fact_transport_value": "Gekühlt, per Luft- oder Straßenfracht; pro Auftrag bestätigt",
+        "fact_documents": "Dokumente",
+        "fact_documents_value": "Das Exportteam bestätigt die für Ihren Markt erforderlichen Dokumente"
     },
     "certificate": {
-        "issuer": "Issuer",
-        "view": "View certificate",
-        "request_copy": "Ask about this certificate",
+        "issuer": "Aussteller",
+        "view": "Zertifikat ansehen",
+        "request_copy": "Fragen zu diesem Zertifikat",
         "request_copy_for": ": {name}",
         "groups": {
-            "food_safety": "Food safety",
-            "export_approval": "Export approvals",
-            "management_system": "Management systems"
+            "food_safety": "Lebensmittelsicherheit",
+            "export_approval": "Exportzulassungen",
+            "management_system": "Managementsysteme"
         }
     },
     "insight": {
-        "read_article": "Read article",
-        "minutes": "{count} min read"
+        "read_article": "Artikel lesen",
+        "minutes": "{count} Min. Lesezeit"
     },
     "cta_band": {
-        "eyebrow": "Start a partnership",
-        "title": "Every shipment starts with a message",
-        "intro": "Tell us the species, quantity and destination. Our export team will review supply and commercial terms.",
+        "eyebrow": "Partnerschaft starten",
+        "title": "Jede Lieferung beginnt mit einer Nachricht",
+        "intro": "Nennen Sie uns Fischart, Menge und Zielort. Unser Exportteam prüft Liefermöglichkeiten und Handelskonditionen.",
         "whatsapp_title": "WhatsApp",
-        "whatsapp_sub": "Direct to management · for fast deals",
-        "email_title": "Email",
-        "email_sub": "Export team · details and documents",
-        "after_title": "What happens next",
-        "after_free": "Sending your requirements does not commit you to an order",
-        "after_1": "The export team reviews your requirements",
-        "after_2": "We contact you to confirm the details",
-        "after_3": "Prices confirmed per order, subject to availability and the agreed specification",
-        "email_subject": "Enquiry from azafco.com.eg: {topic}",
-        "email_topic_general": "general"
+        "whatsapp_sub": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",
+        "email_title": "E-Mail",
+        "email_sub": "Exportteam · Details und Dokumente",
+        "after_title": "So geht es weiter",
+        "after_free": "Das Senden Ihrer Anforderungen ist unverbindlich",
+        "after_1": "Das Exportteam prüft Ihre Anforderungen",
+        "after_2": "Wir melden uns bei Ihnen, um die Details zu bestätigen",
+        "after_3": "Preise werden pro Auftrag bestätigt, abhängig von Verfügbarkeit und vereinbarter Spezifikation",
+        "email_subject": "Anfrage über azafco.com.eg: {topic}",
+        "email_topic_general": "allgemein"
     },
     "faq": {
-        "toggle_hint": "Show answer"
+        "toggle_hint": "Antwort anzeigen"
     },
     "gallery": {
-        "label": "Photo gallery"
+        "label": "Fotogalerie"
     },
     "whatsapp_float": {
-        "label": "WhatsApp · Direct to management"
+        "label": "WhatsApp · direkt an die Geschäftsleitung"
     },
     "facts": {
-        "title": "Facts at a glance",
-        "species": "Main species",
-        "markets": "Export markets",
+        "title": "Fakten auf einen Blick",
+        "species": "Hauptarten",
+        "markets": "Exportmärkte",
         "markets_value": "{count}+",
-        "iso": "ISO certificates",
-        "iso_note": "Certified by TÜV AUSTRIA",
-        "plant": "Processing plant",
-        "plant_value": "Motobas, Kafr El Sheikh"
+        "iso": "ISO-Zertifikate",
+        "iso_note": "Zertifiziert durch TÜV AUSTRIA",
+        "plant": "Verarbeitungswerk",
+        "plant_value": "Motobas, Kafr el-Sheikh"
     },
     "fill": {
-        "spec_title": "Have a full specification?",
-        "spec_text": "Send it to the export team and we will review it with you.",
-        "documents_text": "For document questions, contact the export team."
+        "spec_title": "Sie haben eine vollständige Spezifikation?",
+        "spec_text": "Senden Sie sie an das Exportteam, und wir prüfen sie gemeinsam mit Ihnen.",
+        "documents_text": "Bei Fragen zu Dokumenten wenden Sie sich an das Exportteam."
     }
 }

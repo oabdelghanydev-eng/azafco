@@ -1,25 +1,25 @@
 {
-    "eyebrow": "Error 404",
-    "title": "We could not find this page",
-    "intro": "The link may be old, or the page may have moved. These pages will get you back on track.",
-    "links_title": "Where to go next",
+    "eyebrow": "Fehler 404",
+    "title": "Diese Seite wurde nicht gefunden",
+    "intro": "Der Link ist vielleicht veraltet, oder die Seite wurde verschoben. Diese Seiten helfen Ihnen weiter.",
+    "links_title": "Wie es weitergeht",
     "links": [
         {
-            "title": "Our fish",
-            "text": "The 12 main species and their pages."
+            "title": "Unser Fisch",
+            "text": "Die 12 Hauptarten und ihre Seiten."
         },
         {
-            "title": "Send your requirements",
-            "text": "Species, quantity and destination, sent to the export team."
+            "title": "Anforderungen senden",
+            "text": "Fischart, Menge und Zielort, direkt an das Exportteam."
         },
         {
-            "title": "Our markets",
-            "text": "Where we ship today and what is planned."
+            "title": "Unsere Märkte",
+            "text": "Wohin wir heute liefern und was geplant ist."
         },
         {
-            "title": "Contact us",
-            "text": "WhatsApp, email, office and factory."
+            "title": "Kontakt",
+            "text": "WhatsApp, E-Mail, Büro und Werk."
         }
     ],
-    "home": "Back to the home page"
+    "home": "Zurück zur Startseite"
 }
