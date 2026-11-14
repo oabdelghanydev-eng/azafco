@@ -1,4 +1,28 @@
 {
-    "title": "Page Not Found",
-    "back_home": "Back to Home"
+    "meta": {
+        "title": "Page not found"
+    },
+    "eyebrow": "Error 404",
+    "title": "We could not find this page",
+    "intro": "The link may be old, or the page may have moved. These pages will get you back on track.",
+    "links_title": "Where to go next",
+    "links": [
+        {
+            "title": "Our fish",
+            "text": "The 12 main species and their pages."
+        },
+        {
+            "title": "Send your requirements",
+            "text": "Species, quantity and destination, sent to the export team."
+        },
+        {
+            "title": "Our markets",
+            "text": "Where we ship today and what is planned."
+        },
+        {
+            "title": "Contact us",
+            "text": "WhatsApp, email, office and factory."
+        }
+    ],
+    "home": "Back to the home page"
 }

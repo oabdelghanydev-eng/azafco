@@ -1,34 +1,34 @@
 {
-    "companyName": "AZAFCO International Investment & Development",
+    "companyName": "AZAFCO International",
+    "legalName": "AZAFCO International for Investment and Development S.A.E.",
     "alternateName": "AZAFCO International",
     "alternateNames": [
-        "AZAFCO International",
         "AZAFCO",
+        "ازافكو العالمية",
         "ازافكو",
-        "Azafco Égypte",
-        "AZAFCO Fish"
+        "EZAFCO"
     ],
-    "description": "Premier exportateur B2B de poisson frais d'Égypte depuis 2008. Livraison de plus de 2 500 tonnes par mois vers plus de 9 pays dans le monde avec plus de 300 employés, plus de 500 clients et service 24h/24. Certifié ISO et HACCP, agréé UE.",
-    "slogan": "Poisson frais premium d'Égypte vers le monde",
+    "description": "AZAFCO International est une entreprise égyptienne qui élève et achète du poisson frais, puis le calibre, le conditionne et l’exporte pour des importateurs, des distributeurs et des acheteurs de la restauration hors domicile sur plus de {countries} marchés. Usine de transformation à Motobas, Kafr el-Cheikh, Égypte.",
+    "slogan": "De la production en Égypte aux partenariats dans le monde",
     "foundingDate": "2008",
-    "numberOfEmployees": "plus de 300",
-    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
-    "factoryName": "Site de production de poisson AZAFCO",
-    "factoryAlternateName": "Site de production AZAFCO",
-    "websiteName": "AZAFCO International – Exportateur B2B de poisson #1 d'Égypte",
-    "websiteDescription": "Site officiel d'AZAFCO International – Exportateur de poisson frais premium d'Égypte vers plus de 9 pays. Fournisseur en gros 24h/24.",
-    "productGroupName": "Produits de poisson frais AZAFCO",
-    "productGroupDesc": "Produits de poisson frais premium du premier exportateur d'Égypte – tilapia, bar, mulet, silure et plus. Tailles personnalisées disponibles.",
-    "catalogName": "Catalogue de poisson frais AZAFCO",
-    "catalogDesc": "Gamme complète de poisson frais premium pour exportation en gros depuis l'Égypte. Plus de 8 variétés, tailles personnalisées, commandes flexibles.",
-    "offerDesc": "Contactez-nous pour des prix de gros B2B compétitifs. Service 24h/24.",
-    "priceRange": "Prix de gros compétitifs",
+    "commercialRegisterLabel": "Registre du commerce",
+    "factoryName": "Usine de transformation du poisson d’AZAFCO International",
+    "factoryAlternateName": "Usine de poisson AZAFCO, Motobas",
+    "factoryDescription": "Usine de transformation du poisson d’AZAFCO International à Motobas, Kafr el-Cheikh : calibrage, conditionnement et expédition de poisson frais pour l’export.",
+    "websiteName": "AZAFCO International",
+    "websiteDescription": "Site officiel d’AZAFCO International : poisson frais d’Égypte pour les importateurs, les distributeurs et la restauration hors domicile, avec les spécifications des espèces et les contacts pour démarrer un partenariat.",
+    "productGroupName": "Poisson frais AZAFCO International",
+    "productGroupDesc": "Poisson frais d’Égypte : tilapia, bar, mulet cabot, poisson-chat africain et autres espèces. Calibre et conditionnement confirmés à chaque commande.",
+    "catalogName": "Catalogue de poisson frais AZAFCO International",
+    "catalogDesc": "Poisson frais pour l’export en gros depuis l’Égypte : 12 espèces principales. Calibre et conditionnement confirmés à chaque commande ; autres espèces fournies sur demande.",
+    "offerDesc": "Indiquez-nous votre spécification ; nous étudierons les disponibilités et les conditions commerciales. Horaires du bureau : du samedi au jeudi, de 8 h à 17 h (heure du Caire).",
+    "priceRange": "Prix confirmés à chaque commande",
     "freshFishCategory": "Poisson frais",
-    "freshwater": "Eau douce",
-    "freshwaterDesc": "Tilapia, silure, mulet, Mubarakah",
-    "saltwater": "Eau salée",
-    "saltwaterDesc": "Bar, Buni, Lout, anguilles",
-    "restaurantHotelSupply": "Approvisionnement restaurants et hôtels",
+    "freshwater": "Poissons d’eau douce",
+    "freshwaterDesc": "Tilapia, poisson-chat africain, bagre bayad, carpe commune, carpe miroir, carpe amour, carpe argentée",
+    "saltwater": "Poissons marins et d’eaux saumâtres",
+    "saltwaterDesc": "Bar, dorade royale, maigre, mulet cabot, mulet porc",
+    "restaurantHotelSupply": "Approvisionnement de la restauration hors domicile",
     "home": "Accueil",
     "products": "Produits",
     "about": "À propos",
@@ -36,83 +36,49 @@
     "markets": "Marchés",
     "media": "Médias",
     "certificates": "Certificats",
-    "openingHours": "24h/24, 7j/7",
-    "paymentAccepted": "Virement bancaire, lettre de crédit (L/C), transfert SWIFT",
-    "currenciesAccepted": "USD, EGP, AED, SAR, EUR",
-    "knowsAbout": [
-        "Exportation de poisson frais",
-        "Conditionnement de poisson",
-        "Tilapia en gros",
-        "Exportation de bar",
-        "Mulet frais",
-        "Transformation de poisson",
-        "Approvisionnement B2B poisson",
-        "Poisson égyptien",
-        "Poisson du Nil",
-        "Poisson méditerranéen"
-    ],
-    "speakableName": "AZAFCO International – Exportation de poisson frais",
-    "certifications": {
-        "iso22000": {
-            "name": "ISO 22000:2018",
-            "description": "Système de management de la sécurité alimentaire"
-        },
-        "haccp": {
-            "name": "HACCP",
-            "description": "Analyse des dangers et points critiques pour leur maîtrise"
-        },
-        "iso9001": {
+    "openingHours": "Sa-Th 08:00-17:00",
+    "contactManagement": "Ligne directe de la direction · pour conclure rapidement",
+    "contactExport": "Équipe export (informations et documents)",
+    "certificationBody": "TÜV AUSTRIA",
+    "credentialCategory": "Certification ISO",
+    "credentials": [
+        {
             "name": "ISO 9001:2015",
             "description": "Système de management de la qualité"
         },
-        "iso14001": {
+        {
             "name": "ISO 14001:2015",
             "description": "Système de management environnemental"
         },
-        "iso45001": {
+        {
             "name": "ISO 45001:2018",
-            "description": "Santé et sécurité au travail"
+            "description": "Système de management de la santé et de la sécurité au travail"
         }
-    },
+    ],
+    "knowsAbout": [
+        "Exportation de poisson frais",
+        "Pisciculture",
+        "Calibrage et conditionnement du poisson",
+        "Logistique de la chaîne du froid",
+        "Approvisionnement en poisson en gros",
+        "Tilapia",
+        "Bar",
+        "Mulet cabot",
+        "Aquaculture égyptienne"
+    ],
+    "speakableName": "AZAFCO International | Exportation de poisson frais",
     "services": {
         "tilapia": {
-            "name": "Exportation de tilapia frais",
-            "description": "Tilapia du Nil premium pour grossistes et exportation internationale"
+            "name": "Approvisionnement en tilapia frais",
+            "description": "Tilapia frais pour le commerce de gros et l’export"
         },
         "seaBass": {
-            "name": "Approvisionnement en bar",
-            "description": "Bar méditerranéen frais pour marchés internationaux"
+            "name": "Approvisionnement en bar frais",
+            "description": "Bar frais pour le commerce de gros et l’export"
         },
         "mullet": {
-            "name": "Exportation de mulet",
-            "description": "Mulet frais pour grossistes et restaurants"
+            "name": "Approvisionnement en mulet cabot frais",
+            "description": "Mulet cabot frais pour le commerce de gros et l’export"
         }
-    },
-    "howTo": {
-        "title": "Comment commander du poisson en gros chez AZAFCO",
-        "description": "Étapes simples pour commander du poisson frais en gros chez AZAFCO International",
-        "supplies": {
-            "businessDetails": "Vos coordonnées professionnelles",
-            "quantities": "Quantités requises"
-        },
-        "steps": {
-            "step1": {
-                "name": "Contactez-nous",
-                "text": "Contactez-nous via WhatsApp ou à business@azafco.com.eg"
-            },
-            "step2": {
-                "name": "Spécifiez vos produits",
-                "text": "Choisissez type de poisson, tailles (personnalisation disponible) et quantités"
-            },
-            "step3": {
-                "name": "Recevez un devis",
-                "text": "Nous vous envoyons un devis compétitif sous 24 heures"
-            },
-            "step4": {
-                "name": "Confirmez et expédiez",
-                "text": "Confirmez votre commande – nous expédions avec chaîne du froid 0–4°C vers toute destination mondiale"
-            }
-        },
-        "estimatedCost": "Contactez-nous pour un devis"
     }
 }

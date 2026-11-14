@@ -1,0 +1,57 @@
+{
+    "eyebrow": "Nos poissons",
+    "title": "12 espèces principales de poisson frais",
+    "intro": "Vendus entiers et frais réfrigérés, calibrés selon le poids unitaire et conditionnés sous glace. Nous convenons avec vous du calibre et du conditionnement avant chaque expédition.",
+    "note": "Ce sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande.",
+    "species": {
+        "tilapia": {
+            "name": "Tilapia",
+            "alt": "Tilapia entier, vue latérale"
+        },
+        "sea_bass": {
+            "name": "Bar",
+            "alt": "Bar entier, vue latérale"
+        },
+        "sea_bream": {
+            "name": "Dorade royale",
+            "alt": "Dorade royale entière, vue latérale"
+        },
+        "meagre": {
+            "name": "Maigre",
+            "alt": "Maigre entier, vue latérale"
+        },
+        "mullet": {
+            "name": "Mulet cabot",
+            "alt": "Mulet cabot entier, vue latérale"
+        },
+        "thinlip_mullet": {
+            "name": "Mulet porc",
+            "alt": "Mulet porc entier, vue latérale"
+        },
+        "common_carp": {
+            "name": "Carpe commune",
+            "alt": "Carpe commune entière, vue latérale"
+        },
+        "mirror_carp": {
+            "name": "Carpe miroir",
+            "alt": "Carpe miroir entière, vue latérale"
+        },
+        "grass_carp": {
+            "name": "Carpe amour",
+            "alt": "Carpe amour entière, vue latérale"
+        },
+        "silver_carp": {
+            "name": "Carpe argentée",
+            "alt": "Carpe argentée entière, vue latérale"
+        },
+        "catfish": {
+            "name": "Poisson-chat africain",
+            "alt": "Poisson-chat africain entier, vue latérale"
+        },
+        "bayad_catfish": {
+            "name": "Bagre bayad",
+            "alt": "Bagre bayad entier, vue latérale"
+        }
+    },
+    "pageLink": "Voir toutes les espèces"
+}

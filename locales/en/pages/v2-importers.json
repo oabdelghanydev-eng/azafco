@@ -1,0 +1,202 @@
+{
+    "meta": {
+        "title": "Start a fish supply partnership: for importers",
+        "description": "How to start with AZAFCO International: send your requirements, review supply with our export team and agree each order. Prices confirmed per order."
+    },
+    "breadcrumb": "For importers",
+    "hero": {
+        "eyebrow": "For importers and distributors",
+        "title": "Start a fresh fish supply partnership",
+        "intro": "Tell us the species, quantity and destination. Our export team reviews supply and commercial terms with you; prices are confirmed per order.",
+        "primary": "Send your requirements",
+        "secondary": "Message management on WhatsApp",
+        "image_alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
+    },
+    "serve": {
+        "eyebrow": "Who we work with",
+        "title": "Importers, distributors and foodservice",
+        "intro": "We supply businesses, not consumers. Each type of buyer has its own questions, and we answer them when we agree the order.",
+        "items": [
+            {
+                "title": "Fish importers",
+                "text": "Species, weight grades, packing and quantities for your market."
+            },
+            {
+                "title": "Wholesalers and distributors",
+                "text": "Clear grading, net weights, packing and delivery terms for each order."
+            },
+            {
+                "title": "Hotels, restaurants and catering",
+                "text": "An agreed specification and one export team to talk to."
+            },
+            {
+                "title": "Foodservice suppliers",
+                "text": "Recurring supply planned against our packing capacity and your programme."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "How to start",
+        "title": "Four steps to your first shipment",
+        "steps": [
+            {
+                "title": "Send your requirements",
+                "text": "Company, country, species, weight grade, product form, quantity, packing and delivery date."
+            },
+            {
+                "title": "Review with our export team",
+                "text": "We check supply, the specification, your market's requirements and the export documents it needs."
+            },
+            {
+                "title": "Agree the order",
+                "text": "Species, grade, quantity, packing, transport, schedule and price are confirmed in writing for each order."
+            },
+            {
+                "title": "Pack and ship",
+                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
+            }
+        ]
+    },
+    "prepare": {
+        "eyebrow": "Before you send",
+        "title": "What to prepare",
+        "intro": "The more complete your requirements, the more useful our first reply.",
+        "items": [
+            "Species",
+            "Weight grade",
+            "Product form",
+            "Quantity per shipment and frequency",
+            "Destination country",
+            "Delivery date",
+            "Packing and label requirements",
+            "Documents your market requires"
+        ]
+    },
+    "documents": {
+        "eyebrow": "Documents",
+        "title": "What the export team provides",
+        "intro": "Email the export team for details and documents. These are the documents we work with:",
+        "items": [
+            {
+                "title": "Product specification",
+                "text": "Species, weight grade, product form and packing for your order."
+            },
+            {
+                "title": "Company profile",
+                "text": "An overview of AZAFCO International and how we work."
+            },
+            {
+                "title": "Shipment documents",
+                "text": "The export documents agreed for your destination, prepared with each shipment."
+            }
+        ],
+        "guide_link": "Which documents a fresh fish shipment usually needs"
+    },
+    "terms": {
+        "eyebrow": "Trade details",
+        "title": "Confirmed per order",
+        "intro": "We do not publish price lists or general terms. These points are agreed in writing for each order:",
+        "items": [
+            {
+                "title": "Price",
+                "text": "Confirmed per order: it depends on the species, weight grade, quantity, packing and delivery terms."
+            },
+            {
+                "title": "Minimum order",
+                "text": "Depends on the species, the freight mode and the order terms. Tell us the quantity you want to start with, and we confirm in writing what we can ship."
+            },
+            {
+                "title": "Availability",
+                "text": "Confirmed against current supply when we review your requirements."
+            },
+            {
+                "title": "Transport",
+                "text": "Chilled, by air or road; the route is confirmed for each order."
+            },
+            {
+                "title": "Incoterms",
+                "text": "Agreed for each order."
+            }
+        ]
+    },
+    "proof": {
+        "eyebrow": "Check before you ask",
+        "title": "Species, process, quality and markets",
+        "items": [
+            {
+                "title": "Species",
+                "text": "12 main species, whole and fresh chilled.",
+                "link": "View species"
+            },
+            {
+                "title": "Processing and packing",
+                "text": "How fish is graded, packed on ice and dispatched.",
+                "link": "See processing"
+            },
+            {
+                "title": "Quality",
+                "text": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, certified by TÜV AUSTRIA.",
+                "link": "See quality"
+            },
+            {
+                "title": "Markets",
+                "text": "7+ markets across the Middle East and beyond.",
+                "link": "See markets"
+            }
+        ]
+    },
+    "faq": {
+        "eyebrow": "Importer FAQ",
+        "title": "Questions importers ask before they start",
+        "items": [
+            {
+                "q": "How do we start working together?",
+                "a": "Email your requirements to the export team at business@azafco.com.eg, or use the prepared message on this page. For fast deals, message our management directly on WhatsApp. We then review supply with you and confirm the commercial terms in writing."
+            },
+            {
+                "q": "How are prices set?",
+                "a": "Prices are confirmed per order. They depend on the species, weight grade, quantity, packing and delivery terms. We do not publish price lists."
+            },
+            {
+                "q": "What is the minimum order quantity?",
+                "a": "It depends on the species and the order terms. Send your expected quantity and we confirm what is possible for your order."
+            },
+            {
+                "q": "Which sizes and weight grades can you supply?",
+                "a": "Weight grades depend on the species and current supply. Tell us the grade you need and we confirm what we can meet."
+            },
+            {
+                "q": "Which species do you supply?",
+                "a": "The 12 species on our site are our main, most-requested species; we supply other species on request."
+            },
+            {
+                "q": "How is the fish packed?",
+                "a": "Whole and fresh chilled, packed on ice in insulated EPS boxes. Other packing or your own specification is reviewed for each product."
+            },
+            {
+                "q": "Can you pack under our label?",
+                "a": "This is reviewed for each product and requirement. Add your label requirements to the notes of your request."
+            },
+            {
+                "q": "Which certificates do you hold?",
+                "a": "We hold ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 certificates. The export documents for each shipment are agreed for your destination."
+            },
+            {
+                "q": "How is the fish shipped?",
+                "a": "Chilled, in our own refrigerated trucks from the plant, then by air or road freight depending on the destination. We do not publish fixed transit times; they are confirmed for each shipment."
+            },
+            {
+                "q": "Which markets do you ship to?",
+                "a": "We ship to 7+ markets, including the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe, Russia and the USA are in our plan. If your country is not listed, contact the export team."
+            },
+            {
+                "q": "Do you take recurring supply programmes?",
+                "a": "Yes. Our packing capacity is up to 2,500 t/month, and recurring supply is planned against it and your needs. Tell us the frequency you expect."
+            },
+            {
+                "q": "How do we know a message is really from AZAFCO International?",
+                "a": "Our official channels are the export team email business@azafco.com.eg and the management WhatsApp +20 100 773 6419. Order terms are confirmed in writing for each order. If a message about your order comes from any other address or number, check it with us on these channels before you act on it."
+            }
+        ]
+    }
+}

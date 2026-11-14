@@ -1,0 +1,57 @@
+{
+    "eyebrow": "Nuestro pescado",
+    "title": "12 especies principales de pescado fresco",
+    "intro": "Se venden enteras y frescas refrigeradas, calibradas según el peso de cada pieza y envasadas en hielo. Acordamos con usted el calibre y el embalaje antes de cada envío.",
+    "note": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido.",
+    "species": {
+        "tilapia": {
+            "name": "Tilapia",
+            "alt": "Tilapia entera, vista lateral"
+        },
+        "sea_bass": {
+            "name": "Lubina",
+            "alt": "Lubina entera, vista lateral"
+        },
+        "sea_bream": {
+            "name": "Dorada",
+            "alt": "Dorada entera, vista lateral"
+        },
+        "meagre": {
+            "name": "Corvina",
+            "alt": "Corvina entera, vista lateral"
+        },
+        "mullet": {
+            "name": "Mújol",
+            "alt": "Mújol entero, vista lateral"
+        },
+        "thinlip_mullet": {
+            "name": "Morragute",
+            "alt": "Morragute entero, vista lateral"
+        },
+        "common_carp": {
+            "name": "Carpa común",
+            "alt": "Carpa común entera, vista lateral"
+        },
+        "mirror_carp": {
+            "name": "Carpa espejo",
+            "alt": "Carpa espejo entera, vista lateral"
+        },
+        "grass_carp": {
+            "name": "Carpa herbívora",
+            "alt": "Carpa herbívora entera, vista lateral"
+        },
+        "silver_carp": {
+            "name": "Carpa plateada",
+            "alt": "Carpa plateada entera, vista lateral"
+        },
+        "catfish": {
+            "name": "Pez gato africano",
+            "alt": "Pez gato africano entero, vista lateral"
+        },
+        "bayad_catfish": {
+            "name": "Bagre bayad",
+            "alt": "Bagre bayad entero, vista lateral"
+        }
+    },
+    "pageLink": "Ver todas las especies"
+}

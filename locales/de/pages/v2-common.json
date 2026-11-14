@@ -1,0 +1,114 @@
+{
+    "skip_to_main": "Zum Hauptinhalt springen",
+    "nav": {
+        "main_label": "Hauptnavigation",
+        "footer_label": "Navigation im Fußbereich",
+        "home": "Startseite",
+        "seafood": "Fisch und Aquakultur",
+        "seafood_overview": "Überblick",
+        "products": "Produkte",
+        "processing": "Verarbeitung und Verpackung",
+        "quality": "Qualität",
+        "export": "Exportlösungen",
+        "markets": "Märkte",
+        "for_importers": "Für Importeure",
+        "company": "Unser Unternehmen",
+        "about": "Über uns",
+        "businesses": "Geschäftsbereiche",
+        "insights": "Wissen",
+        "contact": "Kontakt",
+        "menu": "Menü",
+        "open_menu": "Menü öffnen",
+        "close_menu": "Menü schließen",
+        "home_link_label": "Startseite von AZAFCO International"
+    },
+    "cta": {
+        "view_specifications": "Spezifikationen ansehen",
+        "contact": "Kontakt",
+        "talk_to_export_team": "Mit dem Exportteam sprechen",
+        "learn_more": "Mehr erfahren",
+        "read_more": "Weiterlesen",
+        "view_all": "Alle ansehen",
+        "whatsapp": "WhatsApp",
+        "call": "Anrufen",
+        "email": "E-Mail",
+        "loading": "Wird geladen …",
+        "opens_new_tab": "(öffnet in neuem Tab)",
+        "contact_export_team": "Exportteam kontaktieren",
+        "send_requirements": "Anforderungen senden",
+        "start_partnership": "Partnerschaft starten",
+        "request_document_pack": "Exportteam zu Dokumenten fragen"
+    },
+    "breadcrumbs": {
+        "label": "Pfadnavigation",
+        "home": "Startseite"
+    },
+    "pending": {
+        "prefix": "Bestätigung durch den Inhaber ausstehend:",
+        "certificate_card": "{name}: Freigabe zur Veröffentlichung durch den Inhaber"
+    },
+    "spec": {
+        "attribute": "Merkmal",
+        "value": "Wert",
+        "confirmed_with_sales": "Wird pro Auftrag bestätigt",
+        "attribute_label": "{label}:"
+    },
+    "market": {
+        "status_active": "Aktiver Markt",
+        "status_planned": "Geplant",
+        "status_paused": "Exporte pausiert",
+        "fact_species": "Fischarten",
+        "fact_species_value": "{count} Hauptarten",
+        "fact_transport": "Transport",
+        "fact_transport_value": "Gekühlt, per Luft- oder Straßenfracht; pro Auftrag bestätigt",
+        "fact_documents": "Dokumente",
+        "fact_documents_value": "Das Exportteam bestätigt die für Ihren Markt erforderlichen Dokumente"
+    },
+    "certificate": {
+        "issuer": "Aussteller",
+        "view": "Zertifikat ansehen",
+        "request_copy": "Fragen zu diesem Zertifikat",
+        "request_copy_for": ": {name}",
+        "groups": {
+            "food_safety": "Lebensmittelsicherheit",
+            "export_approval": "Exportzulassungen",
+            "management_system": "Managementsysteme"
+        }
+    },
+    "insight": {
+        "read_article": "Artikel lesen",
+        "minutes": "{count} Min. Lesezeit"
+    },
+    "faq": {
+        "toggle_hint": "Antwort anzeigen"
+    },
+    "gallery": {
+        "label": "Fotogalerie"
+    },
+    "whatsapp_float": {
+        "label": "WhatsApp · direkt an die Geschäftsleitung"
+    },
+    "facts": {
+        "title": "Fakten auf einen Blick",
+        "species": "Hauptarten",
+        "markets": "Exportmärkte",
+        "markets_value": "{count}+",
+        "iso": "ISO-Zertifikate",
+        "iso_note": "Zertifiziert durch TÜV AUSTRIA",
+        "plant": "Verarbeitungswerk",
+        "plant_value": "Motobas, Kafr el-Sheikh"
+    },
+    "fill": {
+        "spec_title": "Sie haben eine vollständige Spezifikation?",
+        "spec_text": "Senden Sie sie an das Exportteam, und wir prüfen sie gemeinsam mit Ihnen.",
+        "documents_text": "Bei Fragen zu Dokumenten wenden Sie sich an das Exportteam."
+    },
+    "consent": {
+        "title": "Analyse in diesem Browser",
+        "on": "Die Analyse ist in diesem Browser aktiviert.",
+        "off": "Die Analyse ist in diesem Browser deaktiviert.",
+        "unset": "Sie haben in diesem Browser noch keine Auswahl getroffen. Die Analyse folgt der Standardeinstellung für Ihre Region.",
+        "enable": "Analyse aktivieren",
+        "disable": "Analyse deaktivieren"
+    }
+}

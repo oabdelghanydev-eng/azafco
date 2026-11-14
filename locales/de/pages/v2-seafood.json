@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "title": "Fischzucht, Zukauf und Export aus Ägypten",
+        "description": "Frischfisch aus Ägypten, selbst gezüchtet und zugekauft, sortiert, verpackt und exportiert für Importeure, Händler und Gastronomie in Nahost und darüber hinaus."
+    },
+    "breadcrumb": "Fisch und Aquakultur",
+    "hero": {
+        "eyebrow": "Fisch und Aquakultur",
+        "title": "Ägyptischer Fisch aus eigener Zucht und Zukauf für Importeure",
+        "intro": "Wir züchten und beziehen Fisch und prüfen, waschen, beeisen, sortieren, verpacken und exportieren ihn, mit eigenen Kühl-Lkw, eigener Logistik und eigenen Kühlhäusern.",
+        "primary": "Unsere Fischarten ansehen",
+        "secondary": "Verarbeitung und Verpackung"
+    },
+    "stages": {
+        "line": "Wir übernehmen jede Stufe, vom Teich bis zur Palette.",
+        "link": "Die fünf Stufen ansehen"
+    },
+    "species": {
+        "eyebrow": "Unser Fisch",
+        "title": "12 Hauptarten",
+        "intro": "Öffnen Sie eine Fischart, um ihre Spezifikationskarte zu sehen, oder durchsuchen Sie die vollständige Liste.",
+        "more_species": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage.",
+        "view_all": "Alle Fischarten ansehen"
+    },
+    "farm": {
+        "eyebrow": "Zucht und Zukauf",
+        "title": "Versorgung, die an der Quelle beginnt",
+        "text_1": "Wir züchten Fisch und kaufen bei anderen Erzeugern zu, damit wir Fischarten, Mengen und Termine jedes Einkäufers abdecken können. Nennen Sie uns Ihr Volumen und Ihr Lieferfenster, und wir planen die Versorgung gemeinsam mit Ihnen."
+    },
+    "processing": {
+        "eyebrow": "Verarbeitung",
+        "title": "Nach vereinbarter Spezifikation vorbereitet",
+        "text": "Wir prüfen, waschen, beeisen, sortieren und verpacken jeden Auftrag nach der mit Ihnen vereinbarten Spezifikation.",
+        "point_1": "Nach Stückgewicht sortiert, im Gewichtsbereich Ihres Auftrags",
+        "point_2": "Verpackung, Nettogewicht und Etiketten wie schriftlich bestätigt",
+        "point_3": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft",
+        "link": "Verarbeitung und Verpackung ansehen"
+    },
+    "requirements": {
+        "eyebrow": "Ihre Anforderungen",
+        "title": "Beginnen Sie mit der Spezifikation",
+        "intro": "Nennen Sie uns Fischart, Gewichtsklasse, Produktform, Verpackung, Menge und Zielort. Das Exportteam prüft, was wir liefern können, und meldet sich bei Ihnen.",
+        "format_title": "Produktform",
+        "format_text": "Unser Fisch wird ganz und frisch gekühlt verkauft. Wenn Sie eine andere Form benötigen, fragen Sie das Exportteam.",
+        "grade_title": "Gewichtsklasse",
+        "grade_text": "Der Gewichtsbereich pro Stück, den Ihr Markt braucht.",
+        "weight_title": "Nettogewicht",
+        "weight_text": "Nettogewicht pro Box.",
+        "packing_title": "Verpackung",
+        "packing_text": "Boxtyp, Etiketten und Etikettensprache.",
+        "destination_title": "Zielort",
+        "destination_text": "Land, Stadt, Lieferbedingungen und erforderliche Dokumente."
+    },
+    "quality": {
+        "eyebrow": "Qualität",
+        "title": "Zertifiziert und bei jedem Auftrag geprüft",
+        "text": "Wir verfügen über die Zertifikate ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018, zertifiziert durch TÜV AUSTRIA. Jeder Auftrag wird vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft.",
+        "link": "Qualität und Zertifikate",
+        "docs_email": "E-Mail an das Exportteam zu Dokumenten",
+        "docs_subject": "Qualitätsdokumente für unseren Markt"
+    },
+    "audience": {
+        "eyebrow": "Für wen",
+        "title": "Für gewerbliche Einkäufer",
+        "importers": "Fischimporteure",
+        "distributors": "Großhandels- und Vertriebsunternehmen",
+        "foodservice": "Zulieferer für Gastronomie und Catering",
+        "horeca": "Hotel- und Restaurantgruppen",
+        "partners": "Unternehmen, die einen langfristigen Lieferpartner suchen"
+    },
+    "pending": {
+        "farm": "Fotos der Fischfarmen + geprüfte Farmflächen, Arten und Produktionszahlen"
+    }
+}

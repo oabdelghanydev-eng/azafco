@@ -1,0 +1,84 @@
+{
+    "meta": {
+        "title": "Contrôle qualité et certificats ISO",
+        "description": "Nos systèmes de management sont certifiés ISO 9001, ISO 14001 et ISO 45001 par TÜV AUSTRIA, et chaque commande est vérifiée selon la spécification convenue."
+    },
+    "breadcrumbs": {
+        "label": "Fil d’Ariane",
+        "home": "Accueil",
+        "current": "Qualité"
+    },
+    "hero": {
+        "kicker": "Qualité",
+        "title": "Une qualité vérifiée selon votre spécification",
+        "intro": "Nous détenons trois certificats ISO pour nos systèmes de management. Chaque commande est vérifiée par rapport à la spécification convenue avec vous avant la fermeture des caisses.",
+        "imageAlt": "Poissons entiers frais sur glace pilée, vus du dessus",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Voir notre chaîne de valeur"
+    },
+    "certs": {
+        "eyebrow": "Certificats ISO",
+        "title": "Nous détenons trois certificats ISO",
+        "intro": "Nos systèmes de management sont certifiés par TÜV AUSTRIA. Pour les documents sanitaires et de sécurité alimentaire exigés par votre marché, notre équipe export vous confirme, avant votre commande, ceux qui accompagnent chaque expédition.",
+        "items": {
+            "iso9001": {
+                "name": "Management de la qualité",
+                "covers": "La façon dont nous planifions, réalisons et revoyons notre travail pour répondre aux exigences des clients."
+            },
+            "iso14001": {
+                "name": "Management environnemental",
+                "covers": "La façon dont nous gérons l’impact environnemental de nos activités."
+            },
+            "iso45001": {
+                "name": "Santé et sécurité au travail",
+                "covers": "La façon dont nous protégeons la santé et la sécurité des personnes qui travaillent avec nous."
+            }
+        }
+    },
+    "practice": {
+        "eyebrow": "En pratique",
+        "title": "Comment nous vérifions la qualité de chaque commande",
+        "intro": "Voici nos étapes de travail pour chaque commande. Elles suivent la chaîne de valeur qu’AZAFCO assure de l’étang à la palette.",
+        "stepLabel": "Étape {n}",
+        "steps": {
+            "spec": {
+                "title": "Spécification convenue",
+                "text": "Nous convenons avec vous de l’espèce, du calibre, du conditionnement et des étiquettes avant la commande."
+            },
+            "packing": {
+                "title": "Lavage, calibrage et conditionnement",
+                "text": "Lavé, glacé, calibré au poids et conditionné entier sous glace."
+            },
+            "final": {
+                "title": "Contrôle final",
+                "text": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses."
+            },
+            "cold": {
+                "title": "Chaîne du froid",
+                "text": "Nos propres entrepôts et camions frigorifiques, puis fret aérien ou routier."
+            }
+        },
+        "link": "Voir toute la chaîne de valeur"
+    },
+    "faq": {
+        "eyebrow": "Questions d’acheteurs",
+        "title": "Questions des équipes achats et qualité",
+        "q1": "Quels certificats ISO détenez-vous ?",
+        "a1": "Nous détenons les certificats ISO 9001:2015 pour le management de la qualité, ISO 14001:2015 pour le management environnemental et ISO 45001:2018 pour la santé et la sécurité au travail.",
+        "q2": "Comment vérifiez-vous qu’une commande correspond à notre spécification ?",
+        "a2": "Nous convenons avec vous de l’espèce, du calibre, du conditionnement et des étiquettes avant la commande. Le poisson est lavé, glacé, calibré au poids et conditionné entier sous glace, puis vérifié par rapport à la spécification convenue avant la fermeture des caisses.",
+        "q3": "Comment gardez-vous le poisson au froid jusqu’à l’expédition ?",
+        "a3": "Le poisson est lavé, glacé et conditionné entier sous glace. Nous exploitons nos propres entrepôts et camions frigorifiques, puis nous expédions par fret aérien ou routier. Nous confirmons les exigences de température de votre produit lorsque nous convenons de la commande.",
+        "q4": "Pouvez-vous répondre aux exigences d’étiquetage ou d’importation de notre marché ?",
+        "a4": "Les exigences varient d’un pays à l’autre. Indiquez-nous les vôtres, et nous les étudions pour chaque produit et chaque marché avant de confirmer l’approvisionnement.",
+        "q5": "Quelles informations de traçabilité accompagnent une commande ?",
+        "a5": "Indiquez-nous ce qu’exige votre marché ou votre client. Nous confirmons les informations de lot et d’expédition que nous pouvons fournir avant votre commande.",
+        "q6": "Comment commencer ?",
+        "a6": "Pour conclure rapidement, écrivez directement à notre direction sur WhatsApp au <wa>+20 100 773 6419</wa>. Pour les informations et les documents, écrivez à notre équipe export à <mail>business@azafco.com.eg</mail>."
+    },
+    "pending": {
+        "traceability": "Données de lot et de production que nous pouvons fournir avec chaque expédition",
+        "market_approvals": "Agréments de marché (p. ex. inscription sur la liste UE) une fois obtenus"
+    },
+    "newTab": "(s’ouvre dans un nouvel onglet)"
+}

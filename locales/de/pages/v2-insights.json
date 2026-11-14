@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "title": "Fachwissen für Fischimporteure",
+        "description": "Leitfäden für Fischimporteure zu HS-Codes, Dokumenten und der Kühlkette sowie Neuigkeiten und Presse zu AZAFCO, mit Datum und Quelle jeder Angabe."
+    },
+    "breadcrumb": "Wissen",
+    "hero": {
+        "eyebrow": "Wissen",
+        "title": "Wissen für bessere Einkaufsentscheidungen",
+        "intro": "Praxisnahe Leitfäden zu Dokumenten und Kühlkette sowie Unternehmensnachrichten und Presse, mit Datum und Quelle jeder Angabe.",
+        "primary": "Leitfaden für Importeure lesen",
+        "secondary": "Aktuelles und Presse"
+    },
+    "featured": {
+        "eyebrow": "Empfohlener Leitfaden",
+        "read": "Leitfaden lesen"
+    },
+    "categories": {
+        "eyebrow": "Was wir veröffentlichen",
+        "title": "Inhalte nach Art, klar gekennzeichnet",
+        "importer_guide": "Leitfäden für Importeure",
+        "importer_guide_text": "HS-Codes, Exportdokumente und Grundlagen der Kühlkette für den Import von frischem Fisch aus Ägypten.",
+        "behind_operations": "Einblick in den Betrieb",
+        "behind_operations_text": "Sortierung, Verpackung und Versand in unserem Werk, veröffentlicht nach Prüfung.",
+        "company_news": "Aktuelles und Presse",
+        "company_news_text": "Besuche, Medienberichte, Meilensteine und Branchennachrichten, jeweils mit Datum und namentlich genannter Quelle.",
+        "news_count": "{count, plural, one {# Beitrag} other {# Beiträge}}"
+    },
+    "grid": {
+        "title": "Alle Artikel",
+        "count": "{count, plural, one {# Artikel} other {# Artikel}}"
+    },
+    "standards": {
+        "title": "Redaktionelle Grundsätze",
+        "text": "Wir nennen Datum und Quelle jeder Angabe. Branchendaten stellen wir nie als AZAFCO-Daten dar, und wir veröffentlichen keine Produktionszahlen oder Zertifikate ohne gültigen Nachweis."
+    },
+    "article": {
+        "by": "Veröffentlicht von",
+        "author": "AZAFCO International",
+        "published": "Veröffentlicht",
+        "reviewed": "Zuletzt geprüft",
+        "toc": "In diesem Artikel",
+        "sources_side": "Quellen",
+        "sources_side_text": "{count, plural, one {# offizielle Quelle, am Ende aufgeführt und im Text verlinkt.} other {# offizielle Quellen, am Ende aufgeführt und im Text verlinkt.}}",
+        "related_title": "Weiterlesen",
+        "related": [
+            {
+                "title": "Für Importeure",
+                "text": "Der Weg zur Beschaffung und was Sie vorbereiten sollten."
+            },
+            {
+                "title": "Unsere Märkte",
+                "text": "Wohin wir heute liefern und was geplant ist."
+            },
+            {
+                "title": "Unser Fisch",
+                "text": "Eine Seite für jede unserer Hauptarten."
+            }
+        ],
+        "table_mobile_note": "Codes je Fischart",
+        "related_eyebrow": "Als Nächstes lesen",
+        "reading_time": "Lesezeit"
+    }
+}

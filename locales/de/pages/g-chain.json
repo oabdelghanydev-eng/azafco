@@ -1,0 +1,14 @@
+{
+    "eyebrow": "Wertschöpfungskette",
+    "title": "Wir übernehmen jede Stufe, vom Teich bis zur Palette",
+    "intro": "Bei jedem Schritt gilt dieselbe vereinbarte Spezifikation, und wir betreiben eigene Kühl-Lkw, Logistik und Kühlhäuser.",
+    "stageLabel": "Stufe {n}",
+    "stages": {
+        "farming": { "title": "Zucht und Zukauf", "text": "Eigene Fischfarmen, dazu Fisch, den wir von Lieferanten zukaufen." },
+        "harvest": { "title": "Abfischen", "text": "Abgefischt und in unser Werk in Motobas gebracht." },
+        "packing": { "title": "Waschen, Beeisen und Verpacken", "text": "Gewaschen, nach Gewicht sortiert und ganz auf Eis verpackt." },
+        "inspection": { "title": "Kontrolle", "text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft." },
+        "export": { "title": "Export", "text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht." }
+    },
+    "pageLink": "Verarbeitung und Versand ansehen"
+}

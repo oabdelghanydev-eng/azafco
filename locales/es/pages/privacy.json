@@ -1,41 +1,72 @@
 {
+    "meta": {
+        "title": "Política de privacidad",
+        "description": "Cómo usa AZAFCO International los datos que nos envía y los datos de Google Analytics, Vercel Web Analytics, Microsoft Clarity y Google Maps."
+    },
+    "breadcrumb": "Política de privacidad",
+    "eyebrow": "Información legal",
     "title": "Política de privacidad",
-    "last_updated": "Última actualización",
-    "intro": {
-        "title": "Introducción",
-        "content": "En AZAFCO International, respetamos su privacidad y nos comprometemos a proteger sus datos personales."
+    "intro": "Qué información recibimos cuando visita este sitio web o se pone en contacto con nosotros, por qué la usamos y qué puede pedirnos que hagamos.",
+    "last_updated": "Última actualización: {date}",
+    "toc": "En esta página",
+    "sections": {
+        "who": {
+            "title": "Quiénes somos",
+            "text": "Este sitio web lo gestiona {legalName} (AZAFCO International), una empresa egipcia inscrita en el registro mercantil con el n.º {register}. Oficina principal: {address}."
+        },
+        "contact": {
+            "title": "Cuando se pone en contacto con nosotros",
+            "text": "Si nos escribe por correo electrónico o por WhatsApp, o si nos llama, recibimos los datos que decida compartir: normalmente su nombre, empresa, cargo, dirección de correo electrónico, número de teléfono, país y sus requisitos.",
+            "items": [
+                "Este sitio web no tiene formulario de consulta. Puede prepararle un mensaje de correo electrónico o de WhatsApp, y no se envía nada hasta que usted mismo lo envía desde su aplicación de correo o desde WhatsApp.",
+                "Usamos estos datos para responder a su consulta, gestionar cualquier pedido posterior y conservar un registro de nuestra correspondencia comercial.",
+                "Los mensajes de WhatsApp los gestiona WhatsApp (Meta) conforme a sus propias condiciones y su política de privacidad."
+            ]
+        },
+        "analytics": {
+            "title": "Analítica",
+            "text": "Usamos estas herramientas para entender cómo se utiliza el sitio, por ejemplo qué páginas se visitan y en qué botones de contacto se hace clic, y para mejorarlo.",
+            "items": [
+                {
+                    "name": "Google Analytics 4 (Google)",
+                    "text": "Instala cookies para reconocer un navegador que vuelve. Registra las páginas que visita, los clics en los botones de correo electrónico, WhatsApp y teléfono, su ubicación aproximada, su dispositivo y navegador, y el sitio desde el que llegó."
+                },
+                {
+                    "name": "Vercel Web Analytics (Vercel)",
+                    "text": "Cuenta las páginas vistas y las visitas sin usar cookies."
+                },
+                {
+                    "name": "Microsoft Clarity (Microsoft)",
+                    "text": "Registra cómo se usan las páginas, por ejemplo los clics, el desplazamiento y el movimiento del ratón, y nos lo muestra como mapas de calor y grabaciones de sesiones. Utiliza cookies."
+                }
+            ],
+            "note": "Estos proveedores pueden tratar datos en servidores situados fuera de su país."
+        },
+        "hosting": {
+            "title": "Alojamiento",
+            "text": "El sitio web está alojado en Vercel. Como cualquier servidor web, trata su dirección IP y los datos básicos de la solicitud para servir las páginas."
+        },
+        "maps": {
+            "title": "Mapas y enlaces a otros servicios",
+            "text": "La página de contacto muestra mapas de Google Maps. Cuando se carga un mapa, Google recibe su dirección IP y puede instalar cookies conforme a su propia política. Los enlaces a WhatsApp y Google Maps abren esos servicios, y se aplican sus propias políticas de privacidad."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "text": "El sitio usa una sola cookie propia (NEXT_LOCALE) para recordar su idioma. Google Analytics y Microsoft Clarity nos ayudan a entender cómo se usa el sitio; puede desactivarlos para este navegador más abajo. En la UE, el EEE, el Reino Unido y Suiza, Google Analytics no instala cookies a menos que usted active la analítica. Google Maps puede instalar sus propias cookies al cargar un mapa. También puede bloquear o borrar las cookies en la configuración de su navegador; el sitio funciona igual sin ellas."
+        },
+        "sharing": {
+            "title": "Comunicación de datos",
+            "text": "No vendemos sus datos personales ni los compartimos con terceros para su propio marketing. Los proveedores mencionados en esta página tratan datos para prestar los servicios aquí descritos."
+        },
+        "rights": {
+            "title": "Sus opciones",
+            "text": "Puede preguntarnos qué datos personales tenemos sobre usted y pedirnos que los corrijamos o eliminemos. Escriba a <mail>{email}</mail>."
+        },
+        "changes": {
+            "title": "Cambios en esta política",
+            "text": "Actualizamos esta página cuando cambia la forma en que usamos los datos. La fecha que figura arriba indica la última actualización."
+        }
     },
-    "data_collection": {
-        "title": "Datos que recopilamos",
-        "content": "Recopilamos automáticamente cierta información cuando visita nuestro sitio web:",
-        "item1": "Información del dispositivo y navegador",
-        "item2": "Dirección IP (anonimizada)",
-        "item3": "Páginas que visita y cómo interactúa con ellas"
-    },
-    "analytics": {
-        "title": "Herramientas de análisis",
-        "content": "Utilizamos herramientas de análisis confiables para comprender cómo los visitantes usan nuestro sitio:",
-        "ga4": "Para análisis de tráfico y comprensión del comportamiento del visitante",
-        "clarity": "Para registro de interacciones de usuario y mejora de la interfaz del sitio"
-    },
-    "cookies": {
-        "title": "Cookies",
-        "content": "Nuestro sitio web utiliza cookies para mejorar su experiencia de navegación."
-    },
-    "sharing": {
-        "title": "Compartir datos",
-        "content": "No vendemos ni compartimos sus datos personales con terceros con fines de marketing."
-    },
-    "rights": {
-        "title": "Sus derechos",
-        "content": "Usted tiene derecho a:",
-        "item1": "Solicitar información sobre los datos que tenemos sobre usted",
-        "item2": "Solicitar la eliminación de sus datos",
-        "item3": "Rechazar cualquier comunicación de marketing"
-    },
-    "contact": {
-        "title": "Contáctenos",
-        "content": "Si tiene alguna pregunta sobre esta Política de privacidad, puede contactarnos:",
-        "email_label": "Correo electrónico"
-    }
+    "contact_title": "Preguntas sobre esta política",
+    "contact_text": "Escríbanos a <mail>{email}</mail>."
 }

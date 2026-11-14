@@ -1,0 +1,20 @@
+{
+    "logo_alt": "AZAFCO International",
+    "home_label": "Startseite von AZAFCO International",
+    "nav_label": "Hauptmenü",
+    "nav": {
+        "about": "Über uns",
+        "fish": "Unser Fisch",
+        "chain": "Wertschöpfung",
+        "quality": "Qualität",
+        "markets": "Märkte",
+        "contact": "Kontakt"
+    },
+    "lang_aria": "Sprache: {name}",
+    "lang_list_label": "Sprache wählen",
+    "menu_open": "Menü",
+    "menu_close": "Menü schließen",
+    "whatsapp_cta": "WhatsApp",
+    "whatsapp_aria": "Geschäftsleitung per WhatsApp schreiben (öffnet in neuem Tab)",
+    "whatsapp_message": "Guten Tag AZAFCO International, hier ist … von … (Unternehmen, Land). Wir interessieren uns für:"
+}

@@ -1,48 +1,57 @@
 {
     "kuwait": {
         "country": "Koweït",
-        "description": "Notre plus grand marché d'exportation. Partenaire de confiance pour les grossistes, restaurants et hôtels de premier plan au Koweït.",
-        "features": [
-            "Plus grand volume d'export",
-            "Grossistes premium",
+        "short": "Koweït",
+        "sentence": "au Koweït",
+        "note": "Notre plus grand marché à l’export. Nous approvisionnons des distributeurs, des chaînes de restaurants et des hôtels au Koweït.",
+        "buyers": [
+            "Distributeurs",
             "Chaînes de restaurants",
             "Hôtels"
         ]
     },
     "uae": {
-        "country": "Émirats Arabes Unis",
-        "description": "Marché clé du Golfe. Service aux principaux grossistes, restaurants et supermarchés à Dubaï, Abu Dhabi et Sharjah.",
-        "features": [
-            "Grossistes certifiés",
-            "Restaurants de luxe",
+        "country": "Émirats arabes unis",
+        "short": "EAU",
+        "sentence": "aux Émirats arabes unis",
+        "note": "Notre premier marché à l’export, depuis 2008. Nous approvisionnons des distributeurs, des restaurants, des chaînes de supermarchés et des hôtels à Dubaï, Abou Dabi et Charjah.",
+        "buyers": [
+            "Distributeurs",
+            "Restaurants",
             "Chaînes de supermarchés",
             "Hôtels"
         ]
     },
     "qatar": {
         "country": "Qatar",
-        "description": "Marché en croissance avec de solides partenariats avec les grossistes, hôtels et groupes de restauration qataris.",
-        "features": [
-            "Grossistes majeurs",
+        "short": "Qatar",
+        "sentence": "au Qatar",
+        "note": "Un marché en croissance. Nous travaillons avec des distributeurs, des chaînes hôtelières, des restaurants et des sociétés de restauration collective au Qatar.",
+        "buyers": [
+            "Distributeurs",
             "Chaînes hôtelières",
             "Restaurants",
-            "Sociétés de traiteur"
+            "Sociétés de restauration collective"
         ]
     },
     "iraq": {
         "country": "Irak",
-        "description": "Marché en expansion avec une forte demande et des opportunités commerciales prometteuses.",
-        "features": [
-            "Grossistes locaux",
+        "short": "Irak",
+        "sentence": "en Irak",
+        "note": "Un marché où la demande progresse. Nous approvisionnons des distributeurs locaux, des marchés de gros et des restaurants en Irak.",
+        "buyers": [
+            "Distributeurs locaux",
             "Marchés de gros",
             "Restaurants"
         ]
     },
     "bahrain": {
         "country": "Bahreïn",
-        "description": "Marché actif avec une forte présence auprès des grossistes, restaurants et coopératives.",
-        "features": [
-            "Grossistes",
+        "short": "Bahreïn",
+        "sentence": "à Bahreïn",
+        "note": "Nous approvisionnons des distributeurs, des restaurants, des coopératives et des hôtels à Bahreïn.",
+        "buyers": [
+            "Distributeurs",
             "Restaurants",
             "Coopératives",
             "Hôtels"
@@ -50,46 +59,44 @@
     },
     "lebanon": {
         "country": "Liban",
-        "description": "Marché exigeant réputé pour son appréciation de la qualité et de la fraîcheur. Service aux établissements gastronomiques haut de gamme.",
-        "features": [
-            "Gastronomie haut de gamme",
-            "Grossistes premium",
+        "short": "Liban",
+        "sentence": "au Liban",
+        "note": "Un marché attaché à la qualité et à la fraîcheur. Nous approvisionnons des restaurants, des distributeurs et des hôtels au Liban.",
+        "buyers": [
+            "Restaurants",
+            "Distributeurs",
             "Hôtels"
         ]
     },
     "spain": {
         "country": "Espagne",
-        "description": "Notre porte d'entrée vers l'Europe – actuellement en pause, avec projets de retour. Agrément UE en vigueur.",
-        "features": [
-            "Grossistes européens",
-            "Marchés aux poissons"
-        ]
+        "short": "Espagne",
+        "sentence": "en Espagne"
     },
     "syria": {
         "country": "Syrie",
-        "description": "L'un de nos marchés les plus récents et les plus dynamiques. AZAFCO a lancé ses opérations en Syrie avec une présence forte, au service des distributeurs et restaurants à travers le pays.",
-        "features": [
-            "Présence forte sur le marché",
-            "Grossistes locaux",
+        "short": "Syrie",
+        "sentence": "en Syrie",
+        "note": "Notre marché le plus récent, ouvert en 2026. Nous approvisionnons des distributeurs, des restaurants et des marchés de gros en Syrie.",
+        "buyers": [
+            "Distributeurs",
             "Restaurants",
             "Marchés de gros"
         ]
     },
     "russia": {
         "country": "Russie",
-        "description": "Marché prometteur à grande échelle avec un potentiel de croissance significatif – planification active d'entrée.",
-        "features": [
-            "Grossistes internationaux",
-            "Chaînes de distribution"
-        ]
+        "short": "Russie",
+        "sentence": "en Russie"
     },
     "usa": {
-        "country": "États-Unis d'Amérique",
-        "description": "Notre prochaine porte d'entrée vers le marché nord-américain. Des plans d'expansion sont en cours pour servir le marché américain dans un avenir proche.",
-        "features": [
-            "Grossistes internationaux",
-            "Chaînes de distribution",
-            "Chaînes de restaurants"
-        ]
+        "country": "États-Unis",
+        "short": "États-Unis",
+        "sentence": "aux États-Unis"
+    },
+    "europe": {
+        "country": "Europe",
+        "short": "Europe",
+        "sentence": "en Europe"
     }
 }

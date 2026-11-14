@@ -1,0 +1,89 @@
+{
+    "meta": {
+        "title": "Noticias y prensa",
+        "description": "Noticias, cobertura de prensa e hitos de AZAFCO International, además de noticias del sector pesquero egipcio de fuentes citadas, cada una con su fecha."
+    },
+    "breadcrumb": "Noticias y prensa",
+    "hero": {
+        "eyebrow": "Noticias y prensa",
+        "title": "Noticias, prensa e hitos",
+        "intro": "Visitas, cobertura en medios e hitos de AZAFCO International, junto con noticias del sector de fuentes identificadas. Cada noticia indica su fecha y su fuente."
+    },
+    "illustrative": "Foto ilustrativa",
+    "source": "Fuente: {name}",
+    "view_source": "Ver la fuente",
+    "new_tab": "(se abre en una pestaña nueva)",
+    "press": {
+        "eyebrow": "Noticias de la empresa",
+        "title": "Visitas y cobertura en medios",
+        "intro": "Visitas oficiales a nuestra planta y cobertura de AZAFCO International en prensa y televisión."
+    },
+    "milestones": {
+        "eyebrow": "Nuestros hitos",
+        "title": "De 2008 a hoy",
+        "list_label": "Hitos de la empresa",
+        "items": {
+            "founding": {
+                "title": "Se funda AZAFCO International",
+                "text": "Nacimos en Kafr el-Sheikh y empezamos a envasar y exportar pescado fresco."
+            },
+            "baltim": {
+                "title": "Nuestra primera planta, en Baltim",
+                "text": "Abrimos nuestra primera planta en la Zona Industrial de Baltim, en Kafr el-Sheikh."
+            },
+            "motobas": {
+                "title": "Nuestra nueva planta, en Motobas",
+                "text": "Abrimos nuestra nueva planta en la Zona Industrial de Motobas, en Kafr el-Sheikh."
+            }
+        },
+        "iso": {
+            "title": "Certificación ISO",
+            "text": "Contamos con certificados ISO de gestión de la calidad, gestión ambiental y gestión de la seguridad y salud en el trabajo, con certificación de TÜV AUSTRIA.",
+            "link": "Calidad y certificados"
+        }
+    },
+    "industry": {
+        "eyebrow": "Contexto del sector",
+        "title": "El sector pesquero egipcio en las noticias",
+        "intro": "Informaciones sobre el sector pesquero egipcio y sobre Kafr el-Sheikh, la gobernación donde se encuentra nuestra planta.",
+        "note": "Las cifras de esta sección proceden de las fuentes citadas, a la fecha indicada. No son datos de AZAFCO."
+    },
+    "items": {
+        "governor_visit": {
+            "title": "El gobernador de Kafr el-Sheikh visita nuestra planta de Motobas",
+            "summary": "El general de división Dr. Alaa Abdel Moaty, gobernador de Kafr el-Sheikh, recorrió nuestra planta en la Zona Industrial de Motobas como parte de la labor de la gobernación para apoyar la industria pesquera y las exportaciones.",
+            "source": "Gobernación de Kafr el-Sheikh"
+        },
+        "press_feature": {
+            "title": "Reportaje en Dar Al-Sharq Al-Awsat",
+            "summary": "El periódico Dar Al-Sharq Al-Awsat publicó un perfil de AZAFCO International y de su presidente sobre la labor de la empresa en la exportación de pescado fresco.",
+            "source": "Periódico Dar Al-Sharq Al-Awsat"
+        },
+        "tv_program": {
+            "title": "Episodio de «Helwa Ya Baladi» sobre AZAFCO International",
+            "summary": "El programa «Helwa Ya Baladi», de la cadena Misr Al Balad TV, emitió un episodio especial sobre nuestro trabajo de envasado y exportación de pescado fresco.",
+            "source": "Misr Al Balad TV (en YouTube)"
+        },
+        "egypt_ranking": {
+            "title": "Egipto, primero de África en pesca, según el ministro de Agricultura",
+            "summary": "En una reunión con el ministro de Pesca de Gambia, el ministro de Agricultura de Egipto, El-Sayed El-Quseir, afirmó que Egipto ocupa el primer puesto de África y el sexto del mundo en pesca.",
+            "source": "Servicio de Información del Estado (SIS)"
+        },
+        "kafr_el_sheikh_production": {
+            "title": "Kafr el-Sheikh produce cerca de la mitad del pescado de Egipto",
+            "summary": "El portal Al-Ahram Gate informó de que Kafr el-Sheikh produce alrededor del 50 % del pescado de Egipto, unas 800 000 toneladas al año, y de que la acuicultura representa el 70 % de la producción de la gobernación.",
+            "source": "Al-Ahram Gate"
+        },
+        "ghalioun_project": {
+            "title": "Inaugurada la granja piscícola de Ghalioun en Kafr el-Sheikh",
+            "summary": "El presidente Abdelfatah al Sisi inauguró la ciudad industrial pesquera de Ghalioun en Kafr el-Sheikh: una granja piscícola de unos 4000 feddanes con 1359 estanques de peces y camarones, criaderos y plantas de procesado de pescado, piensos y hielo.",
+            "source": "Youm7"
+        }
+    },
+    "teaser": {
+        "eyebrow": "Noticias y prensa",
+        "title": "Últimas noticias",
+        "intro": "Visitas, cobertura en medios e hitos, cada uno con su fecha y su fuente.",
+        "all": "Todas las noticias y la prensa"
+    }
+}

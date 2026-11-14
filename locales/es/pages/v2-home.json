@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "title": "AZAFCO International | Pescado egipcio para exportación",
+        "description": "AZAFCO International cría, compra, envasa y exporta pescado fresco egipcio para importadores y distribuidores de Oriente Medio y más allá."
+    },
+    "news": {
+        "eyebrow": "Noticias",
+        "title": "En los medios",
+        "intro": "El gobernador de Kafr el-Sheikh en nuestra planta de Motobas y un programa de televisión sobre nuestro trabajo de envasado y exportación de pescado fresco.",
+        "links": {
+            "governor_visit": "Ver en Facebook",
+            "tv_program": "Ver en YouTube"
+        },
+        "all": "Todas las noticias y la prensa",
+        "new_tab": "(se abre en una pestaña nueva)"
+    }
+}

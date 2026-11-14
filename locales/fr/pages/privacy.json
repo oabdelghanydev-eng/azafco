@@ -1,41 +1,72 @@
 {
+    "meta": {
+        "title": "Politique de confidentialité",
+        "description": "Comment AZAFCO International utilise les données que vous nous envoyez et celles de Google Analytics, Vercel Web Analytics, Microsoft Clarity et Google Maps."
+    },
+    "breadcrumb": "Politique de confidentialité",
+    "eyebrow": "Informations légales",
     "title": "Politique de confidentialité",
-    "last_updated": "Dernière mise à jour",
-    "intro": {
-        "title": "Introduction",
-        "content": "Chez AZAFCO International, nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles."
+    "intro": "Les informations que nous recevons lorsque vous visitez ce site ou nous contactez, la raison pour laquelle nous les utilisons et ce que vous pouvez nous demander de faire.",
+    "last_updated": "Dernière mise à jour : {date}",
+    "toc": "Sur cette page",
+    "sections": {
+        "who": {
+            "title": "Qui sommes-nous",
+            "text": "Ce site est exploité par {legalName} (AZAFCO International), société égyptienne immatriculée au registre du commerce sous le n° {register}. Bureau principal : {address}."
+        },
+        "contact": {
+            "title": "Lorsque vous nous contactez",
+            "text": "Si vous nous écrivez par e-mail, nous envoyez un message WhatsApp ou nous appelez, nous recevons les informations que vous choisissez de communiquer : généralement votre nom, votre société, votre fonction, votre adresse e-mail, votre numéro de téléphone, votre pays et vos besoins.",
+            "items": [
+                "Ce site ne comporte pas de formulaire de demande. Il peut préparer pour vous un e-mail ou un message WhatsApp, et rien n’est envoyé tant que vous ne l’envoyez pas vous-même depuis votre messagerie ou WhatsApp.",
+                "Nous utilisons ces informations pour répondre à votre demande, traiter toute commande qui en découle et conserver une trace de notre correspondance commerciale.",
+                "Les messages WhatsApp sont traités par WhatsApp (Meta) selon ses propres conditions et sa propre politique de confidentialité."
+            ]
+        },
+        "analytics": {
+            "title": "Mesure d’audience",
+            "text": "Nous utilisons ces outils pour comprendre comment le site est utilisé, par exemple quelles pages sont consultées et sur quels boutons de contact les visiteurs cliquent, et pour améliorer le site.",
+            "items": [
+                {
+                    "name": "Google Analytics 4 (Google)",
+                    "text": "Dépose des cookies pour reconnaître un navigateur qui revient sur le site. Enregistre les pages que vous consultez, les clics sur les boutons e-mail, WhatsApp et téléphone, votre localisation approximative, votre appareil et votre navigateur, ainsi que le site qui vous a dirigé vers nous."
+                },
+                {
+                    "name": "Vercel Web Analytics (Vercel)",
+                    "text": "Compte les pages vues et les visites sans utiliser de cookies."
+                },
+                {
+                    "name": "Microsoft Clarity (Microsoft)",
+                    "text": "Enregistre la façon dont les pages sont utilisées (clics, défilement, mouvements de la souris) et nous la présente sous forme de cartes de chaleur et de rediffusions de sessions. Utilise des cookies."
+                }
+            ],
+            "note": "Ces prestataires peuvent traiter des données sur des serveurs situés hors de votre pays."
+        },
+        "hosting": {
+            "title": "Hébergement",
+            "text": "Le site est hébergé par Vercel. Comme tout serveur web, il traite votre adresse IP et les données de base de la requête pour afficher les pages."
+        },
+        "maps": {
+            "title": "Cartes et liens vers d’autres services",
+            "text": "La page de contact affiche des cartes Google Maps. Lorsqu’une carte se charge, Google reçoit votre adresse IP et peut déposer des cookies selon sa propre politique. Les liens vers WhatsApp et Google Maps ouvrent ces services, et leurs propres politiques de confidentialité s’appliquent."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "text": "Le site dépose un seul cookie qui lui est propre (NEXT_LOCALE) pour mémoriser votre langue. Google Analytics et Microsoft Clarity nous aident à comprendre l’utilisation du site ; vous pouvez les désactiver pour ce navigateur ci-dessous. Dans l’UE, l’EEE, au Royaume-Uni et en Suisse, Google Analytics ne dépose aucun cookie tant que vous n’activez pas la mesure d’audience. Google Maps peut déposer ses propres cookies lors du chargement d’une carte. Vous pouvez aussi bloquer ou supprimer les cookies dans les réglages de votre navigateur ; le site fonctionne sans eux."
+        },
+        "sharing": {
+            "title": "Partage",
+            "text": "Nous ne vendons pas vos données personnelles et ne les partageons pas avec des tiers pour leur propre marketing. Les prestataires cités sur cette page traitent des données pour faire fonctionner les services décrits ici."
+        },
+        "rights": {
+            "title": "Vos choix",
+            "text": "Vous pouvez nous demander quelles données personnelles nous détenons à votre sujet, et nous demander de les corriger ou de les supprimer. Écrivez à <mail>{email}</mail>."
+        },
+        "changes": {
+            "title": "Modifications de cette politique",
+            "text": "Nous mettons à jour cette page lorsque notre utilisation des données change. La date indiquée en haut correspond à la dernière mise à jour."
+        }
     },
-    "data_collection": {
-        "title": "Données que nous collectons",
-        "content": "Nous collectons automatiquement certaines informations lorsque vous visitez notre site web :",
-        "item1": "Informations sur l'appareil et le navigateur",
-        "item2": "Adresse IP (anonymisée)",
-        "item3": "Pages que vous visitez et comment vous interagissez avec elles"
-    },
-    "analytics": {
-        "title": "Outils d'analyse",
-        "content": "Nous utilisons des outils d'analyse de confiance pour comprendre comment les visiteurs utilisent notre site :",
-        "ga4": "Pour l'analyse du trafic et la compréhension du comportement des visiteurs",
-        "clarity": "Pour l'enregistrement des interactions utilisateur et l'amélioration de l'interface du site"
-    },
-    "cookies": {
-        "title": "Cookies",
-        "content": "Notre site web utilise des cookies pour améliorer votre expérience de navigation."
-    },
-    "sharing": {
-        "title": "Partage des données",
-        "content": "Nous ne vendons ni ne partageons vos données personnelles avec des tiers à des fins de marketing."
-    },
-    "rights": {
-        "title": "Vos droits",
-        "content": "Vous avez le droit de :",
-        "item1": "Demander à connaître les données que nous détenons sur vous",
-        "item2": "Demander la suppression de vos données",
-        "item3": "Vous désabonner de toute communication marketing"
-    },
-    "contact": {
-        "title": "Nous contacter",
-        "content": "Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter :",
-        "email_label": "E-mail"
-    }
+    "contact_title": "Questions sur cette politique",
+    "contact_text": "Écrivez-nous à <mail>{email}</mail>."
 }

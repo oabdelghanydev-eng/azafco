@@ -1,28 +1,32 @@
 {
     "name": "AZAFCO International",
-    "fullName": "AZAFCO International Investment & Development",
-    "description": "Ägyptens führender B2B-Fischexporteur für Großhändler, Restaurants und Hotels – Premium-Frischfisch seit 2008.",
-    "workingHours": "Rund um die Uhr erreichbar",
-    "workingHoursNote": "24/7 geöffnet – je nach Abteilung",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "description": "Ägyptisches Unternehmen, das frischen Fisch selbst züchtet und zukauft, sortiert, verpackt und an Importeure, Distributoren und Gastronomiekunden exportiert. Gegründet 2008.",
+    "workingHours": "Sa–Do 8:00–17:00 Uhr (Kairoer Zeit)",
+    "workingHoursNote": "WhatsApp: direkt an die Geschäftsleitung · für schnelle Abschlüsse",
+    "officialChannels": {
+        "title": "Offizielle Kanäle",
+        "text": "Unsere offiziellen Kanäle sind WhatsApp {phone} (Geschäftsleitung) und E-Mails von der Domain azafco.com.eg (Exportteam: {email}). Wenn Sie Bankverbindungen oder Zahlungsanweisungen von einer anderen Nummer oder Adresse erhalten, bestätigen Sie diese vor der Zahlung über einen dieser Kanäle bei uns."
+    },
     "addresses": {
         "main": {
-            "title": "Hauptniederlassung",
-            "address": "Mastora, neben der Wohltätigkeitsorganisation, El-Borollos, Kafr El-Sheikh, Ägypten"
+            "title": "Hauptsitz",
+            "address": "Mastora, neben dem Wohltätigkeitsverein, El-Borollos, Kafr el-Sheikh, Ägypten"
         },
         "factory": {
-            "title": "Produktionsstätte",
-            "address": "Nr. 120 – Futtersektor – Industriezone – Motobas – Kafr El-Sheikh, Ägypten"
+            "title": "Werk",
+            "address": "Nr. 120, Futtermittelsektor, Industriegebiet, Motobas, Kafr el-Sheikh, Ägypten"
         }
     },
     "copyright": "AZAFCO International",
     "privacyLink": "Datenschutzerklärung",
-    "leadersSince": "Führend im Frischfischexport seit",
-    "tagline": "Premium-Frischfisch aus Ägypten – weltweit",
+    "leadersSince": "Gegründet",
+    "tagline": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
     "usps": {
-        "price": "Wettbewerbsfähige Großhandelspreise",
-        "quality": "ISO- & HACCP-zertifizierte Qualität",
-        "flexibility": "Individuelle Größen, flexible Bestellungen",
-        "availability": "24/7-Betrieb, kontinuierliche Lieferfähigkeit",
-        "service": "Zuverlässige Erfüllung Ihrer Marktanforderungen"
+        "price": "Preise werden pro Auftrag bestätigt",
+        "quality": "ISO 9001, 14001 und 45001, zertifiziert durch TÜV AUSTRIA",
+        "flexibility": "Gewichtsklasse und Verpackung pro Auftrag vereinbart",
+        "availability": "Eigene Kühl-Lkw und Kühlhäuser",
+        "service": "Vom Teich bis zur Palette: jede Stufe in der Hand von AZAFCO"
     }
 }

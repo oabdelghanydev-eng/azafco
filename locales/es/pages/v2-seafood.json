@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "title": "Pescado de Egipto: cría, compra y exportación",
+        "description": "Criamos y compramos pescado fresco en Egipto; lo calibramos, envasamos y exportamos para importadores, distribuidores y hostelería en Oriente Medio y más allá."
+    },
+    "breadcrumb": "Pescado y acuicultura",
+    "hero": {
+        "eyebrow": "Pescado y acuicultura",
+        "title": "Pescado egipcio que criamos y compramos para importadores",
+        "intro": "Criamos y compramos pescado; después lo inspeccionamos, lavamos, enhielamos, calibramos, envasamos y exportamos, con camiones frigoríficos, logística y cámaras frigoríficas propios.",
+        "primary": "Ver nuestro pescado",
+        "secondary": "Procesado y envasado"
+    },
+    "stages": {
+        "line": "Nos encargamos de cada etapa, del estanque al palé.",
+        "link": "Ver las cinco etapas"
+    },
+    "species": {
+        "eyebrow": "Nuestro pescado",
+        "title": "12 especies principales",
+        "intro": "Abra una especie para ver su ficha de especificaciones o busque en la lista completa.",
+        "more_species": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido.",
+        "view_all": "Ver todas las especies"
+    },
+    "farm": {
+        "eyebrow": "Cría y abastecimiento",
+        "title": "Un suministro que empieza en el origen",
+        "text_1": "Criamos pescado y compramos a otros productores, para ajustarnos a las especies, las cantidades y los plazos de cada comprador. Indíquenos su volumen y su ventana de entrega, y planificaremos el suministro con usted."
+    },
+    "processing": {
+        "eyebrow": "Procesado",
+        "title": "Preparado según la especificación acordada",
+        "text": "Inspeccionamos, lavamos, enhielamos, calibramos y envasamos cada pedido según la especificación acordada con usted.",
+        "point_1": "Calibrado según el peso de cada pieza, dentro del rango de su pedido",
+        "point_2": "Embalaje, peso neto y etiquetas según lo confirmado por escrito",
+        "point_3": "Se comprueba según la especificación acordada antes de cerrar las cajas",
+        "link": "Ver procesado y envasado"
+    },
+    "requirements": {
+        "eyebrow": "Sus requisitos",
+        "title": "Empiece por la especificación",
+        "intro": "Indíquenos la especie, el calibre, la presentación, el embalaje, el volumen y el destino. El equipo de exportación revisa lo que podemos suministrar y se pone en contacto con usted.",
+        "format_title": "Presentación",
+        "format_text": "Nuestro pescado se vende entero y fresco refrigerado. Consulte al equipo de exportación por cualquier otra presentación que necesite.",
+        "grade_title": "Calibre",
+        "grade_text": "El rango de peso por pieza que necesita su mercado.",
+        "weight_title": "Peso neto",
+        "weight_text": "Peso neto por caja.",
+        "packing_title": "Embalaje",
+        "packing_text": "Tipo de caja, etiquetas e idioma de las etiquetas.",
+        "destination_title": "Destino",
+        "destination_text": "País, ciudad, condiciones de entrega y documentos necesarios."
+    },
+    "quality": {
+        "eyebrow": "Calidad",
+        "title": "Certificación ISO y control en cada pedido",
+        "text": "Contamos con los certificados ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018, con certificación de TÜV AUSTRIA. Cada pedido se comprueba según la especificación acordada antes de cerrar las cajas.",
+        "link": "Calidad y certificados",
+        "docs_email": "Escriba al equipo de exportación sobre documentos",
+        "docs_subject": "Documentos de calidad para nuestro mercado"
+    },
+    "audience": {
+        "eyebrow": "Para quién es",
+        "title": "Pensado para compradores profesionales",
+        "importers": "Importadores de pescado",
+        "distributors": "Empresas mayoristas y de distribución",
+        "foodservice": "Proveedores de restauración y catering",
+        "horeca": "Grupos hoteleros y de restauración",
+        "partners": "Empresas que buscan un socio de suministro a largo plazo"
+    },
+    "pending": {
+        "farm": "Fotos de las granjas + superficies, especies y cifras de producción verificadas de las granjas"
+    }
+}

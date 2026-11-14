@@ -1,0 +1,20 @@
+{
+    "eyebrow": "Calidad",
+    "title": "Contamos con 3 certificados ISO",
+    "intro": "TÜV AUSTRIA certifica nuestros sistemas de gestión según estas normas. En cuanto a los documentos sanitarios y de seguridad alimentaria que exige su mercado, nuestro equipo de exportación le confirma, antes de que haga su pedido, cuáles acompañan cada envío.",
+    "link": "Cómo trabajamos la calidad",
+    "certs": {
+        "iso9001": {
+            "code": "ISO 9001:2015",
+            "name": "Gestión de la calidad"
+        },
+        "iso14001": {
+            "code": "ISO 14001:2015",
+            "name": "Gestión ambiental"
+        },
+        "iso45001": {
+            "code": "ISO 45001:2018",
+            "name": "Seguridad y salud en el trabajo"
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "meta": {
+        "title": "Ihre Anforderungen für Frischfisch senden",
+        "description": "Senden Sie AZAFCO International Ihre Anforderungen: Fischart, Gewichtsklasse, Verpackung, Menge und Zielort. Preise werden pro Auftrag bestätigt."
+    },
+    "breadcrumb": "Anforderungen senden",
+    "hero": {
+        "eyebrow": "Partnerschaft starten",
+        "title": "Anforderungen senden",
+        "intro": "Öffnen Sie eine vorbereitete Nachricht, füllen Sie die leeren Zeilen aus und senden Sie sie von Ihrer Firmen-E-Mail oder Ihrem geschäftlichen WhatsApp. So erkennen wir, wer uns schreibt; unsere E-Mails kommen immer von der Domain azafco.com.eg."
+    },
+    "short_hero": {
+        "corporate_title": "Unternehmens- und Partnerschaftsanfragen",
+        "corporate_intro": "Für Partnerschaften, Investitionen oder andere geschäftliche Themen. Schreiben Sie von Ihrer Firmen-E-Mail; Produktdetails sind nicht nötig.",
+        "documents_title": "Dokumente anfordern",
+        "documents_intro": "Fragen Sie von Ihrer Firmen-E-Mail aus nach Produktspezifikationen oder dem Unternehmensprofil. Wir bestätigen, was wir für Ihre Anfrage bereitstellen können."
+    },
+    "aside": {
+        "title": "Was nach Ihrer Nachricht passiert",
+        "steps": [
+            "Das Exportteam prüft Ihre Anforderungen anhand der Spezifikation und der aktuellen Verfügbarkeit.",
+            "Wir melden uns, um die Details und offene Punkte zu bestätigen.",
+            "Preise, Menge, Verpackung und Bedingungen werden für jeden Auftrag schriftlich bestätigt."
+        ],
+        "no_promise": "Das Senden Ihrer Anforderungen verpflichtet weder Sie noch uns zu einem Auftrag. Preise werden pro Auftrag bestätigt.",
+        "prepare_title": "Was Sie bereithalten sollten",
+        "prepare": [
+            "Fischart und Gewichtsklasse",
+            "Menge pro Lieferung und Häufigkeit",
+            "Bestimmungsland und Lieferzeitpunkt",
+            "Luft- oder Straßenfracht sowie Zielflughafen oder Grenzübergang",
+            "Bevorzugter Incoterm und Zahlungsbedingungen",
+            "Anforderungen an Verpackung und Etikettierung"
+        ],
+        "attach_title": "Sie haben eine Spezifikation?",
+        "attach_text": "Fügen Sie Ihre Spezifikation oder Verpackungsvorgabe der E-Mail bei, falls vorhanden."
+    },
+    "switch": {
+        "to_corporate": "Sie kaufen keinen Fisch? <link>Unternehmensanfrage senden</link>",
+        "to_seafood": "Sie möchten Fisch kaufen? <link>Senden Sie stattdessen Ihre Anforderungen</link>"
+    },
+    "request": {
+        "title": "Ihre Nachricht, bereit zum Senden",
+        "title_corporate": "Ihre Anfrage, bereit zum Senden",
+        "title_documents": "Ihre Dokumentenanfrage, bereit zum Senden",
+        "intro": "Wählen Sie einen Kanal. Jede Schaltfläche öffnet eine vorbereitete Nachricht: Füllen Sie die leeren Zeilen aus und senden Sie sie dann.",
+        "summary_title": "Bereits ausgefüllt anhand der Seite, von der Sie kommen",
+        "summary_note": "Sie können jede Zeile der Nachricht vor dem Senden ändern.",
+        "email_cta": "E-Mail an das Exportteam",
+        "email_role": "Exportteam · Details und Dokumente",
+        "whatsapp_cta": "Geschäftsleitung per WhatsApp schreiben",
+        "whatsapp_role": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",
+        "attach_note": "Wenn Sie eine Spezifikation oder Verpackungsvorgabe haben, fügen Sie sie der E-Mail bei.",
+        "fallback_title": "Falls sich Ihr E-Mail-Programm nicht öffnet",
+        "fallback_text": "Schreiben Sie von Ihrer Firmen-E-Mail an diese Adresse und verwenden Sie diesen Betreff.",
+        "email_label": "E-Mail",
+        "subject_label": "Betreff",
+        "phone_label": "Telefon (Geschäftsleitung)"
+    },
+    "mail": {
+        "greeting": "Sehr geehrtes AZAFCO-Exportteam,",
+        "intro_quote": "wir möchten die Lieferung folgender Produkte besprechen:",
+        "intro_specs": "bitte senden Sie uns die Spezifikationen für Folgendes:",
+        "intro_corporate": "ich möchte Folgendes besprechen:",
+        "intro_documents": "bitte senden Sie uns folgende Dokumente:",
+        "subject_quote": "Lieferanforderungen",
+        "subject_quote_for": "Lieferanforderungen: {item}",
+        "subject_specs": "Bitte um Spezifikation",
+        "subject_specs_for": "Bitte um Spezifikation: {item}",
+        "subject_corporate": "Unternehmensanfrage",
+        "subject_documents": "Bitte um Dokumente",
+        "subject_documents_for": "Bitte um Dokumente: {item}",
+        "wa_intro_quote": "Guten Tag AZAFCO, ich möchte über eine Lieferpartnerschaft sprechen.",
+        "wa_intro_specs": "Guten Tag AZAFCO, ich hätte gern die Spezifikationen.",
+        "wa_intro_corporate": "Guten Tag AZAFCO, ich habe eine Unternehmensanfrage.",
+        "wa_intro_documents": "Guten Tag AZAFCO, ich möchte Dokumente anfordern.",
+        "labels": {
+            "species": "Fischart",
+            "grade": "Gewichtsklasse",
+            "form": "Produktform",
+            "packing": "Verpackung",
+            "volume": "Menge pro Lieferung",
+            "frequency": "Häufigkeit",
+            "destination": "Zielort",
+            "freight": "Fracht (Luft oder Straße) und Zielflughafen oder Grenzübergang",
+            "terms": "Bevorzugter Incoterm und Zahlungsbedingungen",
+            "date": "Gewünschter Termin",
+            "company": "Unternehmen",
+            "name": "Name",
+            "job": "Position",
+            "website": "Website",
+            "phone": "Telefon",
+            "topic": "Thema",
+            "message": "Nachricht",
+            "documents": "Benötigte Dokumente",
+            "product": "Produkt",
+            "market": "Markt"
+        }
+    }
+}

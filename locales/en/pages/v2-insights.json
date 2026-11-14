@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "title": "Insights for fish importers",
+        "description": "Guides for fish importers on HS codes, documents and the cold chain, plus AZAFCO news and press, with the date and source of every fact."
+    },
+    "breadcrumb": "Insights",
+    "hero": {
+        "eyebrow": "Insights",
+        "title": "Knowledge for better buying decisions",
+        "intro": "Practical guides on documents and the cold chain, plus company news and press, with the date and source of every fact.",
+        "primary": "Read the importer guide",
+        "secondary": "News and press"
+    },
+    "featured": {
+        "eyebrow": "Featured guide",
+        "read": "Read the guide"
+    },
+    "categories": {
+        "eyebrow": "What we publish",
+        "title": "Content by type, clearly labelled",
+        "importer_guide": "Importer guides",
+        "importer_guide_text": "HS codes, export documents and cold-chain basics for importing fresh fish from Egypt.",
+        "behind_operations": "Behind the operations",
+        "behind_operations_text": "Grading, packing and dispatch at our plant, published after review.",
+        "company_news": "News and press",
+        "company_news_text": "Visits, media coverage, milestones and industry news, each with its date and a named source.",
+        "news_count": "{count, plural, one {# item} other {# items}}"
+    },
+    "grid": {
+        "title": "All articles",
+        "count": "{count, plural, one {# article} other {# articles}}"
+    },
+    "standards": {
+        "title": "Editorial standards",
+        "text": "We state the date and source of every fact. Industry data is never presented as AZAFCO data, and we do not publish production figures or certificates without valid evidence."
+    },
+    "article": {
+        "by": "Published by",
+        "author": "AZAFCO International",
+        "published": "Published",
+        "reviewed": "Last reviewed",
+        "toc": "In this article",
+        "sources_side": "Sources",
+        "sources_side_text": "{count, plural, one {# official source, listed at the end and linked in the text.} other {# official sources, listed at the end and linked in the text.}}",
+        "related_title": "Continue with",
+        "related": [
+            {
+                "title": "For importers",
+                "text": "The procurement path and what to prepare."
+            },
+            {
+                "title": "Our markets",
+                "text": "Where we ship today and what is planned."
+            },
+            {
+                "title": "Our fish",
+                "text": "A page for each of our main species."
+            }
+        ],
+        "table_mobile_note": "Codes per species",
+        "related_eyebrow": "Read next",
+        "reading_time": "Reading time"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "eyebrow": "Unser Fisch",
+    "title": "Unsere 12 wichtigsten Frischfischarten",
+    "intro": "Ganz und frisch gekühlt, nach Stückgewicht sortiert und auf Eis verpackt. Gewichtsklasse und Verpackung stimmen wir vor jeder Lieferung mit Ihnen ab.",
+    "note": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage.",
+    "species": {
+        "tilapia": { "name": "Tilapia", "alt": "Ganze Tilapia, Seitenansicht" },
+        "sea_bass": { "name": "Wolfsbarsch", "alt": "Ganzer Wolfsbarsch, Seitenansicht" },
+        "sea_bream": { "name": "Dorade", "alt": "Ganze Dorade, Seitenansicht" },
+        "meagre": { "name": "Adlerfisch", "alt": "Ganzer Adlerfisch, Seitenansicht" },
+        "mullet": { "name": "Großkopf­meeräsche", "alt": "Ganze Großkopfmeeräsche, Seitenansicht" },
+        "thinlip_mullet": { "name": "Dünnlippige Meeräsche", "alt": "Ganze Dünnlippige Meeräsche, Seitenansicht" },
+        "common_carp": { "name": "Karpfen", "alt": "Ganzer Karpfen, Seitenansicht" },
+        "mirror_carp": { "name": "Spiegelkarpfen", "alt": "Ganzer Spiegelkarpfen, Seitenansicht" },
+        "grass_carp": { "name": "Graskarpfen", "alt": "Ganzer Graskarpfen, Seitenansicht" },
+        "silver_carp": { "name": "Silberkarpfen", "alt": "Ganzer Silberkarpfen, Seitenansicht" },
+        "catfish": { "name": "Afrikanischer Raubwels", "alt": "Ganzer Afrikanischer Raubwels, Seitenansicht" },
+        "bayad_catfish": { "name": "Bagrus-Wels", "alt": "Ganzer Bagrus-Wels, Seitenansicht" }
+    },
+    "pageLink": "Alle Fischarten ansehen"
+}

@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "title": "Kontakt: WhatsApp, E-Mail, Büro und Werk",
+        "description": "WhatsApp: Geschäftsleitung von AZAFCO International, für schnelle Abschlüsse. E-Mail: Exportteam, für Details und Dokumente. Büro und Werk in Kafr el-Sheikh."
+    },
+    "breadcrumb": "Kontakt",
+    "hero": {
+        "eyebrow": "Kontakt",
+        "title": "Mit einer Nachricht zur Partnerschaft",
+        "intro": "Schreiben Sie der Geschäftsleitung per WhatsApp für schnelle Abschlüsse oder senden Sie dem Exportteam eine E-Mail für Details und Dokumente.",
+        "actions": {
+            "whatsapp": "Geschäftsleitung per WhatsApp schreiben",
+            "email": "E-Mail an das Exportteam"
+        }
+    },
+    "channels": {
+        "eyebrow": "Direkte Kanäle",
+        "title": "Wählen Sie den passenden Kanal für Ihr Anliegen",
+        "intro": "Eine Nummer für die Geschäftsleitung per WhatsApp und Telefon, eine E-Mail-Adresse für das Exportteam.",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse"
+        },
+        "email": {
+            "title": "E-Mail",
+            "sub": "Exportteam · Details und Dokumente"
+        },
+        "phone": {
+            "title": "Telefon",
+            "sub": "Geschäftsleitung unter derselben Nummer anrufen"
+        },
+        "hours": "Bürozeiten",
+        "vcard": {
+            "title": "Kontaktdaten speichern",
+            "text": "Eine Kontaktkarte (vCard), die die Nummer der Geschäftsleitung und die E-Mail-Adresse des Exportteams in Ihr Telefon übernimmt.",
+            "action": "Kontaktkarte herunterladen"
+        },
+        "new_tab": "(öffnet in neuem Tab)"
+    },
+    "routes": {
+        "eyebrow": "Anforderungen senden",
+        "legend": "Worum geht es bei Ihrer Anfrage?",
+        "intro": "Jede Option bereitet eine Nachricht vor, die Sie von Ihrer Firmen-E-Mail oder Ihrem WhatsApp aus senden. So wissen wir, von wem die Anfrage kommt.",
+        "seafood_title": "Fischlieferung",
+        "seafood_text": "Für Importeure und Einkaufsteams: Fischart, Gewichtsklasse, Verpackung, Menge, Zielort und Zeitplan.",
+        "seafood_action": "Anforderungen senden",
+        "documents_title": "Dokumente",
+        "documents_text": "Produktspezifikationen oder das Unternehmensprofil. Eine kurze Anfrage: Fischart oder Menge sind nicht nötig.",
+        "documents_action": "Dokumente anfordern",
+        "corporate_title": "Unternehmenspartnerschaft oder andere Themen",
+        "corporate_text": "Partnerschaften, Investitionen oder andere Themen: eine kurze Vorstellung Ihres Unternehmens und der Zusammenarbeit, die Sie vorschlagen.",
+        "corporate_action": "Anfrage senden"
+    },
+    "locations": {
+        "eyebrow": "Standorte",
+        "title": "Hauptsitz und Werk",
+        "intro": "Unser Hauptsitz befindet sich in El-Borollos, unser Werk in Motobas, beide in Kafr el-Sheikh, Ägypten.",
+        "factory": "Werk",
+        "office": "Hauptsitz",
+        "map_open": "In Google Maps öffnen",
+        "map_title_factory": "Karte des Werks von AZAFCO International in Motobas",
+        "map_title_office": "Karte des Hauptsitzes von AZAFCO International",
+        "map_note": "Die Karten werden von Google Maps geladen."
+    },
+    "next": {
+        "eyebrow": "Nach Ihrer Nachricht",
+        "title": "Was nach Ihrer Nachricht passiert",
+        "steps": [
+            "Das Exportteam prüft Ihre Anforderungen anhand der Spezifikation und der aktuellen Verfügbarkeit.",
+            "Wir melden uns, um die Details und offene Punkte zu bestätigen.",
+            "Preise, Menge, Verpackung und Bedingungen werden für jeden Auftrag schriftlich bestätigt."
+        ],
+        "no_promise": "Das Senden Ihrer Anforderungen verpflichtet weder Sie noch uns zu einem Auftrag. Preise werden pro Auftrag bestätigt."
+    },
+    "privacy": {
+        "title": "Wie wir Ihre Daten verwenden",
+        "text": "Die Kontaktdaten und Anforderungen, die Sie uns senden, verwenden wir nur, um Ihre Anfrage zu beantworten und daraus folgende Geschäfte abzuwickeln, wie in unserer Datenschutzerklärung beschrieben.",
+        "link": "Datenschutzerklärung lesen"
+    },
+    "trust": {
+        "title": "Eingetragenes Unternehmen",
+        "register": "Handelsregister",
+        "tax": "Steuernummer",
+        "proof_title": "Erfahrung",
+        "proof": [
+            "Gegründet 2008",
+            "7+ Märkte im Nahen Osten und darüber hinaus",
+            "ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018, zertifiziert durch TÜV AUSTRIA"
+        ],
+        "proof_link": "Qualität und Zertifikate ansehen"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "title": "Nuestras áreas de negocio | AZAFCO International",
+        "description": "AZAFCO International: la cría, compra, envasado y exportación de pescado como actividad principal, junto a agricultura, ganadería e inversión en Egipto."
+    },
+    "breadcrumb": "Nuestras áreas de negocio",
+    "hero": {
+        "eyebrow": "Nuestras áreas de negocio",
+        "title": "El pescado como actividad principal, junto a agricultura, ganadería e inversión",
+        "intro": "AZAFCO International trabaja en pescado, agricultura, ganadería e inversión. El pescado es nuestra actividad principal: criamos, compramos, envasamos y exportamos pescado fresco a más de 7 mercados de Oriente Medio y más allá.",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Nuestro negocio de pescado",
+        "reassure": "Empiece con un mensaje: especie, cantidad y destino. Precios confirmados en cada pedido.",
+        "image_alt": "Vista aérea de estanques de tierra con aireadores y palmeras"
+    },
+    "allocation": {
+        "eyebrow": "Estructura empresarial",
+        "title": "Cómo encajan nuestras áreas de negocio",
+        "intro": "Una sola marca matriz. El pescado es lo principal, y nuestras demás actividades lo acompañan.",
+        "parent_name": "AZAFCO International",
+        "parent_role": "Empresa matriz y marca corporativa",
+        "core_tag": "Actividad principal",
+        "core_name": "Pescado y acuicultura",
+        "core_text": "Criamos y compramos pescado, y después lo envasamos y exportamos fresco: 12 especies principales, una capacidad de envasado de hasta 2500 t/mes y más de 7 mercados.",
+        "core_link": "Conozca nuestro negocio de pescado",
+        "others_label": "Otras actividades",
+        "agri_title": "Agricultura",
+        "agri_text": "Tierras agrícolas con producción de fruta y hortalizas.",
+        "livestock_title": "Ganadería",
+        "livestock_text": "Explotaciones ganaderas en Egipto.",
+        "invest_title": "Inversiones",
+        "invest_text": "Forman parte de nuestra cartera corporativa. Este sitio web se centra en nuestro negocio de pescado."
+    },
+    "seafood": {
+        "eyebrow": "Actividad principal",
+        "title": "Pescado, del estanque al palé",
+        "p1": "Criamos y compramos pescado, y después lo lavamos, enhielamos, calibramos, inspeccionamos y envasamos en nuestra planta de Motobas, Kafr el-Sheikh. Desde allí, nuestros propios camiones frigoríficos, cámaras frigoríficas y logística lo llevan al transporte aéreo o por carretera.",
+        "p2": "Suministramos 12 especies principales, y otras especies bajo pedido, enteras y frescas refrigeradas. Contamos con tres certificados ISO (ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018), con certificación de TÜV AUSTRIA.",
+        "image_alt": "Pescado fresco entero sobre hielo picado en cajas isotérmicas blancas en una sala de envasado",
+        "link_products": "Catálogo de productos",
+        "link_processing": "Procesado y envasado",
+        "link_quality": "Calidad y certificados",
+        "link_importers": "Para importadores",
+        "cta_primary": "Conozca nuestro negocio de pescado"
+    }
+}

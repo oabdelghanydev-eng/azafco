@@ -1,28 +1,32 @@
 {
     "name": "AZAFCO International",
-    "fullName": "AZAFCO International Investment & Development",
-    "description": "Premier exportateur B2B de poisson d'Égypte pour grossistes, restaurants et hôtels – poisson frais premium depuis 2008.",
-    "workingHours": "Disponible 24h/24",
-    "workingHoursNote": "Service continu – selon département",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "description": "Entreprise égyptienne qui élève et achète du poisson frais, puis le calibre, le conditionne et l’exporte pour les importateurs, les distributeurs et les acheteurs de la restauration. Fondée en 2008.",
+    "workingHours": "Du samedi au jeudi, de 8 h à 17 h (heure du Caire)",
+    "workingHoursNote": "WhatsApp : ligne directe de la direction · pour conclure rapidement",
+    "officialChannels": {
+        "title": "Canaux officiels",
+        "text": "Nos canaux officiels sont WhatsApp {phone} (direction) et les e-mails du domaine azafco.com.eg (équipe export : {email}). Si vous recevez des coordonnées bancaires ou des instructions de paiement depuis un autre numéro ou une autre adresse, vérifiez-les auprès de nous sur l’un de ces canaux avant tout paiement."
+    },
     "addresses": {
         "main": {
-            "title": "Siège social",
-            "address": "Mastora, à côté de l'Association Caritative, El-Borollos, Kafr El-Sheikh, Égypte"
+            "title": "Bureau principal",
+            "address": "Mastora, à côté de l’Association caritative, El-Borollos, Kafr el-Cheikh, Égypte"
         },
         "factory": {
-            "title": "Site de production",
-            "address": "N° 120 – Secteur Alimentation – Zone Industrielle – Motobas – Kafr El-Sheikh, Égypte"
+            "title": "Usine",
+            "address": "N° 120, secteur des aliments pour animaux, zone industrielle, Motobas, Kafr el-Cheikh, Égypte"
         }
     },
     "copyright": "AZAFCO International",
     "privacyLink": "Politique de confidentialité",
-    "leadersSince": "Leaders de l'export de poisson frais depuis",
-    "tagline": "Poisson frais premium d'Égypte vers le monde",
+    "leadersSince": "Fondée en",
+    "tagline": "De la production en Égypte aux partenariats dans le monde",
     "usps": {
-        "price": "Prix de gros compétitifs",
-        "quality": "Qualité certifiée ISO et HACCP",
-        "flexibility": "Tailles personnalisées, commandes flexibles",
-        "availability": "Service 24h/24, approvisionnement continu",
-        "service": "Satisfaction de vos exigences marché"
+        "price": "Prix confirmés à chaque commande",
+        "quality": "Certifiés ISO 9001, 14001 et 45001 par TÜV AUSTRIA",
+        "flexibility": "Calibre et conditionnement convenus à chaque commande",
+        "availability": "Nos propres camions et entrepôts frigorifiques",
+        "service": "De l’étang à la palette, chaque étape assurée par AZAFCO"
     }
 }

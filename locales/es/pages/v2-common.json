@@ -1,0 +1,114 @@
+{
+    "skip_to_main": "Saltar al contenido principal",
+    "nav": {
+        "main_label": "Navegación principal",
+        "footer_label": "Navegación del pie de página",
+        "home": "Inicio",
+        "seafood": "Pescado y acuicultura",
+        "seafood_overview": "Resumen",
+        "products": "Productos",
+        "processing": "Procesado y envasado",
+        "quality": "Calidad",
+        "export": "Soluciones de exportación",
+        "markets": "Mercados",
+        "for_importers": "Para importadores",
+        "company": "Nuestra empresa",
+        "about": "Quiénes somos",
+        "businesses": "Nuestras áreas de negocio",
+        "insights": "Recursos",
+        "contact": "Contacto",
+        "menu": "Menú",
+        "open_menu": "Abrir menú",
+        "close_menu": "Cerrar menú",
+        "home_link_label": "Página de inicio de AZAFCO International"
+    },
+    "cta": {
+        "view_specifications": "Ver especificaciones",
+        "contact": "Contacto",
+        "talk_to_export_team": "Hable con el equipo de exportación",
+        "learn_more": "Más información",
+        "read_more": "Leer más",
+        "view_all": "Ver todo",
+        "whatsapp": "WhatsApp",
+        "call": "Llamar",
+        "email": "Correo electrónico",
+        "loading": "Cargando…",
+        "opens_new_tab": "(se abre en una pestaña nueva)",
+        "contact_export_team": "Contacte con el equipo de exportación",
+        "send_requirements": "Envíe sus requisitos",
+        "start_partnership": "Iniciemos una colaboración",
+        "request_document_pack": "Consultar documentos con el equipo de exportación"
+    },
+    "breadcrumbs": {
+        "label": "Ruta de navegación",
+        "home": "Inicio"
+    },
+    "pending": {
+        "prefix": "Pendiente de confirmación del propietario:",
+        "certificate_card": "{name}: aprobación del propietario para publicar"
+    },
+    "spec": {
+        "attribute": "Atributo",
+        "value": "Valor",
+        "confirmed_with_sales": "Confirmado en cada pedido",
+        "attribute_label": "{label}:"
+    },
+    "market": {
+        "status_active": "Mercado activo",
+        "status_planned": "Previsto",
+        "status_paused": "Exportaciones en pausa",
+        "fact_species": "Especies",
+        "fact_species_value": "{count} especies principales",
+        "fact_transport": "Transporte",
+        "fact_transport_value": "Refrigerado, por aire o carretera; confirmado en cada pedido",
+        "fact_documents": "Documentos",
+        "fact_documents_value": "El equipo de exportación confirma los documentos que exige su mercado"
+    },
+    "certificate": {
+        "issuer": "Emisor",
+        "view": "Ver certificado",
+        "request_copy": "Consultar sobre este certificado",
+        "request_copy_for": ": {name}",
+        "groups": {
+            "food_safety": "Seguridad alimentaria",
+            "export_approval": "Autorizaciones de exportación",
+            "management_system": "Sistemas de gestión"
+        }
+    },
+    "insight": {
+        "read_article": "Leer artículo",
+        "minutes": "{count} min de lectura"
+    },
+    "faq": {
+        "toggle_hint": "Mostrar respuesta"
+    },
+    "gallery": {
+        "label": "Galería de fotos"
+    },
+    "whatsapp_float": {
+        "label": "WhatsApp · directo a la gerencia"
+    },
+    "facts": {
+        "title": "Datos clave",
+        "species": "Especies principales",
+        "markets": "Mercados de exportación",
+        "markets_value": "{count}+",
+        "iso": "Certificados ISO",
+        "iso_note": "Con certificación de TÜV AUSTRIA",
+        "plant": "Planta de procesado",
+        "plant_value": "Motobas, Kafr el-Sheikh"
+    },
+    "fill": {
+        "spec_title": "¿Tiene una especificación completa?",
+        "spec_text": "Envíela al equipo de exportación y la revisaremos con usted.",
+        "documents_text": "Para consultas sobre documentos, contacte con el equipo de exportación."
+    },
+    "consent": {
+        "title": "Analítica en este navegador",
+        "on": "La analítica está activada en este navegador.",
+        "off": "La analítica está desactivada en este navegador.",
+        "unset": "Aún no ha elegido en este navegador. La analítica sigue la configuración predeterminada de su región.",
+        "enable": "Activar la analítica",
+        "disable": "Desactivar la analítica"
+    }
+}

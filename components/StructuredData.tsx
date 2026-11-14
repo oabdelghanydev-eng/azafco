@@ -1,466 +1,297 @@
-'use client';
-
 /**
- * StructuredData Component - Advanced SEO for App Router
- * 
- * Contains 9 Schema.org types for comprehensive B2B SEO:
- * 1. Organization - Company information
- * 2. LocalBusiness - Local search optimization
- * 3. WebSite - Sitelinks in search
- * 4. FAQPage - Rich snippets for questions
- * 5. BreadcrumbList - Navigation breadcrumbs
- * 6. SpeakableSpecification - Voice search optimization
- * 7. Individual Products - Product visibility with offers
- * 8. HowTo - Ordering process
- * 9. ProductGroup - B2B product visibility
- * 
- * All text content is sourced from translations (no hardcoded strings)
+ * StructuredData - Server-rendered JSON-LD for App Router
+ *
+ * Rendered on the server so crawlers see it in the initial HTML.
+ * Each schema is only emitted on the page it describes:
+ * - StructuredData (layout, every page): Organization, WebSite
+ * - PageStructuredData (per page):
+ *   - home / contact: LocalBusiness (the Motobas processing plant)
+ *   - inner pages (about / contact / markets): BreadcrumbList
+ *   The products page and species pages emit their own ItemList / Product.
+ *
+ * All text content is sourced from translations (schema.*, no hardcoded strings).
+ * Approved facts only (docs/team/web/g/RELEASE-DECISIONS.md):
+ * - 12 main species = data/products.ts `products` (eel is excluded there)
+ * - certificates = the three ISO standards; TÜV AUSTRIA named once (recognizedBy), no numbers
+ * - identity = legal name, commercial register and tax card (the same numbers shown on /contact and in the footer)
+ * - founder is emitted only when schema.founder exists (removed until the owner confirms the spelling)
+ * - markets = active markets from companyConfig (7), no price, no MOQ, no reply time
+ * - no offers or prices: no hasOfferCatalog, makesOffer or priceRange (prices are confirmed per order)
+ * - Organization and WebSite `name` = companyConfig.identity.tradeName (English) in every locale,
+ *   so the shared @id nodes agree; the localized name goes into alternateName
  */
 
-import Script from 'next/script';
-import { useLocale, useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
 import { ogImageMap, Locale } from '@/i18n';
+import { routes } from '@/lib/v2/routes';
 
-interface StructuredDataProps {
-    pageType?: 'home' | 'products' | 'about' | 'contact' | 'markets' | 'media' | 'certificates';
+type PageType = 'home' | 'about' | 'contact' | 'markets';
+
+const baseUrl = companyConfig.contact.baseUrl;
+
+/**
+ * Motobas processing plant (RELEASE-DECISIONS §4, same point as the factory map
+ * embed in data/company.ts). TODO(lead): move to companyConfig.addresses.factory.geo.
+ * The office coordinates (companyConfig.geo) are not emitted.
+ */
+const FACTORY_GEO = { latitude: 31.433264, longitude: 30.475957 } as const;
+const FACTORY_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${FACTORY_GEO.latitude},${FACTORY_GEO.longitude}`;
+
+/** Current identity logo (components/v2/Logo.tsx), 739 x 496. */
+const LOGO = { path: '/brand/logo-primary.svg', width: 739, height: 496 } as const;
+
+/** Visible breadcrumb label of each inner page (same text as the on-page breadcrumb). */
+const BREADCRUMB_KEYS: Record<Exclude<PageType, 'home'>, { label: string; fallback: string; path: string }> = {
+    about: { label: 'about_v2.breadcrumb', fallback: 'schema.about', path: routes.about },
+    contact: { label: 'contact_v2.breadcrumb', fallback: 'schema.contact', path: routes.contact },
+    markets: { label: 'markets_v2.breadcrumb', fallback: 'schema.markets', path: routes.markets },
+};
+
+/** Drops undefined / null / empty-string values and empty arrays (no empty fields in JSON-LD). */
+function clean<T>(value: T): T {
+    if (Array.isArray(value)) {
+        return value.map(clean).filter(v => v !== undefined && v !== null && v !== '') as unknown as T;
+    }
+    if (value && typeof value === 'object') {
+        const out: Record<string, unknown> = {};
+        for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
+            const c = clean(v);
+            if (c === undefined || c === null || c === '') continue;
+            if (Array.isArray(c) && c.length === 0) continue;
+            out[k] = c;
+        }
+        return out as T;
+    }
+    return value;
 }
 
+function JsonLd({ schemas }: { schemas: object[] }) {
+    return (
+        <>
+            {schemas.map((schema, index) => (
+                <script
+                    key={index}
+                    type="application/ld+json"
+                    // Escape "<" so copy can never close the script tag
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(clean(schema)).replace(/</g, '\\u003c') }}
+                />
+            ))}
+        </>
+    );
+}
 
-const StructuredData: React.FC<StructuredDataProps> = ({ pageType = 'home' }) => {
-    const locale = useLocale();
-    const t = useTranslations();
-    const pathname = usePathname();
-    const baseUrl = companyConfig.contact.baseUrl;
-    const currentUrl = `${baseUrl}${pathname}`;
+const factoryAddress = {
+    '@type': 'PostalAddress',
+    streetAddress: companyConfig.addresses.factory.street,
+    addressLocality: companyConfig.addresses.factory.city,
+    addressRegion: companyConfig.addresses.factory.region,
+    postalCode: companyConfig.addresses.factory.postalCode,
+    addressCountry: 'EG'
+};
 
-    const schemaImage = `${baseUrl}${ogImageMap[locale as Locale]}`;
+const activeMarkets = companyConfig.markets.filter(m => m.status === 'active');
 
-    // Get market country codes from config (excluding paused/planned)
-    const activeMarketCodes = companyConfig.markets
-        .filter(m => m.status === 'active')
-        .map(m => m.countryCode);
+/** Untyped root translator (keys below are built at runtime). */
+type RootT = {
+    (key: string, values?: Record<string, string | number>): string;
+    raw(key: string): unknown;
+    has(key: string): boolean;
+};
 
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 1: Organization (Main Schema for B2B)
-    // ═══════════════════════════════════════════════════════════════
-    const alternateNames = (t.raw('schema.alternateNames') ?? ['AZAFCO International', 'AZAFCO']) as string[];
-    const knowsAboutList = (t.raw('schema.knowsAbout') ?? []) as string[];
+async function rootT(locale: string): Promise<RootT> {
+    return (await getTranslations({ locale })) as unknown as RootT;
+}
 
-    // Get certifications from translations
-    const certifications = t.raw('schema.certifications') as Record<string, { name: string; description: string }> | undefined;
-    const certArray = certifications ? Object.values(certifications) : [];
+/**
+ * Message or undefined when the key is missing (es/ru/de/fr may lag behind ar/en
+ * until translated); clean() then drops the field instead of emitting the key path.
+ */
+function opt(t: RootT, key: string): string | undefined {
+    return t.has(key) ? t(key) : undefined;
+}
 
-    // Get services from translations
-    const services = t.raw('schema.services') as Record<string, { name: string; description: string }> | undefined;
-    const servicesArray = services ? Object.values(services) : [];
+/** Raw object/array from a translation key, or the fallback when missing. */
+function rawOr<T>(t: RootT, key: string, fallback: T): T {
+    if (!t.has(key)) return fallback;
+    const v = t.raw(key);
+    return v && typeof v === 'object' ? (v as T) : fallback;
+}
+
+/** String array from a translation key, or [] when missing. */
+function rawStrings(t: RootT, key: string): string[] {
+    if (!t.has(key)) return [];
+    const v = t.raw(key);
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && x.trim() !== '') : [];
+}
+
+/**
+ * Active markets as schema.org Country nodes: localized name from data.markets
+ * (English config name as fallback) plus the ISO 3166-1 code as identifier.
+ */
+function areaServedCountries(t: RootT) {
+    return activeMarkets.map(m => ({
+        '@type': 'Country',
+        name: opt(t, `data.markets.${m.key}.country`) ?? m.name,
+        identifier: m.countryCode
+    }));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SITE-WIDE: Organization + WebSite
+// ═══════════════════════════════════════════════════════════════
+export default async function StructuredData({ locale }: { locale: string }) {
+    const t = await rootT(locale);
+    const schemaImage = `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`;
+
+    // English brand name in every locale (one entity, one name); the localized name
+    // (AR ازافكو العالمية) is listed as an alternate name instead.
+    const brandName = companyConfig.identity.tradeName;
+    const localizedName = opt(t, 'schema.companyName');
+    const alternateNames = Array.from(
+        new Set([...(localizedName && localizedName !== brandName ? [localizedName] : []), ...rawStrings(t, 'schema.alternateNames')])
+    ).filter(n => n !== brandName);
+    const credentials = rawOr<{ name: string; description: string }[]>(t, 'schema.credentials', []);
+    const certificationBody = opt(t, 'schema.certificationBody');
+    const founderName = opt(t, 'schema.founder');
+    const commercialRegister = companyConfig.registration.commercialRegister;
 
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': `${baseUrl}/#organization`,
-        name: t('schema.companyName'),
+        name: brandName,
+        legalName: opt(t, 'schema.legalName') ?? companyConfig.identity.legalName,
         alternateName: alternateNames,
         url: baseUrl,
         logo: {
             '@type': 'ImageObject',
-            url: `${baseUrl}/images/logo.svg`,
-            width: '300',
-            height: '100'
+            '@id': `${baseUrl}/#logo`,
+            url: `${baseUrl}${LOGO.path}`,
+            contentUrl: `${baseUrl}${LOGO.path}`,
+            width: LOGO.width,
+            height: LOGO.height,
+            caption: t('schema.companyName')
         },
         image: schemaImage,
-        description: t('schema.description'),
+        description: opt(t, 'schema.description'),
+        slogan: opt(t, 'schema.slogan'),
         foundingDate: String(companyConfig.identity.foundingYear),
-        founder: {
-            '@type': 'Person',
-            name: companyConfig.identity.founder
-        },
-        legalName: companyConfig.identity.legalName,
+        founder: founderName ? { '@type': 'Person', name: founderName } : undefined,
         taxID: companyConfig.registration.taxCard,
-        vatID: companyConfig.registration.taxCard,
+        // Commercial register: the most checkable identity fact, also shown on /contact and in the footer
+        identifier: commercialRegister
+            ? [{ '@type': 'PropertyValue', propertyID: opt(t, 'schema.commercialRegisterLabel'), value: commercialRegister }]
+            : undefined,
         email: companyConfig.contact.email,
-        hasCredential: certArray.map(cert => ({
-            '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'certification',
-            name: cert.name,
-            description: cert.description
-        })),
-        numberOfEmployees: {
-            '@type': 'QuantitativeValue',
-            minValue: companyConfig.identity.employees,
-            maxValue: companyConfig.identity.employees + 50
-        },
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: companyConfig.addresses.factory.street,
-            addressLocality: companyConfig.addresses.factory.city,
-            addressRegion: companyConfig.addresses.factory.region,
-            postalCode: companyConfig.addresses.factory.postalCode,
-            addressCountry: 'EG'
-        },
-        geo: {
-            '@type': 'GeoCoordinates',
-            latitude: String(companyConfig.geo.latitude),
-            longitude: String(companyConfig.geo.longitude)
-        },
+        telephone: companyConfig.contact.phone,
+        address: factoryAddress,
+        // WhatsApp = management direct (fast deals); email = export team (details and documents)
         contactPoint: [
             {
                 '@type': 'ContactPoint',
+                name: opt(t, 'schema.contactManagement'),
                 telephone: companyConfig.contact.whatsapp,
+                url: companyConfig.contact.social.whatsapp,
                 contactType: 'sales',
-                contactOption: 'TollFree',
                 availableLanguage: ['Arabic', 'English'],
-                areaServed: activeMarketCodes
+                areaServed: activeMarkets.map(m => m.countryCode)
             },
             {
                 '@type': 'ContactPoint',
-                telephone: companyConfig.contact.whatsapp,
-                contactType: 'customer service',
-                availableLanguage: ['Arabic', 'English']
+                name: opt(t, 'schema.contactExport'),
+                email: companyConfig.contact.email,
+                // 'sales', not 'customer service': this is the channel for new buyers' details and documents
+                contactType: 'sales',
+                availableLanguage: ['Arabic', 'English'],
+                areaServed: activeMarkets.map(m => m.countryCode)
             }
         ],
-        sameAs: [
-            companyConfig.contact.social.facebook,
-            `https://wa.me/${companyConfig.contact.whatsapp.replace(/\+/g, '')}`
-        ],
-        knowsAbout: knowsAboutList,
-        slogan: t('schema.slogan'),
-        makesOffer: servicesArray.map(service => ({
-            '@type': 'Offer',
-            itemOffered: {
-                '@type': 'Service',
-                name: service.name,
-                description: service.description
-            }
+        areaServed: areaServedCountries(t),
+        // Only real, owned profiles (companyConfig.contact.social). WhatsApp is a contact channel, not a profile.
+        sameAs: [companyConfig.contact.social.facebook],
+        knowsAbout: rawStrings(t, 'schema.knowsAbout'),
+        // ISO 9001 / 14001 / 45001; the certification body appears once per credential as recognizedBy,
+        // not in the descriptions. No certificate numbers, dates, site or scope.
+        hasCredential: credentials.map(c => ({
+            '@type': 'EducationalOccupationalCredential',
+            name: c.name,
+            description: c.description,
+            credentialCategory: opt(t, 'schema.credentialCategory'),
+            recognizedBy: certificationBody ? { '@type': 'Organization', name: certificationBody } : undefined
         }))
     };
 
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 2: LocalBusiness (for local search)
-    // ═══════════════════════════════════════════════════════════════
-    const localBusinessSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FoodEstablishment',
-        '@id': `${baseUrl}/#localbusiness`,
-        name: t('schema.factoryName'),
-        alternateName: t('schema.factoryAlternateName'),
-        image: schemaImage,
-        url: baseUrl,
-        telephone: companyConfig.contact.whatsapp,
-        email: companyConfig.contact.email,
-        priceRange: '$$',
-        currenciesAccepted: t('schema.currenciesAccepted'),
-        paymentAccepted: t('schema.paymentAccepted'),
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: companyConfig.addresses.factory.street,
-            addressLocality: companyConfig.addresses.factory.city,
-            addressRegion: companyConfig.addresses.factory.region,
-            postalCode: companyConfig.addresses.factory.postalCode,
-            addressCountry: 'EG'
-        },
-        geo: {
-            '@type': 'GeoCoordinates',
-            latitude: companyConfig.geo.latitude,
-            longitude: companyConfig.geo.longitude
-        },
-        openingHoursSpecification: {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-            opens: '08:00',
-            closes: '17:00'
-        },
-        areaServed: companyConfig.markets.map(m => ({
-            '@type': 'Country',
-            name: m.name
-        })),
-        hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: t('schema.catalogName'),
-            itemListElement: [
-                { '@type': 'OfferCatalog', name: t('schema.freshwater'), description: t('schema.freshwaterDesc') },
-                { '@type': 'OfferCatalog', name: t('schema.saltwater'), description: t('schema.saltwaterDesc') }
-            ]
-        }
-    };
-
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 3: WebSite (for sitelinks in search)
-    // ═══════════════════════════════════════════════════════════════
     const websiteSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         '@id': `${baseUrl}/#website`,
-        name: t('schema.websiteName'),
+        name: brandName,
         alternateName: alternateNames,
         url: baseUrl,
-        description: t('schema.websiteDescription'),
-        inLanguage: ['ar', 'en', 'es', 'ru', 'de', 'fr'],
+        description: opt(t, 'schema.websiteDescription'),
+        inLanguage: locale,
         publisher: {
             '@id': `${baseUrl}/#organization`
         }
     };
 
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 4: FAQPage (for rich snippets) - TRANSLATION-BASED
-    // ═══════════════════════════════════════════════════════════════
-    const faqQuestions = (t.raw('faq.questions') ?? []) as Array<{ question: string; answer: string }>;
+    return <JsonLd schemas={[organizationSchema, websiteSchema]} />;
+}
 
-    const faqSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqQuestions.map(item => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer
-            }
-        }))
-    };
+// ═══════════════════════════════════════════════════════════════
+// PER-PAGE: LocalBusiness, breadcrumbs
+// ═══════════════════════════════════════════════════════════════
+export async function PageStructuredData({ locale, pageType }: { locale: string; pageType: PageType }) {
+    const t = await rootT(locale);
+    const localeUrl = `${baseUrl}/${locale}`;
+    const schemas: object[] = [];
 
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 5: BreadcrumbList (for navigation)
-    // ═══════════════════════════════════════════════════════════════
-    const getBreadcrumbItems = (): { '@type': string; position: number; name: string; item: string }[] => {
-        const items: { '@type': string; position: number; name: string; item: string }[] = [
-            {
-                '@type': 'ListItem',
-                position: 1,
-                name: t('schema.home'),
-                item: baseUrl
-            }
-        ];
-
-        if (pageType !== 'home') {
-            items.push({
-                '@type': 'ListItem',
-                position: 2,
-                name: t(`schema.${pageType}`),
-                item: currentUrl
-            });
-        }
-
-        return items;
-    };
-
-    const breadcrumbSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: getBreadcrumbItems()
-    };
-
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 6: SpeakableSpecification (for voice search)
-    // ═══════════════════════════════════════════════════════════════
-    const speakableSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        '@id': currentUrl,
-        name: t('schema.speakableName'),
-        speakable: {
-            '@type': 'SpeakableSpecification',
-            cssSelector: ['h1', 'h2', '.section-title', '.company-description', '.hero-text']
-        },
-        mainEntity: {
-            '@id': `${baseUrl}/#organization`
-        }
-    };
-
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 7: Individual Product Schemas (with offers, images, and ratings)
-    // Product data derived from companyConfig.products - SINGLE SOURCE OF TRUTH
-    // ═══════════════════════════════════════════════════════════════
-    const individualProductSchemas = companyConfig.products.map((product) => {
-        const productName = t(`data.products.${product.key}.name`);
-        const productDesc = t(`data.products.${product.key}.description`);
-        return {
+    if (pageType === 'home' || pageType === 'contact') {
+        schemas.push({
             '@context': 'https://schema.org',
-            '@type': 'Product',
-            '@id': `${baseUrl}/products#${product.key}`,
-            name: productName,
-            description: productDesc,
-            image: `${baseUrl}${product.image}`,
-            category: t('schema.freshFishCategory'),
-            brand: {
-                '@type': 'Brand',
-                name: t('schema.alternateName')
+            '@type': 'LocalBusiness',
+            '@id': `${baseUrl}/#localbusiness`,
+            name: t('schema.factoryName'),
+            alternateName: opt(t, 'schema.factoryAlternateName'),
+            description: opt(t, 'schema.factoryDescription'),
+            image: `${baseUrl}${ogImageMap[locale as Locale] ?? ogImageMap.en}`,
+            logo: { '@id': `${baseUrl}/#logo` },
+            url: localeUrl,
+            telephone: companyConfig.contact.whatsapp,
+            email: companyConfig.contact.email,
+            parentOrganization: { '@id': `${baseUrl}/#organization` },
+            address: factoryAddress,
+            geo: {
+                '@type': 'GeoCoordinates',
+                latitude: FACTORY_GEO.latitude,
+                longitude: FACTORY_GEO.longitude
             },
-            manufacturer: {
-                '@id': `${baseUrl}/#organization`
+            hasMap: FACTORY_MAP_URL,
+            // Office hours (Cairo time), as stated on the contact page
+            openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+                opens: '08:00',
+                closes: '17:00'
             },
-            // AggregateRating for social proof (based on 500+ B2B clients)
-            aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.8',
-                bestRating: '5',
-                worstRating: '1',
-                ratingCount: '500',
-                reviewCount: '150'
-            },
-            offers: {
-                '@type': 'Offer',
-                availability: 'https://schema.org/InStock',
-                priceCurrency: 'USD',
-                priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    priceCurrency: 'USD',
-                    eligibleQuantity: {
-                        '@type': 'QuantitativeValue',
-                        unitCode: 'KGM',
-                        minValue: 1
-                    }
-                },
-                seller: {
-                    '@id': `${baseUrl}/#organization`
-                },
-                areaServed: ['Worldwide', ...companyConfig.markets.filter(m => m.status === 'active').map(m => m.name)],
-                shippingDetails: {
-                    '@type': 'OfferShippingDetails',
-                    shippingDestination: {
-                        '@type': 'DefinedRegion',
-                        addressCountry: activeMarketCodes
-                    },
-                    deliveryTime: {
-                        '@type': 'ShippingDeliveryTime',
-                        handlingTime: {
-                            '@type': 'QuantitativeValue',
-                            minValue: 1,
-                            maxValue: 3,
-                            unitCode: 'DAY'
-                        }
-                    }
-                }
-            },
-            isAccessoryOrSparePartFor: {
-                '@type': 'FoodService',
-                name: t('schema.restaurantHotelSupply')
-            }
-        };
-    });
+            areaServed: areaServedCountries(t)
+        });
+    }
 
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 8: HowTo (for "how to order fish wholesale" queries)
-    // ═══════════════════════════════════════════════════════════════
-    const howToData = t.raw('schema.howTo') as {
-        title: string;
-        description: string;
-        supplies: { businessDetails: string; quantities: string };
-        steps: {
-            step1: { name: string; text: string };
-            step2: { name: string; text: string };
-            step3: { name: string; text: string };
-            step4: { name: string; text: string };
-        };
-        estimatedCost: string;
-    } | undefined;
+    if (pageType !== 'home') {
+        const crumb = BREADCRUMB_KEYS[pageType];
+        const homeLabel = t.has('v2.breadcrumbs.home') ? t('v2.breadcrumbs.home') : t('schema.home');
+        const pageLabel = t.has(crumb.label) ? t(crumb.label) : t(crumb.fallback);
+        schemas.push({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                { '@type': 'ListItem', position: 1, name: homeLabel, item: localeUrl },
+                { '@type': 'ListItem', position: 2, name: pageLabel, item: `${localeUrl}${crumb.path}` }
+            ]
+        });
+    }
 
-    const howToSchema = howToData ? {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        '@id': `${baseUrl}/#howto-order`,
-        name: howToData.title,
-        description: howToData.description,
-        totalTime: 'PT10M',
-        estimatedCost: {
-            '@type': 'MonetaryAmount',
-            currency: 'USD',
-            value: howToData.estimatedCost
-        },
-        supply: [
-            { '@type': 'HowToSupply', name: howToData.supplies.businessDetails },
-            { '@type': 'HowToSupply', name: howToData.supplies.quantities }
-        ],
-        step: [
-            {
-                '@type': 'HowToStep',
-                position: 1,
-                name: howToData.steps.step1.name,
-                text: howToData.steps.step1.text,
-                url: `${baseUrl}/${locale}/contact`
-            },
-            {
-                '@type': 'HowToStep',
-                position: 2,
-                name: howToData.steps.step2.name,
-                text: howToData.steps.step2.text,
-                url: `${baseUrl}/${locale}/products`
-            },
-            {
-                '@type': 'HowToStep',
-                position: 3,
-                name: howToData.steps.step3.name,
-                text: howToData.steps.step3.text
-            },
-            {
-                '@type': 'HowToStep',
-                position: 4,
-                name: howToData.steps.step4.name,
-                text: howToData.steps.step4.text
-            }
-        ]
-    } : null;
-
-    // ═══════════════════════════════════════════════════════════════
-    // SCHEMA 9: ProductGroup (for B2B product visibility)
-    // ═══════════════════════════════════════════════════════════════
-    const productGroupSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        '@id': `${baseUrl}/products`,
-        name: t('products_page.title'),
-        description: t('products_page.subtitle'),
-        numberOfItems: companyConfig.products.length,
-        itemListElement: companyConfig.products.map((product, index) => {
-            const productName = t(`data.products.${product.key}.name`);
-            const productDesc = t(`data.products.${product.key}.description`);
-            return {
-                '@type': 'ListItem',
-                position: index + 1,
-                item: {
-                    '@type': 'Product',
-                    name: productName,
-                    description: productDesc,
-                    image: `${baseUrl}${product.image}`,
-                    category: t('schema.freshFishCategory'),
-                    brand: {
-                        '@type': 'Brand',
-                        name: t('schema.alternateName')
-                    },
-                    manufacturer: {
-                        '@id': `${baseUrl}/#organization`
-                    }
-                }
-            };
-        })
-    };
-
-    const schemas = [
-        organizationSchema,
-        localBusinessSchema,
-        websiteSchema,
-        faqSchema,
-        breadcrumbSchema,
-        speakableSchema,
-        ...individualProductSchemas,
-        ...(howToSchema ? [howToSchema] : []),
-        productGroupSchema
-    ];
-
-    return (
-        <>
-            {schemas.map((schema, index) => (
-                <Script
-                    key={`structured-data-${index}`}
-                    id={`structured-data-${index}`}
-                    type="application/ld+json"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-                />
-            ))}
-        </>
-    );
-};
-
-export default StructuredData;
+    return <JsonLd schemas={schemas} />;
+}

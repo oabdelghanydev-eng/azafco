@@ -1,16 +1,177 @@
-/* Font is now loaded via next/font in _app.tsx for optimal performance */
+/* AZAFCO design system (design G). Tokens: this file (CSS variables) + tailwind.config.js.
+   Primitives: components/ui. Rules: docs/team/web/g/DESIGN-SYSTEM.md.
+   Fonts are loaded with next/font in app/[locale]/layout.tsx (Manrope + IBM Plex Sans Arabic). */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Direction comes from <html dir> (set per locale in app/[locale]/layout.tsx).
+     A hard-coded `direction: rtl` here used to override it on LTR locales. */
   html {
-    direction: rtl;
     scroll-behavior: smooth;
   }
 
+  /* ── v2 foundation tokens (design G) ─────────────────────────────────────
+     Manrope for Latin, IBM Plex Sans Arabic for Arabic glyphs. Manrope is loaded
+     with adjustFontFallback:false (no Arial-based "Manrope Fallback"), so Arabic
+     characters skip it and land on IBM Plex Sans Arabic, never on Arial.
+     Type scale = the G home: h1 clamp(36px, 5vw, 72px), h2 29px to 50px,
+     body 16/17px (EN) and 17/18px (AR), lead 17-21px. */
+  :root {
+    --v2-font-body: var(--font-manrope), var(--font-plex-arabic), system-ui, sans-serif;
+    --v2-font-display: var(--font-manrope), var(--font-plex-arabic), system-ui, sans-serif;
+
+    --v2-fs-h1-lg: clamp(2.25rem, 5.2vw, 4.75rem);
+    --v2-fs-h1: clamp(2.25rem, 5vw, 4.5rem);
+    /* Inner-page h1 (one step under the home hero): 34px -> 62px */
+    --v2-fs-h1-page: clamp(2.125rem, 1.4rem + 2.9vw, 3.875rem);
+    --v2-fs-h2: clamp(1.8125rem, 3.4vw, 3.125rem);
+    --v2-fs-h2-sm: clamp(1.5rem, 1.2rem + 1.1vw, 2.25rem);
+    --v2-fs-h3-lg: clamp(1.3125rem, 1.2rem + 0.4vw, 1.5rem);
+    --v2-fs-h3: clamp(1.1875rem, 1.1rem + 0.25vw, 1.3125rem);
+    --v2-fs-h4: clamp(1.0625rem, 1rem + 0.2vw, 1.125rem);
+    --v2-fs-body-lg: clamp(1.0625rem, 0.98rem + 0.4vw, 1.25rem);
+    --v2-fs-body: clamp(1rem, 0.96rem + 0.12vw, 1.0625rem);
+    --v2-fs-body-sm: 0.9375rem;
+    --v2-fs-caption: 0.875rem;
+    /* Legal lines, language chips, row numbers (footer / header meta) */
+    --v2-fs-micro: 0.8125rem;
+    --v2-fs-overline: clamp(0.875rem, 0.84rem + 0.1vw, 0.9375rem);
+
+    --v2-lh-body: 1.65;
+    --v2-lh-heading: 1.3;
+    --v2-lh-h2: 1.13;
+    --v2-lh-display: 1.08;
+    --v2-ls-display: -0.02em;
+    --v2-ls-heading: -0.01em;
+    --v2-ls-overline: 0;
+    --v2-fw-display: 800;
+    --v2-fw-h3: 800;
+    --v2-fw-overline: 800;
+    --v2-fw-btn: 800;
+    --v2-header-h: 88px;
+
+    /* Surface-aware colours (light surface default) */
+    --v2-fg: #0D1F3F;
+    --v2-fg-muted: #4A5A75;
+    --v2-eyebrow: #002D72;
+    --v2-rule: #E3E8F0;
+    --v2-line: #D5DDE9;
+    --v2-focus: #002D72;
+    --v2-heading: #0D1F3F;
+    --v2-link: #002D72;
+    --v2-link-hover: #002D72;
+    --v2-stat: #002D72;
+    --v2-connector: #C9D4E6;
+    --v2-btn2-bg: #002D72;
+    --v2-btn2-fg: #FFFFFF;
+    --v2-btn2-hover: #00245C;
+    --v2-outline-border: #002D72;
+    --v2-outline-fg: #002D72;
+    --v2-outline-hover-bg: #002D72;
+    --v2-outline-hover-fg: #FFFFFF;
+    --v2-outline-hover-border: #002D72;
+    --v2-tint: #F2F5FA;
+    --v2-tint-strong: #E8EDF4;
+    --v2-panel: #FFFFFF;
+  }
+
+  /* Arabic: larger body, more leading, bold (not extra-bold) headings, no negative
+     tracking. Attribute selector so a nested lang="ar" block inside an English page also works. */
+  [lang|='ar'] {
+    --v2-fs-h1-lg: clamp(2.125rem, 5vw, 4.5rem);
+    --v2-fs-h1: clamp(2.125rem, 5vw, 4.5rem);
+    --v2-fs-h1-page: clamp(2rem, 1.3rem + 2.7vw, 3.625rem);
+    --v2-fs-h2: clamp(1.75rem, 3.4vw, 3.125rem);
+    --v2-fs-h3: clamp(1.1875rem, 1.08rem + 0.35vw, 1.375rem);
+    --v2-fs-body-lg: clamp(1.125rem, 1.03rem + 0.45vw, 1.3125rem);
+    --v2-fs-body: clamp(1.0625rem, 1.02rem + 0.12vw, 1.125rem);
+    --v2-fs-body-sm: 1rem;
+    --v2-fs-caption: 0.9375rem;
+    --v2-fs-micro: 0.875rem;
+    --v2-fs-overline: clamp(0.9375rem, 0.88rem + 0.25vw, 1.0625rem);
+    --v2-lh-body: 1.85;
+    --v2-lh-heading: 1.5;
+    --v2-lh-h2: 1.38;
+    --v2-lh-display: 1.32;
+    --v2-ls-display: 0;
+    --v2-ls-heading: 0;
+    --v2-ls-overline: 0;
+    --v2-fw-display: 700;
+    --v2-fw-h3: 700;
+    --v2-fw-overline: 700;
+    --v2-fw-btn: 700;
+  }
+
+  /* Latin-script block nested inside an Arabic page (e.g. lang="en", lang="la") */
+  body [lang]:not([lang|='ar']) {
+    --v2-lh-display: 1.08;
+    --v2-lh-h2: 1.13;
+    --v2-lh-heading: 1.3;
+    --v2-lh-body: 1.65;
+    --v2-ls-display: -0.02em;
+    --v2-ls-heading: -0.01em;
+  }
+
+  /* Re-apply the stack on nested language blocks (vars resolve per element) */
+  body [lang] {
+    font-family: var(--v2-font-body);
+  }
+
+  [data-surface='dark'] {
+    --v2-fg: #FFFFFF;
+    --v2-fg-muted: #D9E0EA;   /* about white/.86 of the G hero; 12:1+ on navy-900 */
+    --v2-eyebrow: #F7B500;    /* gold on navy: 7.2:1+ */
+    --v2-rule: rgba(255, 255, 255, 0.16);
+    --v2-line: rgba(255, 255, 255, 0.45);
+    --v2-focus: #F7B500;
+    --v2-heading: #FFFFFF;
+    --v2-link: #FFFFFF;
+    --v2-link-hover: #F7B500;
+    --v2-stat: #FFFFFF;
+    --v2-connector: rgba(255, 255, 255, 0.28);
+    --v2-btn2-bg: #FFFFFF;
+    --v2-btn2-fg: #002D72;
+    --v2-btn2-hover: #E8EDF4;
+    --v2-outline-border: rgba(255, 255, 255, 0.7);
+    --v2-outline-fg: #FFFFFF;
+    --v2-outline-hover-bg: transparent;
+    --v2-outline-hover-fg: #F7B500;
+    --v2-outline-hover-border: #F7B500;
+    --v2-tint: rgba(255, 255, 255, 0.08);
+    --v2-tint-strong: rgba(255, 255, 255, 0.14);
+    --v2-panel: #001B47;
+  }
+
+  [data-surface='light'] {
+    --v2-fg: #0D1F3F;
+    --v2-fg-muted: #4A5A75;
+    --v2-eyebrow: #002D72;
+    --v2-rule: #E3E8F0;
+    --v2-line: #D5DDE9;
+    --v2-focus: #002D72;
+    --v2-heading: #0D1F3F;
+    --v2-link: #002D72;
+    --v2-link-hover: #002D72;
+    --v2-stat: #002D72;
+    --v2-connector: #C9D4E6;
+    --v2-btn2-bg: #002D72;
+    --v2-btn2-fg: #FFFFFF;
+    --v2-btn2-hover: #00245C;
+    --v2-outline-border: #002D72;
+    --v2-outline-fg: #002D72;
+    --v2-outline-hover-bg: #002D72;
+    --v2-outline-hover-fg: #FFFFFF;
+    --v2-outline-hover-border: #002D72;
+    --v2-tint: #F2F5FA;
+    --v2-tint-strong: #E8EDF4;
+    --v2-panel: #FFFFFF;
+  }
+
+  /* Design G: white page, ink text */
   body {
-    @apply font-arabic text-gray-800 bg-gray-50;
+    @apply font-arabic text-ink bg-white;
   }
 
   h1,
@@ -24,256 +185,103 @@
 }
 
 @layer components {
-  .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  /* Visible focus everywhere inside the site shell: navy on light, gold on navy
+     (--v2-focus flips with data-surface). Primitives also set outline-focus. */
+  .v2-scope :focus-visible {
+    outline: 2px solid var(--v2-focus);
+    outline-offset: 3px;
+    border-radius: 2px;
   }
 
-  .btn-primary {
-    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 shadow-lg;
+  .v2-heading {
+    color: var(--v2-heading);
   }
 
-  .btn-secondary {
-    @apply bg-secondary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-lg;
+  /* Button weight: extra-bold Latin, bold Arabic (as the G hero CTAs) */
+  .v2-btn {
+    font-weight: var(--v2-fw-btn);
   }
 
-  .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden;
+  /* PageHero photo overlay (same recipe as components/g/home/GHero.module.css,
+     a little denser because inner-page heroes carry longer intros):
+     vertical on phones (text sits low), dark on the reading-start side from lg up. */
+  .v2-hero-overlay {
+    background: linear-gradient(180deg, rgba(0, 22, 60, 0.5) 0%, rgba(0, 22, 60, 0.72) 38%, rgba(0, 22, 60, 0.95) 78%);
+  }
+  @media (min-width: 1024px) {
+    .v2-hero-overlay {
+      background: linear-gradient(90deg, rgba(0, 22, 60, 0.94) 0%, rgba(0, 22, 60, 0.8) 42%, rgba(0, 22, 60, 0.3) 72%, rgba(0, 22, 60, 0.1) 100%);
+    }
+    [dir='rtl'] .v2-hero-overlay {
+      background: linear-gradient(270deg, rgba(0, 22, 60, 0.94) 0%, rgba(0, 22, 60, 0.8) 42%, rgba(0, 22, 60, 0.3) 72%, rgba(0, 22, 60, 0.1) 100%);
+    }
   }
 
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold text-center mb-4 text-primary-800;
+  /* PageHero without a photo / with a cut-out: navy field with a soft light pool
+     behind the visual (end side) */
+  .v2-hero-field {
+    background: radial-gradient(ellipse 70% 90% at 78% 55%, #0a3a82 0%, #002d72 32%, #001b47 72%);
+  }
+  [dir='rtl'] .v2-hero-field {
+    background: radial-gradient(ellipse 70% 90% at 22% 55%, #0a3a82 0%, #002d72 32%, #001b47 72%);
   }
 
-  .section-subtitle {
-    @apply text-lg md:text-xl text-center text-gray-600 mb-12;
+  /* Hide native <details> marker in FAQAccordion */
+  .v2-faq summary::-webkit-details-marker {
+    display: none;
   }
-
-  /* Screen Reader Only - for accessibility */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-}
-
-/* Animations */
-@keyframes wave {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.wave-animation {
-  animation: wave 3s ease-in-out infinite;
-}
-
-/* WhatsApp Button */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  left: 40px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #128c7e;
-}
-
-/* Loading Animation */
-.loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #0073e6;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
+  .v2-faq summary {
+    list-style: none;
   }
 }
 
-/* Responsive Navigation */
-.mobile-menu {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.mobile-menu.active {
-  transform: translateX(0);
-}
-
-/* Hero Section Background */
-.hero-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Glass Effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.95);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0073e6;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #005ab3;
-}
-
-/* Blob Animation for Hero */
-@keyframes blob {
-
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-/* Slow Zoom for Background */
-@keyframes slow-zoom {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.animate-slow-zoom {
-  animation: slow-zoom 20s ease-out forwards;
-}
-
-/* Line clamp for text truncation */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Focus styles for accessibility */
+/* Focus outside the site shell (/qr, /offer, /v layouts have no .v2-scope) */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #0073e6;
+  outline: 2px solid var(--v2-focus);
   outline-offset: 2px;
 }
 
-/* Smooth page transitions */
-.page-transition {
-  animation: fadeIn 0.3s ease-in-out;
+/* Scrollbar in the brand navy (WebKit/Blink) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f5fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #002d72;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #001b47;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
+/* Section reveal (components/v2/RevealSections.tsx).
+   Sections are visible by default; JS hides only sections below the fold
+   (.v2-reveal-pending) and reveals them once. Never under reduced motion or in print. */
+[data-reveal] {
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
+}
+[data-reveal].v2-reveal-pending {
+  opacity: 0;
+  transform: translateY(12px);
+}
+@media (prefers-reduced-motion: reduce), print {
+  [data-reveal].v2-reveal-pending {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
-/* Mobile Animation Optimizations */
-@media (max-width: 768px) {
-
-  /* GPU acceleration for smoother animations */
-  [class*="motion"],
-  .animate-blob,
-  .animate-slow-zoom {
-    will-change: transform, opacity;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  /* Simpler blob animation on mobile */
-  .animate-blob {
-    animation-duration: 10s;
-  }
-
-  /* Disable heavy effects on mobile */
-  .animate-slow-zoom {
-    animation: none;
-    transform: scale(1.02);
-  }
-}
-
-/* Respect user preference for reduced motion */
+/* Reduced motion: no smooth scroll, near-instant transitions, no looping animation */
 @media (prefers-reduced-motion: reduce) {
-
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {
@@ -284,24 +292,13 @@ select:focus-visible {
   }
 }
 
-/* Cross-browser animation performance - GPU acceleration */
-.animate-slow-zoom,
-.animate-blob,
-.card,
-.btn-primary,
-.btn-secondary,
-[class*="group-hover:scale"] {
-  will-change: transform, opacity;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
+/* Design G (navy/gold): Manrope for Latin, IBM Plex Sans Arabic for Arabic glyphs */
+.g-font,
+.g-scope {
+  font-family: var(--font-manrope), var(--font-plex-arabic), system-ui, sans-serif;
 }
 
-/* Smoother transitions for all browsers including Firefox */
-.transition-all,
-.transition-transform {
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
+/* G pages sit on white */
+.g-scope {
+  background: #ffffff;
 }

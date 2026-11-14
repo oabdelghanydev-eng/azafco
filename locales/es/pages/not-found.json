@@ -1,4 +1,28 @@
 {
-    "title": "Página No Encontrada",
-    "back_home": "Volver al Inicio"
+    "meta": {
+        "title": "Página no encontrada"
+    },
+    "eyebrow": "Error 404",
+    "title": "No hemos encontrado esta página",
+    "intro": "Puede que el enlace sea antiguo o que la página se haya movido. Estas páginas le ayudarán a retomar el camino.",
+    "links_title": "Adónde ir ahora",
+    "links": [
+        {
+            "title": "Nuestro pescado",
+            "text": "Las 12 especies principales y sus páginas."
+        },
+        {
+            "title": "Envíe sus requisitos",
+            "text": "Especie, cantidad y destino, enviados al equipo de exportación."
+        },
+        {
+            "title": "Nuestros mercados",
+            "text": "Adónde enviamos hoy y qué está previsto."
+        },
+        {
+            "title": "Contacto",
+            "text": "WhatsApp, correo electrónico, oficina y fábrica."
+        }
+    ],
+    "home": "Volver a la página de inicio"
 }

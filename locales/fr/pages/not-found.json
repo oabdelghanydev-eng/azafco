@@ -1,4 +1,28 @@
 {
-    "title": "Page non trouvée",
-    "back_home": "Retour à l'accueil"
+    "meta": {
+        "title": "Page introuvable"
+    },
+    "eyebrow": "Erreur 404",
+    "title": "Nous n’avons pas trouvé cette page",
+    "intro": "Le lien est peut-être ancien, ou la page a peut-être été déplacée. Ces pages vous remettront sur la bonne voie.",
+    "links_title": "Où aller ensuite",
+    "links": [
+        {
+            "title": "Nos poissons",
+            "text": "Les 12 espèces principales et leurs pages."
+        },
+        {
+            "title": "Envoyer vos besoins",
+            "text": "Espèce, quantité et destination, transmises à l’équipe export."
+        },
+        {
+            "title": "Nos marchés",
+            "text": "Où nous expédions aujourd’hui et ce qui est prévu."
+        },
+        {
+            "title": "Nous contacter",
+            "text": "WhatsApp, e-mail, bureau et usine."
+        }
+    ],
+    "home": "Retour à l’accueil"
 }

@@ -1,0 +1,114 @@
+{
+    "skip_to_main": "انتقل إلى المحتوى الرئيسي",
+    "nav": {
+        "main_label": "القائمة الرئيسية",
+        "footer_label": "روابط التذييل",
+        "home": "الرئيسية",
+        "seafood": "الأسماك والاستزراع",
+        "seafood_overview": "نظرة عامة",
+        "products": "المنتجات",
+        "processing": "التجهيز والتعبئة",
+        "quality": "الجودة",
+        "export": "حلول التصدير",
+        "markets": "الأسواق",
+        "for_importers": "للمستوردين",
+        "company": "شركتنا",
+        "about": "من نحن",
+        "businesses": "قطاعات الأعمال",
+        "insights": "الأخبار والمعرفة",
+        "contact": "تواصل معنا",
+        "menu": "القائمة",
+        "open_menu": "فتح القائمة",
+        "close_menu": "إغلاق القائمة",
+        "home_link_label": "الصفحة الرئيسية لازافكو العالمية"
+    },
+    "cta": {
+        "view_specifications": "اطّلع على المواصفات",
+        "contact": "تواصل معنا",
+        "talk_to_export_team": "تحدّث مع فريق التصدير",
+        "learn_more": "اعرف المزيد",
+        "read_more": "اقرأ المزيد",
+        "view_all": "عرض الكل",
+        "whatsapp": "واتساب",
+        "call": "اتصال",
+        "email": "البريد الإلكتروني",
+        "loading": "جارٍ التحميل…",
+        "opens_new_tab": "(يفتح في علامة تبويب جديدة)",
+        "contact_export_team": "تواصل مع فريق التصدير",
+        "send_requirements": "أرسل متطلباتك",
+        "start_partnership": "لنبدأ شراكة",
+        "request_document_pack": "اسأل فريق التصدير عن المستندات"
+    },
+    "breadcrumbs": {
+        "label": "مسار التنقل",
+        "home": "الرئيسية"
+    },
+    "pending": {
+        "prefix": "بانتظار تأكيد الإدارة:",
+        "certificate_card": "{name}: بانتظار موافقة الإدارة على النشر"
+    },
+    "spec": {
+        "attribute": "البند",
+        "value": "القيمة",
+        "confirmed_with_sales": "تُحدد مع كل طلب",
+        "attribute_label": "{label}:"
+    },
+    "market": {
+        "status_active": "سوق نشط",
+        "status_planned": "ضمن الخطة",
+        "status_paused": "التصدير متوقف مؤقتًا",
+        "fact_species": "الأصناف",
+        "fact_species_value": "{count} صنفًا رئيسيًا",
+        "fact_transport": "النقل",
+        "fact_transport_value": "مبرّد، جوًا أو برًا، ويُحدد مع كل طلب",
+        "fact_documents": "المستندات",
+        "fact_documents_value": "يؤكد فريق التصدير المستندات المطلوبة لسوقك"
+    },
+    "certificate": {
+        "issuer": "جهة الإصدار",
+        "view": "عرض الشهادة",
+        "request_copy": "استفسر عن هذه الشهادة",
+        "request_copy_for": ": {name}",
+        "groups": {
+            "food_safety": "سلامة الغذاء",
+            "export_approval": "اعتمادات التصدير",
+            "management_system": "أنظمة الإدارة"
+        }
+    },
+    "insight": {
+        "read_article": "اقرأ المقال",
+        "minutes": "{count, plural, one {قراءة دقيقة واحدة} two {قراءة دقيقتين} few {قراءة # دقائق} other {قراءة # دقيقة}}"
+    },
+    "faq": {
+        "toggle_hint": "اعرض الإجابة"
+    },
+    "gallery": {
+        "label": "معرض الصور"
+    },
+    "whatsapp_float": {
+        "label": "واتساب · الإدارة مباشرة"
+    },
+    "facts": {
+        "title": "حقائق سريعة",
+        "species": "صنفًا رئيسيًا",
+        "markets": "أسواق تصدير",
+        "markets_value": "+{count}",
+        "iso": "شهادات ISO",
+        "iso_note": "معتمدة من TÜV AUSTRIA",
+        "plant": "مصنع التجهيز",
+        "plant_value": "مطوبس، كفر الشيخ"
+    },
+    "fill": {
+        "spec_title": "لديك مواصفات كاملة؟",
+        "spec_text": "أرسلها إلى فريق التصدير ونراجعها معك.",
+        "documents_text": "لأي استفسار عن المستندات، تواصل مع فريق التصدير."
+    },
+    "consent": {
+        "title": "أدوات التحليل على هذا المتصفح",
+        "on": "أدوات التحليل مفعّلة على هذا المتصفح.",
+        "off": "أدوات التحليل متوقفة على هذا المتصفح.",
+        "unset": "لم تختر بعد على هذا المتصفح، وتعمل أدوات التحليل وفق الإعداد الافتراضي لمنطقتك.",
+        "enable": "تفعيل أدوات التحليل",
+        "disable": "إيقاف أدوات التحليل"
+    }
+}

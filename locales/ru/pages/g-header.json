@@ -1,0 +1,20 @@
+{
+    "logo_alt": "AZAFCO International",
+    "home_label": "Главная страница AZAFCO International",
+    "nav_label": "Основная навигация",
+    "nav": {
+        "about": "О нас",
+        "fish": "Наша рыба",
+        "chain": "Производственная цепочка",
+        "quality": "Качество",
+        "markets": "Рынки",
+        "contact": "Контакты"
+    },
+    "lang_aria": "Язык: {name}",
+    "lang_list_label": "Выберите язык",
+    "menu_open": "Меню",
+    "menu_close": "Закрыть меню",
+    "whatsapp_cta": "WhatsApp",
+    "whatsapp_aria": "Написать руководству в WhatsApp (откроется в новой вкладке)",
+    "whatsapp_message": "Здравствуйте, AZAFCO International! Меня зовут …, компания … (название, страна). Нас интересует:"
+}

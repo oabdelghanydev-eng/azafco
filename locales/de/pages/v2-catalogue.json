@@ -1,0 +1,233 @@
+{
+    "meta": {
+        "title": "Frischfisch aus Ägypten: 12 Hauptarten zum Export",
+        "description": "Tilapia, Wolfsbarsch, Dorade, Meeräsche, Karpfen und Wels aus Ägypten für Importeure und Händler. Gewichtsklasse, Verpackung und Preis pro Auftrag bestätigt."
+    },
+    "breadcrumb": "Unser Fisch",
+    "new_tab": "(öffnet in neuem Tab)",
+    "hero": {
+        "eyebrow": "Unser Fisch",
+        "title": "Unsere 12 wichtigsten Frischfischarten aus Ägypten",
+        "intro": "Ganz und frisch gekühlt, nach Stückgewicht sortiert und auf Eis verpackt. Gewichtsklasse, Verpackung und Preis vereinbaren wir für jeden Auftrag mit Ihnen.",
+        "primary": "Partnerschaft starten",
+        "secondary": "Geschäftsleitung per WhatsApp schreiben",
+        "whatsapp_message": "Hallo AZAFCO International, wir sehen uns Ihre Fischliste an. Fischart, Zielort und Menge:",
+        "facts": {
+            "label": "AZAFCO International in Zahlen",
+            "markets": {
+                "value": "7+",
+                "label": "Exportmärkte"
+            },
+            "founded": {
+                "value": "2008",
+                "label": "Gründungsjahr"
+            },
+            "iso": {
+                "value": "3",
+                "label": "ISO-Zertifikate · TÜV AUSTRIA"
+            },
+            "capacity": {
+                "value": "2.500",
+                "label": "t/Monat Packkapazität"
+            }
+        }
+    },
+    "grid": {
+        "eyebrow": "Fischarten",
+        "title": "Fischarten, die wir liefern",
+        "intro": "Suchen Sie nach Handelsname, ägyptischem Marktnamen oder wissenschaftlichem Namen, auf Deutsch, Englisch oder Arabisch.",
+        "more_species": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage."
+    },
+    "water": {
+        "freshwater": "Süßwasser",
+        "marine": "Meerwasser",
+        "brackish": "Brackwasser"
+    },
+    "descriptions": {
+        "tilapia": "Tilapia, auch als Nil-Tilapia gehandelt, ist ein Süßwasserfisch.",
+        "sea-bass": "Der Wolfsbarsch, auch als Europäischer Wolfsbarsch oder Branzino gehandelt, ist ein Meeresfisch.",
+        "mullet": "Die Großkopfmeeräsche, in Ägypten als Bouri bekannt, ist ein Brackwasserfisch.",
+        "grass-carp": "Der Graskarpfen, in Ägypten als Hashayesh bekannt, ist ein Süßwasserkarpfen.",
+        "common-carp": "Der Karpfen, in Ägypten als Qishra bekannt, ist die vollständig beschuppte Form (Schuppenkarpfen) und ein Süßwasserfisch.",
+        "catfish": "Der Afrikanische Raubwels, auch als Afrikanischer Wels oder Karmout gehandelt, ist ein Süßwasserfisch.",
+        "meagre": "Der Adlerfisch, in Ägypten als Lout bekannt, ist ein Meeresfisch.",
+        "thinlip-mullet": "Die Dünnlippige Meeräsche, in Ägypten als Tobar bekannt, ist eine Meeräsche aus dem Brackwasser. Sie ist ein eigenes Produkt, getrennt von unserer Großkopfmeeräsche.",
+        "bayad-catfish": "Der Bagrus-Wels ist ein im Nil heimischer Süßwasserwels.",
+        "silver-carp": "Der Silberkarpfen ist ein Süßwasserkarpfen.",
+        "mirror-carp": "Der Spiegelkarpfen ist die spiegelbeschuppte Form des Karpfens mit nur wenigen großen Schuppen. Er ist ein Süßwasserfisch.",
+        "sea-bream": "Die Dorade, auch als Goldbrasse oder Dorade Royale gehandelt, ist ein Meeresfisch."
+    },
+    "card": {
+        "image_alt": "{name} im Ganzen, Seitenansicht",
+        "origin": "Herkunft",
+        "origin_value": "Ägypten",
+        "water": "Wasser",
+        "grades": "Gewichtsklassen (ca.)",
+        "grades_label": "Gewichtsklassen",
+        "grades_per_order": "Pro Auftrag bestätigt"
+    },
+    "browser": {
+        "search_label": "Fischarten suchen",
+        "search_placeholder": "z. B. Tilapia, Wolfsbarsch, بوري",
+        "search_hint": "Die Ergebnisse werden während der Eingabe aktualisiert.",
+        "clear_search": "Suche löschen",
+        "water_type": "Gewässertyp",
+        "all": "Alle Fischarten",
+        "result_count": "{count, plural, =0 {Keine Fischart gefunden} =1 {1 von {total} Fischarten} other {# von {total} Fischarten}}",
+        "reset": "Filter zurücksetzen",
+        "empty_title": "Keine Fischart passt zu Ihrer Suche",
+        "empty_text": "Wir konnten „{query}“ in dieser Liste nicht finden. Prüfen Sie die Schreibweise oder setzen Sie die Filter zurück. Weitere Arten liefern wir auf Anfrage; Sie können uns also auch die gewünschte Fischart und Spezifikation senden.",
+        "form_type": "Produktform",
+        "all_forms": "Alle Formen"
+    },
+    "note": {
+        "title": "Spezifikationen werden pro Auftrag bestätigt",
+        "text": "Gewichtsklasse, Produktform, Verpackung, Nettogewicht und Verfügbarkeit werden für jeden Auftrag schriftlich vereinbart. Preise werden pro Auftrag bestätigt, abhängig von Fischart, Spezifikation, Menge, Zielort und Handelsbedingungen. Wir veröffentlichen keine Preislisten oder Lagerbestände."
+    },
+    "specify": {
+        "eyebrow": "Ihre Anforderungen",
+        "title": "Was Ihre Anfrage enthalten sollte",
+        "intro": "Je klarer die Anfrage, desto schneller kann das Exportteam bestätigen, was wir liefern können.",
+        "species_title": "Fischart und Gewichtsklasse",
+        "species_text": "Die Fischart und der Gewichtsbereich pro Stück, den Sie benötigen.",
+        "form_title": "Produktform",
+        "form_text": "Unser Fisch wird ganz und frisch gekühlt verkauft. Wenn Sie eine andere Form benötigen, fragen Sie das Exportteam.",
+        "packing_title": "Verpackung und Nettogewicht",
+        "packing_text": "Boxtyp, Nettogewicht pro Box und etwaige Anforderungen an die Etiketten.",
+        "volume_title": "Menge und Häufigkeit",
+        "volume_text": "Menge pro Lieferung und ob sich der Auftrag wiederholt.",
+        "destination_title": "Zielort und Dokumente",
+        "destination_text": "Lieferland und -stadt sowie die Dokumente, die Ihr Markt verlangt.",
+        "timing_title": "Zeitplan",
+        "timing_text": "Ihr gewünschtes Lieferfenster."
+    },
+    "custom": {
+        "eyebrow": "Individuelle Anforderungen",
+        "title": "Andere Gewichtsklasse oder Verpackung?",
+        "intro": "Senden Sie uns die gewünschte Spezifikation. Andere Gewichtsklassen oder Verpackungen prüfen wir anhand unserer tatsächlichen Möglichkeiten und der verfügbaren Mengen, und wir bestätigen nur, was wir liefern können.",
+        "form": "Anforderungen senden",
+        "email": "E-Mail an das Exportteam",
+        "email_subject": "Fischspezifikation für unseren Markt",
+        "after_title": "So geht es weiter",
+        "after_1": "Das Exportteam prüft Ihre Spezifikation und Menge",
+        "after_2": "Wir melden uns bei Ihnen, um die Details zu bestätigen",
+        "after_3": "Gewichtsklasse, Verpackung und Preis werden für Ihren Auftrag schriftlich bestätigt"
+    },
+    "proof": {
+        "eyebrow": "Hintergrund",
+        "title": "Prüfen Sie den Ablauf vor der Bestellung",
+        "processing_title": "Verarbeitung und Verpackung",
+        "processing_text": "Wie der Fisch vom Abfischen über Waschen, Beeisen, Sortieren und Verpacken bis zum Versand gelangt.",
+        "processing_link": "Verarbeitung ansehen",
+        "quality_title": "Qualität und Zertifikate",
+        "quality_text": "Unsere ISO-Zertifikate und wie jeder Auftrag anhand der vereinbarten Spezifikation geprüft wird.",
+        "quality_link": "Qualität ansehen",
+        "importers_title": "Für Importeure",
+        "importers_text": "Wie aus einer Anfrage ein bestätigter Auftrag wird.",
+        "importers_link": "Ablauf für Importeure lesen"
+    },
+    "detail": {
+        "meta_title": "{name} aus Ägypten: Großhandel und Export",
+        "meta_title_short": "{name} aus Ägypten",
+        "meta_description": "{name} ({scientific}) aus Ägypten für Importeure und Händler: ganz, frisch gekühlt, auf Eis. Größe, Verpackung und Preis pro Auftrag bestätigt.",
+        "meta_description_short": "{name} aus Ägypten für Importeure und Händler: ganz, frisch gekühlt, auf Eis. Größe, Verpackung und Preis pro Auftrag bestätigt.",
+        "eyebrow": "Großhandel aus Ägypten",
+        "intro": "Nennen Sie uns Gewichtsklasse, Verpackung, Menge und Zielort. Das Exportteam prüft Ihre Anfrage und bestätigt Spezifikation und Konditionen schriftlich mit Ihnen.",
+        "also_known_as": "Auch bekannt als",
+        "primary": "Partnerschaft starten",
+        "secondary": "Spezifikationen ansehen",
+        "spec_eyebrow": "Spezifikation",
+        "spec_title": "Spezifikationskarte",
+        "spec_intro": "Die Werte stammen aus unserer aktuellen Produktliste. Gewichtsklasse, Form und Verpackung für Ihren Auftrag werden vor dem Versand schriftlich bestätigt.",
+        "spec_caption": "{name}: Spezifikation",
+        "trade_name": "Handelsname",
+        "scientific_name": "Wissenschaftlicher Name",
+        "origin": "Herkunft",
+        "origin_value": "Ägypten",
+        "packed_at": "Verpackt in",
+        "packed_at_value": "Unser Werk in Motobas, Kafr el-Sheikh, Ägypten",
+        "transport": "Transport",
+        "transport_value": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht",
+        "water_type": "Gewässertyp",
+        "form": "Produktform",
+        "sizes": "Gewichtsklassen (ca.)",
+        "packaging": "Verpackung (Richtwert)",
+        "grading_title": "Gewichtsklassen",
+        "grading_text": "Die Klassen richten sich nach dem Stückgewicht. Nennen Sie uns Ihren Zielbereich und die Verpackung, und wir bestätigen, welche Klassen wir für Ihren Auftrag liefern können.",
+        "docs_title": "Qualitätsdokumente",
+        "docs_text": "Wir verfügen über die Zertifikate ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018, zertifiziert durch TÜV AUSTRIA. Teilen Sie uns mit, welche Dokumente Ihr Markt und Ihr Qualitätsteam benötigen, und das Exportteam bestätigt vor Ihrer Bestellung, was wir für dieses Produkt bereitstellen können.",
+        "docs_email": "E-Mail an das Exportteam",
+        "docs_subject": "{name}: Dokumente für unseren Markt",
+        "docs_link": "Qualität und Zertifikate",
+        "docs_guide": "Leitfaden zu HS-Codes und Exportdokumenten",
+        "related_eyebrow": "Weitere Fischarten",
+        "related_title": "Ähnliche Fischarten",
+        "faq_title": "{name}: Fragen zur Bestellung",
+        "faq_sizes_q": "Welche Gewichtsklassen können Sie liefern?",
+        "faq_sizes_a_listed": "Die Spezifikationskarte nennt Richtwerte für die Gewichtsklassen. Senden Sie uns Ihren Zielgewichtsbereich, und wir bestätigen, was wir für Ihren Auftrag liefern können.",
+        "faq_sizes_a_none": "Die Gewichtsklassen für diese Fischart werden pro Auftrag bestätigt. Senden Sie uns Ihren Zielgewichtsbereich, und wir bestätigen, was wir liefern können.",
+        "faq_packing_q": "Lässt sich die Verpackung anpassen?",
+        "faq_packing_a": "Boxgröße, Nettogewicht und Etiketten prüfen wir anhand Ihrer Spezifikation und der benötigten Menge.",
+        "faq_price_q": "Veröffentlichen Sie Preise?",
+        "faq_price_a": "Nein. Preise werden pro Auftrag bestätigt, abhängig von Spezifikation, Menge, Zielort und Handelsbedingungen.",
+        "notes": {
+            "thinlip-mullet": "Die Dünnlippige Meeräsche (Tobar) ist ein eigenes Produkt, getrennt von unserer Großkopfmeeräsche (Bouri). Teilen Sie uns mit, welche Sie benötigen.",
+            "mirror-carp": "Spiegelkarpfen (Mabrouka) und Karpfen (Qishra) sind zwei Formen derselben Art und werden als getrennte Produkte verkauft. Teilen Sie uns mit, welche Sie benötigen."
+        },
+        "contact": {
+            "eyebrow": "Partnerschaft starten",
+            "title": "{name}: Sprechen Sie mit uns",
+            "intro": "Schreiben Sie der Geschäftsleitung per WhatsApp für schnelle Abschlüsse, oder senden Sie dem Exportteam eine E-Mail für Spezifikationen und Dokumente.",
+            "whatsapp_title": "WhatsApp",
+            "whatsapp_sub": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",
+            "whatsapp_message": "Hallo AZAFCO International, wir interessieren uns für folgende Fischart: {name}. Zielort und Menge:",
+            "email_title": "E-Mail",
+            "email_sub": "Exportteam · Details und Dokumente",
+            "email_subject": "{name}: Spezifikationen",
+            "email_body": "Fischart: {name}\nGewichtsklasse:\nVerpackung und Nettogewicht:\nMenge pro Lieferung:\nZielort (Land, Stadt):\nErforderliche Dokumente:\nGewünschtes Lieferfenster:\n",
+            "form_lead": "Sie haben eine vollständige Spezifikation?",
+            "form_link": "Anforderungen senden",
+            "after_title": "So geht es weiter",
+            "after_1": "Das Exportteam prüft Ihre Anforderungen",
+            "after_2": "Wir melden uns bei Ihnen, um die Details zu bestätigen",
+            "after_3": "Gewichtsklasse, Verpackung und Preis werden für Ihren Auftrag schriftlich bestätigt",
+            "new_tab": "(öffnet in neuem Tab)"
+        }
+    },
+    "schema": {
+        "list_name": "Fischliste von AZAFCO International",
+        "category": "Frischer Fisch"
+    },
+    "pending": {
+        "species_id": "{name}: Artbestimmung (wissenschaftlicher Name)"
+    },
+    "specs": {
+        "forms": {
+            "fresh_whole": "Ganz, frisch gekühlt",
+            "fresh_gutted": "Ausgenommen, frisch gekühlt",
+            "fresh_fillet": "Filet, frisch gekühlt",
+            "frozen_whole": "Ganz, gefroren",
+            "frozen_gutted": "Ausgenommen, gefroren",
+            "frozen_fillet": "Filet, gefroren"
+        },
+        "grades": {
+            "small": "Klein",
+            "medium": "Mittel",
+            "large": "Groß",
+            "extra_large": "Extra groß",
+            "jumbo": "Jumbo"
+        },
+        "packs": {
+            "eps_box": "EPS-Styroporbox",
+            "carton": "Karton",
+            "plastic_crate": "Kunststoffkiste",
+            "vacuum_pack": "Vakuumverpackung",
+            "other": "Sonstige"
+        },
+        "units": {
+            "g": "g",
+            "kg": "kg"
+        },
+        "and_above": "ab {value}"
+    }
+}

@@ -1,0 +1,193 @@
+{
+    "meta": {
+        "title": "Fischexport in den Nahen Osten und darüber hinaus",
+        "description": "Ägyptischer Frischfisch für Importeure in 7+ Märkten: VAE, Kuwait, Bahrain, Libanon, Katar, Irak, Syrien. Per Luft und Straße; Europa als Nächstes geplant."
+    },
+    "breadcrumb": "Märkte",
+    "hero": {
+        "eyebrow": "Unsere Märkte",
+        "title": "Frischfischexport in den Nahen Osten und darüber hinaus",
+        "intro": "Wir liefern per Luft und Straße in 7+ Märkte; als Nächstes ist Europa geplant.",
+        "primary": "Partnerschaft starten",
+        "secondary": "Unsere Fischarten ansehen",
+        "image_alt": "Luftaufnahme von Erdteichen zur Fischzucht mit Belüftern und Palmen"
+    },
+    "stats": [
+        {
+            "value": "7+",
+            "label": "Exportmärkte"
+        },
+        {
+            "value": "2008",
+            "label": "erster Exportmarkt: VAE"
+        },
+        {
+            "value": "12",
+            "label": "Hauptarten"
+        },
+        {
+            "value": "3",
+            "label": "ISO-Zertifikate, TÜV AUSTRIA"
+        }
+    ],
+    "index": {
+        "eyebrow": "Aktive Märkte",
+        "title": "Wohin wir heute liefern",
+        "intro": "Unsere sieben aktiven Märkte und das Jahr, seit dem wir jeden von ihnen beliefern. Wählen Sie einen Markt für Details.",
+        "since": "seit {year}",
+        "planned_title": "Geplant",
+        "paused": "{country}: Exporte pausiert",
+        "map_label": "Karte der Versandrouten von Ägypten in unsere sieben aktiven Märkte",
+        "origin": "Ägypten · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Markt für Markt",
+        "title": "Wen wir in jedem Markt beliefern",
+        "intro": "Die Abnehmer, die wir heute in jedem unserer aktiven Märkte beliefern. Wählen Sie einen Markt für Details.",
+        "buyers_label": "Wir beliefern",
+        "details": "Marktdetails"
+    },
+    "approach": {
+        "eyebrow": "Marktanforderungen",
+        "title": "Jeder Markt hat seine eigene Spezifikation",
+        "intro": "Die Details vereinbaren wir vor der ersten Lieferung mit jedem Importeur.",
+        "points": [
+            {
+                "title": "Fischart und Gewichtsklasse",
+                "text": "Fischart, Gewichtsklasse und Produktform werden für jeden Importeur und jeden Markt vereinbart."
+            },
+            {
+                "title": "Verpackung und Etiketten",
+                "text": "Verpackung und Boxetiketten richten sich nach den Anforderungen Ihres Marktes und Ihrer Kunden."
+            },
+            {
+                "title": "Dokumente",
+                "text": "Die Exportdokumente für jede Lieferung werden auf Ihr Bestimmungsland abgestimmt."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "So starten Sie",
+        "title": "Von Ihrer ersten Nachricht bis zum Versand",
+        "steps": [
+            {
+                "title": "Anforderungen senden",
+                "text": "Fischart, Gewichtsklasse, Menge, Verpackung und Zielort."
+            },
+            {
+                "title": "Prüfung mit dem Exportteam",
+                "text": "Wir prüfen Verfügbarkeit, Spezifikation und die Einfuhranforderungen Ihres Bestimmungslandes."
+            },
+            {
+                "title": "Auftrag vereinbaren",
+                "text": "Fischart, Gewichtsklasse, Verpackung, Transport, Termin und Preis werden für jeden Auftrag schriftlich bestätigt."
+            },
+            {
+                "title": "Verpacken und versenden",
+                "text": "Wir verpacken auf Eis und versenden per Luft- oder Straßenfracht, mit den für Ihr Bestimmungsland vereinbarten Exportdokumenten."
+            }
+        ]
+    },
+    "transport": {
+        "eyebrow": "Transport",
+        "title": "Per Luft und Straße",
+        "intro": "Frischer Fisch reist gekühlt und auf Eis verpackt. Er verlässt das Werk in unseren eigenen Kühl-Lkw und geht dann per Luft- oder Straßenfracht weiter.",
+        "modes": [
+            {
+                "title": "Luftfracht",
+                "text": "Auf Eis in isolierten Boxen für die Luftfracht verpackt, für Ziele mit Luftfrachtverbindung."
+            },
+            {
+                "title": "Straßenfracht",
+                "text": "Gekühlter Straßentransport, wenn das Ziel auf dem Landweg erreichbar ist."
+            }
+        ],
+        "note": "Wir veröffentlichen keine festen Transitzeiten: Sie hängen von Route und Buchung ab und werden für jede Lieferung bestätigt."
+    },
+    "support": {
+        "eyebrow": "Zusammenarbeit",
+        "title": "Klare Bedingungen für jeden Auftrag",
+        "items": [
+            {
+                "title": "Preise werden pro Auftrag bestätigt",
+                "text": "Preise hängen von Fischart, Gewichtsklasse, Menge, Verpackung und Lieferbedingungen ab. Deshalb bestätigen wir sie für jeden Auftrag."
+            },
+            {
+                "title": "Klare Zuständigkeiten",
+                "text": "Wer Exportdokumente, Einfuhrabfertigung und Zustellung übernimmt, wird für jeden Auftrag schriftlich vereinbart."
+            },
+            {
+                "title": "Zwei direkte Kanäle",
+                "text": "Per WhatsApp erreichen Sie direkt unsere Geschäftsleitung, für schnelle Abschlüsse. Per E-Mail erreichen Sie das Exportteam, für Details und Dokumente."
+            }
+        ],
+        "guide_link": "Leitfaden zum Import von Frischfisch aus Ägypten lesen"
+    },
+    "new_market": {
+        "title": "Ihr Land ist geplant oder nicht aufgeführt?",
+        "text": "Nennen Sie uns Ihr Bestimmungsland. Unser Exportteam prüft jeden neuen Markt einzeln.",
+        "action": "Exportteam kontaktieren"
+    },
+    "disclaimer": "Jede Lieferung hängt von den Einfuhrvorschriften des Bestimmungslandes, der aktuellen Verfügbarkeit und den schriftlich vereinbarten Auftragsbedingungen ab.",
+    "regions": {
+        "gulf": "Golfregion",
+        "levant": "Levante",
+        "middle_east": "Naher Osten",
+        "europe": "Europa",
+        "americas": "Amerika",
+        "other": "Sonstige"
+    },
+    "detail": {
+        "meta_title": "Frischer Fisch für Importeure aus {country}",
+        "meta_description": "Ägyptischer Frischfisch für Importeure aus {country}, aktiver Markt seit {year}. Gekühlt per Luft oder Straße versandt; Preise werden pro Auftrag bestätigt.",
+        "eyebrow": "Aktiver Markt seit {year}",
+        "title": "Ägyptischer Frischfisch für Importeure aus {country}",
+        "intro": "Wir beliefern Importeure aus {country} seit {year}. Fischart, Gewichtsklasse, Verpackung, Transport und Dokumente vereinbaren wir mit jedem Importeur.",
+        "primary": "Partnerschaft starten",
+        "secondary": "Geschäftsleitung per WhatsApp schreiben",
+        "image_alt": "Ganze frische Fische auf Scherbeneis, von oben fotografiert",
+        "facts_title": "Auf einen Blick: {country}",
+        "facts": {
+            "since_label": "Aktiver Markt seit",
+            "region_label": "Region",
+            "plant_label": "Versand ab",
+            "plant_value": "Motobas, Kafr el-Sheikh, Ägypten",
+            "plant_link": "Werk auf der Karte ansehen",
+            "quality_label": "Qualität",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
+            "quality_link": "Zur Qualität",
+            "transport_label": "Transport",
+            "transport_value": "Per Luft oder Straße, pro Auftrag bestätigt",
+            "prices_label": "Preise",
+            "prices_value": "Pro Auftrag bestätigt"
+        },
+        "discuss_eyebrow": "Was wir vereinbaren",
+        "discuss_title": "Was wir mit Importeuren aus {country} vereinbaren",
+        "discuss": [
+            {
+                "title": "Fischarten und Gewichtsklassen",
+                "text": "Die Arten und Gewichtsklassen, die Ihre Kunden kaufen, abgeglichen mit der aktuellen Verfügbarkeit."
+            },
+            {
+                "title": "Verpackung und Etiketten",
+                "text": "Boxformat und Etikettanforderungen für Ihren Vertriebskanal."
+            },
+            {
+                "title": "Transport",
+                "text": "Gekühlter Versand per Luft oder Straße; die Route wird für jeden Auftrag bestätigt."
+            },
+            {
+                "title": "Dokumente",
+                "text": "Die Exportdokumente, die Importeure aus {country} für die Einfuhr benötigen, für jeden Auftrag abgestimmt."
+            }
+        ],
+        "products_eyebrow": "Fischarten",
+        "products_title": "Unsere Hauptarten",
+        "products_note": "Dies sind unsere wichtigsten, meistgefragten Fischarten; weitere Arten liefern wir auf Anfrage.",
+        "map_eyebrow": "Unsere Märkte",
+        "map_title": "Unsere Versandrouten, auch für Kunden aus {country}",
+        "map_intro": "Wir liefern per Luft und Straße in 7+ Märkte; als Nächstes ist Europa geplant.",
+        "buyers_title": "Unsere Kunden aus {country}",
+        "glance_eyebrow": "Marktprofil"
+    }
+}

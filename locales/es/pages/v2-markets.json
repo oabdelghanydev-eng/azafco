@@ -1,0 +1,193 @@
+{
+    "meta": {
+        "title": "Exportación de pescado: Oriente Medio y más allá",
+        "description": "Pescado fresco egipcio para importadores de 7+ mercados: EAU, Kuwait, Baréin, Líbano, Catar, Irak y Siria, por aire y carretera. Europa es el siguiente paso."
+    },
+    "breadcrumb": "Mercados",
+    "hero": {
+        "eyebrow": "Nuestros mercados",
+        "title": "Exportación de pescado fresco a Oriente Medio y más allá",
+        "intro": "Enviamos por vía aérea y por carretera a más de 7 mercados, y Europa es el siguiente paso de nuestro plan.",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Ver nuestras especies",
+        "image_alt": "Vista aérea de estanques de tierra para peces, con aireadores y palmeras"
+    },
+    "stats": [
+        {
+            "value": "7+",
+            "label": "mercados de exportación"
+        },
+        {
+            "value": "2008",
+            "label": "primer mercado de exportación: EAU"
+        },
+        {
+            "value": "12",
+            "label": "especies principales"
+        },
+        {
+            "value": "3",
+            "label": "certificados ISO, TÜV AUSTRIA"
+        }
+    ],
+    "index": {
+        "eyebrow": "Mercados activos",
+        "title": "Adónde enviamos hoy",
+        "intro": "Nuestros siete mercados activos y el año en que empezamos a atender cada uno. Seleccione un mercado para ver los detalles.",
+        "since": "desde {year}",
+        "planned_title": "Previstos",
+        "paused": "{country}: exportaciones en pausa",
+        "map_label": "Mapa de las rutas de envío desde Egipto a nuestros siete mercados activos",
+        "origin": "Egipto · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Mercado por mercado",
+        "title": "A quién abastecemos en cada mercado",
+        "intro": "Los compradores a los que abastecemos hoy en cada uno de nuestros mercados activos. Seleccione un mercado para ver los detalles.",
+        "buyers_label": "Abastecemos a",
+        "details": "Detalles del mercado"
+    },
+    "approach": {
+        "eyebrow": "Requisitos del mercado",
+        "title": "Cada mercado tiene su propia especificación",
+        "intro": "Acordamos los detalles con cada importador antes del primer envío.",
+        "points": [
+            {
+                "title": "Especie y calibre",
+                "text": "La especie, el calibre y la presentación del producto se acuerdan para cada importador y cada mercado."
+            },
+            {
+                "title": "Embalaje y etiquetas",
+                "text": "El embalaje y las etiquetas de las cajas se ajustan a lo que exigen su mercado y sus clientes."
+            },
+            {
+                "title": "Documentos",
+                "text": "Los documentos de exportación de cada envío se acuerdan según su destino."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "Cómo empezar",
+        "title": "De su primer mensaje al envío",
+        "steps": [
+            {
+                "title": "Envíe sus requisitos",
+                "text": "Especie, calibre, cantidad, embalaje y destino."
+            },
+            {
+                "title": "Revisión con nuestro equipo de exportación",
+                "text": "Comprobamos la disponibilidad, la especificación y los requisitos de importación de su destino."
+            },
+            {
+                "title": "Acuerdo del pedido",
+                "text": "La especie, el calibre, el embalaje, el transporte, el calendario y el precio se confirman por escrito en cada pedido."
+            },
+            {
+                "title": "Envasado y envío",
+                "text": "Envasamos en hielo y enviamos por vía aérea o por carretera, con los documentos de exportación acordados para su destino."
+            }
+        ]
+    },
+    "transport": {
+        "eyebrow": "Transporte",
+        "title": "Por aire y por carretera",
+        "intro": "El pescado fresco viaja refrigerado y envasado en hielo. Sale de la planta en nuestros propios camiones frigoríficos y continúa por vía aérea o por carretera.",
+        "modes": [
+            {
+                "title": "Transporte aéreo",
+                "text": "Envasado en hielo en cajas isotérmicas para carga aérea, para destinos con conexión aérea."
+            },
+            {
+                "title": "Transporte por carretera",
+                "text": "Transporte frigorífico por carretera cuando el destino es accesible por tierra."
+            }
+        ],
+        "note": "No publicamos plazos de tránsito fijos: dependen de la ruta y de la reserva, y se confirman para cada envío."
+    },
+    "support": {
+        "eyebrow": "Trabajar con nosotros",
+        "title": "Condiciones claras en cada pedido",
+        "items": [
+            {
+                "title": "Precios confirmados en cada pedido",
+                "text": "Los precios dependen de la especie, el calibre, la cantidad, el embalaje y las condiciones de entrega, por eso los confirmamos en cada pedido."
+            },
+            {
+                "title": "Responsabilidades claras",
+                "text": "Quién se encarga de los documentos de exportación, del despacho de importación y de la entrega se acuerda por escrito en cada pedido."
+            },
+            {
+                "title": "Dos canales directos",
+                "text": "WhatsApp llega directamente a nuestra gerencia, para operaciones rápidas. El correo electrónico llega al equipo de exportación, para detalles y documentos."
+            }
+        ],
+        "guide_link": "Lea la guía para importar pescado fresco de Egipto"
+    },
+    "new_market": {
+        "title": "¿Su país está previsto o no aparece en la lista?",
+        "text": "Indíquenos su destino. Nuestro equipo de exportación estudia cada nuevo mercado caso por caso.",
+        "action": "Escriba al equipo de exportación"
+    },
+    "disclaimer": "Cada envío depende de las normas de importación del destino, de la disponibilidad del momento y de las condiciones del pedido acordadas por escrito.",
+    "regions": {
+        "gulf": "Golfo",
+        "levant": "Levante",
+        "middle_east": "Oriente Medio",
+        "europe": "Europa",
+        "americas": "América",
+        "other": "Otros"
+    },
+    "detail": {
+        "meta_title": "Exportamos pescado fresco a {country}",
+        "meta_description": "Pescado fresco egipcio para importadores en {country} desde {year}. Envío refrigerado por aire o carretera. Precios confirmados en cada pedido.",
+        "eyebrow": "Mercado activo desde {year}",
+        "title": "Pescado fresco egipcio para importadores en {country}",
+        "intro": "Atendemos a importadores en {country} desde {year}. La especie, el calibre, el embalaje, el transporte y los documentos se acuerdan con cada importador.",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Escriba a la gerencia por WhatsApp",
+        "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
+        "facts_title": "En resumen: {country}",
+        "facts": {
+            "since_label": "Mercado activo desde",
+            "region_label": "Región",
+            "plant_label": "Origen del envío",
+            "plant_value": "Motobas, Kafr el-Sheikh, Egipto",
+            "plant_link": "Ver la planta en el mapa",
+            "quality_label": "Calidad",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
+            "quality_link": "Ver calidad",
+            "transport_label": "Transporte",
+            "transport_value": "Por aire o carretera, confirmado en cada pedido",
+            "prices_label": "Precios",
+            "prices_value": "Confirmados en cada pedido"
+        },
+        "discuss_eyebrow": "Qué acordamos",
+        "discuss_title": "Qué acordamos con los importadores en {country}",
+        "discuss": [
+            {
+                "title": "Especies y calibres",
+                "text": "Las especies y los calibres que compran sus clientes, confirmados según la disponibilidad del momento."
+            },
+            {
+                "title": "Embalaje y etiquetas",
+                "text": "Formato de caja y requisitos de etiquetado para su canal de venta."
+            },
+            {
+                "title": "Transporte",
+                "text": "Envío refrigerado por aire o carretera, con la ruta confirmada en cada pedido."
+            },
+            {
+                "title": "Documentos",
+                "text": "Los documentos de exportación necesarios para importar en {country}, acordados en cada pedido."
+            }
+        ],
+        "products_eyebrow": "Especies",
+        "products_title": "Nuestras especies principales",
+        "products_note": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido.",
+        "map_eyebrow": "Nuestros mercados",
+        "map_title": "Rutas a {country} y a nuestros otros mercados",
+        "map_intro": "Enviamos por vía aérea y por carretera a más de 7 mercados, y Europa es el siguiente paso de nuestro plan.",
+        "buyers_title": "A quién abastecemos en {country}",
+        "glance_eyebrow": "Perfil del mercado"
+    }
+}

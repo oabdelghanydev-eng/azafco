@@ -2,182 +2,154 @@
     "tilapia": {
         "name": "Tilapia",
         "alt_names": [
-            "Buntbarsch",
-            "Niltilapia"
+            "Nil-Tilapia"
         ],
-        "description": "Premium Niltilapia aus zertifizierten ägyptischen Farmen. Unser #1 Exportprodukt. HACCP-zertifiziert mit vollständiger Kühlkette.",
+        "description": "Tilapia, auch als Nil-Tilapia gehandelt, ist ein Süßwasserfisch.",
         "sizes": [
-            "Klein (200-300g)",
-            "Mittel (300-500g)",
-            "Groß (500g+)",
-            "Sondergrößen verfügbar"
+            "Klein (200–300 g)",
+            "Mittel (300–500 g)",
+            "Groß (ab 500 g)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Ganzjährig verfügbar"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "sea_bass": {
         "name": "Wolfsbarsch",
         "alt_names": [
-            "Seebarsch",
-            "Loup de Mer",
-            "Europäischer Wolfsbarsch"
+            "Europäischer Wolfsbarsch",
+            "Branzino"
         ],
-        "description": "Premium Europäischer Wolfsbarsch, perfekt zum Grillen, Braten und für gehobene Küche. Restaurantfavorit in der Golfregion.",
+        "description": "Der Wolfsbarsch, auch als Europäischer Wolfsbarsch oder Branzino gehandelt, ist ein Meeresfisch.",
         "sizes": [
-            "Mittel (400-600g)",
-            "Groß (600g+)",
-            "Sondergrößen verfügbar"
+            "Mittel (400–600 g)",
+            "Groß (ab 600 g)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
-        "category": "Salzwasser",
-        "availability": "Ganzjährig verfügbar"
+        "packaging": "EPS-Styroporbox",
+        "category": "Meerwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "mullet": {
-        "name": "Meeräsche",
+        "name": "Großkopfmeeräsche",
         "alt_names": [
-            "Großkopfmeeräsche",
-            "Graue Meeräsche",
+            "Gestreifte Meeräsche",
             "Bouri"
         ],
-        "description": "Frische ägyptische Meeräsche, im Brackwasser aufgezogen. Ausgezeichnet zum Grillen und Räuchern. Traditioneller Favorit in der Golfküche.",
+        "description": "Die Großkopfmeeräsche, in Ägypten als Bouri bekannt, ist ein Brackwasserfisch.",
         "sizes": [
-            "Klein (150-250g)",
-            "Mittel (250-400g)",
-            "Sondergrößen verfügbar"
+            "Klein (150–250 g)",
+            "Mittel (250–400 g)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
-        "category": "Süßwasser",
-        "availability": "Ganzjährig verfügbar"
+        "packaging": "EPS-Styroporbox",
+        "category": "Brackwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "grass_carp": {
         "name": "Graskarpfen",
         "alt_names": [
-            "Amurkarpfen",
-            "Weißer Amur"
+            "Weißer Amur",
+            "Hashayesh"
         ],
-        "description": "Frischer Graskarpfen (Ctenopharyngodon idella), ein in Ägypten gezüchteter Süßwasserkarpfen.",
+        "description": "Der Graskarpfen, in Ägypten als Hashayesh bekannt, ist ein Süßwasserkarpfen.",
         "sizes": [
-            "Mittel (300-500g)",
-            "Groß (500g+)",
-            "Sondergrößen verfügbar"
+            "Mittel (300–500 g)",
+            "Groß (ab 500 g)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Ganzjährig verfügbar"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "mubarakah": {
         "name": "Karpfen",
         "alt_names": [
-            "Gemeiner Karpfen",
-            "Mabrouk"
+            "Schuppenkarpfen",
+            "Qishra"
         ],
-        "description": "Frischer Karpfen, ideal für traditionelle Gerichte. Große Größen für den Großhandel verfügbar.",
+        "description": "Der Karpfen, in Ägypten als Qishra bekannt, ist die vollständig beschuppte Form (Schuppenkarpfen) und ein Süßwasserfisch.",
         "sizes": [
-            "Groß (1-2kg)",
-            "Jumbo (2kg+)",
-            "Sondergrößen verfügbar"
+            "Groß (1–2 kg)",
+            "Jumbo (ab 2 kg)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Ganzjährig verfügbar"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "catfish": {
-        "name": "Afrikanischer Wels",
+        "name": "Afrikanischer Raubwels",
         "alt_names": [
-            "Afrikanischer Raubwels",
-            "Clarias-Wels"
+            "Afrikanischer Wels",
+            "Nordafrikanischer Raubwels",
+            "Karmout"
         ],
-        "description": "Frischer Afrikanischer Raubwels aus ägyptischen Süßwasserfarmen. Beliebte Wahl für Restaurants und Distributoren.",
+        "description": "Der Afrikanische Raubwels, auch als Afrikanischer Wels oder Karmout gehandelt, ist ein Süßwasserfisch.",
         "sizes": [
-            "Mittel (500-800g)",
-            "Groß (800g+)",
-            "Sondergrößen verfügbar"
+            "Mittel (500–800 g)",
+            "Groß (ab 800 g)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Ganzjährig verfügbar"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "lout": {
         "name": "Adlerfisch",
         "alt_names": [
-            "Maigre",
+            "Lout",
             "Umberfisch",
-            "Lout"
+            "Corvina"
         ],
-        "description": "Frischer Adlerfisch mit festem, weißem Fleisch. Premium-Qualität für gehobene Restaurants und Hotels.",
+        "description": "Der Adlerfisch, in Ägypten als Lout bekannt, ist ein Meeresfisch.",
         "sizes": [
-            "Mittel (400-600g)",
-            "Groß (600g+)",
-            "Sondergrößen verfügbar"
+            "Mittel (400–600 g)",
+            "Groß (ab 600 g)"
         ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
-        "category": "Salzwasser",
-        "availability": "Ganzjährig verfügbar"
+        "packaging": "EPS-Styroporbox",
+        "category": "Meerwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "thinlip_mullet": {
         "name": "Dünnlippige Meeräsche",
         "alt_names": [
-            "Meeräsche",
+            "Dünnlippen-Meeräsche",
             "Tobar"
         ],
-        "description": "Frische Dünnlippige Meeräsche (Chelon ramada), in Ägypten im Brackwasser gezüchtet. Ein eigenes Produkt neben unserer Meeräsche (Mugil cephalus).",
-        "sizes": [
-            "Sondergrößen verfügbar"
-        ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
-        "category": "Süßwasser",
-        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+        "description": "Die Dünnlippige Meeräsche, in Ägypten als Tobar bekannt, ist eine Meeräsche aus dem Brackwasser. Sie ist ein eigenes Produkt, getrennt von unserer Großkopfmeeräsche.",
+        "sizes": [],
+        "packaging": "EPS-Styroporbox",
+        "category": "Brackwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "bayad_catfish": {
-        "name": "Bayad-Wels",
+        "name": "Bagrus-Wels",
         "alt_names": [
-            "Bayad"
+            "Bayad",
+            "Nil-Stachelwels"
         ],
-        "description": "Frischer Bayad-Wels (Bagrus bajad), ein im Nil heimischer Süßwasserwels. Überwiegend Wildfang aus dem Nil.",
-        "sizes": [
-            "Sondergrößen verfügbar"
-        ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "description": "Der Bagrus-Wels ist ein im Nil heimischer Süßwasserwels.",
+        "sizes": [],
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "silver_carp": {
         "name": "Silberkarpfen",
-        "alt_names": [
-            "Tolstolob"
-        ],
-        "description": "Frischer Silberkarpfen (Hypophthalmichthys molitrix), ein in Ägypten gezüchteter Süßwasserkarpfen.",
-        "sizes": [
-            "Sondergrößen verfügbar"
-        ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "alt_names": [],
+        "description": "Der Silberkarpfen ist ein Süßwasserkarpfen.",
+        "sizes": [],
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "mirror_carp": {
         "name": "Spiegelkarpfen",
         "alt_names": [
-            "Karpfen"
+            "Karpfen (Spiegelform)",
+            "Mabrouka"
         ],
-        "description": "Frischer Spiegelkarpfen, die Spiegelform des Karpfens (Cyprinus carpio), in Ägypten gezüchtet.",
-        "sizes": [
-            "Sondergrößen verfügbar"
-        ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
+        "description": "Der Spiegelkarpfen ist die spiegelbeschuppte Form des Karpfens mit nur wenigen großen Schuppen. Er ist ein Süßwasserfisch.",
+        "sizes": [],
+        "packaging": "EPS-Styroporbox",
         "category": "Süßwasser",
-        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "sea_bream": {
         "name": "Dorade",
@@ -185,35 +157,21 @@
             "Goldbrasse",
             "Dorade Royale"
         ],
-        "description": "Frische Dorade (Sparus aurata), ein in Ägypten gezüchteter Meeresfisch.",
-        "sizes": [
-            "Sondergrößen verfügbar"
-        ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
-        "category": "Salzwasser",
-        "availability": "Auf Anfrage, fragen Sie nach der aktuellen Verfügbarkeit"
+        "description": "Die Dorade, auch als Goldbrasse oder Dorade Royale gehandelt, ist ein Meeresfisch.",
+        "sizes": [],
+        "packaging": "EPS-Styroporbox",
+        "category": "Meerwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     },
     "eels": {
-        "name": "Aal",
+        "name": "Europäischer Aal",
         "alt_names": [
-            "Süßwasseraal",
-            "Ägyptischer Aal"
+            "Aal"
         ],
-        "description": "Frischer Aal aus ägyptischen Süßwasserquellen. Spezialprodukt für ausgewählte Märkte.",
-        "sizes": [
-            "Mittel (300-500g)",
-            "Groß (500g+)",
-            "Sondergrößen verfügbar"
-        ],
-        "storage_temp": "0 bis 4°C",
-        "packaging": "EPS-Box",
-        "category": "Süßwasser",
-        "availability": "Ganzjährig verfügbar"
-    },
-    "_note": {
-        "custom_sizes": "Wir bieten große Flexibilität bei den Größen - alle Produkte können nach Bestellung angepasst werden",
-        "more_products": "Zusätzliche Produkte auf Anfrage erhältlich. Kontaktieren Sie uns für spezifische Anforderungen.",
-        "min_order": "Mindestbestellung: 1 Karton"
+        "description": "Der Europäische Aal ist ein Brackwasserfisch.",
+        "sizes": [],
+        "packaging": "EPS-Styroporbox",
+        "category": "Brackwasser",
+        "availability": "Wird pro Auftrag bestätigt"
     }
 }

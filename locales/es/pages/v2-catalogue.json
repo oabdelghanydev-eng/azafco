@@ -1,0 +1,233 @@
+{
+    "meta": {
+        "title": "Pescado fresco de Egipto: 12 especies principales",
+        "description": "Tilapia, lubina, dorada, mújol, carpa y pez gato de Egipto para importadores y distribuidores. Calibre, embalaje y precio confirmados en cada pedido."
+    },
+    "breadcrumb": "Nuestro pescado",
+    "new_tab": "(se abre en una pestaña nueva)",
+    "hero": {
+        "eyebrow": "Nuestro pescado",
+        "title": "12 especies principales de pescado fresco de Egipto",
+        "intro": "Se venden enteras y frescas refrigeradas, calibradas según el peso de cada pieza y envasadas en hielo. Acordamos con usted el calibre, el embalaje y el precio de cada pedido.",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Escriba a la gerencia por WhatsApp",
+        "whatsapp_message": "Hola, AZAFCO International: estamos revisando su lista de pescado. Especie, destino y cantidad:",
+        "facts": {
+            "label": "AZAFCO International en cifras",
+            "markets": {
+                "value": "7+",
+                "label": "mercados de exportación"
+            },
+            "founded": {
+                "value": "2008",
+                "label": "año de fundación"
+            },
+            "iso": {
+                "value": "3",
+                "label": "certificados ISO · TÜV AUSTRIA"
+            },
+            "capacity": {
+                "value": "2500",
+                "label": "t/mes de capacidad de envasado"
+            }
+        }
+    },
+    "grid": {
+        "eyebrow": "Especies",
+        "title": "Especies que suministramos",
+        "intro": "Busque por nombre comercial, nombre en el mercado egipcio o nombre científico, en inglés o en árabe.",
+        "more_species": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido."
+    },
+    "water": {
+        "freshwater": "Agua dulce",
+        "marine": "Agua de mar",
+        "brackish": "Agua salobre"
+    },
+    "descriptions": {
+        "tilapia": "La tilapia, también comercializada como tilapia del Nilo, es un pez de agua dulce.",
+        "sea-bass": "La lubina, también comercializada como lubina europea o branzino, es un pez marino.",
+        "mullet": "El mújol, conocido en Egipto como bouri, es un pez de aguas salobres.",
+        "grass-carp": "La carpa herbívora, conocida en Egipto como hashayesh, es una carpa de agua dulce.",
+        "common-carp": "La carpa común, conocida en Egipto como qishra, es la forma de la carpa con el cuerpo totalmente cubierto de escamas; es un pez de agua dulce.",
+        "catfish": "El pez gato africano, también comercializado como siluro africano o karmout, es un pez de agua dulce.",
+        "meagre": "La corvina, conocida en Egipto como lout, es un pez marino.",
+        "thinlip-mullet": "El morragute, conocido en Egipto como tobar, es un mújol de aguas salobres. Es un producto distinto de nuestro mújol.",
+        "bayad-catfish": "El bagre bayad es un bagre de agua dulce originario del Nilo.",
+        "silver-carp": "La carpa plateada es una carpa de agua dulce.",
+        "mirror-carp": "La carpa espejo es la forma de la carpa común con escamas en espejo: solo tiene unas pocas escamas grandes. Es un pez de agua dulce.",
+        "sea-bream": "La dorada, conocida en el comercio internacional como gilthead sea bream o dorade, es un pez marino."
+    },
+    "card": {
+        "image_alt": "{name}: ejemplar entero, vista lateral",
+        "origin": "Origen",
+        "origin_value": "Egipto",
+        "water": "Agua",
+        "grades": "Calibres por peso (orientativos)",
+        "grades_label": "Calibres por peso",
+        "grades_per_order": "Confirmados en cada pedido"
+    },
+    "browser": {
+        "search_label": "Buscar especies",
+        "search_placeholder": "p. ej., tilapia, lubina, بوري",
+        "search_hint": "Los resultados se actualizan mientras escribe.",
+        "clear_search": "Borrar búsqueda",
+        "water_type": "Tipo de agua",
+        "all": "Todas las especies",
+        "result_count": "{count, plural, =0 {No se han encontrado especies} =1 {1 especie de {total}} other {# especies de {total}}}",
+        "reset": "Borrar filtros",
+        "empty_title": "Ninguna especie coincide con su búsqueda",
+        "empty_text": "No hemos encontrado «{query}» en esta lista. Revise la ortografía o borre los filtros. Suministramos otras especies bajo pedido, así que también puede enviarnos la especie y la especificación que necesita.",
+        "form_type": "Presentación",
+        "all_forms": "Todas las presentaciones"
+    },
+    "note": {
+        "title": "Las especificaciones se confirman en cada pedido",
+        "text": "El calibre, la presentación, el embalaje, el peso neto y la disponibilidad se acuerdan por escrito para cada pedido. Los precios se confirman en cada pedido, según la especie, la especificación, el volumen, el destino y las condiciones comerciales. No publicamos listas de precios ni niveles de existencias."
+    },
+    "specify": {
+        "eyebrow": "Sus requisitos",
+        "title": "Qué incluir en su solicitud",
+        "intro": "Cuanto más clara sea la solicitud, antes podrá el equipo de exportación confirmar lo que podemos suministrar.",
+        "species_title": "Especie y calibre",
+        "species_text": "La especie y el rango de peso por pieza que necesita.",
+        "form_title": "Presentación",
+        "form_text": "Nuestro pescado se vende entero y fresco refrigerado. Consulte al equipo de exportación por cualquier otra presentación que necesite.",
+        "packing_title": "Embalaje y peso neto",
+        "packing_text": "Tipo de caja, peso neto por caja y cualquier requisito de etiquetado.",
+        "volume_title": "Volumen y frecuencia",
+        "volume_text": "Cantidad por envío y si el pedido es recurrente.",
+        "destination_title": "Destino y documentos",
+        "destination_text": "País y ciudad de entrega, y los documentos que exige su mercado.",
+        "timing_title": "Plazos",
+        "timing_text": "Su ventana de entrega preferida."
+    },
+    "custom": {
+        "eyebrow": "Requisitos específicos",
+        "title": "¿Necesita otro calibre u otro embalaje?",
+        "intro": "Envíenos la especificación que necesita. Revisamos otros calibres o embalajes según nuestra capacidad real y las cantidades disponibles, y solo confirmamos lo que podemos suministrar.",
+        "form": "Envíe sus requisitos",
+        "email": "Correo al equipo de exportación",
+        "email_subject": "Especificación de pescado para nuestro mercado",
+        "after_title": "Qué ocurre después",
+        "after_1": "El equipo de exportación revisa su especificación y la cantidad",
+        "after_2": "Nos ponemos en contacto con usted para confirmar los detalles",
+        "after_3": "El calibre, el embalaje y el precio se confirman por escrito para su pedido"
+    },
+    "proof": {
+        "eyebrow": "Detrás de la lista",
+        "title": "Conozca el proceso antes de hacer su pedido",
+        "processing_title": "Procesado y envasado",
+        "processing_text": "Cómo pasa el pescado de la cosecha al lavado, enhielado, calibrado, envasado y despacho.",
+        "processing_link": "Ver el procesado",
+        "quality_title": "Calidad y certificados",
+        "quality_text": "Nuestros certificados ISO y cómo se comprueba cada pedido según la especificación acordada.",
+        "quality_link": "Ver la calidad",
+        "importers_title": "Para importadores",
+        "importers_text": "Cómo una consulta se convierte en un pedido confirmado.",
+        "importers_link": "Ver el proceso para importadores"
+    },
+    "detail": {
+        "meta_title": "{name} de Egipto: exportación mayorista",
+        "meta_title_short": "{name} de Egipto",
+        "meta_description": "{name} ({scientific}) de Egipto para importadores y distribuidores: pieza entera, fresca, en hielo. Calibre, embalaje y precio confirmados por pedido.",
+        "meta_description_short": "{name} de Egipto para importadores y distribuidores: pieza entera, fresca y envasada en hielo. Calibre, embalaje y precio confirmados por pedido.",
+        "eyebrow": "Suministro mayorista desde Egipto",
+        "intro": "Indíquenos el calibre, el embalaje, el volumen y el destino. El equipo de exportación revisa su solicitud y confirma con usted por escrito la especificación y las condiciones.",
+        "also_known_as": "Otros nombres",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Ver especificaciones",
+        "spec_eyebrow": "Especificación",
+        "spec_title": "Ficha de especificaciones",
+        "spec_intro": "Los valores proceden de nuestra lista de productos actual. El calibre, la presentación y el embalaje de su pedido se confirman por escrito antes del envío.",
+        "spec_caption": "{name}: especificación",
+        "trade_name": "Nombre comercial",
+        "scientific_name": "Nombre científico",
+        "origin": "Origen",
+        "origin_value": "Egipto",
+        "packed_at": "Envasado en",
+        "packed_at_value": "Nuestra planta de Motobas, Kafr el-Sheikh (Egipto)",
+        "transport": "Transporte",
+        "transport_value": "Nuestros propios camiones frigoríficos y, después, transporte aéreo o por carretera",
+        "water_type": "Tipo de agua",
+        "form": "Presentación",
+        "sizes": "Calibres por peso (orientativos)",
+        "packaging": "Tipo de embalaje (orientativo)",
+        "grading_title": "Calibres por peso",
+        "grading_text": "Los calibres se fijan según el peso de cada pieza. Indíquenos su rango objetivo y el embalaje, y le confirmaremos qué calibres podemos suministrar para su pedido.",
+        "docs_title": "Documentos de calidad",
+        "docs_text": "Contamos con los certificados ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018, con certificación de TÜV AUSTRIA. Indíquenos qué documentos necesitan su mercado y su equipo de calidad, y el equipo de exportación le confirmará qué podemos aportar para este producto antes de que haga su pedido.",
+        "docs_email": "Correo al equipo de exportación",
+        "docs_subject": "{name}: documentos para nuestro mercado",
+        "docs_link": "Calidad y certificados",
+        "docs_guide": "Guía de códigos SA y documentos de exportación",
+        "related_eyebrow": "Otras especies",
+        "related_title": "Especies relacionadas",
+        "faq_title": "{name}: preguntas sobre pedidos",
+        "faq_sizes_q": "¿Qué calibres por peso pueden suministrar?",
+        "faq_sizes_a_listed": "La ficha de especificaciones recoge calibres orientativos. Envíenos su rango de peso objetivo y le confirmaremos lo que podemos suministrar para su pedido.",
+        "faq_sizes_a_none": "Los calibres por peso de esta especie se confirman en cada pedido. Envíenos su rango de peso objetivo y le confirmaremos lo que podemos suministrar.",
+        "faq_packing_q": "¿Se puede adaptar el embalaje?",
+        "faq_packing_a": "El tamaño de la caja, el peso neto y las etiquetas se revisan según su especificación y la cantidad que necesita.",
+        "faq_price_q": "¿Publican sus precios?",
+        "faq_price_a": "No. Los precios se confirman en cada pedido, según la especificación, el volumen, el destino y las condiciones comerciales.",
+        "notes": {
+            "thinlip-mullet": "El morragute (tobar) es un producto distinto de nuestro mújol (bouri). Indíquenos cuál necesita.",
+            "mirror-carp": "La carpa espejo (mabrouka) y la carpa común (qishra) son dos formas de la misma especie y se venden como productos distintos. Indíquenos cuál necesita."
+        },
+        "contact": {
+            "eyebrow": "Iniciemos una colaboración",
+            "title": "{name}: hable con nosotros",
+            "intro": "Escriba a la gerencia por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para especificaciones y documentos.",
+            "whatsapp_title": "WhatsApp",
+            "whatsapp_sub": "Directo a la gerencia · para operaciones rápidas",
+            "whatsapp_message": "Hola, AZAFCO International: nos interesa {name}. Destino y cantidad:",
+            "email_title": "Correo electrónico",
+            "email_sub": "Equipo de exportación · detalles y documentos",
+            "email_subject": "{name}: especificaciones",
+            "email_body": "Especie: {name}\nCalibre:\nEmbalaje y peso neto:\nVolumen por envío:\nDestino (país, ciudad):\nDocumentos necesarios:\nVentana de entrega preferida:\n",
+            "form_lead": "¿Tiene una especificación completa?",
+            "form_link": "Envíe sus requisitos",
+            "after_title": "Qué ocurre después",
+            "after_1": "El equipo de exportación revisa sus requisitos",
+            "after_2": "Nos ponemos en contacto con usted para confirmar los detalles",
+            "after_3": "El calibre, el embalaje y el precio se confirman por escrito para su pedido",
+            "new_tab": "(se abre en una pestaña nueva)"
+        }
+    },
+    "schema": {
+        "list_name": "Lista de pescado de AZAFCO International",
+        "category": "Pescado fresco"
+    },
+    "pending": {
+        "species_id": "{name}: identificación de la especie (nombre científico)"
+    },
+    "specs": {
+        "forms": {
+            "fresh_whole": "Entero, fresco refrigerado",
+            "fresh_gutted": "Eviscerado, fresco refrigerado",
+            "fresh_fillet": "Filete, fresco refrigerado",
+            "frozen_whole": "Entero, congelado",
+            "frozen_gutted": "Eviscerado, congelado",
+            "frozen_fillet": "Filete, congelado"
+        },
+        "grades": {
+            "small": "Pequeño",
+            "medium": "Mediano",
+            "large": "Grande",
+            "extra_large": "Extra grande",
+            "jumbo": "Jumbo"
+        },
+        "packs": {
+            "eps_box": "Caja isotérmica de EPS",
+            "carton": "Caja de cartón",
+            "plastic_crate": "Caja de plástico",
+            "vacuum_pack": "Envasado al vacío",
+            "other": "Otro"
+        },
+        "units": {
+            "g": "g",
+            "kg": "kg"
+        },
+        "and_above": "{value} o más"
+    }
+}

@@ -1,8 +1,14 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { ogLocaleMap, ogImageMap, Locale } from '@/i18n';
-import { companyConfig } from '@/config/company.config';
-import HomePageClient from './HomePageClient';
+import { PageStructuredData } from '@/components/StructuredData';
+import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
+import GHero from '@/components/g/home/GHero';
+import GAbout from '@/components/g/home/GAbout';
+import GFish from '@/components/g/home/GFish';
+import GChain from '@/components/g/home/GChain';
+import GQuality from '@/components/g/home/GQuality';
+import GMarkets from '@/components/g/home/GMarkets';
+import GNews from '@/components/g/home/GNews';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -10,50 +16,25 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'metadata.home' });
-    const baseUrl = companyConfig.contact.baseUrl;
-    const siteT = await getTranslations({ locale, namespace: 'metadata.site' });
-
-    return {
-        title: t('title'),
-        description: t('description'),
-        alternates: {
-            canonical: `${baseUrl}/${locale}`,
-            languages: {
-                'ar': `${baseUrl}/ar`,
-                'en': `${baseUrl}/en`,
-                'es': `${baseUrl}/es`,
-                'ru': `${baseUrl}/ru`,
-                'de': `${baseUrl}/de`,
-                'fr': `${baseUrl}/fr`,
-                'x-default': `${baseUrl}/ar`,
-            },
-        },
-        openGraph: {
-            title: t('title'),
-            description: t('description'),
-            url: `${baseUrl}/${locale}`,
-            type: 'website',
-            siteName: siteT('name'),
-            locale: ogLocaleMap[locale as Locale] || 'en_US',
-            images: [{
-                url: ogImageMap[locale as Locale],
-                width: 1200,
-                height: 630,
-                alt: t('title'),
-            }],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title: t('title'),
-            description: t('description'),
-            images: [ogImageMap[locale as Locale]],
-        },
-    };
+    const t = await getTranslations({ locale, namespace: 'home_v2.meta' });
+    return buildPageMetadata({ locale, path: '', title: t('title'), description: t('description') });
 }
 
+/** Home page, design G (navy/gold). Sections in the order of the approved G canvas boards. */
 export default async function HomePage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
-    return <HomePageClient />;
+
+    return (
+        <div className="g-scope">
+            <PageStructuredData locale={locale} pageType="home" />
+            <GHero />
+            <GAbout />
+            <GFish />
+            <GChain />
+            <GQuality />
+            <GMarkets />
+            <GNews />
+        </div>
+    );
 }

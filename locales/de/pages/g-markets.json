@@ -1,0 +1,26 @@
+{
+    "eyebrow": "Unsere Märkte",
+    "title": "Der Nahe Osten und darüber hinaus",
+    "intro": "Wir liefern per Luft- und Straßenfracht in 7+ Märkte; als Nächstes ist Europa geplant. Wählen Sie einen Markt, um seine Route zu sehen.",
+    "since": "seit {year}",
+    "mapLabel": "Karte der Versandrouten von Ägypten zu unseren Märkten",
+    "origin": "Ägypten · Motobas",
+    "markets": {
+        "ae": { "name": "Vereinigte Arabische Emirate", "short": "VAE" },
+        "kw": { "name": "Kuwait", "short": "Kuwait" },
+        "bh": { "name": "Bahrain", "short": "Bahrain" },
+        "lb": { "name": "Libanon", "short": "Libanon" },
+        "qa": { "name": "Katar", "short": "Katar" },
+        "iq": { "name": "Irak", "short": "Irak" },
+        "sy": { "name": "Syrien", "short": "Syrien" }
+    },
+    "plannedTitle": "Geplant",
+    "planned": {
+        "eu": "Europa",
+        "ru": "Russland",
+        "us": "Vereinigte Staaten"
+    },
+    "paused": "Spanien: Exporte pausiert",
+    "pageLink": "Alle Märkte ansehen",
+    "marketLink": "{name}: Marktseite"
+}

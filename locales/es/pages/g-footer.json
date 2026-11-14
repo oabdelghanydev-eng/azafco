@@ -1,0 +1,42 @@
+{
+    "kicker": "Iniciemos una colaboración",
+    "title_1": "Cada envío",
+    "title_2": "empieza con un mensaje",
+    "lead": "Indíquenos la especie, la cantidad y el destino. Nuestro equipo de exportación revisará el suministro y las condiciones comerciales. Precios confirmados en cada pedido.",
+    "whatsapp": {
+        "title": "WhatsApp",
+        "sub": "Directo a la gerencia · para operaciones rápidas"
+    },
+    "email": {
+        "title": "Correo electrónico",
+        "sub": "Equipo de exportación · detalles y documentos"
+    },
+    "form": {
+        "title": "Envíe sus requisitos",
+        "sub": "Especie, calibre, cantidad y destino",
+        "value": "Correo o mensaje de WhatsApp ya redactado"
+    },
+    "factory": {
+        "title": "Fábrica",
+        "sub": "Visítenos · véala en el mapa",
+        "address": "N.º 120, Sector de Piensos, Zona Industrial, Motobas, Kafr el-Sheikh"
+    },
+    "registration": "Registro mercantil <n>{cr}</n> · Tarjeta fiscal <n>{tax}</n>",
+    "new_tab": "(se abre en una pestaña nueva)",
+    "photo_alt": "Camión frigorífico cargando cajas isotérmicas al amanecer",
+    "logo_alt": "AZAFCO International",
+    "tagline_1": "Exportador de pescado fresco",
+    "tagline_2": "de Egipto desde 2008",
+    "links_label": "Enlaces del sitio",
+    "langs_label": "Idiomas",
+    "back_to_top": "Volver arriba",
+    "copyright": "© 2026 AZAFCO International for Investment and Development S.A.E.",
+    "float_label": "Escriba a la gerencia por WhatsApp",
+    "secondary_label": "Más enlaces",
+    "secondary": {
+        "for_importers": "Para importadores",
+        "contact": "Contacto",
+        "privacy": "Política de privacidad",
+        "cookies": "Configuración de cookies"
+    }
+}

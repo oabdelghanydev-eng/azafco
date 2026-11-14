@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "title": "Élevage, achat et export de poisson d’Égypte",
+        "description": "Poisson frais élevé et acheté en Égypte, calibré, conditionné et exporté pour les importateurs, distributeurs et la restauration du Moyen-Orient et au-delà."
+    },
+    "breadcrumb": "Produits de la mer et aquaculture",
+    "hero": {
+        "eyebrow": "Produits de la mer et aquaculture",
+        "title": "Du poisson égyptien, de nos élevages et de nos fournisseurs, pour les importateurs",
+        "intro": "Nous élevons et achetons du poisson, puis le contrôlons, le lavons, le mettons sous glace, le calibrons, le conditionnons et l’exportons, avec nos propres camions frigorifiques, notre logistique et nos entrepôts frigorifiques.",
+        "primary": "Voir nos poissons",
+        "secondary": "Transformation et conditionnement"
+    },
+    "stages": {
+        "line": "Nous prenons en charge chaque étape, de l’étang à la palette.",
+        "link": "Voir les cinq étapes"
+    },
+    "species": {
+        "eyebrow": "Nos poissons",
+        "title": "12 espèces principales",
+        "intro": "Ouvrez une espèce pour voir sa fiche de spécification, ou faites une recherche dans la liste complète.",
+        "more_species": "Ce sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande.",
+        "view_all": "Voir toutes les espèces"
+    },
+    "farm": {
+        "eyebrow": "Élevage et approvisionnement",
+        "title": "Un approvisionnement qui commence à la source",
+        "text_1": "Nous élevons du poisson et en achetons auprès d’autres producteurs, afin de répondre aux besoins de chaque acheteur en espèces, en quantités et en délais. Indiquez-nous votre volume et votre fenêtre de livraison, et nous planifions l’approvisionnement avec vous."
+    },
+    "processing": {
+        "eyebrow": "Transformation",
+        "title": "Préparé selon la spécification convenue",
+        "text": "Nous contrôlons, lavons, mettons sous glace, calibrons et conditionnons chaque commande selon la spécification convenue avec vous.",
+        "point_1": "Calibré selon le poids unitaire, dans la fourchette de votre commande",
+        "point_2": "Conditionnement, poids net et étiquettes tels que confirmés par écrit",
+        "point_3": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses",
+        "link": "Voir la transformation et le conditionnement"
+    },
+    "requirements": {
+        "eyebrow": "Vos besoins",
+        "title": "Commencez par la spécification",
+        "intro": "Indiquez-nous l’espèce, le calibre, la présentation, le conditionnement, le volume et la destination. L’équipe export étudie ce que nous pouvons fournir et vous recontacte.",
+        "format_title": "Présentation du produit",
+        "format_text": "Nos poissons sont vendus entiers et frais réfrigérés. Pour toute autre présentation, interrogez l’équipe export.",
+        "grade_title": "Calibre",
+        "grade_text": "La fourchette de poids unitaire dont votre marché a besoin.",
+        "weight_title": "Poids net",
+        "weight_text": "Poids net par caisse.",
+        "packing_title": "Conditionnement",
+        "packing_text": "Type de caisse, étiquettes et langue des étiquettes.",
+        "destination_title": "Destination",
+        "destination_text": "Pays, ville, conditions de livraison et documents requis."
+    },
+    "quality": {
+        "eyebrow": "Qualité",
+        "title": "Certifiés et contrôlés à chaque commande",
+        "text": "Nous détenons les certificats ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018, délivrés par TÜV AUSTRIA. Chaque commande est vérifiée par rapport à la spécification convenue avant la fermeture des caisses.",
+        "link": "Qualité et certificats",
+        "docs_email": "Écrire à l’équipe export au sujet des documents",
+        "docs_subject": "Documents qualité pour notre marché"
+    },
+    "audience": {
+        "eyebrow": "Pour qui",
+        "title": "Conçu pour les acheteurs professionnels",
+        "importers": "Importateurs de poisson",
+        "distributors": "Grossistes et sociétés de distribution",
+        "foodservice": "Fournisseurs de la restauration hors domicile et traiteurs",
+        "horeca": "Groupes hôteliers et de restauration",
+        "partners": "Entreprises en quête d’un partenaire d’approvisionnement à long terme"
+    },
+    "pending": {
+        "farm": "Photos des élevages + surfaces, espèces et chiffres de production vérifiés"
+    }
+}

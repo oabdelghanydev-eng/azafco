@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "title": "Recursos para importadores de pescado",
+        "description": "Guías para importadores de pescado sobre códigos SA, documentos y cadena de frío, además de noticias y prensa de AZAFCO, con fecha y fuente de cada dato."
+    },
+    "breadcrumb": "Recursos",
+    "hero": {
+        "eyebrow": "Recursos",
+        "title": "Conocimiento para tomar mejores decisiones de compra",
+        "intro": "Guías prácticas sobre documentos y cadena de frío, además de noticias y prensa de la empresa, con la fecha y la fuente de cada dato.",
+        "primary": "Leer la guía del importador",
+        "secondary": "Noticias y prensa"
+    },
+    "featured": {
+        "eyebrow": "Guía destacada",
+        "read": "Leer la guía"
+    },
+    "categories": {
+        "eyebrow": "Qué publicamos",
+        "title": "Contenido por tipo, claramente identificado",
+        "importer_guide": "Guías para importadores",
+        "importer_guide_text": "Códigos SA, documentos de exportación y nociones básicas de cadena de frío para importar pescado fresco de Egipto.",
+        "behind_operations": "Detrás de nuestras operaciones",
+        "behind_operations_text": "Calibrado, envasado y despacho en nuestra planta, publicados tras su revisión.",
+        "company_news": "Noticias y prensa",
+        "company_news_text": "Visitas, cobertura en medios, hitos y noticias del sector, cada una con su fecha y una fuente identificada.",
+        "news_count": "{count, plural, one {# publicación} other {# publicaciones}}"
+    },
+    "grid": {
+        "title": "Todos los artículos",
+        "count": "{count, plural, one {# artículo} other {# artículos}}"
+    },
+    "standards": {
+        "title": "Criterios editoriales",
+        "text": "Indicamos la fecha y la fuente de cada dato. Nunca presentamos datos del sector como datos de AZAFCO, y no publicamos cifras de producción ni certificados sin una prueba válida."
+    },
+    "article": {
+        "by": "Publicado por",
+        "author": "AZAFCO International",
+        "published": "Publicado",
+        "reviewed": "Última revisión",
+        "toc": "En este artículo",
+        "sources_side": "Fuentes",
+        "sources_side_text": "{count, plural, one {# fuente oficial, citada al final y enlazada en el texto.} other {# fuentes oficiales, citadas al final y enlazadas en el texto.}}",
+        "related_title": "Siga leyendo",
+        "related": [
+            {
+                "title": "Para importadores",
+                "text": "El proceso de compra y qué preparar."
+            },
+            {
+                "title": "Nuestros mercados",
+                "text": "Adónde enviamos hoy y qué está previsto."
+            },
+            {
+                "title": "Nuestro pescado",
+                "text": "Una página para cada una de nuestras especies principales."
+            }
+        ],
+        "table_mobile_note": "Códigos por especie",
+        "related_eyebrow": "Siguiente lectura",
+        "reading_time": "Tiempo de lectura"
+    }
+}

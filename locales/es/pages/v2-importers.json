@@ -1,0 +1,202 @@
+{
+    "meta": {
+        "title": "Importadores: colaboración en suministro de pescado",
+        "description": "Cómo empezar: envíe sus requisitos, revise la disponibilidad con el equipo de exportación de AZAFCO y acuerde el pedido. Precios confirmados en cada pedido."
+    },
+    "breadcrumb": "Para importadores",
+    "hero": {
+        "eyebrow": "Para importadores y distribuidores",
+        "title": "Inicie una colaboración de suministro de pescado fresco",
+        "intro": "Indíquenos la especie, la cantidad y el destino. Nuestro equipo de exportación revisa con usted la disponibilidad y las condiciones comerciales; los precios se confirman en cada pedido.",
+        "primary": "Envíe sus requisitos",
+        "secondary": "Escriba a la gerencia por WhatsApp",
+        "image_alt": "Dorada, lubina y tilapia frescas y enteras sobre hielo picado, bajo una luz fría"
+    },
+    "serve": {
+        "eyebrow": "Con quién trabajamos",
+        "title": "Importadores, distribuidores y hostelería",
+        "intro": "Abastecemos a empresas, no a consumidores. Cada tipo de comprador tiene sus propias preguntas, y las respondemos al acordar el pedido.",
+        "items": [
+            {
+                "title": "Importadores de pescado",
+                "text": "Especies, calibres, embalaje y cantidades para su mercado."
+            },
+            {
+                "title": "Mayoristas y distribuidores",
+                "text": "Calibrado claro, pesos netos, embalaje y condiciones de entrega en cada pedido."
+            },
+            {
+                "title": "Hoteles, restaurantes y catering",
+                "text": "Una especificación acordada y un único equipo de exportación como interlocutor."
+            },
+            {
+                "title": "Proveedores de hostelería",
+                "text": "Suministro recurrente planificado según nuestra capacidad de envasado y su programa."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "Cómo empezar",
+        "title": "Cuatro pasos hasta su primer envío",
+        "steps": [
+            {
+                "title": "Envíe sus requisitos",
+                "text": "Empresa, país, especie, calibre, presentación del producto, cantidad, embalaje y fecha de entrega."
+            },
+            {
+                "title": "Revisión con nuestro equipo de exportación",
+                "text": "Comprobamos la disponibilidad, la especificación, los requisitos de su mercado y los documentos de exportación que exige."
+            },
+            {
+                "title": "Acuerdo del pedido",
+                "text": "La especie, el calibre, la cantidad, el embalaje, el transporte, el calendario y el precio se confirman por escrito en cada pedido."
+            },
+            {
+                "title": "Envasado y envío",
+                "text": "Envasamos en hielo y enviamos por vía aérea o por carretera, con los documentos de exportación acordados para su destino."
+            }
+        ]
+    },
+    "prepare": {
+        "eyebrow": "Antes de escribirnos",
+        "title": "Qué preparar",
+        "intro": "Cuanto más completos sean sus requisitos, más útil será nuestra primera respuesta.",
+        "items": [
+            "Especie",
+            "Calibre",
+            "Presentación del producto",
+            "Cantidad por envío y frecuencia",
+            "País de destino",
+            "Fecha de entrega",
+            "Requisitos de embalaje y etiquetado",
+            "Documentos que exige su mercado"
+        ]
+    },
+    "documents": {
+        "eyebrow": "Documentos",
+        "title": "Qué aporta el equipo de exportación",
+        "intro": "Escriba al equipo de exportación para detalles y documentos. Estos son los documentos con los que trabajamos:",
+        "items": [
+            {
+                "title": "Especificación del producto",
+                "text": "Especie, calibre, presentación y embalaje de su pedido."
+            },
+            {
+                "title": "Perfil de la empresa",
+                "text": "Una presentación de AZAFCO International y de cómo trabajamos."
+            },
+            {
+                "title": "Documentos del envío",
+                "text": "Los documentos de exportación acordados para su destino, preparados con cada envío."
+            }
+        ],
+        "guide_link": "Qué documentos suele necesitar un envío de pescado fresco"
+    },
+    "terms": {
+        "eyebrow": "Condiciones comerciales",
+        "title": "Confirmado en cada pedido",
+        "intro": "No publicamos listas de precios ni condiciones generales. Estos puntos se acuerdan por escrito en cada pedido:",
+        "items": [
+            {
+                "title": "Precio",
+                "text": "Se confirma en cada pedido: depende de la especie, el calibre, la cantidad, el embalaje y las condiciones de entrega."
+            },
+            {
+                "title": "Pedido mínimo",
+                "text": "Depende de la especie, del modo de transporte y de las condiciones del pedido. Indíquenos la cantidad con la que desea empezar y le confirmaremos por escrito lo que podemos enviar."
+            },
+            {
+                "title": "Disponibilidad",
+                "text": "Se confirma según la disponibilidad del momento cuando revisamos sus requisitos."
+            },
+            {
+                "title": "Transporte",
+                "text": "Refrigerado, por aire o carretera; la ruta se confirma en cada pedido."
+            },
+            {
+                "title": "Incoterms",
+                "text": "Se acuerdan en cada pedido."
+            }
+        ]
+    },
+    "proof": {
+        "eyebrow": "Compruébelo antes de preguntar",
+        "title": "Especies, proceso, calidad y mercados",
+        "items": [
+            {
+                "title": "Especies",
+                "text": "12 especies principales, enteras y frescas refrigeradas.",
+                "link": "Ver especies"
+            },
+            {
+                "title": "Procesado y envasado",
+                "text": "Cómo se calibra el pescado, se envasa en hielo y se despacha.",
+                "link": "Ver el procesado"
+            },
+            {
+                "title": "Calidad",
+                "text": "ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018, certificados por TÜV AUSTRIA.",
+                "link": "Ver calidad"
+            },
+            {
+                "title": "Mercados",
+                "text": "Más de 7 mercados en Oriente Medio y más allá.",
+                "link": "Ver mercados"
+            }
+        ]
+    },
+    "faq": {
+        "eyebrow": "Preguntas de importadores",
+        "title": "Lo que preguntan los importadores antes de empezar",
+        "items": [
+            {
+                "q": "¿Cómo empezamos a trabajar juntos?",
+                "a": "Envíe sus requisitos por correo electrónico al equipo de exportación, a business@azafco.com.eg, o utilice el mensaje preparado de esta página. Para operaciones rápidas, escriba directamente a nuestra gerencia por WhatsApp. Después revisamos con usted la disponibilidad y confirmamos por escrito las condiciones comerciales."
+            },
+            {
+                "q": "¿Cómo se fijan los precios?",
+                "a": "Los precios se confirman en cada pedido. Dependen de la especie, el calibre, la cantidad, el embalaje y las condiciones de entrega. No publicamos listas de precios."
+            },
+            {
+                "q": "¿Cuál es el pedido mínimo?",
+                "a": "Depende de la especie y de las condiciones del pedido. Indíquenos la cantidad prevista y le confirmamos qué es posible para su pedido."
+            },
+            {
+                "q": "¿Qué tallas y calibres pueden suministrar?",
+                "a": "Los calibres dependen de la especie y de la disponibilidad del momento. Indíquenos el calibre que necesita y le confirmamos lo que podemos cumplir."
+            },
+            {
+                "q": "¿Qué especies suministran?",
+                "a": "Las 12 especies de nuestra web son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido."
+            },
+            {
+                "q": "¿Cómo se envasa el pescado?",
+                "a": "Entero y fresco refrigerado, envasado en hielo en cajas isotérmicas de EPS. Cualquier otro embalaje o su propia especificación se estudia para cada producto."
+            },
+            {
+                "q": "¿Pueden envasar con nuestra marca?",
+                "a": "Se estudia para cada producto y cada requisito. Añada sus requisitos de etiquetado en las notas de su solicitud."
+            },
+            {
+                "q": "¿Qué certificados tienen?",
+                "a": "Contamos con los certificados ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018. Los documentos de exportación de cada envío se acuerdan para su destino."
+            },
+            {
+                "q": "¿Cómo se envía el pescado?",
+                "a": "Refrigerado, en nuestros propios camiones frigoríficos desde la planta y después por vía aérea o por carretera, según el destino. No publicamos plazos de tránsito fijos; se confirman para cada envío."
+            },
+            {
+                "q": "¿A qué mercados envían?",
+                "a": "Enviamos a más de 7 mercados, entre ellos los EAU, Kuwait, Baréin, el Líbano, Catar, Irak y Siria. Europa, Rusia y Estados Unidos están en nuestro plan. Si su país no aparece, escriba al equipo de exportación."
+            },
+            {
+                "q": "¿Aceptan programas de suministro recurrente?",
+                "a": "Sí. Nuestra capacidad de envasado es de hasta 2500 t/mes, y el suministro recurrente se planifica en función de ella y de sus necesidades. Indíquenos la frecuencia que prevé."
+            },
+            {
+                "q": "¿Cómo sabemos que un mensaje procede realmente de AZAFCO International?",
+                "a": "Nuestros canales oficiales son el correo del equipo de exportación, business@azafco.com.eg, y el WhatsApp de la gerencia, +20 100 773 6419. Las condiciones del pedido se confirman por escrito en cada pedido. Si recibe un mensaje sobre su pedido desde cualquier otra dirección o número, compruébelo con nosotros por estos canales antes de actuar."
+            }
+        ]
+    }
+}

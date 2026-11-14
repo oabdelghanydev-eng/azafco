@@ -1,0 +1,93 @@
+{
+    "meta": {
+        "title": "À propos d’AZAFCO : poisson égyptien depuis 2008",
+        "description": "Fondée en 2008, AZAFCO International élève, achète, conditionne et exporte du poisson frais d’Égypte vers plus de 7 marchés. Conditionnement : 2 500 t/mois."
+    },
+    "breadcrumb": "À propos",
+    "hero": {
+        "eyebrow": "À propos d’AZAFCO International",
+        "title": "Du poisson égyptien, pris en charge par nos soins de l’étang à la palette",
+        "intro": "Créée en 2008, notre entreprise élève et achète du poisson en Égypte, puis le contrôle, le conditionne et l’exporte frais vers les importateurs, distributeurs et acheteurs de la restauration du Moyen-Orient et au-delà.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Écrire à la direction sur WhatsApp",
+        "reassure": "Commencez par un message : espèce, quantité et destination. Prix confirmés à chaque commande.",
+        "image_alt": "Deux ouvriers tirant une senne pleine de poissons vers la berge d’un étang en terre"
+    },
+    "story": {
+        "eyebrow": "Notre histoire",
+        "title": "Le poisson, notre métier depuis 2008",
+        "p1": "Notre entreprise a été fondée en 2008 à Kafr el-Cheikh, dans le delta du Nil, en Égypte, et a expédié ses premières exportations de poisson frais vers les Émirats arabes unis la même année.",
+        "p2": "Aujourd’hui, nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan. Le poisson reste notre cœur de métier ; sous l’identité AZAFCO International, il côtoie nos activités dans l’agriculture, l’élevage de bétail et l’investissement."
+    },
+    "facts": {
+        "founded_value": "2008",
+        "founded_label": "Année de création",
+        "capacity_value": "2 500",
+        "capacity_label": "t/mois de capacité de conditionnement",
+        "iso_value": "3",
+        "iso_label": "certificats ISO délivrés par TÜV AUSTRIA",
+        "iso_note": "ISO 9001:2015 · ISO 14001:2015 · ISO 45001:2018",
+        "iso_link": "Qualité et certificats",
+        "markets_value": "7+",
+        "markets_label": "marchés au Moyen-Orient et au-delà"
+    },
+    "journey": {
+        "eyebrow": "Notre parcours",
+        "title": "Les étapes clés depuis 2008",
+        "intro": "Les dates clés, de notre création à aujourd’hui : nos usines et les marchés vers lesquels nous exportons.",
+        "list_label": "Étapes clés de l’entreprise, par année",
+        "founded": "Création d’AZAFCO International à Kafr el-Cheikh, en Égypte",
+        "market": "Premières exportations vers {country}",
+        "baltim": "Ouverture de la première usine, dans la zone industrielle de Baltim, à Kafr el-Cheikh",
+        "motobas": "Ouverture d’une nouvelle usine dans la zone industrielle de Motobas, à Kafr el-Cheikh",
+        "governor": "Visite du gouverneur de Kafr el-Cheikh dans notre usine de Motobas"
+    },
+    "stages": {
+        "line": "Nous prenons en charge chaque étape, de l’étang à la palette.",
+        "link": "Voir les cinq étapes"
+    },
+    "businesses": {
+        "eyebrow": "Nos activités",
+        "title": "Le poisson au cœur, d’autres activités à ses côtés",
+        "p1": "L’élevage, l’achat, le conditionnement et l’export de poisson frais sont notre cœur de métier et le sujet de ce site.",
+        "p2": "AZAFCO International est aussi active dans l’agriculture, l’élevage de bétail et l’investissement.",
+        "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
+        "link_products": "Catalogue produits",
+        "link_importers": "Pour les importateurs",
+        "link_businesses": "Nos activités",
+        "link_seafood": "Notre activité poisson"
+    },
+    "footprint": {
+        "eyebrow": "Où nous travaillons",
+        "title": "Notre usine, nos camions et nos entrepôts frigorifiques",
+        "p1": "Notre usine de transformation et de conditionnement de poisson se trouve dans la zone industrielle de Motobas, à Kafr el-Cheikh, dans le delta du Nil. Le poisson y est réceptionné, lavé, glacé, calibré et conditionné, puis chargé pour l’expédition.",
+        "p2": "Nous exploitons nos propres camions frigorifiques, nos entrepôts frigorifiques et notre logistique, de l’usine jusqu’au fret aérien ou routier.",
+        "image_alt": "Poissons entiers frais sur glace pilée dans des caisses isothermes blanches, dans une salle de conditionnement",
+        "addresses_title": "Adresses",
+        "map_link": "Voir l’usine sur Google Maps",
+        "opens_new_tab": "(s’ouvre dans un nouvel onglet)"
+    },
+    "values": {
+        "eyebrow": "Nos valeurs",
+        "title": "Des spécifications d’abord, pas des slogans",
+        "intro": "Les principes qui guident notre travail avec les acheteurs.",
+        "i1_title": "Fiabilité",
+        "i1_text": "Nous exportons du poisson frais depuis 2008, et nos premiers marchés, les Émirats arabes unis et le Koweït, sont toujours actifs aujourd’hui.",
+        "i2_title": "La spécification d’abord",
+        "i2_text": "Nous partons de vos besoins (espèce, calibre, conditionnement, quantité et destination), puis nous confirmons ce que nous pouvons fournir.",
+        "i3_title": "Des conditions claires",
+        "i3_text": "Spécifications, documents et conditions commerciales sont définis clairement et confirmés à chaque commande.",
+        "i4_title": "Des relations durables",
+        "i4_text": "Nous visons un approvisionnement régulier, fondé sur la constance, et non des affaires ponctuelles."
+    },
+    "direction": {
+        "eyebrow": "Notre cap",
+        "title": "Vision et mission",
+        "vision_title": "Vision",
+        "vision_text": "Être un partenaire égyptien de confiance pour la production et l’approvisionnement des marchés régionaux et internationaux, grâce à une activité fondée sur la qualité, la clarté et des relations durables.",
+        "mission_title": "Mission",
+        "mission_text": "Fournir des produits et des services adaptés aux besoins de nos partenaires commerciaux, en reliant la production et la transformation en Égypte aux exigences des marchés que nous servons.",
+        "identity_title": "Notre identité",
+        "identity_text": "AZAFCO International conserve le nom AZAFCO et son héritage, sous une forme adaptée à notre travail avec nos partenaires et importateurs au Moyen-Orient et au-delà."
+    }
+}

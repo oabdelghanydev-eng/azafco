@@ -1,0 +1,193 @@
+{
+    "meta": {
+        "title": "Export de poisson frais : Moyen-Orient et au-delà",
+        "description": "Poisson frais d’Égypte pour plus de 7 marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak et Syrie, par avion et route. L’Europe est notre prochaine étape."
+    },
+    "breadcrumb": "Marchés",
+    "hero": {
+        "eyebrow": "Nos marchés",
+        "title": "Exportation de poisson frais vers le Moyen‑Orient et au‑delà",
+        "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Voir nos espèces",
+        "image_alt": "Vue aérienne d’étangs piscicoles en terre avec aérateurs et palmiers"
+    },
+    "stats": [
+        {
+            "value": "7+",
+            "label": "marchés à l’export"
+        },
+        {
+            "value": "2008",
+            "label": "premier marché à l’export : EAU"
+        },
+        {
+            "value": "12",
+            "label": "espèces principales"
+        },
+        {
+            "value": "3",
+            "label": "certificats ISO, TÜV AUSTRIA"
+        }
+    ],
+    "index": {
+        "eyebrow": "Marchés actifs",
+        "title": "Où nous expédions aujourd’hui",
+        "intro": "Nos sept marchés actifs et l’année où nous avons commencé à servir chacun d’eux. Sélectionnez un marché pour en savoir plus.",
+        "since": "depuis {year}",
+        "planned_title": "Prévus",
+        "paused": "{country} : exportations suspendues",
+        "map_label": "Carte des routes d’expédition de l’Égypte vers nos sept marchés actifs",
+        "origin": "Égypte · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Marché par marché",
+        "title": "Qui nous approvisionnons sur chaque marché",
+        "intro": "Les acheteurs que nous approvisionnons aujourd’hui sur chacun de nos marchés actifs. Sélectionnez un marché pour en savoir plus.",
+        "buyers_label": "Nous approvisionnons",
+        "details": "Détails du marché"
+    },
+    "approach": {
+        "eyebrow": "Exigences des marchés",
+        "title": "Chaque marché a sa propre spécification",
+        "intro": "Nous convenons des détails avec chaque importateur avant la première expédition.",
+        "points": [
+            {
+                "title": "Espèce et calibre",
+                "text": "L’espèce, le calibre et la présentation du produit sont convenus pour chaque importateur et chaque marché."
+            },
+            {
+                "title": "Conditionnement et étiquetage",
+                "text": "Le conditionnement et l’étiquetage des caisses sont adaptés aux exigences de votre marché et de vos clients."
+            },
+            {
+                "title": "Documents",
+                "text": "Les documents d’export de chaque expédition sont convenus en fonction de votre destination."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "Pour commencer",
+        "title": "De votre premier message à l’expédition",
+        "steps": [
+            {
+                "title": "Envoyer vos besoins",
+                "text": "Espèce, calibre, quantité, conditionnement et destination."
+            },
+            {
+                "title": "Examen avec notre équipe export",
+                "text": "Nous vérifions les disponibilités, la spécification et les exigences d’importation de votre destination."
+            },
+            {
+                "title": "Convenir de la commande",
+                "text": "Espèce, calibre, conditionnement, transport, calendrier et prix sont confirmés par écrit pour chaque commande."
+            },
+            {
+                "title": "Conditionner et expédier",
+                "text": "Nous conditionnons sous glace et expédions par avion ou par route, avec les documents d’export convenus pour votre destination."
+            }
+        ]
+    },
+    "transport": {
+        "eyebrow": "Transport",
+        "title": "Par avion et par route",
+        "intro": "Le poisson frais voyage réfrigéré, conditionné sous glace. Il quitte l’usine dans nos propres camions frigorifiques, puis part en fret aérien ou routier.",
+        "modes": [
+            {
+                "title": "Fret aérien",
+                "text": "Conditionné sous glace dans des caisses isothermes adaptées au fret aérien, pour les destinations desservies par avion."
+            },
+            {
+                "title": "Fret routier",
+                "text": "Transport routier frigorifique lorsque la destination est accessible par voie terrestre."
+            }
+        ],
+        "note": "Nous ne publions pas de délais de transit fixes : ils dépendent de l’itinéraire et de la réservation, et sont confirmés pour chaque expédition."
+    },
+    "support": {
+        "eyebrow": "Travailler avec nous",
+        "title": "Des conditions claires pour chaque commande",
+        "items": [
+            {
+                "title": "Prix confirmés à chaque commande",
+                "text": "Les prix dépendent de l’espèce, du calibre, de la quantité, du conditionnement et des conditions de livraison : nous les confirmons donc pour chaque commande."
+            },
+            {
+                "title": "Des responsabilités claires",
+                "text": "La répartition des tâches (documents d’export, dédouanement à l’import et livraison) est convenue par écrit pour chaque commande."
+            },
+            {
+                "title": "Deux canaux directs",
+                "text": "WhatsApp vous met en relation directe avec notre direction, pour conclure rapidement. L’e-mail va à l’équipe export, pour les détails et les documents."
+            }
+        ],
+        "guide_link": "Lire le guide pour importer du poisson frais d’Égypte"
+    },
+    "new_market": {
+        "title": "Votre pays est prévu ou ne figure pas dans la liste ?",
+        "text": "Indiquez-nous votre destination. Notre équipe export étudie chaque nouveau marché au cas par cas.",
+        "action": "Contacter l’équipe export"
+    },
+    "disclaimer": "Chaque expédition dépend des règles d’importation de la destination, des disponibilités du moment et des conditions de commande convenues par écrit.",
+    "regions": {
+        "gulf": "Golfe",
+        "levant": "Levant",
+        "middle_east": "Moyen-Orient",
+        "europe": "Europe",
+        "americas": "Amériques",
+        "other": "Autres"
+    },
+    "detail": {
+        "meta_title": "Export de poisson frais {country}",
+        "meta_description": "Poisson frais d’Égypte pour les importateurs {country}, marché actif depuis {year}. Réfrigéré, par avion ou route. Prix confirmés à chaque commande.",
+        "eyebrow": "Marché actif depuis {year}",
+        "title": "Poisson frais d’Égypte pour les importateurs basés {country}",
+        "intro": "Nous travaillons avec des importateurs {country} depuis {year}. L’espèce, le calibre, le conditionnement, le transport et les documents sont convenus avec chaque importateur.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Écrire à la direction sur WhatsApp",
+        "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
+        "facts_title": "En bref : {country}",
+        "facts": {
+            "since_label": "Marché actif depuis",
+            "region_label": "Région",
+            "plant_label": "Expédié depuis",
+            "plant_value": "Motobas, Kafr el-Cheikh, Égypte",
+            "plant_link": "Voir l’usine sur la carte",
+            "quality_label": "Qualité",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
+            "quality_link": "Voir la page qualité",
+            "transport_label": "Transport",
+            "transport_value": "Par avion ou par route, confirmé à chaque commande",
+            "prices_label": "Prix",
+            "prices_value": "Confirmés à chaque commande"
+        },
+        "discuss_eyebrow": "Points à convenir",
+        "discuss_title": "Les points que nous fixons avec les importateurs {country}",
+        "discuss": [
+            {
+                "title": "Espèces et calibres",
+                "text": "Les espèces et les calibres que vos clients achètent, confirmés selon les disponibilités du moment."
+            },
+            {
+                "title": "Conditionnement et étiquetage",
+                "text": "Format des caisses et exigences d’étiquetage pour votre canal de vente."
+            },
+            {
+                "title": "Transport",
+                "text": "Expédition réfrigérée par avion ou par route, avec l’itinéraire confirmé pour chaque commande."
+            },
+            {
+                "title": "Documents",
+                "text": "Les documents d’export nécessaires pour importer {country}, convenus pour chaque commande."
+            }
+        ],
+        "products_eyebrow": "Espèces",
+        "products_title": "Nos espèces principales",
+        "products_note": "Ce sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande.",
+        "map_eyebrow": "Nos marchés",
+        "map_title": "Expéditions {country} et vers nos autres marchés",
+        "map_intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan.",
+        "buyers_title": "Qui nous approvisionnons {country}",
+        "glance_eyebrow": "Profil du marché"
+    }
+}

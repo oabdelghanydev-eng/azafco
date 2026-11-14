@@ -1,0 +1,114 @@
+{
+    "skip_to_main": "Aller au contenu principal",
+    "nav": {
+        "main_label": "Navigation principale",
+        "footer_label": "Navigation du pied de page",
+        "home": "Accueil",
+        "seafood": "Produits de la mer et aquaculture",
+        "seafood_overview": "Vue d’ensemble",
+        "products": "Produits",
+        "processing": "Transformation et conditionnement",
+        "quality": "Qualité",
+        "export": "Solutions export",
+        "markets": "Marchés",
+        "for_importers": "Pour les importateurs",
+        "company": "Notre entreprise",
+        "about": "À propos",
+        "businesses": "Nos activités",
+        "insights": "Ressources",
+        "contact": "Contact",
+        "menu": "Menu",
+        "open_menu": "Ouvrir le menu",
+        "close_menu": "Fermer le menu",
+        "home_link_label": "Page d’accueil d’AZAFCO International"
+    },
+    "cta": {
+        "view_specifications": "Voir les spécifications",
+        "contact": "Contact",
+        "talk_to_export_team": "Parler à l’équipe export",
+        "learn_more": "En savoir plus",
+        "read_more": "Lire la suite",
+        "view_all": "Tout voir",
+        "whatsapp": "WhatsApp",
+        "call": "Appeler",
+        "email": "E-mail",
+        "loading": "Chargement…",
+        "opens_new_tab": "(s’ouvre dans un nouvel onglet)",
+        "contact_export_team": "Contacter notre équipe export",
+        "send_requirements": "Envoyer vos besoins",
+        "start_partnership": "Démarrer un partenariat",
+        "request_document_pack": "Interroger l’équipe export sur les documents"
+    },
+    "breadcrumbs": {
+        "label": "Fil d’Ariane",
+        "home": "Accueil"
+    },
+    "pending": {
+        "prefix": "En attente de confirmation par la direction :",
+        "certificate_card": "{name} : accord de la direction pour publication"
+    },
+    "spec": {
+        "attribute": "Caractéristique",
+        "value": "Valeur",
+        "confirmed_with_sales": "Confirmé à chaque commande",
+        "attribute_label": "{label} :"
+    },
+    "market": {
+        "status_active": "Marché actif",
+        "status_planned": "Prévu",
+        "status_paused": "Exportations suspendues",
+        "fact_species": "Espèces",
+        "fact_species_value": "{count} espèces principales",
+        "fact_transport": "Transport",
+        "fact_transport_value": "Réfrigéré, par avion ou par route ; confirmé à chaque commande",
+        "fact_documents": "Documents",
+        "fact_documents_value": "L’équipe export confirme les documents requis pour votre marché"
+    },
+    "certificate": {
+        "issuer": "Émetteur",
+        "view": "Voir le certificat",
+        "request_copy": "Se renseigner sur ce certificat",
+        "request_copy_for": " : {name}",
+        "groups": {
+            "food_safety": "Sécurité des aliments",
+            "export_approval": "Agréments à l’export",
+            "management_system": "Systèmes de management"
+        }
+    },
+    "insight": {
+        "read_article": "Lire l’article",
+        "minutes": "{count} min de lecture"
+    },
+    "faq": {
+        "toggle_hint": "Afficher la réponse"
+    },
+    "gallery": {
+        "label": "Galerie photos"
+    },
+    "whatsapp_float": {
+        "label": "WhatsApp · ligne directe de la direction"
+    },
+    "facts": {
+        "title": "L’essentiel en chiffres",
+        "species": "Espèces principales",
+        "markets": "Marchés d’exportation",
+        "markets_value": "{count}+",
+        "iso": "Certificats ISO",
+        "iso_note": "Certifiés par TÜV AUSTRIA",
+        "plant": "Usine de transformation",
+        "plant_value": "Motobas, Kafr el-Cheikh"
+    },
+    "fill": {
+        "spec_title": "Vous avez une spécification complète ?",
+        "spec_text": "Envoyez-la à l’équipe export et nous l’étudierons avec vous.",
+        "documents_text": "Pour toute question sur les documents, contactez l’équipe export."
+    },
+    "consent": {
+        "title": "Mesure d’audience sur ce navigateur",
+        "on": "La mesure d’audience est activée sur ce navigateur.",
+        "off": "La mesure d’audience est désactivée sur ce navigateur.",
+        "unset": "Vous n’avez pas encore fait de choix sur ce navigateur. La mesure d’audience suit le réglage par défaut de votre région.",
+        "enable": "Activer la mesure d’audience",
+        "disable": "Désactiver la mesure d’audience"
+    }
+}

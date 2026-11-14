@@ -1,0 +1,84 @@
+{
+    "meta": {
+        "title": "Control de calidad y certificados ISO",
+        "description": "Nuestros sistemas de gestión tienen certificados ISO 9001, ISO 14001 e ISO 45001 de TÜV AUSTRIA, y cada pedido se comprueba según la especificación acordada."
+    },
+    "breadcrumbs": {
+        "label": "Ruta de navegación",
+        "home": "Inicio",
+        "current": "Calidad"
+    },
+    "hero": {
+        "kicker": "Calidad",
+        "title": "Calidad comprobada según su especificación",
+        "intro": "Contamos con tres certificados ISO para nuestros sistemas de gestión. Cada pedido se comprueba según la especificación acordada con usted antes de cerrar las cajas.",
+        "imageAlt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Ver nuestra cadena de valor"
+    },
+    "certs": {
+        "eyebrow": "Certificados ISO",
+        "title": "Tenemos tres certificados ISO",
+        "intro": "TÜV AUSTRIA certifica nuestros sistemas de gestión. En cuanto a los documentos sanitarios y de seguridad alimentaria que exige su mercado, nuestro equipo de exportación le confirma, antes de que haga su pedido, cuáles acompañan cada envío.",
+        "items": {
+            "iso9001": {
+                "name": "Gestión de la calidad",
+                "covers": "Cómo planificamos, ejecutamos y revisamos nuestro trabajo para cumplir los requisitos del cliente."
+            },
+            "iso14001": {
+                "name": "Gestión ambiental",
+                "covers": "Cómo gestionamos el impacto ambiental de nuestras operaciones."
+            },
+            "iso45001": {
+                "name": "Seguridad y salud en el trabajo",
+                "covers": "Cómo protegemos la salud y la seguridad de las personas que trabajan con nosotros."
+            }
+        }
+    },
+    "practice": {
+        "eyebrow": "En la práctica",
+        "title": "Cómo comprobamos la calidad en cada pedido",
+        "intro": "Estos son nuestros pasos de trabajo para cada pedido. Siguen la cadena de valor que AZAFCO gestiona del estanque al palé.",
+        "stepLabel": "Paso {n}",
+        "steps": {
+            "spec": {
+                "title": "Especificación acordada",
+                "text": "Acordamos con usted la especie, el calibre, el embalaje y las etiquetas antes del pedido."
+            },
+            "packing": {
+                "title": "Lavado, calibrado y envasado",
+                "text": "Lavado, enhielado, calibrado por peso y envasado entero en hielo."
+            },
+            "final": {
+                "title": "Control final",
+                "text": "Se comprueba según la especificación acordada antes de cerrar las cajas."
+            },
+            "cold": {
+                "title": "Cadena de frío",
+                "text": "Nuestras propias cámaras frigoríficas y camiones frigoríficos y, después, transporte aéreo o por carretera."
+            }
+        },
+        "link": "Ver la cadena de valor completa"
+    },
+    "faq": {
+        "eyebrow": "Preguntas de compradores",
+        "title": "Preguntas de los equipos de compras y calidad",
+        "q1": "¿Qué certificados ISO tienen?",
+        "a1": "Contamos con ISO 9001:2015 de gestión de la calidad, ISO 14001:2015 de gestión ambiental e ISO 45001:2018 de seguridad y salud en el trabajo.",
+        "q2": "¿Cómo comprueban que un pedido se ajusta a nuestra especificación?",
+        "a2": "Acordamos con usted la especie, el calibre, el embalaje y las etiquetas antes del pedido. El pescado se lava, se enhiela, se calibra por peso y se envasa entero en hielo, y después se comprueba según la especificación acordada antes de cerrar las cajas.",
+        "q3": "¿Cómo mantienen el pescado en frío hasta el envío?",
+        "a3": "El pescado se lava, se enhiela y se envasa entero en hielo. Gestionamos nuestras propias cámaras frigoríficas y camiones frigoríficos, y después enviamos por transporte aéreo o por carretera. Confirmamos los requisitos de temperatura de su producto al acordar el pedido.",
+        "q4": "¿Pueden cumplir los requisitos de etiquetado o importación de nuestro mercado?",
+        "a4": "Los requisitos varían según el país. Indíquenos los suyos y los revisaremos para cada producto y mercado antes de confirmar el suministro.",
+        "q5": "¿Qué información de trazabilidad acompaña a un pedido?",
+        "a5": "Indíquenos lo que exige su mercado o su cliente. Confirmamos qué datos de lote y de envío podemos facilitar antes de que haga su pedido.",
+        "q6": "¿Cómo empezamos?",
+        "a6": "Para operaciones rápidas, escriba directamente a nuestra gerencia por WhatsApp al <wa>+20 100 773 6419</wa>. Para detalles y documentos, escriba a nuestro equipo de exportación a <mail>business@azafco.com.eg</mail>."
+    },
+    "pending": {
+        "traceability": "Datos de lote y partida que pueden facilitarse con cada envío",
+        "market_approvals": "Autorizaciones de mercado (p. ej., inclusión en la lista de la UE) una vez concedidas"
+    },
+    "newTab": "(se abre en una pestaña nueva)"
+}

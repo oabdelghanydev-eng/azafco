@@ -1,34 +1,34 @@
 {
-    "companyName": "AZAFCO International Investment & Development",
+    "companyName": "AZAFCO International",
+    "legalName": "AZAFCO International for Investment and Development S.A.E.",
     "alternateName": "AZAFCO International",
     "alternateNames": [
-        "AZAFCO International",
         "AZAFCO",
+        "ازافكو العالمية",
         "ازافكو",
-        "Azafco Ägypten",
-        "AZAFCO Fisch"
+        "EZAFCO"
     ],
-    "description": "Ägyptens führender B2B-Frischfischexporteur seit 2008. Lieferung von über 2.500 Tonnen monatlich in über 9 Länder weltweit mit über 300 Mitarbeitern, über 500 Kunden und Erreichbarkeit rund um die Uhr. ISO- & HACCP-zertifiziert, EU-Exportzulassung.",
-    "slogan": "Premium-Frischfisch aus Ägypten – weltweit",
+    "description": "AZAFCO International ist ein ägyptisches Unternehmen, das frischen Fisch züchtet und bezieht, ihn sortiert, verpackt und für Importeure, Distributoren und Gastronomiekunden in {countries}+ Märkte exportiert. Verarbeitungswerk in Motobas, Kafr el-Sheikh, Ägypten.",
+    "slogan": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
     "foundingDate": "2008",
-    "numberOfEmployees": "300+",
-    "founder": "Haj Mohamed Abdullah Al-Kuwaitihi",
-    "factoryName": "AZAFCO Fischverarbeitungsanlage",
-    "factoryAlternateName": "AZAFCO Produktionsstätte",
-    "websiteName": "AZAFCO International – Ägyptens führender B2B-Fischexporteur",
-    "websiteDescription": "Offizielle Website von AZAFCO International – Premium-Frischfischexporteur aus Ägypten in über 9 Länder weltweit. 24/7-Großhandelslieferung.",
-    "productGroupName": "AZAFCO Frischfischprodukte",
-    "productGroupDesc": "Premium-Frischfischprodukte von Ägyptens führendem Exporteur – Tilapia, Wolfsbarsch, Meeräsche, Wels & mehr. Individuelle Größen verfügbar.",
-    "catalogName": "AZAFCO Frischfischprodukte-Katalog",
-    "catalogDesc": "Umfassendes Sortiment an Premium-Frischfisch für Großhandelsexport aus Ägypten. 8+ Sorten, individuelle Größen, flexible Bestellungen.",
-    "offerDesc": "Kontaktieren Sie uns für wettbewerbsfähige B2B-Großhandelspreise. Rund um die Uhr verfügbar.",
-    "priceRange": "Wettbewerbsfähige Großhandelspreise",
+    "commercialRegisterLabel": "Handelsregister",
+    "factoryName": "Fischverarbeitungswerk von AZAFCO International",
+    "factoryAlternateName": "AZAFCO-Fischwerk Motobas",
+    "factoryDescription": "Fischverarbeitungswerk von AZAFCO International in Motobas, Kafr el-Sheikh: Sortierung, Verpackung und Versand von Frischfisch für den Export.",
+    "websiteName": "AZAFCO International",
+    "websiteDescription": "Offizielle Website von AZAFCO International: frischer Fisch aus Ägypten für Importeure, Distributoren und Gastronomiekunden, mit Spezifikationen der Fischarten und Kontakten für Partnerschaften.",
+    "productGroupName": "Frischfisch von AZAFCO International",
+    "productGroupDesc": "Frischfisch aus Ägypten: Tilapia, Wolfsbarsch, Großkopfmeeräsche, Afrikanischer Raubwels und weitere Arten. Gewichtsklasse und Verpackung werden pro Auftrag bestätigt.",
+    "catalogName": "Frischfischkatalog von AZAFCO International",
+    "catalogDesc": "Frischfisch für den Großhandelsexport aus Ägypten: 12 Hauptarten. Gewichtsklasse und Verpackung werden pro Auftrag bestätigt; weitere Arten liefern wir auf Anfrage.",
+    "offerDesc": "Nennen Sie uns die Spezifikation; wir prüfen Verfügbarkeit und Handelsbedingungen. Bürozeiten Sa–Do 8:00–17:00 (Kairoer Zeit).",
+    "priceRange": "Preise werden pro Auftrag bestätigt",
     "freshFishCategory": "Frischfisch",
-    "freshwater": "Süßwasserfisch",
-    "freshwaterDesc": "Tilapia, Wels, Meeräsche, Mubarakah",
-    "saltwater": "Salzwasserfisch",
-    "saltwaterDesc": "Wolfsbarsch, Buni, Lout, Aal",
-    "restaurantHotelSupply": "Belieferung von Restaurants & Hotels",
+    "freshwater": "Süßwasserfische",
+    "freshwaterDesc": "Tilapia, Afrikanischer Raubwels, Bagrus-Wels, Karpfen, Spiegelkarpfen, Graskarpfen, Silberkarpfen",
+    "saltwater": "Meeres- und Brackwasserfische",
+    "saltwaterDesc": "Wolfsbarsch, Dorade, Adlerfisch, Großkopfmeeräsche, Dünnlippige Meeräsche",
+    "restaurantHotelSupply": "Belieferung der Gastronomie",
     "home": "Startseite",
     "products": "Produkte",
     "about": "Über uns",
@@ -36,83 +36,49 @@
     "markets": "Märkte",
     "media": "Medien",
     "certificates": "Zertifikate",
-    "openingHours": "24/7",
-    "paymentAccepted": "Banküberweisung, Akkreditiv, SWIFT-Überweisung",
-    "currenciesAccepted": "USD, EUR, EGP, AED, SAR",
-    "knowsAbout": [
-        "Frischfischexport",
-        "Fischverpackung",
-        "Tilapia-Großhandel",
-        "Wolfsbarsch-Export",
-        "Meeräsche",
-        "Fischverarbeitung",
-        "B2B-Fischversorgung",
-        "Ägyptischer Fisch",
-        "Nilfisch",
-        "Mittelmeerfisch"
-    ],
-    "speakableName": "AZAFCO International – Frischfischexport",
-    "certifications": {
-        "iso22000": {
-            "name": "ISO 22000:2018",
-            "description": "Managementsystem für Lebensmittelsicherheit"
-        },
-        "haccp": {
-            "name": "HACCP",
-            "description": "Gefahrenanalyse und kritische Kontrollpunkte"
-        },
-        "iso9001": {
+    "openingHours": "Sa-Th 08:00-17:00",
+    "contactManagement": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse",
+    "contactExport": "Exportteam (Details und Dokumente)",
+    "certificationBody": "TÜV AUSTRIA",
+    "credentialCategory": "ISO-Zertifizierung",
+    "credentials": [
+        {
             "name": "ISO 9001:2015",
             "description": "Qualitätsmanagementsystem"
         },
-        "iso14001": {
+        {
             "name": "ISO 14001:2015",
             "description": "Umweltmanagementsystem"
         },
-        "iso45001": {
+        {
             "name": "ISO 45001:2018",
-            "description": "Managementsystem für Arbeitssicherheit und Gesundheitsschutz"
+            "description": "Managementsystem für Sicherheit und Gesundheit bei der Arbeit"
         }
-    },
+    ],
+    "knowsAbout": [
+        "Frischfischexport",
+        "Fischzucht",
+        "Sortierung und Verpackung von Fisch",
+        "Kühlkettenlogistik",
+        "Fischgroßhandel",
+        "Tilapia",
+        "Wolfsbarsch",
+        "Großkopfmeeräsche",
+        "Aquakultur in Ägypten"
+    ],
+    "speakableName": "AZAFCO International | Frischfischexport",
     "services": {
         "tilapia": {
-            "name": "Tilapia-Export",
-            "description": "Premium-Niltilapia für Großhandel und Export"
+            "name": "Lieferung frischer Tilapia",
+            "description": "Frische Tilapia für Großhandel und Export"
         },
         "seaBass": {
-            "name": "Wolfsbarsch-Lieferung",
-            "description": "Frischer Mittelmeer-Wolfsbarsch für internationale Märkte"
+            "name": "Lieferung von frischem Wolfsbarsch",
+            "description": "Frischer Wolfsbarsch für Großhandel und Export"
         },
         "mullet": {
-            "name": "Meeräsche-Export",
-            "description": "Frische Meeräsche (Bouri) für internationale Märkte"
+            "name": "Lieferung frischer Großkopfmeeräsche",
+            "description": "Frische Großkopfmeeräsche für Großhandel und Export"
         }
-    },
-    "howTo": {
-        "title": "So bestellen Sie Großhandelsfisch bei AZAFCO",
-        "description": "Einfache Schritte zur Bestellung von frischem Großhandelsfisch bei AZAFCO International",
-        "supplies": {
-            "businessDetails": "Ihre Geschäftsdaten",
-            "quantities": "Benötigte Mengen"
-        },
-        "steps": {
-            "step1": {
-                "name": "Kontakt aufnehmen",
-                "text": "Kontaktieren Sie uns per WhatsApp oder E-Mail an business@azafco.com.eg"
-            },
-            "step2": {
-                "name": "Produkte angeben",
-                "text": "Wählen Sie Fischart, Größen (individuelle Anpassung möglich) und benötigte Mengen"
-            },
-            "step3": {
-                "name": "Angebot erhalten",
-                "text": "Wir senden Ihnen innerhalb von 24 Stunden ein wettbewerbsfähiges Angebot"
-            },
-            "step4": {
-                "name": "Bestätigen & Versand",
-                "text": "Bestätigen Sie Ihre Bestellung – wir versenden mit lückenloser 0–4°C Kühlkette per Luft oder Land weltweit"
-            }
-        },
-        "estimatedCost": "Auf Anfrage"
     }
 }

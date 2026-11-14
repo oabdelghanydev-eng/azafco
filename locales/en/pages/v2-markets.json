@@ -1,0 +1,193 @@
+{
+    "meta": {
+        "title": "Fish export markets: the Middle East and beyond",
+        "description": "Fresh Egyptian fish for importers in 7+ markets: UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria, by air and road. Europe is next in our plan."
+    },
+    "breadcrumb": "Markets",
+    "hero": {
+        "eyebrow": "Our markets",
+        "title": "Fresh fish exports to the Middle East and beyond",
+        "intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
+        "primary": "Start a partnership",
+        "secondary": "View our species",
+        "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
+    },
+    "stats": [
+        {
+            "value": "7+",
+            "label": "export markets"
+        },
+        {
+            "value": "2008",
+            "label": "first export market: UAE"
+        },
+        {
+            "value": "12",
+            "label": "main species"
+        },
+        {
+            "value": "3",
+            "label": "ISO certificates, TÜV AUSTRIA"
+        }
+    ],
+    "index": {
+        "eyebrow": "Active markets",
+        "title": "Where we ship today",
+        "intro": "Our seven active markets and the year we started serving each one. Select a market for details.",
+        "since": "since {year}",
+        "planned_title": "Planned",
+        "paused": "{country}: exports paused",
+        "map_label": "Map of shipping routes from Egypt to our seven active markets",
+        "origin": "Egypt · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Market by market",
+        "title": "Who we supply in each market",
+        "intro": "The buyers we supply in each of our active markets today. Select a market for details.",
+        "buyers_label": "We supply",
+        "details": "Market details"
+    },
+    "approach": {
+        "eyebrow": "Market requirements",
+        "title": "Each market has its own specification",
+        "intro": "We agree the details with each importer before the first shipment.",
+        "points": [
+            {
+                "title": "Species and weight grade",
+                "text": "Species, weight grade and product form are agreed for each importer and each market."
+            },
+            {
+                "title": "Packing and labels",
+                "text": "Packing and box labels are set to what your market and your customers require."
+            },
+            {
+                "title": "Documents",
+                "text": "The export documents for each shipment are agreed for your destination."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "How to start",
+        "title": "From your first message to the shipment",
+        "steps": [
+            {
+                "title": "Send your requirements",
+                "text": "Species, weight grade, quantity, packing and destination."
+            },
+            {
+                "title": "Review with our export team",
+                "text": "We check supply, the specification and the import requirements of your destination."
+            },
+            {
+                "title": "Agree the order",
+                "text": "Species, grade, packing, transport, schedule and price are confirmed in writing for each order."
+            },
+            {
+                "title": "Pack and ship",
+                "text": "We pack on ice and ship by air or road, with the export documents agreed for your destination."
+            }
+        ]
+    },
+    "transport": {
+        "eyebrow": "Transport",
+        "title": "By air and by road",
+        "intro": "Fresh fish travels chilled and packed on ice. It leaves the plant in our own refrigerated trucks, then goes by air or road freight.",
+        "modes": [
+            {
+                "title": "Air freight",
+                "text": "Packed on ice in insulated boxes for air cargo, for destinations served by air."
+            },
+            {
+                "title": "Road freight",
+                "text": "Refrigerated road transport where the destination can be reached by land."
+            }
+        ],
+        "note": "We do not publish fixed transit times: they depend on the route and the booking, and are confirmed for each shipment."
+    },
+    "support": {
+        "eyebrow": "Working with us",
+        "title": "Clear terms for every order",
+        "items": [
+            {
+                "title": "Prices confirmed per order",
+                "text": "Prices depend on the species, weight grade, quantity, packing and delivery terms, so we confirm them for each order."
+            },
+            {
+                "title": "Clear responsibilities",
+                "text": "Who handles export documents, import clearance and delivery is agreed in writing for each order."
+            },
+            {
+                "title": "Two direct channels",
+                "text": "WhatsApp goes directly to our management, for fast deals. Email goes to the export team, for details and documents."
+            }
+        ],
+        "guide_link": "Read the guide to importing fresh fish from Egypt"
+    },
+    "new_market": {
+        "title": "Your country is planned or not listed?",
+        "text": "Tell us your destination. Our export team reviews each new market case by case.",
+        "action": "Contact the export team"
+    },
+    "disclaimer": "Every shipment depends on the import rules of the destination, current supply and the order terms agreed in writing.",
+    "regions": {
+        "gulf": "Gulf",
+        "levant": "Levant",
+        "middle_east": "Middle East",
+        "europe": "Europe",
+        "americas": "Americas",
+        "other": "Other"
+    },
+    "detail": {
+        "meta_title": "Fresh fish exports to {country}",
+        "meta_description": "Fresh Egyptian fish for importers in {country}, an active market since {year}. Shipped chilled by air or road; prices confirmed per order.",
+        "eyebrow": "Active market since {year}",
+        "title": "Fresh Egyptian fish for importers in {country}",
+        "intro": "We have served importers in {country} since {year}. Species, weight grade, packing, transport and documents are agreed with each importer.",
+        "primary": "Start a partnership",
+        "secondary": "Message management on WhatsApp",
+        "image_alt": "Whole fresh fish on crushed ice seen from above",
+        "facts_title": "At a glance: {country}",
+        "facts": {
+            "since_label": "Active market since",
+            "region_label": "Region",
+            "plant_label": "Ships from",
+            "plant_value": "Motobas, Kafr El Sheikh, Egypt",
+            "plant_link": "View the plant on the map",
+            "quality_label": "Quality",
+            "quality_value": "ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
+            "quality_link": "See quality",
+            "transport_label": "Transport",
+            "transport_value": "By air or road, confirmed per order",
+            "prices_label": "Prices",
+            "prices_value": "Confirmed per order"
+        },
+        "discuss_eyebrow": "What we agree",
+        "discuss_title": "What we agree with importers in {country}",
+        "discuss": [
+            {
+                "title": "Species and weight grades",
+                "text": "The species and weight grades your customers buy, confirmed against current supply."
+            },
+            {
+                "title": "Packing and labels",
+                "text": "Box format and label requirements for your sales channel."
+            },
+            {
+                "title": "Transport",
+                "text": "Chilled shipment by air or road, with the route confirmed for each order."
+            },
+            {
+                "title": "Documents",
+                "text": "The export documents needed to import into {country}, agreed for each order."
+            }
+        ],
+        "products_eyebrow": "Species",
+        "products_title": "Our main species",
+        "products_note": "These are our main, most-requested species; we supply other species on request.",
+        "map_eyebrow": "Our markets",
+        "map_title": "Shipping routes to {country} and our other markets",
+        "map_intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
+        "buyers_title": "Who we supply in {country}",
+        "glance_eyebrow": "Market profile"
+    }
+}

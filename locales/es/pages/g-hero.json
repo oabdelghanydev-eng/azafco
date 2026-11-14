@@ -1,0 +1,54 @@
+{
+    "groupLabel": "Mensajes principales",
+    "statsLabel": "Cifras clave",
+    "slides": [
+        {
+            "label": "De la producción en Egipto a alianzas en todo el mundo",
+            "kicker": "Exportador de pescado fresco desde 2008",
+            "title": "Pescado fresco egipcio para importadores de Oriente Medio y más allá",
+            "text": "Criamos y compramos 12 especies principales de pescado, y después las calibramos, envasamos y exportamos enteras y frescas, refrigeradas en hielo.",
+            "alt": "Dorada, lubina y tilapia enteras y frescas sobre hielo picado bajo una luz fría"
+        },
+        {
+            "label": "Del estanque al palé",
+            "kicker": "Cadena de valor",
+            "title": "Nos encargamos de cada etapa, del estanque al palé",
+            "text": "Calibramos, envasamos y despachamos desde nuestra planta de Motobas, Kafr el-Sheikh, con camiones frigoríficos y cámaras frigoríficas propios.",
+            "alt": "Vista aérea de estanques de tierra con aireadores y palmeras"
+        },
+        {
+            "label": "12 especies principales, calibradas por peso",
+            "kicker": "Nuestro pescado",
+            "title": "12 especies principales de pescado, calibradas por peso",
+            "text": "Desde la tilapia hasta la lubina y la dorada, a la venta enteras y frescas refrigeradas.",
+            "alt": "Pescado fresco entero sobre hielo picado, visto desde arriba"
+        },
+        {
+            "label": "Más de 7 mercados por aire y carretera",
+            "kicker": "Nuestros mercados",
+            "title": "Oriente Medio y más allá, por aire y carretera",
+            "text": "Kuwait, Emiratos Árabes Unidos, Catar, Irak, Siria, Baréin y Líbano, con Europa como siguiente paso de nuestro plan.",
+            "alt": "Camión frigorífico cargando cajas isotérmicas en un muelle al amanecer"
+        }
+    ],
+    "ctaPartner": "Iniciemos una colaboración",
+    "ctaFish": "Ver nuestro pescado",
+    "stats": [
+        {
+            "value": "12",
+            "label": "especies principales de pescado"
+        },
+        {
+            "value": "7+",
+            "label": "mercados de exportación"
+        },
+        {
+            "value": "3",
+            "label": "certificados ISO"
+        },
+        {
+            "value": "2500",
+            "label": "t/mes de capacidad de envasado"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "skip_to_main": "Skip to main content",
+    "nav": {
+        "main_label": "Main navigation",
+        "footer_label": "Footer navigation",
+        "home": "Home",
+        "seafood": "Seafood and aquaculture",
+        "seafood_overview": "Overview",
+        "products": "Products",
+        "processing": "Processing and packing",
+        "quality": "Quality",
+        "export": "Export solutions",
+        "markets": "Markets",
+        "for_importers": "For importers",
+        "company": "Our company",
+        "about": "About us",
+        "businesses": "Our businesses",
+        "insights": "Insights",
+        "contact": "Contact",
+        "menu": "Menu",
+        "open_menu": "Open menu",
+        "close_menu": "Close menu",
+        "home_link_label": "AZAFCO International home page"
+    },
+    "cta": {
+        "view_specifications": "View specifications",
+        "contact": "Contact",
+        "talk_to_export_team": "Talk to the export team",
+        "learn_more": "Learn more",
+        "read_more": "Read more",
+        "view_all": "View all",
+        "whatsapp": "WhatsApp",
+        "call": "Call",
+        "email": "Email",
+        "loading": "Loading…",
+        "opens_new_tab": "(opens in a new tab)",
+        "contact_export_team": "Contact our export team",
+        "send_requirements": "Send your requirements",
+        "start_partnership": "Start a partnership",
+        "request_document_pack": "Ask the export team about documents"
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home"
+    },
+    "pending": {
+        "prefix": "Pending owner confirmation:",
+        "certificate_card": "{name}: owner approval to publish"
+    },
+    "spec": {
+        "attribute": "Attribute",
+        "value": "Value",
+        "confirmed_with_sales": "Confirmed per order",
+        "attribute_label": "{label}:"
+    },
+    "market": {
+        "status_active": "Active market",
+        "status_planned": "Planned",
+        "status_paused": "Exports paused",
+        "fact_species": "Species",
+        "fact_species_value": "{count} main species",
+        "fact_transport": "Transport",
+        "fact_transport_value": "Chilled, by air or road; confirmed per order",
+        "fact_documents": "Documents",
+        "fact_documents_value": "The export team confirms the documents required for your market"
+    },
+    "certificate": {
+        "issuer": "Issuer",
+        "view": "View certificate",
+        "request_copy": "Ask about this certificate",
+        "request_copy_for": ": {name}",
+        "groups": {
+            "food_safety": "Food safety",
+            "export_approval": "Export approvals",
+            "management_system": "Management systems"
+        }
+    },
+    "insight": {
+        "read_article": "Read article",
+        "minutes": "{count} min read"
+    },
+    "faq": {
+        "toggle_hint": "Show answer"
+    },
+    "gallery": {
+        "label": "Photo gallery"
+    },
+    "whatsapp_float": {
+        "label": "WhatsApp · direct to management"
+    },
+    "facts": {
+        "title": "Facts at a glance",
+        "species": "Main species",
+        "markets": "Export markets",
+        "markets_value": "{count}+",
+        "iso": "ISO certificates",
+        "iso_note": "Certified by TÜV AUSTRIA",
+        "plant": "Processing plant",
+        "plant_value": "Motobas, Kafr El Sheikh"
+    },
+    "fill": {
+        "spec_title": "Have a full specification?",
+        "spec_text": "Send it to the export team and we will review it with you.",
+        "documents_text": "For document questions, contact the export team."
+    },
+    "consent": {
+        "title": "Analytics on this browser",
+        "on": "Analytics are on for this browser.",
+        "off": "Analytics are off for this browser.",
+        "unset": "You have not made a choice on this browser. Analytics follow the default for your region.",
+        "enable": "Turn analytics on",
+        "disable": "Turn analytics off"
+    }
+}

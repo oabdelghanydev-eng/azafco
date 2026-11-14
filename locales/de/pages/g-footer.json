@@ -1,0 +1,42 @@
+{
+    "kicker": "Partnerschaft starten",
+    "title_1": "Jede Lieferung",
+    "title_2": "beginnt mit einer Nachricht",
+    "lead": "Nennen Sie uns Fischart, Menge und Zielort. Unser Exportteam prüft Liefermöglichkeiten und Handelskonditionen. Preise werden pro Auftrag bestätigt.",
+    "whatsapp": {
+        "title": "WhatsApp",
+        "sub": "Direkt an die Geschäftsleitung · für schnelle Abschlüsse"
+    },
+    "email": {
+        "title": "E-Mail",
+        "sub": "Exportteam · Details und Dokumente"
+    },
+    "form": {
+        "title": "Anforderungen senden",
+        "sub": "Fischart, Gewichtsklasse, Menge und Zielort",
+        "value": "Vorbereitete E-Mail oder WhatsApp-Nachricht"
+    },
+    "factory": {
+        "title": "Werk",
+        "sub": "Besuch · auf der Karte ansehen",
+        "address": "Nr. 120, Futtermittelsektor, Industriegebiet, Motobas, Kafr el-Sheikh"
+    },
+    "registration": "Handelsregister <n>{cr}</n> · Steuernummer <n>{tax}</n>",
+    "new_tab": "(öffnet in neuem Tab)",
+    "photo_alt": "Kühl-Lkw wird im Morgengrauen mit Isolierboxen beladen",
+    "logo_alt": "AZAFCO International",
+    "tagline_1": "Exporteur von frischem Fisch",
+    "tagline_2": "aus Ägypten seit 2008",
+    "links_label": "Seitenlinks",
+    "langs_label": "Sprachen",
+    "back_to_top": "Nach oben",
+    "copyright": "© 2026 AZAFCO International for Investment and Development S.A.E.",
+    "float_label": "Geschäftsleitung per WhatsApp schreiben",
+    "secondary_label": "Weitere Links",
+    "secondary": {
+        "for_importers": "Für Importeure",
+        "contact": "Kontakt",
+        "privacy": "Datenschutz",
+        "cookies": "Cookie-Einstellungen"
+    }
+}

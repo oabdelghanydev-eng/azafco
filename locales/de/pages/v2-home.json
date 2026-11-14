@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "title": "AZAFCO International | Fischproduktion & Export, Ägypten",
+        "description": "AZAFCO International züchtet, bezieht, verpackt und exportiert frischen Fisch aus Ägypten für Importeure und Distributoren im Nahen Osten und darüber hinaus."
+    },
+    "news": {
+        "eyebrow": "Aktuelles",
+        "title": "In den Medien",
+        "intro": "Der Gouverneur von Kafr el-Sheikh in unserem Werk in Motobas sowie eine TV-Folge über unsere Arbeit beim Verpacken und Exportieren von frischem Fisch.",
+        "links": {
+            "governor_visit": "Auf Facebook ansehen",
+            "tv_program": "Auf YouTube ansehen"
+        },
+        "all": "Alle Meldungen und Presseberichte",
+        "new_tab": "(öffnet in neuem Tab)"
+    }
+}

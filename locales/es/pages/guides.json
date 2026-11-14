@@ -1,0 +1,120 @@
+{
+    "index": {
+        "meta_title": "Guías de importación de pescado para compradores",
+        "meta_description": "Guías prácticas para importar pescado fresco de Egipto: códigos SA, documentos de exportación e importación en la UE y cadena de frío, con fuentes citadas.",
+        "h1": "Guías para importadores de pescado",
+        "subtitle": "Guías prácticas y con fuentes para compradores que importan pescado fresco de Egipto.",
+        "breadcrumb": "Guías",
+        "read_guide": "Leer la guía",
+        "last_reviewed": "Última revisión: {date}"
+    },
+    "importing": {
+        "meta_title": "Importar pescado de Egipto: códigos SA y documentos",
+        "meta_description": "Códigos SA de 12 especies principales, documentos para exportar pescado fresco e importarlo en la UE (certificado sanitario, TRACES, origen) y cadena de frío.",
+        "breadcrumb": "Importar pescado fresco de Egipto",
+        "card_summary": "Códigos SA de nuestras 12 especies principales, los documentos que necesita un envío de pescado fresco, los pasos de importación en la UE y lo básico de la cadena de frío.",
+        "h1": "Importar pescado fresco de Egipto: códigos SA, documentos y cadena de frío",
+        "intro": "Esta guía está dirigida a importadores, mayoristas y distribuidores que tienen previsto comprar pescado fresco entero y refrigerado de Egipto. Recoge los códigos arancelarios de nuestras 12 especies principales, los documentos que suele necesitar un envío, los pasos adicionales para la Unión Europea y lo básico para mantener el pescado frío durante el trayecto.",
+        "last_reviewed": "Última revisión: {date}",
+        "disclaimer": "Esta guía ofrece información general. No constituye asesoramiento jurídico ni aduanero. Las normas cambian, así que confirme los requisitos vigentes con su agente de aduanas y con las autoridades del país importador antes de realizar el envío.",
+        "toc_title": "En esta guía",
+        "source_label": "Fuentes",
+        "hs": {
+            "title": "Códigos SA para pescado fresco entero",
+            "intro_1": "El pescado entero fresco o refrigerado se clasifica en la partida 0302 del Sistema Armonizado (SA; en inglés, HS), la nomenclatura que mantiene la Organización Mundial de Aduanas. Los seis primeros dígitos son los mismos en todos los países. Los filetes (partida 0304) y el pescado congelado (partida 0303) tienen códigos distintos.",
+            "intro_2": "La Unión Europea añade dos dígitos para formar el código de ocho dígitos de la Nomenclatura Combinada (NC), y la base de datos TARIC añade otros dos para las medidas de la UE. Otros países añaden sus propios dígitos nacionales después de los seis primeros.",
+            "table_caption": "Pescado entero fresco o refrigerado, partida 0302",
+            "col_species": "Especie",
+            "col_scientific": "Nombre científico",
+            "col_hs": "Código SA (6 dígitos)",
+            "col_cn": "Código NC de la UE (8 dígitos)",
+            "col_notes": "Notas",
+            "notes": {
+                "other_fish": "No figura en una subpartida específica, por lo que se clasifica en la 0302.89 «Los demás»; en la UE, en la NC 0302 89 90.",
+                "freshwater_other": "Su género no es uno de los bagres o peces gato citados en la 0302.72, por lo que se clasifica en la 0302.89 «Los demás»; en la UE, como pescado de agua dulce, en la NC 0302 89 10."
+            },
+            "after": "Códigos comprobados con la nomenclatura SA 2022 de la OMA y con el TARIC de la UE el {date}. La clasificación final es responsabilidad del declarante de aduanas del importador. Los tipos arancelarios y las preferencias cambian, así que consulte el arancel del país importador (en la UE, TARIC o Access2Markets) antes de calcular el precio puesto en destino."
+        },
+        "docs": {
+            "title": "Documentos para un envío de pescado fresco",
+            "intro": "La lista exacta depende del destino. Estos son los documentos que suelen intervenir en un envío de pescado fresco desde Egipto, con las normas de la UE como ejemplo principal.",
+            "items": {
+                "invoice": {
+                    "title": "Factura comercial",
+                    "text": "La emite el exportador. Identifica al vendedor y al comprador e indica la especie, el código SA, la cantidad, el peso neto, el valor, la moneda y el Incoterm. La aduana de destino la utiliza para calcular los derechos."
+                },
+                "packing_list": {
+                    "title": "Lista de embalaje (packing list)",
+                    "text": "Detalle caja por caja: número de cajas, peso neto y bruto, especie y calibre, y marcas de las cajas. Permite a la aerolínea, al puesto fronterizo y al comprador comprobar la partida."
+                },
+                "health_certificate": {
+                    "title": "Certificado sanitario oficial",
+                    "text": "Lo firma la autoridad competente del país exportador. Para la UE, el pescado fresco destinado al consumo humano viaja con el modelo de certificado FISH-CRUST-HC, expedido a través de TRACES. La UE solo lo acepta cuando el país figura en la lista para ese producto. En octubre de 2026, la UE incluyó a Egipto en la lista para peces de aleta y crustáceos de cultivo (acuicultura) (Reglamento de Ejecución (UE) 2026/2228), y el establecimiento que prepara el pescado también debe figurar en la lista de establecimientos autorizados de la UE. Otros mercados tienen sus propios modelos de certificado."
+                },
+                "origin": {
+                    "title": "Certificado de origen",
+                    "text": "La mayoría de los compradores y de las autoridades aduaneras piden una prueba de que el pescado es de origen egipcio. Para la UE, las mercancías egipcias pueden acogerse a un trato arancelario preferencial en virtud del Acuerdo de Asociación UE-Egipto, con un certificado de circulación EUR.1 o EUR-MED o una declaración de origen. Consulte las normas para su producto en Access2Markets."
+                },
+                "catch": {
+                    "title": "Certificado de captura o registros de acuicultura",
+                    "text": "La UE exige un certificado de captura validado para el pescado de mar capturado en estado salvaje, en virtud de su Reglamento INDNR (pesca ilegal, no declarada y no reglamentada). Quedan excluidos los productos de la acuicultura obtenidos a partir de alevines o larvas, así como la tilapia, los peces gato y las carpas frescos (0302 71 a 0302 73) y otros peces de agua dulce (0302 89 10). Desde el 10 de enero de 2026, los importadores de la UE presentan los certificados de captura a través del sistema CATCH IT. Para el pescado de cultivo, pida a su proveedor los datos de la granja y del lote que vinculan cada caja con su origen."
+                },
+                "ched": {
+                    "title": "Notificación previa del DSCE-P (CHED-P) en TRACES",
+                    "text": "Antes de que llegue el pescado, el importador de la UE o su agente notifica previamente la partida al puesto de control fronterizo elegido mediante un Documento Sanitario Común de Entrada para productos (DSCE-P; en inglés, CHED-P) en TRACES. El puesto de control fronterizo realiza controles documentales, de identidad y físicos antes de despachar el pescado."
+                },
+                "labelling": {
+                    "title": "Etiquetado para compradores de la UE",
+                    "text": "El pescado que se ofrece a consumidores o a colectividades en la UE debe indicar la denominación comercial y el nombre científico, el método de producción (capturado o de cría), la zona de captura o de producción y el resto de la información que enumera el artículo 35 del Reglamento (UE) n.º 1379/2013. Acuerde con su proveedor las etiquetas de las cajas antes del primer envío."
+                }
+            }
+        },
+        "cold": {
+            "title": "Lo básico de la cadena de frío",
+            "intro": "El pescado fresco es perecedero, por lo que el control de la temperatura es importante en cada etapa, desde la granja hasta el almacén del comprador. Las normas de higiene de la UE exigen que los productos de la pesca frescos se mantengan a una temperatura próxima a la del hielo fundente durante el almacenamiento y el transporte.",
+            "items": {
+                "temperature": {
+                    "title": "Mantenerlo cerca de 0 °C",
+                    "text": "En la práctica, los exportadores trabajan en un rango de 0 a 4 °C. El pescado debe refrigerarse lo antes posible después de la cosecha y mantenerse frío durante el calibrado, el envasado, el paso por el aeropuerto y la última milla."
+                },
+                "ice": {
+                    "title": "Hielo",
+                    "text": "El pescado entero se envasa con hielo para que se mantenga a la temperatura del hielo fundente. Reponga el hielo tantas veces como sea necesario durante el almacenamiento."
+                },
+                "boxes": {
+                    "title": "Cajas isotérmicas de EPS",
+                    "text": "Las cajas de poliestireno expandido (EPS) aíslan el pescado y se usan mucho en el transporte aéreo. Selle y etiquete cada caja, y compruebe las normas de su aerolínea para la carga perecedera."
+                },
+                "handovers": {
+                    "title": "Traspasos",
+                    "text": "Las roturas de la cadena de frío suelen producirse en los traspasos: camiones, terminales de carga de los aeropuertos y el puesto de control fronterizo. Planifique las reservas para que el pescado pase el menor tiempo posible fuera del frío, y conserve los registros de temperatura."
+                },
+                "arrival": {
+                    "title": "A la llegada",
+                    "text": "Compruebe la temperatura del pescado, el hielo y el estado de las cajas, y documente cualquier problema con fotos antes de firmar la recepción."
+                }
+            },
+            "azafco": "Cómo envía AZAFCO: pescado entero envasado en hielo en cajas de EPS, transportado en nuestros propios camiones frigoríficos y después por vía aérea o por carretera."
+        },
+        "enquiry": {
+            "title": "Cómo enviar sus requisitos",
+            "intro": "Envíenos los datos que se indican a continuación. El equipo de exportación revisa la disponibilidad, las condiciones y los documentos que necesita su envío.",
+            "checklist": [
+                "Especies y calibres",
+                "Volumen aproximado y frecuencia con la que desea hacer pedidos",
+                "País de destino y aeropuerto de llegada",
+                "Incoterm preferido",
+                "Documentos o certificaciones que exige su mercado",
+                "Requisitos de etiquetado, si vende al por menor en la UE"
+            ],
+            "cta_contact": "Envíe sus requisitos",
+            "cta_eu": "Información para compradores de la UE",
+            "species_title": "Nuestras especies principales",
+            "species_text": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido."
+        },
+        "sources": {
+            "title": "Fuentes",
+            "intro": "Fuentes oficiales utilizadas en esta guía, consultadas el {date}."
+        }
+    }
+}

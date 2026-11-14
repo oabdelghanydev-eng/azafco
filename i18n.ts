@@ -1,22 +1,9 @@
 import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { getFigureValues } from './config/company.config';
 
-// Supported locales - easily scalable to 10+ languages
-export const locales = ['ar', 'en', 'es', 'ru', 'de', 'fr'] as const;
-export type Locale = (typeof locales)[number];
-
-// Default locale (Arabic for this Egyptian company)
-export const defaultLocale: Locale = 'ar';
-
-// Locale configuration with display names and direction
-export const localeConfig: Record<Locale, { name: string; dir: 'rtl' | 'ltr'; nativeName: string }> = {
-    ar: { name: 'Arabic', dir: 'rtl', nativeName: 'العربية' },
-    en: { name: 'English', dir: 'ltr', nativeName: 'English' },
-    es: { name: 'Spanish', dir: 'ltr', nativeName: 'Español' },
-    ru: { name: 'Russian', dir: 'ltr', nativeName: 'Русский' },
-    de: { name: 'German', dir: 'ltr', nativeName: 'Deutsch' },
-    fr: { name: 'French', dir: 'ltr', nativeName: 'Français' },
-};
+export * from './i18n-config';
+import { locales, type Locale } from './i18n-config';
 
 // OpenGraph locale codes (for SEO meta tags)
 export const ogLocaleMap: Record<Locale, string> = {
@@ -80,5 +67,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
         timeZone: 'Africa/Cairo',
         // Configure date/time formatting
         now: new Date(),
+        // Company figures available to every message as {years}, {countries}, {isoCount}
+        defaultTranslationValues: getFigureValues(),
     };
 });

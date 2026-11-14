@@ -1,0 +1,29 @@
+{
+    "eyebrow": "Cadena de valor",
+    "title": "Nos encargamos de cada etapa, del estanque al palé",
+    "intro": "En cada paso trabajamos según una misma especificación acordada, con camiones frigoríficos, logística y cámaras frigoríficas propios.",
+    "stageLabel": "Etapa {n}",
+    "stages": {
+        "farming": {
+            "title": "Cría y abastecimiento",
+            "text": "Nuestras propias granjas, además del pescado que compramos a proveedores."
+        },
+        "harvest": {
+            "title": "Cosecha",
+            "text": "Se captura con redes y se lleva a nuestra planta de Motobas."
+        },
+        "packing": {
+            "title": "Lavado, enhielado y envasado",
+            "text": "Lavado, calibrado por peso y envasado entero en hielo."
+        },
+        "inspection": {
+            "title": "Inspección",
+            "text": "Se comprueba según la especificación acordada antes de cerrar las cajas."
+        },
+        "export": {
+            "title": "Exportación",
+            "text": "Nuestros propios camiones frigoríficos y, después, transporte aéreo o por carretera."
+        }
+    },
+    "pageLink": "Cómo procesamos y enviamos"
+}

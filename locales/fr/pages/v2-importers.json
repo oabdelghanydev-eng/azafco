@@ -1,0 +1,202 @@
+{
+    "meta": {
+        "title": "Importateurs de poisson : démarrer un partenariat",
+        "description": "AZAFCO International : envoyez vos besoins, vérifiez les disponibilités avec l’équipe export, convenez de chaque commande. Prix confirmés à chaque commande."
+    },
+    "breadcrumb": "Pour les importateurs",
+    "hero": {
+        "eyebrow": "Pour les importateurs et distributeurs",
+        "title": "Démarrer un partenariat d’approvisionnement en poisson frais",
+        "intro": "Indiquez-nous l’espèce, la quantité et la destination. Notre équipe export examine avec vous les disponibilités et les conditions commerciales ; les prix sont confirmés à chaque commande.",
+        "primary": "Envoyer vos besoins",
+        "secondary": "Écrire à la direction sur WhatsApp",
+        "image_alt": "Dorades royales, bars et tilapias entiers et frais sur glace pilée, sous une lumière froide"
+    },
+    "serve": {
+        "eyebrow": "Avec qui nous travaillons",
+        "title": "Importateurs, distributeurs et restauration hors domicile",
+        "intro": "Nous approvisionnons des entreprises, pas des particuliers. Chaque type d’acheteur a ses propres questions, et nous y répondons lorsque nous convenons de la commande.",
+        "items": [
+            {
+                "title": "Importateurs de poisson",
+                "text": "Espèces, calibres, conditionnement et quantités adaptés à votre marché."
+            },
+            {
+                "title": "Grossistes et distributeurs",
+                "text": "Un calibrage clair, des poids nets, un conditionnement et des conditions de livraison définis pour chaque commande."
+            },
+            {
+                "title": "Hôtels, restaurants et traiteurs",
+                "text": "Une spécification convenue et un seul interlocuteur : l’équipe export."
+            },
+            {
+                "title": "Fournisseurs de la restauration hors domicile",
+                "text": "Un approvisionnement régulier, planifié selon notre capacité de conditionnement et votre programme."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "Pour commencer",
+        "title": "Quatre étapes jusqu’à votre première expédition",
+        "steps": [
+            {
+                "title": "Envoyer vos besoins",
+                "text": "Société, pays, espèce, calibre, présentation du produit, quantité, conditionnement et date de livraison."
+            },
+            {
+                "title": "Examen avec notre équipe export",
+                "text": "Nous vérifions les disponibilités, la spécification, les exigences de votre marché et les documents d’export qu’il requiert."
+            },
+            {
+                "title": "Convenir de la commande",
+                "text": "Espèce, calibre, quantité, conditionnement, transport, calendrier et prix sont confirmés par écrit pour chaque commande."
+            },
+            {
+                "title": "Conditionner et expédier",
+                "text": "Nous conditionnons sous glace et expédions par avion ou par route, avec les documents d’export convenus pour votre destination."
+            }
+        ]
+    },
+    "prepare": {
+        "eyebrow": "Avant l’envoi",
+        "title": "Ce qu’il faut préparer",
+        "intro": "Plus vos besoins sont complets, plus notre première réponse sera utile.",
+        "items": [
+            "Espèce",
+            "Calibre",
+            "Présentation du produit",
+            "Quantité par expédition et fréquence",
+            "Pays de destination",
+            "Date de livraison",
+            "Exigences de conditionnement et d’étiquetage",
+            "Documents exigés par votre marché"
+        ]
+    },
+    "documents": {
+        "eyebrow": "Documents",
+        "title": "Ce que fournit l’équipe export",
+        "intro": "Écrivez à l’équipe export pour les détails et les documents. Voici les documents avec lesquels nous travaillons :",
+        "items": [
+            {
+                "title": "Fiche technique produit",
+                "text": "Espèce, calibre, présentation du produit et conditionnement pour votre commande."
+            },
+            {
+                "title": "Présentation de l’entreprise",
+                "text": "Une vue d’ensemble d’AZAFCO International et de nos méthodes de travail."
+            },
+            {
+                "title": "Documents d’expédition",
+                "text": "Les documents d’export convenus pour votre destination, préparés avec chaque expédition."
+            }
+        ],
+        "guide_link": "Les documents habituellement requis pour une expédition de poisson frais"
+    },
+    "terms": {
+        "eyebrow": "Conditions commerciales",
+        "title": "Confirmé à chaque commande",
+        "intro": "Nous ne publions ni liste de prix ni conditions générales. Ces points sont convenus par écrit pour chaque commande :",
+        "items": [
+            {
+                "title": "Prix",
+                "text": "Confirmé à chaque commande : il dépend de l’espèce, du calibre, de la quantité, du conditionnement et des conditions de livraison."
+            },
+            {
+                "title": "Commande minimale",
+                "text": "Dépend de l’espèce, du mode de transport et des conditions de la commande. Indiquez-nous la quantité avec laquelle vous souhaitez commencer, et nous vous confirmons par écrit ce que nous pouvons expédier."
+            },
+            {
+                "title": "Disponibilité",
+                "text": "Confirmée selon les disponibilités du moment, lors de l’examen de vos besoins."
+            },
+            {
+                "title": "Transport",
+                "text": "Réfrigéré, par avion ou par route ; l’itinéraire est confirmé pour chaque commande."
+            },
+            {
+                "title": "Incoterms",
+                "text": "Convenus pour chaque commande."
+            }
+        ]
+    },
+    "proof": {
+        "eyebrow": "À vérifier avant de nous écrire",
+        "title": "Espèces, procédés, qualité et marchés",
+        "items": [
+            {
+                "title": "Espèces",
+                "text": "12 espèces principales, entières et fraîches réfrigérées.",
+                "link": "Voir les espèces"
+            },
+            {
+                "title": "Transformation et conditionnement",
+                "text": "Comment le poisson est calibré, conditionné sous glace et expédié.",
+                "link": "Voir la transformation"
+            },
+            {
+                "title": "Qualité",
+                "text": "ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018, certifiés par TÜV AUSTRIA.",
+                "link": "Voir la page qualité"
+            },
+            {
+                "title": "Marchés",
+                "text": "Plus de 7 marchés au Moyen-Orient et au-delà.",
+                "link": "Voir les marchés"
+            }
+        ]
+    },
+    "faq": {
+        "eyebrow": "FAQ importateurs",
+        "title": "Les questions des importateurs avant de commencer",
+        "items": [
+            {
+                "q": "Comment commencer à travailler ensemble ?",
+                "a": "Envoyez vos besoins par e-mail à l’équipe export, à l’adresse business@azafco.com.eg, ou utilisez le message préparé sur cette page. Pour conclure rapidement, écrivez directement à notre direction sur WhatsApp. Nous examinons ensuite avec vous les disponibilités et confirmons les conditions commerciales par écrit."
+            },
+            {
+                "q": "Comment les prix sont-ils fixés ?",
+                "a": "Les prix sont confirmés à chaque commande. Ils dépendent de l’espèce, du calibre, de la quantité, du conditionnement et des conditions de livraison. Nous ne publions pas de liste de prix."
+            },
+            {
+                "q": "Quelle est la quantité minimale de commande ?",
+                "a": "Elle dépend de l’espèce et des conditions de la commande. Indiquez-nous la quantité prévue et nous confirmons ce qui est possible pour votre commande."
+            },
+            {
+                "q": "Quelles tailles et quels calibres pouvez-vous fournir ?",
+                "a": "Les calibres dépendent de l’espèce et des disponibilités du moment. Indiquez-nous le calibre souhaité et nous confirmons ce que nous pouvons fournir."
+            },
+            {
+                "q": "Quelles espèces fournissez-vous ?",
+                "a": "Les 12 espèces présentées sur notre site sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande."
+            },
+            {
+                "q": "Comment le poisson est-il conditionné ?",
+                "a": "Entier et frais réfrigéré, conditionné sous glace dans des caisses isothermes en PSE. Tout autre conditionnement, ou votre propre spécification, est étudié produit par produit."
+            },
+            {
+                "q": "Pouvez-vous conditionner sous notre étiquette ?",
+                "a": "Nous l’étudions au cas par cas, selon le produit et vos exigences. Précisez vos exigences d’étiquetage dans les remarques de votre demande."
+            },
+            {
+                "q": "Quels certificats détenez-vous ?",
+                "a": "Nous détenons les certificats ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018. Les documents d’export de chaque expédition sont convenus en fonction de votre destination."
+            },
+            {
+                "q": "Comment le poisson est-il expédié ?",
+                "a": "Réfrigéré, dans nos propres camions frigorifiques depuis l’usine, puis par fret aérien ou routier selon la destination. Nous ne publions pas de délais de transit fixes ; ils sont confirmés pour chaque expédition."
+            },
+            {
+                "q": "Vers quels marchés expédiez-vous ?",
+                "a": "Nous expédions vers plus de 7 marchés, dont les Émirats arabes unis, le Koweït, Bahreïn, le Liban, le Qatar, l’Irak et la Syrie. L’Europe, la Russie et les États-Unis font partie de notre plan. Si votre pays ne figure pas dans la liste, contactez l’équipe export."
+            },
+            {
+                "q": "Acceptez-vous des programmes d’approvisionnement réguliers ?",
+                "a": "Oui. Notre capacité de conditionnement va jusqu’à 2 500 t/mois, et l’approvisionnement régulier est planifié en fonction de cette capacité et de vos besoins. Indiquez-nous la fréquence prévue."
+            },
+            {
+                "q": "Comment savoir si un message vient vraiment d’AZAFCO International ?",
+                "a": "Nos canaux officiels sont l’e-mail de l’équipe export, business@azafco.com.eg, et le WhatsApp de la direction, +20 100 773 6419. Les conditions de commande sont confirmées par écrit pour chaque commande. Si un message concernant votre commande provient d’une autre adresse ou d’un autre numéro, vérifiez-le auprès de nous sur ces canaux avant d’y donner suite."
+            }
+        ]
+    }
+}

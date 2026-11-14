@@ -1,0 +1,123 @@
+{
+    "meta": {
+        "title": "Transformation et export de poisson frais d’Égypte",
+        "description": "À Motobas (Kafr el-Cheikh), notre usine lave, glace, calibre, emballe et contrôle le poisson frais entier ; nos camions et chambres froides le gardent au froid."
+    },
+    "breadcrumbs": {
+        "label": "Fil d’Ariane",
+        "home": "Accueil",
+        "current": "Chaîne de valeur"
+    },
+    "hero": {
+        "kicker": "Chaîne de valeur",
+        "title": "Transformation du poisson et chaîne du froid, depuis notre usine de Motobas",
+        "intro": "Dans notre usine de Motobas, à Kafr el-Cheikh, nous lavons, mettons sous glace, calibrons, conditionnons et contrôlons le poisson que nous élevons et achetons, puis nous l’acheminons jusqu’au fret aérien ou routier avec nos propres camions frigorifiques, notre logistique et nos entrepôts frigorifiques.",
+        "imageAlt": "Poissons entiers frais sur glace pilée dans des caisses blanches, avec du personnel en tenue d’hygiène au travail à l’arrière-plan",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Nos normes de qualité"
+    },
+    "stats": {
+        "label": "Chiffres clés",
+        "items": [
+            {
+                "value": "12",
+                "label": "espèces principales de poisson"
+            },
+            {
+                "value": "7+",
+                "label": "marchés d’exportation"
+            },
+            {
+                "value": "3",
+                "label": "certificats ISO"
+            },
+            {
+                "value": "2 500",
+                "label": "t/mois de capacité de conditionnement"
+            }
+        ]
+    },
+    "chain": {
+        "eyebrow": "Notre façon de travailler",
+        "title": "Cinq étapes, une seule spécification convenue",
+        "intro": "Chaque commande suit le même parcours, et chaque étape respecte la spécification que nous convenons avec vous.",
+        "stageLabel": "Étape {n}",
+        "stages": {
+            "farming": {
+                "title": "Élevage et approvisionnement",
+                "text": "Nous élevons nous-mêmes du poisson et en achetons aussi auprès d’autres producteurs.",
+                "alt": "Vue aérienne de bassins piscicoles en terre avec aérateurs et palmiers"
+            },
+            "harvest": {
+                "title": "Récolte",
+                "text": "Le poisson est pêché au filet et acheminé vers notre usine de Motobas, à Kafr el-Cheikh.",
+                "alt": "Deux ouvriers tirant un filet plein de tilapias vers la berge d’un étang en terre"
+            },
+            "packing": {
+                "title": "Lavage, glaçage et conditionnement",
+                "text": "Le poisson est lavé, glacé, calibré au poids et conditionné entier sous glace, selon le format convenu pour votre commande.",
+                "alt": "Mains gantées déposant un tilapia entier dans une caisse de glace pilée sur une table en inox"
+            },
+            "inspection": {
+                "title": "Contrôle",
+                "text": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses.",
+                "alt": "Main gantée tenant une sonde dans de l’eau glacée, à côté de deux tilapias entiers"
+            },
+            "export": {
+                "title": "Export",
+                "text": "Nos propres camions frigorifiques, puis fret aérien ou routier.",
+                "alt": "Ouvrier chargeant une palette de caisses blanches dans un camion frigorifique, à un quai de chargement"
+            }
+        },
+        "plantMap": "Voir notre usine sur Google Maps",
+        "newTab": "(s’ouvre dans un nouvel onglet)"
+    },
+    "logistics": {
+        "eyebrow": "Logistique",
+        "title": "Nos propres camions et entrepôts frigorifiques",
+        "intro": "Nous exploitons nos propres camions frigorifiques, notre logistique et nos entrepôts frigorifiques pour acheminer les caisses conditionnées de notre usine jusqu’à l’expédition.",
+        "items": {
+            "trucks": {
+                "title": "Camions frigorifiques",
+                "text": "Nos propres camions frigorifiques transportent les caisses conditionnées depuis l’usine."
+            },
+            "stores": {
+                "title": "Entrepôts frigorifiques",
+                "text": "Nous exploitons nos propres entrepôts frigorifiques dans le cadre de notre logistique."
+            },
+            "freight": {
+                "title": "Fret aérien ou routier",
+                "text": "Nous expédions par avion et par route vers les Émirats arabes unis, le Koweït, Bahreïn, le Liban, le Qatar, l’Irak et la Syrie. L’Europe est la prochaine étape de notre plan."
+            }
+        }
+    },
+    "agree": {
+        "eyebrow": "Votre spécification",
+        "title": "Ce que nous convenons avec vous avant chaque commande",
+        "intro": "Dites-nous ce dont votre marché a besoin. Nous confirmons chaque détail avec vous avant la commande.",
+        "items": {
+            "species": {
+                "title": "Espèce et calibre",
+                "text": "L’espèce et le calibre par poisson. Nous fournissons d’autres espèces sur demande."
+            },
+            "form": {
+                "title": "Présentation du produit",
+                "text": "Entier, frais réfrigéré et conditionné sous glace."
+            },
+            "packing": {
+                "title": "Conditionnement et poids net",
+                "text": "Le conditionnement et le poids net par caisse, adaptés à votre circuit de vente."
+            },
+            "labels": {
+                "title": "Étiquettes et destination",
+                "text": "Contenu et langue des étiquettes, et exigences du pays de destination."
+            }
+        },
+        "prices": "Prix confirmés à chaque commande.",
+        "speciesLink": "Voir nos espèces principales"
+    },
+    "pending": {
+        "temperature": "Température de stockage et de transport par produit, avec points de contrôle et enregistrements (à confirmer par la direction avant toute publication de chiffre)",
+        "pack_formats": "Formats d’emballage validés (types de caisse, poids nets) et options d’étiquetage"
+    }
+}

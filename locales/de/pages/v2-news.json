@@ -1,0 +1,89 @@
+{
+    "meta": {
+        "title": "Aktuelles und Presse",
+        "description": "Nachrichten, Presseberichte und Meilensteine von AZAFCO International sowie Meldungen zum ägyptischen Fischsektor aus genannten Quellen, jeweils mit Datum."
+    },
+    "breadcrumb": "Aktuelles und Presse",
+    "hero": {
+        "eyebrow": "Aktuelles und Presse",
+        "title": "Aktuelles, Presse und Meilensteine",
+        "intro": "Besuche, Medienberichte und Meilensteine von AZAFCO International sowie Branchennachrichten aus genannten Quellen. Jeder Beitrag zeigt Datum und Quelle."
+    },
+    "illustrative": "Symbolbild",
+    "source": "Quelle: {name}",
+    "view_source": "Quelle ansehen",
+    "new_tab": "(öffnet in neuem Tab)",
+    "press": {
+        "eyebrow": "Unternehmensnachrichten",
+        "title": "Besuche und Medienberichte",
+        "intro": "Offizielle Besuche in unserem Werk sowie Presse- und TV-Berichte über AZAFCO International."
+    },
+    "milestones": {
+        "eyebrow": "Unsere Meilensteine",
+        "title": "Von 2008 bis heute",
+        "list_label": "Meilensteine des Unternehmens",
+        "items": {
+            "founding": {
+                "title": "AZAFCO International wird gegründet",
+                "text": "Wir wurden in Kafr el-Sheikh gegründet und begannen, frischen Fisch zu verpacken und zu exportieren."
+            },
+            "baltim": {
+                "title": "Unser erstes Werk, in Baltim",
+                "text": "Wir eröffneten unser erstes Werk im Industriegebiet Baltim, Kafr el-Sheikh."
+            },
+            "motobas": {
+                "title": "Unser neues Werk, in Motobas",
+                "text": "Wir eröffneten unser neues Werk im Industriegebiet Motobas, Kafr el-Sheikh."
+            }
+        },
+        "iso": {
+            "title": "ISO-zertifiziert",
+            "text": "Wir verfügen über ISO-Zertifikate für Qualitäts-, Umwelt- sowie Arbeits- und Gesundheitsschutzmanagement, zertifiziert durch TÜV AUSTRIA.",
+            "link": "Qualität und Zertifikate"
+        }
+    },
+    "industry": {
+        "eyebrow": "Branchenumfeld",
+        "title": "Ägyptens Fischsektor in den Nachrichten",
+        "intro": "Berichte über die ägyptische Fischerei und über Kafr el-Sheikh, das Gouvernement, in dem unser Werk liegt.",
+        "note": "Die Zahlen in diesem Abschnitt stammen aus den genannten Quellen und geben den Stand zum angegebenen Datum wieder. Es sind keine AZAFCO-Daten."
+    },
+    "items": {
+        "governor_visit": {
+            "title": "Gouverneur von Kafr el-Sheikh besucht unser Werk in Motobas",
+            "summary": "Generalmajor Dr. Alaa Abdel Moaty, Gouverneur von Kafr el-Sheikh, besichtigte unser Werk im Industriegebiet Motobas im Rahmen der Arbeit des Gouvernements zur Förderung der Fischindustrie und der Exporte.",
+            "source": "Gouvernement Kafr el-Sheikh"
+        },
+        "press_feature": {
+            "title": "Porträt in Dar Al-Sharq Al-Awsat",
+            "summary": "Die Zeitung Dar Al-Sharq Al-Awsat veröffentlichte ein Porträt von AZAFCO International und seinem Vorsitzenden über die Arbeit des Unternehmens im Export von Frischfisch.",
+            "source": "Zeitung Dar Al-Sharq Al-Awsat"
+        },
+        "tv_program": {
+            "title": "TV-Folge „Helwa Ya Baladi“ über AZAFCO International",
+            "summary": "Die Sendung „Helwa Ya Baladi“ des Senders Misr Al Balad TV strahlte eine Sonderfolge über unsere Verpackung und unseren Export von Frischfisch aus.",
+            "source": "Misr Al Balad TV (YouTube)"
+        },
+        "egypt_ranking": {
+            "title": "Ägypten laut Landwirtschaftsminister auf Platz eins in Afrika bei der Fischerei",
+            "summary": "Bei einem Treffen mit dem gambischen Fischereiminister sagte Ägyptens Landwirtschaftsminister El-Sayed El-Quseir, Ägypten liege in der Fischerei auf Platz eins in Afrika und auf Platz sechs weltweit.",
+            "source": "Staatlicher Informationsdienst Ägyptens (SIS)"
+        },
+        "kafr_el_sheikh_production": {
+            "title": "Kafr el-Sheikh produziert rund die Hälfte des ägyptischen Fischs",
+            "summary": "Al-Ahram Gate berichtete, dass Kafr el-Sheikh rund 50 % des ägyptischen Fischs produziert, etwa 800.000 Tonnen pro Jahr, und dass die Aquakultur 70 % der Produktion des Gouvernements ausmacht.",
+            "source": "Al-Ahram Gate"
+        },
+        "ghalioun_project": {
+            "title": "Fischfarm Ghalioun in Kafr el-Sheikh eröffnet",
+            "summary": "Präsident Abdel Fattah El-Sisi eröffnete die Fischindustriestadt Ghalioun in Kafr el-Sheikh: eine Fischfarm von rund 4.000 Feddan mit 1.359 Fisch- und Garnelenteichen, Brutanlagen sowie Werken für Fischverarbeitung, Futter und Eis.",
+            "source": "Youm7"
+        }
+    },
+    "teaser": {
+        "eyebrow": "Aktuelles und Presse",
+        "title": "Neueste Meldungen",
+        "intro": "Besuche, Medienberichte und Meilensteine, jeweils mit Datum und Quelle.",
+        "all": "Alle Meldungen und Presseberichte"
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "eyebrow": "Our fish",
+    "title": "12 main fresh fish species",
+    "intro": "Sold whole and fresh chilled, graded by weight per piece and packed on ice. We agree the weight grade and packing with you before every shipment.",
+    "note": "These are our main, most-requested species; we supply other species on request.",
+    "species": {
+        "tilapia": {
+            "name": "Tilapia",
+            "alt": "Whole tilapia, side view"
+        },
+        "sea_bass": {
+            "name": "Sea bass",
+            "alt": "Whole sea bass, side view"
+        },
+        "sea_bream": {
+            "name": "Sea bream",
+            "alt": "Whole sea bream, side view"
+        },
+        "meagre": {
+            "name": "Meagre",
+            "alt": "Whole meagre, side view"
+        },
+        "mullet": {
+            "name": "Grey mullet",
+            "alt": "Whole grey mullet, side view"
+        },
+        "thinlip_mullet": {
+            "name": "Thinlip mullet",
+            "alt": "Whole thinlip mullet, side view"
+        },
+        "common_carp": {
+            "name": "Common carp",
+            "alt": "Whole common carp, side view"
+        },
+        "mirror_carp": {
+            "name": "Mirror carp",
+            "alt": "Whole mirror carp, side view"
+        },
+        "grass_carp": {
+            "name": "Grass carp",
+            "alt": "Whole grass carp, side view"
+        },
+        "silver_carp": {
+            "name": "Silver carp",
+            "alt": "Whole silver carp, side view"
+        },
+        "catfish": {
+            "name": "Catfish",
+            "alt": "Whole catfish, side view"
+        },
+        "bayad_catfish": {
+            "name": "Bayad catfish",
+            "alt": "Whole bayad catfish, side view"
+        }
+    },
+    "pageLink": "Browse all species"
+}

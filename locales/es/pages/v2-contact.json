@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "title": "Contacto: WhatsApp, correo, oficina y fábrica",
+        "description": "WhatsApp con la gerencia de AZAFCO para operaciones rápidas; correo al equipo de exportación para detalles y documentos. Oficina y fábrica en Kafr el-Sheikh."
+    },
+    "breadcrumb": "Contacto",
+    "hero": {
+        "eyebrow": "Contacto",
+        "title": "Iniciemos una colaboración con un solo mensaje",
+        "intro": "Escriba a la gerencia por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para detalles y documentos.",
+        "actions": {
+            "whatsapp": "Escriba a la gerencia por WhatsApp",
+            "email": "Correo al equipo de exportación"
+        }
+    },
+    "channels": {
+        "eyebrow": "Canales directos",
+        "title": "Elija el canal que mejor se adapte a su consulta",
+        "intro": "Un número para la gerencia por WhatsApp y por teléfono, y un correo para el equipo de exportación.",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Directo a la gerencia · para operaciones rápidas"
+        },
+        "email": {
+            "title": "Correo electrónico",
+            "sub": "Equipo de exportación · detalles y documentos"
+        },
+        "phone": {
+            "title": "Teléfono",
+            "sub": "Llame a la gerencia al mismo número"
+        },
+        "hours": "Horario de oficina",
+        "vcard": {
+            "title": "Guarde nuestros datos de contacto",
+            "text": "Una tarjeta de contacto (vCard) que añade a su teléfono el número de la gerencia y el correo del equipo de exportación.",
+            "action": "Descargar la tarjeta de contacto"
+        },
+        "new_tab": "(se abre en una pestaña nueva)"
+    },
+    "routes": {
+        "eyebrow": "Envíe sus requisitos",
+        "legend": "¿Sobre qué trata su consulta?",
+        "intro": "Cada opción le prepara un mensaje para que lo envíe desde el correo de su empresa o desde WhatsApp; así sabemos de quién procede la solicitud.",
+        "seafood_title": "Suministro de pescado",
+        "seafood_text": "Para importadores y equipos de compras: especie, calibre, embalaje, cantidad, destino y plazos.",
+        "seafood_action": "Envíe sus requisitos",
+        "documents_title": "Documentos",
+        "documents_text": "Especificaciones de producto o el perfil de la empresa. Una solicitud breve: no hace falta indicar especie ni cantidad.",
+        "documents_action": "Solicitar documentos",
+        "corporate_title": "Colaboración corporativa u otros temas",
+        "corporate_text": "Colaboraciones, inversión u otros temas: una breve presentación de su empresa y de la cooperación que propone.",
+        "corporate_action": "Enviar una consulta"
+    },
+    "locations": {
+        "eyebrow": "Ubicaciones",
+        "title": "Oficina principal y fábrica",
+        "intro": "Nuestra oficina principal está en El-Borollos y nuestra fábrica en Motobas, ambas en Kafr el-Sheikh (Egipto).",
+        "factory": "Fábrica",
+        "office": "Oficina principal",
+        "map_open": "Abrir en Google Maps",
+        "map_title_factory": "Mapa de la fábrica de AZAFCO International en Motobas",
+        "map_title_office": "Mapa de la oficina principal de AZAFCO International",
+        "map_note": "Los mapas se cargan desde Google Maps."
+    },
+    "next": {
+        "eyebrow": "Después de escribirnos",
+        "title": "Qué ocurre después de escribirnos",
+        "steps": [
+            "El equipo de exportación revisa sus requisitos frente a la especificación y la disponibilidad actual.",
+            "Nos ponemos en contacto con usted para confirmar los detalles y cualquier punto pendiente.",
+            "Los precios, la cantidad, el embalaje y las condiciones se confirman por escrito en cada pedido."
+        ],
+        "no_promise": "Enviar sus requisitos no le compromete ni nos compromete a un pedido. Los precios se confirman en cada pedido."
+    },
+    "privacy": {
+        "title": "Cómo usamos sus datos",
+        "text": "Usamos los datos de contacto y los requisitos que nos envía solo para responder a su consulta y gestionar la relación comercial que pueda derivarse, según se indica en nuestra política de privacidad.",
+        "link": "Leer la política de privacidad"
+    },
+    "trust": {
+        "title": "Empresa registrada",
+        "register": "Registro mercantil",
+        "tax": "Tarjeta fiscal",
+        "proof_title": "Trayectoria",
+        "proof": [
+            "Fundada en 2008",
+            "Más de 7 mercados en Oriente Medio y más allá",
+            "ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018, certificados por TÜV AUSTRIA"
+        ],
+        "proof_link": "Ver calidad y certificados"
+    }
+}

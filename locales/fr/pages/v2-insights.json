@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "title": "Ressources pour les importateurs de poisson",
+        "description": "Guides pour importateurs de poisson : codes SH, documents, chaîne du froid. Actualités et presse d’AZAFCO, avec la date et la source de chaque fait."
+    },
+    "breadcrumb": "Ressources",
+    "hero": {
+        "eyebrow": "Ressources",
+        "title": "Des repères pour mieux décider de vos achats",
+        "intro": "Des guides pratiques sur les documents et la chaîne du froid, ainsi que l’actualité et la presse de l’entreprise, avec la date et la source de chaque fait.",
+        "primary": "Lire le guide de l’importateur",
+        "secondary": "Actualités et presse"
+    },
+    "featured": {
+        "eyebrow": "Guide à la une",
+        "read": "Lire le guide"
+    },
+    "categories": {
+        "eyebrow": "Ce que nous publions",
+        "title": "Des contenus classés par type, clairement signalés",
+        "importer_guide": "Guides pour importateurs",
+        "importer_guide_text": "Codes SH, documents d’export et bases de la chaîne du froid pour importer du poisson frais d’Égypte.",
+        "behind_operations": "Dans les coulisses",
+        "behind_operations_text": "Calibrage, conditionnement et expédition dans notre usine, publiés après vérification.",
+        "company_news": "Actualités et presse",
+        "company_news_text": "Visites, couverture médiatique, étapes clés et actualités du secteur, chacune avec sa date et une source nommée.",
+        "news_count": "{count, plural, one {# publication} other {# publications}}"
+    },
+    "grid": {
+        "title": "Tous les articles",
+        "count": "{count, plural, one {# article publié} other {# articles publiés}}"
+    },
+    "standards": {
+        "title": "Charte éditoriale",
+        "text": "Nous indiquons la date et la source de chaque fait. Les données du secteur ne sont jamais présentées comme des données d’AZAFCO, et nous ne publions ni chiffres de production ni certificats sans justificatif valable."
+    },
+    "article": {
+        "by": "Publié par",
+        "author": "AZAFCO International",
+        "published": "Date de publication",
+        "reviewed": "Dernière vérification",
+        "toc": "Dans cet article",
+        "sources_side": "Sources",
+        "sources_side_text": "{count, plural, one {# source officielle, citée à la fin et liée dans le texte.} other {# sources officielles, citées à la fin et liées dans le texte.}}",
+        "related_title": "Pour aller plus loin",
+        "related": [
+            {
+                "title": "Pour les importateurs",
+                "text": "Le parcours d’achat et ce qu’il faut préparer."
+            },
+            {
+                "title": "Nos marchés",
+                "text": "Où nous expédions aujourd’hui et ce qui est prévu."
+            },
+            {
+                "title": "Nos poissons",
+                "text": "Une page pour chacune de nos espèces principales."
+            }
+        ],
+        "table_mobile_note": "Codes par espèce",
+        "related_eyebrow": "À lire ensuite",
+        "reading_time": "Temps de lecture"
+    }
+}

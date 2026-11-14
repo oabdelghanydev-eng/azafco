@@ -1,64 +1,26 @@
-import { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { ogLocaleMap, ogImageMap, dateLocaleMap, Locale } from '@/i18n';
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { companyConfig } from '@/config/company.config';
+import { Container, PageHead, cardClass, cn, focusRing, typography } from '@/components/ui';
+import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
+import { routes } from '@/lib/v2/routes';
+import AnalyticsChoice from '@/components/v2/AnalyticsChoice';
 
 type Props = {
     params: Promise<{ locale: string }>;
 };
 
+/** Date of the last content change of this policy (update it with every change of privacy.json). */
+const LAST_UPDATED = '2026-11-14';
+
+const SECTIONS = ['who', 'contact', 'analytics', 'hosting', 'maps', 'cookies', 'sharing', 'rights', 'changes'] as const;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'metadata.privacy' });
-    const siteT = await getTranslations({ locale, namespace: 'metadata.site' });
-    const baseUrl = companyConfig.contact.baseUrl;
-
-    return {
-        title: t('title'),
-        description: t('description'),
-        alternates: {
-            canonical: `${baseUrl}/${locale}/privacy-policy`,
-            languages: {
-                'ar': `${baseUrl}/ar/privacy-policy`,
-                'en': `${baseUrl}/en/privacy-policy`,
-                'es': `${baseUrl}/es/privacy-policy`,
-                'ru': `${baseUrl}/ru/privacy-policy`,
-                'de': `${baseUrl}/de/privacy-policy`,
-                'fr': `${baseUrl}/fr/privacy-policy`,
-                'x-default': `${baseUrl}/ar/privacy-policy`,
-            },
-        },
-        openGraph: {
-            title: t('title'),
-            description: t('description'),
-            url: `${baseUrl}/${locale}/privacy-policy`,
-            type: 'website',
-            siteName: siteT('name'),
-            locale: ogLocaleMap[locale as Locale] || 'en_US',
-            images: [{
-                url: ogImageMap[locale as Locale],
-                width: 1200,
-                height: 630,
-                alt: t('title'),
-            }],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title: t('title'),
-            description: t('description'),
-            images: [ogImageMap[locale as Locale]],
-        },
-        robots: {
-            index: false,
-            follow: false,
-            nocache: true,
-            googleBot: {
-                index: false,
-                follow: false,
-                noimageindex: true,
-            },
-        },
-    };
+    const t = await getTranslations({ locale, namespace: 'privacy.meta' });
+    // Legal page: kept out of the index, links still followed
+    return pageMetadata({ locale, path: routes.privacy, title: t('title'), description: t('description') });
 }
 
 export default async function PrivacyPolicyPage({ params }: Props) {
@@ -66,92 +28,135 @@ export default async function PrivacyPolicyPage({ params }: Props) {
     setRequestLocale(locale);
 
     const t = await getTranslations({ locale, namespace: 'privacy' });
-    const isAr = locale === 'ar';
+
+    const tv = await getTranslations({ locale, namespace: 'v2' });
+    const tc = await getTranslations({ locale, namespace: 'data.company' });
+    const format = await getFormatter({ locale });
+    const date = format.dateTime(new Date(`${LAST_UPDATED}T00:00:00Z`), { dateStyle: 'long', timeZone: 'UTC' });
+    const email = companyConfig.contact.email;
+
+    const mail = (chunks: ReactNode) => (
+        <a href={`mailto:${email}`} dir="ltr" className={cn('font-bold text-link underline underline-offset-4 hover:decoration-2', focusRing)}>
+            {chunks}
+        </a>
+    );
+    const analytics = t.raw('sections.analytics.items') as { name: string; text: string }[];
+    const contactItems = t.raw('sections.contact.items') as string[];
+
+    const h2 = cn('m-0 scroll-mt-28 text-ink', typography.h2Sm);
+    const p = cn('mb-0 mt-3 text-ink-muted', typography.body);
 
     return (
-        <div className={`min-h-screen bg-gray-50 ${isAr ? 'rtl' : 'ltr'}`}>
-            {/* Header */}
-            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white py-16">
-                <div className="container mx-auto px-4">
-                    <h1 className="text-3xl md:text-4xl font-bold text-center">
-                        {t('title')}
-                    </h1>
-                    <p className="text-center text-gray-300 mt-4">
-                        {t('last_updated')}: {new Date().toLocaleDateString(dateLocaleMap[locale as Locale] || 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                    </p>
-                </div>
-            </div>
+        <>
+            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('eyebrow')} title={t('title')} titleId="privacy-title" intro={t('intro')}>
+                <p className={cn('mb-0 mt-5 text-fg-muted', typography.small)}>
+                    <time dateTime={LAST_UPDATED}>{t('last_updated', { date })}</time>
+                </p>
+            </PageHead>
 
-            {/* Content */}
-            <div className="container mx-auto px-4 py-12 max-w-4xl">
-                <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 space-y-8">
-
-                    {/* Introduction */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('intro.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed">{t('intro.content')}</p>
-                    </section>
-
-                    {/* Data Collection */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('data_collection.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">{t('data_collection.content')}</p>
-                        <ul className="list-disc list-inside text-gray-600 space-y-2 mr-4">
-                            <li>{t('data_collection.item1')}</li>
-                            <li>{t('data_collection.item2')}</li>
-                            <li>{t('data_collection.item3')}</li>
-                        </ul>
-                    </section>
-
-                    {/* Analytics */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('analytics.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">{t('analytics.content')}</p>
-                        <div className="bg-gray-50 rounded-lg p-4 space-y-2">
-                            <p className="text-gray-700"><strong>Google Analytics 4:</strong> {t('analytics.ga4')}</p>
-                            <p className="text-gray-700"><strong>Microsoft Clarity:</strong> {t('analytics.clarity')}</p>
+            <Container className="py-section-sm md:py-20 lg:py-24">
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:gap-20">
+                    {/* On-page navigation */}
+                    <nav aria-labelledby="privacy-toc" className="min-w-0">
+                        <div className={cn(cardClass({ padding: 'sm' }), 'lg:sticky lg:top-28 lg:p-6')}>
+                            <h2 id="privacy-toc" className={cn('m-0 text-ink', typography.h3)}>
+                                {t('toc')}
+                            </h2>
+                            <ol className="m-0 mt-3 list-none p-0">
+                                {SECTIONS.map((id, i) => (
+                                    <li key={id}>
+                                        <a
+                                            href={`#${id}`}
+                                            className={cn('flex min-h-tap items-center gap-3 text-ink hover:text-navy hover:underline', typography.small, focusRing)}
+                                        >
+                                            <span aria-hidden="true" dir="ltr" className="w-6 shrink-0 font-bold text-navy">
+                                                {String(i + 1).padStart(2, '0')}
+                                            </span>
+                                            {t(`sections.${id}.title`)}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ol>
                         </div>
-                    </section>
+                    </nav>
 
-                    {/* Cookies */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('cookies.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed">{t('cookies.content')}</p>
-                    </section>
+                    <div className="min-w-0 max-w-[760px]">
+                        {SECTIONS.map((id) => (
+                            <section
+                                key={id}
+                                id={id}
+                                aria-labelledby={`${id}-title`}
+                                className="scroll-mt-28 border-t border-solid border-line py-8 first:border-t-4 first:border-t-gold first:pt-7"
+                            >
+                                <h2 id={`${id}-title`} className={h2}>
+                                    {t(`sections.${id}.title`)}
+                                </h2>
+                                {id === 'who' ? (
+                                    <p className={p}>
+                                        {t('sections.who.text', {
+                                            legalName: tc('fullName'),
+                                            register: companyConfig.registration.commercialRegister,
+                                            address: tc('addresses.main.address'),
+                                        })}
+                                    </p>
+                                ) : id === 'rights' ? (
+                                    <p className={p}>{t.rich('sections.rights.text', { email, mail })}</p>
+                                ) : (
+                                    <p className={p}>{t(`sections.${id}.text`)}</p>
+                                )}
 
-                    {/* Data Sharing */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('sharing.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed">{t('sharing.content')}</p>
-                    </section>
+                                {id === 'contact' ? (
+                                    <ul className={cn('m-0 mt-4 list-none space-y-3 p-0 text-ink-muted', typography.body)}>
+                                        {contactItems.map((item) => (
+                                            <li key={item} className="flex gap-3">
+                                                <span aria-hidden="true" className="mt-[0.8em] h-0.5 w-4 shrink-0 bg-gold" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : null}
 
-                    {/* Your Rights */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('rights.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">{t('rights.content')}</p>
-                        <ul className="list-disc list-inside text-gray-600 space-y-2 mr-4">
-                            <li>{t('rights.item1')}</li>
-                            <li>{t('rights.item2')}</li>
-                            <li>{t('rights.item3')}</li>
-                        </ul>
-                    </section>
+                                {id === 'cookies' ? (
+                                    <AnalyticsChoice
+                                        copy={{
+                                            title: tv('consent.title'),
+                                            on: tv('consent.on'),
+                                            off: tv('consent.off'),
+                                            unset: tv('consent.unset'),
+                                            enable: tv('consent.enable'),
+                                            disable: tv('consent.disable'),
+                                        }}
+                                    />
+                                ) : null}
 
-                    {/* Contact */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary-800 mb-4">{t('contact.title')}</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">{t('contact.content')}</p>
-                        <div className="bg-primary-50 rounded-lg p-4">
-                            <p className="text-primary-800">
-                                <strong>{t('contact.email_label')}:</strong>{' '}
-                                <a href={`mailto:${companyConfig.contact.email}`} className="text-primary-600 hover:underline">
-                                    {companyConfig.contact.email}
-                                </a>
-                            </p>
-                        </div>
-                    </section>
+                                {id === 'analytics' ? (
+                                    <>
+                                        <dl className="m-0 mt-5 grid gap-3">
+                                            {analytics.map((a) => (
+                                                <div key={a.name} className="rounded-card bg-surface-offwhite p-5">
+                                                    <dt dir="ltr" className="text-start font-bold text-ink rtl:text-right">
+                                                        {a.name}
+                                                    </dt>
+                                                    <dd className={cn('m-0 mt-1 text-ink-muted', typography.small)}>{a.text}</dd>
+                                                </div>
+                                            ))}
+                                        </dl>
+                                        <p className={cn('mb-0 mt-3 text-ink-muted', typography.small)}>{t('sections.analytics.note')}</p>
+                                    </>
+                                ) : null}
+                            </section>
+                        ))}
 
+                        {/* Closing: one accent card, same as the other pages' closings */}
+                        <section aria-labelledby="privacy-contact" className={cardClass({ accent: true, padding: 'md', className: 'mt-4' })}>
+                            <h2 id="privacy-contact" className={cn('m-0 text-fg', typography.h3)}>
+                                {t('contact_title')}
+                            </h2>
+                            <p className={cn('mb-0 mt-2 text-fg-muted', typography.body)}>{t.rich('contact_text', { email, mail })}</p>
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </Container>
+        </>
     );
 }

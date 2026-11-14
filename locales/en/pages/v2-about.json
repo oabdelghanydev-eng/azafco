@@ -1,0 +1,93 @@
+{
+    "meta": {
+        "title": "About us | AZAFCO International, Egyptian fish since 2008",
+        "description": "Founded in 2008, AZAFCO International farms, sources, packs and exports fresh Egyptian fish to 7+ markets, with 2,500 t/month packing capacity."
+    },
+    "breadcrumb": "About us",
+    "hero": {
+        "eyebrow": "About AZAFCO International",
+        "title": "Egyptian fish, handled by us from the pond to the pallet",
+        "intro": "Founded in 2008, we farm and source fish in Egypt, then inspect, pack and export it fresh to importers, distributors and foodservice buyers across the Middle East and beyond.",
+        "primary": "Start a partnership",
+        "secondary": "Message management on WhatsApp",
+        "reassure": "Start with a message: species, quantity and destination. Prices confirmed per order.",
+        "image_alt": "Two workers pulling a seine net full of fish to the bank of an earthen pond"
+    },
+    "story": {
+        "eyebrow": "Our story",
+        "title": "Built on fish since 2008",
+        "p1": "We were founded in 2008 in Kafr El Sheikh, in Egypt's Nile Delta, and shipped our first fresh fish exports to the UAE that same year.",
+        "p2": "Today we ship by air and road to 7+ markets, with Europe next in our plan. Fish remains our core business; under the AZAFCO International identity it sits alongside our agriculture, livestock and investment activities."
+    },
+    "facts": {
+        "founded_value": "2008",
+        "founded_label": "Year founded",
+        "capacity_value": "2,500",
+        "capacity_label": "t/month packing capacity",
+        "iso_value": "3",
+        "iso_label": "ISO certificates, certified by TÜV AUSTRIA",
+        "iso_note": "ISO 9001:2015 · ISO 14001:2015 · ISO 45001:2018",
+        "iso_link": "Quality and certificates",
+        "markets_value": "7+",
+        "markets_label": "markets in the Middle East and beyond"
+    },
+    "journey": {
+        "eyebrow": "Our journey",
+        "title": "Milestones since 2008",
+        "intro": "Key dates from our founding to today: our factories and the markets we export to.",
+        "list_label": "Company milestones by year",
+        "founded": "AZAFCO International founded in Kafr El Sheikh, Egypt",
+        "market": "First exports to {country}",
+        "baltim": "First factory opened in the Baltim Industrial Zone, Kafr El Sheikh",
+        "motobas": "New plant opened in the Motobas Industrial Zone, Kafr El Sheikh",
+        "governor": "Visit by the Governor of Kafr El Sheikh to our Motobas plant"
+    },
+    "stages": {
+        "line": "We handle every stage, from the pond to the pallet.",
+        "link": "See the five stages"
+    },
+    "businesses": {
+        "eyebrow": "Our businesses",
+        "title": "Fish at the core, with other activities alongside",
+        "p1": "Farming, sourcing, packing and exporting fresh fish is our core business and the focus of this website.",
+        "p2": "AZAFCO International also works in agriculture, livestock and investment.",
+        "image_alt": "Whole fresh fish on crushed ice seen from above",
+        "link_products": "Product catalogue",
+        "link_importers": "For importers",
+        "link_businesses": "Our businesses",
+        "link_seafood": "Our fish business"
+    },
+    "footprint": {
+        "eyebrow": "Where we work",
+        "title": "Our plant, trucks and cold stores",
+        "p1": "Our fish processing and packing plant is in the Industrial Zone of Motobas, Kafr El Sheikh, in Egypt's Nile Delta. Here the fish is received, washed, iced, graded and packed, then loaded for dispatch.",
+        "p2": "We run our own refrigerated trucks, cold stores and logistics, from the plant to air or road freight.",
+        "image_alt": "Whole fresh fish on crushed ice in white insulated boxes in a packing hall",
+        "addresses_title": "Addresses",
+        "map_link": "See the plant on Google Maps",
+        "opens_new_tab": "(opens in a new tab)"
+    },
+    "values": {
+        "eyebrow": "Our values",
+        "title": "We start with specifications, not slogans",
+        "intro": "The principles behind how we work with buyers.",
+        "i1_title": "Reliability",
+        "i1_text": "We have exported fresh fish since 2008, and our first markets, the UAE and Kuwait, are still active today.",
+        "i2_title": "Specifications first",
+        "i2_text": "We start from what you need (species, weight grade, packing, quantity and destination), then confirm what we can supply.",
+        "i3_title": "Clear terms",
+        "i3_text": "Specifications, documents and commercial terms are set out clearly and confirmed per order.",
+        "i4_title": "Long-term relationships",
+        "i4_text": "We aim for repeat supply built on consistency, not one-off deals."
+    },
+    "direction": {
+        "eyebrow": "Our direction",
+        "title": "Vision and mission",
+        "vision_title": "Vision",
+        "vision_text": "To be a trusted Egyptian partner in production and supply for regional and international markets, through business built on quality, clarity and lasting relationships.",
+        "mission_title": "Mission",
+        "mission_text": "To supply products and services that fit the needs of our business partners, connecting production and processing in Egypt with the requirements of the markets we serve.",
+        "identity_title": "Our identity",
+        "identity_text": "AZAFCO International keeps the AZAFCO name and its heritage, in a form that matches our work with partners and importers in the Middle East and beyond."
+    }
+}

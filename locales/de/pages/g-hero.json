@@ -1,0 +1,54 @@
+{
+    "groupLabel": "Kernaussagen",
+    "statsLabel": "Kennzahlen",
+    "slides": [
+        {
+            "label": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
+            "kicker": "Exporteur von frischem Fisch seit 2008",
+            "title": "Frischer Fisch aus Ägypten für Importeure im Nahen Osten und darüber hinaus",
+            "text": "Wir züchten und beziehen 12 Hauptfischarten. Sortiert und verpackt exportieren wir sie ganz, frisch gekühlt und auf Eis.",
+            "alt": "Ganze frische Doraden, Wolfsbarsche und Tilapia auf Scherbeneis in kühlem Licht"
+        },
+        {
+            "label": "Vom Teich bis zur Palette",
+            "kicker": "Wertschöpfungskette",
+            "title": "Wir übernehmen jede Stufe, vom Teich bis zur Palette",
+            "text": "Wir sortieren, verpacken und versenden aus unserem Werk in Motobas, Kafr el-Sheikh, mit eigenen Kühl-Lkw und Kühlhäusern.",
+            "alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
+        },
+        {
+            "label": "12 Hauptarten, nach Gewicht sortiert",
+            "kicker": "Unser Fisch",
+            "title": "12 Hauptfischarten, nach Gewicht sortiert",
+            "text": "Von Tilapia bis Wolfsbarsch und Dorade, ganz und frisch gekühlt.",
+            "alt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen"
+        },
+        {
+            "label": "7+ Märkte per Luft und Straße",
+            "kicker": "Unsere Märkte",
+            "title": "Der Nahe Osten und darüber hinaus, per Luft und Straße",
+            "text": "Kuwait, die VAE, Katar, der Irak, Syrien, Bahrain und der Libanon; als Nächstes ist Europa geplant.",
+            "alt": "Kühl-Lkw wird im Morgengrauen an einer Laderampe mit Isolierboxen beladen"
+        }
+    ],
+    "ctaPartner": "Partnerschaft starten",
+    "ctaFish": "Fischarten ansehen",
+    "stats": [
+        {
+            "value": "12",
+            "label": "Hauptfischarten"
+        },
+        {
+            "value": "7+",
+            "label": "Exportmärkte"
+        },
+        {
+            "value": "3",
+            "label": "ISO-Zertifikate"
+        },
+        {
+            "value": "2.500",
+            "label": "t/Monat Packkapazität"
+        }
+    ]
+}

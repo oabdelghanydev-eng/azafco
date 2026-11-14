@@ -1,0 +1,93 @@
+{
+    "meta": {
+        "title": "Über AZAFCO International: Fisch aus Ägypten seit 2008",
+        "description": "Gegründet 2008: AZAFCO International züchtet, bezieht, verpackt und exportiert frischen Fisch aus Ägypten in 7+ Märkte, mit 2.500 t/Monat Packkapazität."
+    },
+    "breadcrumb": "Über uns",
+    "hero": {
+        "eyebrow": "Über AZAFCO International",
+        "title": "Fisch aus Ägypten, vom Teich bis zur Palette in unserer Hand",
+        "intro": "Seit unserer Gründung 2008 züchten und beziehen wir Fisch in Ägypten. Wir prüfen, verpacken und exportieren ihn frisch an Importeure, Distributoren und Gastronomiekunden im Nahen Osten und darüber hinaus.",
+        "primary": "Partnerschaft starten",
+        "secondary": "Geschäftsleitung per WhatsApp schreiben",
+        "reassure": "Beginnen Sie mit einer Nachricht: Fischart, Menge und Zielort. Preise werden pro Auftrag bestätigt.",
+        "image_alt": "Zwei Arbeiter ziehen ein volles Zugnetz mit Fisch ans Ufer eines Erdteichs"
+    },
+    "story": {
+        "eyebrow": "Unsere Geschichte",
+        "title": "Seit 2008 im Fischgeschäft",
+        "p1": "Wir wurden 2008 in Kafr el-Sheikh im ägyptischen Nildelta gegründet und haben noch im selben Jahr unsere ersten Exporte von frischem Fisch in die VAE geliefert.",
+        "p2": "Heute liefern wir per Luft- und Straßenfracht in 7+ Märkte; als Nächstes ist Europa geplant. Fisch bleibt unser Kerngeschäft; unter dem Dach von AZAFCO International ergänzen ihn unsere Aktivitäten in Landwirtschaft, Viehzucht und Investitionen."
+    },
+    "facts": {
+        "founded_value": "2008",
+        "founded_label": "Gründungsjahr",
+        "capacity_value": "2.500",
+        "capacity_label": "t/Monat Packkapazität",
+        "iso_value": "3",
+        "iso_label": "ISO-Zertifikate, zertifiziert durch TÜV AUSTRIA",
+        "iso_note": "ISO 9001:2015 · ISO 14001:2015 · ISO 45001:2018",
+        "iso_link": "Qualität und Zertifikate",
+        "markets_value": "7+",
+        "markets_label": "Märkte im Nahen Osten und darüber hinaus"
+    },
+    "journey": {
+        "eyebrow": "Unser Weg",
+        "title": "Meilensteine seit 2008",
+        "intro": "Wichtige Daten von der Gründung bis heute: unsere Werke und die Märkte, in die wir exportieren.",
+        "list_label": "Meilensteine des Unternehmens nach Jahr",
+        "founded": "Gründung von AZAFCO International in Kafr el-Sheikh, Ägypten",
+        "market": "Erste Lieferungen an Kunden aus {country}",
+        "baltim": "Erstes Werk im Industriegebiet Baltim, Kafr el-Sheikh, eröffnet",
+        "motobas": "Neues Werk im Industriegebiet Motobas, Kafr el-Sheikh, eröffnet",
+        "governor": "Besuch des Gouverneurs von Kafr el-Sheikh in unserem Werk in Motobas"
+    },
+    "stages": {
+        "line": "Wir übernehmen jede Stufe, vom Teich bis zur Palette.",
+        "link": "Die fünf Stufen ansehen"
+    },
+    "businesses": {
+        "eyebrow": "Unsere Geschäftsbereiche",
+        "title": "Fisch als Kerngeschäft, dazu weitere Geschäftsfelder",
+        "p1": "Zucht, Zukauf, Verpackung und Export von frischem Fisch sind unser Kerngeschäft und der Schwerpunkt dieser Website.",
+        "p2": "AZAFCO International ist außerdem in Landwirtschaft, Viehzucht und Investitionen tätig.",
+        "image_alt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen",
+        "link_products": "Produktkatalog",
+        "link_importers": "Für Importeure",
+        "link_businesses": "Unsere Geschäftsbereiche",
+        "link_seafood": "Unser Fischgeschäft"
+    },
+    "footprint": {
+        "eyebrow": "Wo wir arbeiten",
+        "title": "Unser Werk, unsere Lkw und Kühlhäuser",
+        "p1": "Unser Werk für Fischverarbeitung und -verpackung liegt im Industriegebiet von Motobas, Kafr el-Sheikh, im ägyptischen Nildelta. Hier wird der Fisch angenommen, gewaschen, beeist, sortiert und verpackt und anschließend für den Versand verladen.",
+        "p2": "Wir betreiben eigene Kühl-Lkw, Kühlhäuser und Logistik, vom Werk bis zur Luft- oder Straßenfracht.",
+        "image_alt": "Ganzer frischer Fisch auf Scherbeneis in weißen Isolierboxen in einer Packhalle",
+        "addresses_title": "Adressen",
+        "map_link": "Werk auf Google Maps ansehen",
+        "opens_new_tab": "(öffnet in neuem Tab)"
+    },
+    "values": {
+        "eyebrow": "Unsere Werte",
+        "title": "Wir beginnen mit Spezifikationen, nicht mit Slogans",
+        "intro": "Die Grundsätze unserer Zusammenarbeit mit Einkäufern.",
+        "i1_title": "Zuverlässigkeit",
+        "i1_text": "Wir exportieren seit 2008 frischen Fisch, und unsere ersten Märkte, die VAE und Kuwait, sind bis heute aktiv.",
+        "i2_title": "Spezifikation zuerst",
+        "i2_text": "Wir gehen von Ihrem Bedarf aus (Fischart, Gewichtsklasse, Verpackung, Menge und Zielort) und bestätigen dann, was wir liefern können.",
+        "i3_title": "Klare Konditionen",
+        "i3_text": "Spezifikationen, Dokumente und Handelskonditionen werden klar festgehalten und pro Auftrag bestätigt.",
+        "i4_title": "Langfristige Beziehungen",
+        "i4_text": "Wir setzen auf wiederkehrende Lieferungen, die auf Beständigkeit beruhen, nicht auf Einmalgeschäfte."
+    },
+    "direction": {
+        "eyebrow": "Unsere Ausrichtung",
+        "title": "Vision und Mission",
+        "vision_title": "Vision",
+        "vision_text": "Ein vertrauenswürdiger ägyptischer Partner in Produktion und Lieferung für regionale und internationale Märkte zu sein, mit Geschäften, die auf Qualität, Klarheit und dauerhaften Beziehungen beruhen.",
+        "mission_title": "Mission",
+        "mission_text": "Produkte und Leistungen zu liefern, die dem Bedarf unserer Geschäftspartner entsprechen, und Produktion und Verarbeitung in Ägypten mit den Anforderungen der Märkte zu verbinden, die wir beliefern.",
+        "identity_title": "Unsere Identität",
+        "identity_text": "AZAFCO International bewahrt den Namen AZAFCO und sein Erbe, in einer Form, die zu unserer Arbeit mit Partnern und Importeuren im Nahen Osten und darüber hinaus passt."
+    }
+}

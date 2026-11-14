@@ -1,95 +1,102 @@
 {
     "kuwait": {
         "country": "Kuwait",
-        "description": "Our largest export market. Trusted partner to leading distributors, restaurants, and hotels across Kuwait.",
-        "features": [
-            "Largest Export Volume",
-            "Premium Distributors",
-            "Restaurant Chains",
+        "short": "Kuwait",
+        "sentence": "Kuwait",
+        "note": "Our largest export market. We supply distributors, restaurant chains and hotels in Kuwait.",
+        "buyers": [
+            "Distributors",
+            "Restaurant chains",
             "Hotels"
         ]
     },
     "uae": {
         "country": "United Arab Emirates",
-        "description": "Major Gulf market serving Dubai, Abu Dhabi, and Sharjah's finest distributors, restaurants, and supermarket chains.",
-        "features": [
-            "Certified Distributors",
-            "Luxury Restaurants",
-            "Supermarket Chains",
+        "short": "UAE",
+        "sentence": "the United Arab Emirates",
+        "note": "Our first export market, since 2008. We supply distributors, restaurants, supermarket chains and hotels in Dubai, Abu Dhabi and Sharjah.",
+        "buyers": [
+            "Distributors",
+            "Restaurants",
+            "Supermarket chains",
             "Hotels"
         ]
     },
     "qatar": {
         "country": "Qatar",
-        "description": "Growing market with strong partnerships with Qatari distributors, hotels, and restaurant groups.",
-        "features": [
-            "Major Distributors",
-            "Hotel Chains",
+        "short": "Qatar",
+        "sentence": "Qatar",
+        "note": "A growing market. We work with distributors, hotel chains, restaurants and catering companies in Qatar.",
+        "buyers": [
+            "Distributors",
+            "Hotel chains",
             "Restaurants",
-            "Catering Companies"
+            "Catering companies"
         ]
     },
     "iraq": {
         "country": "Iraq",
-        "description": "Expanding market with large and growing demand and promising opportunities.",
-        "features": [
-            "Local Distributors",
-            "Wholesale Markets",
+        "short": "Iraq",
+        "sentence": "Iraq",
+        "note": "A market with growing demand. We supply local distributors, wholesale markets and restaurants in Iraq.",
+        "buyers": [
+            "Local distributors",
+            "Wholesale markets",
             "Restaurants"
         ]
     },
     "bahrain": {
         "country": "Bahrain",
-        "description": "Active market with strong presence across distributors, restaurants, and cooperative societies.",
-        "features": [
+        "short": "Bahrain",
+        "sentence": "Bahrain",
+        "note": "We supply distributors, restaurants, cooperative societies and hotels in Bahrain.",
+        "buyers": [
             "Distributors",
             "Restaurants",
-            "Cooperative Societies",
+            "Cooperative societies",
             "Hotels"
         ]
     },
     "lebanon": {
         "country": "Lebanon",
-        "description": "Distinguished market known for appreciation of quality and freshness. Serving high-end establishments.",
-        "features": [
-            "High-end Restaurants",
-            "Premium Distributors",
+        "short": "Lebanon",
+        "sentence": "Lebanon",
+        "note": "A market that values quality and freshness. We supply restaurants, distributors and hotels in Lebanon.",
+        "buyers": [
+            "Restaurants",
+            "Distributors",
             "Hotels"
         ]
     },
     "spain": {
         "country": "Spain",
-        "description": "Our gateway to European markets - currently paused but planning re-entry. EU-approved operations ready.",
-        "features": [
-            "European Distributors",
-            "Fish Markets"
-        ]
+        "short": "Spain",
+        "sentence": "Spain"
     },
     "syria": {
         "country": "Syria",
-        "description": "One of our newest and strongest markets. AZAFCO has launched operations in Syria with a powerful presence, serving distributors and restaurants across the country.",
-        "features": [
-            "Strong Market Presence",
-            "Local Distributors",
+        "short": "Syria",
+        "sentence": "Syria",
+        "note": "Our newest market, opened in 2026. We supply distributors, restaurants and wholesale markets in Syria.",
+        "buyers": [
+            "Distributors",
             "Restaurants",
-            "Wholesale Markets"
+            "Wholesale markets"
         ]
     },
     "russia": {
         "country": "Russia",
-        "description": "Promising large-scale market we are actively planning to enter with significant growth potential.",
-        "features": [
-            "International Distributors",
-            "Retail Chains"
-        ]
+        "short": "Russia",
+        "sentence": "Russia"
     },
     "usa": {
-        "country": "United States of America",
-        "description": "Our upcoming gateway to the North American market. Expansion plans are underway to serve the US market in the near future.",
-        "features": [
-            "International Distributors",
-            "Retail Chains",
-            "Restaurant Chains"
-        ]
+        "country": "United States",
+        "short": "USA",
+        "sentence": "the United States"
+    },
+    "europe": {
+        "country": "Europe",
+        "short": "Europe",
+        "sentence": "Europe"
     }
 }

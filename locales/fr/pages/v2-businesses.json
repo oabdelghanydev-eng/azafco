@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "title": "Nos activités | AZAFCO International",
+        "description": "AZAFCO International : le poisson (élevage, achat, conditionnement, export) au cœur, avec l’agriculture, le bétail et l’investissement en Égypte."
+    },
+    "breadcrumb": "Nos activités",
+    "hero": {
+        "eyebrow": "Nos activités",
+        "title": "Le poisson au cœur, avec l’agriculture, l’élevage de bétail et l’investissement",
+        "intro": "AZAFCO International est active dans le poisson, l’agriculture, l’élevage de bétail et l’investissement. Le poisson est notre cœur de métier : nous élevons, achetons, conditionnons et exportons du poisson frais vers plus de 7 marchés au Moyen-Orient et au-delà.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Notre activité poisson",
+        "reassure": "Commencez par un message : espèce, quantité et destination. Prix confirmés à chaque commande.",
+        "image_alt": "Vue aérienne de bassins piscicoles en terre avec aérateurs et palmiers"
+    },
+    "allocation": {
+        "eyebrow": "Structure du groupe",
+        "title": "Comment nos activités s’articulent",
+        "intro": "Une seule marque mère. Le poisson en tête, nos autres activités à ses côtés.",
+        "parent_name": "AZAFCO International",
+        "parent_role": "Société mère et marque institutionnelle",
+        "core_tag": "Cœur de métier",
+        "core_name": "Produits de la mer et aquaculture",
+        "core_text": "Nous élevons et achetons du poisson, puis le conditionnons et l’exportons frais : 12 espèces principales, une capacité de conditionnement allant jusqu’à 2 500 t/mois et plus de 7 marchés.",
+        "core_link": "Découvrir notre activité poisson",
+        "others_label": "Autres activités",
+        "agri_title": "Agriculture",
+        "agri_text": "Des terres agricoles produisant des fruits et des légumes.",
+        "livestock_title": "Élevage de bétail",
+        "livestock_text": "Des élevages de bétail en Égypte.",
+        "invest_title": "Investissements",
+        "invest_text": "Une partie de notre portefeuille d’entreprise. Ce site est consacré à notre activité poisson."
+    },
+    "seafood": {
+        "eyebrow": "Cœur de métier",
+        "title": "Le poisson, de l’étang à la palette",
+        "p1": "Nous élevons et achetons du poisson, puis le lavons, le mettons sous glace, le calibrons, le contrôlons et le conditionnons dans notre usine de Motobas, à Kafr el-Cheikh. De là, nos propres camions frigorifiques, nos entrepôts frigorifiques et notre logistique l’acheminent jusqu’au fret aérien ou routier.",
+        "p2": "Nous fournissons 12 espèces principales, et d’autres espèces sur demande, sous forme de poisson entier, frais réfrigéré. Nous détenons trois certificats ISO (ISO 9001:2015, ISO 14001:2015 et ISO 45001:2018), délivrés par TÜV AUSTRIA.",
+        "image_alt": "Poissons entiers frais sur glace pilée dans des caisses isothermes blanches, dans une salle de conditionnement",
+        "link_products": "Catalogue produits",
+        "link_processing": "Transformation et conditionnement",
+        "link_quality": "Qualité et certificats",
+        "link_importers": "Pour les importateurs",
+        "cta_primary": "Découvrir notre activité poisson"
+    }
+}

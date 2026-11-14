@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "title": "Unsere Geschäftsbereiche | AZAFCO International",
+        "description": "AZAFCO International: Fischzucht, Zukauf, Verpackung und Export als Kerngeschäft, dazu Landwirtschaft, Viehzucht und Investitionen in Ägypten."
+    },
+    "breadcrumb": "Unsere Geschäftsbereiche",
+    "hero": {
+        "eyebrow": "Unsere Geschäftsbereiche",
+        "title": "Fisch als Kerngeschäft, dazu Landwirtschaft, Viehzucht und Investitionen",
+        "intro": "AZAFCO International ist in Fisch, Landwirtschaft, Viehzucht und Investitionen tätig. Fisch ist unser Kerngeschäft: Wir züchten, beziehen, verpacken und exportieren frischen Fisch in 7+ Märkte im Nahen Osten und darüber hinaus.",
+        "primary": "Partnerschaft starten",
+        "secondary": "Unser Fischgeschäft",
+        "reassure": "Beginnen Sie mit einer Nachricht: Fischart, Menge und Zielort. Preise werden pro Auftrag bestätigt.",
+        "image_alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
+    },
+    "allocation": {
+        "eyebrow": "Unternehmensstruktur",
+        "title": "Wie unsere Geschäftsbereiche zusammenpassen",
+        "intro": "Eine Dachmarke. Fisch steht an erster Stelle, unsere weiteren Aktivitäten ergänzen ihn.",
+        "parent_name": "AZAFCO International",
+        "parent_role": "Muttergesellschaft und Unternehmensmarke",
+        "core_tag": "Kerngeschäft",
+        "core_name": "Fisch und Aquakultur",
+        "core_text": "Wir züchten und beziehen Fisch, verpacken und exportieren ihn frisch: 12 Hauptarten, eine Packkapazität von bis zu 2.500 t/Monat und 7+ Märkte.",
+        "core_link": "Unser Fischgeschäft entdecken",
+        "others_label": "Weitere Aktivitäten",
+        "agri_title": "Landwirtschaft",
+        "agri_text": "Agrarflächen mit Obst- und Gemüseanbau.",
+        "livestock_title": "Viehzucht",
+        "livestock_text": "Viehzuchtbetriebe in Ägypten.",
+        "invest_title": "Investitionen",
+        "invest_text": "Teil unseres Unternehmensportfolios. Diese Website konzentriert sich auf unser Fischgeschäft."
+    },
+    "seafood": {
+        "eyebrow": "Kerngeschäft",
+        "title": "Fisch, vom Teich bis zur Palette",
+        "p1": "Wir züchten und beziehen Fisch und waschen, beeisen, sortieren, prüfen und verpacken ihn in unserem Werk in Motobas, Kafr el-Sheikh. Von dort bringen ihn unsere eigenen Kühl-Lkw, Kühlhäuser und unsere Logistik zur Luft- oder Straßenfracht.",
+        "p2": "Wir liefern 12 Hauptarten und auf Anfrage weitere Arten, ganz und frisch gekühlt. Wir verfügen über drei ISO-Zertifikate (ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018), zertifiziert durch TÜV AUSTRIA.",
+        "image_alt": "Ganzer frischer Fisch auf Scherbeneis in weißen Isolierboxen in einer Packhalle",
+        "link_products": "Produktkatalog",
+        "link_processing": "Verarbeitung und Verpackung",
+        "link_quality": "Qualität und Zertifikate",
+        "link_importers": "Für Importeure",
+        "cta_primary": "Unser Fischgeschäft entdecken"
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "meta": {
+        "title": "Fish processing, packing and export from Egypt",
+        "description": "Our plant in Motobas, Kafr El Sheikh washes, ices, grades, packs and inspects whole fresh fish. Our refrigerated trucks and cold stores keep it chilled."
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home",
+        "current": "Value chain"
+    },
+    "hero": {
+        "kicker": "Value chain",
+        "title": "Fish processing and cold chain, from our plant in Motobas",
+        "intro": "At our plant in Motobas, Kafr El Sheikh, we wash, ice, grade, pack and inspect the fish we farm and source, then move it with our own refrigerated trucks, logistics and cold stores to air or road freight.",
+        "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind",
+        "primary": "Start a partnership",
+        "secondary": "Our quality standards"
+    },
+    "stats": {
+        "label": "Key figures",
+        "items": [
+            {
+                "value": "12",
+                "label": "main fish species"
+            },
+            {
+                "value": "7+",
+                "label": "export markets"
+            },
+            {
+                "value": "3",
+                "label": "ISO certificates"
+            },
+            {
+                "value": "2,500",
+                "label": "t/month packing capacity"
+            }
+        ]
+    },
+    "chain": {
+        "eyebrow": "How we work",
+        "title": "Five stages, one agreed specification",
+        "intro": "Every order follows the same path, and each stage works to the specification we agree with you.",
+        "stageLabel": "Stage {n}",
+        "stages": {
+            "farming": {
+                "title": "Farming and sourcing",
+                "text": "We farm fish ourselves and also buy fish from other producers.",
+                "alt": "Aerial view of earthen fish ponds with aerators and palm trees"
+            },
+            "harvest": {
+                "title": "Harvest",
+                "text": "The fish are netted and taken to our plant in Motobas, Kafr El Sheikh.",
+                "alt": "Two workers pulling a net full of tilapia to the bank of an earthen pond"
+            },
+            "packing": {
+                "title": "Washing, icing and packing",
+                "text": "The fish are washed, iced, graded by weight and packed whole on ice, to the packing agreed for your order.",
+                "alt": "Gloved hands placing a whole tilapia into a crate of crushed ice on a steel table"
+            },
+            "inspection": {
+                "title": "Inspection",
+                "text": "Checked against the agreed specification before the boxes are closed.",
+                "alt": "A gloved hand holding a probe in iced water beside two whole tilapia"
+            },
+            "export": {
+                "title": "Export",
+                "text": "Our own refrigerated trucks, then air or road freight.",
+                "alt": "A worker moving a pallet of white boxes into a refrigerated truck at a loading dock"
+            }
+        },
+        "plantMap": "See our plant on Google Maps",
+        "newTab": "(opens in a new tab)"
+    },
+    "logistics": {
+        "eyebrow": "Logistics",
+        "title": "Our own trucks and cold stores",
+        "intro": "We run our own refrigerated trucks, logistics and cold stores to move the packed boxes from our plant to the shipment.",
+        "items": {
+            "trucks": {
+                "title": "Refrigerated trucks",
+                "text": "Our own refrigerated trucks move the packed boxes from the plant."
+            },
+            "stores": {
+                "title": "Cold stores",
+                "text": "We run our own cold stores as part of our logistics."
+            },
+            "freight": {
+                "title": "Air or road freight",
+                "text": "We ship by air and road to the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe is next in our plan."
+            }
+        }
+    },
+    "agree": {
+        "eyebrow": "Your specification",
+        "title": "What we agree with you before each order",
+        "intro": "Tell us what your market needs. We confirm each detail with you before the order.",
+        "items": {
+            "species": {
+                "title": "Species and weight grade",
+                "text": "The species and the weight grade per fish. We supply other species on request."
+            },
+            "form": {
+                "title": "Product form",
+                "text": "Whole, fresh chilled and packed on ice."
+            },
+            "packing": {
+                "title": "Packing and net weight",
+                "text": "The packing and the net weight per box, to suit your sales channel."
+            },
+            "labels": {
+                "title": "Labels and destination",
+                "text": "Label content and language, and the requirements of the destination country."
+            }
+        },
+        "prices": "Prices confirmed per order.",
+        "speciesLink": "See our main species"
+    },
+    "pending": {
+        "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",
+        "pack_formats": "Validated pack formats (box types, net weights) and label options"
+    }
+}

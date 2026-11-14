@@ -1,18 +1,24 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale } from './i18n';
+import { publishedLocales, defaultLocale, type PublishedLocale } from './i18n';
 
 export default createMiddleware({
-    // A list of all locales that are supported
-    locales,
+    // Published locales only: Accept-Language / cookie detection never picks a
+    // language whose translation is not live yet.
+    locales: publishedLocales,
 
     // Used when no locale matches
-    defaultLocale,
+    defaultLocale: defaultLocale as PublishedLocale,
 
     // Always use locale prefix in URL for SEO (e.g., /ar/products, /en/products)
     localePrefix: 'always',
 
     // Automatic locale detection based on Accept-Language header
     localeDetection: true,
+
+    // No hreflang `Link` response header: every page sets its own alternates in
+    // <head> (x-default → /en). The header pointed x-default at the locale-less
+    // URL and conflicted with the head tags.
+    alternateLinks: false,
 });
 
 export const config = {

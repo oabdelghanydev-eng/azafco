@@ -1,0 +1,84 @@
+{
+    "meta": {
+        "title": "Quality control and ISO certificates",
+        "description": "Our management systems hold ISO 9001, ISO 14001 and ISO 45001 certificates from TÜV AUSTRIA, and each order is checked against the agreed specification."
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home",
+        "current": "Quality"
+    },
+    "hero": {
+        "kicker": "Quality",
+        "title": "Quality checked against your specification",
+        "intro": "We hold three ISO certificates for our management systems. Every order is checked against the specification agreed with you before the boxes are closed.",
+        "imageAlt": "Whole fresh fish on crushed ice seen from above",
+        "primary": "Start a partnership",
+        "secondary": "See our value chain"
+    },
+    "certs": {
+        "eyebrow": "ISO certificates",
+        "title": "We hold three ISO certificates",
+        "intro": "Our management systems are certified by TÜV AUSTRIA. For the food-safety and health documents your market requires, our export team confirms what travels with each shipment before you order.",
+        "items": {
+            "iso9001": {
+                "name": "Quality management",
+                "covers": "How we plan, run and review our work to meet customer requirements."
+            },
+            "iso14001": {
+                "name": "Environmental management",
+                "covers": "How we manage the environmental impact of our operations."
+            },
+            "iso45001": {
+                "name": "Occupational health and safety",
+                "covers": "How we protect the health and safety of the people who work with us."
+            }
+        }
+    },
+    "practice": {
+        "eyebrow": "In practice",
+        "title": "How we check quality on every order",
+        "intro": "These are our working steps for each order. They follow the value chain that AZAFCO runs from the pond to the pallet.",
+        "stepLabel": "Step {n}",
+        "steps": {
+            "spec": {
+                "title": "Agreed specification",
+                "text": "We agree the species, weight grade, packing and labels with you before the order."
+            },
+            "packing": {
+                "title": "Washing, grading and packing",
+                "text": "Washed, iced, graded by weight and packed whole on ice."
+            },
+            "final": {
+                "title": "Final check",
+                "text": "Checked against the agreed specification before the boxes are closed."
+            },
+            "cold": {
+                "title": "Cold chain",
+                "text": "Our own cold stores and refrigerated trucks, then air or road freight."
+            }
+        },
+        "link": "See the full value chain"
+    },
+    "faq": {
+        "eyebrow": "Questions from buyers",
+        "title": "Questions from procurement and quality teams",
+        "q1": "Which ISO certificates do you hold?",
+        "a1": "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management and ISO 45001:2018 for occupational health and safety.",
+        "q2": "How do you check that an order matches our specification?",
+        "a2": "We agree the species, weight grade, packing and labels with you before the order. The fish are washed, iced, graded by weight and packed whole on ice, then checked against the agreed specification before the boxes are closed.",
+        "q3": "How do you keep the fish cold until shipment?",
+        "a3": "The fish are washed, iced and packed whole on ice. We run our own cold stores and refrigerated trucks, then ship by air or road freight. We confirm the temperature requirements for your product when we agree the order.",
+        "q4": "Can you meet our market's labelling or import requirements?",
+        "a4": "Requirements differ by country. Tell us yours, and we review them for each product and market before we confirm supply.",
+        "q5": "What traceability information comes with an order?",
+        "a5": "Tell us what your market or customer requires. We confirm which lot and shipment details we can provide before you order.",
+        "q6": "How do we start?",
+        "a6": "For fast deals, message our management directly on WhatsApp at <wa>+20 100 773 6419</wa>. For details and documents, email our export team at <mail>business@azafco.com.eg</mail>."
+    },
+    "pending": {
+        "traceability": "Lot and batch data that can be supplied with each shipment",
+        "market_approvals": "Market approvals (e.g. EU listing) once granted"
+    },
+    "newTab": "(opens in a new tab)"
+}

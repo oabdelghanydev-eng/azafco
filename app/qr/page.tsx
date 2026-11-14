@@ -15,7 +15,9 @@ export default function QrPage() {
   return (
     <main dir="ltr" className="mx-auto flex min-h-screen w-full max-w-md flex-col px-5 pb-10 pt-10">
       <header className="flex flex-col items-center text-center">
-        <img src="/brand/azafco-logo-reversed.svg" alt="AZAFCO International" width={220} height={147} className="h-auto w-[220px]" />
+        <h1 className="m-0">
+          <img src="/brand/azafco-logo-reversed.svg" alt="AZAFCO International" width={220} height={147} className="h-auto w-[220px]" />
+        </h1>
         <div className="mt-5 h-[3px] w-12 rounded-full bg-[#F7B500]" />
       </header>
 

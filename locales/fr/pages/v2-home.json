@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "title": "AZAFCO International | Production et export de poisson",
+        "description": "AZAFCO International élève, achète, conditionne et exporte du poisson frais égyptien pour les importateurs et distributeurs du Moyen-Orient et au-delà."
+    },
+    "news": {
+        "eyebrow": "Actualités",
+        "title": "Dans les médias",
+        "intro": "Le gouverneur de Kafr el-Cheikh dans notre usine de Motobas, et une émission télévisée sur notre travail de conditionnement et d’export de poisson frais.",
+        "links": {
+            "governor_visit": "Voir sur Facebook",
+            "tv_program": "Voir sur YouTube"
+        },
+        "all": "Toutes les actualités et la presse",
+        "new_tab": "(s’ouvre dans un nouvel onglet)"
+    }
+}

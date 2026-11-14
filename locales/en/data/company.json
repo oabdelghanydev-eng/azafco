@@ -1,28 +1,32 @@
 {
     "name": "AZAFCO International",
-    "fullName": "AZAFCO International Investment & Development",
-    "description": "Egypt's leading B2B fish exporter serving distributors, restaurants, and hotels with premium fresh fish since 2008.",
-    "workingHours": "24/7 Availability",
-    "workingHoursNote": "Open around the clock - department dependent",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "description": "Egyptian company that farms and sources, grades, packs and exports fresh fish for importers, distributors and foodservice buyers. Founded in 2008.",
+    "workingHours": "Sat–Thu 8:00–17:00 (Cairo time)",
+    "workingHoursNote": "WhatsApp: direct to management · for fast deals",
+    "officialChannels": {
+        "title": "Official channels",
+        "text": "Our official channels are WhatsApp {phone} (management) and email from the azafco.com.eg domain (export team: {email}). If you receive bank details or payment instructions from any other number or address, confirm them with us on one of these channels before paying."
+    },
     "addresses": {
         "main": {
-            "title": "Main Office",
-            "address": "Mastora, next to Charity Association, El-Borollos, Kafr El Sheikh, Egypt"
+            "title": "Main office",
+            "address": "Mastora, next to the Charity Association, El-Borollos, Kafr El Sheikh, Egypt"
         },
         "factory": {
             "title": "Factory",
-            "address": "No. 120 - Feed Sector - Industrial Zone - Motobas - Kafr El Sheikh, Egypt"
+            "address": "No. 120, Feed Sector, Industrial Zone, Motobas, Kafr El Sheikh, Egypt"
         }
     },
     "copyright": "AZAFCO International",
-    "privacyLink": "Privacy Policy",
-    "leadersSince": "Leaders in fresh fish export since",
-    "tagline": "Premium Fresh Fish from Egypt to the World",
+    "privacyLink": "Privacy policy",
+    "leadersSince": "Founded in",
+    "tagline": "From Egyptian production to global partnerships",
     "usps": {
-        "price": "Best competitive wholesale pricing",
-        "quality": "ISO & HACCP certified quality",
-        "flexibility": "Custom sizes, flexible orders",
-        "availability": "24/7 operations, constant supply",
-        "service": "Meeting market needs with care"
+        "price": "Prices confirmed per order",
+        "quality": "ISO 9001, 14001 and 45001, certified by TÜV AUSTRIA",
+        "flexibility": "Weight grade and packing agreed per order",
+        "availability": "Our own refrigerated trucks and cold stores",
+        "service": "From the pond to the pallet, every stage handled by AZAFCO"
     }
 }

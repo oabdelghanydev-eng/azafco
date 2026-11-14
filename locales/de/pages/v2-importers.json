@@ -1,0 +1,202 @@
+{
+    "meta": {
+        "title": "Für Importeure: Partnerschaft für Fischlieferungen",
+        "description": "Der Start mit AZAFCO International: Anforderungen senden, Verfügbarkeit mit dem Exportteam prüfen, Auftrag vereinbaren. Preise werden pro Auftrag bestätigt."
+    },
+    "breadcrumb": "Für Importeure",
+    "hero": {
+        "eyebrow": "Für Importeure und Distributoren",
+        "title": "Starten Sie eine Lieferpartnerschaft für Frischfisch",
+        "intro": "Nennen Sie uns Fischart, Menge und Zielort. Unser Exportteam prüft mit Ihnen Verfügbarkeit und Handelsbedingungen; Preise werden pro Auftrag bestätigt.",
+        "primary": "Anforderungen senden",
+        "secondary": "Geschäftsleitung per WhatsApp schreiben",
+        "image_alt": "Ganze frische Doraden, Wolfsbarsche und Tilapia auf Scherbeneis in kühlem Licht"
+    },
+    "serve": {
+        "eyebrow": "Mit wem wir arbeiten",
+        "title": "Importeure, Distributoren und Gastronomie",
+        "intro": "Wir beliefern Unternehmen, keine Endverbraucher. Jede Art von Abnehmer hat eigene Fragen, und wir beantworten sie, wenn wir den Auftrag vereinbaren.",
+        "items": [
+            {
+                "title": "Fischimporteure",
+                "text": "Fischarten, Gewichtsklassen, Verpackung und Mengen für Ihren Markt."
+            },
+            {
+                "title": "Großhändler und Distributoren",
+                "text": "Klare Sortierung, Nettogewichte, Verpackung und Lieferbedingungen für jeden Auftrag."
+            },
+            {
+                "title": "Hotels, Restaurants und Catering",
+                "text": "Eine vereinbarte Spezifikation und ein Exportteam als Ansprechpartner."
+            },
+            {
+                "title": "Zulieferer der Gastronomie",
+                "text": "Regelmäßige Lieferungen, geplant nach unserer Packkapazität und Ihrem Programm."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "So starten Sie",
+        "title": "Vier Schritte zu Ihrer ersten Lieferung",
+        "steps": [
+            {
+                "title": "Anforderungen senden",
+                "text": "Unternehmen, Land, Fischart, Gewichtsklasse, Produktform, Menge, Verpackung und Liefertermin."
+            },
+            {
+                "title": "Prüfung mit dem Exportteam",
+                "text": "Wir prüfen Verfügbarkeit, Spezifikation, die Anforderungen Ihres Marktes und die dafür nötigen Exportdokumente."
+            },
+            {
+                "title": "Auftrag vereinbaren",
+                "text": "Fischart, Gewichtsklasse, Menge, Verpackung, Transport, Termin und Preis werden für jeden Auftrag schriftlich bestätigt."
+            },
+            {
+                "title": "Verpacken und versenden",
+                "text": "Wir verpacken auf Eis und versenden per Luft- oder Straßenfracht, mit den für Ihr Bestimmungsland vereinbarten Exportdokumenten."
+            }
+        ]
+    },
+    "prepare": {
+        "eyebrow": "Vor dem Senden",
+        "title": "Was Sie vorbereiten sollten",
+        "intro": "Je vollständiger Ihre Anforderungen, desto nützlicher unsere erste Antwort.",
+        "items": [
+            "Fischart",
+            "Gewichtsklasse",
+            "Produktform",
+            "Menge pro Lieferung und Häufigkeit",
+            "Bestimmungsland",
+            "Liefertermin",
+            "Anforderungen an Verpackung und Etiketten",
+            "Dokumente, die Ihr Markt verlangt"
+        ]
+    },
+    "documents": {
+        "eyebrow": "Dokumente",
+        "title": "Was das Exportteam bereitstellt",
+        "intro": "Schreiben Sie dem Exportteam eine E-Mail für Details und Dokumente. Mit diesen Dokumenten arbeiten wir:",
+        "items": [
+            {
+                "title": "Produktspezifikation",
+                "text": "Fischart, Gewichtsklasse, Produktform und Verpackung für Ihren Auftrag."
+            },
+            {
+                "title": "Unternehmensprofil",
+                "text": "Ein Überblick über AZAFCO International und unsere Arbeitsweise."
+            },
+            {
+                "title": "Versanddokumente",
+                "text": "Die für Ihr Bestimmungsland vereinbarten Exportdokumente, erstellt mit jeder Lieferung."
+            }
+        ],
+        "guide_link": "Welche Dokumente eine Frischfischlieferung meist benötigt"
+    },
+    "terms": {
+        "eyebrow": "Handelsdetails",
+        "title": "Pro Auftrag bestätigt",
+        "intro": "Wir veröffentlichen keine Preislisten oder allgemeinen Konditionen. Diese Punkte werden für jeden Auftrag schriftlich vereinbart:",
+        "items": [
+            {
+                "title": "Preis",
+                "text": "Pro Auftrag bestätigt: Er hängt von Fischart, Gewichtsklasse, Menge, Verpackung und Lieferbedingungen ab."
+            },
+            {
+                "title": "Mindestbestellmenge",
+                "text": "Hängt von der Fischart, der Versandart und den Auftragsbedingungen ab. Nennen Sie uns die Menge, mit der Sie beginnen möchten, und wir bestätigen schriftlich, was wir verschicken können."
+            },
+            {
+                "title": "Verfügbarkeit",
+                "text": "Wird bei der Prüfung Ihrer Anforderungen anhand der aktuellen Liefersituation bestätigt."
+            },
+            {
+                "title": "Transport",
+                "text": "Gekühlt, per Luft oder Straße; die Route wird für jeden Auftrag bestätigt."
+            },
+            {
+                "title": "Incoterms",
+                "text": "Werden für jeden Auftrag vereinbart."
+            }
+        ]
+    },
+    "proof": {
+        "eyebrow": "Vorab prüfen",
+        "title": "Fischarten, Verarbeitung, Qualität und Märkte",
+        "items": [
+            {
+                "title": "Fischarten",
+                "text": "12 Hauptarten, ganz und frisch gekühlt.",
+                "link": "Fischarten ansehen"
+            },
+            {
+                "title": "Verarbeitung und Verpackung",
+                "text": "Wie Fisch sortiert, auf Eis verpackt und versandt wird.",
+                "link": "Zur Verarbeitung"
+            },
+            {
+                "title": "Qualität",
+                "text": "ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018, zertifiziert durch TÜV AUSTRIA.",
+                "link": "Zur Qualität"
+            },
+            {
+                "title": "Märkte",
+                "text": "7+ Märkte im Nahen Osten und darüber hinaus.",
+                "link": "Zu den Märkten"
+            }
+        ]
+    },
+    "faq": {
+        "eyebrow": "FAQ für Importeure",
+        "title": "Was Importeure vor dem Start fragen",
+        "items": [
+            {
+                "q": "Wie beginnen wir die Zusammenarbeit?",
+                "a": "Senden Sie Ihre Anforderungen per E-Mail an das Exportteam unter business@azafco.com.eg oder nutzen Sie die vorbereitete Nachricht auf dieser Seite. Für schnelle Abschlüsse schreiben Sie unserer Geschäftsleitung direkt per WhatsApp. Danach prüfen wir mit Ihnen die Verfügbarkeit und bestätigen die Handelsbedingungen schriftlich."
+            },
+            {
+                "q": "Wie werden die Preise festgelegt?",
+                "a": "Preise werden pro Auftrag bestätigt. Sie hängen von Fischart, Gewichtsklasse, Menge, Verpackung und Lieferbedingungen ab. Wir veröffentlichen keine Preislisten."
+            },
+            {
+                "q": "Wie hoch ist die Mindestbestellmenge?",
+                "a": "Sie hängt von der Fischart und den Auftragsbedingungen ab. Nennen Sie uns Ihre geplante Menge, und wir bestätigen, was für Ihren Auftrag möglich ist."
+            },
+            {
+                "q": "Welche Größen und Gewichtsklassen können Sie liefern?",
+                "a": "Die Gewichtsklassen hängen von der Fischart und der aktuellen Verfügbarkeit ab. Nennen Sie uns die benötigte Klasse, und wir bestätigen, was wir liefern können."
+            },
+            {
+                "q": "Welche Fischarten liefern Sie?",
+                "a": "Die 12 Arten auf unserer Website sind unsere wichtigsten, meistgefragten Fischarten; weitere Arten liefern wir auf Anfrage."
+            },
+            {
+                "q": "Wie wird der Fisch verpackt?",
+                "a": "Ganz und frisch gekühlt, auf Eis in isolierten EPS-Boxen. Andere Verpackungen oder Ihre eigene Spezifikation prüfen wir für jedes Produkt."
+            },
+            {
+                "q": "Können Sie unter unserem Etikett verpacken?",
+                "a": "Das prüfen wir für jedes Produkt und jede Anforderung. Nennen Sie Ihre Etikettanforderungen in den Anmerkungen Ihrer Anfrage."
+            },
+            {
+                "q": "Welche Zertifikate haben Sie?",
+                "a": "Wir verfügen über Zertifikate nach ISO 9001:2015, ISO 14001:2015 und ISO 45001:2018. Die Exportdokumente für jede Lieferung werden auf Ihr Bestimmungsland abgestimmt."
+            },
+            {
+                "q": "Wie wird der Fisch versandt?",
+                "a": "Gekühlt, ab dem Werk in unseren eigenen Kühl-Lkw, dann je nach Zielort per Luft- oder Straßenfracht. Feste Transitzeiten veröffentlichen wir nicht; sie werden für jede Lieferung bestätigt."
+            },
+            {
+                "q": "In welche Märkte liefern Sie?",
+                "a": "Wir liefern in 7+ Märkte, darunter die VAE, Kuwait, Bahrain, den Libanon, Katar, den Irak und Syrien. Europa, Russland und die USA sind in Planung. Wenn Ihr Land nicht aufgeführt ist, wenden Sie sich an das Exportteam."
+            },
+            {
+                "q": "Übernehmen Sie regelmäßige Lieferprogramme?",
+                "a": "Ja. Unsere Packkapazität beträgt bis zu 2.500 t/Monat; regelmäßige Lieferungen planen wir danach und nach Ihrem Bedarf. Nennen Sie uns die erwartete Häufigkeit."
+            },
+            {
+                "q": "Woran erkennen wir, dass eine Nachricht wirklich von AZAFCO International stammt?",
+                "a": "Unsere offiziellen Kanäle sind die E-Mail-Adresse des Exportteams business@azafco.com.eg und die WhatsApp-Nummer der Geschäftsleitung +20 100 773 6419. Die Auftragsbedingungen werden für jeden Auftrag schriftlich bestätigt. Kommt eine Nachricht zu Ihrem Auftrag von einer anderen Adresse oder Nummer, prüfen Sie sie über diese Kanäle mit uns, bevor Sie handeln."
+            }
+        ]
+    }
+}
