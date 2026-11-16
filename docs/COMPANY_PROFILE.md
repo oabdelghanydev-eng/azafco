@@ -26,7 +26,7 @@
 ## Locations & Facilities
 
 ### Main Office
-- **Address:** Mastaroh, next to Charity Association, El-Borollos, Kafr El Sheikh, Egypt
+- **Address:** Mastrouh, next to Charity Association, El-Borollos, Kafr El Sheikh, Egypt
 
 ### Factory (Current)
 - **Address:** No. 120 - Feed Sector - Industrial Zone - Motobas - Kafr El Sheikh, Egypt
