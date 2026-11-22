@@ -31,7 +31,7 @@
         "title": "Mesure d’audience sur ce navigateur",
         "on": "La mesure d’audience est activée sur ce navigateur.",
         "off": "La mesure d’audience est désactivée sur ce navigateur.",
-        "unset": "Vous n’avez pas encore fait de choix sur ce navigateur. La mesure d’audience suit le réglage par défaut de votre région.",
+        "unset": "Vous n’avez pas encore fait de choix sur ce navigateur. Google Analytics suit le réglage par défaut de votre région, et Microsoft Clarity reste désactivé.",
         "enable": "Activer la mesure d’audience",
         "disable": "Désactiver la mesure d’audience"
     }

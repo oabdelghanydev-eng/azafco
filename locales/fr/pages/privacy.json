@@ -29,7 +29,7 @@
             "items": [
                 {
                     "name": "Google Analytics 4 (Google)",
-                    "text": "Dépose des cookies pour reconnaître un navigateur qui revient sur le site. Enregistre les pages que vous consultez, les clics sur les boutons e-mail, WhatsApp et téléphone, votre localisation approximative, votre appareil et votre navigateur, ainsi que le site qui vous a dirigé vers nous."
+                    "text": "Mesure les visites : les pages que vous consultez, les clics sur les boutons e-mail, WhatsApp et téléphone, votre localisation approximative, votre appareil et votre navigateur, ainsi que le site qui vous a dirigé vers nous. Dans l’UE, l’EEE, au Royaume-Uni et en Suisse, il ne dépose aucun cookie tant que vous n’activez pas la mesure d’audience ; ailleurs, il dépose des cookies pour reconnaître un navigateur qui revient sur le site."
                 },
                 {
                     "name": "Vercel Web Analytics (Vercel)",
@@ -37,7 +37,7 @@
                 },
                 {
                     "name": "Microsoft Clarity (Microsoft)",
-                    "text": "Enregistre la façon dont les pages sont utilisées (clics, défilement, mouvements de la souris) et nous la présente sous forme de cartes de chaleur et de rediffusions de sessions. Utilise des cookies."
+                    "text": "Désactivé tant que vous n’activez pas la mesure d’audience ci-dessous. Une fois la mesure activée, il enregistre la façon dont les pages sont utilisées (clics, défilement, mouvements de la souris) et nous la présente sous forme de cartes de chaleur et de rediffusions de sessions. Il utilise des cookies."
                 }
             ],
             "note": "Ces prestataires peuvent traiter des données sur des serveurs situés hors de votre pays."
@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "Le site dépose un seul cookie qui lui est propre (NEXT_LOCALE) pour mémoriser votre langue. Google Analytics et Microsoft Clarity nous aident à comprendre l’utilisation du site ; vous pouvez les désactiver pour ce navigateur ci-dessous. Dans l’UE, l’EEE, au Royaume-Uni et en Suisse, Google Analytics ne dépose aucun cookie tant que vous n’activez pas la mesure d’audience. Google Maps peut déposer ses propres cookies lors du chargement d’une carte. Vous pouvez aussi bloquer ou supprimer les cookies dans les réglages de votre navigateur ; le site fonctionne sans eux."
+            "text": "Le site dépose un seul cookie qui lui est propre (NEXT_LOCALE) pour mémoriser votre langue. Google Analytics mesure les visites ; dans l’UE, l’EEE, au Royaume-Uni et en Suisse, il ne dépose aucun cookie tant que vous n’activez pas la mesure d’audience. Microsoft Clarity reste désactivé tant que vous n’activez pas la mesure d’audience. Vous pouvez activer ou désactiver la mesure d’audience pour ce navigateur ci-dessous. Le site n’active jamais de cookies publicitaires ni de personnalisation des annonces. Google Maps peut déposer ses propres cookies lors du chargement d’une carte. Vous pouvez aussi bloquer ou supprimer les cookies dans les réglages de votre navigateur ; le site fonctionne sans eux."
         },
         "sharing": {
             "title": "Partage",

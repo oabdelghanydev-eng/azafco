@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Export de poisson frais : Moyen-Orient et au-delà",
-        "description": "Poisson frais d’Égypte pour plus de 7 marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak et Syrie, par avion et route. L’Europe est notre prochaine étape."
+        "description": "Poisson frais d’Égypte pour importateurs de 7+ marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak, Syrie, par avion et route. Agréés pour l’export UE."
     },
     "breadcrumb": "Marchés",
     "hero": {
         "eyebrow": "Nos marchés",
         "title": "Exportation de poisson frais vers le Moyen‑Orient et au‑delà",
-        "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et l’Europe est la prochaine étape de notre plan.",
+        "intro": "Nous expédions par avion et par route vers plus de 7 marchés, et nous sommes agréés pour l’exportation vers l’Union européenne.",
         "primary": "Démarrer un partenariat",
         "secondary": "Voir nos espèces",
         "image_alt": "Vue aérienne d’étangs piscicoles en terre avec aérateurs et palmiers"
@@ -17,6 +17,7 @@
         "title": "Où nous expédions aujourd’hui",
         "intro": "Les marchés indiqués sur ce site et l’année où nous avons commencé à desservir chacun d’eux. Sélectionnez un marché pour en savoir plus.",
         "since": "depuis {year}",
+        "approved": "Union européenne : agréés pour l’exportation",
         "planned_title": "Prévus",
         "paused": "{country} : exportations suspendues",
         "map_label": "Carte des routes d’expédition de l’Égypte vers les marchés indiqués sur ce site",
@@ -45,7 +46,7 @@
             },
             {
                 "title": "Deux canaux directs",
-                "text": "WhatsApp vous met en relation directe avec notre direction, pour conclure rapidement. L’e-mail va à l’équipe export, pour les détails et les documents."
+                "text": "Écrivez à la direction sur WhatsApp pour discuter de l’approvisionnement. Envoyez un e-mail à l’équipe export pour les spécifications et les documents."
             }
         ],
         "guide_link": "Lire le guide pour importer du poisson frais d’Égypte",

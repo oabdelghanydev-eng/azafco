@@ -20,7 +20,7 @@ type Page = {
  * Date of the last content review of the site pages (round 1, 14 Nov 2026).
  * Update it when page copy changes; guides carry their own lastReviewed.
  */
-const SITE_REVIEWED = '2026-11-14';
+const SITE_REVIEWED = '2026-11-22';
 
 // Define all static pages with their priorities and change frequencies
 const pages: Page[] = [

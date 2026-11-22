@@ -4,8 +4,11 @@
  *
  * Owner decisions (docs/team/web/g/RELEASE-DECISIONS.md, 14 Nov 2026):
  * - 7 registered active markets, shown as "7+" ("the Middle East and beyond");
- * - Europe, Russia and the USA are planned; Spain is paused.
- * Europe is a region, not a config country, so it is added here as a display-only planned entry.
+ * - Russia and the USA are planned; Spain is paused.
+ * Owner, 22 Nov 2026 (ROUND-ASTRA-SPEC §1.7): AZAFCO is approved for export to the
+ * European Union, so Europe is no longer a planned entry. The pages show one
+ * "European Union: approved for export" line before the planned list instead
+ * (never an approval number, establishment number or date).
  */
 import { companyConfig, type MarketConfig, type MarketStatus } from '@/config/company.config';
 
@@ -47,12 +50,8 @@ export const activeMarketConfigs = all
     .slice()
     .sort((a, b) => (a.since ?? 9999) - (b.since ?? 9999));
 
-/** Planned markets: Europe first (owner: "Europe is in the plan"), then the planned config countries. */
-const EUROPE: DisplayMarket = { key: 'europe', countryCode: 'EU', status: 'planned', since: null };
-export const plannedMarkets: DisplayMarket[] = [
-    ...(all.some((m) => m.countryCode === 'EU') ? [] : [EUROPE]),
-    ...all.filter((m) => m.status === 'planned'),
-];
+/** Planned markets: the planned config countries (Russia, the United States). */
+export const plannedMarkets: DisplayMarket[] = all.filter((m) => m.status === 'planned');
 
 /** Paused markets (Spain). The start year is not shown for paused markets. */
 export const pausedMarkets: DisplayMarket[] = all.filter((m) => m.status === 'paused');

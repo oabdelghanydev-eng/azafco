@@ -68,6 +68,11 @@ export default function MarketImportRules({
                         {groups.map((g) => (
                             <div key={g.source.id} className="py-6">
                                 {g.source.leadIn ? <p className={cn('m-0 mb-2 font-semibold text-fg', typography.body)}>{g.source.leadIn}</p> : null}
+                                {g.caveats.map((c) => (
+                                    <p key={c.id} className={cn('m-0 mb-2 text-fg', typography.body)}>
+                                        {c.text}
+                                    </p>
+                                ))}
                                 <ul className={cn('m-0 grid list-disc gap-2 ps-5 text-fg', typography.body)}>
                                     {g.items.map((item) => (
                                         <li key={item.id}>{item.text}</li>

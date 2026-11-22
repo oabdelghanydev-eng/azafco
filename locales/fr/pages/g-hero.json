@@ -5,8 +5,8 @@
         {
             "label": "De la production en Égypte aux partenariats dans le monde",
             "kicker": "Exportateur de poisson frais depuis 2008",
-            "title": "Du poisson égyptien frais pour les importateurs du Moyen‑Orient et au‑delà",
-            "text": "Nous élevons et achetons du poisson de 12 espèces principales, que nous calibrons, conditionnons et exportons entier, frais et sous glace.",
+            "title": "Du poisson égyptien frais pour les importateurs du monde entier",
+            "text": "Nous élevons et achetons 12 espèces principales de poisson, puis nous les calibrons, les conditionnons et les exportons entières, fraîches et réfrigérées sous glace.",
             "alt": "Dorades royales, bars et tilapias entiers et frais sur glace pilée, sous une lumière froide"
         },
         {
@@ -27,12 +27,13 @@
             "label": "Plus de 7 marchés, par avion et par route",
             "kicker": "Nos marchés",
             "title": "Le Moyen‑Orient et au‑delà, par avion et par route",
-            "text": "Koweït, Émirats arabes unis, Qatar, Irak, Syrie, Bahreïn et Liban ; l’Europe est la prochaine étape de notre plan.",
+            "text": "Koweït, Émirats arabes unis, Qatar, Irak, Syrie, Bahreïn et Liban, et nous sommes agréés pour l’exportation vers l’Union européenne.",
             "alt": "Camion frigorifique chargé de caisses isothermes à quai, à l’aube"
         }
     ],
     "ctaPartner": "Démarrer un partenariat",
     "ctaFish": "Voir nos poissons",
+    "ctaFishPhone": "Voir nos poissons",
     "stats": [
         {
             "value": "12",
@@ -48,7 +49,7 @@
         },
         {
             "value": "2 500",
-            "label": "t/mois de capacité de conditionnement"
+            "label": "t/mois · capacité maximale de conditionnement"
         }
     ]
 }

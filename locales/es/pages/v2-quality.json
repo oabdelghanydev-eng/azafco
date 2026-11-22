@@ -28,6 +28,10 @@
         "statement": "Contamos con certificados ISO expedidos por TÜV AUSTRIA.",
         "documents": "En cuanto a los documentos sanitarios y de seguridad alimentaria que exige su mercado, nuestro equipo de exportación le confirma cuáles acompañan cada envío antes de que haga su pedido."
     },
+    "next": {
+        "text": "Indíquenos su destino y qué documentos necesita su equipo de calidad.",
+        "button": "Consultar los documentos del envío"
+    },
     "faq": {
         "eyebrow": "Preguntas de compradores",
         "title": "Preguntas de los equipos de compras y calidad",
@@ -36,6 +40,6 @@
     },
     "pending": {
         "traceability": "Datos de lote y partida que pueden facilitarse con cada envío",
-        "market_approvals": "Autorizaciones de mercado (p. ej., inclusión en la lista de la UE) una vez concedidas"
+        "market_approvals": "Autorizados para exportar a la Unión Europea"
     }
 }

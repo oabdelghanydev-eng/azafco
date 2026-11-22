@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Exportación de pescado: Oriente Medio y más allá",
-        "description": "Pescado fresco egipcio para importadores de 7+ mercados: EAU, Kuwait, Baréin, Líbano, Catar, Irak y Siria, por aire y carretera. Europa es el próximo paso."
+        "description": "Pescado fresco egipcio para importadores de 7+ mercados: EAU, Kuwait, Baréin, Líbano, Catar, Irak y Siria, por aire y tierra. UE: exportación autorizada."
     },
     "breadcrumb": "Mercados",
     "hero": {
         "eyebrow": "Nuestros mercados",
         "title": "Exportación de pescado fresco a Oriente Medio y más allá",
-        "intro": "Enviamos por vía aérea y por carretera a más de 7 mercados, y Europa es el siguiente paso de nuestros planes.",
+        "intro": "Enviamos por vía aérea y por carretera a más de 7 mercados, y estamos autorizados para exportar a la Unión Europea.",
         "primary": "Iniciemos una colaboración",
         "secondary": "Ver nuestras especies",
         "image_alt": "Vista aérea de estanques de tierra para peces, con aireadores y palmeras"
@@ -17,6 +17,7 @@
         "title": "Adónde enviamos hoy",
         "intro": "Los mercados que figuran en este sitio y el año en que empezamos a atender cada uno. Seleccione un mercado para ver los detalles.",
         "since": "desde {year}",
+        "approved": "Unión Europea: autorizados para exportar",
         "planned_title": "Previstos",
         "paused": "{country}: exportaciones en pausa",
         "map_label": "Mapa de las rutas de envío desde Egipto a los mercados que figuran en este sitio",
@@ -45,7 +46,7 @@
             },
             {
                 "title": "Dos canales directos",
-                "text": "WhatsApp llega directamente a nuestra gerencia, para operaciones rápidas. El correo electrónico llega al equipo de exportación, para detalles y documentos."
+                "text": "Escriba a la gerencia por WhatsApp para hablar del suministro. Envíe un correo al equipo de exportación para pedir especificaciones y documentos."
             }
         ],
         "guide_link": "Lea la guía para importar pescado fresco de Egipto",

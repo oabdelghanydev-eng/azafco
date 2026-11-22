@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 /**
  * About: who we are (hero), the company fact table ("at a glance": legal name,
- * founding, activity, the 12 species, capacity with the truck sentence, plant,
+ * exporting since 2008, activity, the 12 species, capacity with the truck sentence, plant,
  * office, active markets, certificates, official contacts), the milestones
  * since 2008 (#about-journey, linked from /insights), our businesses
  * (#businesses: fish at the core, agriculture, livestock, investments; the old
@@ -152,11 +152,10 @@ export default async function AboutPage({ params }: Props) {
         },
     ];
 
-    // Investments has no descriptor (nothing to say beyond the field name)
     const otherBusinesses: { title: string; text?: string }[] = [
         { title: t('businesses.agri_title'), text: t('businesses.agri_text') },
         { title: t('businesses.livestock_title'), text: t('businesses.livestock_text') },
-        { title: t('businesses.invest_title') },
+        { title: t('businesses.invest_title'), text: t('businesses.invest_text') },
     ];
 
     return (

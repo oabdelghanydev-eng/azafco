@@ -24,6 +24,8 @@ interface Props {
     groupLabel: string;
     ctaPartner: string;
     ctaFish: string;
+    /** Phone and tablet label of the products button (links to /products) */
+    ctaFishPhone: string;
     /** Below lg the secondary button is WhatsApp to management (prefilled wa.me link from the server) */
     whatsapp: { href: string; label: string; newTab: string };
 }
@@ -48,7 +50,7 @@ const tabScrim = 'absolute inset-x-0 bottom-0 hidden h-60 bg-gradient-to-t from-
  * Sits inside the hero <section data-surface="dark">, so the eyebrow, the outline
  * button and the focus ring take their on-navy colours from the surface tokens.
  */
-export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish, whatsapp }: Props) {
+export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish, ctaFishPhone, whatsapp }: Props) {
     const [active, setActive] = useState(0);
     // Slide images are mounted only once a slide is wanted (picked, or its tab hovered/focused),
     // so slides 2-4 never download unless the visitor asks for them and never compete with the LCP image.
@@ -117,10 +119,28 @@ export default function GHeroSlides({ slides, groupLabel, ctaPartner, ctaFish, w
                         <p className={cn('mb-0 mt-4 text-fg-muted lg:mt-6 lg:max-w-[580px]', typography.lead)}>{slide.text}</p>
                     </div>
                     <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'home_hero_partner' }}>
+                        {/* Phone and tablet: see our fish (/products) + WhatsApp to management;
+                            desktop: start a partnership + see our fish (#fish) (owner 22 Nov, ROUND-ASTRA 1.6) */}
+                        <Button
+                            href={routes.products}
+                            size="lg"
+                            stretch="phone"
+                            arrow
+                            className="lg:hidden"
+                            dataAttrs={{ 'data-cta': 'home_hero_fish_phone' }}
+                        >
+                            {ctaFishPhone}
+                        </Button>
+                        <Button
+                            href={routes.contact}
+                            size="lg"
+                            stretch="phone"
+                            arrow
+                            className="hidden lg:inline-flex"
+                            dataAttrs={{ 'data-cta': 'home_hero_partner' }}
+                        >
                             {ctaPartner}
                         </Button>
-                        {/* Phone and tablet: WhatsApp to management; desktop: see our fish (ledger C12) */}
                         <Button
                             href={whatsapp.href}
                             variant="outline"

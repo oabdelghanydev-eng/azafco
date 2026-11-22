@@ -29,7 +29,7 @@
             "items": [
                 {
                     "name": "Google Analytics 4 (Google)",
-                    "text": "Instala cookies para reconocer un navegador que vuelve. Registra las páginas que visita, los clics en los botones de correo electrónico, WhatsApp y teléfono, su ubicación aproximada, su dispositivo y navegador, y el sitio desde el que llegó."
+                    "text": "Mide las visitas: las páginas que visita, los clics en los botones de correo electrónico, WhatsApp y teléfono, su ubicación aproximada, su dispositivo y navegador, y el sitio desde el que llegó. En la UE, el EEE, el Reino Unido y Suiza no instala cookies a menos que usted active la analítica; en el resto del mundo instala cookies para reconocer un navegador que vuelve."
                 },
                 {
                     "name": "Vercel Web Analytics (Vercel)",
@@ -37,7 +37,7 @@
                 },
                 {
                     "name": "Microsoft Clarity (Microsoft)",
-                    "text": "Registra cómo se usan las páginas, por ejemplo los clics, el desplazamiento y el movimiento del ratón, y nos lo muestra como mapas de calor y grabaciones de sesiones. Utiliza cookies."
+                    "text": "Desactivado hasta que usted active la analítica más abajo. Una vez activada, registra cómo se usan las páginas, por ejemplo los clics, el desplazamiento y el movimiento del ratón, y nos lo muestra como mapas de calor y grabaciones de sesiones. Utiliza cookies."
                 }
             ],
             "note": "Estos proveedores pueden tratar datos en servidores situados fuera de su país."
@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "El sitio usa una sola cookie propia (NEXT_LOCALE) para recordar su idioma. Google Analytics y Microsoft Clarity nos ayudan a entender cómo se usa el sitio; puede desactivarlos para este navegador más abajo. En la UE, el EEE, el Reino Unido y Suiza, Google Analytics no instala cookies a menos que usted active la analítica. Google Maps puede instalar sus propias cookies al cargar un mapa. También puede bloquear o borrar las cookies en la configuración de su navegador; el sitio funciona igual sin ellas."
+            "text": "El sitio usa una sola cookie propia (NEXT_LOCALE) para recordar su idioma. Google Analytics mide las visitas; en la UE, el EEE, el Reino Unido y Suiza no instala cookies a menos que usted active la analítica. Microsoft Clarity está desactivado hasta que usted active la analítica. Puede activar o desactivar la analítica para este navegador más abajo. El sitio nunca habilita cookies publicitarias ni la personalización de anuncios. Google Maps puede instalar sus propias cookies al cargar un mapa. También puede bloquear o borrar las cookies en la configuración de su navegador; el sitio funciona igual sin ellas."
         },
         "sharing": {
             "title": "Comunicación de datos",

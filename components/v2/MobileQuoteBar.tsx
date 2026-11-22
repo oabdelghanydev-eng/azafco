@@ -12,7 +12,7 @@ import WhatsAppFloat from './WhatsAppFloat';
  * The official WhatsApp mark (Simple Icons) in white on the WhatsApp brand green
  * (token `whatsapp`), 56px circle with a soft navy shadow. Bottom end corner (left
  * in RTL), above the iOS home indicator. The number is the owner's line
- * (management direct, fast deals), so the accessible name says so
+ * (management, supply enquiries), so the accessible name says so
  * (g_footer_v2.float_label). It fades in once the page hero is out of view, steps
  * aside while the footer (WhatsApp row, back-to-top) is on screen, and is
  * hidden on /contact and /requirements, which already list WhatsApp. Fixed

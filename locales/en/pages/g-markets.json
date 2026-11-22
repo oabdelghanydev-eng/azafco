@@ -1,7 +1,7 @@
 {
     "eyebrow": "Our markets",
     "title": "The Middle East and beyond",
-    "intro": "We ship by air and road to 7+ markets, with Europe next in our plan. Pick a market to see it on the map.",
+    "intro": "We ship by air and road to 7+ markets, and we are approved for export to the European Union. Pick a market to see it on the map.",
     "since": "since {year}",
     "mapLabel": "Map of shipping routes from Egypt to our markets",
     "origin": "Egypt · Motobas",
@@ -35,9 +35,9 @@
             "short": "Syria"
         }
     },
+    "euApproved": "European Union: approved for export",
     "plannedTitle": "Planned",
     "planned": {
-        "eu": "Europe",
         "ru": "Russia",
         "us": "United States"
     },

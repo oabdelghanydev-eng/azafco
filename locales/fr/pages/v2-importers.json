@@ -45,14 +45,16 @@
                 "text": "Espèce, calibre, présentation du produit et conditionnement pour votre commande."
             },
             {
-                "title": "Présentation de l’entreprise"
+                "title": "Présentation de l’entreprise",
+                "text": "Raison sociale, immatriculation, usine, espèces et marchés sur une seule page, sur demande."
             },
             {
                 "title": "Documents d’expédition",
                 "text": "Les documents d’export requis pour votre destination, préparés avec chaque expédition."
             }
         ],
-        "guide_link": "Les documents habituellement requis pour une expédition de poisson frais"
+        "guide_link": "Les documents habituellement requis pour une expédition de poisson frais",
+        "request_link": "Demander une fiche technique produit ou une présentation de l’entreprise"
     },
     "terms": {
         "eyebrow": "Conditions commerciales",
@@ -65,11 +67,11 @@
         "items": {
             "who": {
                 "q": "Qui est AZAFCO International ?",
-                "a": "AZAFCO International est une entreprise égyptienne, fondée en 2008 à Kafr el-Cheikh, qui élève et achète du poisson, puis le conditionne et l’exporte entier et frais réfrigéré. Elle conditionne jusqu’à 2 500 t/mois dans son usine de Motobas et expédie vers plus de 7 marchés au Moyen-Orient et au-delà."
+                "a": "AZAFCO International est une entreprise égyptienne de Kafr el-Cheikh, exportatrice depuis 2008. Elle élève et achète du poisson, puis le conditionne et l’exporte entier et frais réfrigéré. Elle conditionne jusqu’à 2 500 t/mois dans son usine de Motobas et expédie vers plus de 7 marchés au Moyen-Orient et au-delà."
             },
             "start": {
                 "q": "Comment commencer à travailler ensemble ?",
-                "a": "Envoyez vos besoins depuis notre <req>page dédiée</req>, ou écrivez à l’équipe export à business@azafco.com.eg. Pour conclure rapidement, écrivez directement à notre direction sur WhatsApp. Nous examinons ensuite avec vous les disponibilités et confirmons les conditions commerciales par écrit."
+                "a": "Envoyez vos besoins via notre <req>page dédiée</req>, ou écrivez à l’équipe export à business@azafco.com.eg pour les spécifications et les documents. Écrivez à la direction sur WhatsApp pour discuter de l’approvisionnement. Nous examinons ensuite l’approvisionnement avec vous et confirmons les conditions commerciales par écrit."
             },
             "species": {
                 "q": "Quelles espèces fournissez-vous ?",
@@ -93,11 +95,11 @@
             },
             "markets": {
                 "q": "Vers quels marchés expédiez-vous ?",
-                "a": "Nous expédions vers plus de 7 marchés. Les sept indiqués sur ce site sont les Émirats arabes unis, le Koweït, Bahreïn, le Liban, le Qatar, l’Irak et la Syrie. L’Europe, la Russie et les États-Unis font partie de notre plan."
+                "a": "Nous expédions vers plus de 7 marchés. Les sept indiqués sur ce site sont les Émirats arabes unis, le Koweït, Bahreïn, le Liban, le Qatar, l’Irak et la Syrie. Nous sommes agréés pour l’exportation vers l’Union européenne ; la Russie et les États-Unis font partie de notre plan."
             },
             "eu": {
                 "q": "Exportez-vous vers l’Union européenne ?",
-                "a": "Pas encore. L’Europe fait partie de notre plan ; nos marchés actifs sont aujourd’hui au Moyen-Orient."
+                "a": "Oui. Nous sommes agréés pour l’exportation vers l’Union européenne. Indiquez-nous l’espèce, la quantité et la destination dans l’UE, et l’équipe export vous confirme les documents pour votre expédition."
             },
             "recurring": {
                 "q": "Acceptez-vous des programmes d’approvisionnement réguliers ?",

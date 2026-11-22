@@ -15,7 +15,7 @@ import JsonLd from '@/components/v2/rfq/JsonLd';
 
 type Props = { params: Promise<{ locale: string }> };
 type Item = { title: string; text: string };
-/** A document card; the text line is optional (the company profile needs no descriptor). */
+/** A document card; the text line is optional. */
 type DocItem = { title: string; text?: string };
 
 /** FAQ order (keys of importers_v2.faq.items). Price and minimum order live in the "Prices and terms" paragraph. */
@@ -147,7 +147,10 @@ export default async function ForImportersPage({ params }: Props) {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-5">
+                        <div className="mt-5 flex flex-col items-start gap-1">
+                            <TextLink href={rfqHref({ type: 'documents' })} dataAttrs={{ 'data-cta': 'importers_documents_request' }}>
+                                {t('documents.request_link')}
+                            </TextLink>
                             <Button href={insightHref('importing-fresh-fish-from-egypt')} variant="text" icon={<DocumentIcon />}>
                                 {t('documents.guide_link')}
                             </Button>

@@ -10,7 +10,7 @@
             "who": "Pour les importateurs, grossistes et distributeurs qui achètent en Égypte du poisson entier frais réfrigéré.",
             "markets": "Ce que demandent les règles publiées aux Émirats arabes unis, au Koweït, à Bahreïn, au Liban, au Qatar, en Irak et en Syrie, avec le lien vers chaque source et son année.",
             "codes": "Les codes SH de nos 12 espèces principales, les documents habituellement exigés pour une expédition et les bases du maintien au froid du poisson.",
-            "europe": "Les règles de l’UE, pour les lecteurs qui en ont besoin : l’Europe fait partie de notre plan, mais nous n’y expédions pas à ce jour.",
+            "europe": "Les règles de l’UE, pour les importateurs de l’Union européenne : AZAFCO est agréée pour l’exportation vers l’UE.",
             "reviewed": "Dernière vérification : {date}. Chaque règle renvoie à sa source."
         },
         "disclaimer": "Ce guide fournit des informations générales. Il ne constitue pas un conseil juridique ou douanier. La réglementation évolue : vérifiez les exigences en vigueur auprès de votre commissionnaire en douane et des autorités du pays importateur avant toute expédition.",
@@ -81,8 +81,8 @@
             "azafco": "Comment AZAFCO expédie : poisson entier conditionné sous glace dans des caisses en PSE, transporté dans nos propres camions frigorifiques, puis par fret aérien ou routier."
         },
         "eu": {
-            "title": "Europe : un marché prévu",
-            "intro": "L’Europe fait partie de notre plan ; nos marchés actifs sont aujourd’hui au Moyen-Orient. Cette section présente les règles de l’UE pour les lecteurs qui en ont besoin.",
+            "title": "Exporter vers l’Union européenne",
+            "intro": "AZAFCO est agréée pour l’exportation vers l’Union européenne. Le règlement d’exécution (UE) 2026/2228 de la Commission, d’octobre 2026, étend l’inscription de l’Égypte sur la liste de l’UE pour les produits de la pêche aux poissons à nageoires d’élevage. Cette section présente les règles de l’UE avec lesquelles travaille un importateur.",
             "items": {
                 "health_certificate": {
                     "title": "Certificat sanitaire et inscription sur la liste de l’UE",

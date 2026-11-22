@@ -75,7 +75,7 @@ export default async function ContactPage({ params }: Props) {
     // Management WhatsApp with the standard prefilled opening (ledger C12)
     const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
 
-    // Same roles as the G footer: WhatsApp = management direct (fast deals), email = export team.
+    // Same roles as the G footer: WhatsApp = management (supply enquiries), email = export team.
     const channels = [
         { key: 'whatsapp', href: waHref, value: phone, icon: <WhatsAppIcon size={24} /> },
         { key: 'email', href: mailto, value: c.email, icon: <MailIcon size={24} /> },
@@ -188,6 +188,11 @@ export default async function ContactPage({ params }: Props) {
                     <Card accent className="flex flex-col md:col-span-2 lg:col-span-1">
                         <h3 className={cn('m-0 text-ink', typography.h3)}>{t('trust.title')}</h3>
                         <dl className={cn('m-0 mt-3 grid gap-1 text-ink-muted', typography.small)}>
+                            {/* Legal name first: the same localized value as the /about fact table */}
+                            <div>
+                                <dt className="inline">{t('trust.legal')}: </dt>
+                                <dd className="m-0 inline font-semibold text-ink">{tc('fullName')}</dd>
+                            </div>
                             <div>
                                 <dt className="inline">{t('trust.register')}: </dt>
                                 <dd className="m-0 inline">

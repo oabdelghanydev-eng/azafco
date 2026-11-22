@@ -208,7 +208,7 @@ export default async function StructuredData({ locale }: { locale: string }) {
         email: companyConfig.contact.email,
         telephone: companyConfig.contact.phone,
         address: factoryAddress(t),
-        // WhatsApp = management direct (fast deals); email = export team (details and documents)
+        // WhatsApp = management (supply enquiries); email = export team (details and documents)
         contactPoint: [
             {
                 '@type': 'ContactPoint',
@@ -291,13 +291,7 @@ export async function PageStructuredData({ locale, pageType }: { locale: string;
                 longitude: FACTORY_GEO.longitude
             },
             hasMap: FACTORY_MAP_URL,
-            // Office hours (Cairo time), as stated on the contact page
-            openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-                opens: '08:00',
-                closes: '17:00'
-            },
+            // No openingHoursSpecification: a plant has no public opening hours (ROUND-ASTRA 3.10)
             areaServed: areaServedCountries(t)
         });
     }

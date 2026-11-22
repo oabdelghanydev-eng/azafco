@@ -12,7 +12,7 @@ type Props = {
 };
 
 /** Date of the last content change of this policy (update it with every change of privacy.json). */
-const LAST_UPDATED = '2026-11-14';
+const LAST_UPDATED = '2026-11-22';
 
 const SECTIONS = ['who', 'contact', 'analytics', 'hosting', 'maps', 'cookies', 'sharing', 'rights', 'changes'] as const;
 

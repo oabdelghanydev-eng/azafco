@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Fish export markets: the Middle East and beyond",
-        "description": "Fresh Egyptian fish for importers in 7+ markets: UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria, by air and road. Europe is next in our plan."
+        "description": "Fresh Egyptian fish for importers in 7+ markets: UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria, by air and road. Approved for export to the EU."
     },
     "breadcrumb": "Markets",
     "hero": {
         "eyebrow": "Our markets",
         "title": "Fresh fish exports to the Middle East and beyond",
-        "intro": "We ship by air and road to 7+ markets, with Europe next in our plan.",
+        "intro": "We ship by air and road to 7+ markets, and we are approved for export to the European Union.",
         "primary": "Start a partnership",
         "secondary": "View our species",
         "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
@@ -17,6 +17,7 @@
         "title": "Where we ship today",
         "intro": "The markets listed on this site and the year we started serving each one. Select a market for details.",
         "since": "since {year}",
+        "approved": "European Union: approved for export",
         "planned_title": "Planned",
         "paused": "{country}: exports paused",
         "map_label": "Map of shipping routes from Egypt to the markets listed on this site",
@@ -45,7 +46,7 @@
             },
             {
                 "title": "Two direct channels",
-                "text": "WhatsApp goes directly to our management, for fast deals. Email goes to the export team, for details and documents."
+                "text": "WhatsApp management to discuss supply. Email the export team for specifications and documents."
             }
         ],
         "guide_link": "Read the guide to importing fresh fish from Egypt",

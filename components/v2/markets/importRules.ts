@@ -24,6 +24,8 @@ export interface ImportSourceView {
 
 export interface ImportGroupView {
     source: ImportSourceView;
+    /** Notes about the source (e.g. its age), shown under the lead-in, before the list */
+    caveats: { id: string; text: string }[];
     items: { id: string; text: string }[];
 }
 
@@ -61,6 +63,7 @@ export async function marketImportView(locale: string, key: string): Promise<Mar
         authority: rules.authority ? { label: t('authority_label'), name: t(`authorities.${key}`), url: rules.authority.url } : undefined,
         groups: groupBySource(rules.items).map((g) => ({
             source: view(g.source),
+            caveats: g.caveats.map((id) => ({ id, text: t(`items.${key}.${id}`) })),
             items: g.ids.map((id) => ({ id, text: t(`items.${key}.${id}`) })),
         })),
     };

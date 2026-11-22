@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Kontakt: WhatsApp, E-Mail, Büro und Werk",
-        "description": "WhatsApp: Geschäftsleitung von AZAFCO International für schnelle Abschlüsse. E-Mail: Exportteam für Details und Dokumente. Büro und Werk in Kafr El Sheikh."
+        "description": "WhatsApp an die Geschäftsleitung von AZAFCO International zu Lieferungen, E-Mail ans Exportteam für Spezifikationen und Dokumente. Werk in Kafr El Sheikh."
     },
     "breadcrumb": "Kontakt",
     "hero": {
         "eyebrow": "Kontakt",
         "title": "Kontakt zu AZAFCO International",
-        "intro": "Schreiben Sie der Geschäftsleitung per WhatsApp für schnelle Abschlüsse oder senden Sie dem Exportteam eine E-Mail für Details und Dokumente.",
+        "intro": "Schreiben Sie der Geschäftsleitung per WhatsApp, um Lieferungen zu besprechen. Senden Sie dem Exportteam eine E-Mail für Spezifikationen und Dokumente.",
         "actions": {
             "whatsapp": "Geschäftsleitung per WhatsApp schreiben",
             "email": "E-Mail an das Exportteam"
@@ -70,6 +70,7 @@
     },
     "trust": {
         "title": "Eingetragenes Unternehmen",
+        "legal": "Eingetragener Firmenname",
         "register": "Handelsregister",
         "tax": "Steuernummer"
     }

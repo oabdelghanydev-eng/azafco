@@ -25,6 +25,8 @@ export interface RfqMessageInput {
     intro: string;
     /** Every labelled line of the email body, in order */
     lines: RfqLine[];
+    /** Optional closing sentence after the lines (email and WhatsApp), e.g. "Add your delivery date…" */
+    note?: string;
     /** WhatsApp: opening sentence */
     waIntro: string;
     /** WhatsApp: shorter list (prefilled lines + a few identity lines) */
@@ -47,9 +49,17 @@ export function labelSeparator(locale: string): string {
 /** "Species: Tilapia" or "Company: " (blank after the colon) */
 const lineWith = (separator = ': ') => (l: RfqLine) => `${l.label}${separator}${l.value?.trim() ?? ''}`;
 
+/** The optional closing sentence, after a blank line */
+const noteLines = (m: RfqMessageInput) => (m.note ? ['', m.note] : []);
+
 /** Plain-text email body (CRLF line breaks, as RFC 6068 expects). */
 export function emailBody(m: RfqMessageInput): string {
-    return [m.greeting, '', m.intro, '', ...m.lines.map(lineWith(m.separator))].join(CRLF);
+    return [m.greeting, '', m.intro, '', ...m.lines.map(lineWith(m.separator)), ...noteLines(m)].join(CRLF);
+}
+
+/** The email body as shown on the page and copied by "Copy message" (LF line breaks). */
+export function messageText(m: RfqMessageInput): string {
+    return emailBody(m).split(CRLF).join('\n');
 }
 
 /** mailto: URL with subject and body, both percent-encoded. */
@@ -59,7 +69,7 @@ export function mailtoHref(email: string, m: RfqMessageInput): string {
 
 /** WhatsApp text: shorter than the email. */
 export function whatsappText(m: RfqMessageInput): string {
-    return [m.waIntro, '', ...m.waLines.map(lineWith(m.separator))].join('\n');
+    return [m.waIntro, '', ...m.waLines.map(lineWith(m.separator)), ...noteLines(m)].join('\n');
 }
 
 /**
@@ -129,36 +139,28 @@ export function buildRfqMessage(topic: Topic, p: RfqMessageValues, copy: RfqMail
             ],
         };
     }
+    // Supply drafts (ROUND-ASTRA-SPEC §3.3): the email and WhatsApp both start with the same
+    // five lines (company, fish, target weight per fish, quantity, destination), prefilled
+    // values kept; a prefilled product form follows; then the optional delivery-date line.
     const item = p.species ?? p.country;
     const base = topic === 'specifications' ? 'specs' : 'quote';
+    const lines: RfqLine[] = [
+        { label: L('company') },
+        { label: L('species'), value: p.species },
+        { label: L('grade'), value: p.grade },
+        { label: L('volume') },
+        { label: L('destination'), value: p.country },
+        ...(p.form ? [{ label: L('form'), value: p.form }] : []),
+    ];
     return {
         separator: copy.separator,
         subject: item ? fill(T(`subject_${base}_for`), item) : T(`subject_${base}`),
         greeting: T('greeting'),
         intro: T(`intro_${base}`),
-        lines: [
-            { label: L('species'), value: p.species },
-            { label: L('grade'), value: p.grade },
-            { label: L('form'), value: p.form },
-            { label: L('packing') },
-            { label: L('volume') },
-            { label: L('frequency') },
-            { label: L('destination'), value: p.country },
-            { label: L('freight') },
-            { label: L('terms') },
-            { label: L('date') },
-            ...identity,
-        ],
+        lines,
+        note: T('optional_line') || undefined,
         waIntro: T(`wa_intro_${base}`),
-        waLines: [
-            { label: L('species'), value: p.species },
-            ...(p.grade ? [{ label: L('grade'), value: p.grade }] : []),
-            ...(p.form ? [{ label: L('form'), value: p.form }] : []),
-            { label: L('volume') },
-            { label: L('destination'), value: p.country },
-            { label: L('company') },
-            { label: L('name') },
-        ],
+        waLines: lines,
     };
 }
 

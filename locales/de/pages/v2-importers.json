@@ -45,14 +45,16 @@
                 "text": "Fischart, Gewichtsklasse, Produktform und Verpackung für Ihren Auftrag."
             },
             {
-                "title": "Unternehmensprofil"
+                "title": "Unternehmensprofil",
+                "text": "Firmenname, Registrierung, Werk, Fischarten und Märkte auf einer Seite, auf Anfrage."
             },
             {
                 "title": "Versanddokumente",
                 "text": "Die Exportdokumente für Ihr Bestimmungsland, erstellt mit jeder Lieferung."
             }
         ],
-        "guide_link": "Welche Dokumente eine Frischfischlieferung meist benötigt"
+        "guide_link": "Welche Dokumente eine Frischfischlieferung meist benötigt",
+        "request_link": "Produktspezifikation oder Unternehmensprofil anfordern"
     },
     "terms": {
         "eyebrow": "Handelsdetails",
@@ -65,11 +67,11 @@
         "items": {
             "who": {
                 "q": "Wer ist AZAFCO International?",
-                "a": "AZAFCO International ist ein ägyptisches Unternehmen, 2008 in Kafr El Sheikh gegründet, das Fisch züchtet und bezieht und ihn ganz und frisch gekühlt verpackt und exportiert. Es verpackt bis zu 2.500 t/Monat in seinem Werk in Motobas und liefert in 7+ Märkte im Nahen Osten und darüber hinaus."
+                "a": "AZAFCO International ist ein ägyptisches Unternehmen in Kafr El Sheikh und exportiert seit 2008. Es züchtet und bezieht Fisch und verpackt und exportiert ihn ganz und frisch gekühlt. Es verpackt bis zu 2.500 t/Monat in seinem Werk in Motobas und liefert in 7+ Märkte im Nahen Osten und darüber hinaus."
             },
             "start": {
                 "q": "Wie beginnen wir die Zusammenarbeit?",
-                "a": "Senden Sie Ihre Anforderungen über unsere <req>Seite für Anforderungen</req> oder per E-Mail an das Exportteam unter business@azafco.com.eg. Für schnelle Abschlüsse schreiben Sie unserer Geschäftsleitung direkt per WhatsApp. Danach prüfen wir mit Ihnen die Verfügbarkeit und bestätigen die Handelsbedingungen schriftlich."
+                "a": "Senden Sie Ihre Anforderungen über unsere <req>Anforderungsseite</req> oder schreiben Sie dem Exportteam eine E-Mail an business@azafco.com.eg, um Spezifikationen und Dokumente zu erhalten. Per WhatsApp besprechen Sie Lieferungen mit der Geschäftsleitung. Danach prüfen wir mit Ihnen die Liefermöglichkeiten und bestätigen die Handelsbedingungen schriftlich."
             },
             "species": {
                 "q": "Welche Fischarten liefern Sie?",
@@ -93,11 +95,11 @@
             },
             "markets": {
                 "q": "In welche Märkte liefern Sie?",
-                "a": "Wir liefern in 7+ Märkte. Die sieben auf dieser Website aufgeführten sind die VAE, Kuwait, Bahrain, der Libanon, Katar, der Irak und Syrien. Europa, Russland und die USA sind in unserer Planung."
+                "a": "Wir liefern in 7+ Märkte. Die sieben auf dieser Website aufgeführten sind die VAE, Kuwait, Bahrain, der Libanon, Katar, der Irak und Syrien. Wir sind für den Export in die Europäische Union zugelassen; Russland und die USA sind in unserer Planung."
             },
             "eu": {
                 "q": "Exportieren Sie in die Europäische Union?",
-                "a": "Noch nicht. Europa ist in unserer Planung; unsere aktiven Märkte liegen heute im Nahen Osten."
+                "a": "Ja. Wir sind für den Export in die Europäische Union zugelassen. Nennen Sie uns Fischart, Menge und Bestimmungsort in der EU, und das Exportteam bestätigt die Dokumente für Ihre Sendung."
             },
             "recurring": {
                 "q": "Übernehmen Sie regelmäßige Lieferprogramme?",

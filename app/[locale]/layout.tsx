@@ -14,7 +14,7 @@ import GFooter from '@/components/g/GFooter';
 import MobileQuoteBar from '@/components/v2/MobileQuoteBar';
 import RevealSections from '@/components/v2/RevealSections';
 import ClarityLoader from '@/components/v2/ClarityLoader';
-import { CONSENT_DENIED_REGIONS, CONSENT_STORAGE_KEY, CONSENT_TYPES } from '@/components/v2/consent';
+import { CONSENT_DENIED_REGIONS, CONSENT_STORAGE_KEY, consentState } from '@/components/v2/consent';
 import { routes } from '@/lib/v2/routes';
 import '../globals.css';
 
@@ -141,8 +141,9 @@ export default async function RootLayout({
     const skipLabel = tv('skip_to_main');
 
     const gaId = companyConfig.analytics.googleAnalyticsId;
-    const consentDenied = JSON.stringify(Object.fromEntries(CONSENT_TYPES.map((k) => [k, 'denied'])));
-    const consentGranted = JSON.stringify(Object.fromEntries(CONSENT_TYPES.map((k) => [k, 'granted'])));
+    // Advertising types are denied in both states; only analytics_storage changes (ROUND-ASTRA 2.2)
+    const consentDenied = JSON.stringify(consentState('denied'));
+    const consentGranted = JSON.stringify(consentState('granted'));
     const deniedRegions = JSON.stringify(CONSENT_DENIED_REGIONS);
 
     return (
@@ -187,16 +188,17 @@ export default async function RootLayout({
                     </div>
                     <MobileQuoteBar />
                     <RevealSections />
-                    {/* Microsoft Clarity, unless turned off on the privacy page (no banner) */}
+                    {/* Microsoft Clarity, only after analytics were turned on on the privacy page (no banner) */}
                     <ClarityLoader clarityId={companyConfig.analytics.clarityId} />
                 </NextIntlClientProvider>
 
                 {/* Vercel Analytics - only in production to avoid dev mode issues */}
                 {process.env.NODE_ENV === 'production' && <Analytics />}
 
-                {/* Google Analytics 4 with Consent Mode v2, no banner: granted by default, denied by
-                    default in the EEA, the UK and Switzerland (cookieless pings there). A choice made on
-                    the privacy page (localStorage, components/v2/consent.ts) overrides both. */}
+                {/* Google Analytics 4 with Consent Mode v2, no banner: analytics_storage granted by default,
+                    denied by default in the EEA, the UK and Switzerland (cookieless pings there). A choice made
+                    on the privacy page (localStorage, components/v2/consent.ts) overrides both. Advertising
+                    storage, ad user data and ad personalisation are denied everywhere and never granted. */}
                 <Script
                     id="ga4-gtag"
                     strategy="afterInteractive"

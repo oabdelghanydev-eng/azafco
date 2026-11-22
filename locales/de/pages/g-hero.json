@@ -5,7 +5,7 @@
         {
             "label": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
             "kicker": "Exporteur von frischem Fisch seit 2008",
-            "title": "Frischer Fisch aus Ägypten für Importeure im Nahen Osten und darüber hinaus",
+            "title": "Frischer Fisch aus Ägypten für Importeure weltweit",
             "text": "Wir züchten und beziehen 12 Hauptfischarten. Sortiert und verpackt exportieren wir sie ganz, frisch gekühlt und auf Eis.",
             "alt": "Ganze frische Doraden, Wolfsbarsche und Tilapia auf Scherbeneis in kühlem Licht"
         },
@@ -27,12 +27,13 @@
             "label": "7+ Märkte per Luft und Straße",
             "kicker": "Unsere Märkte",
             "title": "Der Nahe Osten und darüber hinaus, per Luft und Straße",
-            "text": "Kuwait, die VAE, Katar, der Irak, Syrien, Bahrain und der Libanon; als Nächstes ist Europa geplant.",
+            "text": "Kuwait, die VAE, Katar, der Irak, Syrien, Bahrain und der Libanon; zudem sind wir für den Export in die Europäische Union zugelassen.",
             "alt": "Kühl-Lkw wird im Morgengrauen an einer Laderampe mit Isolierboxen beladen"
         }
     ],
     "ctaPartner": "Partnerschaft starten",
     "ctaFish": "Fischarten ansehen",
+    "ctaFishPhone": "Fischarten ansehen",
     "stats": [
         {
             "value": "12",
@@ -48,7 +49,7 @@
         },
         {
             "value": "2.500",
-            "label": "t/Monat Packkapazität"
+            "label": "t/Monat · maximale Packkapazität"
         }
     ]
 }

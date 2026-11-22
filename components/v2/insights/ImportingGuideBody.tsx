@@ -15,8 +15,9 @@ import { productHref, routes } from '@/lib/v2/routes';
  *
  * Order (ROUND1-SPEC §3, 14 Nov 2026): answer-first summary, the Gulf and Levant
  * import rules (AZAFCO's real markets, verified items only), HS codes, documents,
- * cold chain, then the EU rules under a heading that says Europe is a planned market.
- * Nothing here says or implies that AZAFCO ships to the EU.
+ * cold chain, then the EU rules ("Exporting to the European Union": AZAFCO is approved
+ * for export to the EU, owner 22 Nov 2026). Never an approval number or date, and
+ * nothing that says shipments to the EU have taken place.
  *
  * The Gulf and Levant section is built from data/market-import.ts and the market
  * pages' strings (markets_v2.import.*), so the guide and the market pages show the
@@ -35,6 +36,7 @@ const COLD_ITEMS = ['ice', 'boxes', 'handovers', 'arrival'] as const;
 const SUMMARY_LINES = ['who', 'markets', 'codes', 'europe', 'reviewed'] as const;
 const HS_SOURCES = ['wco_hs', 'taric'];
 const COLD_SOURCES = ['reg_853_2004'];
+const EU_INTRO_SOURCES = ['reg_2026_2228'];
 
 /** Sold but not shown on the site (RELEASE-DECISIONS §6) */
 const HIDDEN_PRODUCT_KEYS = new Set(['eels']);
@@ -214,7 +216,17 @@ export default async function ImportingGuideBody({ locale, reviewedLabel }: { lo
                                                 <SourceRefs ids={[g.source.id]} label={sourceLabel} />
                                             </p>
                                         ) : null}
-                                        <ul className={cn('m-0 flex list-disc flex-col gap-1.5 ps-5 text-ink-muted', g.source.leadIn && 'mt-1.5')}>
+                                        {g.caveats.map((c) => (
+                                            <p key={c.id} className="m-0 mt-1.5 text-ink">
+                                                {c.text}
+                                            </p>
+                                        ))}
+                                        <ul
+                                            className={cn(
+                                                'm-0 flex list-disc flex-col gap-1.5 ps-5 text-ink-muted',
+                                                (g.source.leadIn || g.caveats.length > 0) && 'mt-1.5',
+                                            )}
+                                        >
                                             {g.items.map((item, i) => (
                                                 <li key={item.id}>
                                                     {item.text}
@@ -340,12 +352,15 @@ export default async function ImportingGuideBody({ locale, reviewedLabel }: { lo
                 <p className={cn(p, 'rounded-card border-s-4 border-solid border-navy bg-surface-offwhite p-4 font-semibold lg:p-5')}>{t('cold.azafco')}</p>
             </section>
 
-            {/* Europe: planned market, EU rules for readers who need them */}
+            {/* Europe: approved for export (no number, no date), then the EU rules */}
             <section id="europe" aria-labelledby="europe-title" className="flex scroll-mt-28 flex-col gap-4">
                 <h2 id="europe-title" className={h2}>
                     {t('eu.title')}
                 </h2>
-                <p className={p}>{t('eu.intro')}</p>
+                <p className={p}>
+                    {t('eu.intro')}
+                    <SourceRefs ids={EU_INTRO_SOURCES} label={sourceLabel} />
+                </p>
                 {itemCards(importingEuItems, 'eu')}
             </section>
 

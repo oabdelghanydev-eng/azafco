@@ -28,6 +28,10 @@
         "statement": "We hold ISO certificates, certified by TÜV AUSTRIA.",
         "documents": "For the food-safety and health documents your market requires, our export team confirms what travels with each shipment before you order."
     },
+    "next": {
+        "text": "Tell us your destination and which documents your QA team needs.",
+        "button": "Ask about shipment documents"
+    },
     "faq": {
         "eyebrow": "Questions from buyers",
         "title": "Questions from procurement and quality teams",
@@ -36,6 +40,6 @@
     },
     "pending": {
         "traceability": "Lot and batch data that can be supplied with each shipment",
-        "market_approvals": "Market approvals (e.g. EU listing) once granted"
+        "market_approvals": "Approved for export to the European Union"
     }
 }

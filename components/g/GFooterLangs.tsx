@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from '@/navigation';
 import type { Locale } from '@/i18n';
-import { orderLangs, rememberChoice, type LangOption } from './langs';
+import { keepQueryOnSwitch, orderLangs, rememberChoice, type LangOption } from './langs';
 
 /**
  * Footer language pills (published locales only, from the server footer).
@@ -28,7 +28,10 @@ export default function GFooterLangs({ label, locale, langs }: { label: string; 
                         lang={code}
                         hrefLang={code}
                         aria-current={cur ? 'true' : undefined}
-                        onClick={() => rememberChoice(code)}
+                        onClick={(e) => {
+                            rememberChoice(code);
+                            keepQueryOnSwitch(e);
+                        }}
                         className="group -my-[5px] inline-flex min-h-tap items-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-gold lg:-my-1.5"
                     >
                         {/* 44px hit area on the link; the visual chip keeps the board size (34px phone, 32px desktop) */}

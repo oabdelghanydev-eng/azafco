@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "À propos d’AZAFCO : poisson égyptien depuis 2008",
-        "description": "Fondée en 2008, AZAFCO International élève, achète, conditionne et exporte du poisson frais d’Égypte vers plus de 7 marchés. Capacité : 2 500 t/mois."
+        "description": "Exportateur depuis 2008, AZAFCO International élève, achète, conditionne et exporte du poisson frais d’Égypte vers 7+ marchés. Capacité : 2 500 t/mois."
     },
     "breadcrumb": "À propos",
     "hero": {
         "eyebrow": "À propos",
         "title": "À propos d’AZAFCO International : élevage, achat, conditionnement et export de poisson en Égypte",
-        "intro": "Créée en 2008, notre entreprise élève et achète du poisson en Égypte, puis le lave, le met sous glace, le calibre, le conditionne et le contrôle, avant de l’exporter frais vers les importateurs, distributeurs et acheteurs de la restauration dans tout le Moyen-Orient et au-delà.",
+        "intro": "Exportateurs depuis 2008, nous élevons et achetons du poisson en Égypte, puis nous le lavons, le mettons sous glace, le calibrons, le conditionnons et le contrôlons, avant de l’exporter frais vers les importateurs, distributeurs et acheteurs de la restauration au Moyen-Orient et au-delà.",
         "primary": "Démarrer un partenariat",
         "secondary": "Écrire à la direction sur WhatsApp",
         "image_alt": "Deux ouvriers tirant une senne pleine de poissons vers la berge d’un étang en terre"
@@ -16,8 +16,8 @@
         "eyebrow": "Fiche d’identité",
         "title": "AZAFCO International en bref",
         "legal_label": "Raison sociale",
-        "founded_label": "Création",
-        "founded_value": "2008, à Kafr el-Cheikh (Égypte)",
+        "founded_label": "Exportateur depuis",
+        "founded_value": "2008, depuis Kafr el-Cheikh (Égypte)",
         "activity_label": "Activité",
         "activity_value": "Élève et achète du poisson, puis le conditionne et l’exporte entier et frais réfrigéré.",
         "species_label": "Espèces",
@@ -56,6 +56,7 @@
         "livestock_title": "Élevage",
         "livestock_text": "Élevages de bétail en Égypte.",
         "invest_title": "Investissements",
+        "invest_text": "Les autres activités d’investissement du groupe.",
         "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
         "link_products": "Nos poissons"
     },

@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Contact us: WhatsApp, email, office and factory",
-        "description": "WhatsApp AZAFCO International management for fast deals, or email the export team for details and documents. Office and factory in Kafr El Sheikh."
+        "description": "WhatsApp AZAFCO International management to discuss supply, or email the export team for specifications and documents. Office and plant in Kafr El Sheikh."
     },
     "breadcrumb": "Contact us",
     "hero": {
         "eyebrow": "Contact us",
         "title": "Contact AZAFCO International",
-        "intro": "Message management on WhatsApp for fast deals, or email the export team for details and documents.",
+        "intro": "WhatsApp management to discuss supply. Email the export team for specifications and documents.",
         "actions": {
             "whatsapp": "Message management on WhatsApp",
             "email": "Email the export team"
@@ -70,6 +70,7 @@
     },
     "trust": {
         "title": "Registered company",
+        "legal": "Legal name",
         "register": "Commercial register",
         "tax": "Tax card"
     }

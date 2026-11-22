@@ -29,7 +29,7 @@
             "items": [
                 {
                     "name": "Google Analytics 4 (Google)",
-                    "text": "Sets cookies to recognise a returning browser. Records the pages you view, clicks on the email, WhatsApp and phone buttons, your approximate location, device and browser and the site that referred you."
+                    "text": "Measures visits: the pages you view, clicks on the email, WhatsApp and phone buttons, your approximate location, device and browser and the site that referred you. In the EU, the EEA, the UK and Switzerland it sets no cookies unless you turn analytics on; elsewhere it sets cookies to recognise a returning browser."
                 },
                 {
                     "name": "Vercel Web Analytics (Vercel)",
@@ -37,7 +37,7 @@
                 },
                 {
                     "name": "Microsoft Clarity (Microsoft)",
-                    "text": "Records how pages are used, such as clicks, scrolling and mouse movement, and shows them to us as heatmaps and session replays. It uses cookies."
+                    "text": "Off until you turn analytics on below. Once you do, it records how pages are used, such as clicks, scrolling and mouse movement, and shows them to us as heatmaps and session replays. It uses cookies."
                 }
             ],
             "note": "These providers may process data on servers outside your country."
@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "The site sets one cookie of its own (NEXT_LOCALE) to remember your language. Google Analytics and Microsoft Clarity help us see how the site is used; you can turn them off for this browser below. In the EU, the EEA, the UK and Switzerland, Google Analytics sets no cookies unless you turn analytics on. Google Maps may set its own cookies when a map loads. You can also block or delete cookies in your browser settings; the site still works without them."
+            "text": "The site sets one cookie of its own (NEXT_LOCALE) to remember your language. Google Analytics measures visits; in the EU, the EEA, the UK and Switzerland it sets no cookies unless you turn analytics on. Microsoft Clarity is off until you turn analytics on. You can turn analytics on or off for this browser below. The site never enables advertising cookies or ad personalisation. Google Maps may set its own cookies when a map loads. You can also block or delete cookies in your browser settings; the site still works without them."
         },
         "sharing": {
             "title": "Sharing",

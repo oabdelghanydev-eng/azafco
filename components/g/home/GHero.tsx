@@ -33,7 +33,7 @@ export default function GHero() {
     return (
         <>
             <section id="top" data-surface="dark" className="g-font relative overflow-hidden bg-navy-900 text-body text-white">
-                <GHeroSlides slides={slides} groupLabel={t('groupLabel')} ctaPartner={t('ctaPartner')} ctaFish={t('ctaFish')} whatsapp={whatsapp} />
+                <GHeroSlides slides={slides} groupLabel={t('groupLabel')} ctaPartner={t('ctaPartner')} ctaFish={t('ctaFish')} ctaFishPhone={t('ctaFishPhone')} whatsapp={whatsapp} />
             </section>
 
             <StatStrip items={stats} label={t('statsLabel')} className="g-font text-body" />

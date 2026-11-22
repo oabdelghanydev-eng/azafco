@@ -5,7 +5,7 @@ import FAQAccordion from '@/components/v2/FAQAccordion';
 import CertificateLibrary from '@/components/v2/quality/CertificateLibrary';
 import { Breadcrumbs, Button, PageHero, Section, SectionHeading, TextLink, isolateStandards, typography } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { routes } from '@/lib/v2/routes';
+import { rfqHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -102,10 +102,18 @@ export default async function QualityPage({ params }: Props) {
             <Section variant="offwhite" labelledBy="quality-certs" reveal={false}>
                 <SectionHeading id="quality-certs" eyebrow={t('certs.eyebrow')} title={t('certs.title')} />
                 <CertificateLibrary locale={locale} />
+                {/* EU export status (owner, 22 Nov 2026: approved; never print a number or date)
+                    and the QA next step (ROUND-ASTRA-SPEC §1.7, §3.4) */}
+                <div className="mt-8 flex max-w-[920px] flex-col items-start gap-3">
+                    <p className={`m-0 font-semibold text-navy ${typography.body}`}>{t('pending.market_approvals')}</p>
+                    <p className={`m-0 text-ink ${typography.body}`}>{t('next.text')}</p>
+                    <Button href={rfqHref({ type: 'documents' })} variant="outline" dataAttrs={{ 'data-cta': 'quality_documents' }}>
+                        {t('next.button')}
+                    </Button>
+                </div>
                 {SHOW_PENDING ? (
                     <div className="mt-4 flex flex-wrap gap-2">
                         <Pending label={t('pending.traceability')} />
-                        <Pending label={t('pending.market_approvals')} />
                     </div>
                 ) : null}
             </Section>

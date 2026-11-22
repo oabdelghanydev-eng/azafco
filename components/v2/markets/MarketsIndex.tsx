@@ -9,7 +9,8 @@ import { flagSrc } from './marketData';
  * Navy markets block in the G home style (components/g/home/GMarkets.tsx), built on
  * the design system (Section variant="navy", Eyebrow, type roles, Lucide arrow):
  * active markets with round flags and start year on the start side, the route map
- * on the end side, planned markets (dashed flags) and the paused note below.
+ * on the end side, then the EU approval line, planned markets (dashed flags) and the
+ * paused note below.
  * Unlike the home picker, each market is a link to its detail page (no client JS).
  * All strings arrive translated from the page.
  */
@@ -23,6 +24,8 @@ export interface MarketsIndexProps {
     planned: { key: string; countryCode: string; name: string }[];
     /** Label above the planned flags (needed only when `planned` is not empty) */
     plannedTitle?: string;
+    /** e.g. "European Union: approved for export", shown before the planned flags */
+    approvedNote?: string;
     /** e.g. "Spain: exports paused" */
     pausedNote?: string;
     /** Market key of the current detail page (aria-current + map highlight) */
@@ -51,6 +54,7 @@ export default function MarketsIndex({
     active,
     planned,
     plannedTitle,
+    approvedNote,
     pausedNote,
     current,
     hideCurrentInList = false,
@@ -126,8 +130,9 @@ export default function MarketsIndex({
                         })}
                     </ul>
 
-                    {planned.length || pausedNote ? (
+                    {planned.length || approvedNote || pausedNote ? (
                         <div className="mt-5 border-t border-rule pt-5 lg:mt-6">
+                            {approvedNote ? <p className="m-0 mb-5 text-body font-bold">{approvedNote}</p> : null}
                             {planned.length && plannedTitle ? (
                                 <>
                                     <p className="m-0 mb-3 text-caption font-bold text-eyebrow">{plannedTitle}</p>

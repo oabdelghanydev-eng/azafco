@@ -57,8 +57,12 @@ export interface ImportSource {
 export interface MarketImport {
     /** Official site of the competent authority; its name is markets_v2.import.authorities.<market> */
     authority: { url: string } | null;
-    /** Items in display order: id = markets_v2.import.items.<market>.<id> */
-    items: { id: string; source: string }[];
+    /**
+     * Items in display order: id = markets_v2.import.items.<market>.<id>.
+     * `caveat`: a note about the source itself (e.g. its age), shown directly under the
+     * source's lead-in, before the list (ROUND-ASTRA-SPEC §3.9).
+     */
+    items: { id: string; source: string; caveat?: boolean }[];
 }
 
 const USDA_UAE =
@@ -231,13 +235,13 @@ export const marketImport: Record<string, MarketImport> = {
         // COSQC is a standards body, not the authority for fish imports: no authority label
         authority: null,
         items: [
+            // The report is from 2011, confirm the current steps: shown under the lead-in, before the list
+            { id: 'old_source', source: 'usda_iraq', caveat: true },
             { id: 'cosqc', source: 'usda_iraq' },
             { id: 'licence', source: 'usda_iraq' },
             { id: 'certificates', source: 'usda_iraq' },
             { id: 'dates', source: 'usda_iraq' },
             { id: 'testing', source: 'usda_iraq' },
-            // Last item: the report is from 2011, confirm the current steps
-            { id: 'old_source', source: 'usda_iraq' },
         ],
     },
     syria: {
@@ -261,13 +265,19 @@ export function getMarketImport(slug: string): MarketImport | undefined {
     return marketImport[slug];
 }
 
-/** Items grouped by source, in order of first appearance (one lead-in and one source link per group). */
-export function groupBySource(items: MarketImport['items']): { source: ImportSource; ids: string[] }[] {
-    const groups: { source: ImportSource; ids: string[] }[] = [];
+/**
+ * Items grouped by source, in order of first appearance (one lead-in and one source link per group).
+ * Caveat items go to `caveats` (shown under the lead-in), the others to `ids` (the list).
+ */
+export function groupBySource(items: MarketImport['items']): { source: ImportSource; ids: string[]; caveats: string[] }[] {
+    const groups: { source: ImportSource; ids: string[]; caveats: string[] }[] = [];
     for (const item of items) {
-        const group = groups.find((g) => g.source.id === item.source);
-        if (group) group.ids.push(item.id);
-        else groups.push({ source: importSources[item.source], ids: [item.id] });
+        let group = groups.find((g) => g.source.id === item.source);
+        if (!group) {
+            group = { source: importSources[item.source], ids: [], caveats: [] };
+            groups.push(group);
+        }
+        (item.caveat ? group.caveats : group.ids).push(item.id);
     }
     return groups;
 }

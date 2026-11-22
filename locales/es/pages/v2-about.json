@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Quiénes somos: AZAFCO, pescado egipcio desde 2008",
-        "description": "Fundada en 2008, AZAFCO International cría, compra, envasa y exporta pescado fresco egipcio a más de 7 mercados, con 2500 t/mes de capacidad de envasado."
+        "description": "Exportadora desde 2008, AZAFCO International cría, compra, envasa y exporta pescado fresco egipcio a 7+ mercados, con 2500 t/mes de capacidad de envasado."
     },
     "breadcrumb": "Quiénes somos",
     "hero": {
         "eyebrow": "Sobre nosotros",
         "title": "Sobre AZAFCO International: cría, compra, envasado y exportación de pescado en Egipto",
-        "intro": "Desde nuestra fundación en 2008, criamos y compramos pescado en Egipto; después lo lavamos, enhielamos, calibramos, envasamos e inspeccionamos, y lo exportamos fresco a importadores, distribuidores y compradores de hostelería y restauración de Oriente Medio y más allá.",
+        "intro": "Exportamos desde 2008: criamos y compramos pescado en Egipto; después lo lavamos, enhielamos, calibramos, envasamos e inspeccionamos, y lo exportamos fresco a importadores, distribuidores y compradores de hostelería y restauración de Oriente Medio y más allá.",
         "primary": "Iniciemos una colaboración",
         "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Dos operarios tiran de una red de cerco llena de peces hacia la orilla de un estanque de tierra"
@@ -16,8 +16,8 @@
         "eyebrow": "Datos de la empresa",
         "title": "AZAFCO International en resumen",
         "legal_label": "Razón social",
-        "founded_label": "Fundación",
-        "founded_value": "2008, en Kafr el-Sheikh (Egipto)",
+        "founded_label": "Exportamos desde",
+        "founded_value": "2008, desde Kafr el-Sheikh (Egipto)",
         "activity_label": "Actividad",
         "activity_value": "Cría y compra pescado, y después lo envasa y lo exporta entero y fresco refrigerado.",
         "species_label": "Especies",
@@ -56,6 +56,7 @@
         "livestock_title": "Ganadería",
         "livestock_text": "Explotaciones ganaderas en Egipto.",
         "invest_title": "Inversiones",
+        "invest_text": "Las demás actividades de inversión del grupo.",
         "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
         "link_products": "Nuestro pescado"
     },

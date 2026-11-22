@@ -5,7 +5,7 @@
         {
             "label": "De la producción en Egipto a alianzas en todo el mundo",
             "kicker": "Exportador de pescado fresco desde 2008",
-            "title": "Pescado fresco egipcio para importadores de Oriente Medio y más allá",
+            "title": "Pescado fresco egipcio para importadores de todo el mundo",
             "text": "Criamos y compramos 12 especies principales de pescado, y después las calibramos, envasamos y exportamos enteras y frescas, refrigeradas en hielo.",
             "alt": "Dorada, lubina y tilapia enteras y frescas sobre hielo picado bajo una luz fría"
         },
@@ -20,19 +20,20 @@
             "label": "12 especies principales, calibradas por peso",
             "kicker": "Nuestro pescado",
             "title": "12 especies principales de pescado, calibradas por peso",
-            "text": "Desde la tilapia hasta la lubina y la dorada, a la venta enteras y frescas refrigeradas.",
+            "text": "Desde la tilapia hasta la lubina y la dorada, se venden enteras y frescas refrigeradas.",
             "alt": "Pescado fresco entero sobre hielo picado, visto desde arriba"
         },
         {
             "label": "Más de 7 mercados por aire y carretera",
             "kicker": "Nuestros mercados",
             "title": "Oriente Medio y más allá, por aire y carretera",
-            "text": "Kuwait, Emiratos Árabes Unidos, Catar, Irak, Siria, Baréin y Líbano, con Europa como siguiente paso de nuestros planes.",
+            "text": "Kuwait, Emiratos Árabes Unidos, Catar, Irak, Siria, Baréin y Líbano, y autorizados para exportar a la Unión Europea.",
             "alt": "Camión frigorífico cargando cajas isotérmicas en un muelle al amanecer"
         }
     ],
     "ctaPartner": "Iniciemos una colaboración",
     "ctaFish": "Ver nuestro pescado",
+    "ctaFishPhone": "Ver nuestro pescado",
     "stats": [
         {
             "value": "12",
@@ -48,7 +49,7 @@
         },
         {
             "value": "2500",
-            "label": "t/mes de capacidad de envasado"
+            "label": "t/mes · capacidad máxima de envasado"
         }
     ]
 }

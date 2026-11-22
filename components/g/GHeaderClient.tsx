@@ -8,7 +8,7 @@ import { ChevronDownIcon, CloseIcon, GlobeIcon, MenuIcon, WhatsAppIcon } from '@
 import { cn, focusRingLight as FOCUS, typography } from '@/components/ui/tokens';
 import { GNavLink, useGNav } from './GFooterNav';
 import { G_NAV_KEYS_BAR, G_NAV_KEYS_MENU, type GNavKey } from './nav';
-import { orderLangs, rememberChoice, type LangOption } from './langs';
+import { keepQueryOnSwitch, orderLangs, rememberChoice, type LangOption } from './langs';
 
 export interface GHeaderCopy {
     homeLabel: string;
@@ -192,9 +192,10 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                                         lang={code}
                                         hrefLang={code}
                                         aria-current={cur ? 'true' : undefined}
-                                        onClick={() => {
+                                        onClick={(e) => {
                                             rememberChoice(code);
                                             setLang(false);
+                                            keepQueryOnSwitch(e);
                                         }}
                                         className={cn(
                                             'flex min-h-tap items-center justify-between gap-4 rounded-control px-3.5 py-2.5 leading-snug text-ink transition-colors hover:bg-surface-offwhite hover:text-navy',

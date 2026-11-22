@@ -87,6 +87,7 @@ export default async function MarketsPage({ params }: Props) {
                 active={active}
                 planned={planned}
                 plannedTitle={t('index.planned_title')}
+                approvedNote={t('index.approved')}
                 pausedNote={pausedNote}
                 mapLabel={t('index.map_label')}
                 origin={t('index.origin')}

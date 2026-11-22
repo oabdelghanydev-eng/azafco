@@ -38,7 +38,8 @@ const MARKETS = [
     fm: readonly [number, number];
 }>;
 
-const PLANNED = ['eu', 'ru', 'us'] as const;
+/** Planned markets (owner 22 Nov 2026: the EU left "Planned"; it is approved for export and has its own line). */
+const PLANNED = ['ru', 'us'] as const;
 
 /** /markets/<slug> for a map code (flag code = ISO country code), only where that page exists. */
 function marketHref(code: string): string | undefined {
@@ -135,7 +136,7 @@ function MarketsMap({ variant, label, origin, shortNames }: MapProps) {
     );
 }
 
-/** Home "markets" section (design G): seven active markets with a route map, planned markets below
+/** Home "markets" section (design G): seven active markets with a route map, the EU export approval line and the planned markets below
  * (Spain's paused status lives on /markets only). */
 export default async function GMarkets() {
     const t = await getTranslations('g_markets_v2');
@@ -186,6 +187,15 @@ export default async function GMarkets() {
                     <GMarketsList items={items} className="m-0 mt-1 grid list-none gap-0.5 p-0 lg:mt-[26px] lg:gap-1" />
 
                     <div className="mt-[18px] border-0 border-t border-solid border-white/20 pt-[18px] lg:mt-[22px]">
+                        {/* EU: approved for export; never an approval number or date (ROUND-ASTRA 1.7) */}
+                        <p className="m-0 mb-[18px] flex items-center gap-2.5 font-bold">
+                            <span
+                                aria-hidden="true"
+                                className="h-[30px] w-[30px] flex-none rounded-full bg-white bg-cover bg-center bg-no-repeat"
+                                style={{ backgroundImage: `url("${PLANNED_FLAGS.eu}")` }}
+                            />
+                            {t('euApproved')}
+                        </p>
                         <p className={cn('m-0 mb-3 font-bold text-gold', typography.caption)}>{t('plannedTitle')}</p>
                         <ul className="m-0 flex list-none flex-wrap gap-x-[26px] gap-y-3.5 p-0">
                             {PLANNED.map((code) => (

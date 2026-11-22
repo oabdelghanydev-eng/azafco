@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Nous contacter : WhatsApp, e-mail, bureau et usine",
-        "description": "WhatsApp : la direction d’AZAFCO International, pour conclure vite. E-mail : l’équipe export, pour détails et documents. Bureau et usine à Kafr el-Cheikh."
+        "description": "Écrivez sur WhatsApp à la direction d’AZAFCO International pour l’approvisionnement, ou par e-mail à l’équipe export. Bureau et usine à Kafr el-Cheikh."
     },
     "breadcrumb": "Contact",
     "hero": {
         "eyebrow": "Contact",
         "title": "Contacter AZAFCO International",
-        "intro": "Écrivez à la direction sur WhatsApp pour conclure rapidement, ou envoyez un e-mail à l’équipe export pour les détails et les documents.",
+        "intro": "Écrivez à la direction sur WhatsApp pour discuter de l’approvisionnement. Envoyez un e-mail à l’équipe export pour les spécifications et les documents.",
         "actions": {
             "whatsapp": "Écrire à la direction sur WhatsApp",
             "email": "Écrire à l’équipe export"
@@ -70,6 +70,7 @@
     },
     "trust": {
         "title": "Société enregistrée",
+        "legal": "Raison sociale",
         "register": "Registre du commerce",
         "tax": "Carte fiscale"
     }

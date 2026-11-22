@@ -8,7 +8,11 @@ import { whatsappLink } from '@/lib/v2/whatsapp';
 import GFooterContactGate from './GFooterContactGate';
 import GFooterLangs from './GFooterLangs';
 import GFooterNav from './GFooterNav';
+import GFooterRfqLink, { type RfqContext } from './GFooterRfqLink';
 import GFooterWordmark from './GFooterWordmark';
+import { productSlugs } from '@/data/products';
+import { activeMarketSlugs } from '@/data/markets';
+import { getActiveMarketConfig } from '@/components/v2/markets/marketData';
 import { G_FOOTER_EXTRA_KEYS, G_NAV_KEYS, type GFooterNavKey } from './nav';
 import { publishedLangs } from './publishedLangs';
 import { ArrowIcon, ArrowUpIcon } from '@/components/ui/icons';
@@ -27,6 +31,17 @@ const SECONDARY = [
     { key: 'privacy', href: routes.privacy },
 ] as const;
 
+/** Product and market detail slugs for the footer requirements link (prefill as on the page hero). */
+const RFQ_CONTEXT: RfqContext = {
+    products: productSlugs,
+    markets: Object.fromEntries(
+        activeMarketSlugs.flatMap((slug) => {
+            const m = getActiveMarketConfig(slug);
+            return m ? [[slug, m.countryCode] as const] : [];
+        }),
+    ),
+};
+
 interface RowProps {
     n: string;
     href: string;
@@ -36,11 +51,13 @@ interface RowProps {
     external?: boolean;
     /** Locale-aware site route (next-intl Link) instead of a plain href */
     internal?: boolean;
+    /** Internal link to /requirements that keeps the product/market context of the current page */
+    rfqContext?: RfqContext;
     newTab: string;
     cta: string;
 }
 
-function ContactRow({ n, href, title, sub, value, external, internal, newTab, cta }: RowProps) {
+function ContactRow({ n, href, title, sub, value, external, internal, rfqContext, newTab, cta }: RowProps) {
     const className = `${s.row} grid grid-cols-[30px_minmax(0,1fr)_44px] items-center gap-x-3 border-b border-white/[.16] py-5 lg:px-3 lg:py-6 xl:grid-cols-[56px_minmax(0,1.4fr)_minmax(0,1fr)_52px] xl:gap-x-4 ${FOCUS_DARK}`;
     const body = (
         <>
@@ -67,6 +84,14 @@ function ContactRow({ n, href, title, sub, value, external, internal, newTab, ct
             {external && <span className="sr-only">{newTab}</span>}
         </>
     );
+
+    if (rfqContext) {
+        return (
+            <GFooterRfqLink context={rfqContext} cta={cta} className={className}>
+                {body}
+            </GFooterRfqLink>
+        );
+    }
 
     if (internal) {
         return (
@@ -219,6 +244,7 @@ export default function GFooter() {
                             sub={t('form.sub')}
                             value={<span className={valueCls}>{t('form.value')}</span>}
                             internal
+                            rfqContext={RFQ_CONTEXT}
                             newTab={t('new_tab')}
                         />
                         <ContactRow

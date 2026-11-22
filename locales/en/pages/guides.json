@@ -10,7 +10,7 @@
             "who": "For importers, wholesalers and distributors who buy fresh chilled whole fish from Egypt.",
             "markets": "What the published rules in the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria ask for, with a link to each source and its year.",
             "codes": "The HS codes for our 12 main species, the documents a shipment usually needs and the basics of keeping fish cold.",
-            "europe": "The EU rules for readers who need them: Europe is in our plan, and we do not ship there today.",
+            "europe": "The EU rules, for importers in the European Union: AZAFCO is approved for export to the EU.",
             "reviewed": "Last reviewed: {date}. Each rule links to its source."
         },
         "disclaimer": "This guide gives general information. It is not legal or customs advice. Rules change, so confirm the current requirements with your customs broker and the authorities of the importing country before you ship.",
@@ -81,8 +81,8 @@
             "azafco": "How AZAFCO ships: whole fish packed on ice in EPS boxes, moved in our own refrigerated trucks, then by air or road freight."
         },
         "eu": {
-            "title": "Europe: a planned market",
-            "intro": "Europe is in our plan; our active markets today are in the Middle East. This section describes the EU rules for readers who need them.",
+            "title": "Exporting to the European Union",
+            "intro": "AZAFCO is approved for export to the European Union. Commission Implementing Regulation (EU) 2026/2228 of October 2026 extends Egypt's entry on the EU list for fishery products to farmed finfish. This section describes the EU rules an importer works with.",
             "items": {
                 "health_certificate": {
                     "title": "Health certificate and EU listing",

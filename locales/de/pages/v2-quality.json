@@ -28,6 +28,10 @@
         "statement": "Wir verfügen über ISO-Zertifikate von TÜV AUSTRIA.",
         "documents": "Welche Dokumente zu Lebensmittelsicherheit und Gesundheit Ihr Markt verlangt und welche davon jede Lieferung begleiten, bestätigt unser Exportteam vor Ihrer Bestellung."
     },
+    "next": {
+        "text": "Nennen Sie uns Ihren Bestimmungsort und welche Dokumente Ihr QS-Team benötigt.",
+        "button": "Nach Versanddokumenten fragen"
+    },
     "faq": {
         "eyebrow": "Fragen von Einkäufern",
         "title": "Fragen von Einkaufs- und Qualitätsteams",
@@ -36,6 +40,6 @@
     },
     "pending": {
         "traceability": "Los- und Chargendaten, die mit jeder Sendung geliefert werden können",
-        "market_approvals": "Marktzulassungen (z. B. EU-Listung), sobald erteilt"
+        "market_approvals": "Für den Export in die Europäische Union zugelassen"
     }
 }

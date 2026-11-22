@@ -29,7 +29,7 @@
             "items": [
                 {
                     "name": "Google Analytics 4 (Google)",
-                    "text": "Setzt Cookies, um einen wiederkehrenden Browser zu erkennen. Erfasst die von Ihnen aufgerufenen Seiten, Klicks auf die Schaltflächen für E-Mail, WhatsApp und Telefon, Ihren ungefähren Standort, Ihr Gerät und Ihren Browser sowie die Website, über die Sie zu uns gekommen sind."
+                    "text": "Misst Besuche: die von Ihnen aufgerufenen Seiten, Klicks auf die Schaltflächen für E-Mail, WhatsApp und Telefon, Ihren ungefähren Standort, Ihr Gerät und Ihren Browser sowie die Website, über die Sie zu uns gekommen sind. In der EU, im EWR, im Vereinigten Königreich und in der Schweiz setzt der Dienst keine Cookies, solange Sie die Analyse nicht aktivieren; anderswo setzt er Cookies, um einen wiederkehrenden Browser zu erkennen."
                 },
                 {
                     "name": "Vercel Web Analytics (Vercel)",
@@ -37,7 +37,7 @@
                 },
                 {
                     "name": "Microsoft Clarity (Microsoft)",
-                    "text": "Erfasst, wie Seiten genutzt werden, etwa Klicks, Scrollen und Mausbewegungen, und zeigt uns dies als Heatmaps und Sitzungsaufzeichnungen. Der Dienst verwendet Cookies."
+                    "text": "Deaktiviert, bis Sie die Analyse unten aktivieren. Danach erfasst der Dienst, wie Seiten genutzt werden, etwa Klicks, Scrollen und Mausbewegungen, und zeigt uns dies als Heatmaps und Sitzungsaufzeichnungen. Er verwendet Cookies."
                 }
             ],
             "note": "Diese Anbieter können Daten auf Servern außerhalb Ihres Landes verarbeiten."
@@ -52,7 +52,7 @@
         },
         "cookies": {
             "title": "Cookies",
-            "text": "Die Website setzt ein eigenes Cookie (NEXT_LOCALE), um sich Ihre Sprache zu merken. Google Analytics und Microsoft Clarity helfen uns zu verstehen, wie die Website genutzt wird; unten können Sie beide für diesen Browser deaktivieren. In der EU, im EWR, im Vereinigten Königreich und in der Schweiz setzt Google Analytics keine Cookies, solange Sie die Analyse nicht aktivieren. Google Maps kann beim Laden einer Karte eigene Cookies setzen. Sie können Cookies auch in Ihren Browsereinstellungen blockieren oder löschen; die Website funktioniert auch ohne sie."
+            "text": "Die Website setzt ein eigenes Cookie (NEXT_LOCALE), um sich Ihre Sprache zu merken. Google Analytics misst Besuche; in der EU, im EWR, im Vereinigten Königreich und in der Schweiz setzt es keine Cookies, solange Sie die Analyse nicht aktivieren. Microsoft Clarity bleibt deaktiviert, bis Sie die Analyse aktivieren. Unten können Sie die Analyse für diesen Browser aktivieren oder deaktivieren. Die Website aktiviert nie Werbe-Cookies oder personalisierte Werbung. Google Maps kann beim Laden einer Karte eigene Cookies setzen. Sie können Cookies auch in Ihren Browsereinstellungen blockieren oder löschen; die Website funktioniert auch ohne sie."
         },
         "sharing": {
             "title": "Weitergabe",

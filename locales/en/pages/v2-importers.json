@@ -45,14 +45,16 @@
                 "text": "Species, weight grade, product form and packing for your order."
             },
             {
-                "title": "Company profile"
+                "title": "Company profile",
+                "text": "Legal name, registration, plant, species and markets on one page, on request."
             },
             {
                 "title": "Shipment documents",
                 "text": "The export documents for your destination, prepared with each shipment."
             }
         ],
-        "guide_link": "Which documents a fresh fish shipment usually needs"
+        "guide_link": "Which documents a fresh fish shipment usually needs",
+        "request_link": "Request a product specification or company profile"
     },
     "terms": {
         "eyebrow": "Trade details",
@@ -65,11 +67,11 @@
         "items": {
             "who": {
                 "q": "Who is AZAFCO International?",
-                "a": "AZAFCO International is an Egyptian company, founded in 2008 in Kafr El Sheikh, that farms and sources fish, then packs and exports it whole and fresh chilled. It packs up to 2,500 t/month at its plant in Motobas and ships to 7+ markets in the Middle East and beyond."
+                "a": "AZAFCO International is an Egyptian company in Kafr El Sheikh, exporting since 2008. It farms and sources fish, then packs and exports it whole and fresh chilled. It packs up to 2,500 t/month at its plant in Motobas and ships to 7+ markets in the Middle East and beyond."
             },
             "start": {
                 "q": "How do we start working together?",
-                "a": "Send your requirements on our <req>requirements page</req>, or email the export team at business@azafco.com.eg. For fast deals, message our management directly on WhatsApp. We then review supply with you and confirm the commercial terms in writing."
+                "a": "Send your requirements on our <req>requirements page</req>, or email the export team at business@azafco.com.eg for specifications and documents. WhatsApp management to discuss supply. We then review supply with you and confirm the commercial terms in writing."
             },
             "species": {
                 "q": "Which species do you supply?",
@@ -93,11 +95,11 @@
             },
             "markets": {
                 "q": "Which markets do you ship to?",
-                "a": "We ship to 7+ markets. The seven listed on this site are the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. Europe, Russia and the USA are in our plan."
+                "a": "We ship to 7+ markets. The seven listed on this site are the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. We are approved for export to the European Union; Russia and the USA are in our plan."
             },
             "eu": {
                 "q": "Do you export to the European Union?",
-                "a": "Not yet. Europe is in our plan; our active markets today are in the Middle East."
+                "a": "Yes. We are approved for export to the European Union. Tell us the species, quantity and EU destination, and the export team confirms the documents for your shipment."
             },
             "recurring": {
                 "q": "Do you take recurring supply programmes?",

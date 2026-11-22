@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Contacto: WhatsApp, correo, oficina y fábrica",
-        "description": "WhatsApp de la gerencia de AZAFCO para operaciones rápidas; correo al equipo de exportación para detalles y documentos. Oficina y planta en Kafr el-Sheikh."
+        "description": "Hable del suministro con la gerencia de AZAFCO International por WhatsApp; pida especificaciones y documentos por correo. Oficina y planta: Kafr el-Sheikh."
     },
     "breadcrumb": "Contacto",
     "hero": {
         "eyebrow": "Contacto",
         "title": "Contacte con AZAFCO International",
-        "intro": "Escriba a la gerencia por WhatsApp para operaciones rápidas, o envíe un correo al equipo de exportación para detalles y documentos.",
+        "intro": "Escriba a la gerencia por WhatsApp para hablar del suministro. Envíe un correo al equipo de exportación para pedir especificaciones y documentos.",
         "actions": {
             "whatsapp": "Escriba a la gerencia por WhatsApp",
             "email": "Correo al equipo de exportación"
@@ -70,6 +70,7 @@
     },
     "trust": {
         "title": "Empresa registrada",
+        "legal": "Razón social",
         "register": "Registro mercantil",
         "tax": "Tarjeta fiscal"
     }

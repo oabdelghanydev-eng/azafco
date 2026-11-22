@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Fischexport in den Nahen Osten und darüber hinaus",
-        "description": "Ägyptischer Frischfisch für Importeure in 7+ Märkten: VAE, Kuwait, Bahrain, Libanon, Katar, Irak, Syrien. Per Luft und Straße; Europa als Nächstes geplant."
+        "description": "Frischfisch aus Ägypten für Importeure in 7+ Märkten: VAE, Kuwait, Bahrain, Libanon, Katar, Irak, Syrien, per Luft und Straße. Zugelassen für EU-Exporte."
     },
     "breadcrumb": "Märkte",
     "hero": {
         "eyebrow": "Unsere Märkte",
         "title": "Frischfischexport in den Nahen Osten und darüber hinaus",
-        "intro": "Wir liefern per Luft und Straße in 7+ Märkte; als Nächstes ist Europa geplant.",
+        "intro": "Wir liefern per Luft und Straße in 7+ Märkte und sind für den Export in die Europäische Union zugelassen.",
         "primary": "Partnerschaft starten",
         "secondary": "Unsere Fischarten ansehen",
         "image_alt": "Luftaufnahme von Erdteichen zur Fischzucht mit Belüftern und Palmen"
@@ -17,6 +17,7 @@
         "title": "Wohin wir heute liefern",
         "intro": "Die auf dieser Website aufgeführten Märkte und das Jahr, seit dem wir jeden von ihnen beliefern. Wählen Sie einen Markt für Details.",
         "since": "seit {year}",
+        "approved": "Europäische Union: für den Export zugelassen",
         "planned_title": "Geplant",
         "paused": "{country}: Exporte pausiert",
         "map_label": "Karte der Versandrouten von Ägypten in die auf dieser Website aufgeführten Märkte",
@@ -45,7 +46,7 @@
             },
             {
                 "title": "Zwei direkte Kanäle",
-                "text": "Per WhatsApp erreichen Sie direkt unsere Geschäftsleitung, für schnelle Abschlüsse. Per E-Mail erreichen Sie das Exportteam, für Details und Dokumente."
+                "text": "Per WhatsApp besprechen Sie Lieferungen mit der Geschäftsleitung. Per E-Mail erhalten Sie vom Exportteam Spezifikationen und Dokumente."
             }
         ],
         "guide_link": "Leitfaden zum Import von Frischfisch aus Ägypten lesen",

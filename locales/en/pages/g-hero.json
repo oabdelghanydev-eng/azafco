@@ -5,7 +5,7 @@
     {
       "label": "From Egyptian production to global partnerships",
       "kicker": "Fresh fish exporter since 2008",
-      "title": "Fresh Egyptian fish for importers across the Middle East and beyond",
+      "title": "Fresh Egyptian fish for importers around the world",
       "text": "We farm and source 12 main fish species, then grade, pack and export them whole and fresh chilled on ice.",
       "alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
     },
@@ -27,12 +27,13 @@
       "label": "7+ markets by air and road",
       "kicker": "Our markets",
       "title": "The Middle East and beyond, by air and road",
-      "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon, with Europe next in our plan.",
+      "text": "Kuwait, the UAE, Qatar, Iraq, Syria, Bahrain and Lebanon, and approved for export to the European Union.",
       "alt": "Refrigerated truck loading insulated boxes at a dock at dawn"
     }
   ],
   "ctaPartner": "Start a partnership",
   "ctaFish": "See our fish",
+  "ctaFishPhone": "See our fish",
   "stats": [
     {
       "value": "12",
@@ -48,7 +49,7 @@
     },
     {
       "value": "2,500",
-      "label": "t/month packing capacity"
+      "label": "t/month · maximum packing capacity"
     }
   ]
 }

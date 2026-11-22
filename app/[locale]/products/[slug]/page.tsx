@@ -191,7 +191,15 @@ export default async function ProductDetailPage({ params }: Props) {
                       </ul>
                   ),
               }
-            : { label: t('card.grades_label'), value: t('card.grades_none') },
+            : {
+                  label: t('card.grades_label'),
+                  // No published grades: "Send us your target range" opens this product's prefilled /requirements
+                  value: (
+                      <TextLink href={rfqHref({ product: slug, type: 'product' })} dataAttrs={{ 'data-cta': 'product_grades_requirements' }}>
+                          {t('card.grades_none')}
+                      </TextLink>
+                  ),
+              },
         { label: t('detail.packaging'), value: spec.pack ?? null },
     ];
     if (tariff) {
@@ -200,9 +208,7 @@ export default async function ProductDetailPage({ params }: Props) {
             value: (
                 <>
                     <span className="block">
-                        <bdi dir="ltr">
-                            HS {tariff.hs} · CN {tariff.cn}
-                        </bdi>
+                        <bdi dir="ltr">HS {tariff.hs}</bdi> · {t('detail.cn_label')} <bdi dir="ltr">{tariff.cn}</bdi>
                     </span>
                     {tariffNote ? <span className={cn('mt-1 block font-normal text-ink-muted', typography.small)}>{tariffNote}</span> : null}
                     <TextLink href={insightHref(HS_GUIDE_SLUG)} dataAttrs={{ 'data-cta': 'product_hs_guide' }}>

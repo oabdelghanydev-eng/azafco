@@ -78,9 +78,10 @@ export const importingDocuments: { id: string; sources: string[] }[] = [
 ];
 
 /**
- * Europe section. Europe is a planned market for AZAFCO, not an active one:
- * nothing here may say or imply that AZAFCO ships to the EU or that its plant
- * is EU-listed. Text: guides_page.importing.eu.items.<id>.
+ * Europe section. Owner, 22 Nov 2026 (ROUND-ASTRA-SPEC §1.7): AZAFCO is approved
+ * for export to the EU. Never print an approval number, establishment number or
+ * approval date, and never say that shipments to the EU have taken place.
+ * Text: guides_page.importing.eu.items.<id>.
  */
 export const importingEuItems: { id: string; sources: string[] }[] = [
     { id: 'health_certificate', sources: ['reg_2020_2235', 'reg_2021_405', 'reg_2026_2228', 'establishments', 'egypt_eu_access'] },

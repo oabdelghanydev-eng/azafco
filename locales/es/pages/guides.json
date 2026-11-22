@@ -10,7 +10,7 @@
             "who": "Para importadores, mayoristas y distribuidores que compran pescado entero fresco refrigerado de Egipto.",
             "markets": "Lo que exigen las normas publicadas en los Emiratos Árabes Unidos, Kuwait, Baréin, Líbano, Catar, Irak y Siria, con un enlace a cada fuente y su año.",
             "codes": "Los códigos SA de nuestras 12 especies principales, los documentos que suele necesitar un envío y lo básico para mantener el pescado frío.",
-            "europe": "Las normas de la UE para quien las necesite: Europa entra en nuestros planes, pero hoy no enviamos allí.",
+            "europe": "Las normas de la UE, para importadores de la Unión Europea: AZAFCO está autorizada para exportar a la UE.",
             "reviewed": "Última revisión: {date}. Cada norma enlaza a su fuente."
         },
         "disclaimer": "Esta guía ofrece información general. No constituye asesoramiento jurídico ni aduanero. Las normas cambian, así que confirme los requisitos vigentes con su agente de aduanas y con las autoridades del país importador antes de realizar el envío.",
@@ -81,8 +81,8 @@
             "azafco": "Cómo envía AZAFCO: pescado entero envasado en hielo en cajas de EPS, transportado en nuestros propios camiones frigoríficos y después por vía aérea o por carretera."
         },
         "eu": {
-            "title": "Europa: un mercado previsto",
-            "intro": "Europa entra en nuestros planes; hoy nuestros mercados activos están en Oriente Medio. Esta sección describe las normas de la UE para quien las necesite.",
+            "title": "Exportar a la Unión Europea",
+            "intro": "AZAFCO está autorizada para exportar a la Unión Europea. El Reglamento de Ejecución (UE) 2026/2228 de la Comisión, de octubre de 2026, amplía la inclusión de Egipto en la lista de la UE para productos de la pesca a los peces de aleta de cultivo. Esta sección describe las normas de la UE con las que trabaja un importador.",
             "items": {
                 "health_certificate": {
                     "title": "Certificado sanitario e inclusión en la lista de la UE",

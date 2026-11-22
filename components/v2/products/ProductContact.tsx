@@ -73,7 +73,7 @@ function Route({
 
 /**
  * Product-page partnership card (navy surface, gold-rule eyebrow, contact rows):
- * WhatsApp = management direct, for fast deals (message prefilled with the species);
+ * WhatsApp = management, supply enquiries (message prefilled with the species);
  * email = export team, for details and documents (subject + a requirements checklist).
  * Then a quiet link to the requirements form with the product preselected (no intro line:
  * the two rows say who answers what, as in the G footer).

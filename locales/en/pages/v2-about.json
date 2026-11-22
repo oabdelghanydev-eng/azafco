@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "About us | AZAFCO International, Egyptian fish since 2008",
-        "description": "Founded in 2008, AZAFCO International farms, sources, packs and exports fresh Egyptian fish to 7+ markets, with 2,500 t/month packing capacity."
+        "description": "Exporting since 2008, AZAFCO International farms, sources, packs and exports fresh Egyptian fish to 7+ markets, with 2,500 t/month packing capacity."
     },
     "breadcrumb": "About us",
     "hero": {
         "eyebrow": "About us",
         "title": "About AZAFCO International: fish farming, sourcing, packing and export in Egypt",
-        "intro": "Founded in 2008, we farm and source fish in Egypt, then wash, ice, grade, pack and inspect it, and export it fresh to importers, distributors and foodservice buyers across the Middle East and beyond.",
+        "intro": "Exporting since 2008, we farm and source fish in Egypt, then wash, ice, grade, pack and inspect it, and export it fresh to importers, distributors and foodservice buyers across the Middle East and beyond.",
         "primary": "Start a partnership",
         "secondary": "Message management on WhatsApp",
         "image_alt": "Two workers pulling a seine net full of fish to the bank of an earthen pond"
@@ -16,8 +16,8 @@
         "eyebrow": "Company facts",
         "title": "AZAFCO International at a glance",
         "legal_label": "Legal name",
-        "founded_label": "Founded",
-        "founded_value": "2008, in Kafr El Sheikh, Egypt",
+        "founded_label": "Exporting since",
+        "founded_value": "2008, from Kafr El Sheikh, Egypt",
         "activity_label": "Activity",
         "activity_value": "Farms and sources fish, then packs and exports it whole and fresh chilled.",
         "species_label": "Species",
@@ -56,6 +56,7 @@
         "livestock_title": "Livestock",
         "livestock_text": "Livestock farms in Egypt.",
         "invest_title": "Investments",
+        "invest_text": "The group's other investment activities.",
         "image_alt": "Whole fresh fish on crushed ice seen from above",
         "link_products": "Our fish"
     },

@@ -6,12 +6,15 @@
  * (RfqPanelFromQuery) and stay statically rendered. All copy arrives
  * pre-translated from the server wrapper (RfqRequestPanel); the message logic is
  * the pure buildRfqMessage (message.ts), the labels the pure labelPrefill (params.ts).
+ * The fallback block shows the prepared message with an inline "Copy message" button
+ * (short visible confirmation next to it; no toast, no overlay).
  */
+import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { cardClass } from '@/components/ui/Card';
-import { MailIcon, PhoneIcon, WhatsAppIcon } from '@/components/ui/icons';
+import { CheckIcon, ClipboardCheckIcon, MailIcon, PhoneIcon, WhatsAppIcon } from '@/components/ui/icons';
 import { cn, focusRing, typography } from '@/components/ui/tokens';
-import { buildRfqMessage, mailtoHref, summaryRows, whatsappHrefFor, type RfqMailCopy } from './compose';
+import { buildRfqMessage, mailtoHref, messageText, summaryRows, whatsappHrefFor, type RfqMailCopy } from './compose';
 import { labelPrefill, type PrefillNames, type RfqTopic } from './params';
 import RfqTracker from './RfqTracker';
 
@@ -67,7 +70,16 @@ export default function RfqRequestPanelView({
     const p = labelPrefill(locale, { product, country, form, grade }, names);
 
     const msg = buildRfqMessage(topic, p, copy.mail);
+    const text = messageText(msg);
     const mailto = mailtoHref(c.email, msg);
+    // "Copy message": inline confirmation text, reset when the message changes
+    const [copied, setCopied] = useState<string | null>(null);
+    const copyMessage = () => {
+        navigator.clipboard?.writeText(text).then(
+            () => setCopied(text),
+            () => setCopied(null),
+        );
+    };
     const wa = whatsappHrefFor(c.whatsappNumber, msg);
     const track = (event: string): Record<`data-${string}`, string> => ({
         'data-rfq-track': event,
@@ -147,6 +159,35 @@ export default function RfqRequestPanelView({
                         <dt className={cn('text-ink-muted', typography.small)}>{r('subject_label')}</dt>
                         <dd className="m-0 mt-1">
                             <bdi className="select-all font-semibold text-ink">{msg.subject}</bdi>
+                        </dd>
+                    </div>
+                    <div className="min-w-0 sm:col-span-2">
+                        <dt className={cn('text-ink-muted', typography.small)}>{r('message_label')}</dt>
+                        <dd className="m-0 mt-1">
+                            <bdi
+                                id={`${idPrefix}-message`}
+                                className="block select-all whitespace-pre-wrap break-words rounded-card bg-surface-offwhite p-4 text-ink"
+                            >
+                                {text}
+                            </bdi>
+                            <div className="mt-3 flex flex-wrap items-center gap-3">
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    icon={<ClipboardCheckIcon size={20} />}
+                                    onClick={copyMessage}
+                                >
+                                    {r('copy')}
+                                </Button>
+                                <span role="status" aria-live="polite" className={cn('inline-flex items-center gap-1.5 text-ink', typography.small)}>
+                                    {copied === text ? (
+                                        <>
+                                            <CheckIcon size={16} className="text-navy" />
+                                            {r('copied')}
+                                        </>
+                                    ) : null}
+                                </span>
+                            </div>
                         </dd>
                     </div>
                     <div className="min-w-0">

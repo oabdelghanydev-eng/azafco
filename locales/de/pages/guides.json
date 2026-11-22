@@ -10,7 +10,7 @@
             "who": "Für Importeure, Großhändler und Distributoren, die ganzen, frisch gekühlten Fisch aus Ägypten kaufen.",
             "markets": "Was die veröffentlichten Regeln in den VAE, Kuwait, Bahrain, dem Libanon, Katar, dem Irak und Syrien verlangen, mit Link und Jahr jeder Quelle.",
             "codes": "Die HS-Codes für unsere 12 Hauptarten, die Dokumente, die eine Lieferung in der Regel braucht, und die Grundlagen der Kühlung.",
-            "europe": "Die EU-Regeln für Leser, die sie brauchen: Europa ist in unserer Planung; derzeit liefern wir nicht dorthin.",
+            "europe": "Die EU-Regeln für Importeure in der Europäischen Union: AZAFCO ist für den Export in die EU zugelassen.",
             "reviewed": "Zuletzt geprüft: {date}. Jede Regel ist mit ihrer Quelle verlinkt."
         },
         "disclaimer": "Dieser Leitfaden bietet allgemeine Informationen. Er ist keine Rechts- oder Zollberatung. Vorschriften ändern sich; klären Sie daher vor dem Versand die aktuellen Anforderungen mit Ihrem Zollagenten und den Behörden des Einfuhrlandes.",
@@ -81,8 +81,8 @@
             "azafco": "So versendet AZAFCO: ganzer Fisch, auf Eis in EPS-Boxen verpackt, in unseren eigenen Kühl-Lkw transportiert, dann per Luft- oder Straßenfracht."
         },
         "eu": {
-            "title": "Europa: ein geplanter Markt",
-            "intro": "Europa ist in unserer Planung; unsere aktiven Märkte liegen heute im Nahen Osten. Dieser Abschnitt beschreibt die EU-Regeln für Leser, die sie brauchen.",
+            "title": "Export in die Europäische Union",
+            "intro": "AZAFCO ist für den Export in die Europäische Union zugelassen. Die Durchführungsverordnung (EU) 2026/2228 der Kommission vom Oktober 2026 erweitert den Eintrag Ägyptens in der EU-Liste für Fischereierzeugnisse auf Flossenfische aus Aquakultur. Dieser Abschnitt beschreibt die EU-Regeln, mit denen ein Importeur arbeitet.",
             "items": {
                 "health_certificate": {
                     "title": "Gesundheitsbescheinigung und EU-Listung",

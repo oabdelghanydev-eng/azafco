@@ -1,7 +1,7 @@
 {
     "eyebrow": "Nuestros mercados",
     "title": "Oriente Medio y más allá",
-    "intro": "Enviamos por aire y carretera a más de 7 mercados, con Europa como siguiente paso de nuestros planes. Seleccione un mercado para verlo en el mapa.",
+    "intro": "Enviamos por aire y carretera a más de 7 mercados, y estamos autorizados para exportar a la Unión Europea. Seleccione un mercado para verlo en el mapa.",
     "since": "desde {year}",
     "mapLabel": "Mapa de rutas de envío desde Egipto a nuestros mercados",
     "origin": "Egipto · Motobas",
@@ -35,9 +35,9 @@
             "short": "Siria"
         }
     },
+    "euApproved": "Unión Europea: autorizados para exportar",
     "plannedTitle": "Previstos",
     "planned": {
-        "eu": "Europa",
         "ru": "Rusia",
         "us": "Estados Unidos"
     },

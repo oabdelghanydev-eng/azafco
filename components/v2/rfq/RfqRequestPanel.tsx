@@ -6,7 +6,7 @@
  * The panel prepares the message from the page the buyer came from
  * (?product, ?grade, ?form, ?country, ?type) and offers:
  *   1. Email the export team (details and documents): mailto: with subject + labelled body
- *   2. WhatsApp, direct to management (fast deals): wa.me with a shorter text
+ *   2. WhatsApp, management (supply enquiries): wa.me with a shorter text
  *   3. Phone (tel:) + the address and subject as plain, copyable text
  * Clicks are tracked by RfqTracker (rfq_email_click / rfq_whatsapp_click / rfq_phone_click).
  *
