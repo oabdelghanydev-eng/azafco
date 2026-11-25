@@ -7,56 +7,33 @@
     "hero": {
         "eyebrow": "Iniciemos una colaboración",
         "title": "Envíe sus requisitos",
-        "intro": "Abra un mensaje preparado, complete las líneas en blanco y envíelo desde el correo o el WhatsApp de su empresa. Así podemos confirmar quién nos escribe; nuestros correos siempre llegan desde el dominio azafco.com.eg."
+        "intro": "Díganos el pescado, la cantidad y el destino. Nosotros nos encargamos del resto."
     },
     "short_hero": {
         "corporate_title": "Consultas corporativas y de colaboración",
-        "corporate_intro": "Para colaboraciones, inversión u otros temas empresariales. Escriba desde el correo de su empresa; no hace falta indicar detalles de producto.",
+        "corporate_intro": "Para colaboraciones, inversión o cualquier otro tema.",
         "documents_title": "Solicitar documentos",
-        "documents_intro": "Pida desde el correo de su empresa especificaciones de producto o el perfil de la empresa."
+        "documents_intro": "Pida la especificación del producto o el perfil de la empresa."
     },
     "aside": {
-        "title": "Qué ocurre después de escribirnos",
-        "steps": [
-            "El equipo de exportación contrasta sus requisitos con la especificación y la disponibilidad actual.",
-            "Confirmamos con usted por escrito el precio, la cantidad, el embalaje y las condiciones."
-        ],
+        "need": "Nos basta con el pescado, el peso, la cantidad y el destino.",
         "hours": "Horario de oficina: {hours}",
-        "no_promise": "Enviar sus requisitos no le compromete ni nos compromete a un pedido.",
-        "prepare_title": "Conviene tener a mano",
-        "prepare": [
-            "Especie y calibre",
-            "Cantidad por envío y frecuencia",
-            "País de destino y plazo de entrega",
-            "Transporte aéreo o por carretera, y aeropuerto o paso fronterizo de llegada",
-            "Incoterm preferido y condiciones de pago",
-            "Requisitos de embalaje y etiquetado"
-        ]
+        "official": "Solo escribimos desde el correo azafco.com.eg y desde el {phone}."
     },
     "switch": {
-        "to_corporate": "Para colaboraciones, inversión u otros temas: <link>Envíe una consulta corporativa</link>",
+        "to_corporate": "¿Otro tema, una colaboración o una inversión? <link>Escríbanos aquí</link>",
         "to_seafood": "¿Quiere comprar pescado? <link>Envíe sus requisitos de suministro</link>"
     },
     "request": {
-        "title": "Su mensaje, listo para enviar",
-        "title_corporate": "Su consulta, lista para enviar",
-        "title_documents": "Su solicitud de documentos, lista para enviar",
-        "intro": "Elija un canal. Cada botón abre un mensaje preparado: complete las líneas en blanco y envíelo.",
-        "summary_title": "Ya completado a partir de la página de la que viene",
-        "summary_note": "Puede cambiar cualquier línea del mensaje antes de enviarlo.",
+        "title": "Escríbanos directamente",
+        "title_corporate": "Escríbanos directamente",
+        "title_documents": "Pida los documentos",
         "email_cta": "Correo al equipo de exportación",
         "email_role": "Equipo de exportación · detalles y documentos",
         "whatsapp_cta": "Escriba a la gerencia por WhatsApp",
         "whatsapp_role": "Gerencia · consultas de suministro",
-        "attach_note": "Si tiene una especificación o ficha de embalaje, adjúntela al correo.",
-        "fallback_title": "Si su aplicación de correo no se abre",
-        "fallback_text": "Escriba desde el correo de su empresa a esta dirección y use este asunto y este mensaje.",
         "email_label": "Correo electrónico",
-        "subject_label": "Asunto",
-        "phone_label": "Teléfono (gerencia)",
-        "message_label": "Mensaje",
-        "copy": "Copiar mensaje",
-        "copied": "Mensaje copiado"
+        "phone_label": "Teléfono (gerencia)"
     },
     "mail": {
         "greeting": "Estimado equipo de exportación de AZAFCO:",

@@ -7,56 +7,33 @@
     "hero": {
         "eyebrow": "Partnerschaft starten",
         "title": "Anforderungen senden",
-        "intro": "Öffnen Sie eine vorbereitete Nachricht, füllen Sie die leeren Zeilen aus und senden Sie sie von Ihrer Firmen-E-Mail oder Ihrem geschäftlichen WhatsApp. So erkennen wir, wer uns schreibt; unsere E-Mails kommen immer von der Domain azafco.com.eg."
+        "intro": "Nennen Sie uns Fisch, Menge und Zielland. Den Rest übernehmen wir."
     },
     "short_hero": {
         "corporate_title": "Unternehmens- und Partnerschaftsanfragen",
-        "corporate_intro": "Für Partnerschaften, Investitionen oder andere geschäftliche Themen. Schreiben Sie von Ihrer Firmen-E-Mail; Produktdetails sind nicht nötig.",
+        "corporate_intro": "Für Partnerschaften, Investitionen oder andere Themen.",
         "documents_title": "Dokumente anfordern",
-        "documents_intro": "Fordern Sie Produktspezifikationen oder das Unternehmensprofil über Ihre Firmen-E-Mail-Adresse an."
+        "documents_intro": "Fordern Sie die Produktspezifikation oder das Unternehmensprofil an."
     },
     "aside": {
-        "title": "Was nach Ihrer Nachricht passiert",
-        "steps": [
-            "Das Exportteam prüft Ihre Anforderungen anhand der Spezifikation und der aktuellen Verfügbarkeit.",
-            "Wir bestätigen Ihnen Preis, Menge, Verpackung und Bedingungen schriftlich."
-        ],
+        "need": "Uns genügen Fisch, Gewicht, Menge und Zielland.",
         "hours": "Bürozeiten: {hours}",
-        "no_promise": "Das Senden Ihrer Anforderungen verpflichtet weder Sie noch uns zu einem Auftrag.",
-        "prepare_title": "Was Sie bereithalten sollten",
-        "prepare": [
-            "Fischart und Gewichtsklasse",
-            "Menge pro Lieferung und Häufigkeit",
-            "Bestimmungsland und Lieferzeitpunkt",
-            "Luft- oder Straßenfracht sowie Zielflughafen oder Grenzübergang",
-            "Bevorzugter Incoterm und Zahlungsbedingungen",
-            "Anforderungen an Verpackung und Etikettierung"
-        ]
+        "official": "Wir schreiben nur von E-Mail-Adressen unter azafco.com.eg und von {phone}."
     },
     "switch": {
-        "to_corporate": "Für Partnerschaften, Investitionen oder andere Themen: <link>Unternehmensanfrage senden</link>",
+        "to_corporate": "Ein anderes Thema, eine Partnerschaft oder eine Investition? <link>Schreiben Sie uns hier</link>",
         "to_seafood": "Sie möchten Fisch kaufen? <link>Senden Sie stattdessen Ihre Anforderungen</link>"
     },
     "request": {
-        "title": "Ihre Nachricht, bereit zum Senden",
-        "title_corporate": "Ihre Anfrage, bereit zum Senden",
-        "title_documents": "Ihre Dokumentenanfrage, bereit zum Senden",
-        "intro": "Wählen Sie einen Kanal. Jede Schaltfläche öffnet eine vorbereitete Nachricht: Füllen Sie die leeren Zeilen aus und senden Sie sie dann.",
-        "summary_title": "Bereits ausgefüllt anhand der Seite, von der Sie kommen",
-        "summary_note": "Sie können jede Zeile der Nachricht vor dem Senden ändern.",
+        "title": "Schreiben Sie uns direkt",
+        "title_corporate": "Schreiben Sie uns direkt",
+        "title_documents": "Unterlagen anfordern",
         "email_cta": "E-Mail an das Exportteam",
         "email_role": "Exportteam · Details und Dokumente",
         "whatsapp_cta": "Geschäftsleitung per WhatsApp schreiben",
         "whatsapp_role": "Geschäftsleitung · Lieferanfragen",
-        "attach_note": "Wenn Sie eine Spezifikation oder Verpackungsvorgabe haben, fügen Sie sie der E-Mail bei.",
-        "fallback_title": "Falls sich Ihr E-Mail-Programm nicht öffnet",
-        "fallback_text": "Schreiben Sie von Ihrer Firmen-E-Mail an diese Adresse und verwenden Sie diesen Betreff und diese Nachricht.",
         "email_label": "E-Mail",
-        "subject_label": "Betreff",
-        "phone_label": "Telefon (Geschäftsleitung)",
-        "message_label": "Nachricht",
-        "copy": "Nachricht kopieren",
-        "copied": "Nachricht kopiert"
+        "phone_label": "Telefon (Geschäftsleitung)"
     },
     "mail": {
         "greeting": "Sehr geehrtes AZAFCO-Exportteam,",

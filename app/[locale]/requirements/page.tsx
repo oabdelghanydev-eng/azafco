@@ -73,13 +73,10 @@ export default async function RequirementsPage({ params }: Props) {
                 </p>
             </PageHead>
 
-            {/* Plain wrapper: the panel and the aside are their own labelled regions */}
             <Section variant="white" as="div">
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16">
-                    <div className="min-w-0 lg:order-2">
-                        <RfqRequestPanel fromQuery />
-                    </div>
-                    <RfqAside short="query" className="min-w-0 lg:order-1" />
+                <div className="flex max-w-[760px] flex-col gap-8">
+                    <RfqRequestPanel fromQuery />
+                    <RfqAside short="query" />
                 </div>
             </Section>
         </div>

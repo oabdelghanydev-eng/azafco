@@ -6,15 +6,14 @@
  * (RfqPanelFromQuery) and stay statically rendered. All copy arrives
  * pre-translated from the server wrapper (RfqRequestPanel); the message logic is
  * the pure buildRfqMessage (message.ts), the labels the pure labelPrefill (params.ts).
- * The fallback block shows the prepared message with an inline "Copy message" button
- * (short visible confirmation next to it; no toast, no overlay).
+ * Kept short on purpose (owner, 25 Nov 2026): a title, the two channels, and the
+ * address and number as plain text. No instructions, no message preview.
  */
-import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { cardClass } from '@/components/ui/Card';
-import { CheckIcon, ClipboardCheckIcon, MailIcon, PhoneIcon, WhatsAppIcon } from '@/components/ui/icons';
+import { MailIcon, PhoneIcon, WhatsAppIcon } from '@/components/ui/icons';
 import { cn, focusRing, typography } from '@/components/ui/tokens';
-import { buildRfqMessage, mailtoHref, messageText, summaryRows, whatsappHrefFor, type RfqMailCopy } from './compose';
+import { buildRfqMessage, mailtoHref, summaryRows, whatsappHrefFor, type RfqMailCopy } from './compose';
 import { labelPrefill, type PrefillNames, type RfqTopic } from './params';
 import RfqTracker from './RfqTracker';
 
@@ -65,21 +64,11 @@ export default function RfqRequestPanelView({
     headingAs: H = 'h2',
     className,
 }: RfqRequestPanelViewProps) {
-    const Sub = H === 'h2' ? 'h3' : 'h4';
     const r = (k: string) => copy.request[k] ?? '';
     const p = labelPrefill(locale, { product, country, form, grade }, names);
 
     const msg = buildRfqMessage(topic, p, copy.mail);
-    const text = messageText(msg);
     const mailto = mailtoHref(c.email, msg);
-    // "Copy message": inline confirmation text, reset when the message changes
-    const [copied, setCopied] = useState<string | null>(null);
-    const copyMessage = () => {
-        navigator.clipboard?.writeText(text).then(
-            () => setCopied(text),
-            () => setCopied(null),
-        );
-    };
     const wa = whatsappHrefFor(c.whatsappNumber, msg);
     const track = (event: string): Record<`data-${string}`, string> => ({
         'data-rfq-track': event,
@@ -96,23 +85,17 @@ export default function RfqRequestPanelView({
             <H id={`${idPrefix}-send-title`} className={cn('m-0 text-ink', typography.h2Sm)}>
                 {r(titleKey)}
             </H>
-            <p className="mb-0 mt-3 max-w-[640px] text-ink-muted">{r('intro')}</p>
-
             {summary.length ? (
-                <div className="mt-6 rounded-card bg-surface-offwhite p-5">
-                    <Sub className={cn('m-0 text-ink', typography.h4)}>{r('summary_title')}</Sub>
-                    <dl className="m-0 mt-3 grid gap-4 sm:grid-cols-2">
-                        {summary.map((row) => (
-                            <div key={row.label} className="min-w-0">
-                                <dt className={cn('text-ink-muted', typography.small)}>{row.label}</dt>
-                                <dd className="m-0 mt-1 font-semibold text-ink">
-                                    <bdi>{row.value}</bdi>
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
-                    <p className={cn('mb-0 mt-3 text-ink-muted', typography.small)}>{r('summary_note')}</p>
-                </div>
+                <p className="mb-0 mt-3 text-ink-muted">
+                    {summary.map((row, i) => (
+                        <span key={row.label}>
+                            {i ? ' · ' : ''}
+                            {row.label}
+                            {copy.mail.separator}
+                            <bdi className="font-semibold text-ink">{row.value}</bdi>
+                        </span>
+                    ))}
+                </p>
             ) : null}
 
             {/* Two channels, two roles (as in the G footer): email = export team, WhatsApp = management.
@@ -140,71 +123,26 @@ export default function RfqRequestPanelView({
                     <p className={cn('mb-0 mt-2 w-0 min-w-full text-center text-ink-muted', typography.small)}>{r('whatsapp_role')}</p>
                 </div>
             </div>
-            <p className={cn('mb-0 mt-5 text-ink-muted', typography.small)}>{r('attach_note')}</p>
-
-            {/* Never a dead end: plain, copyable address + subject + phone if the mail app does not open */}
-            <div className="mt-8 border-0 border-t border-solid border-line pt-6">
-                <Sub className={cn('m-0 text-ink', typography.h3)}>{r('fallback_title')}</Sub>
-                <p className={cn('mb-0 mt-1 text-ink-muted', typography.small)}>{r('fallback_text')}</p>
-                <dl className="m-0 mt-4 grid gap-4 sm:grid-cols-2">
-                    <div className="min-w-0">
-                        <dt className={cn('text-ink-muted', typography.small)}>{r('email_label')}</dt>
-                        <dd className="m-0 mt-1">
-                            <bdi dir="ltr" className="select-all break-all font-semibold text-navy">
-                                {c.email}
-                            </bdi>
-                        </dd>
-                    </div>
-                    <div className="min-w-0">
-                        <dt className={cn('text-ink-muted', typography.small)}>{r('subject_label')}</dt>
-                        <dd className="m-0 mt-1">
-                            <bdi className="select-all font-semibold text-ink">{msg.subject}</bdi>
-                        </dd>
-                    </div>
-                    <div className="min-w-0 sm:col-span-2">
-                        <dt className={cn('text-ink-muted', typography.small)}>{r('message_label')}</dt>
-                        <dd className="m-0 mt-1">
-                            <bdi
-                                id={`${idPrefix}-message`}
-                                className="block select-all whitespace-pre-wrap break-words rounded-card bg-surface-offwhite p-4 text-ink"
-                            >
-                                {text}
-                            </bdi>
-                            <div className="mt-3 flex flex-wrap items-center gap-3">
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    icon={<ClipboardCheckIcon size={20} />}
-                                    onClick={copyMessage}
-                                >
-                                    {r('copy')}
-                                </Button>
-                                <span role="status" aria-live="polite" className={cn('inline-flex items-center gap-1.5 text-ink', typography.small)}>
-                                    {copied === text ? (
-                                        <>
-                                            <CheckIcon size={16} className="text-navy" />
-                                            {r('copied')}
-                                        </>
-                                    ) : null}
-                                </span>
-                            </div>
-                        </dd>
-                    </div>
-                    <div className="min-w-0">
-                        <dt className={cn('text-ink-muted', typography.small)}>{r('phone_label')}</dt>
-                        <dd className="m-0">
-                            <a
-                                href={`tel:${c.phone}`}
-                                className={cn('inline-flex min-h-tap items-center gap-2 font-semibold text-navy underline-offset-4 hover:underline', focusRing)}
-                                {...track('rfq_phone_click')}
-                            >
-                                <PhoneIcon size={20} />
-                                <span className="sr-only">{copy.call}: </span>
-                                <bdi dir="ltr">{c.phoneDisplay}</bdi>
-                            </a>
-                        </dd>
-                    </div>
-                </dl>
+            {/* The address and the number as plain text, for buyers whose mail app does not open */}
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2 border-0 border-t border-solid border-line pt-6">
+                <span className="inline-flex min-h-tap items-center gap-2">
+                    <MailIcon size={20} className="text-navy" />
+                    <span className="sr-only">{r('email_label')}: </span>
+                    <bdi dir="ltr" className="select-all break-all font-semibold text-navy">
+                        {c.email}
+                    </bdi>
+                </span>
+                <a
+                    href={`tel:${c.phone}`}
+                    className={cn('inline-flex min-h-tap items-center gap-2 font-semibold text-navy underline-offset-4 hover:underline', focusRing)}
+                    {...track('rfq_phone_click')}
+                >
+                    <PhoneIcon size={20} />
+                    <span className="sr-only">
+                        {r('phone_label')}, {copy.call}:{' '}
+                    </span>
+                    <bdi dir="ltr">{c.phoneDisplay}</bdi>
+                </a>
             </div>
         </section>
     );

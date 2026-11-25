@@ -7,56 +7,33 @@
     "hero": {
         "eyebrow": "Start a partnership",
         "title": "Send your requirements",
-        "intro": "Open a prepared message, fill in the blank lines and send it from your company email or business WhatsApp. That lets us confirm who is asking; our emails always come from the azafco.com.eg domain."
+        "intro": "Tell us the fish, the quantity and the destination. We take it from there."
     },
     "short_hero": {
         "corporate_title": "Corporate and partnership enquiries",
-        "corporate_intro": "For partnerships, investment or other business topics. Write from your company email; no product details needed.",
+        "corporate_intro": "For partnerships, investment or anything else.",
         "documents_title": "Request documents",
-        "documents_intro": "Ask from your company email for product specifications or the company profile."
+        "documents_intro": "Ask for a product specification or the company profile."
     },
     "aside": {
-        "title": "What happens after you write to us",
-        "steps": [
-            "The export team reviews your requirements against the specification and current availability.",
-            "We confirm price, quantity, packing and terms with you in writing."
-        ],
+        "need": "All we need: the fish, the weight, the quantity and the destination.",
         "hours": "Office hours: {hours}",
-        "no_promise": "Sending your requirements does not commit you or us to an order.",
-        "prepare_title": "Helpful to have ready",
-        "prepare": [
-            "Species and weight grade",
-            "Quantity per shipment and how often",
-            "Destination country and delivery timing",
-            "Air or road freight, and arrival airport or border crossing",
-            "Preferred Incoterm and payment terms",
-            "Packing and labelling requirements"
-        ]
+        "official": "We only write from azafco.com.eg email and from {phone}."
     },
     "switch": {
-        "to_corporate": "For partnerships, investment or other topics: <link>Send a corporate enquiry</link>",
+        "to_corporate": "Something else, a partnership or an investment? <link>Write to us here</link>",
         "to_seafood": "Looking to buy fish? <link>Send your requirements instead</link>"
     },
     "request": {
-        "title": "Your message, ready to send",
-        "title_corporate": "Your enquiry, ready to send",
-        "title_documents": "Your document request, ready to send",
-        "intro": "Choose a channel. Each button opens a prepared message: complete the blank lines, then send it.",
-        "summary_title": "Already filled in from the page you came from",
-        "summary_note": "You can change any line in the message before you send it.",
+        "title": "Message us directly",
+        "title_corporate": "Message us directly",
+        "title_documents": "Ask for documents",
         "email_cta": "Email the export team",
         "email_role": "Export team · details and documents",
         "whatsapp_cta": "Message management on WhatsApp",
         "whatsapp_role": "Management · supply enquiries",
-        "attach_note": "If you have a specification or packing sheet, attach it to the email.",
-        "fallback_title": "If your email app does not open",
-        "fallback_text": "Write from your company email to this address and use this subject line and message.",
         "email_label": "Email",
-        "subject_label": "Subject",
-        "phone_label": "Phone (management)",
-        "message_label": "Message",
-        "copy": "Copy message",
-        "copied": "Message copied"
+        "phone_label": "Phone (management)"
     },
     "mail": {
         "greeting": "Hello AZAFCO export team,",
