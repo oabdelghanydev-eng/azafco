@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { IBM_Plex_Sans_Arabic, Manrope } from 'next/font/google';
 import { locales, localeConfig, ogImageMap, ogLocaleMap, Locale } from '@/i18n';
 import { companyConfig, getFigureValues } from '@/config/company.config';
@@ -130,10 +130,8 @@ export default async function RootLayout({
     // Enable static rendering
     setRequestLocale(locale);
 
-    // Client components get their copy as props from server wrappers. Only the
-    // catalogue search (CatalogueBrowser) still reads messages in the browser.
-    const allMessages = (await getMessages()) as Record<string, any>;
-    const messages = { catalogue_v2: { browser: allMessages.catalogue_v2?.browser ?? {} } };
+    // Client components get their copy as props from server wrappers, so no messages go to the browser.
+    const messages = {};
 
     // Get direction for the locale
     const dir = localeConfig[locale as Locale]?.dir || 'ltr';

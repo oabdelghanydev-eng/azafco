@@ -30,19 +30,6 @@ export const baseUrl = companyConfig.contact.baseUrl;
  */
 const UNVERIFIED_SCIENTIFIC = new Set<string>();
 
-/**
- * Extra search terms carried over from the live site's product list (origin/main,
- * locales/{ar,en}/data/products.json alt names). Search only: they are not shown,
- * so the visible names stay the short ones in data.products.<key>.
- */
-const SEARCH_ALIASES: Record<string, string[]> = {
-    'sea-bass': ['European bass', 'Mediterranean sea bass', 'قاروص متوسطي'],
-    mullet: ['Striped mullet'],
-    'common-carp': ['Carp', 'Mabrouk'],
-    catfish: ['Sharptooth catfish', 'سمك القط الأفريقي'],
-    'sea-bream': ['Gilthead bream'],
-};
-
 export interface CatalogueProduct {
     slug: string;
     href: string;
@@ -99,20 +86,6 @@ export function toCatalogueProduct(t: RootT, locale: string, p: Product): Catalo
 export async function getCatalogue(locale: string): Promise<CatalogueProduct[]> {
     const t = await getRootT(locale);
     return products.map((p) => toCatalogueProduct(t, locale, p));
-}
-
-/** Names in Arabic + English for every product, so either script finds a species. */
-export async function getSearchNames(): Promise<Record<string, string[]>> {
-    const [ar, en] = await Promise.all([getRootT('ar'), getRootT('en')]);
-    const out: Record<string, string[]> = {};
-    for (const p of products) {
-        const key = `data.products.${p.translationKey}`;
-        out[p.slug] = [ar, en].flatMap((t) => [t.has(`${key}.name`) ? t(`${key}.name`) : '', ...rawArray(t, `${key}.alt_names`)]);
-        if (!UNVERIFIED_SCIENTIFIC.has(p.slug)) out[p.slug].push(p.scientificName);
-        out[p.slug].push(...(SEARCH_ALIASES[p.slug] ?? []));
-        out[p.slug].push(p.slug.replace(/-/g, ' '));
-    }
-    return out;
 }
 
 export interface SpecView {

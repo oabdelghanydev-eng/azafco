@@ -1,18 +1,12 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Button, Card, MailIcon, PageHead, Section, SectionHeading, WhatsAppIcon, cn, typography } from '@/components/ui';
-import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
-import { SpeciesRow } from '@/components/v2/products/SpeciesRow';
-import { baseUrl, getCatalogue, getRootT, getSearchNames, getSpecView, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { companyConfig } from '@/config/company.config';
-import { productCategories } from '@/data/products';
-import { rfqHref, routes } from '@/lib/v2/routes';
-import { whatsappLink } from '@/lib/v2/whatsapp';
+import { PageHead, Section, cn, typography } from '@/components/ui';
+import SpeciesStage, { type StageItem } from '@/components/v2/products/SpeciesStage';
+import { baseUrl, getCatalogue, getRootT, getSpecView, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
+import { localeConfig, type Locale } from '@/i18n';
+import { routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
-
-/** id of the closing "custom requirements" heading */
-const CUSTOM_ID = 'catalogue-custom';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -28,36 +22,23 @@ export default async function CataloguePage({ params }: Props) {
     const tv = await getTranslations({ locale, namespace: 'v2' });
     const root = await getRootT(locale);
     // Published species only (eel is kept in data but unpublished)
-    const [catalogue, searchNames] = await Promise.all([getCatalogue(locale), getSearchNames()]);
+    const catalogue = await getCatalogue(locale);
 
-    const categories = productCategories
-        .filter((c) => catalogue.some((p) => p.category === c))
-        .map((c) => ({ value: c, label: t(`water.${c}`) }));
-
-    const items = catalogue.map((p, i) => {
-        // Origin, form and packing are the same for all 12 and said once in the hero intro;
-        // each card keeps only what differs: the indicative weight grades from data/specs.ts.
+    // Origin, form and packing are the same for all 12 and said once in the hero intro;
+    // each species keeps only what differs: names, water type and the indicative weight grades (data/specs.ts).
+    const items: StageItem[] = catalogue.map((p, i) => {
         const spec = getSpecView(root, locale, p.slug);
-        const facts: { label: string; value: string | string[] }[] = spec.grades.length
-            ? [{ label: t('card.grades'), value: spec.grades }]
-            : [{ label: t('card.grades_label'), value: t('card.grades_none') }];
         return {
             slug: p.slug,
-            category: p.category,
-            forms: spec.forms.map((f) => f.kind),
-            terms: [p.name, ...p.altNames, ...(searchNames[p.slug] ?? [])],
-            card: (
-                <SpeciesRow
-                    index={i + 1}
-                    name={p.name}
-                    scientificName={p.scientificName}
-                    altNames={p.altNames}
-                    href={p.href}
-                    image={p.image}
-                    chips={[t(`water.${p.category}`)]}
-                    facts={facts}
-                />
-            ),
+            href: p.href,
+            num: String(i + 1).padStart(2, '0'),
+            name: p.name,
+            scientificName: p.scientificName,
+            altNames: p.altNames,
+            water: t(`water.${p.category}`),
+            gradesLabel: spec.grades.length ? t('card.grades') : t('card.grades_label'),
+            grades: spec.grades.length ? spec.grades : [t('card.grades_none')],
+            image: p.image,
         };
     });
 
@@ -86,87 +67,37 @@ export default async function CataloguePage({ params }: Props) {
         },
     ];
 
-    // Smallest first step for a cold buyer: WhatsApp to management, prefilled
-    const { email } = companyConfig.contact;
-    const whatsappHref = whatsappLink(t('hero.whatsapp_message'));
-    const mailHref = `mailto:${email}?subject=${encodeURIComponent(t('custom.email_subject'))}`;
-
     return (
         <>
             {schemas.map((s, i) => (
                 <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(s) }} />
             ))}
 
+            {/* No contact buttons here (owner, 25 Nov 2026): a visitor who opens this page came for the fish;
+                the header, the footer and the floating WhatsApp button carry the contact. */}
             <PageHead
+                compact
                 crumbs={[{ label: t('breadcrumb') }]}
                 eyebrow={t('hero.eyebrow')}
                 title={t('hero.title')}
                 titleId="catalogue-title"
                 intro={t('hero.intro')}
-            >
-                <div className="mt-7 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                    <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'catalogue_hero_partnership' }}>
-                        {t('hero.primary')}
-                    </Button>
-                    <Button
-                        href={whatsappHref}
-                        variant="outline"
-                        size="lg"
-                        stretch="phone"
-                        icon={<WhatsAppIcon size={20} />}
-                        newTabLabel={t('new_tab')}
-                        dataAttrs={{ 'data-cta': 'catalogue_hero_whatsapp' }}
-                    >
-                        {t('hero.secondary')}
-                    </Button>
-                </div>
-            </PageHead>
+            />
 
-            {/* The species register: the one list on this page */}
-            <Section variant="white" labelledBy="catalogue-species">
-                <SectionHeading id="catalogue-species" title={t('grid.title')} />
-                <CatalogueBrowser items={items} categories={categories} />
+            {/* The species stage: the one list on this page (pick a species, see it large with its grades) */}
+            <Section variant="navy" spacing="sm" labelledBy="catalogue-species" className="!pt-0">
+                <h2 id="catalogue-species" className="sr-only">
+                    {t('grid.title')}
+                </h2>
+                <SpeciesStage
+                    items={items}
+                    rtl={localeConfig[locale as Locale]?.dir === 'rtl'}
+                    pickLabel={t('grid.title')}
+                    openLabel={tv('cta.view_specifications')}
+                />
 
                 {/* Owner, 13 Nov 2026: the 12 are the main species; others on request */}
-                <p className={cn('m-0 mt-8 border-0 border-s-2 border-solid border-gold ps-4 font-medium text-fg', typography.lead)}>
-                    {t('grid.more_species')}
-                </p>
-            </Section>
-
-            {/* Closing: custom requirements (accent card; the G footer carries the contact block).
-                The steps after the buyer writes live on /requirements only. */}
-            <Section variant="offwhite" labelledBy={CUSTOM_ID}>
-                <Card accent padding="lg">
-                    <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-                        <div className="lg:col-span-8">
-                            <h2 id={CUSTOM_ID} className={cn('v2-heading m-0 scroll-mt-28', typography.h2Sm)}>
-                                {t('custom.title')}
-                            </h2>
-                            <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5">
-                                <Button
-                                    href={rfqHref({ type: 'specifications' })}
-                                    size="lg"
-                                    stretch="phone"
-                                    arrow
-                                    dataAttrs={{ 'data-cta': 'catalogue_requirements' }}
-                                >
-                                    {t('custom.form')}
-                                </Button>
-                                {/* WhatsApp (management) is in the hero and in the G footer just below */}
-                                <Button
-                                    href={mailHref}
-                                    variant="outline"
-                                    size="lg"
-                                    stretch="phone"
-                                    icon={<MailIcon size={20} />}
-                                    dataAttrs={{ 'data-cta': 'catalogue_email' }}
-                                >
-                                    {t('custom.email')}
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </Card>
+                <p className={cn('m-0 mt-8 font-medium text-fg', typography.lead)}>{t('grid.more_species')}</p>
             </Section>
         </>
     );
