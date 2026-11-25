@@ -50,6 +50,13 @@ export interface GHeaderClientProps {
  * There is one language list: a full-width panel under the header on phones,
  * a dropdown from lg.
  */
+/** Gold ring on the navy block (below lg), navy ring on white from lg */
+const FOCUS_BAR =
+    'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold lg:focus-visible:outline-navy';
+/** One layer of the diagonal block: anchored to the end edge, slanted on its inner edge */
+const CUT =
+    'absolute inset-y-0 end-0 block ltr:[clip-path:polygon(0_0,100%_0,100%_100%,40px_100%)] rtl:[clip-path:polygon(0_0,100%_0,calc(100%-40px)_100%,0_100%)]';
+
 export default function GHeaderClient({ locale, copy, langs, langName, whatsappHref, phone }: GHeaderClientProps) {
     const pathname = usePathname();
     const [lang, setLang] = useState(false);
@@ -92,7 +99,15 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
 
     return (
         <header ref={rootRef} className="g-font relative z-header border-b border-line-soft bg-white text-ink">
-            <div className="mx-auto box-border flex max-w-v2 items-center justify-between gap-3 py-2.5 pe-3 ps-5 lg:flex-wrap lg:gap-x-8 lg:gap-y-3 lg:px-8 lg:py-3.5">
+            <div className="relative isolate mx-auto box-border flex max-w-v2 items-center justify-between gap-3 py-[9px] pe-3 ps-[18px] lg:flex-wrap lg:gap-x-8 lg:gap-y-3 lg:px-8 lg:py-3.5">
+                {/* Phones and tablets (below lg), owner's pick K3 of 25 Nov 2026: the controls sit on a navy block cut
+                    on a diagonal, with a white and a gold stripe along the cut. Mirrored in LTR. Behind the row (-z). */}
+                <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 end-0 -z-10 w-[196px] lg:hidden">
+                    <span className={`${CUT} w-full bg-gold`} />
+                    <span className={`${CUT} w-[180px] bg-white`} />
+                    <span className={`${CUT} w-[174px] bg-navy-900`} />
+                </div>
+
                 <Link href={routes.home} aria-label={copy.homeLabel} className={`shrink-0 rounded-card ${FOCUS}`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -100,7 +115,7 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                         alt={copy.logoAlt}
                         width={89}
                         height={60}
-                        className="block h-11 w-auto lg:h-[60px]"
+                        className="block h-[54px] w-auto lg:h-[60px]"
                     />
                 </Link>
 
@@ -113,7 +128,7 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                     ))}
                 </nav>
 
-                <div className="flex shrink-0 items-center lg:relative lg:gap-2.5">
+                <div className="flex shrink-0 items-center gap-2 lg:relative lg:gap-2.5">
                     {/* WhatsApp to management (lg+): icon-only circle at lg, label from xl, and from 1440px the
                         number instead of the label (label plus number wraps the row in de and es) */}
                     <a
@@ -144,14 +159,18 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                             setMenu(false);
                         }}
                         className={cn(
-                            'inline-flex h-12 cursor-pointer items-center gap-[7px] rounded-full border-0 bg-transparent px-2.5 font-bold leading-none text-navy transition-colors hover:bg-surface-offwhite lg:h-[46px] lg:gap-[9px] lg:border-[1.5px] lg:border-solid lg:border-line lg:bg-white lg:px-[18px] lg:hover:border-navy lg:hover:bg-white',
+                            'inline-flex h-12 cursor-pointer items-center gap-[5px] rounded-full border-0 bg-transparent px-2 font-bold leading-none text-white transition-colors hover:bg-white/10 lg:h-[46px] lg:gap-[9px] lg:border-[1.5px] lg:border-solid lg:border-line lg:bg-white lg:px-[18px] lg:text-navy lg:hover:border-navy lg:hover:bg-white',
                             typography.small,
-                            FOCUS,
+                            FOCUS_BAR,
                         )}
                     >
-                        <GlobeIcon size={20} />
-                        {langName}
-                        <span aria-hidden="true" className={`hidden transition-transform motion-reduce:transition-none lg:inline-flex ${lang ? 'rotate-180' : ''}`}>
+                        <GlobeIcon size={20} className="hidden lg:block" />
+                        {/* Below lg the language code ("AR"); the full name is in the list and in aria-label */}
+                        <span dir="ltr" className="font-extrabold tracking-wider lg:hidden">
+                            {locale.toUpperCase()}
+                        </span>
+                        <span className="hidden lg:inline">{langName}</span>
+                        <span aria-hidden="true" className={`inline-flex text-gold transition-transform motion-reduce:transition-none lg:text-navy ${lang ? 'rotate-180' : ''}`}>
                             <ChevronDownIcon size={16} />
                         </span>
                     </button>
@@ -160,18 +179,29 @@ export default function GHeaderClient({ locale, copy, langs, langName, whatsappH
                         type="button"
                         aria-expanded={menu}
                         aria-controls={menu ? 'g-nav-m' : undefined}
+                        aria-label={menu ? copy.menuClose : copy.menuOpen}
                         onClick={() => {
                             setMenu((v) => !v);
                             setLang(false);
                         }}
                         className={cn(
-                            'inline-flex h-12 cursor-pointer items-center gap-2.5 rounded-control border-0 bg-transparent px-3 font-bold leading-none text-navy xl:hidden',
+                            'inline-flex h-[46px] w-[46px] cursor-pointer items-center justify-center gap-2.5 rounded-full border-0 bg-gold p-0 font-bold leading-none text-navy-900 transition-colors hover:bg-gold-400 lg:h-12 lg:w-auto lg:rounded-control lg:bg-transparent lg:px-3 lg:text-navy lg:hover:bg-transparent xl:hidden',
                             typography.small,
-                            FOCUS,
+                            FOCUS_BAR,
                         )}
                     >
-                        {menu ? copy.menuClose : copy.menuOpen}
-                        {menu ? <CloseIcon size={24} /> : <MenuIcon size={24} />}
+                        <span className="hidden lg:inline">{menu ? copy.menuClose : copy.menuOpen}</span>
+                        {menu ? (
+                            <CloseIcon size={24} />
+                        ) : (
+                            <>
+                                {/* Three heavy lines, the last one short: the phone menu mark */}
+                                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" className="lg:hidden rtl:-scale-x-100">
+                                    <path d="M4 7.5h20M4 14h20M4 20.5h11" />
+                                </svg>
+                                <MenuIcon size={24} className="hidden lg:block" />
+                            </>
+                        )}
                     </button>
 
                     {/* One language list: full-width panel under the header on phones (the header is the
