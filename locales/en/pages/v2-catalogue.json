@@ -8,16 +8,14 @@
     "hero": {
         "eyebrow": "Our fish",
         "title": "12 main fish types, fresh from Egypt",
-        "intro": "Graded by weight per piece and packed at our plant in Motobas, Kafr El Sheikh. Each species page shows its specification, HS / CN code and, where we publish them, indicative weight grades.",
+        "intro": "Whole and fresh chilled, graded by weight and packed on ice in EPS boxes at our plant in Motobas, Kafr El Sheikh.",
         "primary": "Start a partnership",
         "secondary": "Message management on WhatsApp",
         "whatsapp_message": "Hello AZAFCO International, we are looking at your fish list. Species, destination and quantity:"
     },
     "grid": {
-        "eyebrow": "Species",
         "title": "Species we supply",
-        "intro": "All species: origin Egypt, whole and fresh chilled, packed on ice in EPS foam boxes. Search by trade name, Egyptian market name or scientific name.",
-        "more_species": "These are our main, most-requested species; we supply other species on request."
+        "more_species": "We also supply other species on request."
     },
     "water": {
         "freshwater": "Freshwater",
@@ -28,56 +26,36 @@
         "image_alt": "Whole {name}, side view",
         "grades": "Weight grades (indicative)",
         "grades_label": "Weight grades",
-        "grades_none": "Send us your target range"
+        "grades_none": "On request"
     },
     "browser": {
         "search_label": "Search species",
         "search_placeholder": "e.g. tilapia, sea bass, بوري",
-        "search_hint": "Results update as you type.",
         "clear_search": "Clear search",
         "water_type": "Water type",
         "all": "All species",
         "result_count": "{count, plural, =0 {No species found} =1 {1 species of {total}} other {# species of {total}}}",
         "reset": "Clear filters",
         "empty_title": "No species match your search",
-        "empty_text": "We could not find \"{query}\" in this list. Check the spelling or clear the filters. We supply other species on request, so you can also send us the species and specification you need.",
         "form_type": "Product form",
         "all_forms": "All forms"
     },
     "custom": {
-        "eyebrow": "Custom requirements",
         "title": "Need another weight grade or packing?",
-        "intro": "Send us the specification you need. We review other weight grades or packing against our actual capability and the quantities available, and we confirm only what we can supply.",
         "form": "Send your requirements",
         "email": "Email the export team",
         "email_subject": "Fish specification for our market"
-    },
-    "proof": {
-        "eyebrow": "How we work",
-        "title": "Check the process before you order",
-        "processing_title": "Packing and shipping",
-        "processing_text": "How fish move from harvest to washing, icing, grading, packing and inspection, then export.",
-        "processing_link": "See packing and shipping",
-        "quality_title": "Quality checks",
-        "quality_text": "How each order is checked against the agreed specification before the boxes are closed.",
-        "quality_link": "See quality checks",
-        "importers_title": "For importers",
-        "importers_text": "How an enquiry becomes a confirmed order.",
-        "importers_link": "Read the importer process"
     },
     "detail": {
         "meta_title": "Fresh {name} from Egypt: wholesale supplier",
         "meta_title_short": "Fresh {name} from Egypt",
         "meta_description": "{name} ({scientific}) from Egypt for importers and distributors: whole and fresh chilled, on ice in EPS foam boxes, with HS / CN code.",
         "meta_description_short": "{name} from Egypt for importers and distributors: sold whole and fresh chilled, packed on ice in EPS foam boxes. Specification and HS / CN code.",
-        "eyebrow": "Wholesale supply from Egypt",
         "h1": "{name} from Egypt, whole and fresh chilled",
-        "summary_grades": "Indicative weight grades: {grades}.",
         "also_known_as": "Also known as",
         "primary": "Send your requirements",
         "secondary": "View specifications",
-        "spec_eyebrow": "Specification",
-        "spec_title": "Specification card",
+        "spec_title": "Specification",
         "spec_caption": "{name}: specification",
         "trade_name": "Trade name",
         "scientific_name": "Scientific name",
@@ -94,19 +72,10 @@
         "hs_code": "HS / CN code",
         "cn_label": "EU CN",
         "hs_guide": "See the import guide",
-        "related_eyebrow": "Other species",
         "related_title": "Related species",
-        "markets_eyebrow": "Export markets",
-        "markets_title": "AZAFCO's export markets",
+        "markets_title": "Our export markets",
         "markets_link": "About our markets",
-        "notes": {
-            "mullet": "Grey mullet (bouri) is a separate product from our thinlip mullet (tobar). Tell us which one you need.",
-            "thinlip-mullet": "Thinlip mullet (tobar) is a separate product from our grey mullet (bouri). Tell us which one you need.",
-            "common-carp": "Common carp (qishra) and mirror carp (mabrouka) are two forms of the same species, sold as separate products. Tell us which one you need.",
-            "mirror-carp": "Mirror carp (mabrouka) and common carp (qishra) are two forms of the same species, sold as separate products. Tell us which one you need."
-        },
         "contact": {
-            "eyebrow": "Direct contact",
             "title": "{name}: talk to us",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Management · supply enquiries",
@@ -114,8 +83,7 @@
             "email_title": "Email",
             "email_sub": "Export team · details and documents",
             "email_subject": "{name}: specifications",
-            "email_body": "Species: {name}\nWeight grade:\nPacking and net weight:\nVolume per shipment:\nDestination (country, city):\nDocuments required:\nPreferred delivery window:\n",
-            "form_link": "Send your requirements",
+            "email_body": "Fish: {name}\nWeight per fish:\nQuantity:\nDestination:\n",
             "new_tab": "(opens in a new tab)"
         }
     },

@@ -4,7 +4,7 @@
     "workingHoursNote": "WhatsApp: management · supply enquiries",
     "officialChannels": {
         "title": "Official channels",
-        "text": "Our official channels are WhatsApp {phone} (management) and email from the azafco.com.eg domain (export team: {email}). If you receive bank details or payment instructions from any other number or address, confirm them with us on one of these channels before paying."
+        "text": "We write only from WhatsApp {phone} and from azafco.com.eg email ({email}). If bank or payment details reach you from any other number or address, check with us before you pay."
     },
     "addresses": {
         "main": {

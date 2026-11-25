@@ -28,7 +28,7 @@ export default function ContactRoutes() {
 
     return (
         <>
-            <SectionHeading id="contact-routes-title" layout="split" eyebrow={t('eyebrow')} title={t('legend')} intro={t('intro')} />
+            <SectionHeading id="contact-routes-title" layout="split" title={t('legend')} />
             {/* Two columns only from xl: lg shows full-width rows with the action beside the text.
                 At xl each card is a subgrid over four shared rows (number, title, text, action), so a title
                 that wraps to two lines in one card keeps the texts and actions of both aligned. */}

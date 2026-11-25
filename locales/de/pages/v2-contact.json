@@ -5,21 +5,18 @@
     },
     "breadcrumb": "Kontakt",
     "hero": {
-        "eyebrow": "Kontakt",
+        "eyebrow": "Partnerschaft starten",
         "title": "Kontakt zu AZAFCO International",
-        "intro": "Schreiben Sie der Geschäftsleitung per WhatsApp, um Lieferungen zu besprechen. Senden Sie dem Exportteam eine E-Mail für Spezifikationen und Dokumente.",
         "actions": {
             "whatsapp": "Geschäftsleitung per WhatsApp schreiben",
             "email": "E-Mail an das Exportteam"
         }
     },
     "channels": {
-        "eyebrow": "Direkte Kanäle",
-        "title": "Wählen Sie den passenden Kanal für Ihr Anliegen",
-        "intro": "Eine Nummer für die Geschäftsleitung per WhatsApp und Telefon, eine E-Mail-Adresse für das Exportteam.",
+        "title": "WhatsApp, E-Mail und Telefon",
         "whatsapp": {
             "title": "WhatsApp",
-            "sub": "Direkt an die Geschäftsleitung"
+            "sub": "Geschäftsleitung · Lieferanfragen"
         },
         "email": {
             "title": "E-Mail",
@@ -27,46 +24,35 @@
         },
         "phone": {
             "title": "Telefon",
-            "sub": "Geschäftsleitung unter derselben Nummer anrufen"
+            "sub": "Geschäftsleitung, dieselbe Nummer"
         },
         "hours": "Bürozeiten",
         "vcard": {
-            "title": "Kontaktdaten speichern",
-            "text": "Eine Kontaktkarte (vCard), die die Nummer der Geschäftsleitung und die E-Mail-Adresse des Exportteams in Ihr Telefon übernimmt.",
-            "action": "Kontaktkarte herunterladen"
+            "title": "Kontaktkarte",
+            "action": "vCard herunterladen"
         },
         "new_tab": "(öffnet in neuem Tab)"
     },
     "routes": {
-        "eyebrow": "Anforderungen senden",
-        "legend": "Worum geht es bei Ihrer Anfrage?",
-        "intro": "Jede Option bereitet eine Nachricht vor, die Sie von Ihrer Firmen-E-Mail oder Ihrem WhatsApp aus senden. So wissen wir, von wem die Anfrage kommt.",
+        "legend": "Lieferung und Dokumente",
         "seafood_title": "Fischlieferung",
-        "seafood_text": "Für Importeure und Einkaufsteams: Fischart, Gewichtsklasse, Verpackung, Menge, Zielort und Zeitplan.",
+        "seafood_text": "Zum Kauf unseres Fischs für Import oder Vertrieb.",
         "seafood_action": "Anforderungen senden",
         "documents_title": "Dokumente",
-        "documents_text": "Produktspezifikationen oder das Unternehmensprofil. Eine kurze Anfrage: Fischart oder Menge sind nicht nötig.",
+        "documents_text": "Produktspezifikationen oder das Unternehmensprofil.",
         "documents_action": "Dokumente anfordern",
-        "corporate_link": "Partnerschaften, Investitionen oder andere Themen? <link>Unternehmensanfrage senden</link>"
+        "corporate_link": "Partnerschaft, Investition oder etwas anderes: <link>Schreiben Sie uns hier</link>"
     },
     "locations": {
-        "eyebrow": "Standorte",
         "title": "Hauptsitz und Werk",
         "factory": "Werk",
         "office": "Hauptsitz",
         "map_open": "In Google Maps öffnen",
         "map_title_factory": "Karte des Werks von AZAFCO International in Motobas",
-        "map_title_office": "Karte des Hauptsitzes von AZAFCO International",
-        "map_note": "Die Karten werden von Google Maps geladen."
+        "map_title_office": "Karte des Hauptsitzes von AZAFCO International"
     },
     "official": {
-        "eyebrow": "Offizielle Angaben",
-        "title": "Unsere Registrierung und offiziellen Kanäle"
-    },
-    "privacy": {
-        "title": "Wie wir Ihre Daten verwenden",
-        "text": "Die Kontaktdaten und Anforderungen, die Sie uns senden, verwenden wir nur, um Ihre Anfrage zu beantworten und daraus folgende Geschäfte abzuwickeln, wie in unserer Datenschutzerklärung beschrieben.",
-        "link": "Datenschutzerklärung lesen"
+        "title": "Registrierung und offizielle Kanäle"
     },
     "trust": {
         "title": "Eingetragenes Unternehmen",

@@ -16,25 +16,15 @@
         "primary": "Démarrer un partenariat",
         "secondary": "Voir comment nous conditionnons et expédions"
     },
-    "practice": {
-        "eyebrow": "À chaque commande",
-        "title": "Du lavage au contrôle",
-        "intro": "Dans notre usine de Motobas, nous lavons, mettons sous glace, calibrons, conditionnons et contrôlons le poisson. Le contrôle est la dernière étape avant l’expédition.",
-        "link": "Voir les cinq étapes, de l’élevage à l’export"
-    },
     "certs": {
-        "eyebrow": "Certificats",
-        "title": "Des certificats ISO pour nos systèmes de management",
-        "statement": "Nous détenons des certificats ISO délivrés par TÜV AUSTRIA.",
-        "documents": "Pour les documents sanitaires et de sécurité alimentaire exigés par votre marché, notre équipe export vous confirme, avant votre commande, ceux qui accompagnent chaque expédition."
+        "title": "Certificats ISO et agrément d’exportation vers l’UE",
+        "statement": "Nous détenons des certificats ISO délivrés par TÜV AUSTRIA."
     },
     "next": {
-        "text": "Indiquez-nous votre destination et les documents dont votre équipe qualité a besoin.",
         "button": "Se renseigner sur les documents d’expédition"
     },
     "faq": {
-        "eyebrow": "Questions d’acheteurs",
-        "title": "Questions des équipes achats et qualité",
+        "title": "Questions des équipes qualité",
         "q1": "Pour quelles normes ISO êtes-vous certifiés ?",
         "a1": "Nous détenons les certificats ISO 9001:2015 pour le management de la qualité, ISO 14001:2015 pour le management environnemental et ISO 45001:2018 pour la santé et la sécurité au travail, délivrés par TÜV AUSTRIA."
     },

@@ -11,29 +11,27 @@
     "hero": {
         "kicker": "Verpackung und Versand",
         "title": "Fischverarbeitung und Kühlkette aus unserem Werk in Motobas",
-        "intro": "In unserem Werk in Motobas, Kafr El Sheikh, waschen, beeisen, sortieren, verpacken und prüfen wir den Fisch aus eigener Zucht und Zukauf.",
         "imageAlt": "Ganzer frischer Fisch auf Scherbeneis in weißen Boxen, dahinter Personal in Hygienekleidung bei der Arbeit",
         "primary": "Partnerschaft starten",
         "secondary": "Unsere Qualitätsprüfung ansehen"
     },
     "chain": {
-        "eyebrow": "So arbeiten wir",
-        "title": "Fünf Stufen, vom Teich bis zur Palette",
+        "title": "Fünf Stufen von der Zucht bis zum Export",
         "stageLabel": "Stufe {n}",
         "stages": {
             "farming": {
                 "title": "Zucht und Zukauf",
-                "text": "Wir züchten Fisch selbst und kaufen zusätzlich Fisch von anderen Erzeugern.",
+                "text": "Wir züchten eigenen Fisch und kaufen bei anderen Erzeugern zu.",
                 "alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
             },
             "harvest": {
                 "title": "Abfischen",
-                "text": "Der Fisch wird abgefischt und in unser Werk in Motobas, Kafr El Sheikh, gebracht.",
+                "text": "Abgefischt und in unser Werk in Motobas gebracht.",
                 "alt": "Zwei Arbeiter ziehen ein Netz voller Tilapia ans Ufer eines Erdteichs"
             },
             "packing": {
                 "title": "Waschen, Beeisen und Verpacken",
-                "text": "Der Fisch wird gewaschen, beeist, nach Gewicht sortiert und ganz auf Eis in EPS-Styroporboxen verpackt.",
+                "text": "Gewaschen, beeist, nach Gewicht sortiert und ganz auf Eis in EPS-Styroporboxen verpackt.",
                 "alt": "Hände in Handschuhen legen eine ganze Tilapia in eine Kiste mit Scherbeneis auf einem Stahltisch"
             },
             "inspection": {
@@ -43,17 +41,16 @@
             },
             "export": {
                 "title": "Export",
-                "text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht.",
+                "text": "Per Luft- oder Straßenfracht.",
                 "alt": "Ein Arbeiter schiebt an einer Laderampe eine Palette mit weißen Boxen in einen Kühl-Lkw"
             }
         },
-        "plantMap": "Unser Werk auf Google Maps ansehen",
+        "plantMap": "Unser Werk auf Google Maps",
         "newTab": "(öffnet in neuem Tab)"
     },
     "logistics": {
-        "eyebrow": "Logistik",
-        "title": "Eigene Logistik und Packkapazität",
-        "text": "Wir betreiben eigene Kühl-Lkw, Kühlhäuser und eigene Logistik.",
+        "title": "Lkw, Kühlhäuser und Kapazität",
+        "text": "Wir betreiben eigene Kühl-Lkw und Kühlhäuser.",
         "capacity": "Wir verpacken bis zu 2.500 t/Monat. Ein Kühl-Lkw fasst 20 t, und an manchen Tagen verlassen mehr als fünf davon unser Werk."
     },
     "pending": {

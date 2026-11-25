@@ -11,29 +11,27 @@
     "hero": {
         "kicker": "Conditionnement et expédition",
         "title": "Transformation du poisson et chaîne du froid, depuis notre usine de Motobas",
-        "intro": "Dans notre usine de Motobas, à Kafr el-Cheikh, nous lavons, mettons sous glace, calibrons, conditionnons et contrôlons le poisson que nous élevons et achetons.",
         "imageAlt": "Poissons entiers frais sur glace pilée dans des caisses blanches, avec du personnel en tenue d’hygiène au travail à l’arrière-plan",
         "primary": "Démarrer un partenariat",
         "secondary": "Voir nos contrôles qualité"
     },
     "chain": {
-        "eyebrow": "Notre façon de travailler",
-        "title": "Cinq étapes, de l’étang à la palette",
+        "title": "Cinq étapes, de l’élevage à l’export",
         "stageLabel": "Étape {n}",
         "stages": {
             "farming": {
                 "title": "Élevage et approvisionnement",
-                "text": "Nous élevons nous-mêmes du poisson et en achetons aussi auprès d’autres producteurs.",
+                "text": "Nous élevons notre propre poisson et en achetons auprès d’autres producteurs.",
                 "alt": "Vue aérienne de bassins piscicoles en terre avec aérateurs et palmiers"
             },
             "harvest": {
                 "title": "Récolte",
-                "text": "Le poisson est pêché au filet et acheminé vers notre usine de Motobas, à Kafr el-Cheikh.",
+                "text": "Récolté au filet et acheminé vers notre usine de Motobas.",
                 "alt": "Deux ouvriers tirant un filet plein de tilapias vers la berge d’un étang en terre"
             },
             "packing": {
                 "title": "Lavage, glaçage et conditionnement",
-                "text": "Le poisson est lavé, mis sous glace, calibré au poids et conditionné entier sous glace, en caisses de polystyrène expansé.",
+                "text": "Lavé, mis sous glace, calibré au poids et conditionné entier sous glace en caisses de polystyrène expansé.",
                 "alt": "Mains gantées déposant un tilapia entier dans une caisse de glace pilée sur une table en inox"
             },
             "inspection": {
@@ -43,17 +41,16 @@
             },
             "export": {
                 "title": "Export",
-                "text": "Nos propres camions frigorifiques, puis fret aérien ou routier.",
+                "text": "Par fret aérien ou routier.",
                 "alt": "Ouvrier chargeant une palette de caisses blanches dans un camion frigorifique, à un quai de chargement"
             }
         },
-        "plantMap": "Voir notre usine sur Google Maps",
+        "plantMap": "Notre usine sur Google Maps",
         "newTab": "(s’ouvre dans un nouvel onglet)"
     },
     "logistics": {
-        "eyebrow": "Logistique",
-        "title": "Notre logistique et notre capacité de conditionnement",
-        "text": "Nous disposons de nos propres camions frigorifiques, entrepôts frigorifiques et moyens logistiques.",
+        "title": "Camions, entrepôts frigorifiques et capacité",
+        "text": "Nous avons nos propres camions et entrepôts frigorifiques.",
         "capacity": "Nous conditionnons jusqu’à 2 500 t/mois. Un camion frigorifique transporte 20 t, et certains jours, plus de cinq quittent notre usine."
     },
     "pending": {

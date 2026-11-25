@@ -4,7 +4,7 @@
         "alt_names": [
             "Nile tilapia"
         ],
-        "description": "Tilapia, also sold as Nile tilapia, is a freshwater fish.",
+        "description": "Nile tilapia, graded by weight and packed on ice.",
         "sizes": [
             "Small (200–300 g)",
             "Medium (300–500 g)",
@@ -19,7 +19,7 @@
             "European sea bass",
             "Branzino"
         ],
-        "description": "Sea bass, also sold as European sea bass or branzino, is a marine fish.",
+        "description": "European sea bass, also sold as branzino, graded by weight and packed on ice.",
         "sizes": [
             "Medium (400–600 g)",
             "Large (600 g and above)"
@@ -33,7 +33,7 @@
             "Flathead grey mullet",
             "Bouri"
         ],
-        "description": "Grey mullet, known in Egypt as bouri, is a brackish-water fish.",
+        "description": "Grey mullet, sold in Egypt as bouri, graded by weight and packed on ice; not the same fish as our thinlip mullet (tobar).",
         "sizes": [
             "Small (150–250 g)",
             "Medium (250–400 g)"
@@ -47,7 +47,7 @@
             "White amur",
             "Hashayesh"
         ],
-        "description": "Grass carp, known in Egypt as hashayesh, is a freshwater carp.",
+        "description": "Grass carp, sold in Egypt as hashayesh and abroad as white amur, graded by weight and packed on ice.",
         "sizes": [
             "Medium (300–500 g)",
             "Large (500 g and above)"
@@ -61,7 +61,7 @@
             "Scaled carp",
             "Qishra"
         ],
-        "description": "Common carp, known in Egypt as qishra, is a fully scaled freshwater carp.",
+        "description": "Fully scaled carp, sold in Egypt as qishra, graded by weight and packed on ice; we sell mirror carp (mabrouka) separately.",
         "sizes": [
             "Large (1–2 kg)",
             "Jumbo (2 kg and above)"
@@ -76,7 +76,7 @@
             "North African catfish",
             "Karmout"
         ],
-        "description": "Catfish, known in Egypt as karmout, is the African catfish, a freshwater fish.",
+        "description": "African catfish, sold in Egypt as karmout, graded by weight and packed on ice.",
         "sizes": [
             "Medium (500–800 g)",
             "Large (800 g and above)"
@@ -91,7 +91,7 @@
             "Croaker",
             "Corvina"
         ],
-        "description": "Meagre, known in Egypt as lout, is a marine fish.",
+        "description": "Meagre, sold in Egypt as lout and abroad as croaker or corvina, graded by weight and packed on ice.",
         "sizes": [
             "Medium (400–600 g)",
             "Large (600 g and above)"
@@ -105,7 +105,7 @@
             "Thinlip grey mullet",
             "Tobar"
         ],
-        "description": "Thinlip mullet, known in Egypt as tobar, is a brackish-water mullet.",
+        "description": "Thinlip mullet, sold in Egypt as tobar and packed on ice; not the same fish as our grey mullet (bouri).",
         "sizes": [],
         "packaging": "EPS foam box",
         "category": "Brackish water"
@@ -116,7 +116,7 @@
             "Bayad",
             "Nile bagrid catfish"
         ],
-        "description": "Bayad catfish is a freshwater catfish native to the Nile.",
+        "description": "Bayad, a catfish native to the Nile, packed on ice.",
         "sizes": [],
         "packaging": "EPS foam box",
         "category": "Freshwater"
@@ -124,7 +124,7 @@
     "silver_carp": {
         "name": "Silver carp",
         "alt_names": [],
-        "description": "Silver carp is a freshwater carp.",
+        "description": "Silver carp, a freshwater carp, packed on ice.",
         "sizes": [],
         "packaging": "EPS foam box",
         "category": "Freshwater"
@@ -135,7 +135,7 @@
             "Common carp (mirror)",
             "Mabrouka"
         ],
-        "description": "Mirror carp, known in Egypt as mabrouka, is a freshwater carp with only a few large scales.",
+        "description": "Carp with only a few large scales, sold in Egypt as mabrouka and packed on ice; we sell common carp (qishra) separately.",
         "sizes": [],
         "packaging": "EPS foam box",
         "category": "Freshwater"
@@ -146,7 +146,7 @@
             "Gilthead sea bream",
             "Dorade"
         ],
-        "description": "Sea bream, also sold as gilthead sea bream or dorade, is a marine fish.",
+        "description": "Gilthead sea bream, also sold as dorade, packed on ice.",
         "sizes": [],
         "packaging": "EPS foam box",
         "category": "Marine"

@@ -4,24 +4,19 @@
     },
     "eyebrow": "Fehler 404",
     "title": "Diese Seite wurde nicht gefunden",
-    "intro": "Der Link ist vielleicht veraltet, oder die Seite wurde verschoben. Diese Seiten helfen Ihnen weiter.",
-    "links_title": "Wie es weitergeht",
+    "intro": "Der Link ist vielleicht veraltet, oder die Seite wurde verschoben.",
     "links": [
         {
-            "title": "Unser Fisch",
-            "text": "Die 12 Hauptarten und ihre Seiten."
+            "title": "Unser Fisch"
         },
         {
-            "title": "Anforderungen senden",
-            "text": "Fischart, Menge und Zielort, direkt an das Exportteam."
+            "title": "Anforderungen senden"
         },
         {
-            "title": "Unsere Märkte",
-            "text": "Wohin wir heute liefern und was geplant ist."
+            "title": "Unsere Märkte"
         },
         {
-            "title": "Kontakt",
-            "text": "WhatsApp, E-Mail, Büro und Werk."
+            "title": "Kontakt"
         }
     ],
     "home": "Zurück zur Startseite"

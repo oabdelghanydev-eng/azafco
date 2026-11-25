@@ -26,8 +26,6 @@ export { default as Breadcrumbs } from './Breadcrumbs';
 export type { BreadcrumbsProps, Crumb } from './Breadcrumbs';
 export { default as ProofStrip } from './ProofStrip';
 export type { ProofStripProps, ProofItem } from './ProofStrip';
-export { default as ProcessSteps } from './ProcessSteps';
-export type { ProcessStepsProps, ProcessStep } from './ProcessSteps';
 export { default as FeatureGrid } from './FeatureGrid';
 export type { FeatureGridProps, Feature } from './FeatureGrid';
 export { default as ProductCard } from './ProductCard';

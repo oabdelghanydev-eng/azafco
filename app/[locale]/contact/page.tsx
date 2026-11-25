@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LuClock, LuDownload } from 'react-icons/lu';
 import {
-    ArrowIcon,
     Button,
     Card,
     ContactRow,
@@ -17,7 +16,6 @@ import {
     WhatsAppIcon,
     buttonClass,
     cn,
-    focusRing,
     phoneDisplay,
     typography,
 } from '@/components/ui';
@@ -28,7 +26,6 @@ import { companyConfig } from '@/config/company.config';
 import { companyInfo } from '@/data/company';
 import { routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
-import { Link } from '@/navigation';
 
 // No searchParams here: the page is statically rendered (metadata in <head>).
 // ?product= / ?country= are carried into the enquiry routes in the browser (ContactRoutes).
@@ -49,12 +46,6 @@ function pinFromEmbed(url: string): string | undefined {
 }
 
 const mapsSearch = (pin: string) => `https://www.google.com/maps/search/?api=1&query=${pin}`;
-
-/** Inline link on a light card (privacy, quality): navy, gold underline, 44px target. */
-const cardLink = cn(
-    'group inline-flex min-h-tap items-center gap-2 font-semibold text-link underline decoration-gold decoration-2 underline-offset-[6px] transition-colors hover:text-link-hover',
-    focusRing,
-);
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -109,7 +100,7 @@ export default async function ContactPage({ params }: Props) {
             <PageStructuredData locale={locale} pageType="contact" />
 
             {/* 01 Opening: one gold action (WhatsApp, management) + email to the export team */}
-            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="contact-title" intro={t('hero.intro')}>
+            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="contact-title">
                 <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
                     <Button
                         href={waHref}
@@ -129,7 +120,7 @@ export default async function ContactPage({ params }: Props) {
 
             {/* 02 Direct channels: rows as in the G footer, office hours, vCard */}
             <Section variant="white" labelledBy="ct-channels">
-                <SectionHeading id="ct-channels" layout="split" eyebrow={t('channels.eyebrow')} title={t('channels.title')} intro={t('channels.intro')} />
+                <SectionHeading id="ct-channels" layout="split" title={t('channels.title')} />
                 <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
                     <ul className="m-0 min-w-0 list-none border-0 border-t border-solid border-rule p-0 lg:col-span-7">
                         {channels.map((ch) => (
@@ -158,7 +149,6 @@ export default async function ContactPage({ params }: Props) {
                         </div>
                         <Card padding="sm" className="flex flex-col lg:p-6">
                             <h3 className={cn('m-0 text-ink', typography.h4)}>{t('channels.vcard.title')}</h3>
-                            <p className={cn('mb-0 mt-1 flex-1 text-ink-muted', typography.small)}>{t('channels.vcard.text')}</p>
                             <a
                                 href={VCARD_PATH}
                                 download="AZAFCO-International.vcf"
@@ -180,12 +170,11 @@ export default async function ContactPage({ params }: Props) {
                 <ContactRoutes />
             </Section>
 
-            {/* 04 Registration, official channels (anti-fraud), privacy. Round 1: "What happens after you write"
-                lives on /requirements only; "Track record" removed (stats live on the home, ISO on /quality). */}
+            {/* 04 Registration and official channels (anti-fraud). The privacy policy is linked from the footer. */}
             <Section variant="white" labelledBy="ct-official">
-                <SectionHeading id="ct-official" eyebrow={t('official.eyebrow')} title={t('official.title')} />
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-                    <Card accent className="flex flex-col md:col-span-2 lg:col-span-1">
+                <SectionHeading id="ct-official" title={t('official.title')} />
+                <div className="grid gap-4 md:grid-cols-2 lg:gap-5">
+                    <Card accent className="flex flex-col">
                         <h3 className={cn('m-0 text-ink', typography.h3)}>{t('trust.title')}</h3>
                         <dl className={cn('m-0 mt-3 grid gap-1 text-ink-muted', typography.small)}>
                             {/* Legal name first: the same localized value as the /about fact table */}
@@ -217,21 +206,12 @@ export default async function ContactPage({ params }: Props) {
                         <h3 className={cn('m-0 text-ink', typography.h3)}>{tc('officialChannels.title')}</h3>
                         <p className={cn('mb-0 mt-3 text-ink-muted', typography.small)}>{tc('officialChannels.text', { phone, email: c.email })}</p>
                     </Card>
-
-                    <Card accent className="flex flex-col">
-                        <h3 className={cn('m-0 text-ink', typography.h3)}>{t('privacy.title')}</h3>
-                        <p className={cn('mb-0 mt-3 flex-1 text-ink-muted', typography.small)}>{t('privacy.text')}</p>
-                        <Link href={routes.privacy} className={cn(cardLink, 'mt-3 self-start')}>
-                            {t('privacy.link')}
-                            <ArrowIcon size={20} />
-                        </Link>
-                    </Card>
                 </div>
             </Section>
 
             {/* 05 Locations with map embeds (addresses + embeds from data/company.ts, as on the live site) */}
             <Section variant="offwhite" labelledBy="ct-locations">
-                <SectionHeading id="ct-locations" layout="split" eyebrow={t('locations.eyebrow')} title={t('locations.title')} />
+                <SectionHeading id="ct-locations" layout="split" title={t('locations.title')} />
                 <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2 lg:gap-8">
                     {locations.map((l) => (
                         <li key={l.key} className="flex min-w-0">
@@ -270,7 +250,6 @@ export default async function ContactPage({ params }: Props) {
                         </li>
                     ))}
                 </ul>
-                <p className={cn('mb-0 mt-4 text-ink-subtle', typography.caption)}>{t('locations.map_note')}</p>
             </Section>
         </div>
     );

@@ -1,7 +1,6 @@
 {
-    "eyebrow": "Chaîne de valeur",
-    "title": "Cinq étapes, de l’élevage à l’export",
-    "intro": "Nous disposons de nos propres camions frigorifiques, de notre logistique et de nos entrepôts frigorifiques.",
+    "eyebrow": "De l’élevage à l’export",
+    "title": "Comment le poisson vous parvient",
     "stageLabel": "Étape {n}",
     "stages": {
         "farming": {
@@ -14,16 +13,16 @@
         },
         "packing": {
             "title": "Lavage, glaçage et conditionnement",
-            "text": "Lavé, mis sous glace, calibré au poids et conditionné entier."
+            "text": "Calibré au poids, conditionné entier sous glace et stocké dans nos entrepôts frigorifiques."
         },
         "inspection": {
             "title": "Contrôle",
-            "text": "Vérifié par rapport à la spécification convenue avant la fermeture des caisses."
+            "text": "Vérifié selon la spécification convenue avant la fermeture des caisses."
         },
         "export": {
             "title": "Export",
             "text": "Nos propres camions frigorifiques, puis fret aérien ou routier."
         }
     },
-    "pageLink": "Notre transformation et nos expéditions"
+    "pageLink": "Comment nous conditionnons et expédions"
 }

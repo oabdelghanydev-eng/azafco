@@ -1,7 +1,6 @@
 {
-    "eyebrow": "Wertschöpfungskette",
-    "title": "Fünf Stufen, von der Zucht bis zum Export",
-    "intro": "Wir betreiben eigene Kühl-Lkw, eigene Logistik und eigene Kühlhäuser.",
+    "eyebrow": "Von der Zucht bis zum Export",
+    "title": "So kommt der Fisch zu Ihnen",
     "stageLabel": "Stufe {n}",
     "stages": {
         "farming": {
@@ -14,7 +13,7 @@
         },
         "packing": {
             "title": "Waschen, Beeisen und Verpacken",
-            "text": "Gewaschen, beeist, nach Gewicht sortiert und ganz verpackt."
+            "text": "Nach Gewicht sortiert, ganz auf Eis verpackt und in unseren Kühlhäusern gelagert."
         },
         "inspection": {
             "title": "Kontrolle",
@@ -25,5 +24,5 @@
             "text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht."
         }
     },
-    "pageLink": "Verarbeitung und Versand ansehen"
+    "pageLink": "So verpacken und versenden wir"
 }

@@ -7,7 +7,7 @@
     "hero": {
         "eyebrow": "Unsere Märkte",
         "title": "Frischfischexport in den Nahen Osten und darüber hinaus",
-        "intro": "Wir liefern per Luft und Straße in 7+ Märkte und sind für den Export in die Europäische Union zugelassen.",
+        "intro": "Wir liefern in 7+ Märkte. Der Fisch verlässt unser Werk auf Eis in eigenen Kühl-Lkw und geht dann per Luft oder Straße weiter.",
         "primary": "Partnerschaft starten",
         "secondary": "Unsere Fischarten ansehen",
         "image_alt": "Luftaufnahme von Erdteichen zur Fischzucht mit Belüftern und Palmen"
@@ -15,7 +15,6 @@
     "index": {
         "eyebrow": "Aktive Märkte",
         "title": "Wohin wir heute liefern",
-        "intro": "Die auf dieser Website aufgeführten Märkte und das Jahr, seit dem wir jeden von ihnen beliefern. Wählen Sie einen Markt für Details.",
         "since": "seit {year}",
         "approved": "Europäische Union: für den Export zugelassen",
         "planned_title": "Geplant",
@@ -24,37 +23,16 @@
         "origin": "Ägypten · Motobas"
     },
     "notes": {
-        "eyebrow": "Markt für Markt",
+        "eyebrow": "Käufer",
         "title": "Wen wir in jedem Markt beliefern",
-        "intro": "Die Abnehmer, die wir heute in jedem unserer aktiven Märkte beliefern. Wählen Sie einen Markt für Details.",
-        "buyers_label": "Kunden",
         "details": "Marktdetails"
     },
-    "transport": {
-        "eyebrow": "Transport",
-        "title": "Per Luft und Straße",
-        "intro": "Frischer Fisch reist gekühlt und auf Eis verpackt. Er verlässt das Werk in unseren eigenen Kühl-Lkw und geht dann per Luft- oder Straßenfracht weiter.",
-        "note": "Wir veröffentlichen keine festen Transitzeiten: Sie hängen von Route und Buchung ab und werden für jede Lieferung bestätigt."
-    },
     "support": {
-        "eyebrow": "Zusammenarbeit",
-        "title": "Vor Ihrer Bestellung",
-        "items": [
-            {
-                "title": "Einfuhrregeln nach Markt",
-                "text": "Jede Marktseite nennt die Dokumente und Bedingungen, die für die Lebensmitteleinfuhr in dieses Land veröffentlicht sind, mit Link zu jeder Quelle."
-            },
-            {
-                "title": "Zwei direkte Kanäle",
-                "text": "Per WhatsApp besprechen Sie Lieferungen mit der Geschäftsleitung. Per E-Mail erhalten Sie vom Exportteam Spezifikationen und Dokumente."
-            }
-        ],
-        "guide_link": "Leitfaden zum Import von Frischfisch aus Ägypten lesen",
-        "importers_link": "So bestellen Importeure bei uns, in vier Schritten"
+        "guide_link": "Leitfaden zum Import von Frischfisch aus Ägypten lesen"
     },
     "new_market": {
-        "title": "Ihr Land ist geplant oder nicht aufgeführt?",
-        "text": "Nennen Sie uns Ihr Bestimmungsland. Unser Exportteam prüft jeden neuen Markt einzeln.",
+        "title": "Ihr Land steht nicht auf der Liste?",
+        "text": "Nennen Sie uns Ihr Einfuhrland.",
         "action": "Exportteam kontaktieren"
     },
     "detail": {
@@ -62,30 +40,17 @@
         "meta_description": "Ganzer, frisch gekühlter Fisch aus Ägypten, seit {year} für Importeure aus {country}, per Luft oder Straße, dazu die Einfuhrregeln für Fisch mit Quellen.",
         "eyebrow": "Aktiver Markt seit {year}",
         "title": "Ägyptischer Frischfisch für Importeure aus {country}",
-        "intro": "Wir beliefern Importeure aus {country} mit ganzem, frisch gekühltem Fisch aus unserem Werk in Motobas, Ägypten.",
         "primary": "Anforderungen senden",
         "secondary": "Geschäftsleitung per WhatsApp schreiben",
         "image_alt": "Ganze frische Fische auf Scherbeneis, von oben fotografiert",
-        "facts_title": "Auf einen Blick: {country}",
-        "map_eyebrow": "Unsere Märkte",
         "map_title": "Unsere anderen Märkte",
-        "map_intro": "Wählen Sie einen Markt, um seine Seite zu öffnen.",
         "buyers_title": "Unsere Kunden aus {country}",
-        "glance_eyebrow": "Marktprofil",
-        "facts": {
-            "plant_label": "Versand ab",
-            "plant_value": "Motobas, Kafr El Sheikh, Ägypten",
-            "plant_link": "Werk auf der Karte ansehen",
-            "transport_label": "Transport",
-            "transport_value": "Per Luft oder Straße"
-        },
         "products_link": "Unsere 12 Fischarten ansehen",
         "whatsapp_message": "Guten Tag AZAFCO International, hier ist … von … (Unternehmen) aus {country}. Wir interessieren uns für:"
     },
     "import": {
         "eyebrow": "Einfuhrregeln",
         "title": "Frischfischeinfuhr: Regeln für Importeure aus {country}",
-        "intro": "Die für Importeure aus {country} veröffentlichten Dokumente und Bedingungen für die Einfuhr von Lebensmitteln und Fisch, mit Link zu jeder Quelle.",
         "authority_label": "Zuständige Behörde",
         "source_label": "Quelle:",
         "reviewed": "Zuletzt geprüft: <time>{date}</time>",
@@ -114,7 +79,7 @@
             },
             "usda_uae": {
                 "title": "USDA: FAIRS-Länderbericht Vereinigte Arabische Emirate (TC2025-0008)",
-                "lead_in": "Nach einem Bericht des US-Landwirtschaftsministeriums (USDA) von 2025:"
+                "lead_in": "Aus einem USDA-Bericht von 2025:"
             },
             "kw_res_6_2023": {
                 "title": "PAFN: Ministerialbeschluss Nr. 6 von 2023 über eingeführte Lebensmittel (englischer Text, FAOLEX)"
@@ -130,15 +95,15 @@
             },
             "lb_fao_study": {
                 "title": "Bewertung der kommerziellen Lieferkette für Fisch und Meeresfrüchte im Libanon (FAO-Projekt, auf der Website des Landwirtschaftsministeriums)",
-                "lead_in": "Zusammengefasst in einer Studie eines FAO-Projekts von 2018 auf der Website des Landwirtschaftsministeriums:"
+                "lead_in": "Aus einer FAO-Studie von 2018:"
             },
             "lb_239": {
                 "title": "Landwirtschaftsministerium Libanon: Beschluss Nr. 239/1 über die Einfuhr tierischer Erzeugnisse (beglaubigte englische Kopie, Website des UNRWA)",
-                "lead_in": "Nach Beschluss 239/1 von 2009 über die Einfuhr tierischer Erzeugnisse:"
+                "lead_in": "Nach Beschluss 239/1 von 2009:"
             },
             "qa_guide": {
                 "title": "Gesundheitsministerium Katar: Food Importers Guide (Leitfaden für Lebensmittelimporteure)",
-                "lead_in": "Der Leitfaden des Ministeriums für Lebensmittelimporteure (ohne Datum; die Datei stammt von 2017) besagt:"
+                "lead_in": "Aus dem Leitfaden des Ministeriums für Lebensmittelimporteure (ohne Datum; die Datei stammt von 2017):"
             },
             "qa_watheq": {
                 "title": "Gesundheitsministerium Katar: allgemeine Regeln für die Registrierung von Lebensmitteln im System WATHEQ"
@@ -148,7 +113,7 @@
             },
             "usda_iraq": {
                 "title": "USDA: FAIRS-Länderbericht zu den Einfuhrvorschriften des Irak für Lebensmittel und Agrarerzeugnisse (Kopie bei APEDA, Indien)",
-                "lead_in": "Nach einem Bericht des US-Landwirtschaftsministeriums (USDA) von 2011:"
+                "lead_in": "Aus einem USDA-Bericht von 2011:"
             },
             "sy_guide": {
                 "title": "Landwirtschaftsministerium Syrien: Leitfaden zur Einfuhr von Tieren, tierischen Erzeugnissen und Nebenprodukten",
@@ -206,8 +171,7 @@
                 "licence": "Importeure von Lebensmitteln tierischen Ursprungs beantragen eine Vorabgenehmigung beim Landwirtschaftsministerium; das Handelsministerium stellt dann die Einfuhrlizenz aus.",
                 "certificates": "Lebensmittel tierischen Ursprungs brauchen ein von der irakischen Botschaft beglaubigtes Ursprungszeugnis und eine Gesundheitsbescheinigung einer akkreditierten Gesundheitsbehörde.",
                 "dates": "Nach IQS/1847/1999 müssen bei Lebensmitteln mit einer Haltbarkeit von drei Monaten oder weniger Herstellungs- und Verfallsdatum dauerhaft mit Tag, Monat und Jahr aufgedruckt sein; Aufkleber sind nicht zulässig.",
-                "testing": "COSQC sowie das Landwirtschafts- und das Gesundheitsministerium untersuchen Einfuhren an der Grenze, und das Gesundheitsministerium untersucht Proben in Provinzlaboren oder im Zentralen Gesundheitslabor in Bagdad.",
-                "old_source": "Dieser Bericht stammt aus dem Jahr 2011. Klären Sie die aktuellen Schritte mit den irakischen Behörden oder Ihrem Verzollungsagenten."
+                "testing": "COSQC sowie das Landwirtschafts- und das Gesundheitsministerium untersuchen Einfuhren an der Grenze, und das Gesundheitsministerium untersucht Proben in Provinzlaboren oder im Zentralen Gesundheitslabor in Bagdad."
             },
             "syria": {
                 "application": "Der Importeur stellt bei der Direktion für Tiergesundheit des Ministeriums einen schriftlichen Antrag auf deren Formular, mit gültigem Handelsregisterauszug, einer Ausweiskopie und einer Proformarechnung.",

@@ -1,7 +1,6 @@
 {
-    "eyebrow": "Value chain",
-    "title": "Five stages, from farm to export",
-    "intro": "We run our own refrigerated trucks, logistics and cold stores.",
+    "eyebrow": "Farm to export",
+    "title": "How the fish gets to you",
     "stageLabel": "Stage {n}",
     "stages": {
         "farming": {
@@ -14,16 +13,16 @@
         },
         "packing": {
             "title": "Washing, icing and packing",
-            "text": "Washed, iced, graded by weight and packed whole."
+            "text": "Graded by weight, packed whole on ice and kept in our cold stores."
         },
         "inspection": {
             "title": "Inspection",
-            "text": "Checked against the agreed specification before the boxes are closed."
+            "text": "Checked against the agreed specification before we close the boxes."
         },
         "export": {
             "title": "Export",
             "text": "Our own refrigerated trucks, then air or road freight."
         }
     },
-    "pageLink": "See how we process and ship"
+    "pageLink": "How we pack and ship"
 }

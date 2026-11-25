@@ -4,7 +4,7 @@
         "alt_names": [
             "Nil-Tilapia"
         ],
-        "description": "Tilapia, auch als Nil-Tilapia gehandelt, ist ein Süßwasserfisch.",
+        "description": "Nil-Tilapia, nach Gewicht sortiert und auf Eis verpackt.",
         "sizes": [
             "Klein (200–300 g)",
             "Mittel (300–500 g)",
@@ -19,7 +19,7 @@
             "Europäischer Wolfsbarsch",
             "Branzino"
         ],
-        "description": "Der Wolfsbarsch, auch als Europäischer Wolfsbarsch oder Branzino gehandelt, ist ein Meeresfisch.",
+        "description": "Europäischer Wolfsbarsch, auch als Branzino gehandelt, nach Gewicht sortiert und auf Eis verpackt.",
         "sizes": [
             "Mittel (400–600 g)",
             "Groß (ab 600 g)"
@@ -33,7 +33,7 @@
             "Gestreifte Meeräsche",
             "Bouri"
         ],
-        "description": "Die Großkopfmeeräsche, in Ägypten als Bouri bekannt, ist ein Brackwasserfisch.",
+        "description": "Großkopfmeeräsche, in Ägypten als Bouri gehandelt, nach Gewicht sortiert und auf Eis verpackt; nicht derselbe Fisch wie unsere Dünnlippige Meeräsche (Tobar).",
         "sizes": [
             "Klein (150–250 g)",
             "Mittel (250–400 g)"
@@ -47,7 +47,7 @@
             "Weißer Amur",
             "Hashayesh"
         ],
-        "description": "Der Graskarpfen, in Ägypten als Hashayesh bekannt, ist ein Süßwasserkarpfen.",
+        "description": "Graskarpfen, in Ägypten als Hashayesh und im Ausland als Weißer Amur gehandelt, nach Gewicht sortiert und auf Eis verpackt.",
         "sizes": [
             "Mittel (300–500 g)",
             "Groß (ab 500 g)"
@@ -61,7 +61,7 @@
             "Schuppenkarpfen",
             "Qishra"
         ],
-        "description": "Der Karpfen, in Ägypten als Qishra bekannt, ist ein vollständig beschuppter Süßwasserkarpfen (Schuppenkarpfen).",
+        "description": "Vollständig beschuppter Karpfen, in Ägypten als Qishra gehandelt, nach Gewicht sortiert und auf Eis verpackt; Spiegelkarpfen (Mabrouka) verkaufen wir separat.",
         "sizes": [
             "Groß (1–2 kg)",
             "Jumbo (ab 2 kg)"
@@ -76,7 +76,7 @@
             "Nordafrikanischer Raubwels",
             "Karmout"
         ],
-        "description": "Der Afrikanische Raubwels, in Ägypten als Karmout bekannt, ist ein Süßwasserfisch.",
+        "description": "Afrikanischer Raubwels, in Ägypten als Karmout gehandelt, nach Gewicht sortiert und auf Eis verpackt.",
         "sizes": [
             "Mittel (500–800 g)",
             "Groß (ab 800 g)"
@@ -91,7 +91,7 @@
             "Umberfisch",
             "Corvina"
         ],
-        "description": "Der Adlerfisch, in Ägypten als Lout bekannt, ist ein Meeresfisch.",
+        "description": "Adlerfisch, in Ägypten als Lout und im Ausland als Croaker oder Corvina gehandelt, nach Gewicht sortiert und auf Eis verpackt.",
         "sizes": [
             "Mittel (400–600 g)",
             "Groß (ab 600 g)"
@@ -105,7 +105,7 @@
             "Dünnlippen-Meeräsche",
             "Tobar"
         ],
-        "description": "Die Dünnlippige Meeräsche, in Ägypten als Tobar bekannt, ist eine Meeräsche aus dem Brackwasser.",
+        "description": "Dünnlippige Meeräsche, in Ägypten als Tobar gehandelt und auf Eis verpackt; nicht derselbe Fisch wie unsere Großkopfmeeräsche (Bouri).",
         "sizes": [],
         "packaging": "EPS-Styroporbox",
         "category": "Brackwasser"
@@ -116,7 +116,7 @@
             "Bayad",
             "Nil-Stachelwels"
         ],
-        "description": "Der Bagrus-Wels ist ein im Nil heimischer Süßwasserwels.",
+        "description": "Bayad, ein im Nil heimischer Wels, auf Eis verpackt.",
         "sizes": [],
         "packaging": "EPS-Styroporbox",
         "category": "Süßwasser"
@@ -124,7 +124,7 @@
     "silver_carp": {
         "name": "Silberkarpfen",
         "alt_names": [],
-        "description": "Der Silberkarpfen ist ein Süßwasserkarpfen.",
+        "description": "Silberkarpfen, ein Süßwasserkarpfen, auf Eis verpackt.",
         "sizes": [],
         "packaging": "EPS-Styroporbox",
         "category": "Süßwasser"
@@ -135,7 +135,7 @@
             "Karpfen (Spiegelform)",
             "Mabrouka"
         ],
-        "description": "Der Spiegelkarpfen, in Ägypten als Mabrouka bekannt, ist ein Süßwasserkarpfen mit nur wenigen großen Schuppen.",
+        "description": "Karpfen mit nur wenigen großen Schuppen, in Ägypten als Mabrouka gehandelt und auf Eis verpackt; Schuppenkarpfen (Qishra) verkaufen wir separat.",
         "sizes": [],
         "packaging": "EPS-Styroporbox",
         "category": "Süßwasser"
@@ -146,7 +146,7 @@
             "Goldbrasse",
             "Dorade Royale"
         ],
-        "description": "Die Dorade, auch als Goldbrasse oder Dorade Royale gehandelt, ist ein Meeresfisch.",
+        "description": "Goldbrasse, auch als Dorade gehandelt, auf Eis verpackt.",
         "sizes": [],
         "packaging": "EPS-Styroporbox",
         "category": "Meerwasser"

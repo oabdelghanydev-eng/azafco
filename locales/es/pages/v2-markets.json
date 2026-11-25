@@ -7,7 +7,7 @@
     "hero": {
         "eyebrow": "Nuestros mercados",
         "title": "Exportación de pescado fresco a Oriente Medio y más allá",
-        "intro": "Enviamos por vía aérea y por carretera a más de 7 mercados, y estamos autorizados para exportar a la Unión Europea.",
+        "intro": "Enviamos a más de 7 mercados. El pescado sale de nuestra planta en hielo, en nuestros propios camiones frigoríficos, y sigue por aire o carretera.",
         "primary": "Iniciemos una colaboración",
         "secondary": "Ver nuestras especies",
         "image_alt": "Vista aérea de estanques de tierra para peces, con aireadores y palmeras"
@@ -15,7 +15,6 @@
     "index": {
         "eyebrow": "Mercados activos",
         "title": "Adónde enviamos hoy",
-        "intro": "Los mercados que figuran en este sitio y el año en que empezamos a atender cada uno. Seleccione un mercado para ver los detalles.",
         "since": "desde {year}",
         "approved": "Unión Europea: autorizados para exportar",
         "planned_title": "Previstos",
@@ -24,37 +23,16 @@
         "origin": "Egipto · Motobas"
     },
     "notes": {
-        "eyebrow": "Mercado por mercado",
+        "eyebrow": "Compradores",
         "title": "A quién abastecemos en cada mercado",
-        "intro": "Los compradores a los que abastecemos hoy en cada uno de nuestros mercados activos. Seleccione un mercado para ver los detalles.",
-        "buyers_label": "Compradores",
         "details": "Detalles del mercado"
     },
-    "transport": {
-        "eyebrow": "Transporte",
-        "title": "Por aire y por carretera",
-        "intro": "El pescado fresco viaja refrigerado y envasado en hielo. Sale de la planta en nuestros propios camiones frigoríficos y continúa por vía aérea o por carretera.",
-        "note": "No publicamos plazos de tránsito fijos: dependen de la ruta y de la reserva, y se confirman para cada envío."
-    },
     "support": {
-        "eyebrow": "Trabajar con nosotros",
-        "title": "Antes de hacer su pedido",
-        "items": [
-            {
-                "title": "Normas de importación por mercado",
-                "text": "La página de cada mercado recoge los documentos y las condiciones publicados para importar alimentos a ese país, con un enlace a cada fuente."
-            },
-            {
-                "title": "Dos canales directos",
-                "text": "Escriba a la gerencia por WhatsApp para hablar del suministro. Envíe un correo al equipo de exportación para pedir especificaciones y documentos."
-            }
-        ],
-        "guide_link": "Lea la guía para importar pescado fresco de Egipto",
-        "importers_link": "Cómo nos hacen pedidos los importadores, en cuatro pasos"
+        "guide_link": "Lea la guía para importar pescado fresco de Egipto"
     },
     "new_market": {
-        "title": "¿Su país está previsto o no aparece en la lista?",
-        "text": "Indíquenos su destino. Nuestro equipo de exportación estudia cada nuevo mercado caso por caso.",
+        "title": "¿Su país no está en la lista?",
+        "text": "Indíquenos adónde importa.",
         "action": "Escriba al equipo de exportación"
     },
     "detail": {
@@ -62,30 +40,17 @@
         "meta_description": "Pescado entero fresco refrigerado de Egipto para importadores en {country} desde {year}, por aire o carretera, y las normas de importación con sus fuentes.",
         "eyebrow": "Mercado activo desde {year}",
         "title": "Pescado fresco egipcio para importadores en {country}",
-        "intro": "Suministramos a importadores en {country} pescado entero fresco refrigerado desde nuestra planta de Motobas (Egipto).",
         "primary": "Envíe sus requisitos",
         "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
-        "facts_title": "En resumen: {country}",
-        "map_eyebrow": "Nuestros mercados",
         "map_title": "Nuestros otros mercados",
-        "map_intro": "Seleccione un mercado para ver su página.",
         "buyers_title": "A quién abastecemos en {country}",
-        "glance_eyebrow": "Perfil del mercado",
-        "facts": {
-            "plant_label": "Origen del envío",
-            "plant_value": "Motobas, Kafr el-Sheikh, Egipto",
-            "plant_link": "Ver la planta en el mapa",
-            "transport_label": "Transporte",
-            "transport_value": "Por aire o carretera"
-        },
         "products_link": "Ver nuestras 12 especies",
         "whatsapp_message": "Hola, AZAFCO International: les escribe … de … (empresa) en {country}. Nos interesa:"
     },
     "import": {
         "eyebrow": "Normas de importación",
         "title": "Importar pescado fresco a {country}",
-        "intro": "Los documentos y las condiciones publicados para importar alimentos y pescado a {country}, con un enlace a cada fuente.",
         "authority_label": "Autoridad competente",
         "source_label": "Fuente:",
         "reviewed": "Última revisión: <time>{date}</time>",
@@ -114,7 +79,7 @@
             },
             "usda_uae": {
                 "title": "USDA: informe FAIRS por país, Emiratos Árabes Unidos (TC2025-0008)",
-                "lead_in": "Según un informe de 2025 del Departamento de Agricultura de EE. UU. (USDA):"
+                "lead_in": "Según un informe del USDA de 2025:"
             },
             "kw_res_6_2023": {
                 "title": "PAFN: Resolución Ministerial n.º 6 de 2023 sobre alimentos importados (texto en inglés, FAOLEX)"
@@ -130,15 +95,15 @@
             },
             "lb_fao_study": {
                 "title": "Evaluación de la cadena comercial de productos del mar en el Líbano (proyecto de la FAO, en el sitio web del Ministerio de Agricultura)",
-                "lead_in": "Según el resumen de un estudio de 2018 de un proyecto de la FAO, publicado en el sitio web del Ministerio de Agricultura:"
+                "lead_in": "Según un estudio de la FAO de 2018:"
             },
             "lb_239": {
                 "title": "Ministerio de Agricultura del Líbano: Decisión n.º 239/1 sobre la importación de productos animales (copia certificada en inglés, sitio web de la UNRWA)",
-                "lead_in": "Según la Decisión 239/1 de 2009 sobre la importación de productos animales:"
+                "lead_in": "Según la Decisión 239/1 de 2009:"
             },
             "qa_guide": {
                 "title": "Ministerio de Salud Pública de Catar: guía para importadores de alimentos (Food Importers Guide)",
-                "lead_in": "La guía para importadores de alimentos del ministerio (sin fecha; su archivo es de 2017) indica:"
+                "lead_in": "Según la guía para importadores de alimentos del ministerio (sin fecha; el archivo es de 2017):"
             },
             "qa_watheq": {
                 "title": "Ministerio de Salud Pública de Catar: normas generales para registrar alimentos en el sistema WATHEQ"
@@ -148,7 +113,7 @@
             },
             "usda_iraq": {
                 "title": "USDA: informe FAIRS por país sobre la normativa de importación de alimentos y productos agrícolas de Irak (copia alojada por APEDA, India)",
-                "lead_in": "Según un informe de 2011 del Departamento de Agricultura de EE. UU. (USDA):"
+                "lead_in": "Según un informe del USDA de 2011:"
             },
             "sy_guide": {
                 "title": "Ministerio de Agricultura de Siria: guía para importar animales, productos animales y subproductos",
@@ -206,8 +171,7 @@
                 "licence": "Los importadores de alimentos de origen animal solicitan una aprobación preliminar al Ministerio de Agricultura, y después el Ministerio de Comercio expide la licencia de importación.",
                 "certificates": "Los alimentos de origen animal necesitan un certificado de origen legalizado por la embajada de Irak y un certificado sanitario de un departamento de sanidad acreditado.",
                 "dates": "Según la norma IQS/1847/1999, los alimentos con una vida útil de tres meses o menos deben llevar las fechas de producción y de caducidad impresas de forma permanente como día, mes y año; no se permiten adhesivos.",
-                "testing": "La COSQC y los ministerios de Agricultura y de Salud analizan las importaciones en la frontera, y el Ministerio de Salud analiza muestras en laboratorios provinciales o en el Laboratorio Central de Salud de Bagdad.",
-                "old_source": "Este informe es de 2011. Confirme los pasos vigentes con las autoridades iraquíes o con su agente de aduanas."
+                "testing": "La COSQC y los ministerios de Agricultura y de Salud analizan las importaciones en la frontera, y el Ministerio de Salud analiza muestras en laboratorios provinciales o en el Laboratorio Central de Salud de Bagdad."
             },
             "syria": {
                 "application": "El importador presenta una solicitud por escrito a la Dirección de Sanidad Animal del ministerio, en su formulario, con un registro mercantil vigente, una copia de un documento de identidad y una factura proforma.",

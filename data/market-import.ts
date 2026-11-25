@@ -235,8 +235,6 @@ export const marketImport: Record<string, MarketImport> = {
         // COSQC is a standards body, not the authority for fish imports: no authority label
         authority: null,
         items: [
-            // The report is from 2011, confirm the current steps: shown under the lead-in, before the list
-            { id: 'old_source', source: 'usda_iraq', caveat: true },
             { id: 'cosqc', source: 'usda_iraq' },
             { id: 'licence', source: 'usda_iraq' },
             { id: 'certificates', source: 'usda_iraq' },

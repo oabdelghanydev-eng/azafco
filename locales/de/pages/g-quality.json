@@ -1,20 +1,15 @@
 {
     "eyebrow": "Qualität",
-    "title": "Bei jedem Auftrag geprüft",
-    "intro": "Wir verfügen über ISO-Zertifikate von TÜV AUSTRIA. Welche Unterlagen zu Lebensmittelsicherheit und Gesundheit nötig sind, hängt von Ihrem Markt ab.",
-    "link": "So sichern wir Qualität",
+    "title": "Zertifikate und Dokumente",
+    "link": "So prüfen wir die Qualität",
     "cards": {
-        "inspection": {
-            "title": "Prüfung",
-            "text": "Jeder Auftrag wird vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft."
-        },
         "iso": {
             "title": "ISO-Zertifikate",
-            "text": "Unsere Managementsysteme sind von TÜV AUSTRIA zertifiziert."
+            "text": "Wir verfügen über ISO-Zertifikate von TÜV AUSTRIA."
         },
         "documents": {
             "title": "Dokumente",
-            "text": "Das Exportteam bestätigt vor Ihrer Bestellung, welche Dokumente jede Lieferung begleiten."
+            "text": "Welche Gesundheits- und Lebensmittelsicherheitsdokumente nötig sind, hängt von Ihrem Markt ab. Die Liste stimmen wir vor Ihrer Bestellung mit Ihnen ab."
         }
     }
 }

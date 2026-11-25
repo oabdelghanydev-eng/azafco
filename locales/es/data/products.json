@@ -4,7 +4,7 @@
         "alt_names": [
             "Tilapia del Nilo"
         ],
-        "description": "La tilapia, también comercializada como tilapia del Nilo, es un pez de agua dulce.",
+        "description": "Tilapia del Nilo, calibrada por peso y envasada en hielo.",
         "sizes": [
             "Pequeño (200–300 g)",
             "Mediano (300–500 g)",
@@ -19,7 +19,7 @@
             "Lubina europea",
             "Branzino"
         ],
-        "description": "La lubina, también comercializada como lubina europea o branzino, es un pez marino.",
+        "description": "Lubina europea, también vendida como branzino, calibrada por peso y envasada en hielo.",
         "sizes": [
             "Mediano (400–600 g)",
             "Grande (600 g o más)"
@@ -33,7 +33,7 @@
             "Pardete",
             "Bouri"
         ],
-        "description": "El mújol, conocido en Egipto como bouri, es un pez de aguas salobres.",
+        "description": "Mújol, vendido en Egipto como bouri, calibrado por peso y envasado en hielo; no es el mismo pez que nuestro morragute (tobar).",
         "sizes": [
             "Pequeño (150–250 g)",
             "Mediano (250–400 g)"
@@ -47,7 +47,7 @@
             "Amur blanco",
             "Hashayesh"
         ],
-        "description": "La carpa herbívora, conocida en Egipto como hashayesh, es una carpa de agua dulce.",
+        "description": "Carpa herbívora, vendida en Egipto como hashayesh y en otros países como amur blanco, calibrada por peso y envasada en hielo.",
         "sizes": [
             "Mediano (300–500 g)",
             "Grande (500 g o más)"
@@ -61,7 +61,7 @@
             "Carpa con escamas",
             "Qishra"
         ],
-        "description": "La carpa común, conocida en Egipto como qishra, es una carpa de agua dulce con el cuerpo totalmente cubierto de escamas.",
+        "description": "Carpa con el cuerpo cubierto de escamas, vendida en Egipto como qishra, calibrada por peso y envasada en hielo; la carpa espejo (mabrouka) la vendemos aparte.",
         "sizes": [
             "Grande (1–2 kg)",
             "Jumbo (2 kg o más)"
@@ -76,7 +76,7 @@
             "Pez gato norteafricano",
             "Karmout"
         ],
-        "description": "El pez gato africano, conocido en Egipto como karmout, es un pez de agua dulce.",
+        "description": "Pez gato africano, vendido en Egipto como karmout, calibrado por peso y envasado en hielo.",
         "sizes": [
             "Mediano (500–800 g)",
             "Grande (800 g o más)"
@@ -91,7 +91,7 @@
             "Meagre",
             "Croaker"
         ],
-        "description": "La corvina, conocida en Egipto como lout, es un pez marino.",
+        "description": "Corvina, vendida en Egipto como lout y en inglés como meagre o croaker, calibrada por peso y envasada en hielo.",
         "sizes": [
             "Mediano (400–600 g)",
             "Grande (600 g o más)"
@@ -105,7 +105,7 @@
             "Mújol de labio fino",
             "Tobar"
         ],
-        "description": "El morragute, conocido en Egipto como tobar, es un mújol de aguas salobres.",
+        "description": "Morragute, vendido en Egipto como tobar y envasado en hielo; no es el mismo pez que nuestro mújol (bouri).",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
         "category": "Agua salobre"
@@ -116,7 +116,7 @@
             "Bayad",
             "Bágrido del Nilo"
         ],
-        "description": "El bagre bayad es un bagre de agua dulce originario del Nilo.",
+        "description": "Bayad, un bagre originario del Nilo, envasado en hielo.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce"
@@ -124,7 +124,7 @@
     "silver_carp": {
         "name": "Carpa plateada",
         "alt_names": [],
-        "description": "La carpa plateada es una carpa de agua dulce.",
+        "description": "Carpa plateada, una carpa de agua dulce, envasada en hielo.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce"
@@ -135,7 +135,7 @@
             "Carpa común (espejo)",
             "Mabrouka"
         ],
-        "description": "La carpa espejo, conocida en Egipto como mabrouka, es una carpa de agua dulce con solo unas pocas escamas grandes.",
+        "description": "Carpa con solo unas pocas escamas grandes, vendida en Egipto como mabrouka y envasada en hielo; la carpa común (qishra) la vendemos aparte.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
         "category": "Agua dulce"
@@ -146,7 +146,7 @@
             "Gilthead sea bream",
             "Dorade"
         ],
-        "description": "La dorada, conocida en el comercio internacional como gilthead sea bream o dorade, es un pez marino.",
+        "description": "Dorada, envasada en hielo.",
         "sizes": [],
         "packaging": "Caja isotérmica de EPS",
         "category": "Agua de mar"

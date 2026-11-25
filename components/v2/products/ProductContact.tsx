@@ -1,13 +1,10 @@
 import type { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { companyConfig } from '@/config/company.config';
-import { ArrowIcon, Eyebrow, MailIcon, TextLink, WhatsAppIcon, cn, focusRing, phoneDisplay, typography } from '@/components/ui';
-import { rfqHref } from '@/lib/v2/routes';
+import { ArrowIcon, MailIcon, WhatsAppIcon, cn, focusRing, phoneDisplay, typography } from '@/components/ui';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 
 export interface ProductContactProps {
-    /** Product slug (data/products.ts), preselected on the requirements form */
-    slug: string;
     /** Short species name, as on the page */
     name: string;
     /** Name for the heading pattern that already carries "fish" (AR «… بشأن سمك {name}»); defaults to `name` */
@@ -72,15 +69,13 @@ function Route({
 }
 
 /**
- * Product-page partnership card (navy surface, gold-rule eyebrow, contact rows):
+ * Product-page contact card (navy surface, two contact rows):
  * WhatsApp = management, supply enquiries (message prefilled with the species);
- * email = export team, for details and documents (subject + a requirements checklist).
- * Then a quiet link to the requirements form with the product preselected (no intro line:
- * the two rows say who answers what, as in the G footer).
- * The steps after the buyer writes live on /requirements only. No quote wording,
- * no reply-time promise.
+ * email = export team, for details and documents (subject + four short lines).
+ * No intro line and no requirements link: the hero carries "Send your requirements".
+ * No quote wording, no reply-time promise.
  */
-export default function ProductContact({ slug, name, titleName, id = 'product-contact', className }: ProductContactProps) {
+export default function ProductContact({ name, titleName, id = 'product-contact', className }: ProductContactProps) {
     const t = useTranslations('catalogue_v2.detail.contact');
     const { email, whatsappNumber } = companyConfig.contact;
     const waHref = whatsappLink(t('whatsapp_message', { name }));
@@ -96,8 +91,7 @@ export default function ProductContact({ slug, name, titleName, id = 'product-co
             data-surface="dark"
             className={cn('scroll-mt-28 rounded-card bg-navy-900 p-6 text-fg md:p-8', className)}
         >
-            <Eyebrow>{t('eyebrow')}</Eyebrow>
-            <h2 id={titleId} className={cn('m-0 mt-3 text-heading-lg text-fg')}>
+            <h2 id={titleId} className={cn('m-0 text-heading-lg text-fg')}>
                 {t('title', { name: titleName ?? name })}
             </h2>
 
@@ -124,12 +118,6 @@ export default function ProductContact({ slug, name, titleName, id = 'product-co
                     />
                 </li>
             </ul>
-
-            <div className="mt-5">
-                <TextLink href={rfqHref({ product: slug, type: 'product' })} dataAttrs={{ 'data-cta': 'product_requirements' }}>
-                    {t('form_link')}
-                </TextLink>
-            </div>
         </aside>
     );
 }

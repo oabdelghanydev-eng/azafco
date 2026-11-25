@@ -8,16 +8,14 @@
     "hero": {
         "eyebrow": "Unser Fisch",
         "title": "12 Hauptfischarten, frisch aus Ägypten",
-        "intro": "Nach Stückgewicht sortiert und in unserem Werk in Motobas, Kafr El Sheikh, verpackt. Jede Artseite zeigt Spezifikation, HS-/KN-Code und, wo wir sie veröffentlichen, Richtwerte für die Gewichtsklassen.",
+        "intro": "Ganz und frisch gekühlt, nach Gewicht sortiert und in unserem Werk in Motobas, Kafr El Sheikh, auf Eis in EPS-Boxen verpackt.",
         "primary": "Partnerschaft starten",
         "secondary": "Geschäftsleitung per WhatsApp schreiben",
         "whatsapp_message": "Hallo AZAFCO International, wir sehen uns Ihre Fischliste an. Fischart, Zielort und Menge:"
     },
     "grid": {
-        "eyebrow": "Fischarten",
         "title": "Fischarten, die wir liefern",
-        "intro": "Alle Arten: Ursprung Ägypten, ganz und frisch gekühlt, auf Eis in EPS-Styroporboxen verpackt. Suchen Sie nach Handelsname, ägyptischem Marktnamen oder wissenschaftlichem Namen.",
-        "more_species": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage."
+        "more_species": "Weitere Arten liefern wir auf Anfrage."
     },
     "water": {
         "freshwater": "Süßwasser",
@@ -28,56 +26,36 @@
         "image_alt": "{name} im Ganzen, Seitenansicht",
         "grades": "Gewichtsklassen (ca.)",
         "grades_label": "Gewichtsklassen",
-        "grades_none": "Nennen Sie uns Ihren gewünschten Gewichtsbereich"
+        "grades_none": "Auf Anfrage"
     },
     "browser": {
         "search_label": "Fischarten suchen",
         "search_placeholder": "z. B. Tilapia, Wolfsbarsch, بوري",
-        "search_hint": "Die Ergebnisse werden während der Eingabe aktualisiert.",
         "clear_search": "Suche löschen",
         "water_type": "Gewässertyp",
         "all": "Alle Fischarten",
         "result_count": "{count, plural, =0 {Keine Fischart gefunden} =1 {1 von {total} Fischarten} other {# von {total} Fischarten}}",
         "reset": "Filter zurücksetzen",
         "empty_title": "Keine Fischart passt zu Ihrer Suche",
-        "empty_text": "Wir konnten „{query}“ in dieser Liste nicht finden. Prüfen Sie die Schreibweise oder setzen Sie die Filter zurück. Weitere Arten liefern wir auf Anfrage; Sie können uns also auch die gewünschte Fischart und Spezifikation senden.",
         "form_type": "Produktform",
         "all_forms": "Alle Formen"
     },
     "custom": {
-        "eyebrow": "Individuelle Anforderungen",
         "title": "Andere Gewichtsklasse oder Verpackung?",
-        "intro": "Senden Sie uns die gewünschte Spezifikation. Andere Gewichtsklassen oder Verpackungen prüfen wir anhand unserer tatsächlichen Möglichkeiten und der verfügbaren Mengen, und wir bestätigen nur, was wir liefern können.",
         "form": "Anforderungen senden",
         "email": "E-Mail an das Exportteam",
         "email_subject": "Fischspezifikation für unseren Markt"
-    },
-    "proof": {
-        "eyebrow": "So arbeiten wir",
-        "title": "Prüfen Sie den Ablauf vor der Bestellung",
-        "processing_title": "Verpackung und Versand",
-        "processing_text": "Wie der Fisch vom Abfischen über Waschen, Beeisen, Sortieren, Verpacken und Prüfen zum Export gelangt.",
-        "processing_link": "Verpackung und Versand ansehen",
-        "quality_title": "Qualitätsprüfung",
-        "quality_text": "Wie jeder Auftrag vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft wird.",
-        "quality_link": "Qualitätsprüfung ansehen",
-        "importers_title": "Für Importeure",
-        "importers_text": "Wie aus einer Anfrage ein bestätigter Auftrag wird.",
-        "importers_link": "Ablauf für Importeure lesen"
     },
     "detail": {
         "meta_title": "{name} aus Ägypten: Frischfisch-Großhandel",
         "meta_title_short": "{name} frisch aus Ägypten",
         "meta_description": "{name} ({scientific}) aus Ägypten für Importeure und Distributoren: ganz, frisch gekühlt, auf Eis in EPS-Boxen, mit HS-/KN-Code.",
         "meta_description_short": "{name} aus Ägypten für Importeure und Distributoren: ganz und frisch gekühlt, auf Eis in EPS-Styroporboxen. Spezifikation und HS-/KN-Code.",
-        "eyebrow": "Großhandel aus Ägypten",
         "h1": "{name} aus Ägypten, ganz und frisch gekühlt",
-        "summary_grades": "Richtwerte für die Gewichtsklassen: {grades}.",
         "also_known_as": "Auch bekannt als",
         "primary": "Anforderungen senden",
         "secondary": "Spezifikationen ansehen",
-        "spec_eyebrow": "Spezifikation",
-        "spec_title": "Spezifikationskarte",
+        "spec_title": "Spezifikation",
         "spec_caption": "{name}: Spezifikation",
         "trade_name": "Handelsname",
         "scientific_name": "Wissenschaftlicher Name",
@@ -94,19 +72,10 @@
         "hs_code": "HS-/KN-Code",
         "cn_label": "EU-KN-Code",
         "hs_guide": "Zum Importleitfaden",
-        "related_eyebrow": "Weitere Fischarten",
         "related_title": "Ähnliche Fischarten",
-        "markets_eyebrow": "Exportmärkte",
-        "markets_title": "Die Exportmärkte von AZAFCO",
+        "markets_title": "Unsere Exportmärkte",
         "markets_link": "Mehr über unsere Märkte",
-        "notes": {
-            "mullet": "Die Großkopfmeeräsche (Bouri) ist ein anderes Produkt als unsere Dünnlippige Meeräsche (Tobar). Sagen Sie uns, welche Sie brauchen.",
-            "thinlip-mullet": "Die Dünnlippige Meeräsche (Tobar) ist ein eigenes Produkt, getrennt von unserer Großkopfmeeräsche (Bouri). Teilen Sie uns mit, welche Sie benötigen.",
-            "common-carp": "Karpfen (Qishra) und Spiegelkarpfen (Mabrouka) sind zwei Formen derselben Art und werden als getrennte Produkte verkauft. Sagen Sie uns, welche Sie brauchen.",
-            "mirror-carp": "Spiegelkarpfen (Mabrouka) und Karpfen (Qishra) sind zwei Formen derselben Art und werden als getrennte Produkte verkauft. Teilen Sie uns mit, welche Sie benötigen."
-        },
         "contact": {
-            "eyebrow": "Direkter Kontakt",
             "title": "{name}: Sprechen Sie mit uns",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Geschäftsleitung · Lieferanfragen",
@@ -114,8 +83,7 @@
             "email_title": "E-Mail",
             "email_sub": "Exportteam · Details und Dokumente",
             "email_subject": "{name}: Spezifikationen",
-            "email_body": "Fischart: {name}\nGewichtsklasse:\nVerpackung und Nettogewicht:\nMenge pro Lieferung:\nZielort (Land, Stadt):\nErforderliche Dokumente:\nGewünschtes Lieferfenster:\n",
-            "form_link": "Anforderungen senden",
+            "email_body": "Fischart: {name}\nGewicht pro Fisch:\nMenge:\nZielort:\n",
             "new_tab": "(öffnet in neuem Tab)"
         }
     },

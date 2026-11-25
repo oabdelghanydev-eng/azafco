@@ -16,25 +16,15 @@
         "primary": "Partnerschaft starten",
         "secondary": "Verpackung und Versand ansehen"
     },
-    "practice": {
-        "eyebrow": "Bei jedem Auftrag",
-        "title": "Vom Waschen bis zur Prüfung",
-        "intro": "In unserem Werk in Motobas waschen, beeisen, sortieren, verpacken und prüfen wir den Fisch. Die Prüfung ist die letzte Stufe vor dem Versand.",
-        "link": "Alle fünf Stufen ansehen, von der Zucht bis zum Export"
-    },
     "certs": {
-        "eyebrow": "Zertifikate",
-        "title": "ISO-Zertifikate für unsere Managementsysteme",
-        "statement": "Wir verfügen über ISO-Zertifikate von TÜV AUSTRIA.",
-        "documents": "Welche Dokumente zu Lebensmittelsicherheit und Gesundheit Ihr Markt verlangt und welche davon jede Lieferung begleiten, bestätigt unser Exportteam vor Ihrer Bestellung."
+        "title": "ISO-Zertifikate und EU-Exportzulassung",
+        "statement": "Wir verfügen über ISO-Zertifikate von TÜV AUSTRIA."
     },
     "next": {
-        "text": "Nennen Sie uns Ihren Bestimmungsort und welche Dokumente Ihr QS-Team benötigt.",
         "button": "Nach Versanddokumenten fragen"
     },
     "faq": {
-        "eyebrow": "Fragen von Einkäufern",
-        "title": "Fragen von Einkaufs- und Qualitätsteams",
+        "title": "Fragen von Qualitätsteams",
         "q1": "Nach welchen ISO-Normen sind Sie zertifiziert?",
         "a1": "Wir haben Zertifikate nach ISO 9001:2015 für Qualitätsmanagement, ISO 14001:2015 für Umweltmanagement und ISO 45001:2018 für Sicherheit und Gesundheit bei der Arbeit, zertifiziert durch TÜV AUSTRIA."
     },

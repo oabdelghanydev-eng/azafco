@@ -4,7 +4,7 @@
         "alt_names": [
             "Tilapia du Nil"
         ],
-        "description": "Le tilapia, aussi vendu sous le nom de tilapia du Nil, est un poisson d’eau douce.",
+        "description": "Tilapia du Nil, calibré au poids et conditionné sous glace.",
         "sizes": [
             "Petit (200–300 g)",
             "Moyen (300–500 g)",
@@ -19,7 +19,7 @@
             "Bar européen",
             "Loup de mer"
         ],
-        "description": "Le bar, aussi vendu sous les noms de bar européen ou loup de mer, est un poisson marin.",
+        "description": "Bar européen, aussi appelé loup ou branzino, calibré au poids et conditionné sous glace.",
         "sizes": [
             "Moyen (400–600 g)",
             "Gros (600 g et plus)"
@@ -33,7 +33,7 @@
             "Mulet à grosse tête",
             "Bouri"
         ],
-        "description": "Le mulet cabot, appelé bouri en Égypte, est un poisson d’eau saumâtre.",
+        "description": "Mulet cabot, appelé bouri en Égypte, calibré au poids et conditionné sous glace ; ce n’est pas le même poisson que notre mulet porc (tobar).",
         "sizes": [
             "Petit (150–250 g)",
             "Moyen (250–400 g)"
@@ -47,7 +47,7 @@
             "Amour blanc",
             "Hashayesh"
         ],
-        "description": "La carpe amour, appelée hashayesh en Égypte, est une carpe d’eau douce.",
+        "description": "Carpe amour (amour blanc), appelée hashayesh en Égypte, calibrée au poids et conditionnée sous glace.",
         "sizes": [
             "Moyen (300–500 g)",
             "Gros (500 g et plus)"
@@ -61,7 +61,7 @@
             "Carpe écailleuse",
             "Qishra"
         ],
-        "description": "La carpe commune, appelée qishra en Égypte, est une carpe d’eau douce au corps entièrement couvert d’écailles.",
+        "description": "Carpe entièrement couverte d’écailles, appelée qishra en Égypte, calibrée au poids et conditionnée sous glace ; nous vendons la carpe miroir (mabrouka) à part.",
         "sizes": [
             "Gros (1–2 kg)",
             "Jumbo (2 kg et plus)"
@@ -76,7 +76,7 @@
             "Poisson-chat nord-africain",
             "Karmout"
         ],
-        "description": "Le poisson-chat africain, appelé karmout en Égypte, est un poisson d’eau douce.",
+        "description": "Poisson-chat africain, appelé karmout en Égypte, calibré au poids et conditionné sous glace.",
         "sizes": [
             "Moyen (500–800 g)",
             "Gros (800 g et plus)"
@@ -91,7 +91,7 @@
             "Courbine",
             "Corvina"
         ],
-        "description": "Le maigre, appelé lout en Égypte, est un poisson marin.",
+        "description": "Maigre, appelé lout en Égypte, courbine ou corvina ailleurs, calibré au poids et conditionné sous glace.",
         "sizes": [
             "Moyen (400–600 g)",
             "Gros (600 g et plus)"
@@ -105,7 +105,7 @@
             "Muge porc",
             "Tobar"
         ],
-        "description": "Le mulet porc, appelé tobar en Égypte, est un mulet d’eau saumâtre.",
+        "description": "Mulet porc, appelé tobar en Égypte, conditionné sous glace ; ce n’est pas le même poisson que notre mulet cabot (bouri).",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
         "category": "Eau saumâtre"
@@ -116,7 +116,7 @@
             "Bayad",
             "Bagre du Nil"
         ],
-        "description": "Le bagre bayad est un poisson-chat d’eau douce originaire du Nil.",
+        "description": "Bayad, un poisson-chat originaire du Nil, conditionné sous glace.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
         "category": "Eau douce"
@@ -124,7 +124,7 @@
     "silver_carp": {
         "name": "Carpe argentée",
         "alt_names": [],
-        "description": "La carpe argentée est une carpe d’eau douce.",
+        "description": "Carpe argentée, une carpe d’eau douce, conditionnée sous glace.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
         "category": "Eau douce"
@@ -135,7 +135,7 @@
             "Carpe commune (miroir)",
             "Mabrouka"
         ],
-        "description": "La carpe miroir, appelée mabrouka en Égypte, est une carpe d’eau douce qui ne porte que quelques grandes écailles.",
+        "description": "Carpe à quelques grandes écailles seulement, appelée mabrouka en Égypte, conditionnée sous glace ; nous vendons la carpe commune (qishra) à part.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
         "category": "Eau douce"
@@ -146,7 +146,7 @@
             "Daurade royale",
             "Dorade"
         ],
-        "description": "La dorade royale, aussi vendue sous les noms de daurade royale ou dorade, est un poisson marin.",
+        "description": "Dorade royale, conditionnée sous glace.",
         "sizes": [],
         "packaging": "Caisse en polystyrène expansé",
         "category": "Eau de mer"

@@ -1,8 +1,8 @@
 {
     "eyebrow": "Nos poissons",
     "title": "12 espèces principales de poisson frais",
-    "intro": "Vendus entiers et frais réfrigérés, calibrés selon le poids unitaire et conditionnés sous glace.",
-    "note": "Ce sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande.",
+    "intro": "Vendus entiers et frais réfrigérés. Chaque espèce a ses propres calibres.",
+    "note": "Autres espèces sur demande.",
     "species": {
         "tilapia": {
             "name": "Tilapia",
@@ -53,5 +53,5 @@
             "alt": "Bagre bayad entier, vue latérale"
         }
     },
-    "pageLink": "Voir toutes les espèces"
+    "pageLink": "Toutes les espèces"
 }

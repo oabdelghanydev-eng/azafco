@@ -7,7 +7,7 @@
     "hero": {
         "eyebrow": "Our markets",
         "title": "Fresh fish exports to the Middle East and beyond",
-        "intro": "We ship by air and road to 7+ markets, and we are approved for export to the European Union.",
+        "intro": "We ship to 7+ markets. The fish leaves our plant on ice in our own refrigerated trucks, then goes on by air or road.",
         "primary": "Start a partnership",
         "secondary": "View our species",
         "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
@@ -15,7 +15,6 @@
     "index": {
         "eyebrow": "Active markets",
         "title": "Where we ship today",
-        "intro": "The markets listed on this site and the year we started serving each one. Select a market for details.",
         "since": "since {year}",
         "approved": "European Union: approved for export",
         "planned_title": "Planned",
@@ -24,37 +23,16 @@
         "origin": "Egypt · Motobas"
     },
     "notes": {
-        "eyebrow": "Market by market",
+        "eyebrow": "Buyers",
         "title": "Who we supply in each market",
-        "intro": "The buyers we supply in each of our active markets today. Select a market for details.",
-        "buyers_label": "Buyers",
         "details": "Market details"
     },
-    "transport": {
-        "eyebrow": "Transport",
-        "title": "By air and by road",
-        "intro": "Fresh fish travels chilled and packed on ice. It leaves the plant in our own refrigerated trucks, then goes by air or road freight.",
-        "note": "We do not publish fixed transit times: they depend on the route and the booking, and are confirmed for each shipment."
-    },
     "support": {
-        "eyebrow": "Working with us",
-        "title": "Before you order",
-        "items": [
-            {
-                "title": "Import rules by market",
-                "text": "Each market page lists the documents and conditions published for importing food into that country, with a link to each source."
-            },
-            {
-                "title": "Two direct channels",
-                "text": "WhatsApp management to discuss supply. Email the export team for specifications and documents."
-            }
-        ],
-        "guide_link": "Read the guide to importing fresh fish from Egypt",
-        "importers_link": "How importers order from us, in four steps"
+        "guide_link": "Read the guide to importing fresh fish from Egypt"
     },
     "new_market": {
-        "title": "Your country is planned or not listed?",
-        "text": "Tell us your destination. Our export team reviews each new market case by case.",
+        "title": "Your country is not on the list?",
+        "text": "Tell us where you import.",
         "action": "Contact the export team"
     },
     "detail": {
@@ -62,30 +40,17 @@
         "meta_description": "Whole fresh chilled fish from Egypt for importers in {country} since {year}, by air or road, plus the import rules for fish with links to their sources.",
         "eyebrow": "Active market since {year}",
         "title": "Fresh Egyptian fish for importers in {country}",
-        "intro": "We supply importers in {country} with whole fresh chilled fish from our plant in Motobas, Egypt.",
         "primary": "Send your requirements",
         "secondary": "Message management on WhatsApp",
         "image_alt": "Whole fresh fish on crushed ice seen from above",
-        "facts_title": "At a glance: {country}",
-        "map_eyebrow": "Our markets",
         "map_title": "Our other markets",
-        "map_intro": "Select a market to see its page.",
         "buyers_title": "Who we supply in {country}",
-        "glance_eyebrow": "Market profile",
-        "facts": {
-            "plant_label": "Ships from",
-            "plant_value": "Motobas, Kafr El Sheikh, Egypt",
-            "plant_link": "View the plant on the map",
-            "transport_label": "Transport",
-            "transport_value": "By air or road"
-        },
         "products_link": "See our 12 species",
         "whatsapp_message": "Hello AZAFCO International, this is … from … (company) in {country}. We are interested in:"
     },
     "import": {
         "eyebrow": "Import rules",
         "title": "Importing fresh fish into {country}",
-        "intro": "The documents and conditions published for food and fish imports into {country}, with a link to each source.",
         "authority_label": "Competent authority",
         "source_label": "Source:",
         "reviewed": "Last reviewed: <time>{date}</time>",
@@ -114,7 +79,7 @@
             },
             "usda_uae": {
                 "title": "USDA: FAIRS country report, United Arab Emirates (TC2025-0008)",
-                "lead_in": "According to a 2025 report by the US Department of Agriculture (USDA):"
+                "lead_in": "From a 2025 USDA report:"
             },
             "kw_res_6_2023": {
                 "title": "PAFN Ministerial Resolution No. 6 of 2023 on imported food (English text, FAOLEX)"
@@ -130,15 +95,15 @@
             },
             "lb_fao_study": {
                 "title": "Assessment of the commercial seafood chain in Lebanon (FAO project, on the Ministry of Agriculture’s website)",
-                "lead_in": "As summarised in a 2018 FAO project study on the Ministry of Agriculture’s website:"
+                "lead_in": "From a 2018 FAO study:"
             },
             "lb_239": {
                 "title": "Ministry of Agriculture, Lebanon: Decision No. 239/1 on importing animal products (certified English copy, UNRWA website)",
-                "lead_in": "Under Decision 239/1 of 2009 on importing animal products:"
+                "lead_in": "Under Decision 239/1 of 2009:"
             },
             "qa_guide": {
                 "title": "Ministry of Public Health, Qatar: Food Importers Guide",
-                "lead_in": "The ministry’s Food Importers Guide (undated; its file dates from 2017) says:"
+                "lead_in": "From the ministry’s Food Importers Guide (undated; the file is from 2017):"
             },
             "qa_watheq": {
                 "title": "Ministry of Public Health, Qatar: general rules for registering food in the WATHEQ system"
@@ -148,7 +113,7 @@
             },
             "usda_iraq": {
                 "title": "USDA: FAIRS country report on Iraq’s food and agricultural import regulations (copy hosted by APEDA, India)",
-                "lead_in": "According to a 2011 report by the US Department of Agriculture (USDA):"
+                "lead_in": "From a 2011 USDA report:"
             },
             "sy_guide": {
                 "title": "Ministry of Agriculture, Syria: guide to importing animals, animal products and by-products",
@@ -206,8 +171,7 @@
                 "licence": "Importers of food of animal origin request preliminary approval from the Ministry of Agriculture, and the Ministry of Trade then issues the import licence.",
                 "certificates": "Food of animal origin needs a certificate of origin certified by the Iraqi embassy and a health certificate from an accredited health department.",
                 "dates": "Under IQS/1847/1999, foods with a shelf life of three months or less need production and expiry dates printed permanently as day, month and year; stickers are not permitted.",
-                "testing": "COSQC and the ministries of agriculture and health test imports at the border, and the Ministry of Health tests samples in provincial laboratories or the Central Health Laboratory in Baghdad.",
-                "old_source": "This report dates from 2011. Confirm the current steps with the Iraqi authorities or your clearing agent."
+                "testing": "COSQC and the ministries of agriculture and health test imports at the border, and the Ministry of Health tests samples in provincial laboratories or the Central Health Laboratory in Baghdad."
             },
             "syria": {
                 "application": "The importer applies in writing to the Ministry’s Directorate of Animal Health on its form, with a valid commercial register, a copy of an ID and a proforma invoice.",

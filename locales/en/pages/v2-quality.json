@@ -16,25 +16,15 @@
         "primary": "Start a partnership",
         "secondary": "See how we pack and ship"
     },
-    "practice": {
-        "eyebrow": "On every order",
-        "title": "From washing to inspection",
-        "intro": "At our plant in Motobas we wash, ice, grade, pack and inspect the fish. Inspection is the last stage before shipment.",
-        "link": "See all five stages, from farming to export"
-    },
     "certs": {
-        "eyebrow": "Certificates",
-        "title": "ISO certificates for our management systems",
-        "statement": "We hold ISO certificates, certified by TÜV AUSTRIA.",
-        "documents": "For the food-safety and health documents your market requires, our export team confirms what travels with each shipment before you order."
+        "title": "ISO certificates and EU export approval",
+        "statement": "We hold ISO certificates, certified by TÜV AUSTRIA."
     },
     "next": {
-        "text": "Tell us your destination and which documents your QA team needs.",
         "button": "Ask about shipment documents"
     },
     "faq": {
-        "eyebrow": "Questions from buyers",
-        "title": "Questions from procurement and quality teams",
+        "title": "Questions from quality teams",
         "q1": "Which ISO standards do you hold?",
         "a1": "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management and ISO 45001:2018 for occupational health and safety, certified by TÜV AUSTRIA."
     },

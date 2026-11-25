@@ -1,8 +1,8 @@
 {
     "eyebrow": "Unser Fisch",
     "title": "Unsere 12 wichtigsten Frischfischarten",
-    "intro": "Ganz und frisch gekühlt, nach Stückgewicht sortiert und auf Eis verpackt.",
-    "note": "Dies sind unsere wichtigsten und meistgefragten Arten; weitere Arten liefern wir auf Anfrage.",
+    "intro": "Ganz und frisch gekühlt. Jede Art hat ihre eigenen Gewichtsklassen.",
+    "note": "Weitere Arten auf Anfrage.",
     "species": {
         "tilapia": {
             "name": "Tilapia",
@@ -53,5 +53,5 @@
             "alt": "Ganzer Bagrus-Wels, Seitenansicht"
         }
     },
-    "pageLink": "Alle Fischarten ansehen"
+    "pageLink": "Alle Fischarten"
 }

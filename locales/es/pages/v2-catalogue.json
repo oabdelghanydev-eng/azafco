@@ -8,16 +8,14 @@
     "hero": {
         "eyebrow": "Nuestro pescado",
         "title": "12 tipos principales de pescado, frescos de Egipto",
-        "intro": "El pescado se calibra según el peso de cada pieza y se envasa en nuestra planta de Motobas, Kafr el-Sheikh. La página de cada especie muestra su especificación, su código SA / NC y, cuando los publicamos, los calibres por peso orientativos.",
+        "intro": "Entero y fresco refrigerado, calibrado por peso y envasado en hielo en cajas de EPS en nuestra planta de Motobas, Kafr el-Sheikh.",
         "primary": "Iniciemos una colaboración",
         "secondary": "Escriba a la gerencia por WhatsApp",
         "whatsapp_message": "Hola, AZAFCO International: estamos revisando su lista de pescado. Especie, destino y cantidad:"
     },
     "grid": {
-        "eyebrow": "Especies",
         "title": "Especies que suministramos",
-        "intro": "Todas las especies: origen Egipto, enteras y frescas refrigeradas, envasadas en hielo en cajas isotérmicas de EPS. Busque por nombre comercial, nombre en el mercado egipcio o nombre científico.",
-        "more_species": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido."
+        "more_species": "También suministramos otras especies bajo pedido."
     },
     "water": {
         "freshwater": "Agua dulce",
@@ -28,56 +26,36 @@
         "image_alt": "{name}: ejemplar entero, vista lateral",
         "grades": "Calibres por peso (orientativos)",
         "grades_label": "Calibres por peso",
-        "grades_none": "Envíenos el rango de peso que busca"
+        "grades_none": "Bajo pedido"
     },
     "browser": {
         "search_label": "Buscar especies",
         "search_placeholder": "p. ej., tilapia, lubina, بوري",
-        "search_hint": "Los resultados se actualizan mientras escribe.",
         "clear_search": "Borrar búsqueda",
         "water_type": "Tipo de agua",
         "all": "Todas las especies",
         "result_count": "{count, plural, =0 {No se han encontrado especies} =1 {1 especie de {total}} other {# especies de {total}}}",
         "reset": "Borrar filtros",
         "empty_title": "Ninguna especie coincide con su búsqueda",
-        "empty_text": "No hemos encontrado «{query}» en esta lista. Revise la ortografía o borre los filtros. Suministramos otras especies bajo pedido, así que también puede enviarnos la especie y la especificación que necesita.",
         "form_type": "Presentación",
         "all_forms": "Todas las presentaciones"
     },
     "custom": {
-        "eyebrow": "Requisitos específicos",
         "title": "¿Necesita otro calibre u otro embalaje?",
-        "intro": "Envíenos la especificación que necesita. Revisamos otros calibres o embalajes según nuestra capacidad real y las cantidades disponibles, y solo confirmamos lo que podemos suministrar.",
         "form": "Envíe sus requisitos",
         "email": "Correo al equipo de exportación",
         "email_subject": "Especificación de pescado para nuestro mercado"
-    },
-    "proof": {
-        "eyebrow": "Cómo trabajamos",
-        "title": "Conozca el proceso antes de hacer su pedido",
-        "processing_title": "Envasado y envío",
-        "processing_text": "Cómo pasa el pescado de la cosecha al lavado, enhielado, calibrado, envasado e inspección, y después a la exportación.",
-        "processing_link": "Ver envasado y envío",
-        "quality_title": "Controles de calidad",
-        "quality_text": "Cómo se comprueba cada pedido conforme a la especificación acordada antes de cerrar las cajas.",
-        "quality_link": "Ver los controles de calidad",
-        "importers_title": "Para importadores",
-        "importers_text": "Cómo una consulta se convierte en un pedido confirmado.",
-        "importers_link": "Ver el proceso para importadores"
     },
     "detail": {
         "meta_title": "Pescado fresco de Egipto: proveedor de {name}",
         "meta_title_short": "Proveedor mayorista de {name} de Egipto",
         "meta_description": "{name} ({scientific}) de Egipto para importadores y distribuidores: pieza entera fresca refrigerada, en hielo en cajas de EPS, con código SA / NC.",
         "meta_description_short": "{name} de Egipto para importadores y distribuidores: pieza entera fresca refrigerada, en hielo en cajas de EPS. Especificación y código SA / NC.",
-        "eyebrow": "Suministro mayorista desde Egipto",
         "h1": "{name} de Egipto: pescado entero y fresco refrigerado",
-        "summary_grades": "Calibres por peso orientativos: {grades}.",
         "also_known_as": "Otros nombres",
         "primary": "Envíe sus requisitos",
         "secondary": "Ver especificaciones",
-        "spec_eyebrow": "Especificación",
-        "spec_title": "Ficha de especificaciones",
+        "spec_title": "Especificación",
         "spec_caption": "{name}: especificación",
         "trade_name": "Nombre comercial",
         "scientific_name": "Nombre científico",
@@ -94,19 +72,10 @@
         "hs_code": "Código SA / NC",
         "cn_label": "NC de la UE",
         "hs_guide": "Ver la guía de importación",
-        "related_eyebrow": "Otras especies",
         "related_title": "Especies relacionadas",
-        "markets_eyebrow": "Mercados de exportación",
-        "markets_title": "Mercados de exportación de AZAFCO",
+        "markets_title": "Nuestros mercados de exportación",
         "markets_link": "Sobre nuestros mercados",
-        "notes": {
-            "mullet": "El mújol (bouri) es un producto distinto de nuestro morragute (tobar). Indíquenos cuál necesita.",
-            "thinlip-mullet": "El morragute (tobar) es un producto distinto de nuestro mújol (bouri). Indíquenos cuál necesita.",
-            "common-carp": "La carpa común (qishra) y la carpa espejo (mabrouka) son dos formas de la misma especie y se venden como productos distintos. Indíquenos cuál necesita.",
-            "mirror-carp": "La carpa espejo (mabrouka) y la carpa común (qishra) son dos formas de la misma especie y se venden como productos distintos. Indíquenos cuál necesita."
-        },
         "contact": {
-            "eyebrow": "Contacto directo",
             "title": "{name}: hable con nosotros",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Gerencia · consultas de suministro",
@@ -114,8 +83,7 @@
             "email_title": "Correo electrónico",
             "email_sub": "Equipo de exportación · detalles y documentos",
             "email_subject": "{name}: especificaciones",
-            "email_body": "Especie: {name}\nCalibre:\nEmbalaje y peso neto:\nVolumen por envío:\nDestino (país, ciudad):\nDocumentos necesarios:\nVentana de entrega preferida:\n",
-            "form_link": "Envíe sus requisitos",
+            "email_body": "Especie: {name}\nPeso por pieza:\nCantidad:\nDestino:\n",
             "new_tab": "(se abre en una pestaña nueva)"
         }
     },

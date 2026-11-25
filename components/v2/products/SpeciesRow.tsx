@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
-import { ArrowIcon, Badge, cn, focusRing, noBreakValue, typography } from '@/components/ui';
+import { Badge, cn, focusRing, noBreakValue, typography } from '@/components/ui';
 import type { ImageProps } from '@/lib/v2/media';
 
 /**
@@ -9,9 +8,9 @@ import type { ImageProps } from '@/lib/v2/media';
  *
  * - <SpeciesRow>   one wide row per species in the catalogue list: whole-fish cut-out,
  *                  short trade name, scientific name, local names, chips, a short fact
- *                  list and one link to the specification. Use inside a <ul> with
+ *                  list. The name and the fish link to the species page. Use inside a <ul> with
  *                  `divide-y divide-line`.
- * - <SpeciesEntry> compact entry (related species): fish, hairline, names, one link.
+ * - <SpeciesEntry> compact entry (related species): fish, hairline, names (the whole entry is the link).
  *
  * Scientific names are Latin: always lang="la" dir="ltr" (inline, so they still sit
  * on the start side in Arabic). No prices, no stock, no farmed/wild labels.
@@ -50,7 +49,6 @@ export interface SpeciesRowProps {
 }
 
 export function SpeciesRow({ index, name, scientificName, altNames, href, image, facts, chips, headingAs: H = 'h3', className }: SpeciesRowProps) {
-    const t = useTranslations('v2.cta');
     return (
         <article
             className={cn(
@@ -123,23 +121,6 @@ export function SpeciesRow({ index, name, scientificName, altNames, href, image,
                         </div>
                     ))}
                 </dl>
-                <div className="mt-4 ps-5">
-                    <Link
-                        href={href}
-                        className={cn(
-                            'group inline-flex min-h-tap items-center gap-2 font-semibold text-navy underline decoration-gold decoration-2 underline-offset-4 hover:decoration-navy',
-                            typography.body,
-                            focusRing,
-                        )}
-                    >
-                        {t('view_specifications')}
-                        <span className="sr-only">: {name}</span>
-                        <ArrowIcon
-                            size={16}
-                            className="transition-transform duration-base group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transition-none"
-                        />
-                    </Link>
-                </div>
             </div>
         </article>
     );
@@ -154,9 +135,8 @@ export interface SpeciesEntryProps {
     className?: string;
 }
 
-/** Related-species entry: the fish, a hairline, the names and one link (the whole entry is clickable). */
+/** Related-species entry: the fish, a hairline and the names (the whole entry is clickable). */
 export function SpeciesEntry({ name, scientificName, href, image, headingAs: H = 'h3', className }: SpeciesEntryProps) {
-    const t = useTranslations('v2.cta');
     return (
         <article className={cn('group relative', className)}>
             <div className="relative aspect-[16/9]">
@@ -177,13 +157,6 @@ export function SpeciesEntry({ name, scientificName, href, image, headingAs: H =
                     </Link>
                 </H>
                 {scientificName ? <Scientific name={scientificName} className={cn('mt-1', typography.small)} /> : null}
-                <p aria-hidden="true" className={cn('m-0 mt-3 inline-flex items-center gap-2 font-semibold text-navy', typography.small)}>
-                    {t('view_specifications')}
-                    <ArrowIcon
-                        size={16}
-                        className="transition-transform duration-base group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transition-none"
-                    />
-                </p>
             </div>
         </article>
     );

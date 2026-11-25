@@ -3,21 +3,11 @@
         "meta_title": "Importer du poisson d’Égypte : règles et codes SH",
         "meta_description": "Règles d’import du poisson frais dans le Golfe et au Levant, liées à leurs sources, codes SH de nos 12 espèces, documents d’expédition et chaîne du froid.",
         "breadcrumb": "Importer du poisson frais d’Égypte",
-        "card_summary": "Règles d’importation dans le Golfe et au Levant, chacune liée à sa source, codes SH de nos 12 espèces principales, documents d’expédition et bases de la chaîne du froid.",
+        "card_summary": "Règles d’importation pour les Émirats arabes unis, le Koweït, Bahreïn, le Qatar, le Liban, l’Irak et la Syrie, et codes SH de nos 12 espèces.",
         "h1": "Importer du poisson frais d’Égypte : règles des marchés, codes SH et documents",
-        "summary_title": "En bref",
-        "summary": {
-            "who": "Pour les importateurs, grossistes et distributeurs qui achètent en Égypte du poisson entier frais réfrigéré.",
-            "markets": "Ce que demandent les règles publiées aux Émirats arabes unis, au Koweït, à Bahreïn, au Liban, au Qatar, en Irak et en Syrie, avec le lien vers chaque source et son année.",
-            "codes": "Les codes SH de nos 12 espèces principales, les documents habituellement exigés pour une expédition et les bases du maintien au froid du poisson.",
-            "europe": "Les règles de l’UE, pour les importateurs de l’Union européenne : AZAFCO est agréée pour l’exportation vers l’UE.",
-            "reviewed": "Dernière vérification : {date}. Chaque règle renvoie à sa source."
-        },
-        "disclaimer": "Ce guide fournit des informations générales. Il ne constitue pas un conseil juridique ou douanier. La réglementation évolue : vérifiez les exigences en vigueur auprès de votre commissionnaire en douane et des autorités du pays importateur avant toute expédition.",
         "source_label": "Sources",
         "markets": {
-            "title": "Importer dans le Golfe et au Levant",
-            "intro": "Pour chaque marché où nous expédions : ce que demandent les règles publiées, avec le lien vers chaque source et son année. Lorsqu’une source n’est pas un document de l’autorité elle-même, comme un rapport du gouvernement américain ou une étude de la FAO, nous le précisons."
+            "title": "Importer dans le Golfe et au Levant"
         },
         "hs": {
             "title": "Codes SH du poisson entier frais",
@@ -33,11 +23,11 @@
                 "other_fish": "L’espèce n’est pas nommée dans une sous-position spécifique : elle relève donc de la sous-position 0302.89 « Autres » et, dans l’UE, du code NC 0302 89 90.",
                 "freshwater_other": "Son genre ne figure pas parmi les poissons-chats nommés au 0302.72 : l’espèce relève donc de la sous-position 0302.89 « Autres » et, dans l’UE, en tant que poisson d’eau douce, du code NC 0302 89 10."
             },
-            "after": "Codes vérifiés le {date} dans la nomenclature SH 2022 de l’OMD et dans le TARIC de l’UE. La classification définitive relève du déclarant en douane de l’importateur. Les taux de droits et les préférences évoluent : consultez le tarif du pays importateur avant de calculer votre prix de revient à destination."
+            "after": "Codes vérifiés le {date} dans la nomenclature SH 2022 de l’OMD et dans le TARIC de l’UE. La classification définitive relève du déclarant en douane de l’importateur. Les taux de droits figurent dans le tarif du pays importateur."
         },
         "docs": {
             "title": "Documents pour une expédition de poisson frais",
-            "intro": "La liste exacte dépend de la destination : consultez les règles des marchés ci-dessus. Les documents suivants interviennent dans la plupart des expéditions.",
+            "intro": "La plupart des expéditions demandent ces quatre documents. Chaque marché ajoute les siens, indiqués plus haut.",
             "items": {
                 "invoice": {
                     "title": "Facture commerciale",
@@ -59,30 +49,30 @@
         },
         "cold": {
             "title": "Les bases de la chaîne du froid",
-            "intro": "Le poisson frais est périssable : la maîtrise de la température compte à chaque étape, de la ferme à l’entrepôt de l’acheteur. Les règles d’hygiène de l’UE, par exemple, exigent que les produits de la pêche frais soient maintenus, pendant l’entreposage et le transport, à une température proche de celle de la glace fondante.",
+            "intro": "Les règles d’hygiène de l’UE exigent que le poisson frais soit maintenu à la température de la glace fondante pendant l’entreposage et le transport.",
             "items": {
                 "ice": {
                     "title": "Glace",
-                    "text": "Le poisson entier est conditionné avec de la glace pour rester à la température de la glace fondante. Reglacez aussi souvent que nécessaire pendant l’entreposage."
+                    "text": "Conditionnez le poisson entier dans de la glace et reglacez-le pendant l’entreposage si nécessaire."
                 },
                 "boxes": {
                     "title": "Caisses isothermes en PSE",
-                    "text": "Les caisses en polystyrène expansé (PSE) isolent le poisson et sont très utilisées pour le fret aérien. Fermez et étiquetez chaque caisse, et vérifiez les règles de votre compagnie aérienne pour les marchandises périssables."
+                    "text": "Les caisses en PSE isolent le poisson et sont très utilisées pour le fret aérien. Fermez et étiquetez chaque caisse, et vérifiez les règles de la compagnie aérienne pour les marchandises périssables."
                 },
                 "handovers": {
                     "title": "Points de transfert",
-                    "text": "Les ruptures de la chaîne du froid se produisent généralement lors des transferts : camions, terminaux de fret des aéroports et postes frontaliers. Planifiez les réservations pour que le poisson passe le moins de temps possible hors du froid, et conservez les relevés de température."
+                    "text": "La chaîne du froid se rompt généralement lors des transferts : camions, terminaux de fret des aéroports et postes frontaliers. Laissez le poisson hors du froid le moins longtemps possible et conservez les relevés de température."
                 },
                 "arrival": {
                     "title": "À l’arrivée",
                     "text": "Contrôlez la température du poisson, la glace et l’état des caisses, et consignez tout problème avec des photos avant de signer le bon de livraison."
                 }
             },
-            "azafco": "Comment AZAFCO expédie : poisson entier conditionné sous glace dans des caisses en PSE, transporté dans nos propres camions frigorifiques, puis par fret aérien ou routier."
+            "azafco": "Comment nous expédions : poisson entier sous glace en caisses PSE, conditionné dans notre usine de Motobas, transporté dans nos propres camions frigorifiques, puis par avion ou par route."
         },
         "eu": {
             "title": "Exporter vers l’Union européenne",
-            "intro": "AZAFCO est agréée pour l’exportation vers l’Union européenne. Le règlement d’exécution (UE) 2026/2228 de la Commission, d’octobre 2026, étend l’inscription de l’Égypte sur la liste de l’UE pour les produits de la pêche aux poissons à nageoires d’élevage. Cette section présente les règles de l’UE avec lesquelles travaille un importateur.",
+            "intro": "AZAFCO est agréée pour l’exportation vers l’Union européenne.",
             "items": {
                 "health_certificate": {
                     "title": "Certificat sanitaire et inscription sur la liste de l’UE",
@@ -106,14 +96,9 @@
                 }
             }
         },
-        "enquiry": {
-            "title": "Acheter auprès d’AZAFCO International",
-            "intro": "Nous élevons et achetons du poisson, puis nous le lavons, le mettons sous glace, le calibrons, le conditionnons et le contrôlons dans notre usine de Motobas, et nous l’exportons avec nos propres camions frigorifiques, puis par fret aérien ou routier. L’équipe export confirme, avant votre commande, les documents qui accompagnent chaque expédition.",
-            "cta_requirements": "Envoyer vos besoins"
-        },
         "sources": {
             "title": "Sources",
-            "intro": "Sources utilisées pour ce guide, vérifiées le {date}."
+            "intro": "Vérifiées le {date}."
         }
     }
 }

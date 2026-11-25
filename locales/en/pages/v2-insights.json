@@ -6,13 +6,9 @@
     "breadcrumb": "Insights",
     "hero": {
         "eyebrow": "Insights",
-        "title": "Importer guide and company news",
-        "intro": "One guide for importers, covering import rules, HS codes, documents and the cold chain, plus company news with the date of each item and a source link where one exists.",
-        "primary": "Read the importer guide",
-        "secondary": "Company news"
+        "title": "Importer guide and company news"
     },
     "featured": {
-        "eyebrow": "Guide for importers",
         "read": "Read the guide"
     },
     "categories": {
@@ -26,25 +22,19 @@
         "author": "AZAFCO International",
         "published": "Published",
         "reviewed": "Last reviewed",
-        "toc": "In this article",
-        "sources_side": "Sources",
-        "sources_side_text": "{count, plural, one {# source, listed at the end and linked in the text.} other {# sources, listed at the end and linked in the text.}}",
-        "related_title": "Continue with",
+        "toc": "Contents",
+        "related_title": "Related pages",
         "related": [
             {
-                "title": "For importers",
-                "text": "How ordering works, step by step."
+                "title": "For importers"
             },
             {
-                "title": "Our markets",
-                "text": "Where we ship today and what is planned."
+                "title": "Our markets"
             },
             {
-                "title": "Our fish",
-                "text": "A page for each of our main species."
+                "title": "Our fish"
             }
         ],
-        "related_eyebrow": "Read next",
         "reading_time": "Reading time"
     }
 }

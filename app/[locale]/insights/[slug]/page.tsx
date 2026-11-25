@@ -6,7 +6,7 @@ import { Link } from '@/navigation';
 import { mediaImage } from '@/lib/v2/media';
 import { insightHref, routes } from '@/lib/v2/routes';
 import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
-import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceCount, importingSourceList } from '@/components/v2/insights/ImportingGuideBody';
+import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceList } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
 import { ArrowIcon, Container, PageHead, containerClass, Section, SectionHeading, cardClass, cn, focusRing, typography } from '@/components/ui';
@@ -92,7 +92,7 @@ export default async function InsightArticlePage({ params }: Props) {
     };
 
     const relatedHrefs = [routes.forImporters, routes.markets, routes.products];
-    const related = (t.raw('article.related') as { title: string; text: string }[]).map((r, i) => ({ ...r, href: relatedHrefs[i] }));
+    const related = (t.raw('article.related') as { title: string }[]).map((r, i) => ({ ...r, href: relatedHrefs[i] }));
 
     const meta = [
         { label: t('article.by'), value: t('article.author') },
@@ -164,10 +164,6 @@ export default async function InsightArticlePage({ params }: Props) {
                                     ))}
                                 </ol>
                             </nav>
-                            <div className="rounded-card bg-surface-offwhite p-5 lg:p-6">
-                                <p className={cn('m-0 text-ink', typography.h3)}>{t('article.sources_side')}</p>
-                                <p className={cn('mb-0 mt-1 text-ink-muted', typography.small)}>{t('article.sources_side_text', { count: importingSourceCount })}</p>
-                            </div>
                         </div>
                     </aside>
                     <div className="min-w-0 lg:order-1">
@@ -179,13 +175,12 @@ export default async function InsightArticlePage({ params }: Props) {
 
             {/* Related pages */}
             <Section variant="offwhite" labelledBy="article-related">
-                <SectionHeading id="article-related" eyebrow={t('article.related_eyebrow')} title={t('article.related_title')} />
+                <SectionHeading id="article-related" title={t('article.related_title')} />
                 <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
                     {related.map((r) => (
                         <li key={r.title} className="min-w-0">
                             <Link href={r.href} className={cn(cardClass({ interactive: true, padding: 'md' }), 'group flex h-full flex-col', focusRing)}>
-                                <span className={cn('block text-ink', typography.h3)}>{r.title}</span>
-                                <span className={cn('mb-5 mt-2 block flex-1 text-ink-muted', typography.small)}>{r.text}</span>
+                                <span className={cn('mb-5 block flex-1 text-ink', typography.h3)}>{r.title}</span>
                                 <span
                                     aria-hidden="true"
                                     className="grid h-tap w-tap place-items-center rounded-full border border-solid border-line text-navy transition-colors duration-base group-hover:border-gold group-hover:bg-gold group-hover:text-navy-900 motion-reduce:transition-none"

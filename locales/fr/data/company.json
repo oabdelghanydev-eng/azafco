@@ -4,7 +4,7 @@
     "workingHoursNote": "WhatsApp : direction · demandes d’approvisionnement",
     "officialChannels": {
         "title": "Canaux officiels",
-        "text": "Nos canaux officiels sont WhatsApp {phone} (direction) et les e-mails du domaine azafco.com.eg (équipe export : {email}). Si vous recevez des coordonnées bancaires ou des instructions de paiement depuis un autre numéro ou une autre adresse, vérifiez-les auprès de nous sur l’un de ces canaux avant tout paiement."
+        "text": "Nous écrivons uniquement depuis WhatsApp {phone} et depuis une adresse e-mail azafco.com.eg ({email}). Si des coordonnées bancaires ou de paiement vous parviennent d’un autre numéro ou d’une autre adresse, vérifiez auprès de nous avant de payer."
     },
     "addresses": {
         "main": {

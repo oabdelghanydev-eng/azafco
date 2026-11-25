@@ -11,29 +11,27 @@
     "hero": {
         "kicker": "Packing and shipping",
         "title": "Fish processing and cold chain, from our plant in Motobas",
-        "intro": "At our plant in Motobas, Kafr El Sheikh, we wash, ice, grade, pack and inspect the fish we farm and source.",
         "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind",
         "primary": "Start a partnership",
         "secondary": "See our quality checks"
     },
     "chain": {
-        "eyebrow": "How we work",
-        "title": "Five stages, from the pond to the pallet",
+        "title": "Five stages from farm to export",
         "stageLabel": "Stage {n}",
         "stages": {
             "farming": {
                 "title": "Farming and sourcing",
-                "text": "We farm fish ourselves and also buy fish from other producers.",
+                "text": "We farm our own fish and buy from other producers.",
                 "alt": "Aerial view of earthen fish ponds with aerators and palm trees"
             },
             "harvest": {
                 "title": "Harvest",
-                "text": "The fish are netted and taken to our plant in Motobas, Kafr El Sheikh.",
+                "text": "Netted and taken to our plant in Motobas.",
                 "alt": "Two workers pulling a net full of tilapia to the bank of an earthen pond"
             },
             "packing": {
                 "title": "Washing, icing and packing",
-                "text": "The fish are washed, iced, graded by weight and packed whole on ice in EPS foam boxes.",
+                "text": "Washed, iced, graded by weight and packed whole on ice in EPS foam boxes.",
                 "alt": "Gloved hands placing a whole tilapia into a crate of crushed ice on a steel table"
             },
             "inspection": {
@@ -43,17 +41,16 @@
             },
             "export": {
                 "title": "Export",
-                "text": "Our own refrigerated trucks, then air or road freight.",
+                "text": "By air or road freight.",
                 "alt": "A worker moving a pallet of white boxes into a refrigerated truck at a loading dock"
             }
         },
-        "plantMap": "See our plant on Google Maps",
+        "plantMap": "Our plant on Google Maps",
         "newTab": "(opens in a new tab)"
     },
     "logistics": {
-        "eyebrow": "Logistics",
-        "title": "Our own logistics and packing capacity",
-        "text": "We run our own refrigerated trucks, cold stores and logistics.",
+        "title": "Trucks, cold stores and capacity",
+        "text": "We run our own refrigerated trucks and cold stores.",
         "capacity": "We pack up to 2,500 t/month. A refrigerated truck carries 20 t, and on some days more than five leave our plant."
     },
     "pending": {

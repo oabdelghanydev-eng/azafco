@@ -6,13 +6,9 @@
     "breadcrumb": "Wissen",
     "hero": {
         "eyebrow": "Wissen",
-        "title": "Leitfaden für Importeure und Unternehmensnachrichten",
-        "intro": "Ein Leitfaden für Importeure zu Einfuhrregeln, HS-Codes, Dokumenten und Kühlkette, dazu Unternehmensnachrichten mit dem Datum jeder Meldung und, wo vorhanden, einem Link zur Quelle.",
-        "primary": "Leitfaden für Importeure lesen",
-        "secondary": "Unternehmensnachrichten"
+        "title": "Leitfaden für Importeure und Unternehmensnachrichten"
     },
     "featured": {
-        "eyebrow": "Leitfaden für Importeure",
         "read": "Leitfaden lesen"
     },
     "categories": {
@@ -26,25 +22,19 @@
         "author": "AZAFCO International",
         "published": "Veröffentlicht",
         "reviewed": "Zuletzt geprüft",
-        "toc": "In diesem Artikel",
-        "sources_side": "Quellen",
-        "sources_side_text": "{count, plural, one {# Quelle, am Ende aufgeführt und im Text verlinkt.} other {# Quellen, am Ende aufgeführt und im Text verlinkt.}}",
-        "related_title": "Weiterlesen",
+        "toc": "Inhalt",
+        "related_title": "Verwandte Seiten",
         "related": [
             {
-                "title": "Für Importeure",
-                "text": "Wie die Bestellung abläuft, Schritt für Schritt."
+                "title": "Für Importeure"
             },
             {
-                "title": "Unsere Märkte",
-                "text": "Wohin wir heute liefern und was geplant ist."
+                "title": "Unsere Märkte"
             },
             {
-                "title": "Unser Fisch",
-                "text": "Eine Seite für jede unserer Hauptarten."
+                "title": "Unser Fisch"
             }
         ],
-        "related_eyebrow": "Als Nächstes lesen",
         "reading_time": "Lesezeit"
     }
 }

@@ -1,20 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
-import {
-    Badge,
-    Breadcrumbs,
-    Button,
-    Card,
-    FactCards,
-    PageHero,
-    Section,
-    SectionHeading,
-    TextLink,
-    WhatsAppIcon,
-    cn,
-    typography,
-} from '@/components/ui';
+import { Badge, Breadcrumbs, Button, PageHero, Section, SectionHeading, TextLink, WhatsAppIcon } from '@/components/ui';
 import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 import { activeMarketSlugs } from '@/data/markets';
@@ -28,9 +15,6 @@ import JsonLd from '@/components/v2/rfq/JsonLd';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 type MarketsT = { has: (k: string) => boolean; (k: string): string };
-
-/** Plant location (RELEASE-DECISIONS §4, approved map link) */
-const PLANT_MAP_URL = 'https://www.google.com/maps/search/?api=1&query=31.433264,30.475957';
 
 /** Slug of the import guide (Media Center / insights) */
 const IMPORT_GUIDE_SLUG = 'importing-fresh-fish-from-egypt';
@@ -88,16 +72,6 @@ export default async function MarketDetailPage({ params }: Props) {
     const buyers = tm.has(`${market.key}.buyers`) ? (tm.raw(`${market.key}.buyers`) as string[]) : [];
     const newTab = tv('cta.opens_new_tab');
 
-    // The start year is in the eyebrow only (not repeated in the facts or the intro)
-    const facts = [
-        {
-            label: t('detail.facts.plant_label'),
-            value: t('detail.facts.plant_value'),
-            link: { href: PLANT_MAP_URL, label: t('detail.facts.plant_link'), external: true, newTabLabel: newTab },
-        },
-        { label: t('detail.facts.transport_label'), value: t('detail.facts.transport_value') },
-    ];
-
     // Import rules (data/market-import.ts, verified items only; strings in markets_v2.import.*)
     const rules = await marketImportView(locale, market.key);
 
@@ -118,12 +92,13 @@ export default async function MarketDetailPage({ params }: Props) {
                 ])}
             />
 
+            {/* Start year in the eyebrow; the market note (where there is one) is the intro */}
             <PageHero
                 variant="split"
                 image={{ src: '/images/g/fish-on-ice.webp', alt: t('detail.image_alt'), width: 1920, height: 1080 }}
                 eyebrow={market.since ? t('detail.eyebrow', { year }) : t('index.eyebrow')}
                 title={t('detail.title', { country: inCountry })}
-                intro={t('detail.intro', { country: inCountry })}
+                intro={note}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.markets }, { label: country }]} />}
                 actions={
                     <>
@@ -151,41 +126,28 @@ export default async function MarketDetailPage({ params }: Props) {
                 }
             />
 
-            {/* At a glance: who we supply in this market (live-site note) + key facts */}
-            <Section variant="offwhite" labelledBy="md-glance">
-                <SectionHeading id="md-glance" eyebrow={t('detail.glance_eyebrow')} title={t('detail.facts_title', { country })} />
-                <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
-                    {note || buyers.length ? (
-                        <Card accent className="lg:col-span-5 lg:self-start">
-                            <h3 className={cn('m-0 text-ink', typography.h3)}>{t('detail.buyers_title', { country: inCountry })}</h3>
-                            {note ? <p className={cn('m-0 mt-3 text-ink-muted', typography.body)}>{note}</p> : null}
-                            {buyers.length ? (
-                                <div className="mt-5">
-                                    <p className={cn('m-0 mb-2 font-semibold text-ink', typography.caption)}>{t('notes.buyers_label')}</p>
-                                    <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
-                                        {buyers.map((b) => (
-                                            <li key={b}>
-                                                <Badge tone="outline">{b}</Badge>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ) : null}
-                        </Card>
-                    ) : null}
-                    <FactCards items={facts} className={note || buyers.length ? 'lg:col-span-7' : 'lg:col-span-12 lg:grid-cols-3'} />
-                </div>
-                <div className="mt-6">
-                    <TextLink href={routes.products}>{t('detail.products_link')}</TextLink>
-                </div>
-            </Section>
+            {/* Who we supply in this market (live-site buyer types) */}
+            {buyers.length ? (
+                <Section variant="offwhite" labelledBy="md-buyers">
+                    <SectionHeading id="md-buyers" eyebrow={t('notes.eyebrow')} title={t('detail.buyers_title', { country: inCountry })} />
+                    <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+                        {buyers.map((b) => (
+                            <li key={b}>
+                                <Badge tone="outline">{b}</Badge>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="mt-6">
+                        <TextLink href={routes.products}>{t('detail.products_link')}</TextLink>
+                    </div>
+                </Section>
+            ) : null}
 
-            {/* Directly after "At a glance": importing into this market (authority where verified, documents and conditions, each with its source) */}
+            {/* Directly after the buyers: importing into this market (authority where verified, documents and conditions, each with its source) */}
             <MarketImportRules
                 headingId="md-import"
                 eyebrow={t('import.eyebrow')}
                 title={t('import.title', { country: inCountry })}
-                intro={t('import.intro', { country: inCountry })}
                 authority={rules?.authority}
                 groups={rules?.groups ?? []}
                 sourceLabel={t('import.source_label')}
@@ -203,9 +165,8 @@ export default async function MarketDetailPage({ params }: Props) {
             <MarketsIndex
                 headingId="md-markets"
                 compact
-                eyebrow={t('detail.map_eyebrow')}
+                eyebrow={t('index.eyebrow')}
                 title={t('detail.map_title')}
-                intro={t('detail.map_intro')}
                 active={active}
                 planned={[]}
                 current={market.key}

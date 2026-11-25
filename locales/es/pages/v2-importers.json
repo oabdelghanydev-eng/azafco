@@ -1,113 +1,39 @@
 {
     "meta": {
         "title": "Importar pescado de Egipto: cómo hacer un pedido",
-        "description": "Cómo comprar pescado fresco a AZAFCO International: envíe sus requisitos, revíselos con el equipo de exportación y enviamos por aire o carretera."
+        "description": "Pescado fresco de Egipto para importadores y distribuidores: 12 especies, calibres por peso, envasado en hielo, 7+ mercados y contacto con AZAFCO."
     },
     "breadcrumb": "Para importadores",
     "hero": {
         "eyebrow": "Para importadores y distribuidores",
         "title": "Inicie una colaboración de suministro de pescado fresco",
-        "intro": "Indíquenos la especie, la cantidad y el destino. Nuestro equipo de exportación revisa con usted el suministro y las condiciones comerciales.",
+        "intro": "Envasamos hasta 2500 t/mes en nuestra planta de Motobas. Un camión frigorífico lleva 20 t, y algunos días salen de la planta más de cinco.",
         "primary": "Envíe sus requisitos",
         "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Dorada, lubina y tilapia frescas y enteras sobre hielo picado, bajo una luz fría"
     },
-    "process": {
-        "eyebrow": "Cómo empezar",
-        "title": "Cuatro pasos hasta su primer envío",
-        "steps": [
-            {
-                "title": "Envíe sus requisitos",
-                "text": "Empresa, país, especie, calibre, presentación del producto, cantidad, embalaje y fecha de entrega."
-            },
-            {
-                "title": "Revisión con nuestro equipo de exportación",
-                "text": "Comprobamos el suministro, la especificación, los requisitos de su mercado y los documentos de exportación que exige."
-            },
-            {
-                "title": "Acuerdo del pedido",
-                "text": "La especie, el calibre, la cantidad, el embalaje, el transporte, el calendario y el precio se confirman por escrito en cada pedido."
-            },
-            {
-                "title": "Envasado y envío",
-                "text": "Envasamos en hielo y enviamos por vía aérea o por carretera, con los documentos de exportación de su destino."
-            }
-        ],
-        "link": "Qué incluir en sus requisitos"
-    },
-    "documents": {
-        "eyebrow": "Documentos",
-        "title": "Qué aporta el equipo de exportación",
-        "intro": "Escriba al equipo de exportación para detalles y documentos. Estos son los documentos con los que trabajamos:",
-        "items": [
-            {
-                "title": "Especificación del producto",
-                "text": "Especie, calibre, presentación y embalaje de su pedido."
-            },
-            {
-                "title": "Perfil de la empresa",
-                "text": "Razón social, registro, planta, especies y mercados en una sola página, a petición."
-            },
-            {
-                "title": "Documentos del envío",
-                "text": "Los documentos de exportación de su destino, preparados con cada envío."
-            }
-        ],
-        "guide_link": "Qué documentos suele necesitar un envío de pescado fresco",
-        "request_link": "Solicite una especificación de producto o el perfil de la empresa"
-    },
-    "terms": {
-        "eyebrow": "Condiciones comerciales",
-        "title": "Precios y condiciones",
-        "text": "No publicamos listas de precios. El precio, la cantidad mínima, las condiciones de entrega y el plazo de tránsito dependen de la especie, el calibre, la cantidad y el destino, y los confirmamos por escrito en cada pedido."
-    },
     "faq": {
-        "eyebrow": "Preguntas de importadores",
-        "title": "Lo que preguntan los importadores antes de empezar",
+        "title": "Preguntas de los importadores",
         "items": {
-            "who": {
-                "q": "¿Quién es AZAFCO International?",
-                "a": "AZAFCO International es una empresa egipcia de Kafr el-Sheikh que exporta desde 2008. Cría y compra pescado, y después lo envasa y lo exporta entero y fresco refrigerado. Envasa hasta 2500 t/mes en su planta de Motobas y envía a más de 7 mercados de Oriente Medio y más allá."
-            },
-            "start": {
-                "q": "¿Cómo empezamos a trabajar juntos?",
-                "a": "Envíe sus requisitos en nuestra <req>página de requisitos</req> o escriba al equipo de exportación a business@azafco.com.eg para pedir especificaciones y documentos. Escriba a la gerencia por WhatsApp para hablar del suministro. Después revisamos con usted el suministro y confirmamos por escrito las condiciones comerciales."
-            },
             "species": {
                 "q": "¿Qué especies suministran?",
                 "a": "Suministramos 12 especies principales: {species}."
             },
             "grades": {
                 "q": "¿Qué calibres por peso pueden suministrar?",
-                "a": "En las páginas de las especies publicamos calibres por peso orientativos: {grades}. Para las demás especies, envíenos el rango de peso que busca."
+                "a": "Nuestros calibres orientativos: {grades}. Para las demás especies, indíquenos el peso que necesita."
             },
             "packing": {
-                "q": "¿Cómo se envasa el pescado?",
-                "a": "Entero y fresco refrigerado, envasado en hielo en cajas isotérmicas de EPS."
-            },
-            "certificates": {
-                "q": "¿Qué certificados tienen?",
-                "a": "Contamos con certificados ISO expedidos por TÜV AUSTRIA. Las normas figuran en nuestra <quality>página de calidad</quality>."
-            },
-            "shipping": {
-                "q": "¿Cómo se envía el pescado?",
-                "a": "Refrigerado, en nuestros propios camiones frigoríficos desde la planta, y después por vía aérea o por carretera según el destino."
+                "q": "¿Cómo se envasa y se envía el pescado?",
+                "a": "Entero y fresco refrigerado, en hielo en cajas de EPS. Nuestros propios camiones frigoríficos lo llevan desde la planta y después va por aire o carretera."
             },
             "markets": {
                 "q": "¿A qué mercados envían?",
-                "a": "Enviamos a más de 7 mercados. Los siete que figuran en este sitio son los Emiratos Árabes Unidos, Kuwait, Baréin, Líbano, Catar, Irak y Siria. Estamos autorizados para exportar a la Unión Europea; Rusia y Estados Unidos están en nuestros planes."
-            },
-            "eu": {
-                "q": "¿Exportan a la Unión Europea?",
-                "a": "Sí. Estamos autorizados para exportar a la Unión Europea. Indíquenos la especie, la cantidad y el destino en la UE, y el equipo de exportación le confirmará los documentos de su envío."
-            },
-            "recurring": {
-                "q": "¿Aceptan programas de suministro periódico?",
-                "a": "Sí. Envasamos hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de nuestra planta más de cinco. Indíquenos cuántos envíos necesita por semana o por mes."
+                "a": "Enviamos a más de 7 mercados, entre ellos los Emiratos Árabes Unidos, Kuwait, Baréin, Líbano, Catar, Irak y Siria. Estamos autorizados para exportar a la Unión Europea; Rusia y Estados Unidos están en nuestros planes."
             },
             "fraud": {
                 "q": "¿Cómo sabemos que un mensaje procede realmente de AZAFCO International?",
-                "a": "Nuestros canales oficiales son el correo del equipo de exportación, business@azafco.com.eg, y el WhatsApp de la gerencia, +20 100 773 6419. Si recibe un mensaje sobre su pedido desde cualquier otra dirección o número, compruébelo con nosotros por estos canales antes de actuar."
+                "a": "Solo escribimos desde business@azafco.com.eg y desde el WhatsApp +20 100 773 6419; si recibe un mensaje desde otra dirección o número, compruébelo con nosotros antes de actuar."
             }
         }
     }

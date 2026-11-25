@@ -1,113 +1,39 @@
 {
     "meta": {
         "title": "Buying fish from Egypt: how importers order",
-        "description": "How importers buy fresh fish from AZAFCO International: send your requirements, review them with our export team, then we pack and ship by air or road."
+        "description": "Fresh fish from Egypt for importers and distributors: 12 species, weight grades, packing on ice, 7+ markets and how to reach AZAFCO International."
     },
     "breadcrumb": "For importers",
     "hero": {
         "eyebrow": "For importers and distributors",
         "title": "Start a fresh fish supply partnership",
-        "intro": "Tell us the species, quantity and destination. Our export team reviews supply and commercial terms with you.",
+        "intro": "We pack up to 2,500 t/month at our plant in Motobas. A refrigerated truck carries 20 t, and on some days more than five leave the plant.",
         "primary": "Send your requirements",
         "secondary": "Message management on WhatsApp",
         "image_alt": "Whole fresh sea bream, sea bass and tilapia on crushed ice under cool light"
     },
-    "process": {
-        "eyebrow": "How to start",
-        "title": "Four steps to your first shipment",
-        "steps": [
-            {
-                "title": "Send your requirements",
-                "text": "Company, country, species, weight grade, product form, quantity, packing and delivery date."
-            },
-            {
-                "title": "Review with our export team",
-                "text": "We check supply, the specification, your market's requirements and the export documents it needs."
-            },
-            {
-                "title": "Agree the order",
-                "text": "Species, grade, quantity, packing, transport, schedule and price are confirmed in writing for each order."
-            },
-            {
-                "title": "Pack and ship",
-                "text": "We pack on ice and ship by air or road, with the export documents for your destination."
-            }
-        ],
-        "link": "What to include in your requirements"
-    },
-    "documents": {
-        "eyebrow": "Documents",
-        "title": "What the export team provides",
-        "intro": "Email the export team for details and documents. These are the documents we work with:",
-        "items": [
-            {
-                "title": "Product specification",
-                "text": "Species, weight grade, product form and packing for your order."
-            },
-            {
-                "title": "Company profile",
-                "text": "Legal name, registration, plant, species and markets on one page, on request."
-            },
-            {
-                "title": "Shipment documents",
-                "text": "The export documents for your destination, prepared with each shipment."
-            }
-        ],
-        "guide_link": "Which documents a fresh fish shipment usually needs",
-        "request_link": "Request a product specification or company profile"
-    },
-    "terms": {
-        "eyebrow": "Trade details",
-        "title": "Prices and terms",
-        "text": "We do not publish price lists. Price, minimum quantity, delivery terms and transit time depend on the species, weight grade, quantity and destination, and we confirm them in writing for each order."
-    },
     "faq": {
-        "eyebrow": "Importer FAQ",
-        "title": "Questions importers ask before they start",
+        "title": "Questions from importers",
         "items": {
-            "who": {
-                "q": "Who is AZAFCO International?",
-                "a": "AZAFCO International is an Egyptian company in Kafr El Sheikh, exporting since 2008. It farms and sources fish, then packs and exports it whole and fresh chilled. It packs up to 2,500 t/month at its plant in Motobas and ships to 7+ markets in the Middle East and beyond."
-            },
-            "start": {
-                "q": "How do we start working together?",
-                "a": "Send your requirements on our <req>requirements page</req>, or email the export team at business@azafco.com.eg for specifications and documents. WhatsApp management to discuss supply. We then review supply with you and confirm the commercial terms in writing."
-            },
             "species": {
                 "q": "Which species do you supply?",
                 "a": "We supply 12 main species: {species}."
             },
             "grades": {
                 "q": "Which weight grades can you supply?",
-                "a": "Indicative weight grades are published on the species pages: {grades}. For the other species, send us your target weight range."
+                "a": "Our indicative grades: {grades}. For the other species, tell us the weight you need."
             },
             "packing": {
-                "q": "How is the fish packed?",
-                "a": "Whole and fresh chilled, packed on ice in EPS foam boxes."
-            },
-            "certificates": {
-                "q": "Which certificates do you hold?",
-                "a": "We hold ISO certificates, certified by TÜV AUSTRIA. The standards are listed on our <quality>quality page</quality>."
-            },
-            "shipping": {
-                "q": "How is the fish shipped?",
-                "a": "Chilled, in our own refrigerated trucks from the plant, then by air or road freight depending on the destination."
+                "q": "How is the fish packed and shipped?",
+                "a": "Whole and fresh chilled, on ice in EPS foam boxes. Our own refrigerated trucks take it from the plant, then it goes by air or road."
             },
             "markets": {
                 "q": "Which markets do you ship to?",
-                "a": "We ship to 7+ markets. The seven listed on this site are the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. We are approved for export to the European Union; Russia and the USA are in our plan."
-            },
-            "eu": {
-                "q": "Do you export to the European Union?",
-                "a": "Yes. We are approved for export to the European Union. Tell us the species, quantity and EU destination, and the export team confirms the documents for your shipment."
-            },
-            "recurring": {
-                "q": "Do you take recurring supply programmes?",
-                "a": "Yes. We pack up to 2,500 t/month. A refrigerated truck carries 20 t, and on some days more than five leave our plant. Tell us how many shipments you need a week or a month."
+                "a": "We ship to 7+ markets, including the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria. We are approved for export to the European Union; Russia and the USA are in our plan."
             },
             "fraud": {
                 "q": "How do we know a message is really from AZAFCO International?",
-                "a": "Our official channels are the export team email business@azafco.com.eg and the management WhatsApp +20 100 773 6419. If a message about your order comes from any other address or number, check it with us on these channels before you act on it."
+                "a": "We only write from business@azafco.com.eg and from WhatsApp +20 100 773 6419, so check any message from another address or number with us before you act on it."
             }
         }
     }

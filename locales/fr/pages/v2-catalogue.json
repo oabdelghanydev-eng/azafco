@@ -8,16 +8,14 @@
     "hero": {
         "eyebrow": "Nos poissons",
         "title": "12 principaux types de poisson, frais d’Égypte",
-        "intro": "Calibrés selon le poids unitaire et conditionnés dans notre usine de Motobas, à Kafr el-Cheikh. Chaque page d’espèce indique sa spécification, son code SH / NC et, lorsque nous les publions, des calibres indicatifs.",
+        "intro": "Entiers et frais réfrigérés, calibrés au poids et conditionnés sous glace en caisses de polystyrène expansé dans notre usine de Motobas, à Kafr el-Cheikh.",
         "primary": "Démarrer un partenariat",
         "secondary": "Écrire à la direction sur WhatsApp",
         "whatsapp_message": "Bonjour AZAFCO International, nous consultons votre liste de poissons. Espèce, destination et quantité :"
     },
     "grid": {
-        "eyebrow": "Espèces",
         "title": "Les espèces que nous fournissons",
-        "intro": "Toutes les espèces : origine Égypte, poisson entier et frais réfrigéré, conditionné sous glace en caisses de polystyrène expansé. Recherchez par nom commercial, nom utilisé en Égypte ou nom scientifique.",
-        "more_species": "Ce sont nos espèces principales, les plus demandées ; nous fournissons d’autres espèces sur demande."
+        "more_species": "Nous fournissons aussi d’autres espèces sur demande."
     },
     "water": {
         "freshwater": "Eau douce",
@@ -28,56 +26,36 @@
         "image_alt": "{name} : poisson entier, vue latérale",
         "grades": "Calibres (indicatifs)",
         "grades_label": "Calibres",
-        "grades_none": "Envoyez-nous votre fourchette de poids cible"
+        "grades_none": "Sur demande"
     },
     "browser": {
         "search_label": "Rechercher une espèce",
         "search_placeholder": "p. ex. tilapia, bar, بوري",
-        "search_hint": "Les résultats s’affichent au fil de la saisie.",
         "clear_search": "Effacer la recherche",
         "water_type": "Type d’eau",
         "all": "Toutes les espèces",
         "result_count": "{count, plural, =0 {Aucune espèce trouvée} =1 {1 espèce sur {total}} other {# espèces sur {total}}}",
         "reset": "Effacer les filtres",
         "empty_title": "Aucune espèce ne correspond à votre recherche",
-        "empty_text": "Nous n’avons pas trouvé « {query} » dans cette liste. Vérifiez l’orthographe ou effacez les filtres. Nous fournissons d’autres espèces sur demande : vous pouvez aussi nous envoyer l’espèce et la spécification dont vous avez besoin.",
         "form_type": "Présentation du produit",
         "all_forms": "Toutes les présentations"
     },
     "custom": {
-        "eyebrow": "Besoins spécifiques",
         "title": "Besoin d’un autre calibre ou conditionnement ?",
-        "intro": "Envoyez-nous la spécification dont vous avez besoin. Nous étudions les autres calibres ou conditionnements au regard de nos capacités réelles et des quantités disponibles, et nous ne confirmons que ce que nous pouvons fournir.",
         "form": "Envoyer vos besoins",
         "email": "Écrire à l’équipe export",
         "email_subject": "Spécification poisson pour notre marché"
-    },
-    "proof": {
-        "eyebrow": "Notre façon de travailler",
-        "title": "Vérifiez le processus avant de commander",
-        "processing_title": "Conditionnement et expédition",
-        "processing_text": "Comment le poisson passe de la récolte au lavage, au glaçage, au calibrage, au conditionnement et au contrôle, puis à l’export.",
-        "processing_link": "Voir le conditionnement et l’expédition",
-        "quality_title": "Contrôles qualité",
-        "quality_text": "Comment chaque commande est vérifiée par rapport à la spécification convenue avant la fermeture des caisses.",
-        "quality_link": "Voir les contrôles qualité",
-        "importers_title": "Pour les importateurs",
-        "importers_text": "Comment une demande devient une commande confirmée.",
-        "importers_link": "Voir le processus de commande"
     },
     "detail": {
         "meta_title": "Poisson frais d’Égypte : {name} en gros",
         "meta_title_short": "Poisson frais d’Égypte : {name}",
         "meta_description": "{name} ({scientific}) d’Égypte pour importateurs : poisson entier frais réfrigéré, sous glace en caisses de polystyrène, code SH / NC.",
         "meta_description_short": "{name} d’Égypte pour importateurs et distributeurs : poisson entier, frais réfrigéré, sous glace en caisses de polystyrène. Code SH / NC.",
-        "eyebrow": "Approvisionnement en gros depuis l’Égypte",
         "h1": "{name} d’Égypte : poisson entier, frais réfrigéré",
-        "summary_grades": "Calibres indicatifs : {grades}.",
         "also_known_as": "Autres noms",
         "primary": "Envoyer vos besoins",
         "secondary": "Voir les spécifications",
-        "spec_eyebrow": "Spécification",
-        "spec_title": "Fiche de spécification",
+        "spec_title": "Spécification",
         "spec_caption": "{name} : spécification",
         "trade_name": "Nom commercial",
         "scientific_name": "Nom scientifique",
@@ -94,19 +72,10 @@
         "hs_code": "Code SH / NC",
         "cn_label": "NC (UE)",
         "hs_guide": "Voir le guide d’importation",
-        "related_eyebrow": "Autres espèces",
         "related_title": "Espèces associées",
-        "markets_eyebrow": "Marchés d’exportation",
-        "markets_title": "Les marchés d’exportation d’AZAFCO",
+        "markets_title": "Nos marchés d’exportation",
         "markets_link": "Nos marchés",
-        "notes": {
-            "mullet": "Le mulet cabot (bouri) est un produit distinct de notre mulet porc (tobar). Indiquez-nous celui qu’il vous faut.",
-            "thinlip-mullet": "Le mulet porc (tobar) est un produit distinct de notre mulet cabot (bouri). Précisez-nous celui dont vous avez besoin.",
-            "common-carp": "La carpe commune (qishra) et la carpe miroir (mabrouka) sont deux formes de la même espèce, vendues comme produits distincts. Indiquez-nous celle qu’il vous faut.",
-            "mirror-carp": "La carpe miroir (mabrouka) et la carpe commune (qishra) sont deux formes de la même espèce, vendues comme produits distincts. Précisez-nous celle dont vous avez besoin."
-        },
         "contact": {
-            "eyebrow": "Contact direct",
             "title": "{name} : parlons-en",
             "whatsapp_title": "WhatsApp",
             "whatsapp_sub": "Direction · demandes d’approvisionnement",
@@ -114,8 +83,7 @@
             "email_title": "E-mail",
             "email_sub": "Équipe export · informations et documents",
             "email_subject": "{name} : spécifications",
-            "email_body": "Espèce : {name}\nCalibre :\nConditionnement et poids net :\nVolume par expédition :\nDestination (pays, ville) :\nDocuments requis :\nFenêtre de livraison souhaitée :\n",
-            "form_link": "Envoyer vos besoins",
+            "email_body": "Espèce : {name}\nPoids par poisson :\nQuantité :\nDestination :\n",
             "new_tab": "(s’ouvre dans un nouvel onglet)"
         }
     },

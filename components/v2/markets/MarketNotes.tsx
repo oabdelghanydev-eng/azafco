@@ -5,9 +5,9 @@ import { routes } from '@/lib/v2/routes';
 import { flagSrc } from './marketData';
 
 /**
- * Market-by-market cards for /markets: flag, name, start year, the market note and
- * the buyer types we supply there (carried over from the live site, without the
- * superlatives). The whole card is one link to the market page (stretched link,
+ * Market-by-market cards for /markets: flag, name, the market note and the buyer
+ * types we supply there (carried over from the live site, without the superlatives;
+ * the start year is in the markets band above). The whole card is one link to the market page (stretched link,
  * accessible name = the country). The last tile invites planned / unlisted markets.
  * Server component; every string arrives translated.
  */
@@ -15,20 +15,18 @@ export interface MarketNote {
     key: string;
     countryCode: string;
     name: string;
-    since: string;
     note?: string;
     buyers: string[];
 }
 
 export interface MarketNotesProps {
     items: MarketNote[];
-    buyersLabel: string;
     detailsLabel: string;
     newMarket?: { title: string; text: string; action: string; href: string };
     className?: string;
 }
 
-export default function MarketNotes({ items, buyersLabel, detailsLabel, newMarket, className }: MarketNotesProps) {
+export default function MarketNotes({ items, detailsLabel, newMarket, className }: MarketNotesProps) {
     return (
         <ul className={cn('m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6', className)}>
             {items.map((m) => (
@@ -54,23 +52,15 @@ export default function MarketNotes({ items, buyersLabel, detailsLabel, newMarke
                             </Link>
                         </h3>
                     </div>
-                    {m.since ? (
-                        <p className="m-0 mt-3">
-                            <Badge>{m.since}</Badge>
-                        </p>
-                    ) : null}
                     {m.note ? <p className={cn('m-0 mt-3 text-ink-muted', typography.body)}>{m.note}</p> : null}
                     {m.buyers.length ? (
-                        <div className="mt-4">
-                            <p className={cn('m-0 mb-2 font-semibold text-ink', typography.caption)}>{buyersLabel}</p>
-                            <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
-                                {m.buyers.map((b) => (
-                                    <li key={b}>
-                                        <Badge tone="outline">{b}</Badge>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        <ul className="m-0 mt-4 flex list-none flex-wrap gap-2 p-0">
+                            {m.buyers.map((b) => (
+                                <li key={b}>
+                                    <Badge tone="outline">{b}</Badge>
+                                </li>
+                            ))}
+                        </ul>
                     ) : null}
                     <span
                         aria-hidden="true"

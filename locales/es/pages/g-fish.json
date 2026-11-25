@@ -1,8 +1,8 @@
 {
     "eyebrow": "Nuestro pescado",
     "title": "12 especies principales de pescado fresco",
-    "intro": "Pescado entero y fresco refrigerado, calibrado según el peso de cada pieza y envasado en hielo.",
-    "note": "Estas son nuestras especies principales y más solicitadas; suministramos otras especies bajo pedido.",
+    "intro": "Entero y fresco refrigerado. Cada especie tiene sus propios calibres por peso.",
+    "note": "Otras especies bajo pedido.",
     "species": {
         "tilapia": {
             "name": "Tilapia",
@@ -53,5 +53,5 @@
             "alt": "Bagre bayad entero, vista lateral"
         }
     },
-    "pageLink": "Ver todas las especies"
+    "pageLink": "Todas las especies"
 }

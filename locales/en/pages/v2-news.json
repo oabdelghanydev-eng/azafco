@@ -4,24 +4,23 @@
     "new_tab": "(opens in a new tab)",
     "press": {
         "eyebrow": "Company news",
-        "title": "Visits and media coverage",
-        "intro": "Official visits to our plant and press and TV coverage of AZAFCO International."
+        "title": "Visits and media coverage"
     },
     "milestones_link": "Our milestones since 2008",
     "items": {
         "governor_visit": {
             "title": "Governor of Kafr El Sheikh visits our Motobas plant",
-            "summary": "Maj. Gen. Dr. Alaa Abdel Moaty, Governor of Kafr El Sheikh, toured our plant in the Motobas Industrial Zone as part of the governorate's work to support the fish industry and exports.",
+            "summary": "The visit was part of the governorate's support for the fish industry and exports.",
             "source": "Kafr El Sheikh Governorate"
         },
         "press_feature": {
             "title": "Feature in Dar Al-Sharq Al-Awsat",
-            "summary": "The newspaper Dar Al-Sharq Al-Awsat published a profile of AZAFCO International and its chairman, covering the company's work in fresh fish exports.",
+            "summary": "The paper profiled the company, its chairman and our fresh fish exports.",
             "source": "Dar Al-Sharq Al-Awsat newspaper"
         },
         "tv_program": {
             "title": "“Helwa Ya Baladi” TV episode on AZAFCO International",
-            "summary": "The Misr Al Balad TV programme “Helwa Ya Baladi” aired a special episode on our fresh fish packing and export work.",
+            "summary": "The episode shows how we pack and export fresh fish.",
             "source": "Misr Al Balad TV (YouTube)"
         }
     }

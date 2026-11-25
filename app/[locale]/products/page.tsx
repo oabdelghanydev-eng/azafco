@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Button, Card, Eyebrow, MailIcon, PageHead, Section, SectionHeading, WhatsAppIcon, cn, typography } from '@/components/ui';
-import FeatureGrid from '@/components/v2/FeatureGrid';
+import { Button, Card, MailIcon, PageHead, Section, SectionHeading, WhatsAppIcon, cn, typography } from '@/components/ui';
 import CatalogueBrowser from '@/components/v2/products/CatalogueBrowser';
 import { SpeciesRow } from '@/components/v2/products/SpeciesRow';
 import { baseUrl, getCatalogue, getRootT, getSearchNames, getSpecView, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
@@ -36,7 +35,7 @@ export default async function CataloguePage({ params }: Props) {
         .map((c) => ({ value: c, label: t(`water.${c}`) }));
 
     const items = catalogue.map((p, i) => {
-        // Origin, form and packing are the same for all 12 and said once above the grid (grid.intro);
+        // Origin, form and packing are the same for all 12 and said once in the hero intro;
         // each card keeps only what differs: the indicative weight grades from data/specs.ts.
         const spec = getSpecView(root, locale, p.slug);
         const facts: { label: string; value: string | string[] }[] = spec.grades.length
@@ -125,7 +124,7 @@ export default async function CataloguePage({ params }: Props) {
 
             {/* The species register: the one list on this page */}
             <Section variant="white" labelledBy="catalogue-species">
-                <SectionHeading id="catalogue-species" eyebrow={t('grid.eyebrow')} title={t('grid.title')} intro={t('grid.intro')} />
+                <SectionHeading id="catalogue-species" title={t('grid.title')} />
                 <CatalogueBrowser items={items} categories={categories} />
 
                 {/* Owner, 13 Nov 2026: the 12 are the main species; others on request */}
@@ -134,30 +133,15 @@ export default async function CataloguePage({ params }: Props) {
                 </p>
             </Section>
 
-            <Section variant="offwhite" labelledBy="catalogue-proof">
-                <SectionHeading id="catalogue-proof" eyebrow={t('proof.eyebrow')} title={t('proof.title')} />
-                <FeatureGrid
-                    columns={3}
-                    style="card"
-                    items={[
-                        { title: t('proof.processing_title'), description: t('proof.processing_text'), href: routes.processing, linkLabel: t('proof.processing_link') },
-                        { title: t('proof.quality_title'), description: t('proof.quality_text'), href: routes.quality, linkLabel: t('proof.quality_link') },
-                        { title: t('proof.importers_title'), description: t('proof.importers_text'), href: routes.forImporters, linkLabel: t('proof.importers_link') },
-                    ]}
-                />
-            </Section>
-
             {/* Closing: custom requirements (accent card; the G footer carries the contact block).
                 The steps after the buyer writes live on /requirements only. */}
-            <Section variant="white" labelledBy={CUSTOM_ID}>
+            <Section variant="offwhite" labelledBy={CUSTOM_ID}>
                 <Card accent padding="lg">
                     <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
                         <div className="lg:col-span-8">
-                            <Eyebrow>{t('custom.eyebrow')}</Eyebrow>
-                            <h2 id={CUSTOM_ID} className={cn('v2-heading m-0 mt-3 scroll-mt-28', typography.h2Sm)}>
+                            <h2 id={CUSTOM_ID} className={cn('v2-heading m-0 scroll-mt-28', typography.h2Sm)}>
                                 {t('custom.title')}
                             </h2>
-                            <p className={cn('m-0 mt-4 max-w-prose-v2 text-ink-muted', typography.lead)}>{t('custom.intro')}</p>
                             <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5">
                                 <Button
                                     href={rfqHref({ type: 'specifications' })}

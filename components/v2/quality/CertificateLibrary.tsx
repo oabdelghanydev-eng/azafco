@@ -26,7 +26,6 @@ export default async function CertificateLibrary({ locale }: CertificateLibraryP
             </span>
             <div className="min-w-0 sm:flex-1">
                 <p className={`mb-0 mt-4 text-ink sm:mt-0 ${typography.h4}`}>{t('statement')}</p>
-                <p className={`mb-0 mt-2.5 max-w-prose text-ink-muted ${typography.small}`}>{t('documents')}</p>
             </div>
         </Card>
     );

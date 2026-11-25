@@ -106,19 +106,13 @@ export default async function ProductDetailPage({ params }: Props) {
     const tariffNote = tariffNoteKey && root.has(tariffNoteKey) ? root(tariffNoteKey) : null;
     const name = p.name;
     const water = t(`water.${p.category}`);
-    const note = t.has(`detail.notes.${slug}`) ? t(`detail.notes.${slug}`) : null;
 
     // Arabic lists take the Arabic comma
     const listSep = locale === 'ar' ? '، ' : ', ';
-    // The species line (data.products.<key>.description: Egyptian market name, water type) plus the grades if published.
-    // Origin, form and packing are in the H1 and the spec card, so they are not repeated here.
+    // One species line (data.products.<key>.description: other names, graded by weight where grades exist,
+    // packed on ice). The grades themselves are in the spec card, so they are not repeated here.
     const descriptionKey = `data.products.${product.translationKey}.description`;
-    const summary = [
-        root.has(descriptionKey) ? root(descriptionKey) : null,
-        spec.grades.length ? t('detail.summary_grades', { grades: spec.grades.join(listSep) }) : null,
-    ]
-        .filter(Boolean)
-        .join(' ');
+    const summary = root.has(descriptionKey) ? root(descriptionKey) : '';
     // "Also known as": only the names the species line does not already give
     const summaryLower = summary.toLocaleLowerCase(locale);
     const otherNames = p.altNames.filter((a) => !summaryLower.includes(a.toLocaleLowerCase(locale)));
@@ -227,7 +221,6 @@ export default async function ProductDetailPage({ params }: Props) {
 
             <PageHero
                 variant="split"
-                eyebrow={t('detail.eyebrow')}
                 title={t('detail.h1', { name: bareName(name, locale) })}
                 intro={
                     <>
@@ -238,7 +231,7 @@ export default async function ProductDetailPage({ params }: Props) {
                                 </span>
                             </p>
                         ) : null}
-                        <p className="m-0 font-medium text-fg">{summary}</p>
+                        {summary ? <p className="m-0 font-medium text-fg">{summary}</p> : null}
                         {otherNames.length > 0 ? (
                             <p className={cn('m-0 mt-4', typography.small)}>
                                 <span className="font-semibold text-fg">{t('detail.also_known_as')}: </span>
@@ -271,22 +264,18 @@ export default async function ProductDetailPage({ params }: Props) {
             <Section variant="offwhite" labelledBy="specifications-title" id={SPEC_ID}>
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-7">
-                        <SectionHeading id="specifications-title" eyebrow={t('detail.spec_eyebrow')} title={t('detail.spec_title')} size="md" />
-                        <SpecTable caption={t('detail.spec_caption', { name: bareName(name, locale) })} rows={specRows} />
+                        <SectionHeading id="specifications-title" title={t('detail.spec_title')} size="md" />
+                        {/* The h2 above names the table: the caption stays for screen readers only */}
+                        <SpecTable caption={t('detail.spec_caption', { name: bareName(name, locale) })} rows={specRows} hideCaption />
                         {!p.scientificName ? (
                             <div className="mt-4">
                                 <Pending label={t('pending.species_id', { name })} />
                             </div>
                         ) : null}
-                        {note ? (
-                            <p role="note" className={cn('m-0 mt-6 rounded-card border-0 border-s-4 border-solid border-gold bg-white p-5 text-ink', typography.small)}>
-                                {note}
-                            </p>
-                        ) : null}
                     </div>
 
                     <div className="lg:col-span-5">
-                        <ProductContact slug={slug} name={name} titleName={bareName(name, locale)} />
+                        <ProductContact name={name} titleName={bareName(name, locale)} />
                     </div>
                 </div>
             </Section>
@@ -295,7 +284,6 @@ export default async function ProductDetailPage({ params }: Props) {
             <Section variant="white" labelledBy="product-markets">
                 <SectionHeading
                     id="product-markets"
-                    eyebrow={t('detail.markets_eyebrow')}
                     title={t('detail.markets_title')}
                     size="md"
                     action={<TextLink href={routes.markets}>{t('detail.markets_link')}</TextLink>}
@@ -314,7 +302,6 @@ export default async function ProductDetailPage({ params }: Props) {
                 <Section variant="offwhite" labelledBy="related-products">
                     <SectionHeading
                         id="related-products"
-                        eyebrow={t('detail.related_eyebrow')}
                         title={t('detail.related_title')}
                         size="md"
                         action={<TextLink href={routes.products}>{tv('cta.view_all')}</TextLink>}

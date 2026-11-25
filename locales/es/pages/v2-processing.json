@@ -11,29 +11,27 @@
     "hero": {
         "kicker": "Envasado y envío",
         "title": "Procesado y cadena de frío desde nuestra planta de Motobas",
-        "intro": "En nuestra planta de Motobas, Kafr el-Sheikh, lavamos, enhielamos, calibramos, envasamos e inspeccionamos el pescado que criamos y compramos.",
         "imageAlt": "Pescado fresco entero sobre hielo picado en cajas blancas, con personal con ropa higiénica trabajando al fondo",
         "primary": "Iniciemos una colaboración",
         "secondary": "Ver nuestros controles de calidad"
     },
     "chain": {
-        "eyebrow": "Cómo trabajamos",
-        "title": "Cinco etapas, del estanque al palé",
+        "title": "Cinco etapas de la granja a la exportación",
         "stageLabel": "Etapa {n}",
         "stages": {
             "farming": {
                 "title": "Cría y abastecimiento",
-                "text": "Criamos pescado nosotros mismos y también compramos pescado a otros productores.",
+                "text": "Criamos nuestro propio pescado y compramos a otros productores.",
                 "alt": "Vista aérea de estanques de tierra con aireadores y palmeras"
             },
             "harvest": {
                 "title": "Cosecha",
-                "text": "El pescado se captura con redes y se lleva a nuestra planta de Motobas, Kafr el-Sheikh.",
+                "text": "Se cosecha con redes y se lleva a nuestra planta de Motobas.",
                 "alt": "Dos operarios tiran de una red llena de tilapias hacia la orilla de un estanque de tierra"
             },
             "packing": {
                 "title": "Lavado, enhielado y envasado",
-                "text": "El pescado se lava, se enhiela, se calibra por peso y se envasa entero en hielo en cajas isotérmicas de EPS.",
+                "text": "Lavado, enhielado, calibrado por peso y envasado entero en hielo en cajas de EPS.",
                 "alt": "Manos con guantes colocan una tilapia entera en una caja con hielo picado sobre una mesa de acero"
             },
             "inspection": {
@@ -43,17 +41,16 @@
             },
             "export": {
                 "title": "Exportación",
-                "text": "Nuestros propios camiones frigoríficos y, después, transporte aéreo o por carretera.",
+                "text": "Por transporte aéreo o por carretera.",
                 "alt": "Un operario introduce un palé de cajas blancas en un camión frigorífico en un muelle de carga"
             }
         },
-        "plantMap": "Ver nuestra planta en Google Maps",
+        "plantMap": "Nuestra planta en Google Maps",
         "newTab": "(se abre en una pestaña nueva)"
     },
     "logistics": {
-        "eyebrow": "Logística",
-        "title": "Logística propia y capacidad de envasado",
-        "text": "Contamos con camiones frigoríficos, cámaras frigoríficas y logística propios.",
+        "title": "Camiones, cámaras frigoríficas y capacidad",
+        "text": "Tenemos nuestros propios camiones frigoríficos y cámaras frigoríficas.",
         "capacity": "Envasamos hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de nuestra planta más de cinco."
     },
     "pending": {

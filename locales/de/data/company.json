@@ -4,7 +4,7 @@
     "workingHoursNote": "WhatsApp: Geschäftsleitung · Lieferanfragen",
     "officialChannels": {
         "title": "Offizielle Kanäle",
-        "text": "Unsere offiziellen Kanäle sind WhatsApp {phone} (Geschäftsleitung) und E-Mails von der Domain azafco.com.eg (Exportteam: {email}). Wenn Sie Bankverbindungen oder Zahlungsanweisungen von einer anderen Nummer oder Adresse erhalten, bestätigen Sie diese vor der Zahlung über einen dieser Kanäle bei uns."
+        "text": "Wir schreiben nur über WhatsApp {phone} und von E-Mail-Adressen unter azafco.com.eg ({email}). Erhalten Sie Bank- oder Zahlungsdaten von einer anderen Nummer oder Adresse, fragen Sie bei uns nach, bevor Sie zahlen."
     },
     "addresses": {
         "main": {

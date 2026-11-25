@@ -4,24 +4,23 @@
     "new_tab": "(s’ouvre dans un nouvel onglet)",
     "press": {
         "eyebrow": "Actualités de l’entreprise",
-        "title": "Visites et couverture médiatique",
-        "intro": "Visites officielles de notre usine et couverture d’AZAFCO International dans la presse et à la télévision."
+        "title": "Visites et couverture médiatique"
     },
     "milestones_link": "Nos étapes clés depuis 2008",
     "items": {
         "governor_visit": {
             "title": "Le gouverneur de Kafr el-Cheikh visite notre usine de Motobas",
-            "summary": "Le général de division Dr Alaa Abdel Moaty, gouverneur de Kafr el-Cheikh, a visité notre usine de la zone industrielle de Motobas, dans le cadre de l’action du gouvernorat en faveur de l’industrie et des exportations de poisson.",
+            "summary": "La visite s’inscrivait dans le soutien du gouvernorat à l’industrie et aux exportations de poisson.",
             "source": "Gouvernorat de Kafr el-Cheikh"
         },
         "press_feature": {
             "title": "Portrait dans le journal Dar Al-Sharq Al-Awsat",
-            "summary": "Le journal Dar Al-Sharq Al-Awsat a publié un portrait d’AZAFCO International et de son président, consacré à l’activité de l’entreprise dans l’exportation de poisson frais.",
+            "summary": "Le journal a présenté l’entreprise, son président et nos exportations de poisson frais.",
             "source": "Journal Dar Al-Sharq Al-Awsat"
         },
         "tv_program": {
             "title": "Un épisode de l’émission « Helwa Ya Baladi » consacré à AZAFCO International",
-            "summary": "L’émission « Helwa Ya Baladi » de la chaîne Misr Al Balad a diffusé un épisode spécial sur notre activité de conditionnement et d’exportation de poisson frais.",
+            "summary": "L’épisode montre comment nous conditionnons et exportons le poisson frais.",
             "source": "Chaîne Misr Al Balad (YouTube)"
         }
     }

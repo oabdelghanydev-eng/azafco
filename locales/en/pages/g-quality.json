@@ -1,20 +1,15 @@
 {
     "eyebrow": "Quality",
-    "title": "Checked on every order",
-    "intro": "We hold ISO certificates, certified by TÜV AUSTRIA. The food-safety and health documents depend on your market.",
-    "link": "How we work on quality",
+    "title": "Certificates and documents",
+    "link": "How we check quality",
     "cards": {
-        "inspection": {
-            "title": "Inspection",
-            "text": "Each order is checked against the agreed specification before the boxes are closed."
-        },
         "iso": {
             "title": "ISO certificates",
-            "text": "Our management systems are certified by TÜV AUSTRIA."
+            "text": "We hold ISO certificates, certified by TÜV AUSTRIA."
         },
         "documents": {
             "title": "Documents",
-            "text": "The export team confirms what travels with each shipment before you order."
+            "text": "Health and food-safety documents depend on your market. We confirm the list with you before you order."
         }
     }
 }

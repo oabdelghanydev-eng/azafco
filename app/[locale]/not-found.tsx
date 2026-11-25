@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params?: Promise<{ locale?:
  */
 export default function NotFound() {
     const t = useTranslations('not_found');
-    const links = t.raw('links') as { title: string; text: string }[];
+    const links = t.raw('links') as { title: string }[];
     const hrefs = [routes.products, rfqHref(), routes.markets, routes.contact];
 
     return (
@@ -46,19 +46,15 @@ export default function NotFound() {
                 </div>
             </PageHead>
 
-            <Section variant="white" labelledBy="nf-links">
-                <h2 id="nf-links" className={cn('m-0 text-ink', typography.h3)}>
-                    {t('links_title')}
-                </h2>
-                <ul className="m-0 mt-6 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+            <Section variant="white">
+                <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
                     {links.map((l, i) => (
                         <li key={l.title} className="min-w-0">
                             <Link
                                 href={hrefs[i]}
                                 className={cn(cardClass({ accent: i === 1, interactive: true, padding: 'sm' }), 'group flex h-full flex-col lg:p-6', focusRing)}
                             >
-                                <span className={cn('block text-ink', typography.h3)}>{l.title}</span>
-                                <span className={cn('mb-5 mt-2 block flex-1 text-ink-muted', typography.small)}>{l.text}</span>
+                                <span className={cn('mb-5 block flex-1 text-ink', typography.h3)}>{l.title}</span>
                                 <span
                                     aria-hidden="true"
                                     className="grid h-tap w-tap place-items-center rounded-full border border-solid border-line text-navy transition-colors duration-base group-hover:border-gold group-hover:bg-gold group-hover:text-navy-900 motion-reduce:transition-none"

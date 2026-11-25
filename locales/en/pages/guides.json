@@ -3,21 +3,11 @@
         "meta_title": "Importing fish from Egypt: rules and HS codes",
         "meta_description": "Fresh fish import rules for the Gulf and the Levant, each linked to its source, plus HS codes for our 12 species, shipment documents and the cold chain.",
         "breadcrumb": "Importing fresh fish from Egypt",
-        "card_summary": "Import rules for the Gulf and the Levant, each linked to its source, HS codes for our 12 main species, shipment documents and cold-chain basics.",
+        "card_summary": "Import rules for the UAE, Kuwait, Bahrain, Qatar, Lebanon, Iraq and Syria, and the HS codes for our 12 species.",
         "h1": "Importing fresh fish from Egypt: market rules, HS codes and documents",
-        "summary_title": "In short",
-        "summary": {
-            "who": "For importers, wholesalers and distributors who buy fresh chilled whole fish from Egypt.",
-            "markets": "What the published rules in the UAE, Kuwait, Bahrain, Lebanon, Qatar, Iraq and Syria ask for, with a link to each source and its year.",
-            "codes": "The HS codes for our 12 main species, the documents a shipment usually needs and the basics of keeping fish cold.",
-            "europe": "The EU rules, for importers in the European Union: AZAFCO is approved for export to the EU.",
-            "reviewed": "Last reviewed: {date}. Each rule links to its source."
-        },
-        "disclaimer": "This guide gives general information. It is not legal or customs advice. Rules change, so confirm the current requirements with your customs broker and the authorities of the importing country before you ship.",
         "source_label": "Sources",
         "markets": {
-            "title": "Importing into the Gulf and the Levant",
-            "intro": "For each market we ship to: what the published rules ask for, with a link to each source and its year. Where a source is not the authority's own document, such as a US government report or an FAO study, we say so."
+            "title": "Importing into the Gulf and the Levant"
         },
         "hs": {
             "title": "HS codes for fresh whole fish",
@@ -33,11 +23,11 @@
                 "other_fish": "Not named in a specific subheading, so it falls under 0302.89 \"Other\"; in the EU, under CN 0302 89 90.",
                 "freshwater_other": "Its genus is not one of the catfish named in 0302.72, so it falls under 0302.89 \"Other\"; in the EU, as a freshwater fish, under CN 0302 89 10."
             },
-            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant is responsible for the final classification. Duty rates and preferences change, so check the importing country's tariff before you calculate a landed price."
+            "after": "Codes checked against the WCO HS 2022 nomenclature and the EU TARIC on {date}. The importer's customs declarant makes the final classification. Duty rates are in the importing country's tariff."
         },
         "docs": {
             "title": "Documents for a fresh fish shipment",
-            "intro": "The exact list depends on the destination, so check the market rules above. These documents come up in most shipments.",
+            "intro": "Most shipments need these four. Each market adds its own, listed above.",
             "items": {
                 "invoice": {
                     "title": "Commercial invoice",
@@ -59,30 +49,30 @@
         },
         "cold": {
             "title": "Cold-chain basics",
-            "intro": "Fresh fish is perishable, so temperature control matters at every step from the farm to the buyer's warehouse. EU hygiene rules, for example, require fresh fishery products to be kept at a temperature approaching that of melting ice during storage and transport.",
+            "intro": "EU hygiene rules require fresh fish to be kept at the temperature of melting ice during storage and transport.",
             "items": {
                 "ice": {
                     "title": "Ice",
-                    "text": "Whole fish is packed with ice so it stays at melting-ice temperature. Re-ice as often as needed during storage."
+                    "text": "Pack whole fish in ice and re-ice during storage when needed."
                 },
                 "boxes": {
                     "title": "Insulated EPS boxes",
-                    "text": "Expanded polystyrene (EPS) boxes insulate the fish and are widely used for air freight. Seal and label every box, and check your airline's rules for perishable cargo."
+                    "text": "EPS boxes insulate the fish and are widely used for air freight. Seal and label every box, and check the airline's rules for perishable cargo."
                 },
                 "handovers": {
                     "title": "Handovers",
-                    "text": "Temperature breaks usually happen at handovers: trucks, airport cargo terminals and border posts. Plan bookings so the fish spends as little time as possible out of the cold, and keep temperature records."
+                    "text": "The cold chain usually breaks at handovers: trucks, airport cargo terminals and border posts. Keep the fish out of the cold as briefly as possible and keep temperature records."
                 },
                 "arrival": {
                     "title": "On arrival",
                     "text": "Check the fish temperature, the ice and the condition of the boxes, and record any problem with photos before you sign for the delivery."
                 }
             },
-            "azafco": "How AZAFCO ships: whole fish packed on ice in EPS boxes, moved in our own refrigerated trucks, then by air or road freight."
+            "azafco": "How we ship: whole fish on ice in EPS boxes, packed at our plant in Motobas, carried in our own refrigerated trucks, then by air or road."
         },
         "eu": {
             "title": "Exporting to the European Union",
-            "intro": "AZAFCO is approved for export to the European Union. Commission Implementing Regulation (EU) 2026/2228 of October 2026 extends Egypt's entry on the EU list for fishery products to farmed finfish. This section describes the EU rules an importer works with.",
+            "intro": "AZAFCO is approved for export to the European Union.",
             "items": {
                 "health_certificate": {
                     "title": "Health certificate and EU listing",
@@ -106,14 +96,9 @@
                 }
             }
         },
-        "enquiry": {
-            "title": "Buying from AZAFCO International",
-            "intro": "We farm and source fish, then wash, ice, grade, pack and inspect it at our plant in Motobas, and export it with our own refrigerated trucks, then air or road freight. The export team confirms what travels with each shipment before you order.",
-            "cta_requirements": "Send your requirements"
-        },
         "sources": {
             "title": "Sources",
-            "intro": "Sources used for this guide, checked on {date}."
+            "intro": "Checked on {date}."
         }
     }
 }

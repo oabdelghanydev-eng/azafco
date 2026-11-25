@@ -3,21 +3,11 @@
         "meta_title": "Fisch aus Ägypten importieren: Regeln, HS-Codes",
         "meta_description": "Einfuhrregeln für Frischfisch am Golf und in der Levante, jeweils mit Quelle, dazu HS-Codes für unsere 12 Arten, Versanddokumente und die Kühlkette.",
         "breadcrumb": "Frischfischimport aus Ägypten",
-        "card_summary": "Einfuhrregeln am Golf und in der Levante, jeweils mit Quelle, HS-Codes für unsere 12 Hauptarten, Versanddokumente und Grundlagen der Kühlkette.",
+        "card_summary": "Einfuhrregeln für die VAE, Kuwait, Bahrain, Katar, den Libanon, den Irak und Syrien sowie die HS-Codes für unsere 12 Arten.",
         "h1": "Frischfisch aus Ägypten importieren: Marktregeln, HS-Codes und Dokumente",
-        "summary_title": "Kurz gefasst",
-        "summary": {
-            "who": "Für Importeure, Großhändler und Distributoren, die ganzen, frisch gekühlten Fisch aus Ägypten kaufen.",
-            "markets": "Was die veröffentlichten Regeln in den VAE, Kuwait, Bahrain, dem Libanon, Katar, dem Irak und Syrien verlangen, mit Link und Jahr jeder Quelle.",
-            "codes": "Die HS-Codes für unsere 12 Hauptarten, die Dokumente, die eine Lieferung in der Regel braucht, und die Grundlagen der Kühlung.",
-            "europe": "Die EU-Regeln für Importeure in der Europäischen Union: AZAFCO ist für den Export in die EU zugelassen.",
-            "reviewed": "Zuletzt geprüft: {date}. Jede Regel ist mit ihrer Quelle verlinkt."
-        },
-        "disclaimer": "Dieser Leitfaden bietet allgemeine Informationen. Er ist keine Rechts- oder Zollberatung. Vorschriften ändern sich; klären Sie daher vor dem Versand die aktuellen Anforderungen mit Ihrem Zollagenten und den Behörden des Einfuhrlandes.",
         "source_label": "Quellen",
         "markets": {
-            "title": "Einfuhr in die Golfstaaten und die Levante",
-            "intro": "Für jeden Markt, in den wir liefern: was die veröffentlichten Regeln verlangen, mit Link und Jahr jeder Quelle. Ist eine Quelle kein Dokument der Behörde selbst, etwa ein Bericht der US-Regierung oder eine FAO-Studie, sagen wir das."
+            "title": "Einfuhr in die Golfstaaten und die Levante"
         },
         "hs": {
             "title": "HS-Codes für frischen ganzen Fisch",
@@ -33,11 +23,11 @@
                 "other_fish": "In keiner eigenen Unterposition genannt, daher unter 0302.89 „andere“; in der EU unter KN 0302 89 90.",
                 "freshwater_other": "Die Gattung gehört nicht zu den in 0302.72 genannten Welsen, daher unter 0302.89 „andere“; in der EU als Süßwasserfisch unter KN 0302 89 10."
             },
-            "after": "Codes geprüft am {date} anhand der HS-Nomenklatur 2022 der Weltzollorganisation (WZO) und des EU-TARIC. Für die endgültige Einreihung ist der Zollanmelder des Importeurs verantwortlich. Zollsätze und Präferenzen ändern sich; prüfen Sie daher den Zolltarif des Einfuhrlandes, bevor Sie einen Einstandspreis kalkulieren."
+            "after": "Codes geprüft am {date} anhand der HS-Nomenklatur 2022 der Weltzollorganisation (WZO) und des EU-TARIC. Die endgültige Einreihung nimmt der Zollanmelder des Importeurs vor. Die Zollsätze stehen im Zolltarif des Einfuhrlandes."
         },
         "docs": {
             "title": "Dokumente für eine Frischfischlieferung",
-            "intro": "Die genaue Liste hängt vom Bestimmungsland ab; prüfen Sie daher die Marktregeln oben. Diese Dokumente kommen bei den meisten Lieferungen vor.",
+            "intro": "Die meisten Lieferungen brauchen diese vier Dokumente. Was jeder Markt zusätzlich verlangt, steht oben.",
             "items": {
                 "invoice": {
                     "title": "Handelsrechnung",
@@ -59,30 +49,30 @@
         },
         "cold": {
             "title": "Grundlagen der Kühlkette",
-            "intro": "Frischer Fisch ist leicht verderblich, daher zählt die Temperaturführung bei jedem Schritt von der Farm bis zum Lager des Käufers. Die EU-Hygienevorschriften zum Beispiel verlangen, dass frische Fischereierzeugnisse bei Lagerung und Transport auf einer Temperatur gehalten werden, die der von schmelzendem Eis nahekommt.",
+            "intro": "Nach den EU-Hygienevorschriften muss frischer Fisch bei Lagerung und Transport bei der Temperatur von schmelzendem Eis gehalten werden.",
             "items": {
                 "ice": {
                     "title": "Eis",
-                    "text": "Ganzer Fisch wird mit Eis verpackt, damit er auf der Temperatur von schmelzendem Eis bleibt. Während der Lagerung so oft wie nötig nacheisen."
+                    "text": "Verpacken Sie ganzen Fisch in Eis und eisen Sie bei der Lagerung bei Bedarf nach."
                 },
                 "boxes": {
                     "title": "Isolierte EPS-Boxen",
-                    "text": "Boxen aus expandiertem Polystyrol (EPS) isolieren den Fisch und sind in der Luftfracht weit verbreitet. Verschließen und kennzeichnen Sie jede Box, und prüfen Sie die Regeln Ihrer Fluggesellschaft für verderbliche Fracht."
+                    "text": "EPS-Boxen isolieren den Fisch und sind in der Luftfracht weit verbreitet. Verschließen und kennzeichnen Sie jede Box, und prüfen Sie die Regeln der Fluggesellschaft für verderbliche Fracht."
                 },
                 "handovers": {
                     "title": "Übergaben",
-                    "text": "Temperaturunterbrechungen entstehen meist bei Übergaben: Lkw, Luftfrachtterminals und Grenzkontrollstellen. Planen Sie die Buchungen so, dass der Fisch möglichst kurz außerhalb der Kühlung ist, und führen Sie Temperaturaufzeichnungen."
+                    "text": "Die Kühlkette reißt meist bei Übergaben: Lkw, Luftfrachtterminals und Grenzkontrollstellen. Halten Sie den Fisch so kurz wie möglich außerhalb der Kühlung, und führen Sie Temperaturaufzeichnungen."
                 },
                 "arrival": {
                     "title": "Bei Ankunft",
                     "text": "Prüfen Sie die Temperatur des Fisches, das Eis und den Zustand der Boxen, und dokumentieren Sie Probleme mit Fotos, bevor Sie die Lieferung quittieren."
                 }
             },
-            "azafco": "So versendet AZAFCO: ganzer Fisch, auf Eis in EPS-Boxen verpackt, in unseren eigenen Kühl-Lkw transportiert, dann per Luft- oder Straßenfracht."
+            "azafco": "So versenden wir: ganzer Fisch auf Eis in EPS-Boxen, verpackt in unserem Werk in Motobas, in eigenen Kühl-Lkw transportiert, dann per Luft- oder Straßenfracht."
         },
         "eu": {
             "title": "Export in die Europäische Union",
-            "intro": "AZAFCO ist für den Export in die Europäische Union zugelassen. Die Durchführungsverordnung (EU) 2026/2228 der Kommission vom Oktober 2026 erweitert den Eintrag Ägyptens in der EU-Liste für Fischereierzeugnisse auf Flossenfische aus Aquakultur. Dieser Abschnitt beschreibt die EU-Regeln, mit denen ein Importeur arbeitet.",
+            "intro": "AZAFCO ist für den Export in die Europäische Union zugelassen.",
             "items": {
                 "health_certificate": {
                     "title": "Gesundheitsbescheinigung und EU-Listung",
@@ -106,14 +96,9 @@
                 }
             }
         },
-        "enquiry": {
-            "title": "Einkauf bei AZAFCO International",
-            "intro": "Wir züchten und beziehen Fisch, waschen, beeisen, sortieren, verpacken und prüfen ihn in unserem Werk in Motobas und exportieren ihn mit eigenen Kühl-Lkw, danach per Luft- oder Straßenfracht. Das Exportteam bestätigt vor Ihrer Bestellung, welche Dokumente jede Lieferung begleiten.",
-            "cta_requirements": "Anforderungen senden"
-        },
         "sources": {
             "title": "Quellen",
-            "intro": "Für diesen Leitfaden verwendete Quellen, geprüft am {date}."
+            "intro": "Geprüft am {date}."
         }
     }
 }

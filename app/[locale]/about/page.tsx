@@ -152,12 +152,6 @@ export default async function AboutPage({ params }: Props) {
         },
     ];
 
-    const otherBusinesses: { title: string; text?: string }[] = [
-        { title: t('businesses.agri_title'), text: t('businesses.agri_text') },
-        { title: t('businesses.livestock_title'), text: t('businesses.livestock_text') },
-        { title: t('businesses.invest_title'), text: t('businesses.invest_text') },
-    ];
-
     return (
         <>
             <PageStructuredData locale={locale} pageType="about" />
@@ -194,7 +188,7 @@ export default async function AboutPage({ params }: Props) {
             <Section variant="offwhite" labelledBy="about-glance">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
                     <div className="lg:col-span-4">
-                        <SectionHeading id="about-glance" size="md" eyebrow={t('glance.eyebrow')} title={t('glance.title')} />
+                        <SectionHeading id="about-glance" size="md" title={t('glance.title')} />
                         <TextLink href={routes.quality} dataAttrs={{ 'data-cta': 'about_quality' }}>
                             {t('glance.quality_link')}
                         </TextLink>
@@ -216,13 +210,7 @@ export default async function AboutPage({ params }: Props) {
                 <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
                     <div className="lg:col-span-5">
                         <div className="lg:sticky lg:top-28">
-                            <SectionHeading
-                                id="about-journey"
-                                eyebrow={t('journey.eyebrow')}
-                                title={t('journey.title')}
-                                intro={t('journey.intro')}
-                                className="mb-0 md:mb-0 lg:mb-0"
-                            />
+                            <SectionHeading id="about-journey" title={t('journey.title')} className="mb-0 md:mb-0 lg:mb-0" />
                         </div>
                     </div>
                     <div className="lg:col-span-6 lg:col-start-7">
@@ -241,15 +229,7 @@ export default async function AboutPage({ params }: Props) {
                     body={[t('businesses.p2')]}
                     image={gImage('fish-on-ice', t('businesses.image_alt'))}
                 >
-                    <ul className="m-0 list-none space-y-4 p-0">
-                        {otherBusinesses.map((b) => (
-                            <li key={b.title} className="border-0 border-s-2 border-solid border-gold ps-4">
-                                <p className={cn('m-0 font-semibold text-ink', typography.body)}>{b.title}</p>
-                                {b.text ? <p className={cn('m-0 mt-1 text-ink-muted', typography.small)}>{b.text}</p> : null}
-                            </li>
-                        ))}
-                    </ul>
-                    <TextLink href={routes.products} className="mt-4" dataAttrs={{ 'data-cta': 'about_products' }}>
+                    <TextLink href={routes.products} dataAttrs={{ 'data-cta': 'about_products' }}>
                         {t('businesses.link_products')}
                     </TextLink>
                 </EditorialMedia>

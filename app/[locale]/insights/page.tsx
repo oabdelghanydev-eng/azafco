@@ -3,8 +3,6 @@ import Image from 'next/image';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import {
     ArrowIcon,
-    Button,
-    Eyebrow,
     PageHead,
     Section,
     SectionHeading,
@@ -30,7 +28,6 @@ type Props = { params: Promise<{ locale: string }> };
 
 /** Company news lives on this page (the old /insights/news 308s here). */
 const NEWS_ID = 'news';
-const NEWS_HREF = `${routes.insights}#${NEWS_ID}`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params;
@@ -80,20 +77,7 @@ export default async function InsightsPage({ params }: Props) {
             <JsonLd data={itemList} />
 
             {/* 01 Opening */}
-            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="insights-title" intro={t('hero.intro')}>
-                <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                    {featured ? (
-                        <Button href={featured.href} size="lg" stretch="phone" arrow>
-                            {t('hero.primary')}
-                        </Button>
-                    ) : null}
-                    {newsItems.length > 0 ? (
-                        <Button href={NEWS_HREF} variant="outline" size="lg" stretch="phone">
-                            {t('hero.secondary')}
-                        </Button>
-                    ) : null}
-                </div>
-            </PageHead>
+            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="insights-title" />
 
             {/* 02 The importer guide */}
             {featured ? (
@@ -111,8 +95,7 @@ export default async function InsightsPage({ params }: Props) {
                             </div>
                         ) : null}
                         <div className={cn('flex flex-col justify-center p-6 sm:p-10', featured.image ? 'lg:col-span-5' : 'lg:col-span-10 lg:p-14')}>
-                            <Eyebrow>{t('featured.eyebrow')}</Eyebrow>
-                            <p className={cn('mb-0 mt-4 text-ink-muted', typography.small)}>
+                            <p className={cn('m-0 text-ink-muted', typography.small)}>
                                 {t(`categories.${featured.category}`)} · <time dateTime={featured.lastReviewed}>{fmt(featured.lastReviewed)}</time> ·{' '}
                                 {tv('insight.minutes', { count: featured.minutes })}
                             </p>
@@ -162,7 +145,6 @@ export default async function InsightsPage({ params }: Props) {
                         id="in-news"
                         eyebrow={tn('press.eyebrow')}
                         title={tn('press.title')}
-                        intro={tn('press.intro')}
                         action={<TextLink href={`${routes.about}#about-journey`}>{tn('milestones_link')}</TextLink>}
                     />
                     <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">

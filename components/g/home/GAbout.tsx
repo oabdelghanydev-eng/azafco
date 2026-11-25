@@ -28,7 +28,6 @@ export default function GAbout() {
                         {t('title')}
                     </h2>
                     <p className="mb-0 mt-4 text-fg-muted lg:mt-6">{t('p1')}</p>
-                    <p className="mb-0 mt-3.5 text-fg-muted lg:mt-4">{t('p2')}</p>
                     <TextLink href={routes.about} className="mt-4 lg:mt-7" dataAttrs={{ 'data-cta': 'home_about_page' }}>
                         {t('pageLink')}
                     </TextLink>

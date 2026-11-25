@@ -3,21 +3,11 @@
         "meta_title": "Importar pescado de Egipto: normas y códigos SA",
         "meta_description": "Normas para importar pescado fresco al Golfo y al Levante, cada una con su fuente, y códigos SA de 12 especies, documentos del envío y cadena de frío.",
         "breadcrumb": "Importar pescado fresco de Egipto",
-        "card_summary": "Normas de importación del Golfo y del Levante, cada una con su fuente, códigos SA de nuestras 12 especies principales, documentos del envío y lo básico de la cadena de frío.",
+        "card_summary": "Normas de importación de los Emiratos Árabes Unidos, Kuwait, Baréin, Catar, Líbano, Irak y Siria, y los códigos SA de nuestras 12 especies.",
         "h1": "Importar pescado fresco de Egipto: normas por mercado, códigos SA y documentos",
-        "summary_title": "En resumen",
-        "summary": {
-            "who": "Para importadores, mayoristas y distribuidores que compran pescado entero fresco refrigerado de Egipto.",
-            "markets": "Lo que exigen las normas publicadas en los Emiratos Árabes Unidos, Kuwait, Baréin, Líbano, Catar, Irak y Siria, con un enlace a cada fuente y su año.",
-            "codes": "Los códigos SA de nuestras 12 especies principales, los documentos que suele necesitar un envío y lo básico para mantener el pescado frío.",
-            "europe": "Las normas de la UE, para importadores de la Unión Europea: AZAFCO está autorizada para exportar a la UE.",
-            "reviewed": "Última revisión: {date}. Cada norma enlaza a su fuente."
-        },
-        "disclaimer": "Esta guía ofrece información general. No constituye asesoramiento jurídico ni aduanero. Las normas cambian, así que confirme los requisitos vigentes con su agente de aduanas y con las autoridades del país importador antes de realizar el envío.",
         "source_label": "Fuentes",
         "markets": {
-            "title": "Importar al Golfo y al Levante",
-            "intro": "Para cada mercado al que enviamos: lo que exigen las normas publicadas, con un enlace a cada fuente y su año. Cuando una fuente no es un documento de la propia autoridad, como un informe del Gobierno de EE. UU. o un estudio de la FAO, lo indicamos."
+            "title": "Importar al Golfo y al Levante"
         },
         "hs": {
             "title": "Códigos SA para pescado fresco entero",
@@ -33,11 +23,11 @@
                 "other_fish": "No figura en una subpartida específica, por lo que se clasifica en la 0302.89 «Los demás»; en la UE, en la NC 0302 89 90.",
                 "freshwater_other": "Su género no es uno de los bagres o peces gato citados en la 0302.72, por lo que se clasifica en la 0302.89 «Los demás»; en la UE, como pescado de agua dulce, en la NC 0302 89 10."
             },
-            "after": "Códigos comprobados con la nomenclatura SA 2022 de la OMA y con el TARIC de la UE el {date}. La clasificación final es responsabilidad del declarante de aduanas del importador. Los tipos arancelarios y las preferencias cambian, así que consulte el arancel del país importador antes de calcular el precio puesto en destino."
+            "after": "Códigos comprobados con la nomenclatura SA 2022 de la OMA y con el TARIC de la UE el {date}. La clasificación final la hace el declarante de aduanas del importador. Los aranceles figuran en la tarifa del país importador."
         },
         "docs": {
             "title": "Documentos para un envío de pescado fresco",
-            "intro": "La lista exacta depende del destino; consulte las normas por mercado más arriba. Estos documentos aparecen en la mayoría de los envíos.",
+            "intro": "La mayoría de los envíos necesitan estos cuatro. Cada mercado añade los suyos, indicados más arriba.",
             "items": {
                 "invoice": {
                     "title": "Factura comercial",
@@ -59,30 +49,30 @@
         },
         "cold": {
             "title": "Lo básico de la cadena de frío",
-            "intro": "El pescado fresco es perecedero, por lo que el control de la temperatura es importante en cada etapa, desde la granja hasta el almacén del comprador. Las normas de higiene de la UE, por ejemplo, exigen que los productos de la pesca frescos se mantengan a una temperatura próxima a la del hielo fundente durante el almacenamiento y el transporte.",
+            "intro": "Las normas de higiene de la UE exigen mantener el pescado fresco a la temperatura del hielo fundente durante el almacenamiento y el transporte.",
             "items": {
                 "ice": {
                     "title": "Hielo",
-                    "text": "El pescado entero se envasa con hielo para que se mantenga a la temperatura del hielo fundente. Reponga el hielo tantas veces como sea necesario durante el almacenamiento."
+                    "text": "Envase el pescado entero en hielo y reponga el hielo durante el almacenamiento cuando haga falta."
                 },
                 "boxes": {
                     "title": "Cajas isotérmicas de EPS",
-                    "text": "Las cajas de poliestireno expandido (EPS) aíslan el pescado y se usan mucho en el transporte aéreo. Selle y etiquete cada caja, y compruebe las normas de su aerolínea para la carga perecedera."
+                    "text": "Las cajas de EPS aíslan el pescado y se usan mucho en el transporte aéreo. Selle y etiquete cada caja, y compruebe las normas de la aerolínea para la carga perecedera."
                 },
                 "handovers": {
                     "title": "Traspasos",
-                    "text": "Las roturas de la cadena de frío suelen producirse en los traspasos: camiones, terminales de carga de los aeropuertos y puestos fronterizos. Planifique las reservas para que el pescado pase el menor tiempo posible fuera del frío, y conserve los registros de temperatura."
+                    "text": "La cadena de frío suele romperse en los traspasos: camiones, terminales de carga de los aeropuertos y puestos fronterizos. Mantenga el pescado fuera del frío el menor tiempo posible y conserve los registros de temperatura."
                 },
                 "arrival": {
                     "title": "A la llegada",
                     "text": "Compruebe la temperatura del pescado, el hielo y el estado de las cajas, y documente cualquier problema con fotos antes de firmar la recepción."
                 }
             },
-            "azafco": "Cómo envía AZAFCO: pescado entero envasado en hielo en cajas de EPS, transportado en nuestros propios camiones frigoríficos y después por vía aérea o por carretera."
+            "azafco": "Cómo enviamos: pescado entero en hielo en cajas de EPS, envasado en nuestra planta de Motobas, transportado en nuestros propios camiones frigoríficos y después por aire o carretera."
         },
         "eu": {
             "title": "Exportar a la Unión Europea",
-            "intro": "AZAFCO está autorizada para exportar a la Unión Europea. El Reglamento de Ejecución (UE) 2026/2228 de la Comisión, de octubre de 2026, amplía la inclusión de Egipto en la lista de la UE para productos de la pesca a los peces de aleta de cultivo. Esta sección describe las normas de la UE con las que trabaja un importador.",
+            "intro": "AZAFCO está autorizada para exportar a la Unión Europea.",
             "items": {
                 "health_certificate": {
                     "title": "Certificado sanitario e inclusión en la lista de la UE",
@@ -106,14 +96,9 @@
                 }
             }
         },
-        "enquiry": {
-            "title": "Comprar a AZAFCO International",
-            "intro": "Criamos y compramos pescado, y después lo lavamos, enhielamos, calibramos, envasamos e inspeccionamos en nuestra planta de Motobas, y lo exportamos con nuestros propios camiones frigoríficos y después por vía aérea o por carretera. Antes de que haga su pedido, el equipo de exportación le confirma qué documentos acompañan cada envío.",
-            "cta_requirements": "Envíe sus requisitos"
-        },
         "sources": {
             "title": "Fuentes",
-            "intro": "Fuentes utilizadas en esta guía, consultadas el {date}."
+            "intro": "Consultadas el {date}."
         }
     }
 }

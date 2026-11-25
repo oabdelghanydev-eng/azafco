@@ -16,25 +16,15 @@
         "primary": "Iniciemos una colaboración",
         "secondary": "Ver cómo envasamos y enviamos"
     },
-    "practice": {
-        "eyebrow": "En cada pedido",
-        "title": "Del lavado a la inspección",
-        "intro": "En nuestra planta de Motobas lavamos, enhielamos, calibramos, envasamos e inspeccionamos el pescado. La inspección es la última etapa antes del envío.",
-        "link": "Ver las cinco etapas, de la cría a la exportación"
-    },
     "certs": {
-        "eyebrow": "Certificados",
-        "title": "Certificados ISO de nuestros sistemas de gestión",
-        "statement": "Contamos con certificados ISO expedidos por TÜV AUSTRIA.",
-        "documents": "En cuanto a los documentos sanitarios y de seguridad alimentaria que exige su mercado, nuestro equipo de exportación le confirma cuáles acompañan cada envío antes de que haga su pedido."
+        "title": "Certificados ISO y autorización de exportación a la UE",
+        "statement": "Contamos con certificados ISO expedidos por TÜV AUSTRIA."
     },
     "next": {
-        "text": "Indíquenos su destino y qué documentos necesita su equipo de calidad.",
         "button": "Consultar los documentos del envío"
     },
     "faq": {
-        "eyebrow": "Preguntas de compradores",
-        "title": "Preguntas de los equipos de compras y calidad",
+        "title": "Preguntas de los equipos de calidad",
         "q1": "¿Qué normas ISO tienen?",
         "a1": "Contamos con las certificaciones ISO 9001:2015 de gestión de la calidad, ISO 14001:2015 de gestión ambiental e ISO 45001:2018 de seguridad y salud en el trabajo, expedidas por TÜV AUSTRIA."
     },

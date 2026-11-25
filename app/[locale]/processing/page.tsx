@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Pending, SHOW_PENDING } from '@/components/v2';
 import Workflow from '@/components/v2/processing/Workflow';
-import { Breadcrumbs, Button, Eyebrow, ExternalLink, PageHero, Section, SectionHeading, typography } from '@/components/ui';
+import { Breadcrumbs, Button, ExternalLink, PageHero, Section, SectionHeading, typography } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { routes } from '@/lib/v2/routes';
 
@@ -73,7 +73,6 @@ export default async function ProcessingPage({ params }: Props) {
                 }
                 eyebrow={t('hero.kicker')}
                 title={t('hero.title')}
-                intro={t('hero.intro')}
                 actions={
                     <>
                         <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'processing_hero_partner' }}>
@@ -88,7 +87,7 @@ export default async function ProcessingPage({ params }: Props) {
 
             {/* The five in-house stages */}
             <Section variant="white" labelledBy="processing-chain" reveal={false}>
-                <SectionHeading id="processing-chain" eyebrow={t('chain.eyebrow')} title={t('chain.title')} />
+                <SectionHeading id="processing-chain" title={t('chain.title')} />
                 <Workflow
                     stages={STAGES.map((s, i) => ({
                         key: s.key,
@@ -111,7 +110,6 @@ export default async function ProcessingPage({ params }: Props) {
             <Section variant="navy" labelledBy="processing-logistics" reveal={false}>
                 {/* Hand-built heading (as the G split blocks): SectionHeading's bottom margin would leave a gap with no content under it */}
                 <div className="max-w-[760px]">
-                    <Eyebrow className="mb-3 lg:mb-4">{t('logistics.eyebrow')}</Eyebrow>
                     <h2 id="processing-logistics" className={`v2-heading m-0 ${typography.h2}`}>
                         {t('logistics.title')}
                     </h2>

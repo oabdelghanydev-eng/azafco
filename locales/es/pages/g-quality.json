@@ -1,20 +1,15 @@
 {
     "eyebrow": "Calidad",
-    "title": "Comprobado en cada pedido",
-    "intro": "Contamos con certificados ISO expedidos por TÜV AUSTRIA. Los documentos sanitarios y de seguridad alimentaria dependen de su mercado.",
-    "link": "Cómo trabajamos la calidad",
+    "title": "Certificados y documentos",
+    "link": "Cómo comprobamos la calidad",
     "cards": {
-        "inspection": {
-            "title": "Inspección",
-            "text": "Cada pedido se comprueba conforme a la especificación acordada antes de cerrar las cajas."
-        },
         "iso": {
             "title": "Certificados ISO",
-            "text": "Nuestros sistemas de gestión están certificados por TÜV AUSTRIA."
+            "text": "Contamos con certificados ISO expedidos por TÜV AUSTRIA."
         },
         "documents": {
             "title": "Documentos",
-            "text": "Antes de que haga su pedido, el equipo de exportación le confirma qué documentos acompañan cada envío."
+            "text": "Los documentos sanitarios y de seguridad alimentaria dependen de su mercado. Le confirmamos la lista antes de que haga el pedido."
         }
     }
 }

@@ -6,13 +6,9 @@
     "breadcrumb": "Ressources",
     "hero": {
         "eyebrow": "Ressources",
-        "title": "Guide de l’importateur et actualités de l’entreprise",
-        "intro": "Un guide pour les importateurs, qui couvre les règles d’importation, les codes SH, les documents et la chaîne du froid, ainsi que l’actualité de l’entreprise, avec la date de chaque information et un lien vers la source lorsqu’il en existe une.",
-        "primary": "Lire le guide de l’importateur",
-        "secondary": "Actualités de l’entreprise"
+        "title": "Guide de l’importateur et actualités de l’entreprise"
     },
     "featured": {
-        "eyebrow": "Guide pour les importateurs",
         "read": "Lire le guide"
     },
     "categories": {
@@ -26,25 +22,19 @@
         "author": "AZAFCO International",
         "published": "Date de publication",
         "reviewed": "Dernière vérification",
-        "toc": "Dans cet article",
-        "sources_side": "Sources",
-        "sources_side_text": "{count, plural, one {# source, citée à la fin et liée dans le texte.} other {# sources, citées à la fin et liées dans le texte.}}",
-        "related_title": "Pour aller plus loin",
+        "toc": "Sommaire",
+        "related_title": "Pages liées",
         "related": [
             {
-                "title": "Pour les importateurs",
-                "text": "Comment se passe une commande, étape par étape."
+                "title": "Pour les importateurs"
             },
             {
-                "title": "Nos marchés",
-                "text": "Où nous expédions aujourd’hui et ce qui est prévu."
+                "title": "Nos marchés"
             },
             {
-                "title": "Nos poissons",
-                "text": "Une page pour chacune de nos espèces principales."
+                "title": "Nos poissons"
             }
         ],
-        "related_eyebrow": "À lire ensuite",
         "reading_time": "Temps de lecture"
     }
 }

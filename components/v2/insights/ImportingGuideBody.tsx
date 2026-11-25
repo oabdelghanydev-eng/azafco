@@ -1,6 +1,6 @@
 import { getFormatter, getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
-import { ExternalIcon, ExternalLink, TextLink, cardClass, cn, focusRing, typography } from '@/components/ui';
+import { ExternalIcon, ExternalLink, cardClass, cn, focusRing, typography } from '@/components/ui';
 import { products } from '@/data/products';
 import { importingDocuments, importingEuItems, importingSources, importingTariffRows } from '@/data/guides';
 import { MARKET_IMPORT_REVIEWED, REVIEW_DATE_FORMAT, importMarketKeys, isoDate, marketImportSources } from '@/data/market-import';
@@ -13,9 +13,10 @@ import { productHref, routes } from '@/lib/v2/routes';
  * come from data/guides.ts and guides_page.importing.*; the HS table becomes a
  * label–value list on phones.
  *
- * Order (ROUND1-SPEC §3, 14 Nov 2026): answer-first summary, the Gulf and Levant
- * import rules (AZAFCO's real markets, verified items only), HS codes, documents,
- * cold chain, then the EU rules ("Exporting to the European Union": AZAFCO is approved
+ * Order (ROUND1-SPEC §3, 14 Nov 2026; summary, disclaimer and closing enquiry
+ * section cut in the DEAI pass, 25 Nov 2026): the Gulf and Levant import rules
+ * (AZAFCO's real markets, verified items only), HS codes, documents, cold chain,
+ * then the EU rules ("Exporting to the European Union": AZAFCO is approved
  * for export to the EU, owner 22 Nov 2026). Never an approval number or date, and
  * nothing that says shipments to the EU have taken place.
  *
@@ -30,13 +31,10 @@ import { productHref, routes } from '@/lib/v2/routes';
  * - rows whose product key is not in data/products.ts are dropped (safety net).
  */
 
-export const IMPORTING_SECTIONS = ['gulf-levant', 'hs-codes', 'documents', 'cold-chain', 'europe', 'enquiry', 'sources'] as const;
+export const IMPORTING_SECTIONS = ['gulf-levant', 'hs-codes', 'documents', 'cold-chain', 'europe', 'sources'] as const;
 const COLD_ITEMS = ['ice', 'boxes', 'handovers', 'arrival'] as const;
-/** Five-line answer-first summary: guides_page.importing.summary.<line> */
-const SUMMARY_LINES = ['who', 'markets', 'codes', 'europe', 'reviewed'] as const;
 const HS_SOURCES = ['wco_hs', 'taric'];
 const COLD_SOURCES = ['reg_853_2004'];
-const EU_INTRO_SOURCES = ['reg_2026_2228'];
 
 /** Sold but not shown on the site (RELEASE-DECISIONS §6) */
 const HIDDEN_PRODUCT_KEYS = new Set(['eels']);
@@ -47,8 +45,6 @@ const tariffRows = importingTariffRows.filter((r) => !HIDDEN_PRODUCT_KEYS.has(r.
 
 /** Source ids in list order: the market import sources first, then the guide's own sources */
 const sourceIds = [...marketImportSources.map((s) => s.id), ...importingSources.map((s) => s.id)];
-
-export const importingSourceCount = sourceIds.length;
 
 export interface GuideSourceView {
     id: string;
@@ -121,7 +117,6 @@ export async function importingSectionTitles(locale: string) {
         documents: t('docs.title'),
         'cold-chain': t('cold.title'),
         europe: t('eu.title'),
-        enquiry: t('enquiry.title'),
         sources: t('sources.title'),
     } as Record<(typeof IMPORTING_SECTIONS)[number], string>;
 }
@@ -172,25 +167,11 @@ export default async function ImportingGuideBody({ locale, reviewedLabel }: { lo
 
     return (
         <div className="flex flex-col gap-14 lg:gap-16">
-            {/* Answer-first summary */}
-            <div className="flex flex-col gap-6">
-                <div className="rounded-card border-s-4 border-solid border-navy bg-surface-offwhite p-5 lg:p-6">
-                    <p className="m-0 font-bold text-ink">{t('summary_title')}</p>
-                    <ul className={cn('m-0 mt-3 flex list-disc flex-col gap-2 ps-5 text-ink', typography.body)}>
-                        {SUMMARY_LINES.map((line) => (
-                            <li key={line}>{t(`summary.${line}`, { date: reviewedLabel })}</li>
-                        ))}
-                    </ul>
-                </div>
-                <p className={note}>{t('disclaimer')}</p>
-            </div>
-
             {/* Gulf and Levant */}
             <section id="gulf-levant" aria-labelledby="gulf-levant-title" className="flex scroll-mt-28 flex-col gap-4">
                 <h2 id="gulf-levant-title" className={h2}>
                     {t('markets.title')}
                 </h2>
-                <p className={p}>{t('markets.intro')}</p>
                 <ul className="m-0 flex list-none flex-col gap-4 p-0">
                     {markets.map(({ key, view }) =>
                         view && view.groups.length ? (
@@ -357,24 +338,8 @@ export default async function ImportingGuideBody({ locale, reviewedLabel }: { lo
                 <h2 id="europe-title" className={h2}>
                     {t('eu.title')}
                 </h2>
-                <p className={p}>
-                    {t('eu.intro')}
-                    <SourceRefs ids={EU_INTRO_SOURCES} label={sourceLabel} />
-                </p>
+                <p className={p}>{t('eu.intro')}</p>
                 {itemCards(importingEuItems, 'eu')}
-            </section>
-
-            {/* Next step */}
-            <section id="enquiry" aria-labelledby="enquiry-title" className="flex scroll-mt-28 flex-col gap-4">
-                <h2 id="enquiry-title" className={h2}>
-                    {t('enquiry.title')}
-                </h2>
-                <p className={p}>{t('enquiry.intro')}</p>
-                <p className="m-0">
-                    <TextLink href={routes.rfq} dataAttrs={{ 'data-cta': 'guide_requirements' }}>
-                        {t('enquiry.cta_requirements')}
-                    </TextLink>
-                </p>
             </section>
 
             {/* Sources */}

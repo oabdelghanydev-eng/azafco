@@ -4,7 +4,7 @@
     "workingHoursNote": "WhatsApp: gerencia · consultas de suministro",
     "officialChannels": {
         "title": "Canales oficiales",
-        "text": "Nuestros canales oficiales son WhatsApp {phone} (gerencia) y el correo electrónico del dominio azafco.com.eg (equipo de exportación: {email}). Si recibe datos bancarios o instrucciones de pago desde cualquier otro número o dirección, confírmelos con nosotros por uno de estos canales antes de pagar."
+        "text": "Solo escribimos desde el WhatsApp {phone} y desde el correo de azafco.com.eg ({email}). Si le llegan datos bancarios o de pago desde otro número o dirección, consúltenos antes de pagar."
     },
     "addresses": {
         "main": {

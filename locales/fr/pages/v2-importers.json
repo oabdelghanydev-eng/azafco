@@ -1,113 +1,39 @@
 {
     "meta": {
         "title": "Importer du poisson d’Égypte : comment commander",
-        "description": "Comment acheter du poisson frais à AZAFCO International : envoyez vos besoins, examinez-les avec l’équipe export, puis nous expédions par avion ou route."
+        "description": "Poisson frais d’Égypte pour importateurs et distributeurs : 12 espèces, calibres au poids, conditionnement sous glace, 7+ marchés, contacts d’AZAFCO."
     },
     "breadcrumb": "Pour les importateurs",
     "hero": {
         "eyebrow": "Pour les importateurs et distributeurs",
         "title": "Démarrer un partenariat d’approvisionnement en poisson frais",
-        "intro": "Indiquez-nous l’espèce, la quantité et la destination. Notre équipe export examine avec vous les disponibilités et les conditions commerciales.",
+        "intro": "Nous conditionnons jusqu’à 2 500 t/mois dans notre usine de Motobas. Un camion frigorifique transporte 20 t, et certains jours plus de cinq quittent l’usine.",
         "primary": "Envoyer vos besoins",
         "secondary": "Écrire à la direction sur WhatsApp",
         "image_alt": "Dorades royales, bars et tilapias entiers et frais sur glace pilée, sous une lumière froide"
     },
-    "process": {
-        "eyebrow": "Pour commencer",
-        "title": "Quatre étapes jusqu’à votre première expédition",
-        "steps": [
-            {
-                "title": "Envoyer vos besoins",
-                "text": "Société, pays, espèce, calibre, présentation du produit, quantité, conditionnement et date de livraison."
-            },
-            {
-                "title": "Examen avec notre équipe export",
-                "text": "Nous vérifions les disponibilités, la spécification, les exigences de votre marché et les documents d’export qu’il requiert."
-            },
-            {
-                "title": "Convenir de la commande",
-                "text": "Espèce, calibre, quantité, conditionnement, transport, calendrier et prix sont confirmés par écrit pour chaque commande."
-            },
-            {
-                "title": "Conditionner et expédier",
-                "text": "Nous conditionnons sous glace et expédions par avion ou par route, avec les documents d’export requis pour votre destination."
-            }
-        ],
-        "link": "Ce qu’il faut indiquer dans vos besoins"
-    },
-    "documents": {
-        "eyebrow": "Documents",
-        "title": "Ce que fournit l’équipe export",
-        "intro": "Écrivez à l’équipe export pour les détails et les documents. Voici les documents avec lesquels nous travaillons :",
-        "items": [
-            {
-                "title": "Fiche technique produit",
-                "text": "Espèce, calibre, présentation du produit et conditionnement pour votre commande."
-            },
-            {
-                "title": "Présentation de l’entreprise",
-                "text": "Raison sociale, immatriculation, usine, espèces et marchés sur une seule page, sur demande."
-            },
-            {
-                "title": "Documents d’expédition",
-                "text": "Les documents d’export requis pour votre destination, préparés avec chaque expédition."
-            }
-        ],
-        "guide_link": "Les documents habituellement requis pour une expédition de poisson frais",
-        "request_link": "Demander une fiche technique produit ou une présentation de l’entreprise"
-    },
-    "terms": {
-        "eyebrow": "Conditions commerciales",
-        "title": "Prix et conditions",
-        "text": "Nous ne publions pas de liste de prix. Le prix, la quantité minimale, les conditions de livraison et le délai de transit dépendent de l’espèce, du calibre, de la quantité et de la destination, et nous les confirmons par écrit pour chaque commande."
-    },
     "faq": {
-        "eyebrow": "FAQ importateurs",
-        "title": "Les questions des importateurs avant de commencer",
+        "title": "Questions des importateurs",
         "items": {
-            "who": {
-                "q": "Qui est AZAFCO International ?",
-                "a": "AZAFCO International est une entreprise égyptienne de Kafr el-Cheikh, exportatrice depuis 2008. Elle élève et achète du poisson, puis le conditionne et l’exporte entier et frais réfrigéré. Elle conditionne jusqu’à 2 500 t/mois dans son usine de Motobas et expédie vers plus de 7 marchés au Moyen-Orient et au-delà."
-            },
-            "start": {
-                "q": "Comment commencer à travailler ensemble ?",
-                "a": "Envoyez vos besoins via notre <req>page dédiée</req>, ou écrivez à l’équipe export à business@azafco.com.eg pour les spécifications et les documents. Écrivez à la direction sur WhatsApp pour discuter de l’approvisionnement. Nous examinons ensuite l’approvisionnement avec vous et confirmons les conditions commerciales par écrit."
-            },
             "species": {
                 "q": "Quelles espèces fournissez-vous ?",
                 "a": "Nous fournissons 12 espèces principales : {species}."
             },
             "grades": {
                 "q": "Quels calibres pouvez-vous fournir ?",
-                "a": "Des calibres indicatifs sont publiés sur les pages des espèces : {grades}. Pour les autres espèces, envoyez-nous votre fourchette de poids cible."
+                "a": "Nos calibres indicatifs : {grades}. Pour les autres espèces, indiquez-nous le poids souhaité."
             },
             "packing": {
-                "q": "Comment le poisson est-il conditionné ?",
-                "a": "Entier et frais réfrigéré, sous glace, en caisses de polystyrène expansé."
-            },
-            "certificates": {
-                "q": "Quels certificats détenez-vous ?",
-                "a": "Nous détenons des certificats ISO délivrés par TÜV AUSTRIA. Les normes sont indiquées sur notre <quality>page qualité</quality>."
-            },
-            "shipping": {
-                "q": "Comment le poisson est-il expédié ?",
-                "a": "Réfrigéré, dans nos propres camions frigorifiques depuis l’usine, puis par fret aérien ou routier selon la destination."
+                "q": "Comment le poisson est-il conditionné et expédié ?",
+                "a": "Entier et frais réfrigéré, sous glace, en caisses de polystyrène expansé. Nos propres camions frigorifiques le chargent à l’usine, puis il part par avion ou par route."
             },
             "markets": {
                 "q": "Vers quels marchés expédiez-vous ?",
-                "a": "Nous expédions vers plus de 7 marchés. Les sept indiqués sur ce site sont les Émirats arabes unis, le Koweït, Bahreïn, le Liban, le Qatar, l’Irak et la Syrie. Nous sommes agréés pour l’exportation vers l’Union européenne ; la Russie et les États-Unis font partie de notre plan."
-            },
-            "eu": {
-                "q": "Exportez-vous vers l’Union européenne ?",
-                "a": "Oui. Nous sommes agréés pour l’exportation vers l’Union européenne. Indiquez-nous l’espèce, la quantité et la destination dans l’UE, et l’équipe export vous confirme les documents pour votre expédition."
-            },
-            "recurring": {
-                "q": "Acceptez-vous des programmes d’approvisionnement réguliers ?",
-                "a": "Oui. Nous conditionnons jusqu’à 2 500 t/mois. Un camion frigorifique transporte 20 t, et certains jours, plus de cinq quittent notre usine. Indiquez-nous combien d’expéditions il vous faut par semaine ou par mois."
+                "a": "Nous expédions vers plus de 7 marchés, dont les Émirats arabes unis, le Koweït, Bahreïn, le Liban, le Qatar, l’Irak et la Syrie. Nous sommes agréés pour l’exportation vers l’Union européenne ; la Russie et les États-Unis sont dans nos projets."
             },
             "fraud": {
                 "q": "Comment savoir si un message vient vraiment d’AZAFCO International ?",
-                "a": "Nos canaux officiels sont l’e-mail de l’équipe export, business@azafco.com.eg, et le WhatsApp de la direction, +20 100 773 6419. Si un message concernant votre commande provient d’une autre adresse ou d’un autre numéro, vérifiez-le auprès de nous sur ces canaux avant d’y donner suite."
+                "a": "Nous écrivons uniquement depuis business@azafco.com.eg et depuis le WhatsApp +20 100 773 6419 : vérifiez auprès de nous tout message venant d’une autre adresse ou d’un autre numéro avant d’y donner suite."
             }
         }
     }

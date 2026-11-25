@@ -6,13 +6,9 @@
     "breadcrumb": "Recursos",
     "hero": {
         "eyebrow": "Recursos",
-        "title": "Guía para importadores y noticias de la empresa",
-        "intro": "Una guía para importadores sobre normas de importación, códigos SA, documentos y cadena de frío, y noticias de la empresa con la fecha de cada una y un enlace a la fuente cuando existe.",
-        "primary": "Leer la guía del importador",
-        "secondary": "Noticias de la empresa"
+        "title": "Guía para importadores y noticias de la empresa"
     },
     "featured": {
-        "eyebrow": "Guía para importadores",
         "read": "Leer la guía"
     },
     "categories": {
@@ -26,25 +22,19 @@
         "author": "AZAFCO International",
         "published": "Publicado",
         "reviewed": "Última revisión",
-        "toc": "En este artículo",
-        "sources_side": "Fuentes",
-        "sources_side_text": "{count, plural, one {# fuente, citada al final y enlazada en el texto.} other {# fuentes, citadas al final y enlazadas en el texto.}}",
-        "related_title": "Siga leyendo",
+        "toc": "Contenido",
+        "related_title": "Páginas relacionadas",
         "related": [
             {
-                "title": "Para importadores",
-                "text": "Cómo funciona el pedido, paso a paso."
+                "title": "Para importadores"
             },
             {
-                "title": "Nuestros mercados",
-                "text": "Adónde enviamos hoy y qué está previsto."
+                "title": "Nuestros mercados"
             },
             {
-                "title": "Nuestro pescado",
-                "text": "Una página para cada una de nuestras especies principales."
+                "title": "Nuestro pescado"
             }
         ],
-        "related_eyebrow": "Siguiente lectura",
         "reading_time": "Tiempo de lectura"
     }
 }

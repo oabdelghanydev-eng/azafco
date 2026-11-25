@@ -26,7 +26,6 @@ export default async function GChain() {
                 <h2 id="g-chain-title" className={cn('v2-heading m-0', typography.h2)}>
                     {t('title')}
                 </h2>
-                <p className="mb-0 mt-4 text-fg-muted lg:mt-5">{t('intro')}</p>
             </div>
 
             <ol className="relative m-0 list-none p-0 lg:grid lg:grid-cols-5 lg:gap-x-3 lg:gap-y-10 xl:gap-x-5">

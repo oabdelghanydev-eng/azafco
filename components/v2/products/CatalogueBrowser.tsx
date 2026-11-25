@@ -53,7 +53,6 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
     // Fixed ids (one browser per page). useId() hydrated with different values on
     // the server and the client (the ancestor tree differs), flagged by the dev overlay.
     const searchId = 'catalogue-search';
-    const hintId = 'catalogue-search-hint';
 
     const indexed = useMemo(() => items.map((it) => ({ ...it, haystack: normalise(it.terms.join(' ')) })), [items]);
     const q = normalise(query);
@@ -110,7 +109,6 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
                                 placeholder={t('search_placeholder')}
-                                aria-describedby={hintId}
                                 autoComplete="off"
                                 enterKeyHint="search"
                                 className={cn(
@@ -133,9 +131,6 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
                                 </button>
                             ) : null}
                         </div>
-                        <p id={hintId} className={cn('m-0 mt-2 text-ink-subtle', typography.caption)}>
-                            {t('search_hint')}
-                        </p>
                     </div>
                     <fieldset className="lg:col-span-7">
                         <legend className={cn('mb-2 font-semibold text-ink', typography.small)}>{t('water_type')}</legend>
@@ -177,9 +172,6 @@ export default function CatalogueBrowser({ items, categories, forms = [] }: Cata
             ) : (
                 <div className="mt-4 rounded-card border border-dashed border-line-strong bg-white px-6 py-12 text-center md:px-12">
                     <h3 className={cn('m-0 text-navy', typography.h3)}>{t('empty_title')}</h3>
-                    <p className={cn('mx-auto mb-0 mt-3 max-w-prose-v2 text-ink-muted', typography.body)}>
-                        {t('empty_text', { query: query.trim() || '—' })}
-                    </p>
                     <div className="mt-6 flex justify-center">
                         <Button variant="outline" onClick={reset}>
                             {t('reset')}
