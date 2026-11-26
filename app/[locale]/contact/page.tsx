@@ -1,34 +1,17 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { LuClock, LuDownload } from 'react-icons/lu';
-import {
-    Button,
-    Card,
-    ContactRow,
-    ExternalLink,
-    Icon,
-    MailIcon,
-    MapPinIcon,
-    PageHead,
-    PhoneIcon,
-    Section,
-    SectionHeading,
-    WhatsAppIcon,
-    buttonClass,
-    cn,
-    phoneDisplay,
-    typography,
-} from '@/components/ui';
-import ContactRoutes from '@/components/v2/contact/ContactRoutes';
+import { LuDownload } from 'react-icons/lu';
+import { ExternalLink, Icon, PageHead, Section, cn, focusRing, phoneDisplay, typography } from '@/components/ui';
+import ContactStage from '@/components/v2/contact/ContactStage';
+import InfoBlock from '@/components/v2/contact/InfoBlock';
 import { pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
 import { companyInfo } from '@/data/company';
+import { localeConfig, type Locale } from '@/i18n';
 import { routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 
-// No searchParams here: the page is statically rendered (metadata in <head>).
-// ?product= / ?country= are carried into the enquiry routes in the browser (ContactRoutes).
 type Props = {
     params: Promise<{ locale: string }>;
 };
@@ -53,139 +36,100 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({ locale, path: routes.contact, title: t('title'), description: t('description') });
 }
 
+/**
+ * /contact (owner's pick "A", 25 Nov 2026): the two channels on one panel, then
+ * the addresses and the registration, about one screen long.
+ *
+ * Gone on purpose: the embedded maps (two large grey boxes; the Google Maps
+ * links stay), the separate phone row (same number as WhatsApp: now a "Call"
+ * button) and the three enquiry links to /requirements (owner, 26 Nov 2026, after
+ * the B2B review: they led to the same two buttons this page already shows).
+ */
 export default async function ContactPage({ params }: Props) {
     const { locale } = await params;
     setRequestLocale(locale);
 
     const t = await getTranslations({ locale, namespace: 'contact_v2' });
     const tc = await getTranslations({ locale, namespace: 'data.company' });
+    const tv = await getTranslations({ locale, namespace: 'v2' });
     const c = companyConfig.contact;
     const newTab = t('channels.new_tab');
     const phone = phoneDisplay(c.whatsappNumber);
-    const mailto = `mailto:${c.email}`;
     // Management WhatsApp with the standard prefilled opening (ledger C12)
     const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
 
-    // Same roles as the G footer: WhatsApp = management (supply enquiries), email = export team.
-    const channels = [
-        { key: 'whatsapp', href: waHref, value: phone, icon: <WhatsAppIcon size={24} /> },
-        { key: 'email', href: mailto, value: c.email, icon: <MailIcon size={24} /> },
-        { key: 'phone', href: `tel:${c.phone}`, value: phone, icon: <PhoneIcon size={24} /> },
-    ] as const;
-
-    // Addresses + embeds from data/company.ts (as on the live contact page): main office first, then the plant.
-    const officeEmbed = companyInfo.addresses.main.mapEmbedUrl;
-    const officePin = pinFromEmbed(officeEmbed);
+    const officePin = pinFromEmbed(companyInfo.addresses.main.mapEmbedUrl);
     const locations = [
-        {
-            key: 'office',
-            title: t('locations.office'),
-            address: tc('addresses.main.address'),
-            embed: officeEmbed,
-            mapTitle: t('locations.map_title_office'),
-            link: officePin ? mapsSearch(officePin) : undefined,
-        },
-        {
-            key: 'factory',
-            title: t('locations.factory'),
-            address: tc('addresses.factory.address'),
-            embed: companyInfo.addresses.factory.mapEmbedUrl,
-            mapTitle: t('locations.map_title_factory'),
-            link: mapsSearch(FACTORY_PIN),
-        },
+        { key: 'office', title: t('locations.office'), address: tc('addresses.main.address'), link: officePin ? mapsSearch(officePin) : undefined },
+        { key: 'factory', title: t('locations.factory'), address: tc('addresses.factory.address'), link: mapsSearch(FACTORY_PIN) },
     ];
 
     return (
         <div className={typography.body}>
             <PageStructuredData locale={locale} pageType="contact" />
 
-            {/* 01 Opening: one gold action (WhatsApp, management) + email to the export team */}
-            <PageHead crumbs={[{ label: t('breadcrumb') }]} eyebrow={t('hero.eyebrow')} title={t('hero.title')} titleId="contact-title">
-                <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-3.5 lg:mt-10">
-                    <Button
-                        href={waHref}
-                        size="lg"
-                        stretch="phone"
-                        icon={<WhatsAppIcon size={20} />}
-                        newTabLabel={newTab}
-                        dataAttrs={{ 'data-cta': 'contact_hero_whatsapp' }}
-                    >
-                        {t('hero.actions.whatsapp')}
-                    </Button>
-                    <Button href={mailto} variant="outline" size="lg" stretch="phone" icon={<MailIcon size={20} />} dataAttrs={{ 'data-cta': 'contact_hero_email' }}>
-                        {t('hero.actions.email')}
-                    </Button>
-                </div>
-            </PageHead>
+            <PageHead
+                compact
+                crumbs={[{ label: t('breadcrumb') }]}
+                eyebrow={t('hero.eyebrow')}
+                title={t('hero.title')}
+                titleId="contact-title"
+                intro={
+                    <>
+                        <span className={cn('block font-bold text-gold', typography.small)}>{t('channels.hours')}</span>
+                        <span className="block font-semibold text-white">{tc('workingHours')}</span>
+                    </>
+                }
+            />
 
-            {/* 02 Direct channels: rows as in the G footer, office hours, vCard */}
-            <Section variant="white" labelledBy="ct-channels">
-                <SectionHeading id="ct-channels" layout="split" title={t('channels.title')} />
-                <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
-                    <ul className="m-0 min-w-0 list-none border-0 border-t border-solid border-rule p-0 lg:col-span-7">
-                        {channels.map((ch) => (
-                            <li key={ch.key}>
-                                <ContactRow
-                                    href={ch.href}
-                                    external
-                                    newTabLabel={newTab}
-                                    icon={ch.icon}
-                                    title={t(`channels.${ch.key}.title`)}
-                                    sub={t(`channels.${ch.key}.sub`)}
-                                    value={ch.value}
-                                    valueDir="ltr"
-                                    dataAttrs={{ 'data-cta': `contact_${ch.key}` }}
-                                />
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="grid min-w-0 gap-4 md:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
-                        <div className="flex gap-3.5 rounded-card bg-surface-offwhite p-5 lg:p-6">
-                            <Icon icon={LuClock} size={24} className="mt-0.5 text-navy" />
-                            <div className="min-w-0">
-                                <h3 className={cn('m-0 text-ink', typography.h4)}>{t('channels.hours')}</h3>
-                                <p className="mb-0 mt-1 text-ink">{tc('workingHours')}</p>
-                            </div>
-                        </div>
-                        <Card padding="sm" className="flex flex-col lg:p-6">
-                            <h3 className={cn('m-0 text-ink', typography.h4)}>{t('channels.vcard.title')}</h3>
-                            <a
-                                href={VCARD_PATH}
-                                download="AZAFCO-International.vcf"
-                                type="text/vcard"
-                                data-cta="contact_vcard"
-                                className={buttonClass({ variant: 'outline', size: 'sm', className: 'mt-4 self-start' })}
-                            >
-                                <Icon icon={LuDownload} size={20} />
-                                <span>{t('channels.vcard.action')}</span>
-                            </a>
-                        </Card>
-                    </div>
-                </div>
-            </Section>
+            {/* id="partnership" keeps legacy /contact#partnership links working */}
+            <Section variant="navy" spacing="sm" id="partnership" labelledBy="contact-title" className="!pt-0">
+                <ContactStage
+                    rtl={localeConfig[locale as Locale]?.dir === 'rtl'}
+                    newTab={newTab}
+                    whatsapp={{
+                        title: t('channels.whatsapp.title'),
+                        role: t('channels.whatsapp.sub'),
+                        number: phone,
+                        href: waHref,
+                        action: t('hero.actions.whatsapp'),
+                        actionShort: t('channels.whatsapp.title'),
+                    }}
+                    call={{ label: tv('cta.call'), href: `tel:${c.phone}` }}
+                    email={{
+                        title: t('channels.email.title'),
+                        role: t('channels.email.sub'),
+                        address: c.email,
+                        href: `mailto:${c.email}`,
+                        action: t('hero.actions.email'),
+                    }}
+                />
 
-            {/* 03 Enquiry routes → /requirements (prepared email / WhatsApp message; no web form).
-                id="partnership" keeps legacy /contact#partnership links (config.contact.partnershipForm) working. */}
-            <Section variant="offwhite" id="partnership" labelledBy="contact-routes-title">
-                <ContactRoutes />
-            </Section>
+                {/* Addresses and registration: three columns from lg, rows that open on tap on phones */}
+                <div className="mt-3.5 border-0 border-b border-solid border-white/25 lg:mt-10 lg:grid lg:grid-cols-3 lg:gap-11 lg:border-b-0">
+                    {locations.map((l) => (
+                        <InfoBlock key={l.key} title={l.title}>
+                            <address className="m-0 not-italic text-white/80">{l.address}</address>
+                            {l.link ? (
+                                <ExternalLink href={l.link} newTabLabel={newTab} className="mt-1" dataAttrs={{ 'data-cta': `contact_map_${l.key}` }}>
+                                    {t('locations.map_open')}
+                                </ExternalLink>
+                            ) : null}
+                        </InfoBlock>
+                    ))}
 
-            {/* 04 Registration and official channels (anti-fraud). The privacy policy is linked from the footer. */}
-            <Section variant="white" labelledBy="ct-official">
-                <SectionHeading id="ct-official" title={t('official.title')} />
-                <div className="grid gap-4 md:grid-cols-2 lg:gap-5">
-                    <Card accent className="flex flex-col">
-                        <h3 className={cn('m-0 text-ink', typography.h3)}>{t('trust.title')}</h3>
-                        <dl className={cn('m-0 mt-3 grid gap-1 text-ink-muted', typography.small)}>
+                    {/* Registration and the anti-fraud notice (approved copy in data.company.officialChannels) */}
+                    <InfoBlock title={t('official.title')}>
+                        <dl className="m-0 grid gap-1 text-white/80">
                             {/* Legal name first: the same localized value as the /about fact table */}
                             <div>
                                 <dt className="inline">{t('trust.legal')}: </dt>
-                                <dd className="m-0 inline font-semibold text-ink">{tc('fullName')}</dd>
+                                <dd className="m-0 inline font-semibold text-white">{tc('fullName')}</dd>
                             </div>
                             <div>
                                 <dt className="inline">{t('trust.register')}: </dt>
                                 <dd className="m-0 inline">
-                                    <bdi dir="ltr" className="font-semibold text-ink">
+                                    <bdi dir="ltr" className="font-semibold text-white">
                                         {companyConfig.registration.commercialRegister}
                                     </bdi>
                                 </dd>
@@ -193,63 +137,28 @@ export default async function ContactPage({ params }: Props) {
                             <div>
                                 <dt className="inline">{t('trust.tax')}: </dt>
                                 <dd className="m-0 inline">
-                                    <bdi dir="ltr" className="font-semibold text-ink">
+                                    <bdi dir="ltr" className="font-semibold text-white">
                                         {companyConfig.registration.taxCard}
                                     </bdi>
                                 </dd>
                             </div>
                         </dl>
-                    </Card>
-
-                    {/* Anti-fraud notice (approved copy in data.company.officialChannels) */}
-                    <Card accent className="flex flex-col">
-                        <h3 className={cn('m-0 text-ink', typography.h3)}>{tc('officialChannels.title')}</h3>
-                        <p className={cn('mb-0 mt-3 text-ink-muted', typography.small)}>{tc('officialChannels.text', { phone, email: c.email })}</p>
-                    </Card>
+                        <p className="mb-0 mt-3 text-white/80">{tc('officialChannels.text', { phone, email: c.email })}</p>
+                        <a
+                            href={VCARD_PATH}
+                            download="AZAFCO-International.vcf"
+                            type="text/vcard"
+                            data-cta="contact_vcard"
+                            className={cn(
+                                'mt-2 inline-flex min-h-tap items-center gap-2 font-bold text-link underline-offset-4 transition-colors hover:text-link-hover hover:underline',
+                                focusRing,
+                            )}
+                        >
+                            <Icon icon={LuDownload} size={20} />
+                            <span>{t('channels.vcard.action')}</span>
+                        </a>
+                    </InfoBlock>
                 </div>
-            </Section>
-
-            {/* 05 Locations with map embeds (addresses + embeds from data/company.ts, as on the live site) */}
-            <Section variant="offwhite" labelledBy="ct-locations">
-                <SectionHeading id="ct-locations" layout="split" title={t('locations.title')} />
-                <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2 lg:gap-8">
-                    {locations.map((l) => (
-                        <li key={l.key} className="flex min-w-0">
-                            <Card padding="none" className="flex w-full flex-col overflow-hidden">
-                                <div className="relative aspect-[4/3] w-full bg-navy-100 sm:aspect-[16/10]">
-                                    {/* Static placeholder behind the lazy iframe (iframes are transparent until the map paints),
-                                        so the card never shows an empty box on slow connections or with embeds blocked.
-                                        Pin only: the title and address are the h3 block below (each address once per section). */}
-                                    <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
-                                        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white text-navy shadow-sm">
-                                            <MapPinIcon size={28} />
-                                        </span>
-                                    </div>
-                                    <iframe
-                                        src={l.embed}
-                                        title={l.mapTitle}
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        allowFullScreen
-                                        className="absolute inset-0 h-full w-full border-0"
-                                    />
-                                </div>
-                                <div className="flex flex-1 flex-col p-5 lg:p-8">
-                                    <h3 className={cn('m-0 flex items-center gap-2.5 text-ink', typography.h3)}>
-                                        <MapPinIcon size={24} className="text-navy" />
-                                        {l.title}
-                                    </h3>
-                                    <address className="mb-0 mt-2 flex-1 not-italic text-ink-muted">{l.address}</address>
-                                    {l.link ? (
-                                        <ExternalLink href={l.link} newTabLabel={newTab} className="mt-3 self-start" dataAttrs={{ 'data-cta': `contact_map_${l.key}` }}>
-                                            {t('locations.map_open')}
-                                        </ExternalLink>
-                                    ) : null}
-                                </div>
-                            </Card>
-                        </li>
-                    ))}
-                </ul>
             </Section>
         </div>
     );

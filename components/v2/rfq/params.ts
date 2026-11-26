@@ -26,7 +26,10 @@ export function isShortTopic(topic: RfqTopic): topic is 'corporate' | 'documents
 /** Resolve the enquiry topic + prefill from ?product, ?country, ?type, ?form, ?grade. */
 export function resolveRfqParams(params: Params): RfqQuery {
     const prefill = readRfqPrefill(params);
-    const topic: RfqTopic = prefill.type ?? (prefill.product ? 'product' : prefill.country ? 'market' : 'general');
+    // ?type=documents and ?type=corporate were separate entry points until 26 Nov 2026 (owner, after the B2B
+    // review: same two buttons, only the heading changed). Old links still land here, as the one enquiry.
+    const type = prefill.type === 'documents' || prefill.type === 'corporate' ? undefined : prefill.type;
+    const topic: RfqTopic = type ?? (prefill.product ? 'product' : prefill.country ? 'market' : 'general');
     return { topic, product: prefill.product, country: prefill.country, form: prefill.form, grade: prefill.grade };
 }
 

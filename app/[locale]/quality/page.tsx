@@ -5,7 +5,7 @@ import FAQAccordion from '@/components/v2/FAQAccordion';
 import CertificateLibrary from '@/components/v2/quality/CertificateLibrary';
 import { Breadcrumbs, Button, PageHero, Section, SectionHeading, isolateStandards, typography } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
-import { rfqHref, routes } from '@/lib/v2/routes';
+import { routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -97,10 +97,11 @@ export default async function QualityPage({ params }: Props) {
                 <SectionHeading id="quality-certs" title={t('certs.title')} />
                 <CertificateLibrary locale={locale} />
                 {/* EU export status (owner, 22 Nov 2026: approved; never print a number or date)
-                    and the documents button (ROUND-ASTRA-SPEC §1.7, §3.4) */}
+                    and the documents button (ROUND-ASTRA-SPEC §1.7, §3.4); it opens /contact since 26 Nov 2026,
+                    where the email row is the export team for details and documents */}
                 <div className="mt-8 flex max-w-[920px] flex-col items-start gap-3">
                     <p className={`m-0 font-semibold text-navy ${typography.body}`}>{t('pending.market_approvals')}</p>
-                    <Button href={rfqHref({ type: 'documents' })} variant="outline" dataAttrs={{ 'data-cta': 'quality_documents' }}>
+                    <Button href={routes.contact} variant="outline" dataAttrs={{ 'data-cta': 'quality_documents' }}>
                         {t('next.button')}
                     </Button>
                 </div>
