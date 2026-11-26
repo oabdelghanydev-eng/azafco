@@ -6,8 +6,7 @@ import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 import { activeMarketSlugs } from '@/data/markets';
 import { MARKET_IMPORT_REVIEWED, REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
-import { activeMarketConfigs, getActiveMarketConfig } from '@/components/v2/markets/marketData';
-import MarketsIndex from '@/components/v2/markets/MarketsIndex';
+import { getActiveMarketConfig } from '@/components/v2/markets/marketData';
 import MarketImportRules from '@/components/v2/markets/MarketImportRules';
 import { marketImportView } from '@/components/v2/markets/importRules';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
@@ -75,14 +74,6 @@ export default async function MarketDetailPage({ params }: Props) {
     // Import rules (data/market-import.ts, verified items only; strings in markets_v2.import.*)
     const rules = await marketImportView(locale, market.key);
 
-    const active = activeMarketConfigs.map((m) => ({
-        key: m.key,
-        countryCode: m.countryCode,
-        name: tm(`${m.key}.country`),
-        short: tm(`${m.key}.short`),
-        since: m.since ? t('index.since', { year: String(m.since) }) : '',
-    }));
-
     return (
         <>
             <JsonLd
@@ -143,7 +134,7 @@ export default async function MarketDetailPage({ params }: Props) {
                 </Section>
             ) : null}
 
-            {/* Directly after the buyers: importing into this market (authority where verified, documents and conditions, each with its source) */}
+            {/* Last: importing into this market (authority where verified, documents and conditions, each with its source) */}
             <MarketImportRules
                 headingId="md-import"
                 eyebrow={t('import.eyebrow')}
@@ -159,20 +150,6 @@ export default async function MarketDetailPage({ params }: Props) {
                 disclaimer={t('import.disclaimer')}
                 guide={{ href: insightHref(IMPORT_GUIDE_SLUG), label: t('support.guide_link') }}
                 fallback={{ guide: t('import.fallback_guide'), confirm: t('import.fallback_confirm', { country: inCountry }) }}
-            />
-
-            {/* Last: the other six active markets on the route map (the page's one navy band; ROUND1-SPEC §6 R4 puts it at the end) */}
-            <MarketsIndex
-                headingId="md-markets"
-                compact
-                eyebrow={t('index.eyebrow')}
-                title={t('detail.map_title')}
-                active={active}
-                planned={[]}
-                current={market.key}
-                hideCurrentInList
-                mapLabel={t('index.map_label')}
-                origin={t('index.origin')}
             />
         </>
     );

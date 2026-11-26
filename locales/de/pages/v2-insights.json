@@ -1,21 +1,6 @@
 {
-    "meta": {
-        "title": "Fischimport-Leitfaden und Unternehmensnachrichten",
-        "description": "Unser Leitfaden für Fischimporteure: Einfuhrregeln am Golf und in der Levante, HS-Codes, Dokumente und Kühlkette, dazu Neuigkeiten von AZAFCO."
-    },
-    "breadcrumb": "Wissen",
-    "hero": {
-        "eyebrow": "Wissen",
-        "title": "Leitfaden für Importeure und Unternehmensnachrichten"
-    },
-    "featured": {
-        "read": "Leitfaden lesen"
-    },
     "categories": {
         "importer_guide": "Leitfaden für Importeure"
-    },
-    "grid": {
-        "title": "Weitere Leitfäden"
     },
     "article": {
         "by": "Veröffentlicht von",
@@ -25,9 +10,6 @@
         "toc": "Inhalt",
         "related_title": "Verwandte Seiten",
         "related": [
-            {
-                "title": "Für Importeure"
-            },
             {
                 "title": "Unsere Märkte"
             },

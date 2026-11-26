@@ -1,20 +1,51 @@
 {
     "meta": {
-        "title": "Contrôle qualité du poisson et certificats ISO",
-        "description": "Chaque commande est vérifiée selon la spécification convenue avant la fermeture des caisses. Nous détenons des certificats ISO délivrés par TÜV AUSTRIA."
+        "title": "Emballage du poisson en Égypte : qualité et ISO",
+        "description": "Notre usine de Motobas, à Kafr el-Cheikh, lave, glace, calibre, conditionne et contrôle le poisson entier frais. Certificats ISO délivrés par TÜV AUSTRIA."
     },
     "breadcrumbs": {
         "label": "Fil d’Ariane",
         "home": "Accueil",
-        "current": "Qualité"
+        "current": "Emballage et qualité"
     },
     "hero": {
-        "kicker": "Qualité",
-        "title": "Une qualité vérifiée selon votre spécification",
+        "kicker": "Emballage et qualité",
+        "title": "Emballage et qualité dans notre usine de Motobas",
         "intro": "Nous contrôlons chaque commande avant la fermeture des caisses, en vérifiant l’espèce, le calibre, le conditionnement et les étiquettes convenus avec vous.",
-        "imageAlt": "Poissons entiers frais sur glace pilée, vus du dessus",
-        "primary": "Démarrer un partenariat",
-        "secondary": "Voir comment nous conditionnons et expédions"
+        "imageAlt": "Poissons entiers frais sur glace pilée dans des caisses blanches, avec du personnel en tenue d’hygiène au travail à l’arrière-plan"
+    },
+    "chain": {
+        "title": "Cinq étapes, de l’élevage à l’export",
+        "stageLabel": "Étape {n}",
+        "stages": {
+            "farming": {
+                "title": "Élevage et approvisionnement",
+                "text": "Nous élevons notre propre poisson et en achetons auprès d’autres producteurs.",
+                "alt": "Vue aérienne de bassins piscicoles en terre avec aérateurs et palmiers"
+            },
+            "harvest": {
+                "title": "Récolte",
+                "text": "Pêché au filet et acheminé à l’usine.",
+                "alt": "Deux ouvriers tirant un filet plein de tilapias vers la berge d’un étang en terre"
+            },
+            "packing": {
+                "title": "Lavage, glaçage et conditionnement",
+                "text": "Lavé, mis sous glace, calibré au poids et conditionné entier sous glace en caisses de polystyrène expansé.",
+                "alt": "Mains gantées déposant un tilapia entier dans une caisse de glace pilée sur une table en inox"
+            },
+            "inspection": {
+                "title": "Contrôle",
+                "alt": "Main gantée tenant une sonde dans de l’eau glacée, à côté de deux tilapias entiers"
+            },
+            "export": {
+                "title": "Export",
+                "text": "Par fret aérien ou routier.",
+                "alt": "Ouvrier chargeant une palette de caisses blanches dans un camion frigorifique, à un quai de chargement"
+            }
+        },
+        "plantMap": "Notre usine sur Google Maps",
+        "newTab": "(s’ouvre dans un nouvel onglet)",
+        "capacity": "Nous conditionnons jusqu’à 2 500 t/mois. Un camion frigorifique transporte 20 t, et certains jours, plus de cinq quittent notre usine."
     },
     "certs": {
         "title": "Certificats ISO et agrément d’exportation vers l’UE",
@@ -30,6 +61,8 @@
     },
     "pending": {
         "traceability": "Données de lot et de production que nous pouvons fournir avec chaque expédition",
-        "market_approvals": "Agréés pour l’exportation vers l’Union européenne"
+        "market_approvals": "Agréés pour l’exportation vers l’Union européenne",
+        "temperature": "Température de stockage et de transport par produit, avec points de contrôle et enregistrements (à confirmer par la direction avant toute publication de chiffre)",
+        "pack_formats": "Formats d’emballage validés (types de caisse, poids nets) et options d’étiquetage"
     }
 }

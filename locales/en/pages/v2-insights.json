@@ -1,21 +1,6 @@
 {
-    "meta": {
-        "title": "Fish import guide and company news",
-        "description": "Our guide for fish importers covers import rules in the Gulf and the Levant, HS codes, documents and the cold chain, plus AZAFCO International news."
-    },
-    "breadcrumb": "Insights",
-    "hero": {
-        "eyebrow": "Insights",
-        "title": "Importer guide and company news"
-    },
-    "featured": {
-        "read": "Read the guide"
-    },
     "categories": {
         "importer_guide": "Importer guide"
-    },
-    "grid": {
-        "title": "More guides"
     },
     "article": {
         "by": "Published by",
@@ -25,9 +10,6 @@
         "toc": "Contents",
         "related_title": "Related pages",
         "related": [
-            {
-                "title": "For importers"
-            },
             {
                 "title": "Our markets"
             },

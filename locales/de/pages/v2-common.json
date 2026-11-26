@@ -1,11 +1,10 @@
 {
     "skip_to_main": "Zum Hauptinhalt springen",
     "nav": {
-        "insights": "Wissen"
+        "guide": "Importleitfaden"
     },
     "cta": {
         "view_specifications": "Spezifikationen ansehen",
-        "view_all": "Alle ansehen",
         "call": "Anrufen",
         "opens_new_tab": "(öffnet in neuem Tab)",
         "send_requirements": "Anforderungen senden",

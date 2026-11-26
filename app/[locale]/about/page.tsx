@@ -1,41 +1,26 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
+import { REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
+import { newsItems } from '@/data/news';
 import { products } from '@/data/products';
 import { routes } from '@/lib/v2/routes';
-import { whatsappLink } from '@/lib/v2/whatsapp';
 import type { ImageProps } from '@/lib/v2/media';
-import {
-    Breadcrumbs,
-    Button,
-    ExternalLink,
-    PageHero,
-    Section,
-    SectionHeading,
-    TextLink,
-    WhatsAppIcon,
-    cn,
-    focusRing,
-    phoneDisplay,
-    typography,
-} from '@/components/ui';
+import { Breadcrumbs, PageHero, Section, SectionHeading, TextLink, cn, focusRing, phoneDisplay, typography } from '@/components/ui';
 import EditorialMedia from '@/components/v2/home/EditorialMedia';
 import Milestones, { type MilestoneYear } from '@/components/v2/businesses/Milestones';
 import { buildPageMetadata } from '@/components/v2/businesses/pageMetadata';
+import NewsCard from '@/components/v2/insights/NewsCard';
 
 type Props = {
     params: Promise<{ locale: string }>;
 };
 
-/** Plant pin (same point as the G footer factory link and data/company.ts map embed). */
-const PLANT_MAP_URL = 'https://www.google.com/maps/search/?api=1&query=31.433264,30.475957';
-
 /** Design G photography (public/images/g). The truck photo is left to the G footer. */
 const G_IMAGES = {
     harvest: { width: 1536, height: 1024 },
-    'sorting-packing': { width: 1536, height: 1024 },
     'fish-on-ice': { width: 1920, height: 1080 },
 } as const;
 
@@ -44,19 +29,18 @@ function gImage(name: keyof typeof G_IMAGES, alt: string): ImageProps {
 }
 
 /**
- * Company milestones that are not market openings (live site, data/news.ts
- * "achievement" and company items on origin/main): founding 2008, first factory
- * in Baltim 2018, second factory in Motobas 2025, the governor's visit to the
- * Motobas plant (Sept 2025). Market openings come from companyConfig.markets
- * (active markets and their `since` year), so the timeline never drifts from
- * the markets data. Not used on purpose: the "one of 6 EU-authorised plants"
- * line, the old ISO 22000 / HACCP list and the "+9 markets" item.
+ * Company milestones (live site, data/news.ts "achievement" and company items on
+ * origin/main): founding 2008, first factory in Baltim 2018, second factory in
+ * Motobas 2025. Each fact once on the page (26 Nov 2026): the market openings are
+ * the "Active markets (year of first export)" row of the fact table, and the
+ * governor's visit (Sept 2025) is an item of the news section. Not used on
+ * purpose: the "one of 6 EU-authorised plants" line, the old ISO 22000 / HACCP
+ * list and the "+9 markets" item.
  */
-const COMPANY_MILESTONES: { year: number; key: 'founded' | 'baltim' | 'motobas' | 'governor' }[] = [
+const COMPANY_MILESTONES: { year: number; key: 'founded' | 'baltim' | 'motobas' }[] = [
     { year: 2008, key: 'founded' },
     { year: 2018, key: 'baltim' },
     { year: 2025, key: 'motobas' },
-    { year: 2025, key: 'governor' },
 ];
 
 /** "A, B and C" in the page locale (en-GB style for English: no Oxford comma). */
@@ -71,14 +55,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 /**
- * About: who we are (hero), the company fact table ("at a glance": legal name,
- * exporting since 2008, activity, the 12 species, capacity with the truck sentence, plant,
- * office, active markets, certificates, official contacts), the milestones
- * since 2008 (#about-journey, linked from /insights), our businesses
- * (#businesses: fish at the core, agriculture, livestock, investments; the old
- * /businesses page redirects here) and the plant with its map link (the
- * addresses are in the fact table only). The global G footer closes the page
- * with the partnership contacts.
+ * About: who we are (hero, no contact buttons), the company fact table ("at a
+ * glance": legal name, exporting since 2008, activity, the 12 species, capacity
+ * with the truck sentence, own trucks and cold stores, plant, office, active
+ * markets, certificates, official contacts), the milestones since 2008
+ * (#about-journey), our businesses (#businesses: fish at the core, agriculture,
+ * livestock, investments; the old /businesses page redirects here) and the
+ * visits and media coverage (#news; the old /insights index, /insights/news and
+ * /media redirect here). The global G footer closes the page with the
+ * partnership contacts, the WhatsApp link and the plant map link.
  */
 export default async function AboutPage({ params }: Props) {
     const { locale } = await params;
@@ -87,28 +72,18 @@ export default async function AboutPage({ params }: Props) {
     const tc = await getTranslations({ locale, namespace: 'data.company' });
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
     const tp = await getTranslations({ locale, namespace: 'data.products' });
-    // Management WhatsApp with the standard prefilled opening (g_header_v2.whatsapp_message)
-    const waHref = whatsappLink((await getTranslations({ locale, namespace: 'g_header_v2' }))('whatsapp_message'));
+    const tn = await getTranslations({ locale, namespace: 'news_v2' });
+    const format = await getFormatter({ locale });
+    // One date format everywhere ("14 November 2026" / «14 نوفمبر 2026»)
+    const fmt = (iso: string) => format.dateTime(isoDate(iso), REVIEW_DATE_FORMAT);
     const { email, whatsappNumber } = companyConfig.contact;
 
     const activeMarkets = companyConfig.markets
         .filter((m) => m.status === 'active' && typeof m.since === 'number')
         .sort((a, b) => (a.since as number) - (b.since as number));
 
-    // Timeline: company milestones + the first export year of each active market,
-    // grouped by year (within a year: company item, market openings, then the visit).
-    const events = [
-        ...COMPANY_MILESTONES.map((m) => ({ year: m.year, order: m.key === 'governor' ? 2 : 0, text: t(`journey.${m.key}`) })),
-        ...activeMarkets.map((m) => ({ year: m.since as number, order: 1, text: t('journey.market', { country: tm(`${m.key}.sentence`) }) })),
-    ].sort((a, b) => a.year - b.year || a.order - b.order);
-    const milestones: MilestoneYear[] = [];
-    for (const e of events) {
-        const last = milestones[milestones.length - 1];
-        if (last && last.year === e.year) last.events.push(e.text);
-        else milestones.push({ year: e.year, events: [e.text] });
-    }
+    const milestones: MilestoneYear[] = COMPANY_MILESTONES.map((m) => ({ year: m.year, events: [t(`journey.${m.key}`)] }));
 
-    const newTab = t('footprint.opens_new_tab');
     const inlineLink = cn('font-semibold text-navy underline underline-offset-4 hover:text-navy-900', focusRing);
 
     // Fact table: species names from data.products (the 12 published species), markets
@@ -126,6 +101,7 @@ export default async function AboutPage({ params }: Props) {
         { label: t('glance.activity_label'), value: t('glance.activity_value') },
         { label: t('glance.species_label'), value: t('glance.species_value', { species: speciesNames }) },
         { label: t('glance.capacity_label'), value: t('glance.capacity_value') },
+        { label: t('glance.fleet_label'), value: t('glance.fleet_value') },
         { label: t('glance.plant_label'), value: <address className="not-italic">{tc('addresses.factory.address')}</address> },
         { label: t('glance.office_label'), value: <address className="not-italic">{tc('addresses.main.address')}</address> },
         { label: t('glance.markets_label'), value: marketList },
@@ -140,12 +116,9 @@ export default async function AboutPage({ params }: Props) {
                             <bdi dir="ltr">{email}</bdi>
                         </a>
                     </li>
+                    {/* The number as text: the header, the footer and the float carry the WhatsApp link */}
                     <li>
-                        {t('glance.whatsapp_label')}:{' '}
-                        <a href={waHref} target="_blank" rel="noopener noreferrer" className={inlineLink} data-cta="about_facts_whatsapp">
-                            <bdi dir="ltr">{phoneDisplay(whatsappNumber)}</bdi>
-                            <span className="sr-only"> {newTab}</span>
-                        </a>
+                        {t('glance.whatsapp_label')}: <bdi dir="ltr">{phoneDisplay(whatsappNumber)}</bdi>
                     </li>
                 </ul>
             ),
@@ -156,7 +129,7 @@ export default async function AboutPage({ params }: Props) {
         <>
             <PageStructuredData locale={locale} pageType="about" />
 
-            {/* 01 · Hero */}
+            {/* 01 · Hero (no contact buttons: the header, the footer and the float carry them) */}
             <PageHero
                 image={gImage('harvest', t('hero.image_alt'))}
                 variant="split"
@@ -164,24 +137,6 @@ export default async function AboutPage({ params }: Props) {
                 title={t('hero.title')}
                 intro={t('hero.intro')}
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb') }]} />}
-                actions={
-                    <>
-                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'about_partnership' }}>
-                            {t('hero.primary')}
-                        </Button>
-                        <Button
-                            href={waHref}
-                            variant="outline"
-                            size="lg"
-                            stretch="phone"
-                            icon={<WhatsAppIcon />}
-                            newTabLabel={newTab}
-                            dataAttrs={{ 'data-cta': 'about_whatsapp' }}
-                        >
-                            {t('hero.secondary')}
-                        </Button>
-                    </>
-                }
             />
 
             {/* 02 · At a glance: the company fact table (third person, quotable) */}
@@ -204,8 +159,7 @@ export default async function AboutPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* 03 · Milestones since 2008 (live-site achievements + market openings).
-                Keep id="about-journey": /insights links to it. */}
+            {/* 03 · Milestones since 2008 (founding and the two plants) */}
             <Section variant="white" labelledBy="about-journey">
                 <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
                     <div className="lg:col-span-5">
@@ -235,26 +189,31 @@ export default async function AboutPage({ params }: Props) {
                 </EditorialMedia>
             </Section>
 
-            {/* 05 · Plant, trucks and cold stores: the map link and the five stages (addresses live in the fact table) */}
-            <Section variant="white" labelledBy="about-footprint">
-                <EditorialMedia
-                    id="about-footprint"
-                    eyebrow={t('footprint.eyebrow')}
-                    title={t('footprint.title')}
-                    body={[t('footprint.p1'), t('footprint.p2')]}
-                    image={gImage('sorting-packing', t('footprint.image_alt'))}
-                    imageSide="start"
-                >
-                    <div className="flex flex-col items-start gap-1">
-                        <ExternalLink href={PLANT_MAP_URL} newTabLabel={newTab} dataAttrs={{ 'data-cta': 'about_plant_map' }}>
-                            {t('footprint.map_link')}
-                        </ExternalLink>
-                        <TextLink href={routes.processing} dataAttrs={{ 'data-cta': 'about_stages' }}>
-                            {t('footprint.stages_link')}
-                        </TextLink>
-                    </div>
-                </EditorialMedia>
-            </Section>
+            {/* 05 · Visits and media coverage (data/news.ts). #news is the target of the
+                /insights, /insights/news and /media redirects; each card keeps its
+                #news-<key> anchor. */}
+            {newsItems.length > 0 ? (
+                <Section id="news" variant="white" labelledBy="about-news" className="scroll-mt-28">
+                    <SectionHeading id="about-news" title={tn('press.title')} />
+                    <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+                        {newsItems.map((n) => (
+                            <li key={n.key} className="min-w-0">
+                                <NewsCard
+                                    id={`news-${n.key}`}
+                                    title={tn(`items.${n.key}.title`)}
+                                    summary={tn(`items.${n.key}.summary`)}
+                                    date={n.date}
+                                    dateLabel={fmt(n.date)}
+                                    sourceLine={tn('source', { name: tn(`items.${n.key}.source`) })}
+                                    sourceUrl={n.sourceUrl}
+                                    viewSourceLabel={tn('view_source')}
+                                    newTabLabel={tn('new_tab')}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            ) : null}
         </>
     );
 }

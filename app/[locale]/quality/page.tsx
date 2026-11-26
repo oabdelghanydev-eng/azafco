@@ -3,7 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Pending, SHOW_PENDING } from '@/components/v2';
 import FAQAccordion from '@/components/v2/FAQAccordion';
 import CertificateLibrary from '@/components/v2/quality/CertificateLibrary';
-import { Breadcrumbs, Button, PageHero, Section, SectionHeading, isolateStandards, typography } from '@/components/ui';
+import Workflow from '@/components/v2/quality/Workflow';
+import { Breadcrumbs, Button, ExternalLink, PageHero, Section, SectionHeading, isolateStandards, typography } from '@/components/ui';
 import { baseUrl, jsonLd, pageMetadata } from '@/components/v2/products/catalogue';
 import { routes } from '@/lib/v2/routes';
 
@@ -16,17 +17,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({ locale, path: routes.quality, title: t('title'), description: t('description'), siteName: site('name') });
 }
 
-/** One FAQ item: the three standard names (ROUND1-SPEC §1.1). The cold-chain item was cut in the review round: /processing covers it. */
+/** The approved in-house chain (owner, 13 Nov 2026), with the five G value-chain photos. */
+const STAGES = [
+    { key: 'farming', image: '/images/g/farm-ponds.webp' },
+    { key: 'harvest', image: '/images/g/harvest.webp' },
+    { key: 'packing', image: '/images/photos/processing.webp' },
+    { key: 'inspection', image: '/images/g/temperature-check.webp' },
+    { key: 'export', image: '/images/g/logistics-truck.webp' },
+] as const;
+
+/** Plant location, RELEASE-DECISIONS §4 (owner, 13 Nov 2026). */
+const PLANT_MAP_URL = 'https://www.google.com/maps/search/?api=1&query=31.433264,30.475957';
+
+/** One FAQ item: the three standard names (ROUND1-SPEC §1.1). */
 const FAQ = [1] as const;
 
 /**
- * /quality, design G, built on the design-system primitives (components/ui).
- * Round 1 (ROUND1-SPEC §1.1, §3 /quality, 14 Nov 2026): lead with the inspection on
- * every order (hero), then the generic ISO sentence ("We hold ISO
- * certificates, certified by TÜV AUSTRIA"), which lives only in the certificates block. The three standard names appear here only in the FAQ answer (and in
- * the Organization JSON-LD). No numbers, expiry dates, site, scope or "copies on
- * request"; no ISO 22000 / HACCP; nothing that implies a food-safety certificate.
- * The working stages live on /processing (linked, not repeated).
+ * /quality ("Packing and quality" in the G nav), design G, built on the design-system
+ * primitives (components/ui). Since 26 Nov 2026 (SIMPLIFY-SPEC §1.1) it also carries
+ * the five stages of the former /processing page, which now redirects here.
+ * Order: head (h1 and the inspection sentence, no contact buttons), the five stages,
+ * the generic ISO sentence ("We hold ISO certificates, certified by TÜV AUSTRIA",
+ * ROUND1-SPEC §1.1) with the EU approval line and the documents button, one FAQ item.
+ * Each fact once: the inspection stage has no text (the head says it), and the
+ * capacity and truck sentence (ROUND1-SPEC §1.2) sits under Export.
+ * The three standard names appear here only in the FAQ answer (and in the
+ * Organization JSON-LD). No numbers, expiry dates, site, scope or "copies on
+ * request"; no ISO 22000 / HACCP; no temperature figures (none approved).
  * Copy: locales/<l>/pages/v2-quality.json.
  */
 export default async function QualityPage({ params }: Props) {
@@ -65,9 +82,10 @@ export default async function QualityPage({ params }: Props) {
                 <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(s) }} />
             ))}
 
+            {/* Head: no contact buttons (SIMPLIFY-SPEC §1.5); the header, footer and WhatsApp float carry the contact */}
             <PageHero
                 variant="split"
-                image={{ src: '/images/g/fish-on-ice.webp', alt: t('hero.imageAlt'), width: 1920, height: 1080 }}
+                image={{ src: '/images/g/sorting-packing.webp', alt: t('hero.imageAlt'), width: 1536, height: 1024 }}
                 mirrorImage={locale === 'ar'}
                 headingId="quality-title"
                 breadcrumbs={
@@ -80,17 +98,36 @@ export default async function QualityPage({ params }: Props) {
                 eyebrow={t('hero.kicker')}
                 title={t('hero.title')}
                 intro={t('hero.intro')}
-                actions={
-                    <>
-                        <Button href={routes.contact} size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'quality_hero_partner' }}>
-                            {t('hero.primary')}
-                        </Button>
-                        <Button href={routes.processing} variant="outline" size="lg" stretch="phone">
-                            {t('hero.secondary')}
-                        </Button>
-                    </>
-                }
             />
+
+            {/* The five in-house stages */}
+            <Section variant="white" labelledBy="quality-chain" reveal={false}>
+                <SectionHeading id="quality-chain" title={t('chain.title')} />
+                <Workflow
+                    stages={STAGES.map((s, i) => ({
+                        key: s.key,
+                        label: t('chain.stageLabel', { n: i + 1 }),
+                        title: t(`chain.stages.${s.key}.title`),
+                        // The head already says what the inspection checks
+                        text: s.key === 'inspection' ? undefined : t(`chain.stages.${s.key}.text`),
+                        image: s.image,
+                        imageAlt: t(`chain.stages.${s.key}.alt`),
+                        note: s.key === 'export' ? t('chain.capacity') : undefined,
+                        extra:
+                            s.key === 'harvest' ? (
+                                <ExternalLink href={PLANT_MAP_URL} newTabLabel={t('chain.newTab')} dataAttrs={{ 'data-cta': 'quality_plant_map' }}>
+                                    {t('chain.plantMap')}
+                                </ExternalLink>
+                            ) : undefined,
+                    }))}
+                />
+                {SHOW_PENDING ? (
+                    <div className="mt-10 flex flex-wrap gap-2">
+                        <Pending label={t('pending.temperature')} />
+                        <Pending label={t('pending.pack_formats')} />
+                    </div>
+                ) : null}
+            </Section>
 
             {/* ISO: one generic statement (ROUND1-SPEC §1.1) */}
             <Section variant="offwhite" labelledBy="quality-certs" reveal={false}>

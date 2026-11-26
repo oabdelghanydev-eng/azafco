@@ -1,14 +1,15 @@
 /**
- * Company news and press, shown on /insights in the section with id="news"
- * (the old /insights/news page 308s there). Locale-agnostic data; every visible
- * string lives in locales/<l>/pages/v2-news.json under news_v2.items.<key>.
+ * Company news and press, shown on /about in the section with id="news"
+ * (the old /insights index, /insights/news and /media 308 there). Locale-agnostic
+ * data; every visible string lives in locales/<l>/pages/v2-news.json under
+ * news_v2.items.<key>.
  *
  * Sources: the live site's Media Center (origin/main data/news.ts), re-checked on
  * 2026-11-14. Rules (RELEASE-DECISIONS and ROUND1-SPEC, 14 Nov 2026):
  * - company coverage is described neutrally: no "best exporter", "all countries"
  *   or EU-approval claims (the 2020 newspaper feature is shown as a feature only);
  * - the industry-context items and the milestones timeline were removed in round 1
- *   (the timeline is a copy of the /about milestones; /insights links there);
+ *   (the timeline was a copy of the /about milestones);
  * - no photos until the owner sends real ones (B2B review, ledger C11);
  * - sourceUrl only when it opens the coverage itself: the 2020 newspaper feature
  *   has only the paper's home page, so it shows its source name and date as text.

@@ -1,9 +1,10 @@
 /**
- * Insights registry for site v2. Today every entry is a guide from
- * data/guides.ts (text in locales/<l>/pages/guides.json → guides_page.<key>).
- * Company news is not an article type: it lives in data/news.ts and is listed
- * on /insights itself (section id="news"). New article types get added here
- * with their own body component and an insights_v2.categories.<type> label.
+ * Insights registry for site v2 (/insights/[slug]; the /insights index was
+ * removed on 26 Nov 2026). Today every entry is a guide from data/guides.ts
+ * (text in locales/<l>/pages/guides.json → guides_page.<key>). Company news is
+ * not an article type: it lives in data/news.ts and is listed on /about
+ * (section id="news"). New article types get added here with their own body
+ * component and an insights_v2.categories.<type> label.
  */
 import { guides, type Guide } from '@/data/guides';
 
@@ -16,7 +17,7 @@ export interface InsightEntry {
     translationKey: string;
     datePublished: string;
     lastReviewed: string;
-    /** lib/v2/media id for cards and article header. Leave unset until a professional photo exists. */
+    /** lib/v2/media id for the article header. Leave unset until a professional photo exists. */
     imageId?: string;
 }
 

@@ -8,7 +8,6 @@
         "eyebrow": "Nos marchés",
         "title": "Exportation de poisson frais vers le Moyen‑Orient et au‑delà",
         "intro": "Nous expédions vers plus de 7 marchés. Le poisson quitte notre usine sous glace dans nos propres camions frigorifiques, puis part par avion ou par route.",
-        "primary": "Démarrer un partenariat",
         "secondary": "Voir nos espèces",
         "image_alt": "Vue aérienne d’étangs piscicoles en terre avec aérateurs et palmiers"
     },
@@ -23,17 +22,10 @@
         "origin": "Égypte · Motobas"
     },
     "notes": {
-        "eyebrow": "Acheteurs",
-        "title": "Qui nous approvisionnons sur chaque marché",
-        "details": "Détails du marché"
+        "eyebrow": "Acheteurs"
     },
     "support": {
         "guide_link": "Lire le guide pour importer du poisson frais d’Égypte"
-    },
-    "new_market": {
-        "title": "Votre pays n’est pas dans la liste ?",
-        "text": "Indiquez-nous où vous importez.",
-        "action": "Contacter l’équipe export"
     },
     "detail": {
         "meta_title": "Importer du poisson frais d’Égypte {country}",
@@ -43,7 +35,6 @@
         "primary": "Envoyer vos besoins",
         "secondary": "Écrire à la direction sur WhatsApp",
         "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
-        "map_title": "Nos autres marchés",
         "buyers_title": "Qui nous approvisionnons {country}",
         "products_link": "Voir nos 12 espèces",
         "whatsapp_message": "Bonjour AZAFCO International, ici … de la société … {country}. Nous sommes intéressés par :"

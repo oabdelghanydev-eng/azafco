@@ -1,11 +1,10 @@
 {
     "skip_to_main": "Skip to main content",
     "nav": {
-        "insights": "Insights"
+        "guide": "Importer guide"
     },
     "cta": {
         "view_specifications": "View specifications",
-        "view_all": "View all",
         "call": "Call",
         "opens_new_tab": "(opens in a new tab)",
         "send_requirements": "Send your requirements",

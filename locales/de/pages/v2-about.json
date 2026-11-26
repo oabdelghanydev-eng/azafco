@@ -8,8 +8,6 @@
         "eyebrow": "Export seit 2008",
         "title": "Über AZAFCO International: Fischzucht, Beschaffung, Verpackung und Export in Ägypten",
         "intro": "Ganzer frischer Fisch für Importeure, Distributoren und Gastronomiekunden im Nahen Osten und darüber hinaus.",
-        "primary": "Partnerschaft starten",
-        "secondary": "Geschäftsleitung per WhatsApp schreiben",
         "image_alt": "Zwei Arbeiter ziehen ein volles Zugnetz mit Fisch ans Ufer eines Erdteichs"
     },
     "glance": {
@@ -23,6 +21,8 @@
         "species_value": "12 Hauptarten: {species}. Weitere Arten auf Anfrage.",
         "capacity_label": "Packkapazität",
         "capacity_value": "Bis zu 2.500 t/Monat. Ein Kühl-Lkw fasst 20 t, und an manchen Tagen verlassen mehr als fünf davon das Werk.",
+        "fleet_label": "Lkw und Kühlhäuser",
+        "fleet_value": "Betreibt eigene Kühl-Lkw und Kühlhäuser, vom Werk bis zur Luft- oder Straßenfracht.",
         "plant_label": "Packbetrieb",
         "office_label": "Hauptsitz",
         "markets_label": "Aktive Märkte (Jahr des ersten Exports)",
@@ -33,16 +33,14 @@
         "contacts_label": "Offizielle Kontakte",
         "email_label": "Exportteam",
         "whatsapp_label": "WhatsApp der Geschäftsleitung",
-        "quality_link": "Qualität und Zertifikate"
+        "quality_link": "Verpackung und Qualität"
     },
     "journey": {
         "title": "Meilensteine seit 2008",
         "list_label": "Meilensteine des Unternehmens nach Jahr",
         "founded": "Gründung von AZAFCO International in Kafr El Sheikh, Ägypten",
-        "market": "Erste Lieferungen an Kunden aus {country}",
         "baltim": "Erstes Werk im Industriegebiet Baltim, Kafr El Sheikh, eröffnet",
-        "motobas": "Neues Werk im Industriegebiet Motobas, Kafr El Sheikh, eröffnet",
-        "governor": "Besuch des Gouverneurs von Kafr El Sheikh in unserem Werk in Motobas"
+        "motobas": "Neues Werk im Industriegebiet Motobas, Kafr El Sheikh, eröffnet"
     },
     "businesses": {
         "eyebrow": "Unsere Geschäftsbereiche",
@@ -50,15 +48,5 @@
         "p2": "Außerdem bauen wir in Ägypten Obst und Gemüse an, betreiben Viehzuchtbetriebe und haben weitere Investitionen.",
         "image_alt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen",
         "link_products": "Unser Fisch"
-    },
-    "footprint": {
-        "eyebrow": "Wo wir arbeiten",
-        "title": "Unser Werk, unsere Lkw und Kühlhäuser",
-        "p1": "Unser Werk liegt im Industriegebiet Motobas, Kafr El Sheikh, im Nildelta. Dort waschen, beeisen, sortieren, verpacken und prüfen wir den Fisch vor dem Verladen.",
-        "p2": "Wir betreiben eigene Kühl-Lkw und Kühlhäuser, vom Werk bis zur Luft- oder Straßenfracht.",
-        "image_alt": "Ganzer frischer Fisch auf Scherbeneis in weißen Isolierboxen in einer Packhalle",
-        "map_link": "Werk auf Google Maps ansehen",
-        "stages_link": "Die fünf Stufen ansehen",
-        "opens_new_tab": "(öffnet in neuem Tab)"
     }
 }

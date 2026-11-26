@@ -8,8 +8,6 @@
         "eyebrow": "Exportateur depuis 2008",
         "title": "À propos d’AZAFCO International : élevage, achat, conditionnement et export de poisson en Égypte",
         "intro": "Du poisson entier et frais pour les importateurs, distributeurs et acheteurs de la restauration au Moyen-Orient et au-delà.",
-        "primary": "Démarrer un partenariat",
-        "secondary": "Écrire à la direction sur WhatsApp",
         "image_alt": "Deux ouvriers tirant une senne pleine de poissons vers la berge d’un étang en terre"
     },
     "glance": {
@@ -23,6 +21,8 @@
         "species_value": "12 espèces principales : {species}. Autres espèces sur demande.",
         "capacity_label": "Capacité de conditionnement",
         "capacity_value": "Jusqu’à 2 500 t/mois. Un camion frigorifique transporte 20 t, et certains jours, plus de cinq quittent l’usine.",
+        "fleet_label": "Camions et entrepôts frigorifiques",
+        "fleet_value": "Exploite ses propres camions et entrepôts frigorifiques, de l’usine au fret aérien ou routier.",
         "plant_label": "Usine de conditionnement",
         "office_label": "Siège",
         "markets_label": "Marchés actifs (année de la première exportation)",
@@ -33,16 +33,14 @@
         "contacts_label": "Contacts officiels",
         "email_label": "Équipe export",
         "whatsapp_label": "WhatsApp de la direction",
-        "quality_link": "Qualité et certificats"
+        "quality_link": "Emballage et qualité"
     },
     "journey": {
         "title": "Les étapes clés depuis 2008",
         "list_label": "Étapes clés de l’entreprise, par année",
         "founded": "Création d’AZAFCO International à Kafr el-Cheikh, en Égypte",
-        "market": "Premières exportations vers {country}",
         "baltim": "Ouverture de la première usine, dans la zone industrielle de Baltim, à Kafr el-Cheikh",
-        "motobas": "Ouverture d’une nouvelle usine dans la zone industrielle de Motobas, à Kafr el-Cheikh",
-        "governor": "Visite du gouverneur de Kafr el-Cheikh dans notre usine de Motobas"
+        "motobas": "Ouverture d’une nouvelle usine dans la zone industrielle de Motobas, à Kafr el-Cheikh"
     },
     "businesses": {
         "eyebrow": "Nos activités",
@@ -50,15 +48,5 @@
         "p2": "Nous cultivons aussi des fruits et légumes, exploitons des élevages de bétail en Égypte et avons d’autres investissements.",
         "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
         "link_products": "Nos poissons"
-    },
-    "footprint": {
-        "eyebrow": "Où nous travaillons",
-        "title": "Notre usine, nos camions et nos entrepôts frigorifiques",
-        "p1": "Notre usine se trouve dans la zone industrielle de Motobas, à Kafr el-Cheikh, dans le delta du Nil. Nous y lavons, mettons sous glace, calibrons, conditionnons et contrôlons le poisson avant le chargement.",
-        "p2": "Nous avons nos propres camions et entrepôts frigorifiques, de l’usine jusqu’au fret aérien ou routier.",
-        "image_alt": "Poissons entiers frais sur glace pilée dans des caisses isothermes blanches, dans une salle de conditionnement",
-        "map_link": "Voir l’usine sur Google Maps",
-        "stages_link": "Voir les cinq étapes",
-        "opens_new_tab": "(s’ouvre dans un nouvel onglet)"
     }
 }

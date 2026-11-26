@@ -72,9 +72,6 @@
         "hs_code": "Код HS / CN",
         "cn_label": "Код CN ЕС",
         "hs_guide": "Руководство по импорту",
-        "related_title": "Похожие виды",
-        "markets_title": "Наши экспортные рынки",
-        "markets_link": "О наших рынках",
         "contact": {
             "title": "{name}: свяжитесь с нами",
             "whatsapp_title": "WhatsApp",

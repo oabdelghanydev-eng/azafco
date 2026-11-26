@@ -15,10 +15,8 @@ import gQualityV2Ns from './pages/g-quality.json';
 import gMarketsV2Ns from './pages/g-markets.json';
 import aboutV2Ns from './pages/v2-about.json';
 import catalogueV2Ns from './pages/v2-catalogue.json';
-import processingV2Ns from './pages/v2-processing.json';
 import qualityV2Ns from './pages/v2-quality.json';
 import marketsV2Ns from './pages/v2-markets.json';
-import importersV2Ns from './pages/v2-importers.json';
 import insightsV2Ns from './pages/v2-insights.json';
 import contactV2Ns from './pages/v2-contact.json';
 import rfqV2Ns from './pages/v2-rfq.json';
@@ -45,10 +43,8 @@ const messages = {
     g_markets_v2: gMarketsV2Ns,
     about_v2: aboutV2Ns,
     catalogue_v2: catalogueV2Ns,
-    processing_v2: processingV2Ns,
     quality_v2: qualityV2Ns,
     markets_v2: marketsV2Ns,
-    importers_v2: importersV2Ns,
     insights_v2: insightsV2Ns,
     contact_v2: contactV2Ns,
     rfq_v2: rfqV2Ns,

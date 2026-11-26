@@ -8,7 +8,6 @@
         "eyebrow": "Nuestros mercados",
         "title": "Exportación de pescado fresco a Oriente Medio y más allá",
         "intro": "Enviamos a más de 7 mercados. El pescado sale de nuestra planta en hielo, en nuestros propios camiones frigoríficos, y sigue por aire o carretera.",
-        "primary": "Iniciemos una colaboración",
         "secondary": "Ver nuestras especies",
         "image_alt": "Vista aérea de estanques de tierra para peces, con aireadores y palmeras"
     },
@@ -23,17 +22,10 @@
         "origin": "Egipto · Motobas"
     },
     "notes": {
-        "eyebrow": "Compradores",
-        "title": "A quién abastecemos en cada mercado",
-        "details": "Detalles del mercado"
+        "eyebrow": "Compradores"
     },
     "support": {
         "guide_link": "Lea la guía para importar pescado fresco de Egipto"
-    },
-    "new_market": {
-        "title": "¿Su país no está en la lista?",
-        "text": "Indíquenos adónde importa.",
-        "action": "Escriba al equipo de exportación"
     },
     "detail": {
         "meta_title": "Importar pescado fresco de Egipto a {country}",
@@ -43,7 +35,6 @@
         "primary": "Envíe sus requisitos",
         "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
-        "map_title": "Nuestros otros mercados",
         "buyers_title": "A quién abastecemos en {country}",
         "products_link": "Ver nuestras 12 especies",
         "whatsapp_message": "Hola, AZAFCO International: les escribe … de … (empresa) en {country}. Nos interesa:"

@@ -1,21 +1,6 @@
 {
-    "meta": {
-        "title": "Guide d’importation du poisson et actualités",
-        "description": "Guide pour importateurs de poisson : règles d’import dans le Golfe et au Levant, codes SH, documents, chaîne du froid, et actualités d’AZAFCO."
-    },
-    "breadcrumb": "Ressources",
-    "hero": {
-        "eyebrow": "Ressources",
-        "title": "Guide de l’importateur et actualités de l’entreprise"
-    },
-    "featured": {
-        "read": "Lire le guide"
-    },
     "categories": {
         "importer_guide": "Guide de l’importateur"
-    },
-    "grid": {
-        "title": "Autres guides"
     },
     "article": {
         "by": "Publié par",
@@ -25,9 +10,6 @@
         "toc": "Sommaire",
         "related_title": "Pages liées",
         "related": [
-            {
-                "title": "Pour les importateurs"
-            },
             {
                 "title": "Nos marchés"
             },

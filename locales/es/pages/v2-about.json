@@ -8,8 +8,6 @@
         "eyebrow": "Exportamos desde 2008",
         "title": "Sobre AZAFCO International: cría, compra, envasado y exportación de pescado en Egipto",
         "intro": "Pescado fresco entero para importadores, distribuidores y compradores de hostelería y restauración de Oriente Medio y más allá.",
-        "primary": "Iniciemos una colaboración",
-        "secondary": "Escriba a la gerencia por WhatsApp",
         "image_alt": "Dos operarios tiran de una red de cerco llena de peces hacia la orilla de un estanque de tierra"
     },
     "glance": {
@@ -23,6 +21,8 @@
         "species_value": "12 especies principales: {species}. Otras especies bajo pedido.",
         "capacity_label": "Capacidad de envasado",
         "capacity_value": "Hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de la planta más de cinco.",
+        "fleet_label": "Camiones y cámaras frigoríficas",
+        "fleet_value": "Dispone de camiones frigoríficos y cámaras frigoríficas propios, desde la planta hasta el transporte aéreo o por carretera.",
         "plant_label": "Planta de envasado",
         "office_label": "Oficina principal",
         "markets_label": "Mercados activos (año de la primera exportación)",
@@ -33,16 +33,14 @@
         "contacts_label": "Contactos oficiales",
         "email_label": "Equipo de exportación",
         "whatsapp_label": "WhatsApp de la gerencia",
-        "quality_link": "Calidad y certificados"
+        "quality_link": "Envasado y calidad"
     },
     "journey": {
         "title": "Hitos desde 2008",
         "list_label": "Hitos de la empresa por año",
         "founded": "Fundación de AZAFCO International en Kafr el-Sheikh (Egipto)",
-        "market": "Primeras exportaciones a {country}",
         "baltim": "Apertura de la primera fábrica en la Zona Industrial de Baltim, Kafr el-Sheikh",
-        "motobas": "Apertura de la nueva planta en la Zona Industrial de Motobas, Kafr el-Sheikh",
-        "governor": "Visita del gobernador de Kafr el-Sheikh a nuestra planta de Motobas"
+        "motobas": "Apertura de la nueva planta en la Zona Industrial de Motobas, Kafr el-Sheikh"
     },
     "businesses": {
         "eyebrow": "Nuestras áreas de negocio",
@@ -50,15 +48,5 @@
         "p2": "También cultivamos fruta y hortalizas, tenemos granjas de ganado en Egipto y otras inversiones.",
         "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
         "link_products": "Nuestro pescado"
-    },
-    "footprint": {
-        "eyebrow": "Dónde trabajamos",
-        "title": "Nuestra planta, camiones y cámaras frigoríficas",
-        "p1": "Nuestra planta está en la Zona Industrial de Motobas, Kafr el-Sheikh, en el delta del Nilo. Allí lavamos, enhielamos, calibramos, envasamos e inspeccionamos el pescado antes de cargarlo.",
-        "p2": "Tenemos nuestros propios camiones frigoríficos y cámaras frigoríficas, desde la planta hasta el transporte aéreo o por carretera.",
-        "image_alt": "Pescado fresco entero sobre hielo picado en cajas isotérmicas blancas en una sala de envasado",
-        "map_link": "Ver la planta en Google Maps",
-        "stages_link": "Ver las cinco etapas",
-        "opens_new_tab": "(se abre en una pestaña nueva)"
     }
 }

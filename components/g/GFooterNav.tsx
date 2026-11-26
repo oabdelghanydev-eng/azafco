@@ -25,7 +25,7 @@ export function useGNav(keys: readonly GNavKey[]): GNavItem[] {
     return keys.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));
 }
 
-/** Footer list: the header sections (without Contact) plus Insights. */
+/** Footer list: the header sections (without Contact) plus the import guide. */
 function useGFooterNav(): GNavItem<GFooterNavKey>[] {
     const pathname = usePathname();
     return G_FOOTER_NAV_KEYS.map((key) => ({ key, href: G_NAV_ROUTE[key], anchor: false, current: isActivePath(pathname, G_NAV_ROUTE[key]) }));

@@ -8,7 +8,7 @@ import type { ImageProps } from '@/lib/v2/media';
  * translated, formatted strings.
  *
  * - `sourceUrl` → "View source" external link (new tab + screen-reader hint).
- * - `href` → the title becomes a stretched internal link (teaser on /insights).
+ * - `href` → the title becomes a stretched internal link (teaser to an internal page).
  *   Use one or the other, never both (no nested interactive elements).
  * - `illustrativeLabel` marks a manifest photo that is context, not a photo of the event.
  */

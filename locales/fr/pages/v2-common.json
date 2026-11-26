@@ -1,11 +1,10 @@
 {
     "skip_to_main": "Aller au contenu principal",
     "nav": {
-        "insights": "Ressources"
+        "guide": "Guide de l’importateur"
     },
     "cta": {
         "view_specifications": "Voir les spécifications",
-        "view_all": "Tout voir",
         "call": "Appeler",
         "opens_new_tab": "(s’ouvre dans un nouvel onglet)",
         "send_requirements": "Envoyer vos besoins",

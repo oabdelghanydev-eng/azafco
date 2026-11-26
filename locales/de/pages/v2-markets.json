@@ -8,7 +8,6 @@
         "eyebrow": "Unsere Märkte",
         "title": "Frischfischexport in den Nahen Osten und darüber hinaus",
         "intro": "Wir liefern in 7+ Märkte. Der Fisch verlässt unser Werk auf Eis in eigenen Kühl-Lkw und geht dann per Luft oder Straße weiter.",
-        "primary": "Partnerschaft starten",
         "secondary": "Unsere Fischarten ansehen",
         "image_alt": "Luftaufnahme von Erdteichen zur Fischzucht mit Belüftern und Palmen"
     },
@@ -23,17 +22,10 @@
         "origin": "Ägypten · Motobas"
     },
     "notes": {
-        "eyebrow": "Käufer",
-        "title": "Wen wir in jedem Markt beliefern",
-        "details": "Marktdetails"
+        "eyebrow": "Käufer"
     },
     "support": {
         "guide_link": "Leitfaden zum Import von Frischfisch aus Ägypten lesen"
-    },
-    "new_market": {
-        "title": "Ihr Land steht nicht auf der Liste?",
-        "text": "Nennen Sie uns Ihr Einfuhrland.",
-        "action": "Exportteam kontaktieren"
     },
     "detail": {
         "meta_title": "Frischfisch aus Ägypten für Käufer aus {country}",
@@ -43,7 +35,6 @@
         "primary": "Anforderungen senden",
         "secondary": "Geschäftsleitung per WhatsApp schreiben",
         "image_alt": "Ganze frische Fische auf Scherbeneis, von oben fotografiert",
-        "map_title": "Unsere anderen Märkte",
         "buyers_title": "Unsere Kunden aus {country}",
         "products_link": "Unsere 12 Fischarten ansehen",
         "whatsapp_message": "Guten Tag AZAFCO International, hier ist … von … (Unternehmen) aus {country}. Wir interessieren uns für:"

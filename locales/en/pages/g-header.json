@@ -3,12 +3,10 @@
     "home_label": "AZAFCO International home page",
     "nav_label": "Main",
     "nav": {
-        "about": "About us",
         "fish": "Our fish",
-        "chain": "Packing",
-        "quality": "Quality",
         "markets": "Markets",
-        "importers": "For importers",
+        "quality": "Packing and quality",
+        "about": "About us",
         "contact": "Contact"
     },
     "lang_aria": "Language: {name}",

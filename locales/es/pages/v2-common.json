@@ -1,11 +1,10 @@
 {
     "skip_to_main": "Saltar al contenido principal",
     "nav": {
-        "insights": "Recursos"
+        "guide": "Guía del importador"
     },
     "cta": {
         "view_specifications": "Ver especificaciones",
-        "view_all": "Ver todo",
         "call": "Llamar",
         "opens_new_tab": "(se abre en una pestaña nueva)",
         "send_requirements": "Envíe sus requisitos",

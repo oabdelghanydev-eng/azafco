@@ -7,9 +7,12 @@ export interface WorkflowStage {
     /** Visible stage label, e.g. "Stage 1" (from the locale JSON) */
     label: string;
     title: string;
-    text: string;
+    /** Omit when the page head already says it (the inspection stage on /quality) */
+    text?: string;
     image: string;
     imageAlt: string;
+    /** One fact line under the stage text (the capacity and truck sentence under Export) */
+    note?: string;
     /** Optional content under the stage text (e.g. the plant map link) */
     extra?: ReactNode;
 }
@@ -19,7 +22,7 @@ export interface WorkflowProps {
 }
 
 /**
- * The in-house value chain on /processing, in the design G imagery treatment
+ * The in-house value chain on /quality, in the design G imagery treatment
  * (gold block behind a 3:2 photo, as in the home "Who we are" section).
  * Phone/tablet: photo above text. Desktop: two columns, the photo side alternating.
  * Ordered list, so the stage order is conveyed to screen readers too.
@@ -50,7 +53,8 @@ export default function Workflow({ stages }: WorkflowProps) {
                         <div className="mt-8 min-w-0 lg:mt-0">
                             <Eyebrow tone="light">{s.label}</Eyebrow>
                             <h3 className={`mb-0 mt-4 text-ink ${typography.h3}`}>{s.title}</h3>
-                            <p className={`mb-0 mt-3 text-ink-muted ${typography.body}`}>{s.text}</p>
+                            {s.text ? <p className={`mb-0 mt-3 text-ink-muted ${typography.body}`}>{s.text}</p> : null}
+                            {s.note ? <p className={`mb-0 mt-3 font-semibold text-navy ${typography.body}`}>{s.note}</p> : null}
                             {s.extra ? <div className="mt-2">{s.extra}</div> : null}
                         </div>
                     </li>

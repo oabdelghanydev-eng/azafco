@@ -1,21 +1,6 @@
 {
-    "meta": {
-        "title": "Guía para importar pescado y noticias de la empresa",
-        "description": "Nuestra guía para importadores de pescado: normas de importación del Golfo y del Levante, códigos SA, documentos y cadena de frío, y noticias de AZAFCO."
-    },
-    "breadcrumb": "Recursos",
-    "hero": {
-        "eyebrow": "Recursos",
-        "title": "Guía para importadores y noticias de la empresa"
-    },
-    "featured": {
-        "read": "Leer la guía"
-    },
     "categories": {
         "importer_guide": "Guía para importadores"
-    },
-    "grid": {
-        "title": "Más guías"
     },
     "article": {
         "by": "Publicado por",
@@ -25,9 +10,6 @@
         "toc": "Contenido",
         "related_title": "Páginas relacionadas",
         "related": [
-            {
-                "title": "Para importadores"
-            },
             {
                 "title": "Nuestros mercados"
             },

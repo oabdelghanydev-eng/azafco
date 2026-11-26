@@ -15,7 +15,6 @@ import {
 import Pending from '@/components/v2/Pending';
 import SpecTable, { type SpecRow } from '@/components/v2/SpecTable';
 import ProductContact from '@/components/v2/products/ProductContact';
-import { SpeciesEntry } from '@/components/v2/products/SpeciesRow';
 import {
     bareName,
     baseUrl,
@@ -25,12 +24,10 @@ import {
     inlineName,
     jsonLd,
     pageMetadata,
-    relatedProducts,
     toCatalogueProduct,
 } from '@/components/v2/products/catalogue';
 import { locales } from '@/i18n';
 import { importingTariffRows } from '@/data/guides';
-import { activeMarkets } from '@/data/markets';
 import { getProductBySlug, products } from '@/data/products';
 import { insightHref, productHref, rfqHref, routes } from '@/lib/v2/routes';
 
@@ -44,9 +41,6 @@ const HS_GUIDE_SLUG = 'importing-fresh-fish-from-egypt';
 
 /** Bidi isolates / marks and the word joiner are for display only: strip them from JSON-LD strings. */
 const plain = (s: string) => s.replace(/[\u200e\u200f\u202a-\u202e\u2060\u2066-\u2069]/g, '');
-
-/** The seven active markets in the order every other page shows them: by first export year (UAE 2008 … Syria 2026). */
-const marketsByYear = [...activeMarkets].sort((a, b) => Number(a.since) - Number(b.since));
 
 // Only the 12 published slugs (data/products.ts `products`) are valid: eel is kept in
 // data but unpublished, so /products/eel 404s. Renamed slugs redirect in next.config.js.
@@ -93,11 +87,9 @@ export default async function ProductDetailPage({ params }: Props) {
 
     const t = await getTranslations({ locale, namespace: 'catalogue_v2' });
     const tv = await getTranslations({ locale, namespace: 'v2' });
-    const tm = await getTranslations({ locale, namespace: 'data.markets' });
     const root = await getRootT(locale);
     const catalogue = await getCatalogue(locale);
     const p = catalogue.find((c) => c.slug === slug)!;
-    const related = relatedProducts(catalogue, slug, 3);
     const spec = getSpecView(root, locale, slug);
     // HS / CN code from the guide's tariff table (data/guides.ts), so both pages show the same code;
     // species that share the "Other" subheading 0302.89 also get the guide's note on why.
@@ -280,41 +272,6 @@ export default async function ProductDetailPage({ params }: Props) {
                 </div>
             </Section>
 
-            {/* The seven active markets, each linking to its market page (same order as the home and /markets) */}
-            <Section variant="white" labelledBy="product-markets">
-                <SectionHeading
-                    id="product-markets"
-                    title={t('detail.markets_title')}
-                    size="md"
-                    action={<TextLink href={routes.markets}>{t('detail.markets_link')}</TextLink>}
-                />
-                <ul className="m-0 flex list-none flex-wrap gap-x-8 gap-y-2 p-0">
-                    {marketsByYear.map((m) => (
-                        <li key={m.slug}>
-                            <TextLink href={`${routes.markets}/${m.slug}`}>{tm(`${m.translationKey}.country`)}</TextLink>
-                        </li>
-                    ))}
-                </ul>
-            </Section>
-
-            {/* Related products */}
-            {related.length > 0 ? (
-                <Section variant="offwhite" labelledBy="related-products">
-                    <SectionHeading
-                        id="related-products"
-                        title={t('detail.related_title')}
-                        size="md"
-                        action={<TextLink href={routes.products}>{tv('cta.view_all')}</TextLink>}
-                    />
-                    <ul className="m-0 grid list-none gap-x-10 gap-y-12 p-0 sm:grid-cols-2 lg:grid-cols-3">
-                        {related.map((r) => (
-                            <li key={r.slug}>
-                                <SpeciesEntry name={r.name} scientificName={r.scientificName} href={r.href} image={r.image} />
-                            </li>
-                        ))}
-                    </ul>
-                </Section>
-            ) : null}
             {/* The G footer closes the page with the WhatsApp (management) and email (export team) rows. */}
         </>
     );

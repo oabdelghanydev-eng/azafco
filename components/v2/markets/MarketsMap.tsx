@@ -5,9 +5,6 @@ import { FLAGS, MAP_COUNTRIES } from '@/components/g/home/gMarketsMap';
  * G home markets section (components/g/home/GMarkets.tsx): same base map, country
  * outlines, gold dashed routes from Egypt (Motobas) and round flag pins.
  * Server-only, no client JS. Geometry copied from the G home (viewBox 0 0 1000 620).
- *
- * `highlight` (country code, lower case) draws that market's route solid and fills
- * its outline in gold (market detail pages); without it every route is drawn equally.
  */
 const BASE_MAP = '/images/g/markets-map.svg';
 const EG = { x: 267.3, y: 216.8 };
@@ -43,17 +40,15 @@ export interface MarketsMapProps {
     label: string;
     /** Origin label under the Egypt pin, e.g. "Egypt · Motobas" */
     origin: string;
-    highlight?: MapCode;
     /** Unique prefix for the SVG ids when the map appears more than once on a page */
     idPrefix?: string;
     className?: string;
 }
 
-function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapProps & { variant: 'desktop' | 'phone'; p: string }) {
+function MapSvg({ variant, markets, label, origin, p }: MarketsMapProps & { variant: 'desktop' | 'phone'; p: string }) {
     const desk = variant === 'desktop';
     const pinR = desk ? 16 : 12;
     const flagScale = desk ? 1 : 0.75;
-    const on = (code: MapCode) => !highlight || highlight === code;
     return (
         <svg
             viewBox={desk ? '0 0 1000 620' : '170 30 700 420'}
@@ -63,16 +58,10 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
         >
             <image href={BASE_MAP} x="0" y="0" width="1000" height="620" preserveAspectRatio="none" />
             {markets.map(({ code }) => (
-                <use
-                    key={code}
-                    href={`#${p}-c-${code}`}
-                    className={highlight === code ? 'fill-gold/30 stroke-white/35' : 'fill-navy-200/20 stroke-white/35'}
-                    strokeWidth="0.8"
-                />
+                <use key={code} href={`#${p}-c-${code}`} className="fill-navy-200/20 stroke-white/35" strokeWidth="0.8" />
             ))}
             {markets.map(({ code }) => {
                 const g = MAP_GEO[code];
-                const strong = highlight === code;
                 return (
                     <path
                         key={code}
@@ -80,9 +69,9 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                         fill="none"
                         className="stroke-gold"
                         strokeLinecap="round"
-                        strokeWidth={strong ? 3 : 1.6}
-                        strokeDasharray={strong ? undefined : '2 7'}
-                        opacity={on(code) ? 0.9 : 0.45}
+                        strokeWidth={1.6}
+                        strokeDasharray="2 7"
+                        opacity={0.9}
                     />
                 );
             })}
@@ -91,13 +80,7 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                 const f = desk ? g.fd : g.fm;
                 return (
                     <g key={code}>
-                        <circle
-                            cx={g.pin[0]}
-                            cy={g.pin[1]}
-                            r={pinR}
-                            className={highlight === code ? 'fill-white stroke-gold' : 'fill-white stroke-white'}
-                            strokeWidth="2.5"
-                        />
+                        <circle cx={g.pin[0]} cy={g.pin[1]} r={pinR} className="fill-white stroke-white" strokeWidth="2.5" />
                         <g clipPath={`url(#${p}-${desk ? 'cd' : 'cm'}-${code})`}>
                             <use href={`#${p}-flag-${code}`} transform={`translate(${f[0]} ${f[1]}) scale(${flagScale})`} />
                         </g>
@@ -111,7 +94,6 @@ function MapSvg({ variant, markets, label, origin, highlight, p }: MarketsMapPro
                                 className="fill-white stroke-navy-900"
                                 strokeWidth="5"
                                 paintOrder="stroke"
-                                opacity={on(code) ? 1 : 0.7}
                             >
                                 {short}
                             </text>

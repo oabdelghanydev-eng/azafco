@@ -3,12 +3,10 @@
     "home_label": "Главная страница AZAFCO International",
     "nav_label": "Основная навигация",
     "nav": {
-        "about": "О нас",
         "fish": "Наша рыба",
-        "chain": "Упаковка",
-        "quality": "Качество",
         "markets": "Рынки",
-        "importers": "Импортёрам",
+        "quality": "Упаковка и качество",
+        "about": "О нас",
         "contact": "Контакты"
     },
     "lang_aria": "Язык: {name}",

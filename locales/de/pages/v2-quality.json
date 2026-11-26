@@ -1,20 +1,51 @@
 {
     "meta": {
-        "title": "Qualitätsprüfung für Fisch und ISO-Zertifikate",
-        "description": "Jeder Auftrag wird vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft. Wir verfügen über ISO-Zertifikate von TÜV AUSTRIA."
+        "title": "Fischverpackung Ägypten: Qualität, ISO-Zertifikate",
+        "description": "Im Werk Motobas, Kafr El Sheikh, waschen, beeisen, sortieren, verpacken und prüfen wir ganzen frischen Fisch. Wir haben ISO-Zertifikate von TÜV AUSTRIA."
     },
     "breadcrumbs": {
         "label": "Pfadnavigation",
         "home": "Startseite",
-        "current": "Qualität"
+        "current": "Verpackung und Qualität"
     },
     "hero": {
-        "kicker": "Qualität",
-        "title": "Qualität, geprüft anhand Ihrer Spezifikation",
+        "kicker": "Verpackung und Qualität",
+        "title": "Verpackung und Qualität in unserem Werk in Motobas",
         "intro": "Wir prüfen jeden Auftrag vor dem Verschließen der Boxen anhand der mit Ihnen vereinbarten Fischart, Gewichtsklasse, Verpackung und Etiketten.",
-        "imageAlt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen",
-        "primary": "Partnerschaft starten",
-        "secondary": "Verpackung und Versand ansehen"
+        "imageAlt": "Ganzer frischer Fisch auf Scherbeneis in weißen Boxen, dahinter Personal in Hygienekleidung bei der Arbeit"
+    },
+    "chain": {
+        "title": "Fünf Stufen von der Zucht bis zum Export",
+        "stageLabel": "Stufe {n}",
+        "stages": {
+            "farming": {
+                "title": "Zucht und Zukauf",
+                "text": "Wir züchten eigenen Fisch und kaufen bei anderen Erzeugern zu.",
+                "alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
+            },
+            "harvest": {
+                "title": "Abfischen",
+                "text": "Abgefischt und ins Werk gebracht.",
+                "alt": "Zwei Arbeiter ziehen ein Netz voller Tilapia ans Ufer eines Erdteichs"
+            },
+            "packing": {
+                "title": "Waschen, Beeisen und Verpacken",
+                "text": "Gewaschen, beeist, nach Gewicht sortiert und ganz auf Eis in EPS-Styroporboxen verpackt.",
+                "alt": "Hände in Handschuhen legen eine ganze Tilapia in eine Kiste mit Scherbeneis auf einem Stahltisch"
+            },
+            "inspection": {
+                "title": "Kontrolle",
+                "alt": "Eine Hand im Handschuh hält einen Messfühler in Eiswasser neben zwei ganzen Tilapia"
+            },
+            "export": {
+                "title": "Export",
+                "text": "Per Luft- oder Straßenfracht.",
+                "alt": "Ein Arbeiter schiebt an einer Laderampe eine Palette mit weißen Boxen in einen Kühl-Lkw"
+            }
+        },
+        "plantMap": "Unser Werk auf Google Maps",
+        "newTab": "(öffnet in neuem Tab)",
+        "capacity": "Wir verpacken bis zu 2.500 t/Monat. Ein Kühl-Lkw fasst 20 t, und an manchen Tagen verlassen mehr als fünf davon unser Werk."
     },
     "certs": {
         "title": "ISO-Zertifikate und EU-Exportzulassung",
@@ -30,6 +61,8 @@
     },
     "pending": {
         "traceability": "Los- und Chargendaten, die mit jeder Sendung geliefert werden können",
-        "market_approvals": "Für den Export in die Europäische Union zugelassen"
+        "market_approvals": "Für den Export in die Europäische Union zugelassen",
+        "temperature": "Lager- und Transporttemperatur je Produkt, mit Kontrollpunkten und Aufzeichnungen (vom Inhaber zu bestätigen, bevor eine Zahl veröffentlicht wird)",
+        "pack_formats": "Freigegebene Verpackungsformate (Boxtypen, Nettogewichte) und Etikettenoptionen"
     }
 }

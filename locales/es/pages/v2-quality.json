@@ -1,20 +1,51 @@
 {
     "meta": {
-        "title": "Control de calidad del pescado y certificados ISO",
-        "description": "Cada pedido se comprueba conforme a la especificación acordada antes de cerrar las cajas. Contamos con certificados ISO expedidos por TÜV AUSTRIA."
+        "title": "Envasado de pescado en Egipto: calidad y normas ISO",
+        "description": "En nuestra planta de Motobas (Kafr el-Sheikh) se lava, enhiela, calibra, envasa e inspecciona pescado fresco entero. Certificados ISO de TÜV AUSTRIA."
     },
     "breadcrumbs": {
         "label": "Ruta de navegación",
         "home": "Inicio",
-        "current": "Calidad"
+        "current": "Envasado y calidad"
     },
     "hero": {
-        "kicker": "Calidad",
-        "title": "Calidad comprobada según su especificación",
+        "kicker": "Envasado y calidad",
+        "title": "Envasado y calidad en nuestra planta de Motobas",
         "intro": "Inspeccionamos cada pedido antes de cerrar las cajas, según la especie, el calibre, el embalaje y las etiquetas acordados con usted.",
-        "imageAlt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
-        "primary": "Iniciemos una colaboración",
-        "secondary": "Ver cómo envasamos y enviamos"
+        "imageAlt": "Pescado fresco entero sobre hielo picado en cajas blancas, con personal con ropa higiénica trabajando al fondo"
+    },
+    "chain": {
+        "title": "Cinco etapas de la granja a la exportación",
+        "stageLabel": "Etapa {n}",
+        "stages": {
+            "farming": {
+                "title": "Cría y abastecimiento",
+                "text": "Criamos nuestro propio pescado y compramos a otros productores.",
+                "alt": "Vista aérea de estanques de tierra con aireadores y palmeras"
+            },
+            "harvest": {
+                "title": "Cosecha",
+                "text": "Se captura con redes y se lleva a la planta.",
+                "alt": "Dos operarios tiran de una red llena de tilapias hacia la orilla de un estanque de tierra"
+            },
+            "packing": {
+                "title": "Lavado, enhielado y envasado",
+                "text": "Lavado, enhielado, calibrado por peso y envasado entero en hielo en cajas de EPS.",
+                "alt": "Manos con guantes colocan una tilapia entera en una caja con hielo picado sobre una mesa de acero"
+            },
+            "inspection": {
+                "title": "Inspección",
+                "alt": "Una mano con guante sostiene una sonda en agua con hielo junto a dos tilapias enteras"
+            },
+            "export": {
+                "title": "Exportación",
+                "text": "Por transporte aéreo o por carretera.",
+                "alt": "Un operario introduce un palé de cajas blancas en un camión frigorífico en un muelle de carga"
+            }
+        },
+        "plantMap": "Nuestra planta en Google Maps",
+        "newTab": "(se abre en una pestaña nueva)",
+        "capacity": "Envasamos hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de nuestra planta más de cinco."
     },
     "certs": {
         "title": "Certificados ISO y autorización de exportación a la UE",
@@ -30,6 +61,8 @@
     },
     "pending": {
         "traceability": "Datos de lote y partida que pueden facilitarse con cada envío",
-        "market_approvals": "Autorizados para exportar a la Unión Europea"
+        "market_approvals": "Autorizados para exportar a la Unión Europea",
+        "temperature": "Temperatura de almacenamiento y transporte por producto, con puntos de control y registros (el propietario debe confirmarla antes de publicar cualquier cifra)",
+        "pack_formats": "Formatos de embalaje validados (tipos de caja, pesos netos) y opciones de etiquetado"
     }
 }

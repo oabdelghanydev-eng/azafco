@@ -20,7 +20,7 @@ type Page = {
  * Date of the last content review of the site pages (round 1, 14 Nov 2026).
  * Update it when page copy changes; guides carry their own lastReviewed.
  */
-const SITE_REVIEWED = '2026-11-22';
+const SITE_REVIEWED = '2026-11-26';
 
 // Define all static pages with their priorities and change frequencies
 const pages: Page[] = [
@@ -29,11 +29,8 @@ const pages: Page[] = [
     { path: 'about', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: 'contact', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'markets', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: 'processing', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: 'quality', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: 'for-importers', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: 'requirements', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: 'insights', priority: 0.6, changeFrequency: 'weekly' as const },
     { path: 'privacy-policy', priority: 0.2, changeFrequency: 'yearly' as const },
     ...productSlugs.map((slug) => ({ path: `products/${slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
     ...activeMarketSlugs.map((slug) => ({ path: `markets/${slug}`, priority: 0.7, changeFrequency: 'monthly' as const })),
@@ -55,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // language alternates (hreflang, same helper as the page <head>: published
     // locales + x-default → /en). lastModified is a content date (guides:
     // lastReviewed; other pages: SITE_REVIEWED), never the build time.
-    // Removed pages (/seafood, /businesses, /insights/news) 308 in next.config.js.
+    // Removed pages (/seafood, /businesses, /insights, /insights/news, /processing, /for-importers) 308 in next.config.js.
     for (const page of pages) {
         const languages = hreflangAlternates(page.path ? `/${page.path}` : '');
 

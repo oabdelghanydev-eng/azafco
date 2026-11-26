@@ -3,12 +3,10 @@
     "home_label": "Startseite von AZAFCO International",
     "nav_label": "Hauptmenü",
     "nav": {
-        "about": "Über uns",
         "fish": "Unser Fisch",
-        "chain": "Verpackung",
-        "quality": "Qualität",
         "markets": "Märkte",
-        "importers": "Für Importeure",
+        "quality": "Verpackung und Qualität",
+        "about": "Über uns",
         "contact": "Kontakt"
     },
     "lang_aria": "Sprache: {name}",

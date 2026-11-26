@@ -8,8 +8,6 @@
         "eyebrow": "Exporting since 2008",
         "title": "About AZAFCO International: fish farming, sourcing, packing and export in Egypt",
         "intro": "Whole fresh fish for importers, distributors and foodservice buyers across the Middle East and beyond.",
-        "primary": "Start a partnership",
-        "secondary": "Message management on WhatsApp",
         "image_alt": "Two workers pulling a seine net full of fish to the bank of an earthen pond"
     },
     "glance": {
@@ -23,6 +21,8 @@
         "species_value": "12 main species: {species}. Other species on request.",
         "capacity_label": "Packing capacity",
         "capacity_value": "Up to 2,500 t/month. A refrigerated truck carries 20 t, and on some days more than five leave the plant.",
+        "fleet_label": "Trucks and cold stores",
+        "fleet_value": "Runs its own refrigerated trucks and cold stores, from the plant to air or road freight.",
         "plant_label": "Packing plant",
         "office_label": "Main office",
         "markets_label": "Active markets (year of first export)",
@@ -33,16 +33,14 @@
         "contacts_label": "Official contacts",
         "email_label": "Export team",
         "whatsapp_label": "Management WhatsApp",
-        "quality_link": "Quality and certificates"
+        "quality_link": "Packing and quality"
     },
     "journey": {
         "title": "Milestones since 2008",
         "list_label": "Company milestones by year",
         "founded": "AZAFCO International founded in Kafr El Sheikh, Egypt",
-        "market": "First exports to {country}",
         "baltim": "First factory opened in the Baltim Industrial Zone, Kafr El Sheikh",
-        "motobas": "New plant opened in the Motobas Industrial Zone, Kafr El Sheikh",
-        "governor": "Visit by the Governor of Kafr El Sheikh to our Motobas plant"
+        "motobas": "New plant opened in the Motobas Industrial Zone, Kafr El Sheikh"
     },
     "businesses": {
         "eyebrow": "Our businesses",
@@ -50,15 +48,5 @@
         "p2": "We also grow fruit and vegetables, run livestock farms in Egypt and have other investments.",
         "image_alt": "Whole fresh fish on crushed ice seen from above",
         "link_products": "Our fish"
-    },
-    "footprint": {
-        "eyebrow": "Where we work",
-        "title": "Our plant, trucks and cold stores",
-        "p1": "Our plant is in the Motobas Industrial Zone, Kafr El Sheikh, in the Nile Delta. We wash, ice, grade, pack and inspect the fish there before loading.",
-        "p2": "We run our own refrigerated trucks and cold stores, from the plant to air or road freight.",
-        "image_alt": "Whole fresh fish on crushed ice in white insulated boxes in a packing hall",
-        "map_link": "See the plant on Google Maps",
-        "stages_link": "See the five stages",
-        "opens_new_tab": "(opens in a new tab)"
     }
 }

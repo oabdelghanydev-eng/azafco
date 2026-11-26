@@ -127,7 +127,7 @@ export default function GFooter() {
     const rtl = locale === 'ar';
     const { email, whatsappNumber } = companyConfig.contact;
     const langs = publishedLangs();
-    // Header labels for the site sections; the site-wide label for Insights
+    // Header labels for the site sections; the site-wide label for the import guide
     const navLabels = Object.fromEntries([
         ...G_NAV_KEYS.map((k) => [k, tNav(`nav.${k}`)]),
         ...G_FOOTER_EXTRA_KEYS.map((k) => [k, tSite(k)]),

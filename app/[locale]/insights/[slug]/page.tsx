@@ -91,7 +91,7 @@ export default async function InsightArticlePage({ params }: Props) {
         })),
     };
 
-    const relatedHrefs = [routes.forImporters, routes.markets, routes.products];
+    const relatedHrefs = [routes.markets, routes.products];
     const related = (t.raw('article.related') as { title: string }[]).map((r, i) => ({ ...r, href: relatedHrefs[i] }));
 
     const meta = [
@@ -103,16 +103,12 @@ export default async function InsightArticlePage({ params }: Props) {
     return (
         <>
             <JsonLd data={article} />
-            <JsonLd
-                data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [
-                    { name: t('breadcrumb'), path: routes.insights },
-                    { name: tg('breadcrumb'), path: insightHref(slug) },
-                ])}
-            />
+            {/* Home › guide title: the /insights index was removed (26 Nov 2026) */}
+            <JsonLd data={breadcrumbJsonLd(locale, tv('breadcrumbs.home'), [{ name: tg('breadcrumb'), path: insightHref(slug) }])} />
 
             {/* Article header */}
             <PageHead
-                crumbs={[{ label: t('breadcrumb'), href: routes.insights }, { label: tg('breadcrumb') }]}
+                crumbs={[{ label: tg('breadcrumb') }]}
                 eyebrow={t(`categories.${entry.category}`)}
                 title={title}
                 titleId="article-title"
@@ -176,7 +172,7 @@ export default async function InsightArticlePage({ params }: Props) {
             {/* Related pages */}
             <Section variant="offwhite" labelledBy="article-related">
                 <SectionHeading id="article-related" title={t('article.related_title')} />
-                <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3 lg:gap-5">
+                <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:gap-5">
                     {related.map((r) => (
                         <li key={r.title} className="min-w-0">
                             <Link href={r.href} className={cn(cardClass({ interactive: true, padding: 'md' }), 'group flex h-full flex-col', focusRing)}>

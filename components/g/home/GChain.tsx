@@ -51,7 +51,7 @@ export default async function GChain() {
                 ))}
             </ol>
             <div className="mt-8 lg:mt-12 lg:text-center">
-                <TextLink href={routes.processing} dataAttrs={{ 'data-cta': 'home_chain_page' }}>
+                <TextLink href={routes.quality} dataAttrs={{ 'data-cta': 'home_chain_page' }}>
                     {t('pageLink')}
                 </TextLink>
             </div>

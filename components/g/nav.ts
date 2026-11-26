@@ -2,36 +2,37 @@
  * Design G nav items (plain module: safe to import from server and client files).
  * Every item links to its own page (G_NAV_ROUTE), on home as everywhere else.
  */
-import { routes } from '@/lib/v2/routes';
+import { guides } from '@/data/guides';
+import { insightHref, routes } from '@/lib/v2/routes';
 
 /** Site sections shared by the header menu and the footer, in this order. */
-export const G_NAV_KEYS = ['about', 'fish', 'chain', 'quality', 'markets', 'importers'] as const;
+export const G_NAV_KEYS = ['fish', 'markets', 'quality', 'about'] as const;
 export type GNavKey = (typeof G_NAV_KEYS)[number] | 'contact';
 
 /** Phone / tablet menu (vertical list, below xl): every section, then Contact. */
 export const G_NAV_KEYS_MENU: readonly GNavKey[] = [...G_NAV_KEYS, 'contact'];
 
-/** Desktop bar (xl+): the same seven items on one line (short labels, checked in six languages). */
+/** Desktop bar (xl+): the same five items on one line (owner, 26 Nov 2026: seven became five). */
 export const G_NAV_KEYS_BAR: readonly GNavKey[] = G_NAV_KEYS_MENU;
 
 /** Footer only: a page the header does not list. */
-export const G_FOOTER_EXTRA_KEYS = ['insights'] as const;
+export const G_FOOTER_EXTRA_KEYS = ['guide'] as const;
 export type GFooterExtraKey = (typeof G_FOOTER_EXTRA_KEYS)[number];
 export type GFooterNavKey = (typeof G_NAV_KEYS)[number] | GFooterExtraKey;
 
-/** Footer order: the header sections (without Contact), then Insights. */
+/** Footer order: the header sections (without Contact), then the import guide. */
 export const G_FOOTER_NAV_KEYS: readonly GFooterNavKey[] = [...G_NAV_KEYS, ...G_FOOTER_EXTRA_KEYS];
 
 /** Real route behind each nav item (header and footer). */
 export const G_NAV_ROUTE: Record<GNavKey | GFooterExtraKey, string> = {
-    about: routes.about,
     fish: routes.products,
-    chain: routes.processing,
-    quality: routes.quality,
     markets: routes.markets,
-    importers: routes.forImporters,
+    // "Packing and quality": /processing was merged into /quality (26 Nov 2026)
+    quality: routes.quality,
+    about: routes.about,
     contact: routes.contact,
-    insights: routes.insights,
+    // The one guide; the /insights index was removed (26 Nov 2026)
+    guide: insightHref(guides[0].slug),
 };
 
 /**

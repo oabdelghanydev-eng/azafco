@@ -8,7 +8,6 @@
         "eyebrow": "Our markets",
         "title": "Fresh fish exports to the Middle East and beyond",
         "intro": "We ship to 7+ markets. The fish leaves our plant on ice in our own refrigerated trucks, then goes on by air or road.",
-        "primary": "Start a partnership",
         "secondary": "View our species",
         "image_alt": "Aerial view of earthen fish ponds with aerators and palms"
     },
@@ -23,17 +22,10 @@
         "origin": "Egypt · Motobas"
     },
     "notes": {
-        "eyebrow": "Buyers",
-        "title": "Who we supply in each market",
-        "details": "Market details"
+        "eyebrow": "Buyers"
     },
     "support": {
         "guide_link": "Read the guide to importing fresh fish from Egypt"
-    },
-    "new_market": {
-        "title": "Your country is not on the list?",
-        "text": "Tell us where you import.",
-        "action": "Contact the export team"
     },
     "detail": {
         "meta_title": "Import fresh fish from Egypt to {country}",
@@ -43,7 +35,6 @@
         "primary": "Send your requirements",
         "secondary": "Message management on WhatsApp",
         "image_alt": "Whole fresh fish on crushed ice seen from above",
-        "map_title": "Our other markets",
         "buyers_title": "Who we supply in {country}",
         "products_link": "See our 12 species",
         "whatsapp_message": "Hello AZAFCO International, this is … from … (company) in {country}. We are interested in:"

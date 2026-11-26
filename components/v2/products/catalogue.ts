@@ -161,13 +161,6 @@ export function inlineName(name: string, locale: string): string {
     return ['en', 'es', 'fr', 'ru'].includes(locale) ? bare.charAt(0).toLocaleLowerCase(locale) + bare.slice(1) : bare;
 }
 
-/** Related products: same water type first, then the rest, in catalogue order. */
-export function relatedProducts(all: CatalogueProduct[], slug: string, count = 3): CatalogueProduct[] {
-    const self = all.find((p) => p.slug === slug);
-    const others = all.filter((p) => p.slug !== slug);
-    return [...others.filter((p) => p.category === self?.category), ...others.filter((p) => p.category !== self?.category)].slice(0, count);
-}
-
 /** Canonical + hreflang + OG + Twitter for a locale-less path. */
 export function pageMetadata({
     locale,

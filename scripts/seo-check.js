@@ -40,8 +40,11 @@ const REMOVED = [
     ['/agriculture', '/about#businesses'],
     ['/livestock', '/about#businesses'],
     ['/investments', '/about#businesses'],
-    ['/insights/news', '/insights#news'],
-    ['/media', '/insights#news'],
+    ['/insights/news', '/about#news'],
+    ['/media', '/about#news'],
+    ['/processing', '/quality'],
+    ['/for-importers', '/about'],
+    ['/insights', '/about#news'],
 ];
 const CONCURRENCY = 6;
 // Fetch as a crawler so Next.js renders metadata in <head> (no streamed metadata).

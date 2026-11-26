@@ -8,7 +8,7 @@
  * Removed 14 Nov (no importers; use the ui/ primitive instead): CTABand
  * (offwhite Section + Card accent), MarketCard / CertificateCard (Card),
  * MediaGallery (next/image in the page), FactsStrip / StatPanel (StatStrip,
- * FactCards), v2/SpeciesRow (v2/products/SpeciesRow).
+ * FactCards).
  *
  * Everything here is hook-light and works in server components except the
  * files marked 'use client' (WhatsAppFloat, RevealSections).
@@ -32,8 +32,6 @@ export { default as ProductCard } from './ProductCard';
 export type { ProductCardProps } from './ProductCard';
 export { default as SpecTable } from './SpecTable';
 export type { SpecTableProps, SpecRow } from './SpecTable';
-export { default as InsightCard } from './InsightCard';
-export type { InsightCardProps } from './InsightCard';
 export { default as FAQAccordion } from './FAQAccordion';
 export type { FAQAccordionProps, FAQItem } from './FAQAccordion';
 export { default as Pending, SHOW_PENDING } from './Pending';

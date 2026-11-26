@@ -3,18 +3,15 @@
  * from '@/navigation' (or `<Button href>`), which adds /ar, /en, ...
  *
  *   import { routes, productHref, rfqHref } from '@/lib/v2/routes';
- *   <Link href={routes.processing}>…</Link>
+ *   <Link href={routes.quality}>…</Link>
  *   <Button href={rfqHref({ product: 'tilapia', type: 'product' })}>…</Button>
  */
 export const routes = {
     home: '/',
     products: '/products',
-    processing: '/processing',
     quality: '/quality',
     markets: '/markets',
-    forImporters: '/for-importers',
     about: '/about',
-    insights: '/insights',
     contact: '/contact',
     rfq: '/requirements',
     privacy: '/privacy-policy',
@@ -28,9 +25,9 @@ export function productHref(slug: string): string {
     return `${routes.products}/${encodeURIComponent(slug)}`;
 }
 
-/** /insights/[slug] */
+/** /insights/[slug]: the import guide. There is no /insights index (removed 26 Nov 2026; it redirects to /about#news). */
 export function insightHref(slug: string): string {
-    return `${routes.insights}/${encodeURIComponent(slug)}`;
+    return `/insights/${encodeURIComponent(slug)}`;
 }
 
 /** Enquiry type preselected on the RFQ form. `corporate` must not force a species. */
