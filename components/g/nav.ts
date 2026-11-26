@@ -44,3 +44,12 @@ export const CONTACT_PAGES: readonly string[] = [routes.contact, routes.rfq];
 export function listsContactChannels(pathname: string): boolean {
     return CONTACT_PAGES.some((p) => pathname === p || pathname.startsWith(`${p}/`));
 }
+
+/**
+ * Pages where the footer contact block would be a second contact band: the contact
+ * pages, and each species page, whose contact card (WhatsApp and email, prefilled
+ * with the species) sits right above the footer. The WhatsApp float stays on species pages.
+ */
+export function hidesFooterContact(pathname: string): boolean {
+    return listsContactChannels(pathname) || new RegExp(`^${routes.products}/[^/]+/?$`).test(pathname);
+}

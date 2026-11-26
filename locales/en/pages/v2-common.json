@@ -23,9 +23,6 @@
         "confirmed_with_sales": "Confirmed per order",
         "attribute_label": "{label}:"
     },
-    "insight": {
-        "minutes": "{count} min read"
-    },
     "consent": {
         "title": "Analytics on this browser",
         "on": "Analytics are on for this browser.",
@@ -33,5 +30,9 @@
         "unset": "You have not made a choice on this browser. Google Analytics follows the default for your region, and Microsoft Clarity stays off.",
         "enable": "Turn analytics on",
         "disable": "Turn analytics off"
+    },
+    "origin": {
+        "fact": "Egypt produces 62% of the fish farmed in Africa and is one of the world's ten largest fish-farming countries.",
+        "source": "Source: FAO, 2024"
     }
 }

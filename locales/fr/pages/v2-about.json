@@ -23,6 +23,7 @@
         "capacity_value": "Jusqu’à 2 500 t/mois. Un camion frigorifique transporte 20 t, et certains jours, plus de cinq quittent l’usine.",
         "fleet_label": "Camions et entrepôts frigorifiques",
         "fleet_value": "Exploite ses propres camions et entrepôts frigorifiques, de l’usine au fret aérien ou routier.",
+        "origin_label": "Égypte",
         "plant_label": "Usine de conditionnement",
         "office_label": "Siège",
         "markets_label": "Marchés actifs (année de la première exportation)",

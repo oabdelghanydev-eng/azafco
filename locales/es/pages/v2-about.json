@@ -23,6 +23,7 @@
         "capacity_value": "Hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de la planta más de cinco.",
         "fleet_label": "Camiones y cámaras frigoríficas",
         "fleet_value": "Dispone de camiones frigoríficos y cámaras frigoríficas propios, desde la planta hasta el transporte aéreo o por carretera.",
+        "origin_label": "Egipto",
         "plant_label": "Planta de envasado",
         "office_label": "Oficina principal",
         "markets_label": "Mercados activos (año de la primera exportación)",

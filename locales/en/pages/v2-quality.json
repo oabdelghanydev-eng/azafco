@@ -11,7 +11,7 @@
     "hero": {
         "kicker": "Packing and quality",
         "title": "Packing and quality at our plant in Motobas",
-        "intro": "We inspect every order before the boxes are closed, against the species, weight grade, packing and labels agreed with you.",
+        "intro": "Our plant in Motobas, Kafr El Sheikh washes, ices, grades, packs and inspects whole fresh fish.",
         "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind"
     },
     "chain": {
@@ -35,6 +35,7 @@
             },
             "inspection": {
                 "title": "Inspection",
+                "text": "We inspect every order before the boxes are closed, against the species, weight grade, packing and labels agreed with you.",
                 "alt": "A gloved hand holding a probe in iced water beside two whole tilapia"
             },
             "export": {

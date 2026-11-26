@@ -29,13 +29,15 @@ import {
 import { locales } from '@/i18n';
 import { importingTariffRows } from '@/data/guides';
 import { getProductBySlug, products } from '@/data/products';
-import { insightHref, productHref, rfqHref, routes } from '@/lib/v2/routes';
+import { insightHref, productHref, routes } from '@/lib/v2/routes';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 const TITLE_MAX = 60; // full <title> incl. the layout's " | AZAFCO" template
 const DESCRIPTION_MAX = 155;
 const SPEC_ID = 'specifications';
+/** Anchor of the contact card beside the spec table (WhatsApp and email, both prefilled with the species) */
+const CONTACT_ID = 'product-contact';
 /** The importer guide with the HS / CN table (data/guides.ts) */
 const HS_GUIDE_SLUG = 'importing-fresh-fish-from-egypt';
 
@@ -179,9 +181,9 @@ export default async function ProductDetailPage({ params }: Props) {
               }
             : {
                   label: t('card.grades_label'),
-                  // No published grades: "Send us your target range" opens this product's prefilled /requirements
+                  // No published grades: "Send us your target range" jumps to the contact card on this page
                   value: (
-                      <TextLink href={rfqHref({ product: slug, type: 'product' })} dataAttrs={{ 'data-cta': 'product_grades_requirements' }}>
+                      <TextLink href={`#${CONTACT_ID}`} dataAttrs={{ 'data-cta': 'product_grades_requirements' }}>
                           {t('card.grades_none')}
                       </TextLink>
                   ),
@@ -236,13 +238,9 @@ export default async function ProductDetailPage({ params }: Props) {
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.products }, { label: name }]} />}
                 actions={
                     <>
-                        <Button
-                            href={rfqHref({ product: slug, type: 'product' })}
-                            size="lg"
-                            stretch="phone"
-                            arrow
-                            dataAttrs={{ 'data-cta': 'product_hero_requirements' }}
-                        >
+                        {/* Jumps to the contact card on this page (26 Nov 2026): it used to open /requirements,
+                            a page with the same two channels */}
+                        <Button href={`#${CONTACT_ID}`} external size="lg" stretch="phone" arrow dataAttrs={{ 'data-cta': 'product_hero_requirements' }}>
                             {t('detail.primary')}
                         </Button>
                         <Button href={`#${SPEC_ID}`} external variant="outline" size="lg" stretch="phone">
@@ -267,12 +265,12 @@ export default async function ProductDetailPage({ params }: Props) {
                     </div>
 
                     <div className="lg:col-span-5">
-                        <ProductContact name={name} titleName={bareName(name, locale)} />
+                        <ProductContact id={CONTACT_ID} name={name} titleName={bareName(name, locale)} />
                     </div>
                 </div>
             </Section>
 
-            {/* The G footer closes the page with the WhatsApp (management) and email (export team) rows. */}
+            {/* The footer contact block is hidden on species pages (components/g/nav.ts): the card above carries the same channels. */}
         </>
     );
 }

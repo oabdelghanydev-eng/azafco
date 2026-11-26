@@ -11,7 +11,7 @@
     "hero": {
         "kicker": "Verpackung und Qualität",
         "title": "Verpackung und Qualität in unserem Werk in Motobas",
-        "intro": "Wir prüfen jeden Auftrag vor dem Verschließen der Boxen anhand der mit Ihnen vereinbarten Fischart, Gewichtsklasse, Verpackung und Etiketten.",
+        "intro": "Im Werk Motobas, Kafr El Sheikh, waschen, beeisen, sortieren, verpacken und prüfen wir ganzen frischen Fisch.",
         "imageAlt": "Ganzer frischer Fisch auf Scherbeneis in weißen Boxen, dahinter Personal in Hygienekleidung bei der Arbeit"
     },
     "chain": {
@@ -35,6 +35,7 @@
             },
             "inspection": {
                 "title": "Kontrolle",
+                "text": "Wir prüfen jeden Auftrag vor dem Verschließen der Boxen anhand der mit Ihnen vereinbarten Fischart, Gewichtsklasse, Verpackung und Etiketten.",
                 "alt": "Eine Hand im Handschuh hält einen Messfühler in Eiswasser neben zwei ganzen Tilapia"
             },
             "export": {

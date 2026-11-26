@@ -5,7 +5,7 @@ import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/serve
 import { Link } from '@/navigation';
 import { mediaImage } from '@/lib/v2/media';
 import { insightHref, routes } from '@/lib/v2/routes';
-import { getInsight, insightSlugs, readingMinutes } from '@/components/v2/insights/articles';
+import { getInsight, insightSlugs } from '@/components/v2/insights/articles';
 import ImportingGuideBody, { IMPORTING_SECTIONS, importingSectionTitles, importingSourceList } from '@/components/v2/insights/ImportingGuideBody';
 import { breadcrumbJsonLd, pageMetadata } from '@/components/v2/rfq/pageMetadata';
 import JsonLd from '@/components/v2/rfq/JsonLd';
@@ -51,8 +51,6 @@ export default async function InsightArticlePage({ params }: Props) {
     const fmt = (iso: string) => format.dateTime(isoDate(iso), REVIEW_DATE_FORMAT);
 
     const title = tg('h1');
-    const tgAll = await getTranslations({ locale, namespace: 'guides_page' });
-    const minutes = readingMinutes(tgAll.raw(entry.translationKey));
     const image = entry.imageId ? mediaImage(entry.imageId, locale) : undefined;
     const reviewed = fmt(entry.lastReviewed);
     const sectionTitles = await importingSectionTitles(locale);
@@ -120,10 +118,6 @@ export default async function InsightArticlePage({ params }: Props) {
                             <dd className="m-0 font-bold text-fg">{m.value}</dd>
                         </div>
                     ))}
-                    <div>
-                        <dt className="sr-only">{t('article.reading_time')}</dt>
-                        <dd className={cn('m-0 text-fg-muted sm:pt-[1.6em]', typography.small)}>{tv('insight.minutes', { count: minutes })}</dd>
-                    </div>
                 </dl>
             </PageHead>
 

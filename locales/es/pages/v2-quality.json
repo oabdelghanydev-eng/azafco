@@ -11,7 +11,7 @@
     "hero": {
         "kicker": "Envasado y calidad",
         "title": "Envasado y calidad en nuestra planta de Motobas",
-        "intro": "Inspeccionamos cada pedido antes de cerrar las cajas, según la especie, el calibre, el embalaje y las etiquetas acordados con usted.",
+        "intro": "En nuestra planta de Motobas (Kafr el-Sheikh) se lava, enhiela, calibra, envasa e inspecciona pescado fresco entero.",
         "imageAlt": "Pescado fresco entero sobre hielo picado en cajas blancas, con personal con ropa higiénica trabajando al fondo"
     },
     "chain": {
@@ -35,6 +35,7 @@
             },
             "inspection": {
                 "title": "Inspección",
+                "text": "Inspeccionamos cada pedido antes de cerrar las cajas, según la especie, el calibre, el embalaje y las etiquetas acordados con usted.",
                 "alt": "Una mano con guante sostiene una sonda en agua con hielo junto a dos tilapias enteras"
             },
             "export": {

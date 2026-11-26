@@ -23,9 +23,6 @@
         "confirmed_with_sales": "Confirmé à chaque commande",
         "attribute_label": "{label} :"
     },
-    "insight": {
-        "minutes": "{count} min de lecture"
-    },
     "consent": {
         "title": "Mesure d’audience sur ce navigateur",
         "on": "La mesure d’audience est activée sur ce navigateur.",
@@ -33,5 +30,9 @@
         "unset": "Vous n’avez pas encore fait de choix sur ce navigateur. Google Analytics suit le réglage par défaut de votre région, et Microsoft Clarity reste désactivé.",
         "enable": "Activer la mesure d’audience",
         "disable": "Désactiver la mesure d’audience"
+    },
+    "origin": {
+        "fact": "L’Égypte produit 62 % du poisson d’élevage africain et figure parmi les dix premiers pays aquacoles du monde.",
+        "source": "Source : FAO, 2024"
     }
 }

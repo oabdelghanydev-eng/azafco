@@ -5,6 +5,7 @@ import { PageStructuredData } from '@/components/StructuredData';
 import { companyConfig } from '@/config/company.config';
 import { REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
 import { newsItems } from '@/data/news';
+import { ORIGIN_SOURCE_URL } from '@/data/origin';
 import { products } from '@/data/products';
 import { routes } from '@/lib/v2/routes';
 import type { ImageProps } from '@/lib/v2/media';
@@ -73,6 +74,7 @@ export default async function AboutPage({ params }: Props) {
     const tm = await getTranslations({ locale, namespace: 'data.markets' });
     const tp = await getTranslations({ locale, namespace: 'data.products' });
     const tn = await getTranslations({ locale, namespace: 'news_v2' });
+    const tv = await getTranslations({ locale, namespace: 'v2' });
     const format = await getFormatter({ locale });
     // One date format everywhere ("14 November 2026" / «14 نوفمبر 2026»)
     const fmt = (iso: string) => format.dateTime(isoDate(iso), REVIEW_DATE_FORMAT);
@@ -102,6 +104,19 @@ export default async function AboutPage({ params }: Props) {
         { label: t('glance.species_label'), value: t('glance.species_value', { species: speciesNames }) },
         { label: t('glance.capacity_label'), value: t('glance.capacity_value') },
         { label: t('glance.fleet_label'), value: t('glance.fleet_value') },
+        {
+            // Why Egypt: one sourced sector fact (owner, 26 Nov 2026; data/origin.ts)
+            label: t('glance.origin_label'),
+            value: (
+                <>
+                    {tv('origin.fact')}{' '}
+                    <a href={ORIGIN_SOURCE_URL} target="_blank" rel="noopener noreferrer" className={inlineLink} data-cta="about_origin_source">
+                        {tv('origin.source')}
+                        <span className="sr-only"> {tv('cta.opens_new_tab')}</span>
+                    </a>
+                </>
+            ),
+        },
         { label: t('glance.plant_label'), value: <address className="not-italic">{tc('addresses.factory.address')}</address> },
         { label: t('glance.office_label'), value: <address className="not-italic">{tc('addresses.main.address')}</address> },
         { label: t('glance.markets_label'), value: marketList },

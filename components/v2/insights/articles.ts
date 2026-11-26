@@ -40,15 +40,3 @@ export const insights: InsightEntry[] = guides.map((g: Guide) => ({
 
 export const insightSlugs = insights.map((i) => i.slug);
 export const getInsight = (slug: string) => insights.find((i) => i.slug === slug);
-
-/** Reading time from the article's own strings (~200 words per minute). */
-export function readingMinutes(raw: unknown): number {
-    let words = 0;
-    const walk = (v: unknown) => {
-        if (typeof v === 'string') words += v.split(/\s+/).filter(Boolean).length;
-        else if (Array.isArray(v)) v.forEach(walk);
-        else if (v && typeof v === 'object') Object.values(v).forEach(walk);
-    };
-    walk(raw);
-    return Math.max(1, Math.round(words / 200));
-}

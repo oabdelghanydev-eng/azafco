@@ -23,6 +23,7 @@
         "capacity_value": "Up to 2,500 t/month. A refrigerated truck carries 20 t, and on some days more than five leave the plant.",
         "fleet_label": "Trucks and cold stores",
         "fleet_value": "Runs its own refrigerated trucks and cold stores, from the plant to air or road freight.",
+        "origin_label": "Egypt",
         "plant_label": "Packing plant",
         "office_label": "Main office",
         "markets_label": "Active markets (year of first export)",

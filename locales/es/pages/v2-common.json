@@ -23,9 +23,6 @@
         "confirmed_with_sales": "Confirmado en cada pedido",
         "attribute_label": "{label}:"
     },
-    "insight": {
-        "minutes": "{count} min de lectura"
-    },
     "consent": {
         "title": "Analítica en este navegador",
         "on": "La analítica está activada en este navegador.",
@@ -33,5 +30,9 @@
         "unset": "Aún no ha elegido en este navegador. Google Analytics sigue la configuración predeterminada de su región y Microsoft Clarity permanece desactivado.",
         "enable": "Activar la analítica",
         "disable": "Desactivar la analítica"
+    },
+    "origin": {
+        "fact": "Egipto produce el 62 % del pescado de acuicultura de África y es uno de los diez mayores productores acuícolas del mundo.",
+        "source": "Fuente: FAO, 2024"
     }
 }

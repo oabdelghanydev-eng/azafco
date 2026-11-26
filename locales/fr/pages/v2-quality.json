@@ -11,7 +11,7 @@
     "hero": {
         "kicker": "Emballage et qualité",
         "title": "Emballage et qualité dans notre usine de Motobas",
-        "intro": "Nous contrôlons chaque commande avant la fermeture des caisses, en vérifiant l’espèce, le calibre, le conditionnement et les étiquettes convenus avec vous.",
+        "intro": "Notre usine de Motobas, à Kafr el-Cheikh, lave, glace, calibre, conditionne et contrôle le poisson entier frais.",
         "imageAlt": "Poissons entiers frais sur glace pilée dans des caisses blanches, avec du personnel en tenue d’hygiène au travail à l’arrière-plan"
     },
     "chain": {
@@ -35,6 +35,7 @@
             },
             "inspection": {
                 "title": "Contrôle",
+                "text": "Nous contrôlons chaque commande avant la fermeture des caisses, en vérifiant l’espèce, le calibre, le conditionnement et les étiquettes convenus avec vous.",
                 "alt": "Main gantée tenant une sonde dans de l’eau glacée, à côté de deux tilapias entiers"
             },
             "export": {

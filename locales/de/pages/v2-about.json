@@ -23,6 +23,7 @@
         "capacity_value": "Bis zu 2.500 t/Monat. Ein Kühl-Lkw fasst 20 t, und an manchen Tagen verlassen mehr als fünf davon das Werk.",
         "fleet_label": "Lkw und Kühlhäuser",
         "fleet_value": "Betreibt eigene Kühl-Lkw und Kühlhäuser, vom Werk bis zur Luft- oder Straßenfracht.",
+        "origin_label": "Ägypten",
         "plant_label": "Packbetrieb",
         "office_label": "Hauptsitz",
         "markets_label": "Aktive Märkte (Jahr des ersten Exports)",

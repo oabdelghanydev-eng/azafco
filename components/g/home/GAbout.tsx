@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Eyebrow, Section, TextLink, cn, typography } from '@/components/ui';
+import { Eyebrow, Section, TextLink, cn, focusRing, typography } from '@/components/ui';
+import { ORIGIN_SOURCE_URL } from '@/data/origin';
 import { routes } from '@/lib/v2/routes';
 
 /** Design G: "Who we are" section (#about). Photo with the gold offset block, copy on the end side from lg. */
 export default function GAbout() {
     const t = useTranslations('g_about_v2');
+    const tv = useTranslations('v2');
 
     return (
         <Section id="about" variant="white" labelledBy="g-about-title" className="g-font text-body">
@@ -28,6 +30,20 @@ export default function GAbout() {
                         {t('title')}
                     </h2>
                     <p className="mb-0 mt-4 text-fg-muted lg:mt-6">{t('p1')}</p>
+                    {/* Why Egypt: one sourced sector fact (owner, 26 Nov 2026; data/origin.ts) */}
+                    <p className="mb-0 mt-4 text-fg-muted">
+                        {tv('origin.fact')}{' '}
+                        <a
+                            href={ORIGIN_SOURCE_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-cta="home_origin_source"
+                            className={cn('font-semibold text-navy underline underline-offset-4 hover:text-navy-900', focusRing)}
+                        >
+                            {tv('origin.source')}
+                            <span className="sr-only"> {tv('cta.opens_new_tab')}</span>
+                        </a>
+                    </p>
                     <TextLink href={routes.about} className="mt-4 lg:mt-7" dataAttrs={{ 'data-cta': 'home_about_page' }}>
                         {t('pageLink')}
                     </TextLink>

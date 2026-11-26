@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Badge, Breadcrumbs, Button, PageHero, Section, SectionHeading, TextLink, WhatsAppIcon } from '@/components/ui';
-import { insightHref, rfqHref, routes } from '@/lib/v2/routes';
+import { insightHref, routes } from '@/lib/v2/routes';
 import { whatsappLink } from '@/lib/v2/whatsapp';
 import { activeMarketSlugs } from '@/data/markets';
 import { MARKET_IMPORT_REVIEWED, REVIEW_DATE_FORMAT, isoDate } from '@/data/market-import';
@@ -93,18 +93,10 @@ export default async function MarketDetailPage({ params }: Props) {
                 breadcrumbs={<Breadcrumbs items={[{ label: t('breadcrumb'), href: routes.markets }, { label: country }]} />}
                 actions={
                     <>
-                        <Button
-                            href={rfqHref({ country: market.countryCode, type: 'market' })}
-                            size="lg"
-                            stretch="phone"
-                            arrow
-                            dataAttrs={{ 'data-cta': 'market_hero_requirements' }}
-                        >
-                            {t('detail.primary')}
-                        </Button>
+                        {/* One button: WhatsApp with this market prefilled. The "send your requirements"
+                            button went on 26 Nov 2026: it opened a page with the same two channels. */}
                         <Button
                             href={waHref}
-                            variant="outline"
                             size="lg"
                             stretch="phone"
                             icon={<WhatsAppIcon />}

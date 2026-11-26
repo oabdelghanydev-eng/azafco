@@ -36,11 +36,12 @@ const FAQ = [1] as const;
  * /quality ("Packing and quality" in the G nav), design G, built on the design-system
  * primitives (components/ui). Since 26 Nov 2026 (SIMPLIFY-SPEC §1.1) it also carries
  * the five stages of the former /processing page, which now redirects here.
- * Order: head (h1 and the inspection sentence, no contact buttons), the five stages,
+ * Order: head (h1 and what the plant does, no contact buttons), the five stages,
  * the generic ISO sentence ("We hold ISO certificates, certified by TÜV AUSTRIA",
  * ROUND1-SPEC §1.1) with the EU approval line and the documents button, one FAQ item.
- * Each fact once: the inspection stage has no text (the head says it), and the
- * capacity and truck sentence (ROUND1-SPEC §1.2) sits under Export.
+ * Each fact once: the inspection sentence sits under stage 4 (it was in the head
+ * until 26 Nov 2026, which left the stage empty), and the capacity and truck
+ * sentence (ROUND1-SPEC §1.2) sits under Export.
  * The three standard names appear here only in the FAQ answer (and in the
  * Organization JSON-LD). No numbers, expiry dates, site, scope or "copies on
  * request"; no ISO 22000 / HACCP; no temperature figures (none approved).
@@ -108,8 +109,7 @@ export default async function QualityPage({ params }: Props) {
                         key: s.key,
                         label: t('chain.stageLabel', { n: i + 1 }),
                         title: t(`chain.stages.${s.key}.title`),
-                        // The head already says what the inspection checks
-                        text: s.key === 'inspection' ? undefined : t(`chain.stages.${s.key}.text`),
+                        text: t(`chain.stages.${s.key}.text`),
                         image: s.image,
                         imageAlt: t(`chain.stages.${s.key}.alt`),
                         note: s.key === 'export' ? t('chain.capacity') : undefined,

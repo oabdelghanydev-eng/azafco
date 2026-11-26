@@ -123,9 +123,10 @@ export default function GFooter() {
     const t = useTranslations('g_footer_v2');
     const tNav = useTranslations('g_header_v2');
     const tSite = useTranslations('v2.nav');
+    const tCta = useTranslations('v2.cta');
     const locale = useLocale() as Locale;
     const rtl = locale === 'ar';
-    const { email, whatsappNumber } = companyConfig.contact;
+    const { email, phone, whatsappNumber } = companyConfig.contact;
     const langs = publishedLangs();
     // Header labels for the site sections; the site-wide label for the import guide
     const navLabels = Object.fromEntries([
@@ -151,6 +152,14 @@ export default function GFooter() {
                     {t(`secondary.${l.key}`)}
                 </Link>
             ))}
+            {/* Phone call on every page (the header number and the float are WhatsApp links) */}
+            <a
+                href={`tel:${phone}`}
+                data-cta="footer_call"
+                className={`inline-flex min-h-11 items-center gap-1.5 transition-colors hover:text-gold ${FOCUS_DARK}`}
+            >
+                {tCta('call')} <span dir="ltr">{phoneDisplay(whatsappNumber)}</span>
+            </a>
             {/* Cookie settings live on the privacy page (#cookies), no banner */}
             <Link
                 href={`${routes.privacy}#cookies`}

@@ -23,9 +23,6 @@
         "confirmed_with_sales": "Wird pro Auftrag bestätigt",
         "attribute_label": "{label}:"
     },
-    "insight": {
-        "minutes": "{count} Min. Lesezeit"
-    },
     "consent": {
         "title": "Analyse in diesem Browser",
         "on": "Die Analyse ist in diesem Browser aktiviert.",
@@ -33,5 +30,9 @@
         "unset": "Sie haben in diesem Browser noch keine Auswahl getroffen. Google Analytics folgt der Standardeinstellung für Ihre Region, und Microsoft Clarity bleibt deaktiviert.",
         "enable": "Analyse aktivieren",
         "disable": "Analyse deaktivieren"
+    },
+    "origin": {
+        "fact": "Ägypten erzeugt 62 % der Aquakulturproduktion Afrikas und gehört zu den zehn größten Aquakulturländern der Welt.",
+        "source": "Quelle: FAO, 2024"
     }
 }
