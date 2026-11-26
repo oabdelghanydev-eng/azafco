@@ -102,9 +102,18 @@ export default function SpeciesStage({ items, rtl, pickLabel, openLabel }: Speci
                 {/* phone cut (top part only) */}
                 <span aria-hidden="true" className="absolute inset-x-0 top-0 h-[250px] bg-[#072452] lg:hidden" style={cut(rtl, [0, 52], [0, 24])} />
                 <span aria-hidden="true" className="absolute inset-x-0 top-0 h-[250px] bg-gold lg:hidden" style={cut(rtl, [52, 54.4], [24, 26.4])} />
-                {/* desktop cut */}
-                <span aria-hidden="true" className="absolute inset-0 hidden bg-[#072452] lg:block" style={cut(rtl, [0, 50], [0, 34])} />
-                <span aria-hidden="true" className="absolute inset-0 hidden bg-gold lg:block" style={cut(rtl, [50, 51.2], [34, 35.2])} />
+                {/* desktop cut: each piece is only as wide as its shape, so no layer lies behind the text column
+                    (a full-size layer made the contrast checker read the text as white on gold) */}
+                <span
+                    aria-hidden="true"
+                    className="absolute inset-y-0 hidden w-1/2 bg-[#072452] lg:block"
+                    style={{ [rtl ? 'left' : 'right']: 0, ...cut(rtl, [0, 100], [0, 68]) }}
+                />
+                <span
+                    aria-hidden="true"
+                    className="absolute inset-y-0 hidden w-[17.2%] bg-gold lg:block"
+                    style={{ [rtl ? 'left' : 'right']: '34%', ...cut(rtl, [93, 100], [0, 7]) }}
+                />
 
                 {items.map((it, i) => (
                     <article
