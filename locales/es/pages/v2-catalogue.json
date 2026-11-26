@@ -1,0 +1,123 @@
+{
+    "meta": {
+        "title": "Pescado fresco de Egipto: 12 especies principales",
+        "description": "Tilapia, lubina, dorada, mújol, carpa y pez gato de Egipto para importadores y distribuidores: pescado entero, fresco refrigerado y envasado en hielo."
+    },
+    "breadcrumb": "Nuestro pescado",
+    "new_tab": "(se abre en una pestaña nueva)",
+    "hero": {
+        "eyebrow": "Nuestro pescado",
+        "title": "12 tipos principales de pescado, frescos de Egipto",
+        "intro": "Entero y fresco refrigerado, calibrado por peso y envasado en hielo en cajas de EPS en nuestra planta de Motobas, Kafr el-Sheikh.",
+        "primary": "Iniciemos una colaboración",
+        "secondary": "Escriba a la gerencia por WhatsApp",
+        "whatsapp_message": "Hola, AZAFCO International: estamos revisando su lista de pescado. Especie, destino y cantidad:"
+    },
+    "grid": {
+        "title": "Especies que suministramos",
+        "more_species": "También suministramos otras especies bajo pedido."
+    },
+    "water": {
+        "freshwater": "Agua dulce",
+        "marine": "Agua de mar",
+        "brackish": "Agua salobre"
+    },
+    "card": {
+        "image_alt": "{name}: ejemplar entero, vista lateral",
+        "grades": "Calibres por peso (orientativos)",
+        "grades_label": "Calibres por peso",
+        "grades_none": "Bajo pedido"
+    },
+    "browser": {
+        "search_label": "Buscar especies",
+        "search_placeholder": "p. ej., tilapia, lubina, بوري",
+        "clear_search": "Borrar búsqueda",
+        "water_type": "Tipo de agua",
+        "all": "Todas las especies",
+        "result_count": "{count, plural, =0 {No se han encontrado especies} =1 {1 especie de {total}} other {# especies de {total}}}",
+        "reset": "Borrar filtros",
+        "empty_title": "Ninguna especie coincide con su búsqueda",
+        "form_type": "Presentación",
+        "all_forms": "Todas las presentaciones"
+    },
+    "custom": {
+        "title": "¿Necesita otro calibre u otro embalaje?",
+        "form": "Envíe sus requisitos",
+        "email": "Correo al equipo de exportación",
+        "email_subject": "Especificación de pescado para nuestro mercado"
+    },
+    "detail": {
+        "meta_title": "Pescado fresco de Egipto: proveedor de {name}",
+        "meta_title_short": "Proveedor mayorista de {name} de Egipto",
+        "meta_description": "{name} ({scientific}) de Egipto para importadores y distribuidores: pieza entera fresca refrigerada, en hielo en cajas de EPS, con código SA / NC.",
+        "meta_description_short": "{name} de Egipto para importadores y distribuidores: pieza entera fresca refrigerada, en hielo en cajas de EPS. Especificación y código SA / NC.",
+        "h1": "{name} de Egipto: pescado entero y fresco refrigerado",
+        "also_known_as": "Otros nombres",
+        "primary": "Envíe sus requisitos",
+        "secondary": "Ver especificaciones",
+        "spec_title": "Especificación",
+        "spec_caption": "{name}: especificación",
+        "trade_name": "Nombre comercial",
+        "scientific_name": "Nombre científico",
+        "origin": "Origen",
+        "origin_value": "Egipto",
+        "packed_at": "Envasado en",
+        "packed_at_value": "Nuestra planta de Motobas, Kafr el-Sheikh (Egipto)",
+        "transport": "Transporte",
+        "transport_value": "Nuestros propios camiones frigoríficos y, después, transporte aéreo o por carretera",
+        "water_type": "Tipo de agua",
+        "form": "Presentación",
+        "sizes": "Calibres por peso (orientativos)",
+        "packaging": "Tipo de embalaje (orientativo)",
+        "hs_code": "Código SA / NC",
+        "cn_label": "NC de la UE",
+        "hs_guide": "Ver la guía de importación",
+        "contact": {
+            "title": "{name}: hable con nosotros",
+            "whatsapp_title": "WhatsApp",
+            "whatsapp_sub": "Gerencia · consultas de suministro",
+            "whatsapp_message": "Hola, AZAFCO International: nos interesa {name}. Destino y cantidad:",
+            "email_title": "Correo electrónico",
+            "email_sub": "Equipo de exportación · detalles y documentos",
+            "email_subject": "{name}: especificaciones",
+            "email_body": "Especie: {name}\nPeso por pieza:\nCantidad:\nDestino:\n",
+            "new_tab": "(se abre en una pestaña nueva)"
+        }
+    },
+    "schema": {
+        "list_name": "Lista de pescado de AZAFCO International",
+        "category": "Pescado fresco"
+    },
+    "pending": {
+        "species_id": "{name}: identificación de la especie (nombre científico)"
+    },
+    "specs": {
+        "forms": {
+            "fresh_whole": "Entero, fresco refrigerado",
+            "fresh_gutted": "Eviscerado, fresco refrigerado",
+            "fresh_fillet": "Filete, fresco refrigerado",
+            "frozen_whole": "Entero, congelado",
+            "frozen_gutted": "Eviscerado, congelado",
+            "frozen_fillet": "Filete, congelado"
+        },
+        "grades": {
+            "small": "Pequeño",
+            "medium": "Mediano",
+            "large": "Grande",
+            "extra_large": "Extra grande",
+            "jumbo": "Jumbo"
+        },
+        "packs": {
+            "eps_box": "Caja isotérmica de EPS",
+            "carton": "Caja de cartón",
+            "plastic_crate": "Caja de plástico",
+            "vacuum_pack": "Envasado al vacío",
+            "other": "Otro"
+        },
+        "units": {
+            "g": "g",
+            "kg": "kg"
+        },
+        "and_above": "{value} o más"
+    }
+}

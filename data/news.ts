@@ -1,104 +1,46 @@
-// News types - locale-agnostic, translations come from next-intl
-export type NewsCategory = 'company' | 'industry' | 'achievement'
+/**
+ * Company news and press, shown on /about in the section with id="news"
+ * (the old /insights index, /insights/news and /media 308 there). Locale-agnostic
+ * data; every visible string lives in locales/<l>/pages/v2-news.json under
+ * news_v2.items.<key>.
+ *
+ * Sources: the live site's Media Center (origin/main data/news.ts), re-checked on
+ * 2026-11-14. Rules (RELEASE-DECISIONS and ROUND1-SPEC, 14 Nov 2026):
+ * - company coverage is described neutrally: no "best exporter", "all countries"
+ *   or EU-approval claims (the 2020 newspaper feature is shown as a feature only);
+ * - the industry-context items and the milestones timeline were removed in round 1
+ *   (the timeline was a copy of the /about milestones);
+ * - no photos until the owner sends real ones (B2B review, ledger C11);
+ * - sourceUrl only when it opens the coverage itself: the 2020 newspaper feature
+ *   has only the paper's home page, so it shows its source name and date as text.
+ */
 
 export interface NewsItem {
-    id: number
-    // Translation key for news data (e.g., 'governor_visit', 'best_exporter')
-    // Used to lookup translations at data.news.[key] including title, summary, content, source
-    translationKey: string
-    date: string
-    sourceUrl?: string
-    image?: string
-    category: NewsCategory
+    /** news_v2.items.<key> */
+    key: string;
+    /** ISO date (YYYY-MM-DD) of the event or publication */
+    date: string;
+    /** Original source (opens in a new tab). Omit when no public link exists. */
+    sourceUrl?: string;
 }
 
-// Locale-agnostic news data - all translatable strings are in locale JSON files
-// Source names are now in translations at data.news.[translationKey].source
-export const newsItems: NewsItem[] = [
-    // === Company News ===
+const items: NewsItem[] = [
     {
-        id: 1,
-        translationKey: 'governor_visit',
+        key: 'governor_visit',
         date: '2025-09-17',
         sourceUrl: 'https://www.facebook.com/reel/1122525626517427',
-        category: 'company',
     },
     {
-        id: 10,
-        translationKey: 'best_exporter',
+        key: 'press_feature',
         date: '2020-11-18',
-        sourceUrl: 'https://alshrqalawsat.com/',
-        category: 'company',
+        // Article URL pending (owner question 10); the paper's home page is not a source link
     },
     {
-        id: 2,
-        translationKey: 'tv_program',
+        key: 'tv_program',
         date: '2017-12-10',
         sourceUrl: 'https://www.youtube.com/watch?v=kuT4e6PXcFI',
-        category: 'company',
     },
+];
 
-    // === Industry News ===
-    {
-        id: 3,
-        translationKey: 'egypt_ranking',
-        date: '2024-06-01',
-        sourceUrl: 'https://sis.gov.eg/en/media-center/news/agriculture-minister-egypt-comes-in-1st-rank-in-fisheries-in-africa',
-        category: 'industry',
-    },
-    {
-        id: 4,
-        translationKey: 'kafr_el_sheikh_production',
-        date: '2024-01-15',
-        sourceUrl: 'https://gate.ahram.org.eg/News/2550584.aspx',
-        category: 'industry',
-    },
-    {
-        id: 5,
-        translationKey: 'ghalioun_project',
-        date: '2017-11-18',
-        sourceUrl: 'https://www.presidency.eg/',
-        category: 'industry',
-    },
-
-    // === Achievements ===
-    {
-        id: 6,
-        translationKey: 'iso_certifications',
-        date: '2018-01-01',
-        category: 'achievement',
-    },
-    {
-        id: 7,
-        translationKey: 'baltim_factory',
-        date: '2018-01-01',
-        category: 'achievement',
-    },
-    {
-        id: 8,
-        translationKey: 'motobas_factory',
-        date: '2025-01-01',
-        category: 'achievement',
-    },
-    {
-        id: 9,
-        translationKey: 'founding',
-        date: '2008-01-01',
-        category: 'achievement',
-    },
-]
-
-// Sort by date (newest first)
-const sortedNews = [...newsItems].sort((a, b) => {
-    const dateA = new Date(a.date.split('-').length === 3 ? a.date : `${a.date}-01-01`)
-    const dateB = new Date(b.date.split('-').length === 3 ? b.date : `${b.date}-01-01`)
-    return dateB.getTime() - dateA.getTime()
-})
-
-// Latest news for homepage (top 3 by date)
-export const latestNews = sortedNews.slice(0, 3)
-
-// News by category
-export const companyNews = newsItems.filter(n => n.category === 'company')
-export const industryNews = newsItems.filter(n => n.category === 'industry')
-export const achievementNews = newsItems.filter(n => n.category === 'achievement')
+/** Newest first */
+export const newsItems: NewsItem[] = items.slice().sort((a, b) => b.date.localeCompare(a.date));

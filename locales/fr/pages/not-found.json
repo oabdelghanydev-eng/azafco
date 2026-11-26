@@ -1,4 +1,23 @@
 {
-    "title": "Page non trouvée",
-    "back_home": "Retour à l'accueil"
+    "meta": {
+        "title": "Page introuvable"
+    },
+    "eyebrow": "Erreur 404",
+    "title": "Nous n’avons pas trouvé cette page",
+    "intro": "Le lien est peut-être ancien, ou la page a été déplacée.",
+    "links": [
+        {
+            "title": "Nos poissons"
+        },
+        {
+            "title": "Envoyer vos besoins"
+        },
+        {
+            "title": "Nos marchés"
+        },
+        {
+            "title": "Nous contacter"
+        }
+    ],
+    "home": "Retour à l’accueil"
 }

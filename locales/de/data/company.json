@@ -1,28 +1,17 @@
 {
-    "name": "AZAFCO International",
-    "fullName": "AZAFCO International Investment & Development",
-    "description": "Ägyptens führender B2B-Fischexporteur für Großhändler, Restaurants und Hotels – Premium-Frischfisch seit 2008.",
-    "workingHours": "Rund um die Uhr erreichbar",
-    "workingHoursNote": "24/7 geöffnet – je nach Abteilung",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "workingHours": "Sa–Do 8:00–17:00 Uhr (Kairoer Zeit)",
+    "workingHoursNote": "WhatsApp: Geschäftsleitung · Lieferanfragen",
+    "officialChannels": {
+        "title": "Offizielle Kanäle",
+        "text": "Wir schreiben nur über WhatsApp {phone} und von E-Mail-Adressen unter azafco.com.eg ({email}). Erhalten Sie Bank- oder Zahlungsdaten von einer anderen Nummer oder Adresse, fragen Sie bei uns nach, bevor Sie zahlen."
+    },
     "addresses": {
         "main": {
-            "title": "Hauptniederlassung",
-            "address": "Mastora, neben der Wohltätigkeitsorganisation, El-Borollos, Kafr El-Sheikh, Ägypten"
+            "address": "Mastrouh, neben dem Wohltätigkeitsverein, El-Borollos, Kafr El Sheikh, Ägypten"
         },
         "factory": {
-            "title": "Produktionsstätte",
-            "address": "Nr. 120 – Futtersektor – Industriezone – Motobas – Kafr El-Sheikh, Ägypten"
+            "address": "Nr. 120, Futtermittelsektor, Industriegebiet, Motobas, Kafr El Sheikh, Ägypten"
         }
-    },
-    "copyright": "AZAFCO International",
-    "privacyLink": "Datenschutzerklärung",
-    "leadersSince": "Führend im Frischfischexport seit",
-    "tagline": "Premium-Frischfisch aus Ägypten – weltweit",
-    "usps": {
-        "price": "Wettbewerbsfähige Großhandelspreise",
-        "quality": "ISO- & HACCP-zertifizierte Qualität",
-        "flexibility": "Individuelle Größen, flexible Bestellungen",
-        "availability": "24/7-Betrieb, kontinuierliche Lieferfähigkeit",
-        "service": "Zuverlässige Erfüllung Ihrer Marktanforderungen"
     }
 }

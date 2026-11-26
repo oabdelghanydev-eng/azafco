@@ -1,0 +1,123 @@
+{
+    "meta": {
+        "title": "Fresh fish from Egypt: 12 main species for export",
+        "description": "Tilapia, sea bass, sea bream, mullet, carp and catfish from Egypt for importers and distributors: whole, fresh chilled and packed on ice."
+    },
+    "breadcrumb": "Our fish",
+    "new_tab": "(opens in a new tab)",
+    "hero": {
+        "eyebrow": "Our fish",
+        "title": "12 main fish types, fresh from Egypt",
+        "intro": "Whole and fresh chilled, graded by weight and packed on ice in EPS boxes at our plant in Motobas, Kafr El Sheikh.",
+        "primary": "Start a partnership",
+        "secondary": "Message management on WhatsApp",
+        "whatsapp_message": "Hello AZAFCO International, we are looking at your fish list. Species, destination and quantity:"
+    },
+    "grid": {
+        "title": "Species we supply",
+        "more_species": "We also supply other species on request."
+    },
+    "water": {
+        "freshwater": "Freshwater",
+        "marine": "Marine",
+        "brackish": "Brackish water"
+    },
+    "card": {
+        "image_alt": "Whole {name}, side view",
+        "grades": "Weight grades (indicative)",
+        "grades_label": "Weight grades",
+        "grades_none": "On request"
+    },
+    "browser": {
+        "search_label": "Search species",
+        "search_placeholder": "e.g. tilapia, sea bass, بوري",
+        "clear_search": "Clear search",
+        "water_type": "Water type",
+        "all": "All species",
+        "result_count": "{count, plural, =0 {No species found} =1 {1 species of {total}} other {# species of {total}}}",
+        "reset": "Clear filters",
+        "empty_title": "No species match your search",
+        "form_type": "Product form",
+        "all_forms": "All forms"
+    },
+    "custom": {
+        "title": "Need another weight grade or packing?",
+        "form": "Send your requirements",
+        "email": "Email the export team",
+        "email_subject": "Fish specification for our market"
+    },
+    "detail": {
+        "meta_title": "Fresh {name} from Egypt: wholesale supplier",
+        "meta_title_short": "Fresh {name} from Egypt",
+        "meta_description": "{name} ({scientific}) from Egypt for importers and distributors: whole and fresh chilled, on ice in EPS foam boxes, with HS / CN code.",
+        "meta_description_short": "{name} from Egypt for importers and distributors: sold whole and fresh chilled, packed on ice in EPS foam boxes. Specification and HS / CN code.",
+        "h1": "{name} from Egypt, whole and fresh chilled",
+        "also_known_as": "Also known as",
+        "primary": "Send your requirements",
+        "secondary": "View specifications",
+        "spec_title": "Specification",
+        "spec_caption": "{name}: specification",
+        "trade_name": "Trade name",
+        "scientific_name": "Scientific name",
+        "origin": "Origin",
+        "origin_value": "Egypt",
+        "packed_at": "Packed at",
+        "packed_at_value": "Our plant in Motobas, Kafr El Sheikh, Egypt",
+        "transport": "Transport",
+        "transport_value": "Our own refrigerated trucks, then air or road freight",
+        "water_type": "Water type",
+        "form": "Product form",
+        "sizes": "Weight grades (indicative)",
+        "packaging": "Pack type (indicative)",
+        "hs_code": "HS / CN code",
+        "cn_label": "EU CN",
+        "hs_guide": "See the import guide",
+        "contact": {
+            "title": "{name}: talk to us",
+            "whatsapp_title": "WhatsApp",
+            "whatsapp_sub": "Management · supply enquiries",
+            "whatsapp_message": "Hello AZAFCO International, we are interested in {name}. Destination and quantity:",
+            "email_title": "Email",
+            "email_sub": "Export team · details and documents",
+            "email_subject": "{name}: specifications",
+            "email_body": "Fish: {name}\nWeight per fish:\nQuantity:\nDestination:\n",
+            "new_tab": "(opens in a new tab)"
+        }
+    },
+    "schema": {
+        "list_name": "AZAFCO International fish list",
+        "category": "Fresh fish"
+    },
+    "pending": {
+        "species_id": "{name}: species identification (scientific name)"
+    },
+    "specs": {
+        "forms": {
+            "fresh_whole": "Whole, fresh chilled",
+            "fresh_gutted": "Gutted, fresh chilled",
+            "fresh_fillet": "Fillet, fresh chilled",
+            "frozen_whole": "Whole, frozen",
+            "frozen_gutted": "Gutted, frozen",
+            "frozen_fillet": "Fillet, frozen"
+        },
+        "grades": {
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large",
+            "extra_large": "Extra large",
+            "jumbo": "Jumbo"
+        },
+        "packs": {
+            "eps_box": "EPS foam box",
+            "carton": "Carton",
+            "plastic_crate": "Plastic crate",
+            "vacuum_pack": "Vacuum pack",
+            "other": "Other"
+        },
+        "units": {
+            "g": "g",
+            "kg": "kg"
+        },
+        "and_above": "{value} and above"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "categories": {
+        "importer_guide": "Руководство для импортёров"
+    },
+    "article": {
+        "by": "Опубликовано компанией",
+        "author": "AZAFCO International",
+        "published": "Опубликовано",
+        "reviewed": "Последняя проверка",
+        "toc": "Содержание",
+        "related_title": "Связанные страницы",
+        "related": [
+            {
+                "title": "Наши рынки"
+            },
+            {
+                "title": "Наша рыба"
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "Über AZAFCO International: Fisch aus Ägypten seit 2008",
+        "description": "Export seit 2008: AZAFCO International züchtet, bezieht, verpackt und exportiert frischen Fisch aus Ägypten in 7+ Märkte, mit 2.500 t/Monat Packkapazität."
+    },
+    "breadcrumb": "Über uns",
+    "hero": {
+        "eyebrow": "Export seit 2008",
+        "title": "Über AZAFCO International: Fischzucht, Beschaffung, Verpackung und Export in Ägypten",
+        "intro": "Ganzer frischer Fisch für Importeure, Distributoren und Gastronomiekunden im Nahen Osten und darüber hinaus.",
+        "image_alt": "Zwei Arbeiter ziehen ein volles Zugnetz mit Fisch ans Ufer eines Erdteichs"
+    },
+    "glance": {
+        "title": "Unternehmensdaten",
+        "legal_label": "Firmenname",
+        "founded_label": "Export seit",
+        "founded_value": "2008, aus Kafr El Sheikh, Ägypten",
+        "activity_label": "Tätigkeit",
+        "activity_value": "Züchtet, bezieht, verpackt und exportiert ganzen, frisch gekühlten Fisch.",
+        "species_label": "Fischarten",
+        "species_value": "12 Hauptarten: {species}. Weitere Arten auf Anfrage.",
+        "capacity_label": "Packkapazität",
+        "capacity_value": "Bis zu 2.500 t/Monat. Ein Kühl-Lkw fasst 20 t, und an manchen Tagen verlassen mehr als fünf davon das Werk.",
+        "fleet_label": "Lkw und Kühlhäuser",
+        "fleet_value": "Betreibt eigene Kühl-Lkw und Kühlhäuser, vom Werk bis zur Luft- oder Straßenfracht.",
+        "origin_label": "Ägypten",
+        "plant_label": "Packbetrieb",
+        "office_label": "Hauptsitz",
+        "markets_label": "Aktive Märkte (Jahr des ersten Exports)",
+        "market_item": "{country} ({year})",
+        "market_largest": "{country} ({year}, größter Exportmarkt)",
+        "certificates_label": "Zertifikate",
+        "certificates_value": "Verfügt über ISO-Zertifikate von TÜV AUSTRIA.",
+        "contacts_label": "Offizielle Kontakte",
+        "email_label": "Exportteam",
+        "whatsapp_label": "WhatsApp der Geschäftsleitung",
+        "quality_link": "Verpackung und Qualität"
+    },
+    "journey": {
+        "title": "Meilensteine seit 2008",
+        "list_label": "Meilensteine des Unternehmens nach Jahr",
+        "founded": "Gründung von AZAFCO International in Kafr El Sheikh, Ägypten",
+        "baltim": "Erstes Werk im Industriegebiet Baltim, Kafr El Sheikh, eröffnet",
+        "motobas": "Neues Werk im Industriegebiet Motobas, Kafr El Sheikh, eröffnet"
+    },
+    "businesses": {
+        "eyebrow": "Unsere Geschäftsbereiche",
+        "title": "Fisch ist unser Kerngeschäft",
+        "p2": "Außerdem bauen wir in Ägypten Obst und Gemüse an, betreiben Viehzuchtbetriebe und haben weitere Investitionen.",
+        "image_alt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen",
+        "link_products": "Unser Fisch"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "skip_to_main": "Saltar al contenido principal",
+    "nav": {
+        "guide": "Guía del importador"
+    },
+    "cta": {
+        "view_specifications": "Ver especificaciones",
+        "call": "Llamar",
+        "opens_new_tab": "(se abre en una pestaña nueva)",
+        "send_requirements": "Envíe sus requisitos",
+        "start_partnership": "Iniciemos una colaboración"
+    },
+    "breadcrumbs": {
+        "label": "Ruta de navegación",
+        "home": "Inicio"
+    },
+    "pending": {
+        "prefix": "Pendiente de confirmación del propietario:"
+    },
+    "spec": {
+        "attribute": "Atributo",
+        "value": "Valor",
+        "confirmed_with_sales": "Confirmado en cada pedido",
+        "attribute_label": "{label}:"
+    },
+    "consent": {
+        "title": "Analítica en este navegador",
+        "on": "La analítica está activada en este navegador.",
+        "off": "La analítica está desactivada en este navegador.",
+        "unset": "Aún no ha elegido en este navegador. Google Analytics sigue la configuración predeterminada de su región y Microsoft Clarity permanece desactivado.",
+        "enable": "Activar la analítica",
+        "disable": "Desactivar la analítica"
+    },
+    "origin": {
+        "fact": "Egipto produce el 62 % del pescado de acuicultura de África y es uno de los diez mayores productores acuícolas del mundo.",
+        "source": "Fuente: FAO, 2024"
+    }
+}

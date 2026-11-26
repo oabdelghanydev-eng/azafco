@@ -4,123 +4,100 @@
         "alt_names": [
             "Tilapia del Nilo"
         ],
-        "description": "Tilapia del Nilo premium de granjas egipcias certificadas. Nuestro producto de exportación #1. Certificado HACCP con cadena de frío completa.",
+        "description": "Tilapia del Nilo, calibrada por peso y envasada en hielo.",
         "sizes": [
-            "Pequeño (200-300g)",
-            "Mediano (300-500g)",
-            "Grande (500g+)",
-            "Tamaños personalizados disponibles"
+            "Pequeño (200–300 g)",
+            "Mediano (300–500 g)",
+            "Grande (500 g o más)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "sea_bass": {
         "name": "Lubina",
         "alt_names": [
-            "Róbalo",
             "Lubina europea",
-            "Llobarro"
+            "Branzino"
         ],
-        "description": "Lubina europea premium, perfecta para asar, freír y alta cocina. Favorito de restaurantes en la región del Golfo.",
+        "description": "Lubina europea, también vendida como branzino, calibrada por peso y envasada en hielo.",
         "sizes": [
-            "Mediano (400-600g)",
-            "Grande (600g+)",
-            "Tamaños personalizados disponibles"
+            "Mediano (400–600 g)",
+            "Grande (600 g o más)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua salada",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua de mar"
     },
     "mullet": {
         "name": "Mújol",
         "alt_names": [
             "Pardete",
-            "Mugil",
-            "Lisa",
             "Bouri"
         ],
-        "description": "Mújol egipcio fresco, criado en aguas salobres. Excelente para asar y ahumar. Favorito tradicional en la cocina del Golfo.",
+        "description": "Mújol, vendido en Egipto como bouri, calibrado por peso y envasado en hielo; no es el mismo pez que nuestro morragute (tobar).",
         "sizes": [
-            "Pequeño (150-250g)",
-            "Mediano (250-400g)",
-            "Tamaños personalizados disponibles"
+            "Pequeño (150–250 g)",
+            "Mediano (250–400 g)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua salobre"
     },
     "grass_carp": {
         "name": "Carpa herbívora",
         "alt_names": [
             "Amur blanco",
-            "Carpa china"
+            "Hashayesh"
         ],
-        "description": "Carpa herbívora fresca (Ctenopharyngodon idella), una carpa de agua dulce criada en Egipto.",
+        "description": "Carpa herbívora, vendida en Egipto como hashayesh y en otros países como amur blanco, calibrada por peso y envasada en hielo.",
         "sizes": [
-            "Mediano (300-500g)",
-            "Grande (500g+)",
-            "Tamaños personalizados disponibles"
+            "Mediano (300–500 g)",
+            "Grande (500 g o más)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "mubarakah": {
         "name": "Carpa común",
         "alt_names": [
-            "Carpa",
-            "Mabrouk"
+            "Carpa con escamas",
+            "Qishra"
         ],
-        "description": "Carpa común fresca, ideal para platos tradicionales. Tamaños grandes disponibles para mayoristas.",
+        "description": "Carpa con el cuerpo cubierto de escamas, vendida en Egipto como qishra, calibrada por peso y envasada en hielo; la carpa espejo (mabrouka) la vendemos aparte.",
         "sizes": [
-            "Grande (1-2kg)",
-            "Jumbo (2kg+)",
-            "Tamaños personalizados disponibles"
+            "Grande (1–2 kg)",
+            "Jumbo (2 kg o más)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "catfish": {
         "name": "Pez gato africano",
         "alt_names": [
-            "Clarias",
-            "Tinto",
-            "Siluro africano"
+            "Siluro africano",
+            "Pez gato norteafricano",
+            "Karmout"
         ],
-        "description": "Pez gato africano fresco de granjas egipcias de agua dulce. Opción popular para restaurantes y distribuidores.",
+        "description": "Pez gato africano, vendido en Egipto como karmout, calibrado por peso y envasado en hielo.",
         "sizes": [
-            "Mediano (500-800g)",
-            "Grande (800g+)",
-            "Tamaños personalizados disponibles"
+            "Mediano (500–800 g)",
+            "Grande (800 g o más)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "lout": {
         "name": "Corvina",
         "alt_names": [
-            "Corvina real",
-            "Lout"
+            "Lout",
+            "Meagre",
+            "Croaker"
         ],
-        "description": "Corvina fresca de carne blanca y firme. Calidad premium para restaurantes y hoteles de alta gama.",
+        "description": "Corvina, vendida en Egipto como lout y en inglés como meagre o croaker, calibrada por peso y envasada en hielo.",
         "sizes": [
-            "Mediano (400-600g)",
-            "Grande (600g+)",
-            "Tamaños personalizados disponibles"
+            "Mediano (400–600 g)",
+            "Grande (600 g o más)"
         ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua salada",
-        "availability": "Disponible todo el año"
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua de mar"
     },
     "thinlip_mullet": {
         "name": "Morragute",
@@ -128,91 +105,60 @@
             "Mújol de labio fino",
             "Tobar"
         ],
-        "description": "Morragute fresco (Chelon ramada), un mújol criado en aguas salobres en Egipto. Producto distinto de nuestro mújol (Mugil cephalus).",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Morragute, vendido en Egipto como tobar y envasado en hielo; no es el mismo pez que nuestro mújol (bouri).",
+        "sizes": [],
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua salobre"
     },
     "bayad_catfish": {
         "name": "Bagre bayad",
         "alt_names": [
-            "Bayad"
+            "Bayad",
+            "Bágrido del Nilo"
         ],
-        "description": "Bagre bayad fresco (Bagrus bajad), un pez gato de agua dulce originario del Nilo. Procede sobre todo de captura salvaje en el Nilo.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Bayad, un bagre originario del Nilo, envasado en hielo.",
+        "sizes": [],
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "silver_carp": {
         "name": "Carpa plateada",
-        "alt_names": [
-            "Carpa china plateada"
-        ],
-        "description": "Carpa plateada fresca (Hypophthalmichthys molitrix), una carpa de agua dulce criada en Egipto.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "alt_names": [],
+        "description": "Carpa plateada, una carpa de agua dulce, envasada en hielo.",
+        "sizes": [],
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "mirror_carp": {
         "name": "Carpa espejo",
         "alt_names": [
-            "Carpa común (espejo)"
+            "Carpa común (espejo)",
+            "Mabrouka"
         ],
-        "description": "Carpa espejo fresca, la forma de escamas espejo de la carpa común (Cyprinus carpio), criada en Egipto.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Carpa con solo unas pocas escamas grandes, vendida en Egipto como mabrouka y envasada en hielo; la carpa común (qishra) la vendemos aparte.",
+        "sizes": [],
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua dulce"
     },
     "sea_bream": {
         "name": "Dorada",
         "alt_names": [
-            "Dorada real"
+            "Gilthead sea bream",
+            "Dorade"
         ],
-        "description": "Dorada fresca (Sparus aurata), un pescado marino criado en Egipto.",
-        "sizes": [
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua salada",
-        "availability": "Bajo pedido, consúltenos la disponibilidad actual"
+        "description": "Dorada, envasada en hielo.",
+        "sizes": [],
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua de mar"
     },
     "eels": {
-        "name": "Anguila",
+        "name": "Anguila europea",
         "alt_names": [
-            "Anguila de Agua Dulce",
-            "Anguila Egipcia"
+            "Anguila"
         ],
-        "description": "Anguilas frescas de fuentes de agua dulce egipcias. Producto especializado para mercados selectos.",
-        "sizes": [
-            "Mediano (300-500g)",
-            "Grande (500g+)",
-            "Tamaños personalizados disponibles"
-        ],
-        "storage_temp": "0 a 4°C",
-        "packaging": "Caja EPS",
-        "category": "Agua dulce",
-        "availability": "Disponible todo el año"
-    },
-    "_note": {
-        "custom_sizes": "Ofrecemos gran flexibilidad en tamaños - todos los productos pueden personalizarse según pedido",
-        "more_products": "Productos adicionales disponibles bajo pedido. Contáctenos para requisitos específicos.",
-        "min_order": "Pedido mínimo: 1 cartón"
+        "description": "La anguila europea es un pez de aguas salobres.",
+        "sizes": [],
+        "packaging": "Caja isotérmica de EPS",
+        "category": "Agua salobre"
     }
 }

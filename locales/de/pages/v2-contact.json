@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "title": "Kontakt: WhatsApp, E-Mail, Büro und Werk",
+        "description": "WhatsApp an die Geschäftsleitung von AZAFCO International zu Lieferungen, E-Mail ans Exportteam für Spezifikationen und Dokumente. Werk in Kafr El Sheikh."
+    },
+    "breadcrumb": "Kontakt",
+    "hero": {
+        "eyebrow": "Partnerschaft starten",
+        "title": "Kontakt zu AZAFCO International",
+        "actions": {
+            "whatsapp": "Geschäftsleitung per WhatsApp schreiben",
+            "email": "E-Mail an das Exportteam"
+        }
+    },
+    "channels": {
+        "title": "WhatsApp, E-Mail und Telefon",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Geschäftsleitung · Lieferanfragen"
+        },
+        "email": {
+            "title": "E-Mail",
+            "sub": "Exportteam · Details und Dokumente"
+        },
+        "phone": {
+            "title": "Telefon",
+            "sub": "Geschäftsleitung, dieselbe Nummer"
+        },
+        "hours": "Bürozeiten",
+        "vcard": {
+            "title": "Kontaktkarte",
+            "action": "vCard herunterladen"
+        },
+        "new_tab": "(öffnet in neuem Tab)"
+    },
+    "routes": {
+        "legend": "Lieferung und Dokumente",
+        "seafood_title": "Fischlieferung",
+        "seafood_text": "Zum Kauf unseres Fischs für Import oder Vertrieb.",
+        "seafood_action": "Anforderungen senden",
+        "documents_title": "Dokumente",
+        "documents_text": "Produktspezifikationen oder das Unternehmensprofil.",
+        "documents_action": "Dokumente anfordern",
+        "corporate_link": "Partnerschaft, Investition oder etwas anderes: <link>Schreiben Sie uns hier</link>"
+    },
+    "locations": {
+        "title": "Hauptsitz und Werk",
+        "factory": "Werk",
+        "office": "Hauptsitz",
+        "map_open": "In Google Maps öffnen",
+        "map_title_factory": "Karte des Werks von AZAFCO International in Motobas",
+        "map_title_office": "Karte des Hauptsitzes von AZAFCO International"
+    },
+    "official": {
+        "title": "Registrierung und offizielle Kanäle"
+    },
+    "trust": {
+        "title": "Eingetragenes Unternehmen",
+        "legal": "Eingetragener Firmenname",
+        "register": "Handelsregister",
+        "tax": "Steuernummer"
+    }
+}

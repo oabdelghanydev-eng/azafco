@@ -1,0 +1,103 @@
+{
+    "importing": {
+        "meta_title": "Fisch aus Ägypten importieren: Regeln, HS-Codes",
+        "meta_description": "Einfuhrregeln für Frischfisch am Golf und in der Levante, jeweils mit Quelle, dazu HS-Codes für unsere 12 Arten, Versanddokumente und die Kühlkette.",
+        "breadcrumb": "Frischfischimport aus Ägypten",
+        "h1": "Frischfisch aus Ägypten importieren: Marktregeln, HS-Codes und Dokumente",
+        "source_label": "Quellen",
+        "markets": {
+            "title": "Einfuhr in die Golfstaaten und die Levante"
+        },
+        "hs": {
+            "title": "HS-Codes für frischen ganzen Fisch",
+            "intro_1": "Frischer oder gekühlter ganzer Fisch wird in Position 0302 des Harmonisierten Systems (HS) eingereiht, der von der Weltzollorganisation gepflegten Nomenklatur. Die ersten sechs Stellen sind in allen Ländern gleich. Filets (Position 0304) und gefrorener Fisch (Position 0303) haben andere Codes.",
+            "intro_2": "Die Europäische Union ergänzt zwei Stellen zum achtstelligen Code der Kombinierten Nomenklatur (KN), und die TARIC-Datenbank ergänzt zwei weitere für EU-Maßnahmen. Andere Länder fügen nach den ersten sechs Stellen eigene nationale Stellen hinzu.",
+            "table_caption": "Frischer oder gekühlter ganzer Fisch, Position 0302",
+            "col_species": "Fischart",
+            "col_scientific": "Wissenschaftlicher Name",
+            "col_hs": "HS-Code (6 Stellen)",
+            "col_cn": "EU-KN-Code (8 Stellen)",
+            "col_notes": "Hinweise",
+            "notes": {
+                "other_fish": "In keiner eigenen Unterposition genannt, daher unter 0302.89 „andere“; in der EU unter KN 0302 89 90.",
+                "freshwater_other": "Die Gattung gehört nicht zu den in 0302.72 genannten Welsen, daher unter 0302.89 „andere“; in der EU als Süßwasserfisch unter KN 0302 89 10."
+            },
+            "after": "Codes geprüft am {date} anhand der HS-Nomenklatur 2022 der Weltzollorganisation (WZO) und des EU-TARIC. Die endgültige Einreihung nimmt der Zollanmelder des Importeurs vor. Die Zollsätze stehen im Zolltarif des Einfuhrlandes."
+        },
+        "docs": {
+            "title": "Dokumente für eine Frischfischlieferung",
+            "intro": "Die meisten Lieferungen brauchen diese vier Dokumente. Was jeder Markt zusätzlich verlangt, steht oben.",
+            "items": {
+                "invoice": {
+                    "title": "Handelsrechnung",
+                    "text": "Wird vom Exporteur ausgestellt. Sie nennt Verkäufer und Käufer und führt Fischart, HS-Code, Menge, Nettogewicht, Wert, Währung und Incoterm auf. Der Zoll im Bestimmungsland bemisst damit die Abgaben."
+                },
+                "packing_list": {
+                    "title": "Packliste",
+                    "text": "Angaben Box für Box: Anzahl der Boxen, Netto- und Bruttogewicht, Fischart und Gewichtsklasse sowie Boxmarkierungen. Kuwait und Bahrain nennen sie unter den Dokumenten für jede Sendung."
+                },
+                "health_certificate": {
+                    "title": "Amtliche Gesundheitsbescheinigung",
+                    "text": "Ausgestellt von der zuständigen Behörde des Ausfuhrlandes. Kuwait, Bahrain, der Libanon, Katar und Syrien verlangen sie für jede Sendung, nach einem Bericht von 2011 auch der Irak, und in den VAE muss sie wild gefangenen Fisch als solchen ausweisen. Einige Märkte veröffentlichen ein eigenes Muster."
+                },
+                "origin": {
+                    "title": "Ursprungszeugnis",
+                    "text": "Nachweis, dass der Fisch ägyptischen Ursprungs ist. Kuwait führt es unter den Dokumenten für jede Sendung auf, und der Libanon verlangt ein Ursprungszeugnis, das von einer Handels-, Industrie- oder Landwirtschaftskammer beglaubigt ist."
+                }
+            }
+        },
+        "cold": {
+            "title": "Grundlagen der Kühlkette",
+            "intro": "Nach den EU-Hygienevorschriften muss frischer Fisch bei Lagerung und Transport bei der Temperatur von schmelzendem Eis gehalten werden.",
+            "items": {
+                "ice": {
+                    "title": "Eis",
+                    "text": "Verpacken Sie ganzen Fisch in Eis und eisen Sie bei der Lagerung bei Bedarf nach."
+                },
+                "boxes": {
+                    "title": "Isolierte EPS-Boxen",
+                    "text": "EPS-Boxen isolieren den Fisch und sind in der Luftfracht weit verbreitet. Verschließen und kennzeichnen Sie jede Box, und prüfen Sie die Regeln der Fluggesellschaft für verderbliche Fracht."
+                },
+                "handovers": {
+                    "title": "Übergaben",
+                    "text": "Die Kühlkette reißt meist bei Übergaben: Lkw, Luftfrachtterminals und Grenzkontrollstellen. Halten Sie den Fisch so kurz wie möglich außerhalb der Kühlung, und führen Sie Temperaturaufzeichnungen."
+                },
+                "arrival": {
+                    "title": "Bei Ankunft",
+                    "text": "Prüfen Sie die Temperatur des Fisches, das Eis und den Zustand der Boxen, und dokumentieren Sie Probleme mit Fotos, bevor Sie die Lieferung quittieren."
+                }
+            },
+            "azafco": "So versenden wir: ganzer Fisch auf Eis in EPS-Boxen, verpackt in unserem Werk in Motobas, in eigenen Kühl-Lkw transportiert, dann per Luft- oder Straßenfracht."
+        },
+        "eu": {
+            "title": "Export in die Europäische Union",
+            "intro": "AZAFCO ist für den Export in die Europäische Union zugelassen.",
+            "items": {
+                "health_certificate": {
+                    "title": "Gesundheitsbescheinigung und EU-Listung",
+                    "text": "Unterzeichnet von der zuständigen Behörde des Ausfuhrlandes. Frischer Fisch für den menschlichen Verzehr wird mit der Musterbescheinigung FISH-CRUST-HC, ausgestellt über TRACES, in die EU eingeführt. Die EU akzeptiert sie nur, wenn das Land für das Erzeugnis gelistet ist. Im Oktober 2026 hat die EU Ägypten für Flossenfische und Krebstiere aus Zucht (Aquakultur) gelistet (Durchführungsverordnung (EU) 2026/2228), und auch der Betrieb, der den Fisch bearbeitet, muss auf der EU-Liste der zugelassenen Betriebe stehen."
+                },
+                "origin": {
+                    "title": "Präferenzursprung",
+                    "text": "Ägyptische Waren können nach dem Assoziationsabkommen EU–Ägypten eine Zollpräferenz erhalten, mit einer Warenverkehrsbescheinigung EUR.1 oder EUR-MED oder einer Ursprungserklärung. Prüfen Sie die Regeln für Ihr Erzeugnis in Access2Markets."
+                },
+                "catch": {
+                    "title": "Fangbescheinigung oder Aquakulturnachweise",
+                    "text": "Die EU verlangt für wild gefangenen Meeresfisch nach ihrer IUU-Verordnung eine validierte Fangbescheinigung. Ausgenommen sind Aquakulturerzeugnisse aus Brut oder Larven sowie frische Tilapia, Welse und Karpfen (0302 71 bis 0302 73) und andere Süßwasserfische (0302 89 10). Seit dem 10. Januar 2026 reichen EU-Importeure Fangbescheinigungen über das System CATCH IT ein. Fragen Sie bei Zuchtfisch Ihren Lieferanten nach den Farm- und Chargenangaben, die jede Box ihrer Herkunft zuordnen."
+                },
+                "ched": {
+                    "title": "CHED-P-Voranmeldung in TRACES",
+                    "text": "Vor Ankunft des Fisches meldet der EU-Importeur oder sein Vertreter die Sendung bei der gewählten Grenzkontrollstelle mit einem Gemeinsamen Gesundheitseingangsdokument für Erzeugnisse (GGED-P, englisch CHED-P) in TRACES vor. Die Grenzkontrollstelle führt Dokumentenprüfung, Nämlichkeitskontrolle und Warenuntersuchung durch, bevor der Fisch freigegeben wird."
+                },
+                "labelling": {
+                    "title": "Kennzeichnung",
+                    "text": "Fisch, der in der EU Verbrauchern oder Anbietern von Gemeinschaftsverpflegung angeboten wird, muss die Handelsbezeichnung und den wissenschaftlichen Namen, die Produktionsmethode (gefangen oder gezüchtet), das Fang- oder Produktionsgebiet und die weiteren in Artikel 35 der Verordnung (EU) Nr. 1379/2013 genannten Angaben tragen. Stimmen Sie die Boxetiketten vor der ersten Lieferung mit Ihrem Lieferanten ab."
+                }
+            }
+        },
+        "sources": {
+            "title": "Quellen",
+            "intro": "Geprüft am {date}."
+        }
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "meta": {
+        "title": "Fischexport in den Nahen Osten und darüber hinaus",
+        "description": "Frischfisch aus Ägypten für Importeure in 7+ Märkten: VAE, Kuwait, Bahrain, Libanon, Katar, Irak, Syrien, per Luft und Straße. Zugelassen für EU-Exporte."
+    },
+    "breadcrumb": "Märkte",
+    "hero": {
+        "eyebrow": "Unsere Märkte",
+        "title": "Frischfischexport in den Nahen Osten und darüber hinaus",
+        "intro": "Wir liefern in 7+ Märkte. Der Fisch verlässt unser Werk auf Eis in eigenen Kühl-Lkw und geht dann per Luft oder Straße weiter.",
+        "secondary": "Unsere Fischarten ansehen",
+        "image_alt": "Luftaufnahme von Erdteichen zur Fischzucht mit Belüftern und Palmen"
+    },
+    "index": {
+        "eyebrow": "Aktive Märkte",
+        "title": "Wohin wir heute liefern",
+        "since": "seit {year}",
+        "approved": "Europäische Union: für den Export zugelassen",
+        "planned_title": "Geplant",
+        "paused": "{country}: Exporte pausiert",
+        "map_label": "Karte der Versandrouten von Ägypten in die auf dieser Website aufgeführten Märkte",
+        "origin": "Ägypten · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Käufer"
+    },
+    "support": {
+        "guide_link": "Leitfaden zum Import von Frischfisch aus Ägypten lesen"
+    },
+    "detail": {
+        "meta_title": "Frischfisch aus Ägypten für Käufer aus {country}",
+        "meta_description": "Ganzer, frisch gekühlter Fisch aus Ägypten, seit {year} für Importeure aus {country}, per Luft oder Straße, dazu die Einfuhrregeln für Fisch mit Quellen.",
+        "eyebrow": "Aktiver Markt seit {year}",
+        "title": "Ägyptischer Frischfisch für Importeure aus {country}",
+        "secondary": "Geschäftsleitung per WhatsApp schreiben",
+        "image_alt": "Ganze frische Fische auf Scherbeneis, von oben fotografiert",
+        "buyers_title": "Unsere Kunden aus {country}",
+        "products_link": "Unsere 12 Fischarten ansehen",
+        "whatsapp_message": "Guten Tag AZAFCO International, hier ist … von … (Unternehmen) aus {country}. Wir interessieren uns für:"
+    },
+    "import": {
+        "eyebrow": "Einfuhrregeln",
+        "title": "Frischfischeinfuhr: Regeln für Importeure aus {country}",
+        "authority_label": "Zuständige Behörde",
+        "source_label": "Quelle:",
+        "reviewed": "Zuletzt geprüft: <time>{date}</time>",
+        "disclaimer": "Regeln ändern sich. Klären Sie die aktuellen Anforderungen vor Ihrer Bestellung mit Ihrem Verzollungsagenten oder der Behörde.",
+        "fallback_guide": "Die ägyptischen Exportdokumente sind in unserem Leitfaden zum Import von Frischfisch aus Ägypten beschrieben.",
+        "fallback_confirm": "Klären Sie vor Ihrer Bestellung mit der Behörde vor Ort, welche Einfuhrbedingungen für Importeure aus {country} gelten.",
+        "authorities": {
+            "kuwait": "Public Authority for Food and Nutrition (PAFN, staatliche Behörde für Lebensmittel und Ernährung)",
+            "bahrain": "Ministry of Health, Public Health Directorate, Food Control Section (Gesundheitsministerium, Direktion für öffentliche Gesundheit, Abteilung Lebensmittelkontrolle)",
+            "lebanon": "Ministry of Agriculture, Directorate of Animal Wealth (Landwirtschaftsministerium, Direktion für Tierbestand; auch Directorate of Animal Resources genannt)",
+            "qatar": "Ministry of Public Health (MOPH), Food Safety Department, Port Health and Food Control Section (Gesundheitsministerium, Abteilung Lebensmittelsicherheit, Sektion Hafengesundheit und Lebensmittelkontrolle)"
+        },
+        "doc_lang": {
+            "ar": "auf Arabisch",
+            "en": "auf Englisch",
+            "ar_en": "auf Arabisch und Englisch"
+        },
+        "source_labels": {
+            "us_government_report": "Bericht der US-Regierung",
+            "copy_elsewhere": "Kopie, nicht auf der Website der Behörde",
+            "fao_study": "FAO-Studie"
+        },
+        "sources": {
+            "uae_portal": {
+                "title": "Regierungsportal der VAE (u.ae): Lebensmittelsicherheit"
+            },
+            "usda_uae": {
+                "title": "USDA: FAIRS-Länderbericht Vereinigte Arabische Emirate (TC2025-0008)",
+                "lead_in": "Aus einem USDA-Bericht von 2025:"
+            },
+            "kw_res_6_2023": {
+                "title": "PAFN: Ministerialbeschluss Nr. 6 von 2023 über eingeführte Lebensmittel (englischer Text, FAOLEX)"
+            },
+            "kw_model_hc": {
+                "title": "PAFN: Muster der Gesundheitsbescheinigung für Meeres- und Flusstiere und ihre Erzeugnisse"
+            },
+            "kw_raqeb": {
+                "title": "PAFN-Portal Raqeb: Antrag auf Zollabfertigung, Leitfaden für Unternehmen"
+            },
+            "bh_guide": {
+                "title": "Gesundheitsministerium Bahrain: Food Importers Guide to the Kingdom of Bahrain (Leitfaden für Lebensmittelimporteure)"
+            },
+            "lb_fao_study": {
+                "title": "Bewertung der kommerziellen Lieferkette für Fisch und Meeresfrüchte im Libanon (FAO-Projekt, auf der Website des Landwirtschaftsministeriums)",
+                "lead_in": "Aus einer FAO-Studie von 2018:"
+            },
+            "lb_239": {
+                "title": "Landwirtschaftsministerium Libanon: Beschluss Nr. 239/1 über die Einfuhr tierischer Erzeugnisse (beglaubigte englische Kopie, Website des UNRWA)",
+                "lead_in": "Nach Beschluss 239/1 von 2009:"
+            },
+            "qa_guide": {
+                "title": "Gesundheitsministerium Katar: Food Importers Guide (Leitfaden für Lebensmittelimporteure)",
+                "lead_in": "Aus dem Leitfaden des Ministeriums für Lebensmittelimporteure (ohne Datum; die Datei stammt von 2017):"
+            },
+            "qa_watheq": {
+                "title": "Gesundheitsministerium Katar: allgemeine Regeln für die Registrierung von Lebensmitteln im System WATHEQ"
+            },
+            "qa_third_party": {
+                "title": "Gesundheitsministerium Katar: Liste der zugelassenen unabhängigen Prüfstellen"
+            },
+            "usda_iraq": {
+                "title": "USDA: FAIRS-Länderbericht zu den Einfuhrvorschriften des Irak für Lebensmittel und Agrarerzeugnisse (Kopie bei APEDA, Indien)",
+                "lead_in": "Aus einem USDA-Bericht von 2011:"
+            },
+            "sy_guide": {
+                "title": "Landwirtschaftsministerium Syrien: Leitfaden zur Einfuhr von Tieren, tierischen Erzeugnissen und Nebenprodukten",
+                "lead_in": "Nach dem Einfuhrleitfaden des Landwirtschaftsministeriums vom Juli 2021:"
+            }
+        },
+        "items": {
+            "uae": {
+                "municipalities": "Die Stadtverwaltungen der einzelnen Emirate sind für die Kontrolle im Hafen, Laboruntersuchungen, die Genehmigung von Etiketten und die Freigabe eingeführter Sendungen zuständig.",
+                "aquatic": "Zuchtfisch darf nicht mit Schweineprotein gefüttert werden. Wild gefangener Fisch muss auf einer Gesundheitsbescheinigung der zuständigen Behörde des Ausfuhrlandes als Wildfang ausgewiesen sein.",
+                "labels": "Nach UAE.S GSO 9:2019 müssen Lebensmitteletiketten auf Arabisch sein, und jede weitere verwendete Sprache muss mit dem arabischen Text übereinstimmen. Das gilt für Groß- und Einzelhandelsverpackungen.",
+                "dates": "Herstellungs- und Verfallsdatum müssen direkt auf dem Originaletikett oder der Primärverpackung stehen; nur auf Aufklebern gedruckte Daten werden nicht akzeptiert.",
+                "zad": "Nach Ministerialerlass Nr. 239 von 2018 müssen eingeführte Lebensmittel im nationalen System ZAD registriert sein, bevor sie auf den Märkten der VAE gehandelt werden."
+            },
+            "kuwait": {
+                "resolution": "Der Ministerialbeschluss Nr. 6 von 2023 der Public Authority for Food and Nutrition regelt eingeführte Lebensmittel. Er trat am 1. September 2023 in Kraft und hob die nach Beschluss Nr. 19 von 2017 erlassenen Vorschriften auf.",
+                "high_risk": "Der Beschluss stuft Fisch zusammen mit Fleisch, Geflügel und Milcherzeugnissen als Lebensmittel mit hohem Risiko ein.",
+                "documents": "Jede Lebensmittelsendung muss eine Zollanmeldung, ein Ursprungszeugnis, eine Auslieferungsgenehmigung, eine Handelslizenz oder Einfuhrgenehmigung, eine Gesundheitsbescheinigung und eine vom Ausfuhrbetrieb ausgestellte Packliste mitführen.",
+                "certificate_issuer": "Die Gesundheitsbescheinigung muss von der amtlichen Aufsichtsbehörde des Ursprungs- oder Ausfuhrlandes ausgestellt und beglaubigt sein.",
+                "certificate_content": "Die Gesundheitsbescheinigung muss auf Arabisch und/oder Englisch sein und die Zahl der Packstücke, das Gesamtgewicht und die Produktionschargen angeben.",
+                "inspection": "Die Abteilung für eingeführte Lebensmittel kontrolliert die Sendungen am Grenzhafen. Ihre Kontrolleure können Proben nehmen und sie in Laboren der Behörde oder in akkreditierten Laboren untersuchen lassen.",
+                "model_certificate": "Die Behörde veröffentlicht ein zweisprachiges Muster der Gesundheitsbescheinigung für nach Kuwait ausgeführten Fisch, mit Feldern für die Temperaturkategorie (gekühlt, gefroren oder Umgebungstemperatur), HS-Code, Herstellungsdatum, Verfallsdatum und Chargennummer.",
+                "raqeb": "Im Abfertigungsleitfaden Raqeb der Behörde ist für Fisch eine Fischeinfuhrlizenz als Pflichtanlage vorgesehen, und für alle Lebensmittel ist eine Gesundheitsbescheinigung des Ursprungslandes erforderlich."
+            },
+            "bahrain": {
+                "ports": "Das Gesundheitsministerium kontrolliert eingeführte Lebensmittel an den drei Eingangsstellen: dem Seehafen, der Luftfracht und dem Damm (Causeway).",
+                "importer": "Lebensmittelimporteure brauchen eine Handelsregistrierung des Ministeriums für Industrie und Handel und eine Gesundheitsbescheinigung für die Ausübung von Handelstätigkeiten unter Gesundheitsaufsicht.",
+                "registration": "Gewöhnliche Lebensmittel müssen vor der Einfuhr nicht registriert werden, aber den Golf-Normen (GSO) entsprechen; eine vorherige Registrierung gilt für funktionelle Lebensmittel wie Babynahrung.",
+                "arrival": "Bei Ankunft füllt der Vertreter des Importeurs das Kontrollformular für eingeführte Lebensmittel aus und legt die Zollanmeldung, die Packliste, die Auslieferungsanweisung (Delivery Order) oder das Konnossement sowie die Gesundheitsbescheinigungen bei.",
+                "health_certificate": "Jede Sendung braucht eine Original-Gesundheitsbescheinigung der zuständigen Behörde des Ursprungslandes, die die Einhaltung der GCC-Anforderungen bestätigt und von der ausstellenden Behörde gestempelt und unterschrieben ist.",
+                "labels": "Etiketten müssen auf Arabisch sein; jede andere Sprache muss neben dem Arabischen stehen und mit ihm übereinstimmen.",
+                "dates": "Nach GSO 150-1 müssen gekühlte, leicht verderbliche Lebensmittel, die Fisch enthalten, ein Verfallsdatum tragen; bei vorverpackten Lebensmitteln sind Aufkleber für Herstellungs- und Verfallsdatum nicht zulässig.",
+                "inspection": "Die Kontrolle prüft den Container, die Etiketten und die sensorische Qualität sowie bei gekühlten Lebensmitteln Anzeichen von Auftauen und die Temperaturaufzeichnungen des Containers. Werden risikobasiert Proben zur Untersuchung genommen, wird die Sendung bis zum Vorliegen der Ergebnisse zurückgehalten."
+            },
+            "lebanon": {
+                "registration": "Beschluss 964 von 2011 des Landwirtschaftsministeriums verpflichtet jeden Betrieb, der gekühlten oder gefrorenen Fisch einführt, sich bei der Direktion für Tierbestand, Abteilung Ein- und Ausfuhr, registrieren zu lassen.",
+                "labels": "Beschluss 264/1 von 2013 verlangt, dass der Fischname auf den Packungsetiketten mit dem arabischen, englischen und wissenschaftlichen Namen und mit den Namen in allen beigefügten Bescheinigungen übereinstimmt; andernfalls wird die Einfuhr verweigert.",
+                "inspection": "Nach Beschluss 496/1 von 2010 unterliegen eingeführter Fisch und Fischerzeugnisse einer Kontrolle und Untersuchung, bevor die Einfuhr in den Libanon erlaubt wird.",
+                "commitment": "Nach Beschluss 547/1 von 2012 darf frischer Fisch eingeführt werden, wenn der Importeur eine notariell beglaubigte Verpflichtungserklärung vorlegt; bei einem wiederholten Verstoß innerhalb eines Jahres sind Einfuhren aus derselben Quelle gesperrt.",
+                "cold_chain_record": "Beschluss 573/1 von 2009 verlangt, dass die Kühltemperatur gekühlter und gefrorener Lebensmittel während des gesamten Transports aufgezeichnet wird.",
+                "veterinary_certificate": "Eingeführte tierische Erzeugnisse müssen von einer Veterinärbescheinigung der Behörden des Ursprungslandes begleitet sein.",
+                "origin_certificate": "Ein Ursprungszeugnis muss von einer Handels-, Industrie- oder Landwirtschaftskammer oder einer anderen Beglaubigungsstelle beglaubigt sein.",
+                "seal": "Das Konnossement muss den Libanon als Bestimmungsland ausweisen, und die im Ursprungsland angebrachte Containerplombe muss bei Ankunft unversehrt sein."
+            },
+            "qatar": {
+                "control": "Die Sektion Hafengesundheit und Lebensmittelkontrolle des Ministeriums kontrolliert eingeführte Lebensmittel, auch Fisch, nach dem Lebensmittelkontrollgesetz Nr. 8 von 1990 in der Fassung des Gesetzes Nr. 4 von 2014.",
+                "health_certificate": "Jede Sendung muss eine Gesundheitsbescheinigung auf Arabisch, Englisch oder in beiden Sprachen mitführen; der Leitfaden enthält eine Vorlage für Erzeugnisse von Wassertieren.",
+                "detention": "Eine Sendung kann zurückgehalten werden (vorläufige Freigabe), wenn ihre Gesundheitsbescheinigung vor dem Herstellungsdatum des Lebensmittels oder nach seinem Versanddatum ausgestellt wurde.",
+                "inspection": "Kontrolleure im Hafen prüfen Fahrzeug, Container und Packungen, prüfen die Etiketten und ihre Sprache und nehmen Proben von neuen Artikeln oder je nach Risikostufe.",
+                "watheq": "Lebensmittelbetriebe müssen sich im System WATHEQ des Ministeriums registrieren; nur registrierte Unternehmen können Ein- oder Ausfuhranmeldungen über das System Al Nadeeb einreichen.",
+                "third_party": "Das Ministerium veröffentlicht eine Liste zugelassener unabhängiger Stellen für Kontrollen vor dem Versand im Ursprungsland; deren Konformitätsbescheinigungen müssen vor der Ausfuhr ausgestellt werden, nicht danach."
+            },
+            "iraq": {
+                "cosqc": "Die Central Organization for Standardization and Quality Control (COSQC, Zentralstelle für Normung und Qualitätskontrolle), eine Behörde des Planungsministeriums, setzt Normen für eingeführte Erzeugnisse durch.",
+                "licence": "Importeure von Lebensmitteln tierischen Ursprungs beantragen eine Vorabgenehmigung beim Landwirtschaftsministerium; das Handelsministerium stellt dann die Einfuhrlizenz aus.",
+                "certificates": "Lebensmittel tierischen Ursprungs brauchen ein von der irakischen Botschaft beglaubigtes Ursprungszeugnis und eine Gesundheitsbescheinigung einer akkreditierten Gesundheitsbehörde.",
+                "dates": "Nach IQS/1847/1999 müssen bei Lebensmitteln mit einer Haltbarkeit von drei Monaten oder weniger Herstellungs- und Verfallsdatum dauerhaft mit Tag, Monat und Jahr aufgedruckt sein; Aufkleber sind nicht zulässig.",
+                "testing": "COSQC sowie das Landwirtschafts- und das Gesundheitsministerium untersuchen Einfuhren an der Grenze, und das Gesundheitsministerium untersucht Proben in Provinzlaboren oder im Zentralen Gesundheitslabor in Bagdad."
+            },
+            "syria": {
+                "application": "Der Importeur stellt bei der Direktion für Tiergesundheit des Ministeriums einen schriftlichen Antrag auf deren Formular, mit gültigem Handelsregisterauszug, einer Ausweiskopie und einer Proformarechnung.",
+                "disease_free": "Fisch und Fischerzeugnisse müssen von einer Gesundheitsbescheinigung begleitet sein, die bestätigt, dass sie aus einem Gebiet oder Betrieb ohne bakterielle, virale und durch Pilze verursachte ansteckende Fischkrankheiten stammen.",
+                "laboratory": "Fisch für den menschlichen Verzehr muss von einer Analysebescheinigung eines akkreditierten Labors im Ursprungsland begleitet sein, die belegt, dass er frei von Krankheitserregern ist.",
+                "labels": "Fischpackungen müssen ein deutliches Etikett mit wissenschaftlichem und gebräuchlichem Namen, Ursprungsland, Größenklasse, Pack- und Versanddatum sowie Name und Anschrift des Herstellers tragen.",
+                "shelf_life": "Bei Ankunft in Syrien darf höchstens die Hälfte der Haltbarkeitsdauer des Fisches verstrichen sein.",
+                "veterinary_certificate": "Die Veterinärbescheinigung für tierische Erzeugnisse muss von befugten Stellen im Ursprungsland ausgestellt und vom syrischen Außenministerium beglaubigt sein; Länder der Großen Arabischen Freihandelszone sind von dieser Beglaubigung befreit."
+            }
+        }
+    }
+}

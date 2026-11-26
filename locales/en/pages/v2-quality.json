@@ -1,0 +1,69 @@
+{
+    "meta": {
+        "title": "Fish packing in Egypt: quality and ISO certificates",
+        "description": "Our plant in Motobas, Kafr El Sheikh washes, ices, grades, packs and inspects whole fresh fish. We hold ISO certificates, certified by TÜV AUSTRIA."
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home",
+        "current": "Packing and quality"
+    },
+    "hero": {
+        "kicker": "Packing and quality",
+        "title": "Packing and quality at our plant in Motobas",
+        "intro": "Our plant in Motobas, Kafr El Sheikh washes, ices, grades, packs and inspects whole fresh fish.",
+        "imageAlt": "Whole fresh fish on crushed ice in white boxes, with staff in hygiene clothing working behind"
+    },
+    "chain": {
+        "title": "Five stages from farm to export",
+        "stageLabel": "Stage {n}",
+        "stages": {
+            "farming": {
+                "title": "Farming and sourcing",
+                "text": "We farm our own fish and buy from other producers.",
+                "alt": "Aerial view of earthen fish ponds with aerators and palm trees"
+            },
+            "harvest": {
+                "title": "Harvest",
+                "text": "Netted and taken to the plant.",
+                "alt": "Two workers pulling a net full of tilapia to the bank of an earthen pond"
+            },
+            "packing": {
+                "title": "Washing, icing and packing",
+                "text": "Washed, iced, graded by weight and packed whole on ice in EPS foam boxes.",
+                "alt": "Gloved hands placing a whole tilapia into a crate of crushed ice on a steel table"
+            },
+            "inspection": {
+                "title": "Inspection",
+                "text": "We inspect every order before the boxes are closed, against the species, weight grade, packing and labels agreed with you.",
+                "alt": "A gloved hand holding a probe in iced water beside two whole tilapia"
+            },
+            "export": {
+                "title": "Export",
+                "text": "By air or road freight.",
+                "alt": "A worker moving a pallet of white boxes into a refrigerated truck at a loading dock"
+            }
+        },
+        "plantMap": "Our plant on Google Maps",
+        "newTab": "(opens in a new tab)",
+        "capacity": "We pack up to 2,500 t/month. A refrigerated truck carries 20 t, and on some days more than five leave our plant."
+    },
+    "certs": {
+        "title": "ISO certificates and EU export approval",
+        "statement": "We hold ISO certificates, certified by TÜV AUSTRIA."
+    },
+    "next": {
+        "button": "Ask about shipment documents"
+    },
+    "faq": {
+        "title": "Questions from quality teams",
+        "q1": "Which ISO standards do you hold?",
+        "a1": "We hold ISO 9001:2015 for quality management, ISO 14001:2015 for environmental management and ISO 45001:2018 for occupational health and safety, certified by TÜV AUSTRIA."
+    },
+    "pending": {
+        "traceability": "Lot and batch data that can be supplied with each shipment",
+        "market_approvals": "Approved for export to the European Union",
+        "temperature": "Storage and transport temperature per product, with control points and records (owner to confirm before any figure is published)",
+        "pack_formats": "Validated pack formats (box types, net weights) and label options"
+    }
+}

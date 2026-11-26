@@ -4,216 +4,161 @@
         "alt_names": [
             "Tilapia du Nil"
         ],
-        "description": "Tilapia du Nil premium provenant de fermes égyptiennes certifiées. Notre produit d'exportation #1. Certifié HACCP avec chaîne du froid complète.",
+        "description": "Tilapia du Nil, calibré au poids et conditionné sous glace.",
         "sizes": [
-            "Petit (200-300g)",
-            "Moyen (300-500g)",
-            "Grand (500g+)",
-            "Tailles personnalisées disponibles"
+            "Petit (200–300 g)",
+            "Moyen (300–500 g)",
+            "Gros (500 g et plus)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "sea_bass": {
         "name": "Bar",
         "alt_names": [
-            "Loup de mer",
-            "Loup",
-            "Bar commun",
-            "Bar européen"
+            "Bar européen",
+            "Loup de mer"
         ],
-        "description": "Bar européen premium, parfait pour griller, frire et la haute cuisine. Favori des restaurants dans la région du Golfe.",
+        "description": "Bar européen, aussi appelé loup ou branzino, calibré au poids et conditionné sous glace.",
         "sizes": [
-            "Moyen (400-600g)",
-            "Grand (600g+)",
-            "Tailles personnalisées disponibles"
+            "Moyen (400–600 g)",
+            "Gros (600 g et plus)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau salée",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau de mer"
     },
     "mullet": {
         "name": "Mulet cabot",
         "alt_names": [
             "Mulet à grosse tête",
-            "Mulet gris",
             "Bouri"
         ],
-        "description": "Mulet égyptien frais, élevé en eau saumâtre. Excellent grillé ou fumé. Favori traditionnel de la cuisine du Golfe.",
+        "description": "Mulet cabot, appelé bouri en Égypte, calibré au poids et conditionné sous glace ; ce n’est pas le même poisson que notre mulet porc (tobar).",
         "sizes": [
-            "Petit (150-250g)",
-            "Moyen (250-400g)",
-            "Tailles personnalisées disponibles"
+            "Petit (150–250 g)",
+            "Moyen (250–400 g)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau saumâtre"
     },
     "grass_carp": {
-        "name": "Amour blanc",
+        "name": "Carpe amour",
         "alt_names": [
-            "Carpe herbivore",
-            "Carpe amour"
+            "Amour blanc",
+            "Hashayesh"
         ],
-        "description": "Amour blanc frais (Ctenopharyngodon idella), une carpe d'eau douce élevée en Égypte.",
+        "description": "Carpe amour (amour blanc), appelée hashayesh en Égypte, calibrée au poids et conditionnée sous glace.",
         "sizes": [
-            "Moyen (300-500g)",
-            "Grand (500g+)",
-            "Tailles personnalisées disponibles"
+            "Moyen (300–500 g)",
+            "Gros (500 g et plus)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "mubarakah": {
         "name": "Carpe commune",
         "alt_names": [
-            "Carpe",
-            "Mabrouk"
+            "Carpe écailleuse",
+            "Qishra"
         ],
-        "description": "Carpe commune fraîche, idéale pour les plats traditionnels. Grandes tailles disponibles pour le commerce de gros.",
+        "description": "Carpe entièrement couverte d’écailles, appelée qishra en Égypte, calibrée au poids et conditionnée sous glace ; nous vendons la carpe miroir (mabrouka) à part.",
         "sizes": [
-            "Grand (1-2kg)",
-            "Jumbo (2kg+)",
-            "Tailles personnalisées disponibles"
+            "Gros (1–2 kg)",
+            "Jumbo (2 kg et plus)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "catfish": {
         "name": "Poisson-chat africain",
         "alt_names": [
             "Silure africain",
-            "Clarias"
+            "Poisson-chat nord-africain",
+            "Karmout"
         ],
-        "description": "Poisson-chat africain frais des fermes d'eau douce égyptiennes. Choix populaire pour restaurants et distributeurs.",
+        "description": "Poisson-chat africain, appelé karmout en Égypte, calibré au poids et conditionné sous glace.",
         "sizes": [
-            "Moyen (500-800g)",
-            "Grand (800g+)",
-            "Tailles personnalisées disponibles"
+            "Moyen (500–800 g)",
+            "Gros (800 g et plus)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "lout": {
         "name": "Maigre",
         "alt_names": [
-            "Maigre commun",
+            "Lout",
             "Courbine",
-            "Lout"
+            "Corvina"
         ],
-        "description": "Maigre frais à chair blanche et ferme. Qualité premium pour restaurants et hôtels haut de gamme.",
+        "description": "Maigre, appelé lout en Égypte, courbine ou corvina ailleurs, calibré au poids et conditionné sous glace.",
         "sizes": [
-            "Moyen (400-600g)",
-            "Grand (600g+)",
-            "Tailles personnalisées disponibles"
+            "Moyen (400–600 g)",
+            "Gros (600 g et plus)"
         ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau salée",
-        "availability": "Disponible toute l'année"
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau de mer"
     },
     "thinlip_mullet": {
         "name": "Mulet porc",
         "alt_names": [
-            "Mulet à lèvres minces",
+            "Muge porc",
             "Tobar"
         ],
-        "description": "Mulet porc frais (Chelon ramada), élevé en eau saumâtre en Égypte. Un produit distinct de notre mulet cabot (Mugil cephalus).",
-        "sizes": [
-            "Tailles personnalisées disponibles"
-        ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+        "description": "Mulet porc, appelé tobar en Égypte, conditionné sous glace ; ce n’est pas le même poisson que notre mulet cabot (bouri).",
+        "sizes": [],
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau saumâtre"
     },
     "bayad_catfish": {
-        "name": "Bayad",
+        "name": "Bagre bayad",
         "alt_names": [
-            "Silure bayad"
+            "Bayad",
+            "Bagre du Nil"
         ],
-        "description": "Bayad frais (Bagrus bajad), un poisson-chat d'eau douce originaire du Nil. Principalement issu de la pêche dans le Nil.",
-        "sizes": [
-            "Tailles personnalisées disponibles"
-        ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+        "description": "Bayad, un poisson-chat originaire du Nil, conditionné sous glace.",
+        "sizes": [],
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "silver_carp": {
         "name": "Carpe argentée",
-        "alt_names": [
-            "Amour argenté"
-        ],
-        "description": "Carpe argentée fraîche (Hypophthalmichthys molitrix), une carpe d'eau douce élevée en Égypte.",
-        "sizes": [
-            "Tailles personnalisées disponibles"
-        ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+        "alt_names": [],
+        "description": "Carpe argentée, une carpe d’eau douce, conditionnée sous glace.",
+        "sizes": [],
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "mirror_carp": {
         "name": "Carpe miroir",
         "alt_names": [
-            "Carpe commune (miroir)"
+            "Carpe commune (miroir)",
+            "Mabrouka"
         ],
-        "description": "Carpe miroir fraîche, la forme miroir de la carpe commune (Cyprinus carpio), élevée en Égypte.",
-        "sizes": [
-            "Tailles personnalisées disponibles"
-        ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+        "description": "Carpe à quelques grandes écailles seulement, appelée mabrouka en Égypte, conditionnée sous glace ; nous vendons la carpe commune (qishra) à part.",
+        "sizes": [],
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau douce"
     },
     "sea_bream": {
-        "name": "Daurade royale",
+        "name": "Dorade royale",
         "alt_names": [
-            "Dorade royale",
-            "Daurade"
+            "Daurade royale",
+            "Dorade"
         ],
-        "description": "Daurade royale fraîche (Sparus aurata), un poisson marin élevé en Égypte.",
-        "sizes": [
-            "Tailles personnalisées disponibles"
-        ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau salée",
-        "availability": "Sur demande, contactez-nous pour la disponibilité actuelle"
+        "description": "Dorade royale, conditionnée sous glace.",
+        "sizes": [],
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau de mer"
     },
     "eels": {
-        "name": "Anguille",
+        "name": "Anguille européenne",
         "alt_names": [
-            "Anguille d'Eau Douce",
-            "Anguille Égyptienne"
+            "Anguille"
         ],
-        "description": "Anguilles fraîches des sources d'eau douce égyptiennes. Produit spécialisé pour marchés sélectionnés.",
-        "sizes": [
-            "Moyen (300-500g)",
-            "Grand (500g+)",
-            "Tailles personnalisées disponibles"
-        ],
-        "storage_temp": "0 à 4°C",
-        "packaging": "Boîte EPS",
-        "category": "Eau douce",
-        "availability": "Disponible toute l'année"
-    },
-    "_note": {
-        "custom_sizes": "Nous offrons une grande flexibilité sur les tailles - tous les produits peuvent être personnalisés sur commande",
-        "more_products": "Produits supplémentaires disponibles sur demande. Contactez-nous pour vos exigences spécifiques.",
-        "min_order": "Commande minimum: 1 carton"
+        "description": "L’anguille européenne est un poisson d’eau saumâtre.",
+        "sizes": [],
+        "packaging": "Caisse en polystyrène expansé",
+        "category": "Eau saumâtre"
     }
 }

@@ -1,0 +1,25 @@
+{
+    "source": "Source: {name}",
+    "view_source": "View source",
+    "new_tab": "(opens in a new tab)",
+    "press": {
+        "title": "Visits and media coverage"
+    },
+    "items": {
+        "governor_visit": {
+            "title": "Governor of Kafr El Sheikh visits our Motobas plant",
+            "summary": "The visit was part of the governorate's support for the fish industry and exports.",
+            "source": "Kafr El Sheikh Governorate"
+        },
+        "press_feature": {
+            "title": "Feature in Dar Al-Sharq Al-Awsat",
+            "summary": "The paper profiled the company, its chairman and our fresh fish exports.",
+            "source": "Dar Al-Sharq Al-Awsat newspaper"
+        },
+        "tv_program": {
+            "title": "“Helwa Ya Baladi” TV episode on AZAFCO International",
+            "summary": "The episode shows how we pack and export fresh fish.",
+            "source": "Misr Al Balad TV (YouTube)"
+        }
+    }
+}

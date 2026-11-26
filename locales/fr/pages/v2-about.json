@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "À propos d’AZAFCO : poisson égyptien depuis 2008",
+        "description": "Exportateur depuis 2008, AZAFCO International élève, achète, conditionne et exporte du poisson frais d’Égypte vers 7+ marchés. Capacité : 2 500 t/mois."
+    },
+    "breadcrumb": "À propos",
+    "hero": {
+        "eyebrow": "Exportateur depuis 2008",
+        "title": "À propos d’AZAFCO International : élevage, achat, conditionnement et export de poisson en Égypte",
+        "intro": "Du poisson entier et frais pour les importateurs, distributeurs et acheteurs de la restauration au Moyen-Orient et au-delà.",
+        "image_alt": "Deux ouvriers tirant une senne pleine de poissons vers la berge d’un étang en terre"
+    },
+    "glance": {
+        "title": "Informations sur l’entreprise",
+        "legal_label": "Raison sociale",
+        "founded_label": "Exportateur depuis",
+        "founded_value": "2008, depuis Kafr el-Cheikh (Égypte)",
+        "activity_label": "Activité",
+        "activity_value": "Élève, achète, conditionne et exporte du poisson entier frais réfrigéré.",
+        "species_label": "Espèces",
+        "species_value": "12 espèces principales : {species}. Autres espèces sur demande.",
+        "capacity_label": "Capacité de conditionnement",
+        "capacity_value": "Jusqu’à 2 500 t/mois. Un camion frigorifique transporte 20 t, et certains jours, plus de cinq quittent l’usine.",
+        "fleet_label": "Camions et entrepôts frigorifiques",
+        "fleet_value": "Exploite ses propres camions et entrepôts frigorifiques, de l’usine au fret aérien ou routier.",
+        "origin_label": "Égypte",
+        "plant_label": "Usine de conditionnement",
+        "office_label": "Siège",
+        "markets_label": "Marchés actifs (année de la première exportation)",
+        "market_item": "{country} ({year})",
+        "market_largest": "{country} ({year}, plus grand marché à l’export)",
+        "certificates_label": "Certificats",
+        "certificates_value": "Détient des certificats ISO délivrés par TÜV AUSTRIA.",
+        "contacts_label": "Contacts officiels",
+        "email_label": "Équipe export",
+        "whatsapp_label": "WhatsApp de la direction",
+        "quality_link": "Emballage et qualité"
+    },
+    "journey": {
+        "title": "Les étapes clés depuis 2008",
+        "list_label": "Étapes clés de l’entreprise, par année",
+        "founded": "Création d’AZAFCO International à Kafr el-Cheikh, en Égypte",
+        "baltim": "Ouverture de la première usine, dans la zone industrielle de Baltim, à Kafr el-Cheikh",
+        "motobas": "Ouverture d’une nouvelle usine dans la zone industrielle de Motobas, à Kafr el-Cheikh"
+    },
+    "businesses": {
+        "eyebrow": "Nos activités",
+        "title": "Le poisson, notre activité principale",
+        "p2": "Nous cultivons aussi des fruits et légumes, exploitons des élevages de bétail en Égypte et avons d’autres investissements.",
+        "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
+        "link_products": "Nos poissons"
+    }
+}

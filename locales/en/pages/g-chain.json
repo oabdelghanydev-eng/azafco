@@ -1,0 +1,28 @@
+{
+    "eyebrow": "Farm to export",
+    "title": "How the fish gets to you",
+    "stageLabel": "Stage {n}",
+    "stages": {
+        "farming": {
+            "title": "Farming and sourcing",
+            "text": "Our own farms, plus fish we buy from suppliers."
+        },
+        "harvest": {
+            "title": "Harvest",
+            "text": "Netted and taken to our plant in Motobas."
+        },
+        "packing": {
+            "title": "Washing, icing and packing",
+            "text": "Graded by weight, packed whole on ice and kept in our cold stores."
+        },
+        "inspection": {
+            "title": "Inspection",
+            "text": "Checked against the agreed specification before we close the boxes."
+        },
+        "export": {
+            "title": "Export",
+            "text": "Our own refrigerated trucks, then air or road freight."
+        }
+    },
+    "pageLink": "How we pack and ship"
+}

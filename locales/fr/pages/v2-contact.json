@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "title": "Nous contacter : WhatsApp, e-mail, bureau et usine",
+        "description": "Écrivez sur WhatsApp à la direction d’AZAFCO International pour l’approvisionnement, ou par e-mail à l’équipe export. Bureau et usine à Kafr el-Cheikh."
+    },
+    "breadcrumb": "Contact",
+    "hero": {
+        "eyebrow": "Démarrer un partenariat",
+        "title": "Contacter AZAFCO International",
+        "actions": {
+            "whatsapp": "Écrire à la direction sur WhatsApp",
+            "email": "Écrire à l’équipe export"
+        }
+    },
+    "channels": {
+        "title": "WhatsApp, e-mail et téléphone",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Direction · demandes d’approvisionnement"
+        },
+        "email": {
+            "title": "E-mail",
+            "sub": "Équipe export · informations et documents"
+        },
+        "phone": {
+            "title": "Téléphone",
+            "sub": "Direction, même numéro"
+        },
+        "hours": "Horaires du bureau",
+        "vcard": {
+            "title": "Carte de contact",
+            "action": "Télécharger la vCard"
+        },
+        "new_tab": "(s’ouvre dans un nouvel onglet)"
+    },
+    "routes": {
+        "legend": "Approvisionnement et documents",
+        "seafood_title": "Approvisionnement en poisson",
+        "seafood_text": "Acheter notre poisson pour l’importer ou le distribuer.",
+        "seafood_action": "Envoyer vos besoins",
+        "documents_title": "Documents",
+        "documents_text": "Fiches techniques produit ou présentation de l’entreprise.",
+        "documents_action": "Demander des documents",
+        "corporate_link": "Partenariat, investissement ou autre sujet : <link>écrivez-nous ici</link>"
+    },
+    "locations": {
+        "title": "Bureau principal et usine",
+        "factory": "Usine",
+        "office": "Bureau principal",
+        "map_open": "Ouvrir dans Google Maps",
+        "map_title_factory": "Carte de l’usine d’AZAFCO International à Motobas",
+        "map_title_office": "Carte du bureau principal d’AZAFCO International"
+    },
+    "official": {
+        "title": "Immatriculation et canaux officiels"
+    },
+    "trust": {
+        "title": "Société enregistrée",
+        "legal": "Raison sociale",
+        "register": "Registre du commerce",
+        "tax": "Carte fiscale"
+    }
+}

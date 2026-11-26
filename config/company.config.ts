@@ -47,7 +47,8 @@ export const companyConfig = {
     // IDENTITY
     // ─────────────────────────────────────────────────────────────────────────
     identity: {
-        legalName: 'AZAFCO International Investment & Development LLC',
+        // Bank account title + S.A.E. (Egyptian joint-stock company). Arabic legal name: ازافكو العالمية للاستثمار والتنمية (ش.م.م)
+        legalName: 'AZAFCO International for Investment and Development S.A.E.',
         tradeName: 'AZAFCO International',
         foundingYear: 2008,
         founder: 'Haj Mohamed Abdullah Al-Kuwaitihi',
@@ -69,7 +70,9 @@ export const companyConfig = {
         whatsappNumber: '201007736419',
         website: 'azafco.com.eg',
         baseUrl: 'https://azafco.com.eg',
-        partnershipForm: 'https://forms.gle/rEYRPSP3vpW8Cggv5',
+        // On-site partnership/quote form (app/[locale]/contact, POSTs to /api/contact).
+        // Locale-less path: use with the next-intl <Link> from '@/navigation'.
+        partnershipForm: '/contact#partnership',
         social: {
             facebook: 'https://www.facebook.com/profile.php?id=100063620366349',
             whatsapp: 'https://wa.me/201007736419',
@@ -101,8 +104,9 @@ export const companyConfig = {
     // GEO COORDINATES & LOCATION
     // ─────────────────────────────────────────────────────────────────────────
     geo: {
-        latitude: 31.2653,
-        longitude: 30.9366,
+        // Plant (owner's factory map pin, old site); used for geo meta tags
+        latitude: 31.433264,
+        longitude: 30.475957,
         postalCode: '33511',
         region: 'EG-KFS',
         placename: 'Kafr El Sheikh, Egypt',
@@ -120,12 +124,12 @@ export const companyConfig = {
     // BRANDING
     // ─────────────────────────────────────────────────────────────────────────
     branding: {
-        themeColor: '#1e3a5f',
+        themeColor: '#002D72', // brand navy (site v2)
     },
 
     // ─────────────────────────────────────────────────────────────────────────
     // MARKETS (Ordered by rank - Kuwait #1)
-    // We export worldwide via air & land - these are our current active markets
+    // Active, paused and planned markets (7 active, shown as 7+; owner 13 Nov 2026)
     // ─────────────────────────────────────────────────────────────────────────
     markets: [
         { key: 'kuwait', name: 'Kuwait', rank: 1, volumeTons: 650, since: 2009, status: 'active', countryCode: 'KW' },
@@ -145,26 +149,24 @@ export const companyConfig = {
     // ─────────────────────────────────────────────────────────────────────────
     products: [
         { key: 'tilapia', category: 'freshwater', isMain: true, image: '/items/tilapia.jpg' },
-        { key: 'sea_bass', category: 'saltwater', isMain: true, image: '/items/sea_bass.jpg' },
-        { key: 'mullet', category: 'freshwater', isMain: true, image: '/items/bouri.jpg' },
+        { key: 'sea_bass', category: 'marine', isMain: true, image: '/items/sea_bass.jpg' },
+        { key: 'mullet', category: 'brackish', isMain: true, image: '/items/bouri.jpg' },
         { key: 'grass_carp', category: 'freshwater', isMain: false, image: '/items/grass_carp.jpg' },
         { key: 'mubarakah', category: 'freshwater', isMain: false, image: '/items/mubarakah.jpg' },
         { key: 'catfish', category: 'freshwater', isMain: false, image: '/items/catfish.jpg' },
-        { key: 'lout', category: 'saltwater', isMain: false, image: '/items/lout.jpg' },
-        { key: 'thinlip_mullet', category: 'freshwater', isMain: false, image: '/items/thinlip_mullet.jpg' },
+        { key: 'lout', category: 'marine', isMain: false, image: '/items/lout.jpg' },
+        { key: 'thinlip_mullet', category: 'brackish', isMain: false, image: '/items/thinlip_mullet.jpg' },
         { key: 'bayad_catfish', category: 'freshwater', isMain: false, image: '/items/bayad_catfish.jpg' },
         { key: 'silver_carp', category: 'freshwater', isMain: false, image: '/items/silver_carp.jpg' },
         { key: 'mirror_carp', category: 'freshwater', isMain: false, image: '/items/mirror_carp.jpg' },
-        { key: 'sea_bream', category: 'saltwater', isMain: false, image: '/items/sea_bream.jpg' },
-        { key: 'eels', category: 'freshwater', isMain: false, image: '/items/eels.jpg' },
+        { key: 'sea_bream', category: 'marine', isMain: false, image: '/items/sea_bream.jpg' },
+        { key: 'eels', category: 'brackish', isMain: false, image: '/items/eels.jpg' },
     ],
 
     // ─────────────────────────────────────────────────────────────────────────
     // CERTIFICATIONS
     // ─────────────────────────────────────────────────────────────────────────
     certifications: [
-        { code: 'ISO_22000', name: 'ISO 22000:2018', description: 'Food Safety Management System' },
-        { code: 'HACCP', name: 'HACCP', description: 'Hazard Analysis Critical Control Points' },
         { code: 'ISO_9001', name: 'ISO 9001:2015', description: 'Quality Management System' },
         { code: 'ISO_14001', name: 'ISO 14001:2015', description: 'Environmental Management System' },
         { code: 'ISO_45001', name: 'ISO 45001:2018', description: 'Occupational Health and Safety' },
@@ -187,6 +189,9 @@ export const companyConfig = {
     staticStats: {
         clients: 500,
         totalVolumeEstimate: 2500,  // Use this for display (rounded estimate)
+        // Export markets shown site-wide as "7+" (owner, 13 Nov 2026: 7 registered
+        // active markets; more shipped beyond them)
+        exportCountries: 7,
     },
 } as const;
 
@@ -218,9 +223,21 @@ export function getFormattedStats() {
     return {
         experience: `+${getYearsInBusiness()}`,
         employees: `+${companyConfig.identity.employees}`,
-        countries: '+9', // Static display value (includes paused/planned markets)
+        countries: `+${companyConfig.staticStats.exportCountries}`,
         tonnage: `+${companyConfig.staticStats.totalVolumeEstimate}`,
         certificates: `+${getCertificateCount()}`,
         clients: `+${companyConfig.staticStats.clients}`,
+    };
+}
+
+/**
+ * Figures interpolated into translations as {years}, {countries}, {isoCount}.
+ * Passed to next-intl as defaultTranslationValues so every locale stays in sync.
+ */
+export function getFigureValues() {
+    return {
+        years: getYearsInBusiness(),
+        countries: companyConfig.staticStats.exportCountries,
+        isoCount: companyConfig.certifications.filter(c => c.code.startsWith('ISO')).length,
     };
 }

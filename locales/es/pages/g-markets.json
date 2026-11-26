@@ -1,0 +1,46 @@
+{
+    "eyebrow": "Nuestros mercados",
+    "title": "Oriente Medio y más allá",
+    "intro": "Enviamos por aire y carretera.",
+    "since": "desde {year}",
+    "mapLabel": "Mapa de rutas de envío desde Egipto a nuestros mercados",
+    "origin": "Egipto · Motobas",
+    "markets": {
+        "ae": {
+            "name": "Emiratos Árabes Unidos",
+            "short": "EAU"
+        },
+        "kw": {
+            "name": "Kuwait",
+            "short": "Kuwait"
+        },
+        "bh": {
+            "name": "Baréin",
+            "short": "Baréin"
+        },
+        "lb": {
+            "name": "Líbano",
+            "short": "Líbano"
+        },
+        "qa": {
+            "name": "Catar",
+            "short": "Catar"
+        },
+        "iq": {
+            "name": "Irak",
+            "short": "Irak"
+        },
+        "sy": {
+            "name": "Siria",
+            "short": "Siria"
+        }
+    },
+    "euApproved": "Unión Europea: autorizados para exportar",
+    "plannedTitle": "Previstos",
+    "planned": {
+        "ru": "Rusia",
+        "us": "Estados Unidos"
+    },
+    "pageLink": "Ver todos los mercados",
+    "marketLink": "{name}: página del mercado"
+}

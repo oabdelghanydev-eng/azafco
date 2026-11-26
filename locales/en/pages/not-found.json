@@ -1,4 +1,23 @@
 {
-    "title": "Page Not Found",
-    "back_home": "Back to Home"
+    "meta": {
+        "title": "Page not found"
+    },
+    "eyebrow": "Error 404",
+    "title": "We could not find this page",
+    "intro": "The link may be old, or the page may have moved.",
+    "links": [
+        {
+            "title": "Our fish"
+        },
+        {
+            "title": "Send your requirements"
+        },
+        {
+            "title": "Our markets"
+        },
+        {
+            "title": "Contact us"
+        }
+    ],
+    "home": "Back to the home page"
 }

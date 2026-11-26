@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "title": "Envíe sus requisitos de pescado fresco",
+        "description": "Envíe a AZAFCO International sus requisitos de pescado: especie, calibre, embalaje, cantidad, destino e Incoterm, por correo electrónico o por WhatsApp."
+    },
+    "breadcrumb": "Envíe sus requisitos",
+    "hero": {
+        "eyebrow": "Iniciemos una colaboración",
+        "title": "Envíe sus requisitos",
+        "intro": "Díganos el pescado, la cantidad y el destino. Nosotros nos encargamos del resto."
+    },
+    "short_hero": {
+        "corporate_title": "Consultas corporativas y de colaboración",
+        "corporate_intro": "Para colaboraciones, inversión o cualquier otro tema.",
+        "documents_title": "Solicitar documentos",
+        "documents_intro": "Pida la especificación del producto o el perfil de la empresa."
+    },
+    "aside": {
+        "need": "Nos basta con el pescado, el peso, la cantidad y el destino.",
+        "hours": "Horario de oficina: {hours}",
+        "official": "Solo escribimos desde el correo azafco.com.eg y desde el {phone}."
+    },
+    "switch": {
+        "to_corporate": "¿Otro tema, una colaboración o una inversión? <link>Escríbanos aquí</link>",
+        "to_seafood": "¿Quiere comprar pescado? <link>Envíe sus requisitos de suministro</link>"
+    },
+    "request": {
+        "title": "Escríbanos directamente",
+        "title_corporate": "Escríbanos directamente",
+        "title_documents": "Pida los documentos",
+        "email_cta": "Correo al equipo de exportación",
+        "email_role": "Equipo de exportación · detalles y documentos",
+        "whatsapp_cta": "Escriba a la gerencia por WhatsApp",
+        "whatsapp_role": "Gerencia · consultas de suministro",
+        "email_label": "Correo electrónico",
+        "phone_label": "Teléfono (gerencia)"
+    },
+    "mail": {
+        "greeting": "Estimado equipo de exportación de AZAFCO:",
+        "intro_quote": "Nos gustaría hablar del suministro de lo siguiente:",
+        "intro_specs": "Les rogamos que nos envíen las especificaciones de lo siguiente:",
+        "intro_corporate": "Me gustaría tratar lo siguiente:",
+        "intro_documents": "Les rogamos que nos envíen los siguientes documentos:",
+        "subject_quote": "Requisitos de suministro",
+        "subject_quote_for": "Requisitos de suministro: {item}",
+        "subject_specs": "Solicitud de especificaciones",
+        "subject_specs_for": "Solicitud de especificaciones: {item}",
+        "subject_corporate": "Consulta corporativa",
+        "subject_documents": "Solicitud de documentos",
+        "subject_documents_for": "Solicitud de documentos: {item}",
+        "wa_intro_quote": "Hola, AZAFCO. Me gustaría hablar de una colaboración de suministro.",
+        "wa_intro_specs": "Hola, AZAFCO. Me gustaría recibir las especificaciones.",
+        "wa_intro_corporate": "Hola, AZAFCO. Tengo una consulta corporativa.",
+        "wa_intro_documents": "Hola, AZAFCO. Me gustaría solicitar documentos.",
+        "optional_line": "Añada su fecha de entrega o adjunte una especificación, si la tiene.",
+        "labels": {
+            "species": "Pescado",
+            "grade": "Peso deseado por pieza",
+            "form": "Presentación del producto",
+            "volume": "Cantidad",
+            "destination": "Destino",
+            "company": "Empresa",
+            "name": "Nombre",
+            "job": "Cargo",
+            "website": "Sitio web",
+            "phone": "Teléfono",
+            "topic": "Tema",
+            "message": "Mensaje",
+            "documents": "Documentos necesarios",
+            "product": "Producto",
+            "market": "Mercado"
+        }
+    }
+}

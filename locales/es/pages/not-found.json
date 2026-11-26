@@ -1,4 +1,23 @@
 {
-    "title": "Página No Encontrada",
-    "back_home": "Volver al Inicio"
+    "meta": {
+        "title": "Página no encontrada"
+    },
+    "eyebrow": "Error 404",
+    "title": "No hemos encontrado esta página",
+    "intro": "Puede que el enlace sea antiguo o que la página se haya movido.",
+    "links": [
+        {
+            "title": "Nuestro pescado"
+        },
+        {
+            "title": "Envíe sus requisitos"
+        },
+        {
+            "title": "Nuestros mercados"
+        },
+        {
+            "title": "Contacto"
+        }
+    ],
+    "home": "Volver a la página de inicio"
 }

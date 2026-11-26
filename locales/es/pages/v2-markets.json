@@ -1,0 +1,176 @@
+{
+    "meta": {
+        "title": "Exportación de pescado: Oriente Medio y más allá",
+        "description": "Pescado fresco egipcio para importadores de 7+ mercados: EAU, Kuwait, Baréin, Líbano, Catar, Irak y Siria, por aire y tierra. UE: exportación autorizada."
+    },
+    "breadcrumb": "Mercados",
+    "hero": {
+        "eyebrow": "Nuestros mercados",
+        "title": "Exportación de pescado fresco a Oriente Medio y más allá",
+        "intro": "Enviamos a más de 7 mercados. El pescado sale de nuestra planta en hielo, en nuestros propios camiones frigoríficos, y sigue por aire o carretera.",
+        "secondary": "Ver nuestras especies",
+        "image_alt": "Vista aérea de estanques de tierra para peces, con aireadores y palmeras"
+    },
+    "index": {
+        "eyebrow": "Mercados activos",
+        "title": "Adónde enviamos hoy",
+        "since": "desde {year}",
+        "approved": "Unión Europea: autorizados para exportar",
+        "planned_title": "Previstos",
+        "paused": "{country}: exportaciones en pausa",
+        "map_label": "Mapa de las rutas de envío desde Egipto a los mercados que figuran en este sitio",
+        "origin": "Egipto · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Compradores"
+    },
+    "support": {
+        "guide_link": "Lea la guía para importar pescado fresco de Egipto"
+    },
+    "detail": {
+        "meta_title": "Importar pescado fresco de Egipto a {country}",
+        "meta_description": "Pescado entero fresco refrigerado de Egipto para importadores en {country} desde {year}, por aire o carretera, y las normas de importación con sus fuentes.",
+        "eyebrow": "Mercado activo desde {year}",
+        "title": "Pescado fresco egipcio para importadores en {country}",
+        "secondary": "Escriba a la gerencia por WhatsApp",
+        "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
+        "buyers_title": "A quién abastecemos en {country}",
+        "products_link": "Ver nuestras 12 especies",
+        "whatsapp_message": "Hola, AZAFCO International: les escribe … de … (empresa) en {country}. Nos interesa:"
+    },
+    "import": {
+        "eyebrow": "Normas de importación",
+        "title": "Importar pescado fresco a {country}",
+        "authority_label": "Autoridad competente",
+        "source_label": "Fuente:",
+        "reviewed": "Última revisión: <time>{date}</time>",
+        "disclaimer": "Las normas cambian. Confirme los requisitos vigentes con su agente de aduanas o con la autoridad antes de hacer su pedido.",
+        "fallback_guide": "Los documentos de exportación egipcios se describen en nuestra guía para importar pescado fresco de Egipto.",
+        "fallback_confirm": "Confirme las condiciones de importación con la autoridad de {country} antes de hacer su pedido.",
+        "authorities": {
+            "kuwait": "Public Authority for Food and Nutrition (PAFN; Autoridad Pública de Alimentación y Nutrición)",
+            "bahrain": "Ministry of Health, Public Health Directorate, Food Control Section (Ministerio de Salud, Dirección de Salud Pública, Sección de Control de Alimentos)",
+            "lebanon": "Ministry of Agriculture, Directorate of Animal Wealth, también llamada Directorate of Animal Resources (Ministerio de Agricultura, Dirección de Recursos Animales)",
+            "qatar": "Ministry of Public Health (MOPH), Food Safety Department, Port Health and Food Control Section (Ministerio de Salud Pública, Departamento de Seguridad Alimentaria, Sección de Sanidad Portuaria y Control de Alimentos)"
+        },
+        "doc_lang": {
+            "ar": "en árabe",
+            "en": "en inglés",
+            "ar_en": "en árabe e inglés"
+        },
+        "source_labels": {
+            "us_government_report": "informe del Gobierno de EE. UU.",
+            "copy_elsewhere": "copia; no figura en el sitio web de la autoridad",
+            "fao_study": "estudio de la FAO"
+        },
+        "sources": {
+            "uae_portal": {
+                "title": "Portal del Gobierno de los EAU (u.ae): seguridad alimentaria"
+            },
+            "usda_uae": {
+                "title": "USDA: informe FAIRS por país, Emiratos Árabes Unidos (TC2025-0008)",
+                "lead_in": "Según un informe del USDA de 2025:"
+            },
+            "kw_res_6_2023": {
+                "title": "PAFN: Resolución Ministerial n.º 6 de 2023 sobre alimentos importados (texto en inglés, FAOLEX)"
+            },
+            "kw_model_hc": {
+                "title": "PAFN: modelo de certificado sanitario para animales marinos y fluviales y sus productos"
+            },
+            "kw_raqeb": {
+                "title": "Portal Raqeb de la PAFN: solicitud de despacho de aduanas, guía para empresas"
+            },
+            "bh_guide": {
+                "title": "Ministerio de Salud de Baréin: guía para importadores de alimentos en el Reino de Baréin (Food Importers Guide to the Kingdom of Bahrain)"
+            },
+            "lb_fao_study": {
+                "title": "Evaluación de la cadena comercial de productos del mar en el Líbano (proyecto de la FAO, en el sitio web del Ministerio de Agricultura)",
+                "lead_in": "Según un estudio de la FAO de 2018:"
+            },
+            "lb_239": {
+                "title": "Ministerio de Agricultura del Líbano: Decisión n.º 239/1 sobre la importación de productos animales (copia certificada en inglés, sitio web de la UNRWA)",
+                "lead_in": "Según la Decisión 239/1 de 2009:"
+            },
+            "qa_guide": {
+                "title": "Ministerio de Salud Pública de Catar: guía para importadores de alimentos (Food Importers Guide)",
+                "lead_in": "Según la guía para importadores de alimentos del ministerio (sin fecha; el archivo es de 2017):"
+            },
+            "qa_watheq": {
+                "title": "Ministerio de Salud Pública de Catar: normas generales para registrar alimentos en el sistema WATHEQ"
+            },
+            "qa_third_party": {
+                "title": "Ministerio de Salud Pública de Catar: lista de organismos de inspección externos autorizados"
+            },
+            "usda_iraq": {
+                "title": "USDA: informe FAIRS por país sobre la normativa de importación de alimentos y productos agrícolas de Irak (copia alojada por APEDA, India)",
+                "lead_in": "Según un informe del USDA de 2011:"
+            },
+            "sy_guide": {
+                "title": "Ministerio de Agricultura de Siria: guía para importar animales, productos animales y subproductos",
+                "lead_in": "Según la guía de importación del Ministerio de Agricultura de julio de 2021:"
+            }
+        },
+        "items": {
+            "uae": {
+                "municipalities": "Los municipios de cada emirato supervisan la inspección en el puerto, los análisis, la aprobación de las etiquetas y el despacho de los envíos importados.",
+                "aquatic": "El pescado de cultivo no debe alimentarse con proteína de cerdo. El pescado capturado en estado salvaje debe identificarse como tal en un certificado sanitario expedido por la autoridad competente del país exportador.",
+                "labels": "Según la norma UAE.S GSO 9:2019, las etiquetas de los alimentos deben estar en árabe, y cualquier otro idioma utilizado debe coincidir con el texto árabe. Se aplica a los envases a granel y a los de venta al por menor.",
+                "dates": "Las fechas de producción y de caducidad deben figurar directamente en la etiqueta original o en el envase primario; no se aceptan fechas impresas solo en adhesivos.",
+                "zad": "Según el Decreto Ministerial n.º 239 de 2018, los alimentos importados deben registrarse en el sistema nacional ZAD antes de que se manipulen en los mercados de los EAU."
+            },
+            "kuwait": {
+                "resolution": "La Resolución Ministerial n.º 6 de 2023 de la Autoridad Pública de Alimentación y Nutrición regula los alimentos importados. Entró en vigor el 1 de septiembre de 2023 y anuló la normativa dictada en virtud de la Resolución n.º 19 de 2017.",
+                "high_risk": "La resolución clasifica el pescado como alimento de alto riesgo, junto con la carne, las aves de corral y los productos lácteos.",
+                "documents": "Cada partida de alimentos debe ir acompañada de una declaración de aduanas, un certificado de origen, un permiso de entrega, una licencia comercial o un permiso de importación, un certificado sanitario y una lista de embalaje emitida por el establecimiento exportador.",
+                "certificate_issuer": "El certificado sanitario debe expedirlo y refrendarlo la autoridad reguladora oficial del país de origen o de exportación.",
+                "certificate_content": "El certificado sanitario debe estar en árabe o en inglés, o en ambos, e indicar el número de bultos, el peso total y los lotes de producción.",
+                "inspection": "El Departamento de Alimentos Importados inspecciona las partidas en el puerto fronterizo. Sus inspectores pueden tomar muestras para analizarlas en los laboratorios de la propia autoridad o en laboratorios acreditados.",
+                "model_certificate": "La autoridad publica un modelo bilingüe de certificado sanitario para el pescado exportado a Kuwait, con campos para la categoría de temperatura (refrigerado, congelado o ambiente), el código SA, la fecha de producción, la fecha de caducidad y el número de lote.",
+                "raqeb": "En la guía de despacho Raqeb de la autoridad, la licencia de importación de pescado es un documento adjunto obligatorio para el pescado, y se exige un certificado sanitario del país de origen para todos los alimentos."
+            },
+            "bahrain": {
+                "ports": "El Ministerio de Salud inspecciona los alimentos importados en los tres puntos de entrada: el puerto marítimo, la carga aérea y la calzada (causeway).",
+                "importer": "Los importadores de alimentos necesitan un registro mercantil del Ministerio de Industria y Comercio y un certificado de salud pública para ejercer actividades comerciales sujetas a vigilancia sanitaria.",
+                "registration": "Los alimentos corrientes no necesitan registro previo a la importación, pero deben cumplir las normas del Golfo (GSO); el registro previo se aplica a los alimentos funcionales, como los alimentos infantiles.",
+                "arrival": "A la llegada, el representante del importador rellena el formulario de inspección de alimentos importados y adjunta la declaración de aduanas, la lista de embalaje, la orden de entrega o el conocimiento de embarque, y los certificados sanitarios.",
+                "health_certificate": "Cada partida necesita un certificado sanitario original de la autoridad competente del país de origen que acredite el cumplimiento de los requisitos del CCG, sellado y firmado por la autoridad que lo expide.",
+                "labels": "Las etiquetas deben estar en árabe; cualquier otro idioma debe figurar junto al árabe y coincidir con él.",
+                "dates": "Según la norma GSO 150-1, los alimentos perecederos refrigerados que contienen pescado llevan fecha de caducidad obligatoria; en los alimentos envasados no se permiten adhesivos para las fechas de producción y de caducidad.",
+                "inspection": "La inspección comprueba el contenedor, las etiquetas y la calidad sensorial y, en los alimentos refrigerados, los signos de descongelación y los registros de temperatura del contenedor. Cuando se toman muestras para análisis en función del riesgo, el envío queda retenido hasta conocer los resultados."
+            },
+            "lebanon": {
+                "registration": "La Decisión 964 de 2011 del Ministerio de Agricultura obliga a todo establecimiento que importe pescado refrigerado o congelado a registrarse en la Dirección de Recursos Animales, Departamento de Importación y Exportación.",
+                "labels": "La Decisión 264/1 de 2013 exige que el nombre del pescado en las etiquetas de los envases coincida con sus nombres en árabe, en inglés y científico, y con los nombres de todos los certificados adjuntos; de lo contrario, se deniega la entrada.",
+                "inspection": "La Decisión 496/1 de 2010 somete el pescado y los productos de la pesca importados a inspección y examen antes de autorizar su entrada en el Líbano.",
+                "commitment": "La Decisión 547/1 de 2012 permite la entrada de pescado fresco si el importador presenta un compromiso legalizado ante notario; una infracción repetida en el plazo de un año impide importar de la misma procedencia.",
+                "cold_chain_record": "La Decisión 573/1 de 2009 exige registrar la temperatura de refrigeración de los alimentos refrigerados y congelados durante todo el transporte.",
+                "veterinary_certificate": "Los productos animales importados deben ir acompañados de un certificado sanitario veterinario expedido por las autoridades del país de origen.",
+                "origin_certificate": "El certificado de origen debe estar legalizado por una cámara de comercio, industria o agricultura u otro organismo de legalización.",
+                "seal": "El conocimiento de embarque debe indicar el Líbano como destino, y el precinto del contenedor colocado en el país de origen debe estar intacto a la llegada."
+            },
+            "qatar": {
+                "control": "La Sección de Sanidad Portuaria y Control de Alimentos del ministerio controla los alimentos importados, incluido el pescado, conforme a la Ley de Control de Alimentos n.º 8 de 1990, modificada por la Ley n.º 4 de 2014.",
+                "health_certificate": "Cada partida debe ir acompañada de un certificado sanitario en árabe, en inglés o en ambos; la guía incluye un modelo para productos de origen animal acuático.",
+                "detention": "Una partida puede quedar retenida (despacho provisional) si su certificado sanitario se expidió antes de la fecha de producción del alimento o después de su fecha de envío.",
+                "inspection": "Los inspectores del puerto revisan el vehículo, el contenedor y los envases, comprueban las etiquetas y su idioma, y toman muestras de los artículos nuevos o según el nivel de riesgo.",
+                "watheq": "Los establecimientos alimentarios deben registrarse en el sistema WATHEQ del ministerio; solo las empresas registradas pueden presentar declaraciones de importación o exportación a través del sistema Al Nadeeb.",
+                "third_party": "El ministerio publica una lista de organismos externos autorizados para la inspección previa al embarque en origen; sus certificados de conformidad deben expedirse antes de la exportación, no después."
+            },
+            "iraq": {
+                "cosqc": "La Central Organization for Standardization and Quality Control (COSQC; Organización Central de Normalización y Control de Calidad), un organismo del Ministerio de Planificación, aplica las normas a los productos importados.",
+                "licence": "Los importadores de alimentos de origen animal solicitan una aprobación preliminar al Ministerio de Agricultura, y después el Ministerio de Comercio expide la licencia de importación.",
+                "certificates": "Los alimentos de origen animal necesitan un certificado de origen legalizado por la embajada de Irak y un certificado sanitario de un departamento de sanidad acreditado.",
+                "dates": "Según la norma IQS/1847/1999, los alimentos con una vida útil de tres meses o menos deben llevar las fechas de producción y de caducidad impresas de forma permanente como día, mes y año; no se permiten adhesivos.",
+                "testing": "La COSQC y los ministerios de Agricultura y de Salud analizan las importaciones en la frontera, y el Ministerio de Salud analiza muestras en laboratorios provinciales o en el Laboratorio Central de Salud de Bagdad."
+            },
+            "syria": {
+                "application": "El importador presenta una solicitud por escrito a la Dirección de Sanidad Animal del ministerio, en su formulario, con un registro mercantil vigente, una copia de un documento de identidad y una factura proforma.",
+                "disease_free": "El pescado y los productos de la pesca deben ir acompañados de un certificado sanitario que indique que proceden de una zona o un establecimiento libre de enfermedades infecciosas bacterianas, víricas y fúngicas de los peces.",
+                "laboratory": "El pescado destinado al consumo humano debe ir acompañado de un certificado de análisis de un laboratorio acreditado del país de origen que demuestre que está libre de patógenos.",
+                "labels": "Los envases de pescado deben llevar una etiqueta clara con los nombres científico y común, el país de origen, la categoría de tamaño, la fecha de envasado y de envío, y el nombre y la dirección del productor.",
+                "shelf_life": "Cuando el pescado llega a Siria, no puede haber transcurrido más de la mitad de su vida útil.",
+                "veterinary_certificate": "El certificado veterinario de los productos animales debe expedirlo un organismo autorizado del país de origen y legalizarlo el Ministerio de Asuntos Exteriores de Siria; los países de la Gran Zona Árabe de Libre Comercio están exentos de esta legalización."
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "importing": {
+        "meta_title": "Importer du poisson d’Égypte : règles et codes SH",
+        "meta_description": "Règles d’import du poisson frais dans le Golfe et au Levant, liées à leurs sources, codes SH de nos 12 espèces, documents d’expédition et chaîne du froid.",
+        "breadcrumb": "Importer du poisson frais d’Égypte",
+        "h1": "Importer du poisson frais d’Égypte : règles des marchés, codes SH et documents",
+        "source_label": "Sources",
+        "markets": {
+            "title": "Importer dans le Golfe et au Levant"
+        },
+        "hs": {
+            "title": "Codes SH du poisson entier frais",
+            "intro_1": "Le poisson entier frais ou réfrigéré relève de la position 0302 du Système harmonisé (SH), la nomenclature gérée par l’Organisation mondiale des douanes. Les six premiers chiffres sont identiques dans tous les pays. Les filets (position 0304) et le poisson congelé (position 0303) ont des codes différents.",
+            "intro_2": "L’Union européenne ajoute deux chiffres pour former le code à huit chiffres de la nomenclature combinée (NC), et la base de données TARIC en ajoute deux autres pour les mesures de l’UE. Les autres pays ajoutent leurs propres chiffres nationaux après les six premiers.",
+            "table_caption": "Poisson entier frais ou réfrigéré, position 0302",
+            "col_species": "Espèce",
+            "col_scientific": "Nom scientifique",
+            "col_hs": "Code SH (6 chiffres)",
+            "col_cn": "Code NC UE (8 chiffres)",
+            "col_notes": "Remarques",
+            "notes": {
+                "other_fish": "L’espèce n’est pas nommée dans une sous-position spécifique : elle relève donc de la sous-position 0302.89 « Autres » et, dans l’UE, du code NC 0302 89 90.",
+                "freshwater_other": "Son genre ne figure pas parmi les poissons-chats nommés au 0302.72 : l’espèce relève donc de la sous-position 0302.89 « Autres » et, dans l’UE, en tant que poisson d’eau douce, du code NC 0302 89 10."
+            },
+            "after": "Codes vérifiés le {date} dans la nomenclature SH 2022 de l’OMD et dans le TARIC de l’UE. La classification définitive relève du déclarant en douane de l’importateur. Les taux de droits figurent dans le tarif du pays importateur."
+        },
+        "docs": {
+            "title": "Documents pour une expédition de poisson frais",
+            "intro": "La plupart des expéditions demandent ces quatre documents. Chaque marché ajoute les siens, indiqués plus haut.",
+            "items": {
+                "invoice": {
+                    "title": "Facture commerciale",
+                    "text": "Émise par l’exportateur. Elle désigne le vendeur et l’acheteur et indique l’espèce, le code SH, la quantité, le poids net, la valeur, la devise et l’Incoterm. La douane du pays de destination s’en sert pour calculer les droits."
+                },
+                "packing_list": {
+                    "title": "Liste de colisage",
+                    "text": "Le détail caisse par caisse : nombre de caisses, poids net et brut, espèce et calibre, et marquage des caisses. Le Koweït et Bahreïn la citent parmi les documents exigés pour chaque envoi."
+                },
+                "health_certificate": {
+                    "title": "Certificat sanitaire officiel",
+                    "text": "Délivré par l’autorité compétente du pays exportateur. Le Koweït, Bahreïn, le Liban, le Qatar et la Syrie en exigent un pour chaque envoi, l’Irak également selon un rapport de 2011, et aux Émirats arabes unis il doit mentionner le poisson sauvage comme tel. Certains marchés publient leur propre modèle."
+                },
+                "origin": {
+                    "title": "Certificat d’origine",
+                    "text": "La preuve que le poisson est d’origine égyptienne. Le Koweït la cite parmi les documents exigés pour chaque envoi, et le Liban demande un certificat d’origine authentifié par une chambre de commerce, d’industrie ou d’agriculture."
+                }
+            }
+        },
+        "cold": {
+            "title": "Les bases de la chaîne du froid",
+            "intro": "Les règles d’hygiène de l’UE exigent que le poisson frais soit maintenu à la température de la glace fondante pendant l’entreposage et le transport.",
+            "items": {
+                "ice": {
+                    "title": "Glace",
+                    "text": "Conditionnez le poisson entier dans de la glace et reglacez-le pendant l’entreposage si nécessaire."
+                },
+                "boxes": {
+                    "title": "Caisses isothermes en PSE",
+                    "text": "Les caisses en PSE isolent le poisson et sont très utilisées pour le fret aérien. Fermez et étiquetez chaque caisse, et vérifiez les règles de la compagnie aérienne pour les marchandises périssables."
+                },
+                "handovers": {
+                    "title": "Points de transfert",
+                    "text": "La chaîne du froid se rompt généralement lors des transferts : camions, terminaux de fret des aéroports et postes frontaliers. Laissez le poisson hors du froid le moins longtemps possible et conservez les relevés de température."
+                },
+                "arrival": {
+                    "title": "À l’arrivée",
+                    "text": "Contrôlez la température du poisson, la glace et l’état des caisses, et consignez tout problème avec des photos avant de signer le bon de livraison."
+                }
+            },
+            "azafco": "Comment nous expédions : poisson entier sous glace en caisses PSE, conditionné dans notre usine de Motobas, transporté dans nos propres camions frigorifiques, puis par avion ou par route."
+        },
+        "eu": {
+            "title": "Exporter vers l’Union européenne",
+            "intro": "AZAFCO est agréée pour l’exportation vers l’Union européenne.",
+            "items": {
+                "health_certificate": {
+                    "title": "Certificat sanitaire et inscription sur la liste de l’UE",
+                    "text": "Signé par l’autorité compétente du pays exportateur. Le poisson frais destiné à la consommation humaine entre dans l’UE avec le modèle de certificat FISH-CRUST-HC, délivré via TRACES. L’UE ne l’accepte que si le pays est inscrit sur la liste pour le produit concerné. En octobre 2026, l’UE a inscrit l’Égypte sur la liste pour les poissons à nageoires et les crustacés d’élevage (aquaculture) par le règlement d’exécution (UE) 2026/2228, et l’établissement qui prépare le poisson doit également figurer sur la liste des établissements agréés de l’UE."
+                },
+                "origin": {
+                    "title": "Origine préférentielle",
+                    "text": "Les marchandises égyptiennes peuvent bénéficier d’un traitement tarifaire préférentiel au titre de l’accord d’association UE–Égypte, avec un certificat de circulation EUR.1 ou EUR-MED ou une déclaration d’origine. Vérifiez les règles applicables à votre produit dans Access2Markets."
+                },
+                "catch": {
+                    "title": "Certificat de capture ou registres d’aquaculture",
+                    "text": "L’UE exige un certificat de capture validé pour le poisson de mer sauvage en vertu de son règlement INN (pêche illicite, non déclarée et non réglementée). En sont exclus les produits de l’aquaculture obtenus à partir d’alevins ou de larves, ainsi que le tilapia, le poisson-chat et la carpe frais (0302 71 à 0302 73) et les autres poissons d’eau douce (0302 89 10). Depuis le 10 janvier 2026, les importateurs de l’UE soumettent les certificats de capture via le système CATCH IT. Pour le poisson d’élevage, demandez à votre fournisseur les informations sur l’élevage et le lot qui relient chaque caisse à son origine."
+                },
+                "ched": {
+                    "title": "Notification préalable CHED-P (DSCE-P) dans TRACES",
+                    "text": "Avant l’arrivée du poisson, l’importateur de l’UE ou son agent notifie l’envoi au poste de contrôle frontalier choisi au moyen d’un document sanitaire commun d’entrée pour les produits (DSCE-P, en anglais CHED-P) dans TRACES. Le poste de contrôle frontalier effectue des contrôles documentaires, d’identité et physiques avant la libération du poisson."
+                },
+                "labelling": {
+                    "title": "Étiquetage",
+                    "text": "Le poisson proposé aux consommateurs ou aux collectivités dans l’UE doit indiquer la dénomination commerciale et le nom scientifique, la méthode de production (pêché ou élevé), la zone de capture ou de production et les autres mentions énumérées à l’article 35 du règlement (UE) n° 1379/2013. Convenez des étiquettes des caisses avec votre fournisseur avant la première expédition."
+                }
+            }
+        },
+        "sources": {
+            "title": "Sources",
+            "intro": "Vérifiées le {date}."
+        }
+    }
+}

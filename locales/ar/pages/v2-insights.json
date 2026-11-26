@@ -1,0 +1,21 @@
+{
+    "categories": {
+        "importer_guide": "دليل المستورد"
+    },
+    "article": {
+        "by": "الناشر",
+        "author": "ازافكو العالمية",
+        "published": "تاريخ النشر",
+        "reviewed": "آخر مراجعة",
+        "toc": "المحتويات",
+        "related_title": "صفحات ذات صلة",
+        "related": [
+            {
+                "title": "أسواقنا"
+            },
+            {
+                "title": "أسماكنا"
+            }
+        ]
+    }
+}

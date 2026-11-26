@@ -1,0 +1,15 @@
+{
+    "eyebrow": "Qualité",
+    "title": "Certificats et documents",
+    "link": "Comment nous contrôlons la qualité",
+    "cards": {
+        "iso": {
+            "title": "Certificats ISO",
+            "text": "Nous détenons des certificats ISO délivrés par TÜV AUSTRIA."
+        },
+        "documents": {
+            "title": "Documents",
+            "text": "Les documents sanitaires et de sécurité alimentaire dépendent de votre marché. Nous confirmons la liste avec vous avant votre commande."
+        }
+    }
+}

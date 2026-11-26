@@ -28,9 +28,49 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
 
+  // Build output folder. Parallel agents set NEXT_DIST_DIR (e.g. .next-kit) so their
+  // dev servers never write into the shared .next used by `next start`.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
+
+  // Permanent redirects for renamed species pages. "buni" was renamed to grass carp
+  // (owner species list, 7 Nov 2026); see docs/reports/species-identification.md
+  async redirects() {
+    return [
+      {
+        source: '/:locale(ar|en|es|ru|de|fr)/products/buni',
+        destination: '/:locale/products/grass-carp',
+        permanent: true,
+      },
+      // Site v2: guides moved under /insights/:slug; the old index goes to the one guide
+      { source: '/:locale(ar|en|es|ru|de|fr)/guides', destination: '/:locale/insights/importing-fresh-fish-from-egypt', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/guides/:slug', destination: '/:locale/insights/:slug', permanent: true },
+      // Old site pages retired in the 2026 redesign (keep their links and rankings)
+      { source: '/:locale(ar|en|es|ru|de|fr)/faq', destination: '/:locale/about', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/certificates', destination: '/:locale/quality', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/eu-buyers', destination: '/:locale/markets', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/media', destination: '/:locale/about#news', permanent: true },
+      // Requirements page: was /rfq (no web form; buyers send by email/WhatsApp)
+      { source: '/:locale(ar|en|es|ru|de|fr)/rfq/thank-you', destination: '/:locale/requirements', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/rfq', destination: '/:locale/requirements', permanent: true },
+      // Round 1 (14 Nov 2026): pages folded into others. The group's other businesses
+      // (agriculture, livestock, investments) are one section of /about; news is a
+      // section of /insights; /seafood repeated /products.
+      { source: '/:locale(ar|en|es|ru|de|fr)/seafood', destination: '/:locale/products', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/businesses', destination: '/:locale/about#businesses', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/:sector(agriculture|livestock|investments)', destination: '/:locale/about#businesses', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/insights/news', destination: '/:locale/about#news', permanent: true },
+      // Simplification (26 Nov 2026, owner after three reviews): Packing merged into Quality;
+      // "For importers" repeated other pages; the Insights index held one guide and three
+      // press items, which now sit on /about. The guide keeps /insights/:slug.
+      { source: '/:locale(ar|en|es|ru|de|fr)/processing', destination: '/:locale/quality', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/for-importers', destination: '/:locale/about', permanent: true },
+      { source: '/:locale(ar|en|es|ru|de|fr)/insights', destination: '/:locale/about#news', permanent: true },
+    ]
+  },
 
   // Caching headers for static assets
   async headers() {

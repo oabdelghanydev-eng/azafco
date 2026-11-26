@@ -1,0 +1,123 @@
+{
+    "meta": {
+        "title": "12 espèces principales de poisson frais d’Égypte",
+        "description": "Tilapia, bar, dorade royale, mulet, carpe et poisson-chat d’Égypte pour importateurs et distributeurs : entiers, frais réfrigérés, sous glace."
+    },
+    "breadcrumb": "Nos poissons",
+    "new_tab": "(s’ouvre dans un nouvel onglet)",
+    "hero": {
+        "eyebrow": "Nos poissons",
+        "title": "12 principaux types de poisson, frais d’Égypte",
+        "intro": "Entiers et frais réfrigérés, calibrés au poids et conditionnés sous glace en caisses de polystyrène expansé dans notre usine de Motobas, à Kafr el-Cheikh.",
+        "primary": "Démarrer un partenariat",
+        "secondary": "Écrire à la direction sur WhatsApp",
+        "whatsapp_message": "Bonjour AZAFCO International, nous consultons votre liste de poissons. Espèce, destination et quantité :"
+    },
+    "grid": {
+        "title": "Les espèces que nous fournissons",
+        "more_species": "Nous fournissons aussi d’autres espèces sur demande."
+    },
+    "water": {
+        "freshwater": "Eau douce",
+        "marine": "Eau de mer",
+        "brackish": "Eau saumâtre"
+    },
+    "card": {
+        "image_alt": "{name} : poisson entier, vue latérale",
+        "grades": "Calibres (indicatifs)",
+        "grades_label": "Calibres",
+        "grades_none": "Sur demande"
+    },
+    "browser": {
+        "search_label": "Rechercher une espèce",
+        "search_placeholder": "p. ex. tilapia, bar, بوري",
+        "clear_search": "Effacer la recherche",
+        "water_type": "Type d’eau",
+        "all": "Toutes les espèces",
+        "result_count": "{count, plural, =0 {Aucune espèce trouvée} =1 {1 espèce sur {total}} other {# espèces sur {total}}}",
+        "reset": "Effacer les filtres",
+        "empty_title": "Aucune espèce ne correspond à votre recherche",
+        "form_type": "Présentation du produit",
+        "all_forms": "Toutes les présentations"
+    },
+    "custom": {
+        "title": "Besoin d’un autre calibre ou conditionnement ?",
+        "form": "Envoyer vos besoins",
+        "email": "Écrire à l’équipe export",
+        "email_subject": "Spécification poisson pour notre marché"
+    },
+    "detail": {
+        "meta_title": "Poisson frais d’Égypte : {name} en gros",
+        "meta_title_short": "Poisson frais d’Égypte : {name}",
+        "meta_description": "{name} ({scientific}) d’Égypte pour importateurs : poisson entier frais réfrigéré, sous glace en caisses de polystyrène, code SH / NC.",
+        "meta_description_short": "{name} d’Égypte pour importateurs et distributeurs : poisson entier, frais réfrigéré, sous glace en caisses de polystyrène. Code SH / NC.",
+        "h1": "{name} d’Égypte : poisson entier, frais réfrigéré",
+        "also_known_as": "Autres noms",
+        "primary": "Envoyer vos besoins",
+        "secondary": "Voir les spécifications",
+        "spec_title": "Spécification",
+        "spec_caption": "{name} : spécification",
+        "trade_name": "Nom commercial",
+        "scientific_name": "Nom scientifique",
+        "origin": "Origine",
+        "origin_value": "Égypte",
+        "packed_at": "Conditionné à",
+        "packed_at_value": "Notre usine de Motobas, Kafr el-Cheikh, Égypte",
+        "transport": "Transport",
+        "transport_value": "Nos propres camions frigorifiques, puis fret aérien ou routier",
+        "water_type": "Type d’eau",
+        "form": "Présentation du produit",
+        "sizes": "Calibres (indicatifs)",
+        "packaging": "Type d’emballage (indicatif)",
+        "hs_code": "Code SH / NC",
+        "cn_label": "NC (UE)",
+        "hs_guide": "Voir le guide d’importation",
+        "contact": {
+            "title": "{name} : parlons-en",
+            "whatsapp_title": "WhatsApp",
+            "whatsapp_sub": "Direction · demandes d’approvisionnement",
+            "whatsapp_message": "Bonjour AZAFCO International, nous sommes intéressés par : {name}. Destination et quantité :",
+            "email_title": "E-mail",
+            "email_sub": "Équipe export · informations et documents",
+            "email_subject": "{name} : spécifications",
+            "email_body": "Espèce : {name}\nPoids par poisson :\nQuantité :\nDestination :\n",
+            "new_tab": "(s’ouvre dans un nouvel onglet)"
+        }
+    },
+    "schema": {
+        "list_name": "Liste des poissons d’AZAFCO International",
+        "category": "Poisson frais"
+    },
+    "pending": {
+        "species_id": "{name} : identification de l’espèce (nom scientifique)"
+    },
+    "specs": {
+        "forms": {
+            "fresh_whole": "Entier, frais réfrigéré",
+            "fresh_gutted": "Vidé, frais réfrigéré",
+            "fresh_fillet": "Filet, frais réfrigéré",
+            "frozen_whole": "Entier, congelé",
+            "frozen_gutted": "Vidé, congelé",
+            "frozen_fillet": "Filet, congelé"
+        },
+        "grades": {
+            "small": "Petit",
+            "medium": "Moyen",
+            "large": "Gros",
+            "extra_large": "Très gros",
+            "jumbo": "Jumbo"
+        },
+        "packs": {
+            "eps_box": "Caisse en polystyrène expansé",
+            "carton": "Carton",
+            "plastic_crate": "Caisse en plastique",
+            "vacuum_pack": "Sous vide",
+            "other": "Autre"
+        },
+        "units": {
+            "g": "g",
+            "kg": "kg"
+        },
+        "and_above": "{value} et plus"
+    }
+}

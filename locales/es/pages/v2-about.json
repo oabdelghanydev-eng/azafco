@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "title": "Quiénes somos: AZAFCO, pescado egipcio desde 2008",
+        "description": "Exportadora desde 2008, AZAFCO International cría, compra, envasa y exporta pescado fresco egipcio a 7+ mercados, con 2500 t/mes de capacidad de envasado."
+    },
+    "breadcrumb": "Quiénes somos",
+    "hero": {
+        "eyebrow": "Exportamos desde 2008",
+        "title": "Sobre AZAFCO International: cría, compra, envasado y exportación de pescado en Egipto",
+        "intro": "Pescado fresco entero para importadores, distribuidores y compradores de hostelería y restauración de Oriente Medio y más allá.",
+        "image_alt": "Dos operarios tiran de una red de cerco llena de peces hacia la orilla de un estanque de tierra"
+    },
+    "glance": {
+        "title": "Datos de la empresa",
+        "legal_label": "Razón social",
+        "founded_label": "Exportamos desde",
+        "founded_value": "2008, desde Kafr el-Sheikh (Egipto)",
+        "activity_label": "Actividad",
+        "activity_value": "Cría, compra, envasa y exporta pescado entero fresco refrigerado.",
+        "species_label": "Especies",
+        "species_value": "12 especies principales: {species}. Otras especies bajo pedido.",
+        "capacity_label": "Capacidad de envasado",
+        "capacity_value": "Hasta 2500 t/mes. Un camión frigorífico carga 20 t, y algunos días salen de la planta más de cinco.",
+        "fleet_label": "Camiones y cámaras frigoríficas",
+        "fleet_value": "Dispone de camiones frigoríficos y cámaras frigoríficas propios, desde la planta hasta el transporte aéreo o por carretera.",
+        "origin_label": "Egipto",
+        "plant_label": "Planta de envasado",
+        "office_label": "Oficina principal",
+        "markets_label": "Mercados activos (año de la primera exportación)",
+        "market_item": "{country} ({year})",
+        "market_largest": "{country} ({year}, mayor mercado de exportación)",
+        "certificates_label": "Certificados",
+        "certificates_value": "Certificados ISO expedidos por TÜV AUSTRIA.",
+        "contacts_label": "Contactos oficiales",
+        "email_label": "Equipo de exportación",
+        "whatsapp_label": "WhatsApp de la gerencia",
+        "quality_link": "Envasado y calidad"
+    },
+    "journey": {
+        "title": "Hitos desde 2008",
+        "list_label": "Hitos de la empresa por año",
+        "founded": "Fundación de AZAFCO International en Kafr el-Sheikh (Egipto)",
+        "baltim": "Apertura de la primera fábrica en la Zona Industrial de Baltim, Kafr el-Sheikh",
+        "motobas": "Apertura de la nueva planta en la Zona Industrial de Motobas, Kafr el-Sheikh"
+    },
+    "businesses": {
+        "eyebrow": "Nuestras áreas de negocio",
+        "title": "El pescado es nuestra actividad principal",
+        "p2": "También cultivamos fruta y hortalizas, tenemos granjas de ganado en Egipto y otras inversiones.",
+        "image_alt": "Pescado fresco entero sobre hielo picado, visto desde arriba",
+        "link_products": "Nuestro pescado"
+    }
+}

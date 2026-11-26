@@ -1,0 +1,28 @@
+{
+    "eyebrow": "De l’élevage à l’export",
+    "title": "Comment le poisson vous parvient",
+    "stageLabel": "Étape {n}",
+    "stages": {
+        "farming": {
+            "title": "Élevage et approvisionnement",
+            "text": "Nos propres élevages, ainsi que du poisson acheté auprès de fournisseurs."
+        },
+        "harvest": {
+            "title": "Récolte",
+            "text": "Pêché au filet et acheminé vers notre usine de Motobas."
+        },
+        "packing": {
+            "title": "Lavage, glaçage et conditionnement",
+            "text": "Calibré au poids, conditionné entier sous glace et stocké dans nos entrepôts frigorifiques."
+        },
+        "inspection": {
+            "title": "Contrôle",
+            "text": "Vérifié selon la spécification convenue avant la fermeture des caisses."
+        },
+        "export": {
+            "title": "Export",
+            "text": "Nos propres camions frigorifiques, puis fret aérien ou routier."
+        }
+    },
+    "pageLink": "Comment nous conditionnons et expédions"
+}

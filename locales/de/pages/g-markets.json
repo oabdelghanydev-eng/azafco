@@ -1,0 +1,46 @@
+{
+    "eyebrow": "Unsere Märkte",
+    "title": "Der Nahe Osten und darüber hinaus",
+    "intro": "Wir liefern per Luft- und Straßenfracht.",
+    "since": "seit {year}",
+    "mapLabel": "Karte der Versandrouten von Ägypten zu unseren Märkten",
+    "origin": "Ägypten · Motobas",
+    "markets": {
+        "ae": {
+            "name": "Vereinigte Arabische Emirate",
+            "short": "VAE"
+        },
+        "kw": {
+            "name": "Kuwait",
+            "short": "Kuwait"
+        },
+        "bh": {
+            "name": "Bahrain",
+            "short": "Bahrain"
+        },
+        "lb": {
+            "name": "Libanon",
+            "short": "Libanon"
+        },
+        "qa": {
+            "name": "Katar",
+            "short": "Katar"
+        },
+        "iq": {
+            "name": "Irak",
+            "short": "Irak"
+        },
+        "sy": {
+            "name": "Syrien",
+            "short": "Syrien"
+        }
+    },
+    "euApproved": "Europäische Union: für den Export zugelassen",
+    "plannedTitle": "Geplant",
+    "planned": {
+        "ru": "Russland",
+        "us": "Vereinigte Staaten"
+    },
+    "pageLink": "Alle Märkte ansehen",
+    "marketLink": "{name}: Marktseite"
+}

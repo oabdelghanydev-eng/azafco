@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "title": "Envoyer vos besoins en poisson frais",
+        "description": "Envoyez vos besoins en poisson à AZAFCO International : espèce, calibre, conditionnement, quantité, destination et Incoterm, par e-mail ou WhatsApp."
+    },
+    "breadcrumb": "Envoyer vos besoins",
+    "hero": {
+        "eyebrow": "Démarrer un partenariat",
+        "title": "Envoyer vos besoins",
+        "intro": "Indiquez-nous le poisson, la quantité et la destination. Nous nous occupons du reste."
+    },
+    "short_hero": {
+        "corporate_title": "Demandes institutionnelles et de partenariat",
+        "corporate_intro": "Pour un partenariat, un investissement ou tout autre sujet.",
+        "documents_title": "Demander des documents",
+        "documents_intro": "Demandez la fiche technique du produit ou le profil de l’entreprise."
+    },
+    "aside": {
+        "need": "Il nous suffit du poisson, du poids, de la quantité et de la destination.",
+        "hours": "Horaires du bureau : {hours}",
+        "official": "Nous écrivons uniquement depuis une adresse azafco.com.eg et depuis le {phone}."
+    },
+    "switch": {
+        "to_corporate": "Un autre sujet, un partenariat ou un investissement ? <link>Écrivez-nous ici</link>",
+        "to_seafood": "Vous souhaitez acheter du poisson ? <link>Envoyez plutôt vos besoins</link>"
+    },
+    "request": {
+        "title": "Écrivez-nous directement",
+        "title_corporate": "Écrivez-nous directement",
+        "title_documents": "Demandez les documents",
+        "email_cta": "Écrire à l’équipe export",
+        "email_role": "Équipe export · informations et documents",
+        "whatsapp_cta": "Écrire à la direction sur WhatsApp",
+        "whatsapp_role": "Direction · demandes d’approvisionnement",
+        "email_label": "E-mail",
+        "phone_label": "Téléphone (direction)"
+    },
+    "mail": {
+        "greeting": "Bonjour à toute l’équipe export d’AZAFCO,",
+        "intro_quote": "Nous souhaitons discuter de l’approvisionnement suivant :",
+        "intro_specs": "Merci de nous envoyer les spécifications suivantes :",
+        "intro_corporate": "Je souhaite aborder le sujet suivant :",
+        "intro_documents": "Merci de nous envoyer les documents suivants :",
+        "subject_quote": "Besoins d’approvisionnement",
+        "subject_quote_for": "Besoins d’approvisionnement : {item}",
+        "subject_specs": "Demande de spécifications",
+        "subject_specs_for": "Demande de spécifications : {item}",
+        "subject_corporate": "Demande institutionnelle",
+        "subject_documents": "Demande de documents",
+        "subject_documents_for": "Demande de documents : {item}",
+        "wa_intro_quote": "Bonjour AZAFCO, je souhaite discuter d’un partenariat d’approvisionnement.",
+        "wa_intro_specs": "Bonjour AZAFCO, je souhaiterais recevoir les spécifications.",
+        "wa_intro_corporate": "Bonjour AZAFCO, j’ai une demande institutionnelle.",
+        "wa_intro_documents": "Bonjour AZAFCO, je souhaite demander des documents.",
+        "optional_line": "Ajoutez votre date de livraison ou joignez une spécification si vous en avez une.",
+        "labels": {
+            "species": "Poisson",
+            "grade": "Poids visé par poisson",
+            "form": "Présentation du produit",
+            "volume": "Quantité",
+            "destination": "Destination",
+            "company": "Société",
+            "name": "Nom",
+            "job": "Fonction",
+            "website": "Site web",
+            "phone": "Téléphone",
+            "topic": "Sujet",
+            "message": "Message",
+            "documents": "Documents souhaités",
+            "product": "Produit",
+            "market": "Marché"
+        }
+    }
+}

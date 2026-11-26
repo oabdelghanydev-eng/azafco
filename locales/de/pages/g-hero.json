@@ -1,0 +1,55 @@
+{
+    "groupLabel": "Kernaussagen",
+    "statsLabel": "Kennzahlen",
+    "slides": [
+        {
+            "label": "Von der Produktion in Ägypten zu Partnerschaften weltweit",
+            "kicker": "Exporteur von frischem Fisch seit 2008",
+            "title": "Frischer Fisch aus Ägypten für Importeure weltweit",
+            "text": "Wir züchten und beziehen 12 Hauptfischarten, sortieren, verpacken und exportieren sie ganz und frisch gekühlt auf Eis.",
+            "alt": "Ganze frische Doraden, Wolfsbarsche und Tilapia auf Scherbeneis in kühlem Licht"
+        },
+        {
+            "label": "Vom Teich bis zur Palette",
+            "kicker": "Unser Werk",
+            "title": "Eigenes Werk, eigene Kühl-Lkw und Kühlhäuser",
+            "text": "Wir sortieren, verpacken und versenden aus unserem Werk in Motobas, Kafr El Sheikh.",
+            "alt": "Luftaufnahme von Erdteichen mit Belüftern und Palmen"
+        },
+        {
+            "label": "12 Hauptarten, nach Gewicht sortiert",
+            "kicker": "Unser Fisch",
+            "title": "12 Hauptfischarten, nach Gewicht sortiert",
+            "text": "Tilapia, Wolfsbarsch, Dorade, Meeräsche, Wels und mehr, ganz und frisch gekühlt.",
+            "alt": "Ganzer frischer Fisch auf Scherbeneis, von oben gesehen"
+        },
+        {
+            "label": "7+ Märkte per Luft und Straße",
+            "kicker": "Unsere Märkte",
+            "title": "Der Nahe Osten und darüber hinaus, per Luft und Straße",
+            "text": "Kuwait, die VAE, Katar, der Irak, Syrien, Bahrain und der Libanon; zudem für den Export in die Europäische Union zugelassen.",
+            "alt": "Kühl-Lkw wird im Morgengrauen an einer Laderampe mit Isolierboxen beladen"
+        }
+    ],
+    "ctaPartner": "Partnerschaft starten",
+    "ctaFish": "Fischarten ansehen",
+    "ctaFishPhone": "Fischarten ansehen",
+    "stats": [
+        {
+            "value": "12",
+            "label": "Hauptfischarten"
+        },
+        {
+            "value": "7+",
+            "label": "Exportmärkte"
+        },
+        {
+            "value": "2008",
+            "label": "Export seit"
+        },
+        {
+            "value": "2.500",
+            "label": "t/Monat · maximale Packkapazität"
+        }
+    ]
+}

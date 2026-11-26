@@ -1,0 +1,38 @@
+{
+    "skip_to_main": "Aller au contenu principal",
+    "nav": {
+        "guide": "Guide de l’importateur"
+    },
+    "cta": {
+        "view_specifications": "Voir les spécifications",
+        "call": "Appeler",
+        "opens_new_tab": "(s’ouvre dans un nouvel onglet)",
+        "send_requirements": "Envoyer vos besoins",
+        "start_partnership": "Démarrer un partenariat"
+    },
+    "breadcrumbs": {
+        "label": "Fil d’Ariane",
+        "home": "Accueil"
+    },
+    "pending": {
+        "prefix": "En attente de confirmation par la direction :"
+    },
+    "spec": {
+        "attribute": "Caractéristique",
+        "value": "Valeur",
+        "confirmed_with_sales": "Confirmé à chaque commande",
+        "attribute_label": "{label} :"
+    },
+    "consent": {
+        "title": "Mesure d’audience sur ce navigateur",
+        "on": "La mesure d’audience est activée sur ce navigateur.",
+        "off": "La mesure d’audience est désactivée sur ce navigateur.",
+        "unset": "Vous n’avez pas encore fait de choix sur ce navigateur. Google Analytics suit le réglage par défaut de votre région, et Microsoft Clarity reste désactivé.",
+        "enable": "Activer la mesure d’audience",
+        "disable": "Désactiver la mesure d’audience"
+    },
+    "origin": {
+        "fact": "L’Égypte produit 62 % du poisson d’élevage africain et figure parmi les dix premiers pays aquacoles du monde.",
+        "source": "Source : FAO, 2024"
+    }
+}

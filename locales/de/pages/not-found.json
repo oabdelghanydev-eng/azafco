@@ -1,4 +1,23 @@
 {
-    "title": "Seite nicht gefunden",
-    "back_home": "Zurück zur Startseite"
+    "meta": {
+        "title": "Seite nicht gefunden"
+    },
+    "eyebrow": "Fehler 404",
+    "title": "Diese Seite wurde nicht gefunden",
+    "intro": "Der Link ist vielleicht veraltet, oder die Seite wurde verschoben.",
+    "links": [
+        {
+            "title": "Unser Fisch"
+        },
+        {
+            "title": "Anforderungen senden"
+        },
+        {
+            "title": "Unsere Märkte"
+        },
+        {
+            "title": "Kontakt"
+        }
+    ],
+    "home": "Zurück zur Startseite"
 }

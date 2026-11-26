@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "title": "Ihre Anforderungen für Frischfisch senden",
+        "description": "Senden Sie AZAFCO International Ihre Anforderungen für Fisch: Fischart, Gewichtsklasse, Verpackung, Menge, Zielort und Incoterm, per E-Mail oder WhatsApp."
+    },
+    "breadcrumb": "Anforderungen senden",
+    "hero": {
+        "eyebrow": "Partnerschaft starten",
+        "title": "Anforderungen senden",
+        "intro": "Nennen Sie uns Fisch, Menge und Zielland. Den Rest übernehmen wir."
+    },
+    "short_hero": {
+        "corporate_title": "Unternehmens- und Partnerschaftsanfragen",
+        "corporate_intro": "Für Partnerschaften, Investitionen oder andere Themen.",
+        "documents_title": "Dokumente anfordern",
+        "documents_intro": "Fordern Sie die Produktspezifikation oder das Unternehmensprofil an."
+    },
+    "aside": {
+        "need": "Uns genügen Fisch, Gewicht, Menge und Zielland.",
+        "hours": "Bürozeiten: {hours}",
+        "official": "Wir schreiben nur von E-Mail-Adressen unter azafco.com.eg und von {phone}."
+    },
+    "switch": {
+        "to_corporate": "Ein anderes Thema, eine Partnerschaft oder eine Investition? <link>Schreiben Sie uns hier</link>",
+        "to_seafood": "Sie möchten Fisch kaufen? <link>Senden Sie stattdessen Ihre Anforderungen</link>"
+    },
+    "request": {
+        "title": "Schreiben Sie uns direkt",
+        "title_corporate": "Schreiben Sie uns direkt",
+        "title_documents": "Unterlagen anfordern",
+        "email_cta": "E-Mail an das Exportteam",
+        "email_role": "Exportteam · Details und Dokumente",
+        "whatsapp_cta": "Geschäftsleitung per WhatsApp schreiben",
+        "whatsapp_role": "Geschäftsleitung · Lieferanfragen",
+        "email_label": "E-Mail",
+        "phone_label": "Telefon (Geschäftsleitung)"
+    },
+    "mail": {
+        "greeting": "Sehr geehrtes AZAFCO-Exportteam,",
+        "intro_quote": "wir möchten die Lieferung folgender Produkte besprechen:",
+        "intro_specs": "bitte senden Sie uns die Spezifikationen für Folgendes:",
+        "intro_corporate": "ich möchte Folgendes besprechen:",
+        "intro_documents": "bitte senden Sie uns folgende Dokumente:",
+        "subject_quote": "Lieferanforderungen",
+        "subject_quote_for": "Lieferanforderungen: {item}",
+        "subject_specs": "Bitte um Spezifikation",
+        "subject_specs_for": "Bitte um Spezifikation: {item}",
+        "subject_corporate": "Unternehmensanfrage",
+        "subject_documents": "Bitte um Dokumente",
+        "subject_documents_for": "Bitte um Dokumente: {item}",
+        "wa_intro_quote": "Guten Tag AZAFCO, ich möchte über eine Lieferpartnerschaft sprechen.",
+        "wa_intro_specs": "Guten Tag AZAFCO, ich hätte gern die Spezifikationen.",
+        "wa_intro_corporate": "Guten Tag AZAFCO, ich habe eine Unternehmensanfrage.",
+        "wa_intro_documents": "Guten Tag AZAFCO, ich möchte Dokumente anfordern.",
+        "optional_line": "Ergänzen Sie Ihren Liefertermin oder fügen Sie eine Spezifikation bei, falls vorhanden.",
+        "labels": {
+            "species": "Fisch",
+            "grade": "Zielgewicht pro Fisch",
+            "form": "Produktform",
+            "volume": "Menge",
+            "destination": "Zielort",
+            "company": "Unternehmen",
+            "name": "Name",
+            "job": "Position",
+            "website": "Website",
+            "phone": "Telefon",
+            "topic": "Thema",
+            "message": "Nachricht",
+            "documents": "Benötigte Dokumente",
+            "product": "Produkt",
+            "market": "Markt"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "categories": {
+        "importer_guide": "Leitfaden für Importeure"
+    },
+    "article": {
+        "by": "Veröffentlicht von",
+        "author": "AZAFCO International",
+        "published": "Veröffentlicht",
+        "reviewed": "Zuletzt geprüft",
+        "toc": "Inhalt",
+        "related_title": "Verwandte Seiten",
+        "related": [
+            {
+                "title": "Unsere Märkte"
+            },
+            {
+                "title": "Unser Fisch"
+            }
+        ]
+    }
+}

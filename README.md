@@ -10,9 +10,9 @@
 
 ## 📋 نظرة عامة | Overview
 
-موقع رسمي لشركة **ازافكو العالمية للاستثمار والتنمية** - شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة إلى أكثر من 15 دولة حول العالم منذ عام 2008.
+موقع رسمي لشركة **ازافكو العالمية للاستثمار والتنمية (ش.م.م)** - شركة مصرية رائدة متخصصة في تعبئة وتصدير الأسماك الطازجة إلى أكثر من 15 دولة حول العالم منذ عام 2008.
 
-**AZAFCO International** is an Egyptian company specialized in packaging and exporting premium fresh fish to over 15 countries worldwide since 2008.
+**AZAFCO International** (legal name: AZAFCO International for Investment and Development S.A.E.) is an Egyptian company specialized in packaging and exporting premium fresh fish to over 15 countries worldwide since 2008.
 
 ---
 
@@ -394,7 +394,7 @@ npm install @types/react@latest @types/node@latest
 
 ## 📄 الترخيص | License
 
-هذا المشروع **خاص** ومملوك لشركة ازافكو العالمية للاستثمار والتنمية.  
+هذا المشروع **خاص** ومملوك لشركة ازافكو العالمية للاستثمار والتنمية (ش.م.م).  
 جميع الحقوق محفوظة © 2024
 
 ---

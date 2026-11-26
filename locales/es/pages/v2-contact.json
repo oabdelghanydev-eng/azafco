@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "title": "Contacto: WhatsApp, correo, oficina y fábrica",
+        "description": "Hable del suministro con la gerencia de AZAFCO International por WhatsApp; pida especificaciones y documentos por correo. Oficina y planta: Kafr el-Sheikh."
+    },
+    "breadcrumb": "Contacto",
+    "hero": {
+        "eyebrow": "Iniciemos una colaboración",
+        "title": "Contacte con AZAFCO International",
+        "actions": {
+            "whatsapp": "Escriba a la gerencia por WhatsApp",
+            "email": "Correo al equipo de exportación"
+        }
+    },
+    "channels": {
+        "title": "WhatsApp, correo y teléfono",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Gerencia · consultas de suministro"
+        },
+        "email": {
+            "title": "Correo electrónico",
+            "sub": "Equipo de exportación · detalles y documentos"
+        },
+        "phone": {
+            "title": "Teléfono",
+            "sub": "Gerencia, mismo número"
+        },
+        "hours": "Horario de oficina",
+        "vcard": {
+            "title": "Tarjeta de contacto",
+            "action": "Descargar la vCard"
+        },
+        "new_tab": "(se abre en una pestaña nueva)"
+    },
+    "routes": {
+        "legend": "Suministro y documentos",
+        "seafood_title": "Suministro de pescado",
+        "seafood_text": "Para comprar nuestro pescado para importación o distribución.",
+        "seafood_action": "Envíe sus requisitos",
+        "documents_title": "Documentos",
+        "documents_text": "Especificaciones de producto o el perfil de la empresa.",
+        "documents_action": "Solicitar documentos",
+        "corporate_link": "Colaboraciones, inversión u otros temas: <link>escríbanos aquí</link>"
+    },
+    "locations": {
+        "title": "Oficina principal y fábrica",
+        "factory": "Fábrica",
+        "office": "Oficina principal",
+        "map_open": "Abrir en Google Maps",
+        "map_title_factory": "Mapa de la fábrica de AZAFCO International en Motobas",
+        "map_title_office": "Mapa de la oficina principal de AZAFCO International"
+    },
+    "official": {
+        "title": "Registro y canales oficiales"
+    },
+    "trust": {
+        "title": "Empresa registrada",
+        "legal": "Razón social",
+        "register": "Registro mercantil",
+        "tax": "Tarjeta fiscal"
+    }
+}

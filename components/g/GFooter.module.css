@@ -1,0 +1,80 @@
+/* Design G footer ("ice letters"): effects that are awkward in utilities.
+   Colours come from the Tailwind theme (gold, navy-900), never hex. */
+
+/* Contact rows: subtle wash, title turns gold, arrow fills gold and nudges toward the reading end */
+.row {
+    transition: background-color 0.2s;
+}
+.row:hover {
+    background-color: rgb(255 255 255 / 0.035);
+}
+.go {
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+.row:hover .go,
+.row:focus-visible .go {
+    background: theme('colors.gold.DEFAULT');
+    border-color: theme('colors.gold.DEFAULT');
+    color: theme('colors.navy.900');
+    transform: translateX(4px);
+}
+:global([dir='rtl']) .row:hover .go,
+:global([dir='rtl']) .row:focus-visible .go {
+    transform: translateX(-4px);
+}
+.row:hover .title,
+.row:focus-visible .title {
+    color: theme('colors.gold.DEFAULT');
+}
+.title {
+    transition: color 0.2s;
+}
+
+/* Photo fade: from navy at the bottom (phone), from navy on the text side (desktop) */
+.fade {
+    background: linear-gradient(180deg, theme('colors.navy.900 / 0%') 0%, theme('colors.navy.900 / 45%') 50%, theme('colors.navy.900') 100%);
+}
+@media (min-width: 1024px) {
+    .fade {
+        background: linear-gradient(
+            to right,
+            theme('colors.navy.900') 0%,
+            theme('colors.navy.900 / 88%') 14%,
+            theme('colors.navy.900 / 50%') 42%,
+            theme('colors.navy.900 / 12%') 78%,
+            theme('colors.navy.900 / 0%') 100%
+        );
+    }
+    :global([dir='rtl']) .fade {
+        background: linear-gradient(
+            to left,
+            theme('colors.navy.900') 0%,
+            theme('colors.navy.900 / 88%') 14%,
+            theme('colors.navy.900 / 50%') 42%,
+            theme('colors.navy.900 / 12%') 78%,
+            theme('colors.navy.900 / 0%') 100%
+        );
+    }
+}
+
+/* AZAFCO ice wordmark behind the contact block */
+.wordmark {
+    mix-blend-mode: screen;
+    user-select: none;
+    pointer-events: none;
+    line-height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .row,
+    .go,
+    .title {
+        transition: none;
+    }
+    .row:hover .go,
+    .row:focus-visible .go,
+    :global([dir='rtl']) .row:hover .go,
+    :global([dir='rtl']) .row:focus-visible .go {
+        transform: none;
+    }
+}

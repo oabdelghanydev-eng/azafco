@@ -1,0 +1,28 @@
+{
+    "eyebrow": "Von der Zucht bis zum Export",
+    "title": "So kommt der Fisch zu Ihnen",
+    "stageLabel": "Stufe {n}",
+    "stages": {
+        "farming": {
+            "title": "Zucht und Zukauf",
+            "text": "Eigene Fischfarmen, dazu Fisch, den wir von Lieferanten zukaufen."
+        },
+        "harvest": {
+            "title": "Abfischen",
+            "text": "Abgefischt und in unser Werk in Motobas gebracht."
+        },
+        "packing": {
+            "title": "Waschen, Beeisen und Verpacken",
+            "text": "Nach Gewicht sortiert, ganz auf Eis verpackt und in unseren Kühlhäusern gelagert."
+        },
+        "inspection": {
+            "title": "Kontrolle",
+            "text": "Vor dem Verschließen der Boxen anhand der vereinbarten Spezifikation geprüft."
+        },
+        "export": {
+            "title": "Export",
+            "text": "Eigene Kühl-Lkw, danach Luft- oder Straßenfracht."
+        }
+    },
+    "pageLink": "So verpacken und versenden wir"
+}

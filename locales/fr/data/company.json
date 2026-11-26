@@ -1,28 +1,17 @@
 {
-    "name": "AZAFCO International",
-    "fullName": "AZAFCO International Investment & Development",
-    "description": "Premier exportateur B2B de poisson d'Égypte pour grossistes, restaurants et hôtels – poisson frais premium depuis 2008.",
-    "workingHours": "Disponible 24h/24",
-    "workingHoursNote": "Service continu – selon département",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "workingHours": "Du samedi au jeudi, de 8 h à 17 h (heure du Caire)",
+    "workingHoursNote": "WhatsApp : direction · demandes d’approvisionnement",
+    "officialChannels": {
+        "title": "Canaux officiels",
+        "text": "Nous écrivons uniquement depuis WhatsApp {phone} et depuis une adresse e-mail azafco.com.eg ({email}). Si des coordonnées bancaires ou de paiement vous parviennent d’un autre numéro ou d’une autre adresse, vérifiez auprès de nous avant de payer."
+    },
     "addresses": {
         "main": {
-            "title": "Siège social",
-            "address": "Mastora, à côté de l'Association Caritative, El-Borollos, Kafr El-Sheikh, Égypte"
+            "address": "Mastrouh, à côté de l’Association caritative, El-Borollos, Kafr el-Cheikh, Égypte"
         },
         "factory": {
-            "title": "Site de production",
-            "address": "N° 120 – Secteur Alimentation – Zone Industrielle – Motobas – Kafr El-Sheikh, Égypte"
+            "address": "N° 120, secteur des aliments pour animaux, zone industrielle, Motobas, Kafr el-Cheikh, Égypte"
         }
-    },
-    "copyright": "AZAFCO International",
-    "privacyLink": "Politique de confidentialité",
-    "leadersSince": "Leaders de l'export de poisson frais depuis",
-    "tagline": "Poisson frais premium d'Égypte vers le monde",
-    "usps": {
-        "price": "Prix de gros compétitifs",
-        "quality": "Qualité certifiée ISO et HACCP",
-        "flexibility": "Tailles personnalisées, commandes flexibles",
-        "availability": "Service 24h/24, approvisionnement continu",
-        "service": "Satisfaction de vos exigences marché"
     }
 }

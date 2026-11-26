@@ -1,28 +1,17 @@
 {
-    "name": "AZAFCO International",
-    "fullName": "AZAFCO International Investment & Development",
-    "description": "Exportador egipcio líder en pescado fresco B2B para mayoristas, restaurantes y hoteles – pescado premium desde 2008.",
-    "workingHours": "Disponibles 24/7",
-    "workingHoursNote": "Atención continua – según departamento",
+    "fullName": "AZAFCO International for Investment and Development S.A.E.",
+    "workingHours": "De sábado a jueves, 8:00–17:00 (hora de El Cairo)",
+    "workingHoursNote": "WhatsApp: gerencia · consultas de suministro",
+    "officialChannels": {
+        "title": "Canales oficiales",
+        "text": "Solo escribimos desde el WhatsApp {phone} y desde el correo de azafco.com.eg ({email}). Si le llegan datos bancarios o de pago desde otro número o dirección, consúltenos antes de pagar."
+    },
     "addresses": {
         "main": {
-            "title": "Sede central",
-            "address": "Mastora, junto a la Asociación Benéfica, El-Borollos, Kafr El-Sheikh, Egipto"
+            "address": "Mastrouh, junto a la Asociación Benéfica, El-Borollos, Kafr el-Sheikh, Egipto"
         },
         "factory": {
-            "title": "Planta de producción",
-            "address": "No. 120 – Sector Piensos – Zona Industrial – Motobas – Kafr El-Sheikh, Egipto"
+            "address": "N.º 120, Sector de Piensos, Zona Industrial, Motobas, Kafr el-Sheikh, Egipto"
         }
-    },
-    "copyright": "AZAFCO International",
-    "privacyLink": "Política de privacidad",
-    "leadersSince": "Líderes en exportación de pescado fresco desde",
-    "tagline": "Pescado fresco premium de Egipto al mundo",
-    "usps": {
-        "price": "Precios mayoristas competitivos",
-        "quality": "Calidad certificada ISO y HACCP",
-        "flexibility": "Tamaños personalizados, pedidos flexibles",
-        "availability": "Operación 24/7, suministro continuo",
-        "service": "Satisfacción de sus requerimientos de mercado"
     }
 }

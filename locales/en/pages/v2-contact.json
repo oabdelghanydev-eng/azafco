@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "title": "Contact us: WhatsApp, email, office and factory",
+        "description": "WhatsApp AZAFCO International management to discuss supply, or email the export team for specifications and documents. Office and plant in Kafr El Sheikh."
+    },
+    "breadcrumb": "Contact us",
+    "hero": {
+        "eyebrow": "Start a partnership",
+        "title": "Contact AZAFCO International",
+        "actions": {
+            "whatsapp": "Message management on WhatsApp",
+            "email": "Email the export team"
+        }
+    },
+    "channels": {
+        "title": "WhatsApp, email and phone",
+        "whatsapp": {
+            "title": "WhatsApp",
+            "sub": "Management · supply enquiries"
+        },
+        "email": {
+            "title": "Email",
+            "sub": "Export team · details and documents"
+        },
+        "phone": {
+            "title": "Phone",
+            "sub": "Management, same number"
+        },
+        "hours": "Office hours",
+        "vcard": {
+            "title": "Contact card",
+            "action": "Download the vCard"
+        },
+        "new_tab": "(opens in a new tab)"
+    },
+    "routes": {
+        "legend": "Supply and documents",
+        "seafood_title": "Fish supply",
+        "seafood_text": "Buying our fish for import or distribution.",
+        "seafood_action": "Send your requirements",
+        "documents_title": "Documents",
+        "documents_text": "Product specifications or the company profile.",
+        "documents_action": "Request documents",
+        "corporate_link": "Partnership, investment or anything else: <link>write to us here</link>"
+    },
+    "locations": {
+        "title": "Main office and factory",
+        "factory": "Factory",
+        "office": "Main office",
+        "map_open": "Open in Google Maps",
+        "map_title_factory": "Map of the AZAFCO International factory in Motobas",
+        "map_title_office": "Map of the AZAFCO International main office"
+    },
+    "official": {
+        "title": "Registration and official channels"
+    },
+    "trust": {
+        "title": "Registered company",
+        "legal": "Legal name",
+        "register": "Commercial register",
+        "tax": "Tax card"
+    }
+}

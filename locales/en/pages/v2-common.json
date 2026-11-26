@@ -1,0 +1,38 @@
+{
+    "skip_to_main": "Skip to main content",
+    "nav": {
+        "guide": "Importer guide"
+    },
+    "cta": {
+        "view_specifications": "View specifications",
+        "call": "Call",
+        "opens_new_tab": "(opens in a new tab)",
+        "send_requirements": "Send your requirements",
+        "start_partnership": "Start a partnership"
+    },
+    "breadcrumbs": {
+        "label": "Breadcrumb",
+        "home": "Home"
+    },
+    "pending": {
+        "prefix": "Pending owner confirmation:"
+    },
+    "spec": {
+        "attribute": "Attribute",
+        "value": "Value",
+        "confirmed_with_sales": "Confirmed per order",
+        "attribute_label": "{label}:"
+    },
+    "consent": {
+        "title": "Analytics on this browser",
+        "on": "Analytics are on for this browser.",
+        "off": "Analytics are off for this browser.",
+        "unset": "You have not made a choice on this browser. Google Analytics follows the default for your region, and Microsoft Clarity stays off.",
+        "enable": "Turn analytics on",
+        "disable": "Turn analytics off"
+    },
+    "origin": {
+        "fact": "Egypt produces 62% of the fish farmed in Africa and is one of the world's ten largest fish-farming countries.",
+        "source": "Source: FAO, 2024"
+    }
+}

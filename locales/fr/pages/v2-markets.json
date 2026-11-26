@@ -1,0 +1,176 @@
+{
+    "meta": {
+        "title": "Export de poisson frais : Moyen-Orient et au-delà",
+        "description": "Poisson frais d’Égypte pour importateurs de 7+ marchés : EAU, Koweït, Bahreïn, Liban, Qatar, Irak, Syrie, par avion et route. Agréés pour l’export UE."
+    },
+    "breadcrumb": "Marchés",
+    "hero": {
+        "eyebrow": "Nos marchés",
+        "title": "Exportation de poisson frais vers le Moyen‑Orient et au‑delà",
+        "intro": "Nous expédions vers plus de 7 marchés. Le poisson quitte notre usine sous glace dans nos propres camions frigorifiques, puis part par avion ou par route.",
+        "secondary": "Voir nos espèces",
+        "image_alt": "Vue aérienne d’étangs piscicoles en terre avec aérateurs et palmiers"
+    },
+    "index": {
+        "eyebrow": "Marchés actifs",
+        "title": "Où nous expédions aujourd’hui",
+        "since": "depuis {year}",
+        "approved": "Union européenne : agréés pour l’exportation",
+        "planned_title": "Prévus",
+        "paused": "{country} : exportations suspendues",
+        "map_label": "Carte des routes d’expédition de l’Égypte vers les marchés indiqués sur ce site",
+        "origin": "Égypte · Motobas"
+    },
+    "notes": {
+        "eyebrow": "Acheteurs"
+    },
+    "support": {
+        "guide_link": "Lire le guide pour importer du poisson frais d’Égypte"
+    },
+    "detail": {
+        "meta_title": "Importer du poisson frais d’Égypte {country}",
+        "meta_description": "Poisson entier frais réfrigéré d’Égypte pour les importateurs {country} depuis {year}, par avion ou route, et les règles d’importation avec leurs sources.",
+        "eyebrow": "Marché actif depuis {year}",
+        "title": "Poisson frais d’Égypte pour les importateurs basés {country}",
+        "secondary": "Écrire à la direction sur WhatsApp",
+        "image_alt": "Poissons entiers frais sur glace pilée, vus du dessus",
+        "buyers_title": "Qui nous approvisionnons {country}",
+        "products_link": "Voir nos 12 espèces",
+        "whatsapp_message": "Bonjour AZAFCO International, ici … de la société … {country}. Nous sommes intéressés par :"
+    },
+    "import": {
+        "eyebrow": "Règles d’importation",
+        "title": "Importer du poisson frais {country}",
+        "authority_label": "Autorité compétente",
+        "source_label": "Source :",
+        "reviewed": "Dernière vérification : <time>{date}</time>",
+        "disclaimer": "Les règles évoluent. Avant de commander, confirmez les exigences en vigueur auprès de votre commissionnaire en douane ou de l’autorité.",
+        "fallback_guide": "Les documents d’export égyptiens sont décrits dans notre guide sur l’importation de poisson frais d’Égypte.",
+        "fallback_confirm": "Avant de commander, confirmez les conditions d’importation auprès de l’autorité compétente {country}.",
+        "authorities": {
+            "kuwait": "Public Authority for Food and Nutrition (PAFN, Autorité publique de l’alimentation et de la nutrition)",
+            "bahrain": "Ministry of Health, Public Health Directorate, Food Control Section (ministère de la Santé, direction de la santé publique, service du contrôle des aliments)",
+            "lebanon": "Ministry of Agriculture, Directorate of Animal Wealth (ministère de l’Agriculture, direction de la richesse animale, aussi appelée direction des ressources animales)",
+            "qatar": "Ministry of Public Health (MOPH), Food Safety Department, Port Health and Food Control Section (ministère de la Santé publique, département de la sécurité alimentaire, section de la santé portuaire et du contrôle des aliments)"
+        },
+        "doc_lang": {
+            "ar": "en arabe",
+            "en": "en anglais",
+            "ar_en": "en arabe et en anglais"
+        },
+        "source_labels": {
+            "us_government_report": "rapport du gouvernement américain",
+            "copy_elsewhere": "copie, hors du site de l’autorité",
+            "fao_study": "étude de la FAO"
+        },
+        "sources": {
+            "uae_portal": {
+                "title": "Portail du gouvernement des Émirats arabes unis (u.ae) : sécurité alimentaire"
+            },
+            "usda_uae": {
+                "title": "USDA : rapport FAIRS sur les Émirats arabes unis (TC2025-0008)",
+                "lead_in": "D’après un rapport de l’USDA de 2025 :"
+            },
+            "kw_res_6_2023": {
+                "title": "PAFN : résolution ministérielle n° 6 de 2023 sur les denrées alimentaires importées (texte anglais, FAOLEX)"
+            },
+            "kw_model_hc": {
+                "title": "PAFN : modèle de certificat sanitaire pour les animaux marins et fluviaux et leurs produits"
+            },
+            "kw_raqeb": {
+                "title": "PAFN, portail Raqeb : demande de dédouanement, guide pour les entreprises"
+            },
+            "bh_guide": {
+                "title": "Ministère de la Santé, Bahreïn : guide des importateurs de denrées alimentaires au Royaume de Bahreïn"
+            },
+            "lb_fao_study": {
+                "title": "Évaluation de la filière commerciale des produits de la mer au Liban (projet FAO, sur le site du ministère de l’Agriculture)",
+                "lead_in": "D’après une étude de la FAO de 2018 :"
+            },
+            "lb_239": {
+                "title": "Ministère de l’Agriculture, Liban : décision n° 239/1 sur l’importation de produits animaux (copie certifiée en anglais, site de l’UNRWA)",
+                "lead_in": "En vertu de la décision 239/1 de 2009 :"
+            },
+            "qa_guide": {
+                "title": "Ministère de la Santé publique, Qatar : guide des importateurs de denrées alimentaires",
+                "lead_in": "D’après le guide des importateurs de denrées alimentaires du ministère (non daté ; le fichier date de 2017) :"
+            },
+            "qa_watheq": {
+                "title": "Ministère de la Santé publique, Qatar : règles générales d’enregistrement des denrées alimentaires dans le système WATHEQ"
+            },
+            "qa_third_party": {
+                "title": "Ministère de la Santé publique, Qatar : liste des organismes d’inspection tiers agréés"
+            },
+            "usda_iraq": {
+                "title": "USDA : rapport FAIRS sur la réglementation des importations alimentaires et agricoles de l’Irak (copie hébergée par l’APEDA, Inde)",
+                "lead_in": "D’après un rapport de l’USDA de 2011 :"
+            },
+            "sy_guide": {
+                "title": "Ministère de l’Agriculture, Syrie : guide d’importation des animaux, des produits animaux et des sous-produits",
+                "lead_in": "Selon le guide d’importation du ministère de l’Agriculture de juillet 2021 :"
+            }
+        },
+        "items": {
+            "uae": {
+                "municipalities": "Les municipalités de chaque émirat supervisent l’inspection au port, les analyses, l’approbation des étiquettes et la mainlevée des envois importés.",
+                "aquatic": "Le poisson d’élevage ne doit pas être nourri avec des protéines de porc. Le poisson sauvage doit être identifié comme poisson sauvage sur un certificat sanitaire délivré par l’autorité compétente du pays exportateur.",
+                "labels": "Selon la norme UAE.S GSO 9:2019, les étiquettes des denrées alimentaires doivent être en arabe, et toute autre langue utilisée doit correspondre au texte arabe. Cela s’applique aux emballages en vrac comme aux emballages de vente au détail.",
+                "dates": "Les dates de production et de péremption doivent figurer directement sur l’étiquette d’origine ou sur l’emballage primaire ; les dates imprimées uniquement sur des autocollants ne sont pas acceptées.",
+                "zad": "En vertu du décret ministériel n° 239 de 2018, les denrées alimentaires importées doivent être enregistrées dans le système national ZAD avant toute manipulation sur les marchés des Émirats arabes unis."
+            },
+            "kuwait": {
+                "resolution": "La résolution ministérielle n° 6 de 2023 de la Public Authority for Food and Nutrition réglemente les denrées alimentaires importées. Elle est entrée en vigueur le 1er septembre 2023 et a abrogé la réglementation prise en application de la résolution n° 19 de 2017.",
+                "high_risk": "La résolution classe le poisson parmi les denrées à haut risque, avec la viande, la volaille et les produits laitiers.",
+                "documents": "Chaque envoi de denrées alimentaires doit être accompagné d’une déclaration en douane, d’un certificat d’origine, d’un permis de livraison, d’une licence commerciale ou d’un permis d’importation, d’un certificat sanitaire et d’une liste de colisage établie par l’établissement exportateur.",
+                "certificate_issuer": "Le certificat sanitaire doit être délivré et visé par l’autorité réglementaire officielle du pays d’origine ou d’exportation.",
+                "certificate_content": "Le certificat sanitaire doit être rédigé en arabe et/ou en anglais et indiquer le nombre de colis, le poids total et les lots de production.",
+                "inspection": "Le département des aliments importés inspecte les envois au port frontalier. Ses inspecteurs peuvent prélever des échantillons pour analyse dans les laboratoires de l’autorité ou dans des laboratoires accrédités.",
+                "model_certificate": "L’autorité publie un modèle bilingue de certificat sanitaire pour le poisson exporté vers le Koweït, avec des champs pour la catégorie de température (réfrigéré, congelé ou ambiant), le code SH, la date de production, la date de péremption et le numéro de lot.",
+                "raqeb": "Dans le guide de dédouanement Raqeb de l’autorité, une licence d’importation de poisson est une pièce jointe obligatoire pour le poisson, et un certificat sanitaire du pays d’origine est exigé pour toutes les denrées alimentaires."
+            },
+            "bahrain": {
+                "ports": "Le ministère de la Santé inspecte les denrées alimentaires importées aux trois points d’entrée : le port maritime, le fret aérien et le pont-chaussée (causeway).",
+                "importer": "Les importateurs de denrées alimentaires doivent disposer d’un enregistrement commercial du ministère de l’Industrie et du Commerce et d’un certificat de santé publique pour exercer des activités commerciales sous surveillance sanitaire.",
+                "registration": "Les denrées alimentaires ordinaires ne nécessitent pas d’enregistrement préalable à l’importation, mais doivent être conformes aux normes du Golfe (GSO) ; l’enregistrement préalable s’applique aux aliments fonctionnels, comme les aliments pour bébés.",
+                "arrival": "À l’arrivée, le représentant de l’importateur remplit le formulaire d’inspection des denrées importées et y joint la déclaration en douane, la liste de colisage, le bon de livraison ou le connaissement, ainsi que les certificats sanitaires.",
+                "health_certificate": "Chaque envoi doit être accompagné d’un certificat sanitaire original délivré par l’autorité compétente du pays d’origine, attestant la conformité aux exigences du CCG, tamponné et signé par l’autorité émettrice.",
+                "labels": "Les étiquettes doivent être en arabe ; toute autre langue doit figurer à côté de l’arabe et lui correspondre.",
+                "dates": "Selon la norme GSO 150-1, les denrées périssables réfrigérées contenant du poisson portent obligatoirement une date de péremption ; pour les denrées préemballées, les autocollants pour les dates de production et de péremption ne sont pas autorisés.",
+                "inspection": "L’inspection porte sur le conteneur, les étiquettes et la qualité sensorielle et, pour les denrées réfrigérées, sur les signes de décongélation et les relevés de température du conteneur. Lorsque des échantillons sont prélevés pour analyse selon le niveau de risque, l’envoi est retenu jusqu’à l’obtention des résultats."
+            },
+            "lebanon": {
+                "registration": "La décision 964 de 2011 du ministère de l’Agriculture impose à tout établissement qui importe du poisson réfrigéré ou congelé de s’enregistrer auprès de la direction de la richesse animale, service de l’importation et de l’exportation.",
+                "labels": "La décision 264/1 de 2013 impose que le nom du poisson figurant sur les étiquettes des emballages corresponde à ses noms arabe, anglais et scientifique ainsi qu’aux noms figurant dans tous les certificats joints ; à défaut, l’entrée est refusée.",
+                "inspection": "La décision 496/1 de 2010 soumet le poisson et les produits de la pêche importés à une inspection et à un examen avant que leur entrée au Liban soit autorisée.",
+                "commitment": "La décision 547/1 de 2012 autorise l’entrée du poisson frais si l’importateur présente un engagement certifié par un notaire ; une nouvelle infraction dans un délai d’un an interdit les importations en provenance de la même source.",
+                "cold_chain_record": "La décision 573/1 de 2009 impose l’enregistrement de la température de refroidissement des denrées réfrigérées et congelées pendant toute la durée du transport.",
+                "veterinary_certificate": "Les produits animaux importés doivent être accompagnés d’un certificat sanitaire vétérinaire délivré par les autorités du pays d’origine.",
+                "origin_certificate": "Le certificat d’origine doit être authentifié par une chambre de commerce, d’industrie ou d’agriculture ou par un autre organisme d’authentification.",
+                "seal": "Le connaissement doit indiquer le Liban comme destination, et le scellé du conteneur apposé dans le pays d’origine doit être intact à l’arrivée."
+            },
+            "qatar": {
+                "control": "La section de la santé portuaire et du contrôle des aliments du ministère contrôle les denrées alimentaires importées, y compris le poisson, en application de la loi n° 8 de 1990 sur le contrôle des denrées alimentaires, modifiée par la loi n° 4 de 2014.",
+                "health_certificate": "Chaque envoi doit être accompagné d’un certificat sanitaire en arabe, en anglais ou dans les deux langues ; le guide comprend un modèle pour les produits d’origine animale aquatique.",
+                "detention": "Un envoi peut être retenu (mainlevée temporaire) si son certificat sanitaire a été délivré avant la date de production de la denrée ou après sa date d’expédition.",
+                "inspection": "Au port, les inspecteurs contrôlent le véhicule, le conteneur et les colis, vérifient les étiquettes et leur langue, et prélèvent des échantillons sur les nouveaux produits ou selon le niveau de risque.",
+                "watheq": "Les établissements alimentaires doivent s’enregistrer dans le système WATHEQ du ministère ; seules les sociétés enregistrées peuvent déposer des déclarations d’importation ou d’exportation via le système Al Nadeeb.",
+                "third_party": "Le ministère publie une liste d’organismes tiers agréés pour l’inspection avant expédition dans le pays d’origine ; leurs certificats de conformité doivent être délivrés avant l’exportation, et non après."
+            },
+            "iraq": {
+                "cosqc": "La Central Organization for Standardization and Quality Control (COSQC, Organisation centrale de normalisation et de contrôle de la qualité), qui relève du ministère du Plan, fait appliquer les normes aux produits importés.",
+                "licence": "Les importateurs de denrées d’origine animale demandent une approbation préliminaire au ministère de l’Agriculture, puis le ministère du Commerce délivre la licence d’importation.",
+                "certificates": "Les denrées d’origine animale nécessitent un certificat d’origine certifié par l’ambassade d’Irak et un certificat sanitaire d’un service de santé agréé.",
+                "dates": "Selon la norme IQS/1847/1999, les denrées dont la durée de conservation est de trois mois ou moins doivent porter des dates de production et de péremption imprimées de façon permanente, sous la forme jour, mois et année ; les autocollants ne sont pas autorisés.",
+                "testing": "Le COSQC et les ministères de l’Agriculture et de la Santé analysent les importations à la frontière, et le ministère de la Santé analyse des échantillons dans des laboratoires provinciaux ou au laboratoire central de santé de Bagdad."
+            },
+            "syria": {
+                "application": "L’importateur dépose une demande écrite auprès de la direction de la santé animale du ministère, sur le formulaire de celle-ci, avec un registre du commerce valide, une copie d’une pièce d’identité et une facture pro forma.",
+                "disease_free": "Le poisson et les produits de la pêche doivent être accompagnés d’un certificat sanitaire attestant qu’ils proviennent d’une zone ou d’un établissement indemne de maladies infectieuses bactériennes, virales et fongiques du poisson.",
+                "laboratory": "Le poisson destiné à la consommation humaine doit être accompagné d’un certificat d’analyse d’un laboratoire accrédité du pays d’origine attestant qu’il est exempt d’agents pathogènes.",
+                "labels": "Les emballages de poisson doivent porter une étiquette lisible indiquant les noms scientifique et commun, le pays d’origine, la catégorie de taille, la date de conditionnement et d’expédition ainsi que le nom et l’adresse du producteur.",
+                "shelf_life": "À son arrivée en Syrie, le poisson ne doit pas avoir dépassé la moitié de sa durée de conservation.",
+                "veterinary_certificate": "Le certificat vétérinaire des produits animaux doit être délivré par des organismes habilités du pays d’origine et authentifié par le ministère syrien des Affaires étrangères ; les pays de la Grande zone arabe de libre-échange sont exemptés de cette authentification."
+            }
+        }
+    }
+}

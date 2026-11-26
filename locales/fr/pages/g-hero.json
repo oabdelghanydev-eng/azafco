@@ -1,0 +1,55 @@
+{
+    "groupLabel": "Messages principaux",
+    "statsLabel": "Chiffres clés",
+    "slides": [
+        {
+            "label": "De la production en Égypte aux partenariats dans le monde",
+            "kicker": "Exportateur de poisson frais depuis 2008",
+            "title": "Du poisson égyptien frais pour les importateurs du monde entier",
+            "text": "Nous élevons et achetons 12 espèces principales, puis nous les calibrons, les conditionnons et les exportons entières et fraîches réfrigérées, sous glace.",
+            "alt": "Dorades royales, bars et tilapias entiers et frais sur glace pilée, sous une lumière froide"
+        },
+        {
+            "label": "De l’étang à la palette",
+            "kicker": "Notre usine",
+            "title": "Notre propre usine, nos camions et entrepôts frigorifiques",
+            "text": "Nous calibrons, conditionnons et expédions depuis notre usine de Motobas, à Kafr el-Cheikh.",
+            "alt": "Vue aérienne de bassins piscicoles en terre avec aérateurs et palmiers"
+        },
+        {
+            "label": "12 espèces principales, calibrées au poids",
+            "kicker": "Nos poissons",
+            "title": "12 espèces principales de poisson, calibrées au poids",
+            "text": "Tilapia, bar, dorade royale, mulet, poisson-chat et d’autres espèces, vendus entiers et frais réfrigérés.",
+            "alt": "Poissons entiers frais sur glace pilée, vus du dessus"
+        },
+        {
+            "label": "Plus de 7 marchés, par avion et par route",
+            "kicker": "Nos marchés",
+            "title": "Le Moyen‑Orient et au‑delà, par avion et par route",
+            "text": "Koweït, Émirats arabes unis, Qatar, Irak, Syrie, Bahreïn et Liban, et agréés pour l’exportation vers l’Union européenne.",
+            "alt": "Camion frigorifique chargé de caisses isothermes à quai, à l’aube"
+        }
+    ],
+    "ctaPartner": "Démarrer un partenariat",
+    "ctaFish": "Voir nos poissons",
+    "ctaFishPhone": "Voir nos poissons",
+    "stats": [
+        {
+            "value": "12",
+            "label": "espèces principales de poisson"
+        },
+        {
+            "value": "7+",
+            "label": "marchés d’exportation"
+        },
+        {
+            "value": "2008",
+            "label": "à l’export depuis"
+        },
+        {
+            "value": "2 500",
+            "label": "t/mois · capacité maximale de conditionnement"
+        }
+    ]
+}

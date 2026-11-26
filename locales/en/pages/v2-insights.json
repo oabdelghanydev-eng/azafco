@@ -1,0 +1,21 @@
+{
+    "categories": {
+        "importer_guide": "Importer guide"
+    },
+    "article": {
+        "by": "Published by",
+        "author": "AZAFCO International",
+        "published": "Published",
+        "reviewed": "Last reviewed",
+        "toc": "Contents",
+        "related_title": "Related pages",
+        "related": [
+            {
+                "title": "Our markets"
+            },
+            {
+                "title": "Our fish"
+            }
+        ]
+    }
+}
